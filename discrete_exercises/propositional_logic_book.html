@@ -22,13 +22,13 @@
                 async></script>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
-        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-        <link rel="icon" href="../assets/img/icon/favicon.ico">
-        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
         <meta name="theme-color" content="#563d7c">
 
         <!-- Font Awesome JS -->
@@ -66,7 +66,7 @@
                         <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Знаење</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="propositional_logic.html">Дискретна математика</a>
+                        <a class="nav-link" href="../discrete/propositional_logic.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../discrete_exercises/propositional_logic_university.html">Вежби-IO</a>
@@ -415,6 +415,7 @@
                             <i class="fas fa-chalkboard-teacher" data-toggle="modal" data-target="#negationModal"></i>
                         </span> Негaција на исказ
                     </h6>
+
                     <p>                                 
                         <strong>Вежба 3.</strong> Што е нагација на следните искази?<br>
                         а) Today is Thursday.<br>
@@ -442,6 +443,7 @@
                             </div>
                         </details>
                     </p>
+
                     <p>                                 
                         <strong>Вежба 4.</strong> Што е нагација на следните искази?<br>
                         a) Jennifer and Teja are friends.<br>
@@ -578,160 +580,197 @@
                     </p>
 
                     <p>                                 
-                            <strong>Вежба 8.</strong> Нека `p` и `q` се исказите:<br>
-                            `p` : I bought a lottery ticket this week<br>
-                            `q` : I won the million dollar jackpot<br>
-                            Express each of these propositions as an English sentence<br>
-                            a) `not p`<br>
-                            b) `p ^^ q`<br>
-                            c) `p vv q`<br>
-                            d) `p -> q`<br>
-                            e) `p harr q`<br>
-                            f) `not p -> not q`<br>
-                            g) `not p vv not q`<br>
-                            h) `not p vv (p ^^ q)`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        a)I havent't bought a lottery ticket this week.
-                                    </p>
-                                    <p>
-                                        b) I bought a lottery ticket this week and won the million dollar jackpot.
-                                    </p>
-                                    <p>
-                                        c) I bought a lottery ticket this week or won the million dollar jackpot.
-                                    </p>
-                                    <p>
-                                        d) If I bought a lottery ticket this week then I will won the million dollar jackpot.
-                                    </p>
-                                    <p>
-                                        e) I will bought a lottery ticket this week if and only if I will won the million dollar jackpot.
-                                    </p>
-                                    <p>
-                                        f) If I will not buy a lottery ticket this week then I will not win the million dollar jackpot.
-                                    </p>
-                                    <div class="table-responsive-sm">
-                                    <table class="table table-bordered table-sm">
-                                        <tbody class="text-center">
-                                            <tr>
-                                                <td>`p`</td>
-                                                <td>`q`</td>
-                                                <td>`not p`</td>
-                                                <td>`not q`</td>
-                                                <td>`p ^^ q`</td>
-                                                <td>`p vv q`</td>
-                                                <td>`p -> q`</td>
-                                                <td>`p harr q`</td>
-                                                <td>`not p -> not q`</td>
-                                                <td>`not p vv not q`</td>
-                                                <td>`not p vv (p ^^ q)`</td>
-                                            </tr>
-                                            <tr>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                            </tr>
-                                            <tr>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                            </tr>
-                                            <tr>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                            </tr>
-                                            <tr>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`F`</td>
-                                                <td>`F`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                                <td>`T`</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>                       
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
+                        <strong>Вежба 8.</strong> Нека `p` и `q` се исказите:<br>
+                        `p` : I bought a lottery ticket this week<br>
+                        `q` : I won the million dollar jackpot<br>
+                        Express each of these propositions as an English sentence<br>
+                        a) `not p`<br>
+                        b) `p ^^ q`<br>
+                        c) `p vv q`<br>
+                        d) `p -> q`<br>
+                        e) `p harr q`<br>
+                        f) `not p -> not q`<br>
+                        g) `not p vv not q`<br>
+                        h) `not p vv (p ^^ q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    a)I havent't bought a lottery ticket this week.
+                                </p>
+                                <p>
+                                    b) I bought a lottery ticket this week and won the million dollar jackpot.
+                                </p>
+                                <p>
+                                    c) I bought a lottery ticket this week or won the million dollar jackpot.
+                                </p>
+                                <p>
+                                    d) If I bought a lottery ticket this week then I will won the million dollar jackpot.
+                                </p>
+                                <p>
+                                    e) I will bought a lottery ticket this week if and only if I will won the million dollar jackpot.
+                                </p>
+                                <p>
+                                    f) If I will not buy a lottery ticket this week then I will not win the million dollar jackpot.
+                                </p>
+                                <div class="table-responsive-sm">
+                                <table class="table table-bordered table-sm">
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>`p`</td>
+                                            <td>`q`</td>
+                                            <td>`not p`</td>
+                                            <td>`not q`</td>
+                                            <td>`p ^^ q`</td>
+                                            <td>`p vv q`</td>
+                                            <td>`p -> q`</td>
+                                            <td>`p harr q`</td>
+                                            <td>`not p -> not q`</td>
+                                            <td>`not p vv not q`</td>
+                                            <td>`not p vv (p ^^ q)`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                       
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
                     </p>
 
                     <p>                                 
-                            <strong>Вежба 9.</strong>Let p and q be the propositions “Swimming at the New
-                            Jersey shore is allowed” and “Sharks have been spotted near the shore,” respectively. Express each of these compound propositions as an English sentence<br>
-                            a) `not q`<br>
-                            b) `p ^^ q`<br>
-                            c) `not p vv q`<br>
-                            d) `p -> not q`<br>
-                            e) `not q -> p`<br>
-                            f) `not p -> not q`<br>
-                            g) `p harr not q`<br>
-                            h) `not p (p vv not q)`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        a) Sharks have not been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        b) Swimming at the New Jersey shore is allowed, and sharks have been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        c) Swimming at the New Jersey shore is not allowed, or sharks have been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        d) If swimming at the New Jersey shore is allowed, then sharks have not been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        e) If sharks have not been spotted near the shore, then swimming at the New Jersey shore is allowed.
-                                    </p>
-                                    <p>
-                                        f) If swimming at the New Jersey shore is not allowed, then sharks have not been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        g) Swimming at the New Jersey shore is allowed if and only if sharks have not been spotted near the shore.
-                                    </p>
-                                    <p>
-                                        h) Swimming at the New Jersey shore is not allowed, and either swimming at the New Jersey shore is allowed
-                                        or sharks have not been spotted near the shore.                    
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
+                        <strong>Вежба 9.</strong>Let p and q be the propositions “Swimming at the New
+                        Jersey shore is allowed” and “Sharks have been spotted near the shore,” respectively. Express each of these compound propositions as an English sentence<br>
+                        a) `not q`<br>
+                        b) `p ^^ q`<br>
+                        c) `not p vv q`<br>
+                        d) `p -> not q`<br>
+                        e) `not q -> p`<br>
+                        f) `not p -> not q`<br>
+                        g) `p harr not q`<br>
+                        h) `not p (p vv not q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    a) Sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    b) Swimming at the New Jersey shore is allowed, and sharks have been spotted near the shore.
+                                </p>
+                                <p>
+                                    c) Swimming at the New Jersey shore is not allowed, or sharks have been spotted near the shore.
+                                </p>
+                                <p>
+                                    d) If swimming at the New Jersey shore is allowed, then sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    e) If sharks have not been spotted near the shore, then swimming at the New Jersey shore is allowed.
+                                </p>
+                                <p>
+                                    f) If swimming at the New Jersey shore is not allowed, then sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    g) Swimming at the New Jersey shore is allowed if and only if sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    h) Swimming at the New Jersey shore is not allowed, and either swimming at the New Jersey shore is allowed
+                                    or sharks have not been spotted near the shore.                    
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+
+                    <p>                                 
+                        <strong>Вежба 10.</strong>Let `p` and `q` be the propositions “The election is decided”
+                        and “The votes have been counted,” respectively. Express each of these compound propositions as an English sentence.<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    a) Sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    b) Swimming at the New Jersey shore is allowed, and sharks have been spotted near the shore.
+                                </p>
+                                <p>
+                                    c) Swimming at the New Jersey shore is not allowed, or sharks have been spotted near the shore.
+                                </p>
+                                <p>
+                                    d) If swimming at the New Jersey shore is allowed, then sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    e) If sharks have not been spotted near the shore, then swimming at the New Jersey shore is allowed.
+                                </p>
+                                <p>
+                                    f) If swimming at the New Jersey shore is not allowed, then sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    g) Swimming at the New Jersey shore is allowed if and only if sharks have not been spotted near the shore.
+                                </p>
+                                <p>
+                                    h) Swimming at the New Jersey shore is not allowed, and either swimming at the New Jersey shore is allowed
+                                    or sharks have not been spotted near the shore.                    
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
                     </p>
 
                     
