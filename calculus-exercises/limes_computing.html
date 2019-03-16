@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus/functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="functions.html">
+                        Функции
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Дефиниција, домен, ранг
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                               Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии од функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверсни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="" data-toggle="modal" data-target="#myModal">Што треба да се знае</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#def">Лимеси</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#intuitive">Интуитивен пристап</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#computing">Пресметување на лимес</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#var">Променливи</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex">Примери</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h3 id='limes'>
+                Лимеси
+            </h3>
+            
+            <h5 id='intuitive'>
+                Интуитивен пристап
+            </h5>
+                        
+            <p>     
+                <strong>Вежба 1.</strong> За функцијата од графикот да се определи:<br>
+                а) `lim_(x -> 2^-) f(x)` б) `lim_(x -> 2^+) f(x)` в) `lim_(x -> 2) f(2)` г) `f(2)` д) `lim_(x -> -oo) f(x)` ѓ) `lim_(x -> +oo) f(x)`<br>
+                <img src='images/limes_01.PNG' class='img fluid'>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            а) `L = 2`
+                        </p>
+                        <p>
+                            б) `L = 0`
+                        </p>
+                        <p>
+                            в) не постои
+                        </p>
+                        <p>
+                            г) `f(2) = 2`
+                        </p>
+                        <p>
+                            д) `L = 0`
+                        </p>
+                        <p>
+                            ѓ) `L = 2`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                а) `lim_(x -> 0^-) f(x)` б) `lim_(x -> 0^+) f(x)` в) `lim_(x -> 0) f(x)` г) `f(0)` д) `lim_(x -> -oo) f(x)` ѓ) `lim_(x -> +oo) f(x)`<br>
+                <img src='images/limes_02.PNG' class='img fluid'>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            а) `L = 3`
+                        </p>
+                        <p>
+                            б) `L = 3`
+                        </p>
+                        <p>
+                            в) `L = 3`
+                        </p>
+                        <p>
+                            г) `f(0) = 3`
+                        </p>
+                        <p>
+                            д) `L = +oo`
+                        </p>
+                        <p>
+                            ѓ) `L = +oo`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                а) `lim_(x -> 2^+) p(x)` б) `lim_(x -> 3^+) p(x)` в) `lim_(x -> 3) p(x)` г) `lim_(x -> 5^-) p(x)` д) `lim_(x -> 5^+) p(x)` ѓ) `lim_(x -> -1) p(x)`<br>
+                <img src='images/limes_03.PNG' class='img fluid'>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            а) `L = +оо`
+                        </p>
+                        <p>
+                            б) `L = -1`
+                        </p>
+                        <p>
+                            в) `L = -1`
+                        </p>
+                        <p>
+                            г) `L = 1`
+                        </p>
+                        <p>
+                            д) `L = -1`
+                        </p>
+                        <p>
+                            ѓ) `L = 0`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+            </p>
+
+            <p id='1'>     
+                <strong>Вежба 2.</strong> Ако  `lim_(x -> a) f(x) = 2, lim_(x -> a) g(x) = 4, lim_(x -> a) h(x) = 0` да се определат лимесите 
+                кои постојат, а ако не постојат да се објасни зошто.<br>
+                а) `lim_(x -> a)(h(x) - 3g(x) +1)`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `= lim_(x-> a) h(x) - lim_(x -> a)3*lim_(x -> a) g(x) + lim_(x -> a) 1`
+                        </p>
+                        <p>
+                            `= 0 - 3*4 + 1`
+                        </p>
+                        <p>
+                            `= 12`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `lim_(x -> a)(g(x))^2`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `= (lim_(x-> a) g(x))^2`
+                        </p>
+                        <p>
+                            `= 4^2`
+                        </p>
+                        <p>
+                            `= 16`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                в) `lim_(x -> a) root(3)(6 + f(x))`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `= root(3)(lim_(x-> a) (6 + f(x))`
+                        </p>
+                        <p>
+                            `= root(3) (lim_(x -> a) 6 + lim_(x -> a) f(x))`
+                        </p>
+                        <p>
+                            `= root(3) (6 + 2)`
+                        </p>
+                        <p>
+                            `= root(3) 8`
+                        </p>
+                        <p>
+                            `= 2`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                г) `lim_(x -> a) 2/g(x)`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `= lim_(x -> a) 2/lim_(x -> a) g(x)`
+                        </p>
+                        <p>
+                            `= 2 / 4`
+                        </p>
+                        <p>
+                            `= 1 / 2`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                д) `lim_(x -> a) (3f(x) - 8g(x))/(h(x))`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `= (lim_(x -> a) 3 * lim_(x -> a) f(x) - lim_(x -> a) 8 * lim_(x -> a) g(x))/(lim_(x -> a) h(x))`
+                        </p>
+                        <p>
+                            `= 3 * 2 - 8 * 4 / 0`
+                        </p>
+                        <p>
+                            лимесот не постои бидејки `h(x) =0`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+            </p>
+
+            <h5 id='computing'>
+                Пресметување на лимес - <small class="text-muted">кога функцијата се стреми кон определена вредност</small>
+                <span>
+                    <i class="fas fa-chalkboard-teacher" data-toggle="modal" data-target="#substituteModal"></i>
+                </span>
+            </h5>
+
+            <p id='1_1'>     
+                <strong>Вежба 1.</strong> Да се определат лимесите:<br>
+                а) `lim_(x -> 3) (x^2 - 2x)/(x + 1)`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `x + 1 !=0` па вредноста на лимесот `f(x) = (p(x))/(q(x)) = f(a)`
+                        </p>
+                        <p>
+                            `f(a) = (3^2 - 2*3)/(3 +1) = 3/4`
+                        </p>
+                        <p>
+                            или
+                        </p>
+                        <p>
+                            `((lim_(x -> 3) x)^2 - lim_(x -> 3)2 * lim_(x -> 3) x )/ (lim_(x -> 3) x + lim_(x -> 3)1)`
+                        </p>
+                        <p>
+                            `(3^2 - 2 * 3 ) / (3 + 1)`
+                        </p>
+                        <p>
+                            `= 3/4`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `lim_(x -> 0) (x^2 - 16)/(x - 4)`
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `x - 4 !=0` па вредноста на лимесот `f(x) = (p(x))/(q(x)) = f(a)`
+                        </p>
+                        <p>
+                            `f(a) = (0^2 - 16)/(0 - 4) = 4`
+                        </p>
+                        <p>
+                            или
+                        </p>
+                        <p>
+                            `((lim_(x -> 0) x)^2 - lim_(x -> 0)16)/ (lim_(x -> 0) x -lim_(x -> 0)4)`
+                        </p>
+                        <p>
+                            `(0^2 - 16) / (0 - 4)`
+                        </p>
+                        <p>
+                            `= 4`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+            </p>
+
+            <h5 id='computing'>
+                Пресметување на лимес - <small class="text-muted">кога вредноста на функцијата е неопределена</small>
+                <span>
+                    <i class="fas fa-chalkboard-teacher" data-toggle="modal" data-target="#indeterminateModal"></i>
+                </span>
+            </h5>
+
+            <p id='1_1'>     
+                    <p>Да се определат лимесите:</p>
+                    `lim_(x -> 3) (x^2 - 2x - 3)/(x - 3)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 3` се добива неопределениот облик `0/0`.
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `x^2 - 2x - 3 = (x - x_1)(x - x_2)`
+                            </p>
+                            <p>
+                                `x_(1,2) = (2 +- sqrt(4 + 12))/2 => x_1 = 3, x_2 = -1`
+                            </p>
+                            <p>
+                                `x^2 - 2x - 3 = (x - 3)(x + 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 3) (x^2 - 2x - 3)/(x - 3) = lim_(x -> -1) ((x - 3)(x + 1))/(x - 3)`
+                            </p>
+                            <p>
+                                `= lim_(x -> 3)(x + 1)`
+                            </p>
+                            <p>
+                                `L = 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> -1) (x^2 - 3x - 4)/(x + 1)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> -1^+` се добива неопределениот облик `0/0`.
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `x^2 - 3x - 4 = (x - x_1)(x - x_2)`
+                            </p>
+                            <p>
+                                `x_(1,2) = (3 +- sqrt(9 + 16))/2 => x_1 = 4, x_2 = -1`
+                            </p>
+                            <p>
+                                `x^2 - 3x - 4 = (x - 4)(x + 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> -1) (x^2 - 3x - 4)/(x + 1) = lim_(x -> -1) ((x - 4)(x + 1))/(x + 1)`
+                            </p>
+                            <p>
+                                `= lim_(x -> -1)(x - 4)`
+                            </p>
+                            <p>
+                                `L = -5`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 2) (x^2 + 3x - 10)/(x^2 - 8x + 12)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 2` се добива неопределениот облик `0/0`.
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување на броителот и именителот
+                            </p>
+                            <p>
+                                `x^2 + 3x - 10 = (x - x_1)(x - x_2)`
+                            </p>
+                            <p>
+                                `x_(1,2) = (-3 +- sqrt(9 + 40))/2 => x_1 = -5, x_2 = 2`
+                            </p>
+                            <p>
+                                `x^2 + 3x - 10 = (x + 5)(x - 2)`
+                            </p>
+                            <p>
+                                `x^2 - 8x + 12 = (x - x_1)(x - x_2)`
+                            </p>
+                            <p>
+                                `x_(1,2) = (8 +- sqrt(64 - 48))/2 => x_1 = 6, x_2 = 2`
+                            </p>
+                            <p>
+                                `x^2 - 8x + 12 = (x - 6)(x - 2)`
+                            </p>
+                            <p>
+                                `lim_(x -> 2) ((x - 2)(x + 5))/((x - 2)(x - 6)) = lim_(x -> -1) (x + 5)/(x - 6)`
+                            </p>
+                            <p>
+                                `L = -7/4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> -5) (x^2 + 5x)/(x^2 - 25)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> =-5` се добива неопределениот облик `0/0`.
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување на броителот и именителот
+                            </p>
+                            <p>
+                                `x^2 + 5x = x(x + 5)`
+                            </p>
+                            <p>
+                                `x^2 - 25 = (x - 5)(x + 5)`
+                            </p>
+                            <p>
+                                `lim_(x -> -5) x(x + 5)/((x - 5)(x + 5)) = lim_(x -> -1) x/(x - 5)`
+                            </p>
+                            <p>
+                                `L = 1/2`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 1^+) (x^4 - 1)/(x - 1)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 4) (4 - x)/(2 - sqrt(x))`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 0) (1/x - 1/(x^2 +x))`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 4) abs(x - 4)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> -1) (x^3 + 1)/(x + 1)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 0) (sqrt(4 + x) - 2)/x`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 1^+` вредноста на именителот е `x - 1 =0` па функцијата не е определена
+                            </p>
+                            <p>
+                                Треба да извршиме расчленување
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x^2 -1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) ((x -1)(x + 1)(x^2 + 1))/(x - 1)`
+                            </p>
+                            <p>
+                                `lim_(x -> 1^+) (x + 1)(x^2 + 1)`
+                            </p>
+                            <p>
+                                `= 4`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(t -> 1) (t^3 + t^2 - 5t + 3)/(t^3 - 3t + 2)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `t -> 1` добиваме неопределен облик `0/0`
+                            </p>
+                            <p>
+                                `t^3 -t -2t + 2 = t(t^2 - 1) - 2 (t - 1) = t(t - 1)(t + 1) - 2(t - 1) = (t - 1)(t^2 + t - 2)`
+                            </p>
+                            <p>
+                                `t^2 + t - 2 = (t - t_1)(t + t_1)`
+                            </p>
+                            <p>
+                                `t_(1,2) = (-1 +- sqrt(1 + 8))/2 => t_1 = -2, t_2 = 1`
+                            </p>
+                            <p>
+                                `t^2 + t - 2 = (t - 1)(t + 2)`
+                            </p>
+                            <p>
+                                `t^3 - t -2t + 2 = (t - 1)(t - 1) (t + 2)`
+                            </p>
+                            <p>
+                                `t^3 + t^2 -5t + 3 = t^3 + 2t^2 - t^2 - 3t - 2t +3 = t^2(t - 1) + 2t(t - 1) - 3(t - 1) = (t - 1)(t^2 + 2t -3)`
+                            </p>
+                            <p>
+                                `t^2 + 2t - 3 = (t - t_1)(t - t_2)`
+                            </p>
+                            <p>
+                                `t_(1.2) = (-2 +- sqrt(4 + 12))/2 => t_1 =-3, t_2 = 1`
+                            </p>
+                            <p>
+                                `t^2 + 2t - 3 = (t - 1)(t + 3)`
+                            </p>
+                            <p>
+                                `lim_(t -> 1) (t^3 + t^2 - 5t + 3)/(t^3 - 3t + 2) = lim_(t -> 1) ((t-1)(t-1)(t+3))/((t-1)(t-1)(t+2))` 
+                            </p>
+                            <p>
+                                `lim_(t -> 1) (t+3)/(t+2)`
+                            </p>
+                            <p>
+                                `= 4/3`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    `lim_(x -> 2) x/(x^2 - 4)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Кога `x -> 2` добиваме неопределен облик `2/0`
+                            </p>
+                            <div class='row'>
+                                    <div class='col-5'>
+                                        <p>
+                                            `lim_(x ->2^-) x/(x^2 -4) = -oo`
+                                        </p>
+                                        <p>
+                                            `lim_(x ->2^+) x/(x^2 -4) = +oo`
+                                        </p>
+                                        <p>
+                                            Нема лимес
+                                        </p>
+                                        <p>
+                                            `&#x25A0`
+                                        </p>
+                                    </div>
+                                    <div class='col-7'>
+                                        <iframe src="jsxgraph/graph_26.html" width="100%" height="320" frameborder="0"></iframe>
+                                    </div>
+                            </div>
+                        </div>
+                    </details>
+                </p>
+
+            
+
+            <p id='def_2'>     
+                    <strong>Вежба 4.</strong>  Најди формула за `f^-1(x)` и одреди го доменот ако `f(x) = sqrt(x + 3)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div>                            
+                            <p>
+                                `y = sqrt(x + 3)`
+                            </p>
+                            <p>
+                                `x + 3 = y^2`
+                            </p>
+                            <p>
+                                ` x = y^2 - 3`
+                            </p>
+                            <p>
+                                `f^-1(y) = y^2 - 3`
+                            </p>
+                            <p>
+                                `f^-1(x) = x^2 - 3`
+                            </p>
+                            <p>
+                                `D_(f^-1) = R_f = RR`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                </p>
+
+                <p>     
+                        <strong>Вежба 1.</strong> Да се определи најголемиот отворен интервал, центриран во `x = 0`, така што за секое `x` во 
+                        интервалот вредноста на `f(x) = 2x + 3` се разликува за најмногу `0.0012` единици од бројот `f(0) = 3`:<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    `3 - 0.0012 < 2x + 3 < 3 + 0.0012`
+                                </p>
+                                <p>
+                                    `-0.0012 < 2x < 0.0012`
+                                </p>
+                                <p>
+                                    `-0.0006 < x < 0.0006`
+                                </p>
+                                <p>
+                                    `abs(x) < 0.0006`
+                                </p>
+                                <p>
+                                    Отворениот интервал е `(-0.0006, 0.0006)`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+
+            <!-- modal what you need to know -->
+            <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Што треба да се знае на памет</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <strong>Интуитивна метода:</strong><br>
+                                `lim_(x->a) f(x) = L`&nbsp;,`f(x) rarr L` &nbsp; кога &nbsp; `x rarr a`&nbsp;, `lim_(x->a^+) f(x) = L`&nbsp;, `lim_(x -> a^-) f(x) = L`<br>
+                                `lim_(x -> a) f(x)` постои само ако `lim_(x -> a^+) f(x) = lim_(x -> a^-) f(x) = L`
+                            </li>
+                            <li>
+                                <strong>Вертикални асимптоти - </strong> `a` е асимтота на графикот на функцијата `f(x)` ако<br>
+                                `lim_(x -> a^-) f(x) = +oo`,`lim_(x_> a^+) f(x) = +oo`, `lim(x -> a^-) f(x) = -oo`, `lim_(x -> a^+) f(x) = -oo`
+                            </li>
+                            <li>
+                                <strong>Основни лимеси:</strong><br>
+                                `lim_(x -> a) k = k`, &nbsp;`lim_(x -> a) x = a`, &nbsp;`lim_(x -> 0^-) f(1/x) = -oo`,&nbsp;`lim_(x -> 0^+) f(1/x) = +oo`<br>
+                            </li>
+                            <li>
+                                <strong>Аритметички операции над лимеси</strong> <br>
+                                `lim_(x -> a) [f(x) + g(x)] = lim_(x -> a) f(x) + lim_(x -> a) g(x)`<br>
+                                `lim_(x -> a) [f(x) - g(x)] = lim_(x -> a) f(x) - lim_(x -> a) g(x)`<br>
+                                `lim_(x -> a) [f(x)*g(x)] &nbsp;&nbsp;= lim_(x -> a) f(x) * lim_(x -> a) g(x)`<br>
+                                `lim_(x -> a) [f(x) / g(x)] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= (lim_(x -> a) f(x)) /(lim_(x -> a) g(x))` ако `lim_(x -> a) g(x) != 0`<br>
+                            </li>
+                            <li>
+                                <strong>Лимес од полиноми и рационални функции</strong> <br>
+                                `lim_(x-> a)p(x) = p(a)`
+                            </li>
+                            <li>
+                                <strong>Дробно рационална функција</strong><br>
+                                `f(x) = (p(x))/(q(x)) => lim_(x -> a) f(x) = f(a), q(a)!= 0`
+                            </li>
+                            <li>
+                                <strong>Неопределен облик `0/0`</strong><br>
+                                а) ако броителот и именителот имаат заеднички множител прво се врши кратење па се пресметува лимес на упростената функција<br>
+                            </li>
+                        </ul>
+                    </div>                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal method supstitute-->
+            <div class="modal fade" id="substituteModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Кога функцијата се стреми кон одредена вредност за пресметка на лимесот се користи методот на замена, односно.
+                        </p>
+                        <p class='text-center'>
+                            `lim_(x -> a)f(x) = f(a)`
+                        </p>
+                        <p>
+                            Ова е прв метод кој треба да се користи при решавање на лимеси.
+                        </p>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- modal method indeterminate-->
+            <div class="modal fade" id="indeterminateModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Кога вредноста на функцијата е неопределена, односно.
+                        </p>
+                        <p class='text-center'>
+                            `lim_(x -> a)f(x) != f(a)`
+                        </p>
+                        <p>
+                            треба да се користи методот на факторизација, односно расчленување, на алгебарскиот(те) израз(и).
+                        </p>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+<!-- modal onload-->
+<script>
+    $(function() {
+        $("#myModal").modal();
+    });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/limes.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+
+    
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="functions.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="new_function.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_infinity.html">
+                                Лимеси во бескрајност
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_continuity.html">
+                                Непрекинатост
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#concept">Концепт на лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#tangent_line">Тангента и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#areas_and_limits">Површина и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Децимални броеви и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#limit">Лимес</a>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#informal">Интиутивна метода</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#infinite">Бесконечни лимеси</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#v_asymtotes">Вертикални асимптоти</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <div class="row">
+                <div class="col-12">
+                    <p id="concept" class="lead">
+                        Концептот на „лимес“ е основа која сите други концепти во калкулусот ја користат . Овде ќе го
+                        разгледаме лимесот неформално, со цел да се стекнеме со интуитивен осет за основните постулати.
+                    </p>
+                    <p>
+                        Many of the ideas of calculus originated with the following two geometric problems:
+                    </p>
+                </div>
+                <div class="col-3">
+                    <div class="text-center">
+                        <img src="images/limes_01.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <p>
+                        The tangent line problem Given a function `f` and a point `P (x0, y0)` on its graph,
+                        find an equation of the line that is tangent to the graph at `P` (Figure 1.1.1).
+                    </p>
+                </div>
+                <div class="col-3">
+                    <div class="text-center">
+                        <img src="images/limes_02.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <p>
+                        The area problem Given a function `f` , find the area between the graph of `f` and
+                        an interval `[a, b]` on the `x`-axis (Figure 1.1.2).
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Traditionally, that portion of calculus arising from the tangent line problem is called
+                        <strong>differential calculus</strong> and that arising from the area problem is called <strong>integral
+                        calculus</strong>. However, we will see later that the tangent line and area problems are so
+                        closely related that the distinction between differential and integral calculus is somewhat
+                        artificial.
+                    </p>
+                </div>
+                <!-- TANGENT LINES AND LIMITS -->
+                <div class="col-12">
+                    <h3 id="tangent_line">
+                        TANGENT LINES AND LIMITS
+                    </h3>
+                </div>
+                <div class="col-3">
+                    <div class="text-center">
+                        <img src="images/limes_03.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <p>
+                        In plane geometry, a line is called tangent to a circle if it meets the circle at precisely one
+                        point (Figure 1.1.3a). Although this definition is adequate for circles, it is not appropriate
+                        for more general curves. For example, in Figure 1.1.3b, the line meets the curve exactly once
+                        but is obviously not what we would regard to be a tangent line; and in Figure 1.1.3c, the line
+                        appears to be tangent to the curve, yet it intersects the curve more than once.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p>
+                        To obtain a definition of a tangent line that applies to curves other than circles, we must
+                        view tangent lines another way. For this purpose, suppose that we are interested in the
+                        tangent line at a point P on a curve in the xy-plane and that Q is any point that lies on the
+                        curve and is different from P . The line through P and Q is called a secant line for the curve
+                        at P . Intuition suggests that if we move the point Q along the curve toward P , then the
+                        secant line will rotate toward a limiting position. The line in this limiting position is what
+                        we will consider to be the tangent line at P (Figure 1.1.4a). As suggested by Figure 1.1.4b,
+                        this new concept of a tangent line coincides with the traditional concept when applied to
+                        circles.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <img src="images/limes_04.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h3 id="areas_and_limits">
+                        AREAS AND LIMITS
+                    </h3>
+                </div>
+                <div class="col-12">
+                    Just as the general notion of a tangent line leads to the concept of limit, so does the
+                    general notion of area. For plane regions with straight-line boundaries, areas can often be
+                    calculated by subdividing the region into rectangles or triangles and adding the areas of the
+                    constituent parts (Figure 1.1.6). However, for regions with curved boundaries, such as that in Figure
+                    1.1.7a, a more general approach is needed. One such approach is to begin by approximating
+                    the area of the region by inscribing a number of rectangles of equal width under the curve
+                    and adding the areas of these rectangles (Figure 1.1.7b). Intuition suggests that if we
+                    repeat that approximation process using more and more rectangles, then the rectangles will tend
+                    to fill in the gaps under the curve, and the approximations will get closer and closer to
+                    the exact area under the curve (Figure 1.1.7c). This suggests that we can define the area under
+                    the curve to be the limiting value of these approximations. This idea will be considered in
+                    detail later, but the point to note here is that once again the concept of a limit comes
+                    into play
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <img src="images/limes_05.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h3 id="decimal_and_limits">
+                        DECIMALS AND LIMITS
+                    </h3>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Limits also arise in the familiar context of decimals. For example, the decimal
+                        expansion of the fraction `1/3` is:
+                    </p>
+                    <p class="text-center">
+                        `1/3=0.3333...`
+                    </p>
+                    <p>
+                        in which the dots indicate that the digit 3 repeats indefinitely. Although you may not
+                        have
+                        thought about decimals in this way, we can write (3) as
+                    </p>
+                    <p class="text-center">
+                        `1/3=0.3333...=0.3+0.03+0.003+0.0003+`
+                    </p>
+                    <p>
+                        which is a sum with “infinitely many” terms. As we will discuss in more detail later, we
+                        interpret (4) to mean that the succession of finite sums
+                    </p>
+                    <p class="text-center">
+                        `0.3, 0.3 + 0.03, 0.3 + 0.03 + 0.003, 0.3 + 0.03 + 0.003 + 0.0003, . . .`
+                    </p>
+                    <p>
+                        gets closer and closer to a limiting value of `1/3` as more and more terms are included.
+                        Thus,
+                        limits even occur in the familiar context of decimal representations of real numbers.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <h3 id="limit">
+                        Лимес
+                    </h3>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Сега кога видовме дека граничните вредности се појавуваат на различни начини, да се
+                        фокусираме на самиот концеп за лимеси.<br>
+                        Основната примена на лимесите е опишување на однесувањето на функцијата кога независната
+                        променлива се стреми (приближува) кон дадена вредност. На пример, да го испитаме
+                        однесувањето на функцијата
+                    </p>
+                    <p>
+                        за вредностите на `x` се поблиски поблиски до `2`. Од графикот и табелата е уочливо дека
+                        вредностите за `f(x)` стануваат се поблиски и поблиски до `3` како вредноста на `x` се
+                        доближува поблиску до `2` и од левата и од десната страна на `2`. Ова може да го опишеме велејки
+                        дека лимесот од `x^2 − x + 1` е `3` кога `x` тежи кон `2` од двете страни, и го запишуваме:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->2)(x^2 − x + 1)=3`
+                    </p>
+                </div>
+                <div class="col-12">
+                    <div class="text-center">
+                        <img src="images/limes_06.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Ова не води до следната идеа
+                    </p>
+                </div>
+                <div class="col-3 px-1">
+                    <p class="alert alert-primary">
+                        бидејки се бара `x` да биде различно од `a` вредносата на `f` за `a`, дури и кога `f` е
+                        дефинирана за `a`, нема влијание на лимесот `L`. Лимесот го опишува однесувањето на `f`
+                        блиску до но не и за `a`.
+                    </p>
+                </div>
+                <div id="informal" class="col-9">
+                    <p>
+                        <strong>Лимес (интиутивна метода)</strong> Ако вредноста на `f(x)` може произволно да се
+                        доближува до `L` преку задавање на вредноста на `x` доволно блиску до `a` но не еднакво
+                        на `a`, тогаш може да запишема:
+                    </p>,
+                    <p class="text-center">
+                        `lim_(x->a) f(x) = L`
+                    </p>
+                    <p>
+                        што се чита како лимесот од `f(x)` кога `x` тежи кон `a` e `L` или `f(x)` тежи кон `L`
+                        кога `x` тежи кон `a`. Изразот може да се запише и како:
+                    </p>
+                    <p class="text-center">
+                        `f(x) rarr L` &nbsp; кога &nbsp; `x rarr a`
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Овој лимес се нарекува <strong>двостран лимес</strong> бидејќи бара вредностите на
+                        `f(x`) да
+                        бидат сè поблиску до
+                        `L` кога за `x` се земаат вредности од двете страни на `x = a`.
+                    </p>
+                    <p>
+                        Некои функции покажуваат различно однесување за вредности на `x` кои се блиску до `а`,
+                        но се од
+                        левата и десната страна на `а`. Во тој случај потребно е да се прави разлика дали
+                        вредностите на
+                        `x` блиску до `a` се на левата страна или на десната страна од `a` со цел да се испита
+                        граничното однесување на функцијата.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <div class="text-center">
+                        <img src="images/limes_07.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-9">
+                    `f(x)=|x|/x={(1,x>0),(-1,x<0):}`
+                    <p>
+                        Од графикот лево се гледе дака кога `x` тежи кон `0` од десна страна, вредностите за
+                        `f(x)`
+                        се приближуваат до лимесот `1` [всушност вредностите на `f(x)` се точно `1` за сите
+                        вакви `x`],
+                        и слично, како `x` тежи кон `0` од левата страна, вредностите на `f(x)` се приближуваат
+                        до
+                        лимесот од `−1`. Овие лимеси ги означуваме запишувајки:
+                    </p>
+                    `lim_(x->0^+)|x|/x=1` &nbsp;&nbsp;и `lim_(x->0^-)|x|/x=-1`
+                    <p>
+                        Со оваа нотација, супескриптот `+` укажува ва лимес од десната страна а суперскриптор
+                        `−`
+                        укажува на лимес од левата страна.
+                    </p>
+                    <p>
+                        Ова не води до следната општа идеа за еднострани лимес.
+                    </p>
+                </div>
+                <div class="col-3 px-1">
+                    <p class="alert alert-primary">
+                        Како и кај двостраниот лимес, едностраните лимеси можат да се запишат како
+                        `f(x)→L` &nbsp;кога&nbsp;`x →a`<sup>`+`</sup><br>`f(x)→L` &nbsp;кога&nbsp; `x →a`<sup>`-`</sup>
+                        соодветно.
+                    </p>
+                </div>
+                <div class="col-9">
+                    <p>
+                        <strong>Еднострани лимеси (интиутивна метода)</strong> Ако вредноста на `f(x)` може
+                        произволно
+                        да се доближува до `L` преку задавање на вредноста на `x` доволно блиску до `a` (но
+                        поголема од
+                        `a`), тогаш може да запишема:
+                    </p>,
+                    <p class="text-center">
+                        `lim_(x->a^+)f(x)=L`
+                    </p>
+                    <p>
+                        и велиме дека `L` е лимес на `f (x)` кога `x` тежи кон `а` од десно или `L` е десен
+                        лимес на `f
+                        (x`) во `x = а`.
+                    </p>
+                    <p>
+                        и ако вредностите на `f(x)` може произволно да се доближува до `L` преку задавање на
+                        вредноста
+                        на `x` доволно блиску до `a` (но помали од `a`), тогаш може да запишема:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->a^-)f(x)=L`
+                    </p>
+                    <p>
+                        и велиме дека `L` е лимес на `f (x)` кога `x` тежи кон а од лево или `L` е лев лимес на
+                        `f (x)`
+                        во `x = а`.
+                    </p>
+                </div>
+                <!-- THE RELATIONSHIP BETWEEN ONE-SIDED LIMITS AND TWO-SIDED LIMITS -->
+                <div class="col-12">
+                    <h5 id="connection">
+                        Врска меѓу еднострани лимеси и двострани лимеси
+                    </h5>
+
+
+                    <p>
+                        Во општ случај, не постои гаранција дека функција `f(x)` ќе има двостран лимес во точка `а`.
+                        Вредностите на `f(x)` може да не се приближуваат кон еден реален број `L` кoга вредностите на
+                        `x->а`. Во овој случај велиме дека `lim_(x->a)f(x)` не постои.
+                    </p>
+
+
+                    <p>
+                        Слично, вредностите на `f(x)` може да не се приближуваат кон еден реален број `L` кoга
+                        `x->а^+`или кога `x->а^-`. Во овој случај велиме дека `lim_(x->a^+)f(x)` не постои или
+                        `lim_(x->a^-)`не постои.
+                    </p>
+                    <p>
+                        За да постои двостран лимес за функцијата `f(x)` во точката `a`, вредностите на `f(x)` мора да
+                        тежат кон некој реален број `L` кога `x` тежи кон `a`, и овој број мора да е ист без разлика
+                        дали `x` тежи од лева или десна страна. Ова ја сугерира следната теорема.
+                    </p>
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">Теорема 1. (Врска меѓу еднострани лимеси и двострани лимеси)</h4>
+                        <p>
+                            Двостраниот лимес на функцијата `f (x)` постои ако и само ако постојат двата еднострани
+                            лимеси и тие се еднакви, т.е.,
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                            `lim_(x->a)f(x)`&nbsp;&nbsp; постоа ако и само ако &nbsp;&nbsp;`lim_(x->a^+)f(x)=lim_(x->a^-)f(x)=L`
+                        </p>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 1.</h4>
+                        <p> За функциите на цртежот, да се најдат двостраните и едностраните лимеси во `x = a`, ако
+                            постојат.</h4>
+                        <p>
+                            <strong>Решение:</strong> Сите три функции имаат исти еднострани лимеси кога `x->a`, бидејќи
+                            функциите се идентични освен во `x = a`.<br>
+                            Лимесите се:<br>
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->a^-)f(x)=1`&nbsp;&nbsp;и&nbsp;&nbsp;`lim_(x->a^+)f(x)=3`
+                        </p>
+                        <p>
+                            За овие три функции двостраниот лимес не постои бидејки едностраните лимеси не се еднакви
+                            кога `x->a`.
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                        <div class="text-center">
+                            <img src="images/limes_09.png" class="img-fluid img">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 2.</h4>
+                            <p>
+                                За функциите на цртежот, да се најдат двостраните и едностраните лимеси во `x = a`, ако
+                                постојат.
+                            </p>
+                            <p>
+                                <strong>Решение:</strong> Сите три функции имаат исти еднострани лимеси кога `x->a`,
+                                бидејќи
+                                функциите се идентични освен во `x = a`.<br>
+                                Лимесите се:<br>
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->a^-)f(x)=2`&nbsp;&nbsp;и&nbsp;&nbsp;`lim_(x->a^+)f(x)=2`
+                            </p>
+                            <p>
+                                За овие три функции постои и двостраниот лимес кога `x->a` бидејќи едностраните лимеси
+                                се
+                                еднакви и
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->a)f(x)=2`
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                            <div class="text-center">
+                                <img src="images/limes_08.png" class="img-fluid img">
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- INFINITE LIMITS-->
+                <div class="col-12">
+                    <h5 id="infinite">
+                        Бесконечни лимеси
+                    </h5>
+                    <p>
+                        Понекогаш едностраните или двостраните лимеси не постојат бидејќи вредностите на функцијата
+                        неограничено растат или неограничено опаѓаат.
+                    </p>
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 3.</h4>
+                        <p>
+                            Симболите `+oo` и `–oo` не се реални броеви, тие само означуваат дека лимесот не постои.
+                            Затоа секој обид за примена на алгебарски операции врз нив е погрешен. На пример, `(+oo) –
+                            (+oo) = 0` е неточно
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->0^-)f(1/x)=-oo`&nbsp;&nbsp;и&nbsp;&nbsp;`lim_(x->0^+)f(1/x)=+oo`
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                        <div class="text-center">
+                            <img src="images/limes_10.png" class="img-fluid img">
+                        </div>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">Теорема 2. Бесконечни лимеси (Интуитивна дефиниција)</h4>
+                        <ul>
+                            <li>
+                                Ако вредноста на функцијата `f(x)` неограничено расте кога `x` тежи кон `а` од лево (или
+                                десно) тогаш пишуваме:<br>
+                                `lim_(x->a^-)f(x)=+oo`&nbsp;&nbsp; односно `lim_(x->a^+)f(x)=+oo`
+                            </li>
+                            <li>
+                                Ако вредноста на функцијата `f(x)` неограничено опаѓа кога `x` тежи кон `а` од лево (или
+                                десно) тогаш пишуваме:<br>
+                                `lim_(x->a^-)f(x)=-oo`&nbsp;&nbsp; односно `lim_(x->a^+)f(x)=-oo`
+                            </li>
+                            <li>
+                                Ако двата еднострани лимеси се `+oo` тогаш ќе пишуваме:<br>
+                                `lim_(x->a)f(x)=+oo`<br>
+                                Ако двата еднострани лимеси се `−oo` тогаш ќе пишуваме<br>
+                                `lim_(x->a)f(x)=-oo`
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 4.</h4>
+                        <p>
+                            За функциите на цртежот, да се опише лимесот во точката `x=a` со соодветната нотација.
+                        </p>
+                        <p>
+                            <strong>Решение:</strong> <br>
+                            a) `lim_(x->a^+)1/(x-a)=+oo`&nbsp;&nbsp; и &nbsp;&nbsp; `lim_(x->a^-)1/(x-a)=-oo`<br>
+                            b) `lim_(x->a)1/(x-a)^2=lim_(x->a^+)1/(x-a)^2=lim_(x->a^-)1/(x-a)^2=+oo`<br>
+                            c) `lim_(x->a^+)-1/(x-a)=-oo`&nbsp;&nbsp; и &nbsp;&nbsp; `lim_(x->a^-)-1/(x-a)=+oo`<br>
+                            d) `lim_(x->a)-1/(x-a)^2=lim_(x->a^+)-1/(x-a)^2=lim_(x->a^-)-1/(x-a)^2=-oo`<br>
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                        <div class="text-center">
+                            <img src="images/limes_11.png" class="img-fluid img">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 2.</h4>
+                            <p> За функциите на цртежот, да се најдат двостраните и едностраните лимеси во `x = a`, ако
+                                постојат.</h4>
+                            <p>
+                                <strong>Решение:</strong> Сите три функции имаат исти еднострани лимеси кога `x->a`,
+                                бидејќи
+                                функциите се идентични освен во `x = a`.<br>
+                                Лимесите се:<br>
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->a^-)f(x)=2`&nbsp;&nbsp;и&nbsp;&nbsp;`lim_(x->a^+)f(x)=2`
+                            </p>
+                            <p>
+                                За овие три функции постои и двостраниот лимес кога `x->a` бидејќи едностраните лимеси
+                                се
+                                еднакви и
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->a)f(x)=2`
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                            <div class="text-center">
+                                <img src="images/limes_08.png" class="img-fluid img">
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- VERTICAL ASYMPTOTES -->
+                <div class="col-12">
+                    <h5 id="v_asymtotes">
+                        Вертикални асимптоти
+                    </h5>
+                    <p>
+                        Долната слика дава геометриска претстава кога било кој од следните случаии ќе се случи:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->a^-)f(x)=+oo`,&nbsp;`lim_(x->a^+)f(x)=+oo`,&nbsp;`lim_(x->a^-)f(x)=-oo`,&nbsp;`lim_(x->a^+)f(x)=-oo`
+                    </p>
+                    <p>
+                        Во секој график `y = f(x)` или расте или опаѓа без прекини доближувајки се поблиску до
+                        вертикалната линија `x = a` како `x` се стреми кон `a` од страната наведена во лимесот.
+                        Правата `x = a` се вика вертикална асимтота на графикот на `y = f(x)`
+                    </p>
+                    <div class="text-center">
+                        <img src="images/limes_12.png" class="img-fluid img">
+                    </div>
+                </div>
+
+                
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+
+</body>
+</html>

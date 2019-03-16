@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+ <div id="jxgbox" class="jxgbox" style="width:200px; height:200px"></div>
+
+ <script>
+
+        const board = JXG.JSXGraph.initBoard('jxgbox', {
+            boundingbox: [-10, 10, 10, -10],
+            showCopyright:false,
+            showNavigation: false,
+            axis: true,
+        }); 
+
+        graph = board.create('functiongraph', [function(x){ return (x**5 - x)/(1 + x**2); },-10, 10]);
+
+     
+           
+</script>

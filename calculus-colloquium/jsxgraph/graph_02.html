@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+ <div id="jxgbox" class="jxgbox" style="width:300px; height:300px"></div>
+
+ <script>
+
+        const board = JXG.JSXGraph.initBoard('jxgbox', {
+            boundingbox: [-5, 10, 5, -5],
+            showCopyright:false,
+            showNavigation: false,
+            axis: true,
+        }); 
+
+        y1 = board.create('functiongraph', [function(x){ return 6*x; },-10, 10], {name:'6x', withLabel:true});
+        y2 = board.create('functiongraph', [function(x){ return 3*x**2; },-10, 10], {name: '3x^2', withLabel: true, strokeColor: 'green', strokeWidth: 1});
+
+     
+           
+</script>

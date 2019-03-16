@@ -1,0 +1,69 @@
+/* itaseski CSS3 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+ }
+
+.overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #f0e68c; /*Canary*/
+    position: absolute;
+    opacity: .8;
+
+}
+
+.landing-text {
+    z-index: 2;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 300%;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 200%;
+    margin-top: 4%;
+    padding-bottom: 3%;
+}
+
+.blog_title {
+
+    text-align: center;
+}

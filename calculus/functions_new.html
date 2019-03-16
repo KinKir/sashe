@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="end user" content="Aleksandar Spirkovski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getbootstrap">
+    <meta name="twitter:creator" content="@getbootstrap">
+    <meta name="twitter:title" content="Introduction">
+    <meta name="twitter:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social-logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+    <meta property="og:title" content="Introduction">
+    <meta property="og:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calkulus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions_new.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions_new.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions_new.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions_new.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+
+    
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#operations">Аритметички операции со функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def1">Дефиниција 1</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#composition">Композиција на функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def1_composition">Дефиниција 1</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#functions-new">Нови функции добиени од постојни</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#translation">Транслација</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#reflection">Рефлексија</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#strech">Истегање</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#simmetry">Симетрија</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#even">Парни и непарни функции</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <h1 class="bd-title" id="function-new">Нови функции од дадени функции</h1>
+            <p>
+                Исто онака како што броевите можат да се собираат, одземат, множат и делат и при тоа да  создаваат 
+                други броеви и функциите можат да се собираат, одземаат, множат и делат и да создаваат други функции. Овде 
+                ќе дискутираме за овие операции и неколку други за кои нема аналогија во општата аритмртика.
+            </p>
+
+            <!-- ARITHMETIC OPERATIONS ON FUNCTIONS -->
+            <h3 id='operations'>
+                Аритметички операции со функции
+            </h3>
+
+            <p>
+                Алгебарски изрази често се упростуваат со скратување на заедничките множители во броителот и именителот.
+                Меѓутоа, мора да внимаваме кога упростуваме формули со кои се зададени функции, бидејќи оваа постапка 
+                може да го промени доменот на функцијата, па според тоа и самата функција.
+            </p>
+
+            <h4 id="def1">
+                Дефиниција 1
+            </h4>
+
+            <p>
+                Нека `f` и `g` се дадени функции со домени `D_f` и `D_g`, соодветно. Дефинираме
+                збир `f + g`, разлика `f – g`, производ `fg` и количник `f/g` на функциите `f` и `g` на следниот начин:
+            </p>
+
+            <p class="text-center">
+                `(f+g)(x) = f(x) + g(x)`, `D_(f+g) = D_f nn D _g`
+            </p>
+
+            <p class="text-center">
+                `(f-g)(x) = f(x) - g(x)`, `D_(f-g) =D _f nn D_g`
+            </p>
+
+            <p class="text-center">
+                `(fg)(x) = f(x)g(x)`, `D_fg = D_f nn D_g`
+            </p>
+
+            <p class="text-center">
+                `(f/g)(x) = f(x)/g(x)`, `D_(f/g) = D_f nn D_g \\{x in D_g | g(x)=0}`
+            </p>
+
+            <div class="alert alert-info" role="alert">
+                За функциите `f + g`, `f – g`, и `fg` дефинираме доменот да биде пресек на домените на `f` и `g`, и за
+                функцијата `f/g` дефинираме
+                доменот да биде пресек на домените на `f` и `g` без оние точки `x` за кои `g(x) = 0` (за да се избегне
+                делењето со нула).
+            </div>
+
+            <h6>
+                Пример 1
+            </h6>
+
+            <p>
+                Нека
+            </p>
+
+            <p class="text-center">
+                `f(x)=1+sqrt(x-2)` и `g(x)=x-3`
+            </p>
+
+            <p>
+                Да се определат домените и формулите за функциите `f + g`, `f–g`, `fg`, `f/g`, и `7f` .
+            </p>
+
+            <p>
+                <strong>Решение</strong>. Домените на `f` и `g` се
+            </p>
+
+            <p class="text-center">
+                `D_f = [2,+oo)`, `D_g = RR`
+            </p>
+
+            <p>
+                i) `D_f+g = D_f nn D_g = [2,+oo)`
+            </p>
+
+            <p>
+                `(f+g)(x) = f(x) + g(x) = 1 + sqrt(x-2) + x - 3 = x-2+sqrt(x-2)`
+            </p>
+
+            <p>
+                ii) `D_(f-g) = D_f nn D_g = [2,+oo)`
+            </p>
+
+            <p>
+                `(f-g)(x) = f(x) - g(x) = 1 + sqrt(x-2)-x + 3 = 4-x + sqrt(x-2)`
+            </p>
+
+            <p>
+                iii) `D_fg = D_f nn D_g = [2,+oo)`
+            </p>
+
+            <p>
+                `(fg)(x) = f(x)g(x) = (1 + sqrt(x-2)) * (x-3)`
+            </p>
+
+            <p>
+                iv) `D_(f/g) = D_f nn D_g \\ {x in RR | x-3 != 0 } = [2,+oo) nn 3 = [2,3) uu (3,+oo)`
+            </p>
+
+            <p>
+                `(f/g)(x) = f(x)/g(x) = (1+sqrt(x-2))/(x-3)`
+            </p>
+
+            <p>
+                v) `D_7f = D_f``
+            </p>
+
+            <p>
+                `(7f)(x) = 7f(x) = 7(1+sqrt(x-2) = 7+7sqrt(x-2)`
+            </p>
+
+            <h6>
+                Пример 2
+            </h6>
+
+            <p>
+                Покажи дека ако `f(x) = sqrt(x)` и `g(x) = sqrt(x)` и `h(x) = x`тогаш доменот на `fg` не е еднаков на доменот
+                на `h`.
+            </p>
+
+            <p>
+                <strong>Решение</strong>. Домените на `h`е:
+            </p>
+
+            <p>
+                `D_h = RR`
+            </p>
+
+            <p>
+                Од друга страна, домените на `f` и `g` се:
+            </p>
+
+            <p>
+                `D_f = D_g = [0,+oo)`
+            </p>
+
+            <p>
+                По дефиниција,
+            </p>
+
+            <p>
+                `D_fg = D_f nn D_g = [0,+oo) != D_h`
+            </p>
+
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Напомена</h4>
+                <ul>
+                    <li>
+                        Доменот на функција добиена со аритметички операции од некои дадени функции се определува
+                        исклучиво според дефиниција.
+                    <li>
+                        Ако најпрво се најде формулата, а потоа од неа се определува доменот, може да се дојде до
+                        грешка.
+                    </li>
+                </ul>
+                <hr>
+                <p class="mb-0">Така во Примерот 2, ако прво се најде формулата за `fg` се добива:.</p>
+                <p class="text-center mb-0">`(fg)(x)=f(x)g(x)=x`.</p>
+                <p class="mb-0">Ако од добиената формула се определува доменот, како множество од сите `x` за кои
+                    формулата има смисла, ќе заклучиме дека доменот на `fg` е
+                    `RR`, што е погрешно.</p>
+            </div>
+
+            <!-- /ARITHMETIC OPERATIONS ON FUNCTIONS -->
+
+            <!-- COMPOSITION OF FUNCTIONS -->
+
+            <h3 id='composition'>
+                Композиција на функции
+            </h3>
+
+            <h6 id='def1_composition'>
+                Дефиниција 1
+            </h6>
+
+            <p>
+                Композиција `f @ g` на функциите `f` и `g` се дефинира со:
+            </p>
+
+            <p class="text-center">
+                `(f @ g)(x) = f(g(x))`
+            </p>
+            <p>
+                Доменот на `f @ g` се состои од сите `x` од доменот на `g` за кои `g(x`) е во доменот на `f`, oдносно:
+            </p>
+            <p class="text-center">
+                `D_(f @ g) = {x in D_g  | g(x) in D_f}`
+            </p>
+            <p>
+                Аналогно, композицијата `g @ f` на функциите `g` и `f` се дефинира со:
+            </p>
+            <p class="text-center">
+                `(g @ f)(x) = g(f(x))`
+            </p>
+            <p>
+                Доменот на `g @ f` се состои од сите `x` од доменот на `f` за кои `f(x`) е во доменот на `g`, oдносно:
+            </p>
+            <p class="text-center">
+                `D_ (g @ f) = {x in D_f | f(x) in D_g}`
+            </p>
+
+            <h6>
+                Пример 1
+            </h6>
+
+            <p>
+                Нека `f (x) = x^2 + 3` и `g(x) = sqrt(x)`. Да се определат композициите `f @ g` и `g @ f` .
+            </p>
+            </p>
+            <div class="card" id="ex1">
+                <div class="card-body">
+                    <details>
+                        <summary class="mb-3">Прикажи решениe:</summary>
+                        <p>
+                            1. Доменот на функцијата `f` е `D_f = RR`
+                        </p>
+                        <p>
+                            2. Доменот на функцијата `g` е `D_g = [0, +oo)`
+                        </p>
+                        <p>
+                            3. Доменот на `f @ g` e `D_(f @ g) = {x in D_g|g(x) in D_f } = {x in [0, +oo) | g(x) in RR} = [0, +oo)`
+                        </p>
+                        <p>
+                            4. Композицијата `(f @ g)(x) = f(g(x)) = f(sqrt(x)) = sqrt(x)^2 + 3 = x + 3, x >= 0`
+                        </p>
+                        <hr>
+                        <p>
+                            Од друга страна, за `g @ f` се добива:
+                        </p>
+                        3. Доменот на `g @ f` e `D_(g @ f) = {x in D_f | f(x) in D_g}={x in RR | x^2 + 3 in [0, +oo)} = RR`
+                        </p>
+                        <p>
+                            4. Композицијата `(g @ f)(x) = g(f(x)) = g(x ^2 +3) = sqrt(x^2+3), x in RR`
+                        </p>
+
+                    </details>
+                </div>
+            </div>
+
+            <p>
+                Композиција може да се дефинира за три и повеќе функции; на пример:
+            </p>
+            <p>
+                `(f @ g @ h)(x)=f(g(h(x)))`
+            </p>
+            <p>
+                За доменот на композицијата имаме:
+            </p>
+            <p>
+                `D_(f @ g @ h) = {x in D_h | h(x) in D_g, g(h(x)) in D_f}`
+            </p>
+
+            <h6>
+                Пример 2
+            </h6>
+            <p>
+                Најди `( f @ g @ h) (x)` ако:
+            </p>
+            <p>
+                `f(x) = sqrt(x)`, &nbsp; `g(x) = 1/x` и &nbsp; `h(x) = x^3`
+            </p>
+
+            <div class="card" id="ex2">
+                <div class="card-body">
+                    <details>
+                        <summary class="mb-3">Прикажи решениe:</summary>
+                        <p>
+                            1. Доменот на функцијата `f` е `D_f = [0, +oo)`
+                        </p>
+                        <p>
+                            2. Доменот на функцијата `g` е `D_g = RR\\{0}`
+                        </p>
+                        <p>
+                            3. Доменот на функцијата `h` е `D_h = RR`
+                        </p>
+                        <p>
+                            4. Доменот `D_(f @ g @ h) = {x in D_h | h(x) in D_g , g(h(x)) in D_f}`
+                            <br>`={x in RR | x ^ 3 in RR \\ {0}, 1/(x^3) in [0, +oo)}`
+                            <br>`={x in RR | x != 0 , x>0}`
+                            <br>`=(0, +oo)`
+                        </p>
+                        <p>
+                            `(f @ g @ h)(x) = f(g(h(x))) = f(g(x^3)) = f(1/(x^3)) = sqrt(1/(x^3))) = 1/sqrt(x^3), x>0`
+                        </p>
+
+                    </details>
+                </div>
+            </div>
+
+            <!-- COMPOSITION OF FUNCTIONS -->
+
+            <!-- EXPRESSING A FUNCTION AS A COMPOSITION -->
+
+            <h3>
+                Претставување на функција како композиција
+            </h3>
+            <p>
+                Голем број од проблемите во математиката се решаваат со таканаречено „екомпонирање“ на функција,
+                т.е. нејзино претставување како композиција на две или повеќе функции. На пример, да ја разгледаме
+                функцијата
+            </p>
+            <p>
+                `h(x) = (x + 1)^2`.
+            </p>
+            <p>
+                За да го пресметаме `h(x)` за дадено `x`, прво треба да го пресметаме `x + 1` и потоа да го квадрираме
+                добиениот резултат. Овие две операции ќе се извршат со функциите
+            </p>
+            <p>
+                `g(x) = x + 1` и `f(x) = x^2`.
+            </p>
+            <p>
+                Сега, можеме да го изразиме `h` преку `f` и `g` на следниот начин:
+            </p>
+            <p>
+                `h(x) = (x + 1)^2 = [g(x)]^2 = f(g(x))`,
+            </p>
+
+            <h6>
+                Пример 3
+            </h6>
+            <p>
+                Изрази ја како `sin(x^3)` како композиција од две функции
+            </p>
+            <div class="card" id="ex3">
+                <div class="card-body">
+                    <details>
+                        <summary class="mb-3">Прикажи решениe:</summary>
+                        <p>
+                            1. Нека `g(x) = x3` и `f(x) = sin(x)`. Тогаш
+                        </p>
+                        <p>
+                            2. `(f @ g)(x) = f(g(x)) = f(x3) = sin(x3)`.
+                        </p>
+                    </details>
+                </div>
+            </div>
+            <p>
+                Постапката во примерот сугерира процедура за декомпозиција на функција `h` во композиција `h = f @ g`:
+            </p>
+            <ul>
+                <li>
+                    Размислуваме како во два последователни чекори би можеле да го пресметаме `h(x)` за определена
+                    вредност на x.
+                </li>
+                <li>
+                    Првата операција во пресметката ја определува функција `g`, а втората операција определува функција
+                    `f`.
+                </li>
+                <li>
+                    Формулата за `h` се запишува како `h (x) = f (g(x))`.
+                </li>
+            </ul>
+            <p>
+                Понекогаш `g` се нарекува „внатрешна функција“ и `f` се нарекува „надворешна функција“ во изразот
+                `f(g(x))`. Внатрешната функција ја извршува првата операција, а надворешната функција ја извршува 
+                втората операција.
+            </p>
+
+            <h6>Композиција на функции - табела</h6>
+            <div class="table-responsive-sm">
+                <table class="table table-sm table-borderless">
+                    <thead>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">`g(x)`</th>
+                        <th scope="col">`f(x)`</th>
+                        <th scope="col">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Функција</td>
+                        <td>Внатрешна</td>
+                        <td>Надворешна</td>
+                        <td>Композиција</td>
+                    </tr>
+                    <tr>
+                        <td>`(x^2+1)^10`</td>
+                        <td>`x^2+1`</td>
+                        <td>`x^10`</td>
+                        <td>`(x^2+1)^10=f(g(x))`</td>
+                    </tr>
+                    <tr>
+                        <td>`sin^3(x)`</td>
+                        <td>`sin(x)`</td>
+                        <td>`x^3`</td>
+                        <td>`sin^3(x)=f(g(x))`</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- EXPRESSING A FUNCTION AS A COMPOSITION -->
+
+            <!-- NEW FUNCTIONS FROM OLD -->
+
+
+            <h6 id='functions-new'>
+                Нови функции добиени од постојни
+            </h6>
+            <p>
+                Остатокот од овој дел ќе биде посветен на разгледување на геометрискиот ефект на вршење на основните операции на функции. 
+                Ова ќе ни овозможи да користиме познати графики на функции за визуелизирање или скицирање на графикони на сродни функции. 
+                На пример, долната слика ги прикажува графиконите на годишна продажба на нови автомобили N (t) и продажбата на автомобили 
+                U (t) во одреден временски период. Овие графики може да се користат за конструирање на графикот на вкупната продажба на 
+                автомобили.
+            </p>
+            <p class="text-center">
+                `T (t) = N(t) + U(t)`
+            </p>
+            <p>
+                собирајки ги вредностите на  `N(t`) и `U(t`) за секоја вредност на `t`. Општо кажано, графикот на `y = f(x) + g(x)` може да се 
+                конструира од графиците `y = f(x)` и `y = g(x)` собирајки ги соодветните `y`- вредности за секое `x`.
+            </p>
+            <div class="text-center">
+                <img src="images/def1_13.png" class="img-fluid img">
+            </div>
+
+            <p>
+                Со помош на графиците на `y=sqrt(x)` и `y = 1/x`, да се скицира графикот на:
+            </p>
+            <p class="text-center">
+                `y=sqrt(x)+1/x` за `x>0`
+            </p>
+
+            <div class="text-center">
+                <img src="images/def1_14.png" class="img-fluid img">
+            </div>
+
+            <!-- /NEW FUNCTIONS FROM OLD -->
+
+            <!-- TRANSLATIONS -->
+
+            <h3 id='translation'>
+                Поместување (транслација) на функција
+            </h3>
+
+            <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+
+                        <tbody>
+                            <tr>
+                                <td>Операција врз `f=(x)`</td>
+                                <td>Додавање позитвна константа `c` на `f(x)`</td>
+                                <td>Вадење позитвна константа `c` од `f(x)`</td>
+                            </tr>
+                            <tr>
+                                <td>Ново равенство</td>
+                                <td>`y=f(x)+c`</td>
+                                <td>`y=f(x)-c`</td>
+                            </tr>
+                            <tr>
+                                <td>Геом.Ефект</td>
+                                <td>Транслација нагоре по `y` оската</td>
+                                <td>Транслација нагоре по `y` оската</td>
+                            </tr>
+                            <tr>
+                                <td>Primer</td>
+                                <td><div class="text-center">
+                <img src="images/def1_17.png" class="img-fluid img">
+            </div></td>
+                                <td><div class="text-center">
+                <img src="images/def1_18.png" class="img-fluid img">
+            </div></td>
+                            </tr>
+                            <tr>
+                                <td>Операција врз `f=(x)`</td>
+                                <td>Додавање позитвна константа `c` на `x` `f(x)`</td>
+                                <td>Вадење позитвна константа `c` од `x` `f(x)`</td>
+                            </tr>
+                            <tr>
+                                <td>Ново равенство</td>
+                                <td>`y=f(x+c)`</td>
+                                <td>`y=f(x-c)`</td>
+                            </tr>
+                            <tr>
+                                <td>Геом.Ефект</td>
+                                <td>Транслација налево по `x` оската</td>
+                                <td>Транслација надесно по `x` оската</td>
+                            </tr>
+                            <tr>
+                                <td>Primer</td>
+                                <td><div class="text-center">
+                <img src="images/def1_21.png" class="img-fluid img">
+            </div></td>
+                                <td><div class="text-center">
+                <img src="images/def1_22.png" class="img-fluid img">
+            </div></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+            <p>
+                Графикот на функцијата `y = f(x) + c` може да се добие од графикот на `y = f(x)` со транслација вертикално нагоре за `c` единици, ако `c > 0`, или транслација
+                вертикално надолу за `|c|` единици, ако `c < 0`.
+            </p>
+
+            <!-- /TRANSLATIONS -->
+
+            <!-- REFLECTIONS -->
+
+
+            <h3 id='reflection'>
+                Рефлексија
+            </h3>
+            <p>
+                Графикот на `y = f (−x)` се добива со рефлексија на графикот на `y = f (x`) во однос на `y`-оската, бидејќи точката `(x, y)` од
+                графикот на `f (x`) се заменува со `(−x, y)`.
+            </p>
+            <p>
+                Графикот на `y = −f (x)` се добива со рефлексија на графикот `y = f (x)` во однос на `x`-оската, бидејќи точката `(x, y)` од графикот
+                на `f (x)` се заменува со `(x, −y)`.
+            </p>
+            <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+
+                        <tbody>
+                            <tr>
+                                <td>Операција врз `f=(x)`</td>
+                                <td>Замена `x` на со `-x`</td>
+                                <td>Множење на `f(x)` со `-1`</td>
+                            </tr>
+                            <tr>
+                                <td>Ново равенство</td>
+                                <td>`y=f(-x)`</td>
+                                <td>`y=-f(x)`</td>
+                            </tr>
+                            <tr>
+                                <td>Геом.Ефект</td>
+                                <td>Рефлекција по `y` оската</td>
+                                <td>Рефлексија по `x` оската</td>
+                            </tr>
+                            <tr>
+                                <td>Primer</td>
+                                <td><div class="text-center">
+                <img src="images/def1_23.png" class="img-fluid img">
+            </div></td>
+                                <td><div class="text-center">
+                <img src="images/def1_24.png" class="img-fluid img">
+            </div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+            <!-- REFLECTIONS -->
+
+            <!-- STRETCHES AND COMPRESSIONS -->
+
+            <h3 id='strech'>
+                Растегнување и компресирање
+            </h3>
+            <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+
+                        <tbody>
+                            <tr>
+                                <td>Операција врз `f=(x)`</td>
+                                <td>Множење со `c, &nbsp;c>1`</td>
+                                <td>Множење со `c, &nbsp; 0<``c``<1`</td>
+                            </tr>
+                            <tr>
+                                <td>Ново равенство</td>
+                                <td>`y=cf(x)`</td>
+                                <td>`y=cf(x)`</td>
+                            </tr>
+                            <tr>
+                                <td>Геом.Ефект</td>
+                                <td>Истегнување вертикално со фактор `c`</td>
+                                <td>Збивање вертикално со фактпр `c`</td>
+                            </tr>
+                            <tr>
+                                <td>Primer</td>
+                                <td><div class="text-center">
+                <img src="images/def1_15.png" class="img-fluid img">
+            </div></td>
+                                <td><div class="text-center">
+                <img src="images/def1_16.png" class="img-fluid img">
+            </div></td>
+                            </tr>
+                        <tr>
+                                <td>Операција врз `f=(x)`</td>
+                                <td>Множење на `x` со `c, &nbsp;c>1`</td>
+                                <td>Множење на `x` со `c, &nbsp; 0<``c``<1`</td>
+                            </tr>
+                            <tr>
+                                <td>Ново равенство</td>
+                                <td>`y=f(cx)`</td>
+                                <td>`y=f(cx)`</td>
+                            </tr>
+                            <tr>
+                                <td>Геом.Ефект</td>
+                                <td>Збивање хоризонтално со фактор `c`</td>
+                                <td>Истегнување хоризонтално со фактпр `c`</td>
+                            </tr>
+                        <tr>
+                                <td>Primer</td>
+                                <td><div class="text-center">
+                <img src="images/def1_19.png" class="img-fluid img">
+            </div></td>
+                                <td><div class="text-center">
+                <img src="images/def1_20.png" class="img-fluid img">
+            </div></td>
+                            </tr>
+                        <tr>
+
+
+
+                        </tbody>
+                    </table>
+                    </div>
+            <p>
+                Нека `c > 0`. Графикот на функцијата `y = cf(x)` може да се добие од графикот на `y = f(x)` со растегнување на графикот на y = f(x)
+                вертикално за фактор `c`, ако `c > 1`, или вертикално компресирање на истиот график за фактор `1/c`, ако `0` `<` `c` `<` `1`.
+            </p>
+
+            <!-- /STRETCHES AND COMPRESSIONS -->
+
+            <!-- SYMMETRY -->
+            <h3 id='simmetry'>
+                Видови на симетрии
+            </h3>
+            <p>
+                Графикот на крива `C` во рамнина е симетричен во однос на `x` – оската, ако со секоја точка `(x, y)` од
+                графикот на `C` и точката `(x,-y)` припаѓа на истиот график.
+            </p>
+            <div class="text-center">
+                <img src="images/simmetry_01.png" class="img-fluid img">
+            </div>
+            <p>
+                График на една функција не може да е симетричен во однос на `x`-оската. Зошто?
+            </p>
+            <p>
+                Графикот на крива `C` во рамнина е симетричен во однос на `y` – оската, ако со секоја точка `(x, y)` од графикот на `C` и точката `(-x, y)` припаѓа на истиот график.
+            </p>
+            <div class="text-center">
+                <img src="images/simmetry_02.png" class="img-fluid img">
+            </div>
+            <p>
+                Графикот на крива `C` во рамнина е симетричен во однос на координатниот почеток, ако со секоја точка `(x, y)` од графикот на `C` и точката `(-x, -y)` припаѓа на истиот график.
+            </p>
+            <div class="text-center">
+                <img src="images/simmetry_03.png" class="img-fluid img">
+            </div>
+            <div id="th1" class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Теорема 1 Тест за симетрија</h4>
+                <ul>
+                    <li>
+                        Една крива во рамнина е симетрична во однос на `y`-оската ако и само ако по замена на `x` со `–x` се добива еквивалентна равенка на дадената.
+                    </li>
+                    <li>
+                        Една крива во рамнина е симетрична во однос на `x`-оската ако и само ако по замена на `y` со `–y` се добива еквивалентна равенка на дадената.
+                    </li>
+                    <li>
+                        Една крива во рамнина е симетрична во однос на координатниот почеток ако и само ако по замена на `x` со `–x` и `y` со `–y` се добива еквивалентна равенка на дадената.
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- /SYMMETRY -->
+
+            <!-- EVEN AND ODD FUNCTIONS -->
+            <h3 id='even'>
+                Парни и непарни функции
+            </h3>
+            <p>
+                Ако графикот на функција `f` е симетричен во однос на `y` – оската, тогаш со секоја точка `(x, y) = (x,
+                f(x)in Gamma` и точката `(-x, y) = (-x, f(-x)) in Gamma`. Од првата точка имаме дека:
+            </p>
+            <p class="text-center">
+                `y=f(x)`
+            </p>
+            <p>
+                а од втората точка:
+            </p>
+            <p class="text-center">
+                `y=f(-x)`
+            </p>
+            <p>
+                Последните две равенства имаат исти леви страни, па можеме да ги изедначиме и десните. Добиваме:
+            </p>
+            <p class="text-center">
+                `f(x)=f(-x)`
+            </p>
+            <p>
+                Ова важи за секој `x in D_f`. Функцијата која го задоволува последното својство се нарекува
+                <strong>парна функција</strong>.
+            </p>
+            <div class="text-center">
+                <img src="images/families_09.png" class="img-fluid img">
+            </div>
+            <p>
+                Ако графикот на функција `f` е симетричен во однос на координатниот почеток, тогаш со секоја точка `(x,
+                y) = (x, f(x)in Gamma` и точката `(-x, y) = (-x, f(-x)) in Gamma`. Од првата точка имаме дека:
+            </p>
+            <p class="text-center">
+                `y=f(x)`
+            </p>
+            <p>
+                а од втората точка:
+            </p>
+            <p class="text-center">
+                `-y=f(-x)<=>y=-f(-x)`
+            </p>
+            <p>
+                Последните две равенства имаат исти леви страни, па можеме да ги изедначиме и десните. Добиваме:
+            </p>
+            <p class="text-center">
+                `-f(x)=-f(-x)<=>f(-x)=f(-x)`
+            </p>
+            <p>
+                Ова важи за секој `x in D_f`. Функцијата која го задоволува последното својство се нарекува
+                <strong>непарна функција</strong>.
+            </p>
+            <div class="text-center">
+                <img src="images/families_10.png" class="img-fluid img">
+            </div>
+            <p>
+                Значи, ако графикот на функција `f` е симетричен во однос на координатниот почеток, тогаш `f` e непарна
+                функција, и обратно.
+            </p>
+            <!-- /EVEN AND ODD FUNCTIONS -->
+
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

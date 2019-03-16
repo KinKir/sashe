@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mayhematics">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="VS Code 2019">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../assets/img/icon/favicon.ico">
+        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Знаење</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_university.html">Вежби-IO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">Вежби-Книга</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Колоквиум</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Испитни прашања</a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic.html">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic-app.html">
+                                        Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_equivalences.html">
+                                        Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Предикати и квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Вгнездени квантификатори
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Исказно сметање</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Propositions">Искази</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#negation">Негација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#conjunction">Конјукција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#disjunction">Дисјукција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#exclusive or">Екслузивно или</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#implication">Импликација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Logic and Bit Operations">Операции над битови</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                    <!-- intro -->
+                    <div id='Propositional Logic' class='row'>
+                        <div class='col-md-12'>
+                            <p class="nf bd-lead">
+                                Значењето на математичките искази е одредено со правилата на логиката. Логиката е основа на сите математички донесени судови и 
+                                на сите автоматизирани носења на суд. Логиката наоѓа практична примена во дизајн на компјутерски машини, во спецификација на 
+                                системи, за вештачка интелигенција, во компјутерско програмирање, во програмски јазици, како и во други области на компјутерската наука.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- intro -->
+    
+                    <!-- Propositional Logic -->
+                    <div id='Translating' class='row'>
+                        <div class='col-md-12'>
+                            <h3 id="def">
+                                Исказно сметање
+                            </h3>
+        
+                            <p>
+                                Законите на логиката даваат прецизно значење на математичките искази. Овие закони ни овозможуваат да ги разликуваме 
+                                важечките од неважечките математички тврдења.
+                            </p>
+        
+                            <h5 id='Propositions'>
+                                Искази
+                            </h5>
+
+                            <p>
+                                Исказот е основен логички елемент. <strong>Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или 
+                                неточен но не и двете.</strong>
+                            </p> 
+            
+                            <p id="ex1">
+                                <strong>Пример 1</strong>
+                            </p>
+                            <p>
+                                Сите овие декларативни реченици се искази.
+                            </p>
+        
+                            <ul>
+                                <li>
+                                    Washington, D.C., is the capital of the United States of America.
+                                </li>
+                                <li>
+                                    Toronto is the capital of Canada.
+                                </li>
+                                <li>
+                                    `1 + 1 = 2`
+                                </li>
+                                <li>
+                                    `2 + 2 = 3`
+                                </li>
+                            </ul>
+
+                            <p>
+                                при тоа исказите `1` и `3` се точни,додека исказите `2` и `4` се неточни.
+                            </p>
+        
+                            <p id="ex2">
+                                <strong>Пример 2</strong>
+                            </p>
+                            <p>
+                                Некои реченици не се искази.
+                            </p>
+            
+                            <ul>
+                                <li>
+                                    Колку е часот?
+                                </li>
+                                <li>
+                                    Прочитај го ова внимателно.
+                                </li>
+                                <li>
+                                    `x + 1 = 2`
+                                </li>
+                                <li>
+                                    `x + y = z`
+                                </li>
+                            </ul>
+
+                            <p id="ex2">
+                                <strong>Пример 2</strong>
+                            </p>
+                            <p>
+                                Некои реченици не се искази.
+                            </p>
+            
+                            <ul>
+                                <li>
+                                    Колку е часот?
+                                </li>
+                                <li>
+                                    Прочитај го ова внимателно.
+                                </li>
+                                <li>
+                                    `x + 1 = 2`
+                                </li>
+                                <li>
+                                    `x + y = z`
+                                </li>
+                            </ul>
+
+                            <p>
+                                Речениците `1` и `2` не се искази бидејки не се декларативни реченици. Речениците `3` и `4` не се искази 
+                                бидејки не се ниту точни ниту неточни.
+                            </p>
+    
+                            <p>
+                                За да се означат променливите на исказите се користат мали букви од англиската абецеда. Договорно за означување на 
+                                променливите на исказите се користат следните букви `p, q, r, s, . . .`. Вредноста за „точно“ во исказот се 
+                                означува со `T` или `TT`. Вредноста за „неточно“ се означува со `F` или `_|_`.
+                            </p>
+
+                            <p>
+                                Областа на логиката што ги изучува исказите се нарекува <strong>исказно сметање</strong>. Прв пат е развиено и 
+                                систематизирано од страна на античкиот грчки филозоф Аристотел (Aristotle - Ἀριστοτέλης 384 - 322 BC) пред 2300 години.
+                            </p>
+        
+                            <p>
+                                Англискиот математичар Џорџ Бул (George Boole) ги изучувал методите за градба на нови искази од веќе постоечки. 
+                                Истите ги претставил во 1854 год. во неговата книга „Закони на вистината“. Новите искази, кои се нарекуваат композитни 
+                                искази, се искази кои употребуваат логички оператори.
+                            </p>
+    
+                            <h5 id='negation'>
+                                Негација
+                            </h5>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Дефиниција 1</h4>
+                                <p>
+                                    Нека `p` е исказ. Негација од исказот `p`, означена со `not p` (или означен со `overset (-)(p)`), е исказот
+                                </p>
+                                <p class="text-center">
+                                    „Не е случај дека `p`“
+                                </p>
+                                <p>
+                                    Исказот `not p` се чита „not `p`.“ Логичката вредност на негацијата од `p`, `not p`, e спротивна на логичкат вредност 
+                                    на `p`.
+                                </p>
+                            </div>
+    
+                            <p id="ex3">
+                                <strong>Пример 3</strong>
+                            </p>
+                            <p>
+                                Најди ја негацијата на исказот <span class='text-primary'><em>Мојот PC работи под Linux</em></span> и искажи ја со реченица.
+                            </p>
+
+                            <p>
+                                <strong>Решение</strong>
+                            </p>
+        
+                            <p>
+                                Негацијата е:
+                            </p>
+        
+                            <p>
+                                <span class='text-primary'><em>Не е случај дека мојот PC работи под Linux.</em></span>
+                            </p>
+    
+                            <p>
+                                Негацијата може поедноставно да се искаже како:
+                            </p>
+        
+                            <p>
+                                <span class='text-primary'><em>Мојот PC не работи под Linux.</em></span>
+                            </p>
+    
+                            <p id="ex4">
+                                <strong>Пример 4</strong>
+                            </p>
+
+                            <p>
+                                Најди ја негацијата на исказот <span class='text-primary'><em>Мојот мобилен има најмаку 32GB меморија</em></span> и искажи ја со реченица.
+                            </p>
+        
+                            <p>
+                                <strong>Решение</strong>
+                            </p>
+
+                            <p>
+                                Негацијата е:
+                            </p>
+    
+                            <p>
+                                <span class='text-primary'><em>Не е случај дека мојот мобилен има 32GB меморија.</em></span>
+                            </p>
+    
+                            <p>
+                                Негацијата може поедноставно да се искаже како:
+                            </p>
+        
+                            <p>
+                                    <span class='text-primary'><em>Мојот мобилен нема 32GB меморија.</em></span>
+                            </p>
+    
+                            <h6>
+                                Табела на вистинитост
+                            </h6>                
+            
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`not p`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за негацијата на исказот `p`. Оваа табела има ред за секоја 
+                                        од двете можни вредности на вистиноста на исказот `p`. Секој ред ја покажува вредноста на вистиноста за `not p` 
+                                        за соодветната вреднст на вистиноста на `p`.
+                                    </p> 
+                                    <p>
+                                        Негација на исказ може да се смета дека е резултат на операција на оператор на негација врз исказот. Операторот на 
+                                        негација создава нов исказ од постоечки исказ. Понатаму ќе ги претставиме логичките оператори кои се користат да создадат 
+                                        нов исказ од два или повеќе искази. Овие логички оператори се нарекуваат и сврзници.
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <h5 id='conjunction'>
+                                Конјукција
+                            </h5>
+
+                            <div id="def2" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Дефиниција 2</h4>
+                                <p>
+                                    Нека `p` и `q` се искази. Конјукција на `p` и `q`, означена со `p ^^ q` го претставува исказот „`p` и (and) `q`“. 
+                                    Вредноста на вистиноста на конјукцијата `p ^^ q` e точна кога и двата искази `p` и `q` се точни а спротивно 
+                                    вредноста на вистиноста на конјукцијата е неточна.                          
+                                </p>
+                                
+                            </div>  
+
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p ^^ q`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за конјукција `p ^^ q`. Оваа табела има ред за секоја 
+                                        од четирите можни комбинации на вистиноста на исказите `p` и `q`.
+                                    </p> 
+                                </div>
+                            </div>
+
+                            <p id="ex4">
+                                <strong>Пример 5</strong>
+                            </p>
+                            <p>
+                                Најди ја конјукцијата од исказите `p` и `q` каде `p` е исказот <span class='text-primary'><em>Мојот PC има повеќе од 160 GB слободен диск 
+                                    простор.</em></span> а `q` е исказот <em>Процесорот на мојот PC е побрз од 1 GHz.</em> и искажи ја со реченица.
+                                
+                            </p>
+        
+                            <p>
+                                <strong>Решение</strong>
+                            </p>
+            
+                            <p>
+                                Конјукцијата на овие искази е исказот <em><span class='text-primary'>Мојот PC има повеќе од 160 GB слободен диск простор и процесорот на мојот PC е побрз 
+                                од 1 MHZ.</em></span> или поедноставено <span class='text-primary'><em>Мојот PC има повеќе од 160 GB слободен диск простор и неговиот процесор е побрз од 1 MHZ.</em></span>
+                                За вредноста на вистиноста на конјукцијата да е точна треба и вредностите на вистиностa на двата искази да се точни. Вредноста на 
+                                вистиноста на конјукцијата е неточно кога еден или двата искази се неточни.
+                            </p>
+    
+                            <h5 id='disjunction'>
+                                Дисјукција
+                            </h5>
+
+                            <div id="def3" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 3</h4>
+                                <p>
+                                    Нека `p` и `q` се искази. Дисјукција на `p` и `q`, означена со `p vv q` го претставува исказот „`p` или (or) `q`“. 
+                                    Вредноста на вистиноста на дисјукцијата `p vv q` e неточна кога и двата искази `p` и `q` се неточни а спротивно 
+                                    вредноста на вистиноста на дисјукцијата е точна.                          
+                                </p>
+                                
+                            </div>  
+        
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p vv q`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за дисјукција `p vv q`. Оваа табела има ред за секоја 
+                                        од четирите можни комбинации на вистиноста на исказите `p` и `q`.
+                                    </p> 
+                                </div>
+                            </div>
+        
+                            <p>
+                                Употребата на сврзникот или во дисјункцијата е во сооднос со еден од двата начина на употребата на зборот 
+                                или во говорниот јазик, имено, како инклусивно или. Вредноста на вистиноста на дисјункцијата е точна 
+                                кога вредноста на вистинитоста на барем еден од двта исказите е точна. На пример инклусивно или се употребува 
+                                во исказот <span class='text-primary'><em>Студентот кој го има предметот калкулус или компјутерски науки може да го 
+                                посетува овој предмет.</em></span> Овде се мисли дека студентот кој ги посетува двата предмата може да го посетува 
+                                предметот исто како и студентот кој посетува само еден од двата предмета.
+                            </p>
+
+                            <p>
+                                Од друга страна пак го употребуваме екслузивното или кога велиме <span class='text-primary'><em>Студентот кој го има предметот 
+                                калкулус или компјутерски науки, но не двата, може да го посетува овој предмет.</em></span> Овде подразбираме дека студентот кој ги 
+                                посетува двата предмета не може да го посетува овој предмет. Само оној студент кој одбрал само еден предет од двата 
+                                може да го посетува овој предмет. Ова е слично на кога во мени во ресторан се кажува <span class='text-primary'><em>За предјадење се служи супа 
+                                или салата.</em></span>. Рестораните скоро секогаш мислат дека гостинот треба да одбере помеѓу супа или салата но 
+                                не двете. Испаѓа дека all-inclusive и не е баш исказ (токму поради ова постои EC directive за заштита на потрошувачите која наложува на 
+                                хотелите да ги наведат сите услуги коi следуваат под all-inclusive понудите.).
+                            </p>
+        
+                            <p id="ex4">
+                                <strong>Пример 6</strong>
+                            </p>
+                            <p>
+                                Најди ја дисјукцијата од исказите `p` и `q` каде `p` е исказот <em>Мојот PC има повеќе од 160 GB слободен диск 
+                                простор.</em> а `q` е исказот <em>Процесорот на мојот PC е побрз од 1 GHz.</em> и искажи ја со реченица.
+                                
+                            </p>
+        
+                            <p>
+                                <strong>Решение</strong>
+                            </p>
+
+                            <p>
+                                Дисјукцијата на овие искази е исказот <em>Мојот PC има повеќе од 160 GB слободен диск простор или процесорот на мојот PC е побрз 
+                                од 1 MHZ.</em> или поедноставено <em>Мојот PC има повеќе од 160 GB слободен диск простор или неговиот процесор е побрз од 1 MHZ.</em> 
+                                За вредноста на вистиноста на дисјукцијата да е точна треба вредностите на вистиностите на еден од исказите да е точна или 
+                                и двата искази да се точни. Вредноста на вистиноста на конјукцијата е неточно кога двата искази се неточни.
+                            </p>
+    
+                            <h5 id='exclusive or'>
+                                Екслузивно или
+                            </h5>
+        
+                            <div id="def4" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 4</h4>
+                                <p>
+                                    Нека `p` и `q` се искази. Екслуизивно или на `p` и `q`, означена со `p o+ q` (XOR) е исказ  чија вредност на вистиноста е точна 
+                                    кога вредноста на вистиноста на само еден од исказите `p` и `q` е точна а спротивно вредноста на вистиноста е неточна.                          
+                                </p>
+                                
+                            </div> 
+
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p o+ q`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за екслусивно или. Оваа табела има ред за секоја 
+                                        од четирите можни комбинации на вистиноста на исказите `p` и `q`.
+                                    </p> 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- /Propositional Logic -->
+
+                   <!-- Conditional Statements -->
+                   <div id='Conditional Statements' class='row'>
+                        <div class='col-md-12'>
+                            <h5 id='Conditional Statements'>
+                                Условни искази - Импликација
+                            </h5>
+
+                            <p>
+                                Овде ќе претставиме неколку методи со кои можат да се комбинираат исказите.
+                            </p>
+
+                            <h5 id='Conditional Statements'>
+                                Условни искази - Импликација
+                            </h5>
+        
+                            <p>
+                                Овде ќе претставиме неколку методи со кои можат да се комбинираат исказите.
+                            </p>
+        
+                            <div id="implication" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 5</h4>
+                                <p>
+                                    Нека `p` и `q` се искази. Условниот исказ `p -> q`, е исказот „<em>ако е `p` тогаш `q`</em>“ (if p, then q). 
+                                    Условниот исказ `p -> q` е неточен кога `p` е точен а `q` е неточно а во спротивно е точно. Во условниот исказ 
+                                    `p` се нарекува <em>хипотеза (претходник, премиса)</em> а `q` <em>заклучок( или последица).</em> 
+                                </p>
+                            </div> 
+        
+                            <p>
+                                Исказот `p -> q` се нарекува условен исказ бидејки `p -> q` тврди дека `q` е точно при условот кој го одредува 
+                                `p`. Условниот исказ се нарекува и импликација.
+                            </p>
+
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p -> q`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за условниот исказ `p -> q`. Треба да се напомене дека исказот 
+                                        `p -> q` е вистина кога и двата искази `p` и `q` се вистина и кога `p` е невистина (без разлика на вредноста на вистиноста на исказот `q`).
+                                    </p> 
+                                </div>
+                            </div>
+
+                            <p>
+                                Еден начин како да се свати вредноста на вистиноста на условниот исказ е на него да се мисли како на некоја обврска или 
+                                договор. На пример ветувањето кое го даваат многу политичари кога се кандидираат за функција
+                            </p>
+                            <p>
+                                <em>Ако ме изберете мене, ќе ги намалам даноците.</em>.
+                            </p>
+                            <p>
+                                Ако политичарот е избран, гласачите ќе очекуваат овој политичар да ги намали даноците. И уште повеќе ако 
+                                овој политичар не е избран, гласачите нема да имаат никакво очекување овој политичар да ги намали даноците иако можеби 
+                                има доволно влијание да ги натера оние на власт да ги намалат даноците. Само кога политичарот е избран но не ги намалува даноците 
+                                гласачите можат да кажат дека не ги почитува изборните ветувања. Последниов случај соодвествува на случајот кога `p` е вистина 
+                                но `q` не е вистина во исказот `p->q`
+                            </p>
+                            <p>
+                                Слично да го разледаме исказот што може да го даде професорот:
+                            </p>
+        
+                            <p>
+                                <em>Ако освоите 100% од поените на испит ќе добиете 10-ка</em>
+                            </p>
+
+                            <p>
+                                Ако успете да добиете 100% од поените на испит, тогаш очекувате да добиете 10-ка. Ако не освоите 100% од поените може но не мора 
+                                да добите 10-ка во зависност од други услови. Но ако добиете 100% од поените, а професорот не ви даде 10-ка ќе се 
+                                чувствувате излажано.
+                            </p>
+        
+                            <p id="ex4">
+                                <strong>Пример 6а <span><i class="fas fa-graduation-cap"></i></span></strong>
+                            </p>
+                            <p>
+                                Да претоставиме дека од владата на РМ ветила:
+                            </p>
+                            <p>
+                                Ако нашата кошаркарска репрезентација земе медал, ќе им приредиме голем пречек на аеродром.
+                            </p>
+                            <p>
+                                Кога можеме да сметаме дека владата не излажала?
+                            </p>
+                            <p>
+                                Ако нашата репрезетација навистина земе медал, сите ќе очекуваме таа да го исполни ветувањето и да организира пречек на аеродром. 
+                                Но и ако не земе медал, а владата сепак организира пречек на аеродром, нема да се чувствуваме измамени. Нема да се чувствуваме 
+                                измамени ни ако владата не организира пречек на аеродром кога репрезентацијата не зела медал.
+                            </p>
+                            <p>
+                                Значи, навивачите ќе се чувствуваат излажани само во еден случај, кога репрезентацијата зела медал, а владата нема да организира пречек. 
+                            </p>
+
+                            <!-- p>
+                                Примеров е непримерен бидејки е глуп, не делува воспитно, и не е на интелигентно ниво на примерите во книгата, ги 
+                                вулгаризира вредностите на навивачите, меша политика и спорт, наметнува политички ставови на универзитетот... 
+                                но да го разгедаме уште еднаш, чекор по чекор 
+                            </p>
+                            <p>
+                                Имаме два искази `p` - Ако нашата кошаркарска репрезентација земе медал и `q` - ќе им приредиме голем пречек на аеродром.
+                            </p>
+                            <p>
+                                Треба да ја одредеме импликацијата `p -> q`
+                            </p>
+                            <p>
+                                Од табелата на вистиноста следи. 
+                            </p>
+                            <p>
+                                1.импликацијата е вистинита кога и двата искази се точни.<br>
+                                Значи навивачите ке бидат задоволни кога под број еден репрезентација ќе освои медал а при тоа владата ќе организира дочек 
+                                (што со они навивачи кои знаат дека сме освоиле медал ама не знаат дека владата организирала пречек па се ни задоволни ниту се 
+                                незадоволни ...).
+                            </p>
+                            <p>
+                                2. импликацијата е вистина кога првиот исказ е невистина без разлика на вредноста на вистинитост на вториот исказ<br>
+                                Значи навивачите ќе се задоволни ако репрезентацијата не освоила медал ама владата организирала пречек (навивачите се задоволни 
+                                од односот на владата кон репрезентацијата која само замисли можеби не освоила медал зато што е дисквалифукувана поради расизам 
+                                и и е одземен освоениот медал и е исклучена од федерацијата без право на членство во следните 100 години).<br>
+                                Значи навивачите ќе се задоволни и ако репрезентацијата не освоила медал и владата не организирала пречек. ( иако сме го освоиле 
+                                четвртото место, сме обезбедиле дирекно учество на светско првенство и олипијада и пет репрезентативци се во првиот тим на првенството 
+                                плус најдобар тренер...)
+                            </p>
+
+                            <p>
+                                3.импликацијата не е вистинита кога првиот исказ е точен но вториот не е точен.<br> 
+                                Значи навивачите ќе се чувствуваат незадоволно само и само кога репрезентацијата освои медал а владата не приредила дочек. 
+                                (Иако владата само што донела одлука дека веќе нема да врши пречек на репрезентација туку парите ќе ги пренамени на изградба на училишта).
+                            </p>
+                            <p>
+                                Примери за импликација <span><i class="fas fa-graduation-cap"></i></span></strong>
+                            </p>
+                            <p>
+                                Ако овој час воопшто заврши, тогаш сонцето ќе изгрее утре.<br>
+                                `p = T; q = T => p -> q = T`<br>
+                                Вистина е дека ако овој час заврши тогаш сонцето ќе изгрее утре.<br>
+                                `p = F; q = T => p -> q = T`<br>
+                                Вистина е дека ако овој час не заврши тогаш сонцето ќе изгрее утре.<br>
+                            </p>
+                            <p>
+                                Ако вторник е ден од неделата, тогаш јас сум пингвин.<br>
+                                `p = T; q = F => p -> q = F`<br>
+                                Не е вистина дека ако вторник е ден од неделата јас сум пингвин.
+                            </p>
+                            <p>
+                                Ако `1 + 1 = 6`, тогаш Иванов е претседател на Македонија.<br>
+                                `p = F; q = T => p -> q = T`<br>
+                                Вистина е дека иако ` 1 + 1 = 6` сепак Иванов е председател.(Пак глуп и непримерен пример)
+                            </p>
+
+                            <p>
+                                Ако месечината е направена од сирење, тогаш јас сум побогата од Бил Гејтс.<br>
+                                `p = F; q = F => p -> q = T`<br>
+                                Вистина е дека ако месечината е направена од сирење јас сум побогата од Бил Гејтс.
+                            </p>
+
+                            <p>
+                                Бидејки условниот исказ игра суштествена улога во математичката логика, голем број на терминологии се употребуваат 
+                                за да го изјаснат изразот `p -> q`. Овој изказ може да се запише на следните начини:
+                                <ul>
+                                    <li>
+                                        Ако е `p` тогаш `q` (if `p`, then `q`)
+                                    </li>
+                                    <li>
+                                        Ако `p`, `q` (if `p`, `q`)
+                                    </li>
+                                    <li>
+                                        `p` е доволно за `q`(`p` is sufficient for `q`)
+                                    </li>
+                                    <li>
+                                        `q` ако `p`(`q` if `p`)
+                                    </li>
+                                    <li>
+                                        `q` кога `p` (`q` when `p`)
+                                    </li>
+                                    <li>
+                                        потребен услов за `p` e `q` (a necessary condition for `p` is `q`)
+                                    </li>
+                                    <li>
+                                        (`q` unless `not p`)
+                                    </li>
+                                    <li>
+                                        `p` го повлекува `q` (`p` implies `q`)
+                                    </li>
+                                    <li>
+                                        `p` само ако `q` (`p` only if `q`)
+                                    </li>
+                                    <li>
+                                        доволен услов за `q` е `p` (a sufficient condition for `q` is `p`)
+                                    </li>
+                                    <li>
+                                        `q` секогаш кога `p` (`q` whenever `p`)
+                                    </li>
+                                    <li>
+                                        (`q` is necessary for `p`)
+                                    </li>
+                                    <li>
+                                        `q` следи од `p` (`q` follows from `p`)
+                                    </li>
+                                </ul>
+                            </p>
+
+                            <h5>
+                                Примери за различните записи на `p -> q` во говорниот јазик
+                            </h5>
+                            <ul>
+                                <li>
+                                    Ако `p`, тогаш `q` - Ако не отидам на училиште, тогаш ќе мора да однесам оправдување.
+                                </li>
+                                <li>
+                                    Ако `p`, `q` - Ако одиме на стадион, ќе седиме на северната трибина.
+                                </li>
+                                <li>
+                                    `p` повлекува `q` - `x + 1 = 3` повлекува `х = 2` (ако `x + 1 = 3`, тогаш `х = 2` )
+                                </li>
+                                <li>
+                                    кога `p`, `q` - Кога ќе се разбудам, ќе ти се јавам.
+                                </li>
+                                <li>
+                                    секогаш кога `p`, `q` - Секогаш кога одиме на излет, врне.
+                                </li>
+                                <li>
+                                    `q` ако `p` - Не можам да ги решам задачите ако не сум го прочитала предавањето.
+                                </li>
+                                <li>
+                                    `q` кога `p` - Учениците влегуваат во училницата кога ќе заѕвони ѕвончето.
+                                </li>
+                                <li>
+                                    `q` секогаш кога `p` - Професорот ме прашува секогаш кога нема да дигнам рака.
+                                </li>
+                                <li>
+                                    `p` само ако `q` - Тестот ќе го решам само ако го научам материјалот.
+                                </li>
+                                <li>
+                                    `p` е доволно за `q` - Да одговорам на три прашања е доволно за да положам.
+                                </li>
+                                <li>
+                                    `q` е потребно за `p` - За да положам потребно е да одговорам на 3 прашања.
+                                </li>
+                                <li>
+                                    `q` следи од `p` - Неговото унапредување во фирмата следи од тоа што тој многу работи
+                                </li>
+                                <li>
+                                    `q` е имплицирано од `p` - `х = 1` е имплицирано од `х + 1 = 2`
+                                </li>
+                            </ul>
+            
+                            <h5>
+                                Може да настане забуна меѓу „Ако `p`, `q`“ и „Само ако `p`, `q`“
+                            </h5>
+
+                            <p>
+                                Нека `p`: Добивам нов компјутер, `q`: Го положувам испитот.
+                            </p>
+                            <p>
+                                Да претпоставиме дека на родителите сте им рекле:
+                            </p>
+                            <p>
+                                Ако добијам нов компјутер, ќе го положам испитот (ако `p`, `q`)
+                            </p>
+                            <p>
+                                Со оваа изјава ветувате дека ако добиете нов компјутер ќе го положите испитот, но може да го положите 
+                                испитот дури и да не добиете нов комјутер. Ветувањето нема да биде исполнето ако сте добиле нов компјутер, 
+                                а испитот не сте го положиле.
+                            </p>
+                            <p>
+                                Само ако добијам нов комјутер, ќе го положам испитот. (само ако `p`, `q`)
+                            </p>
+                            <p>
+                                Со оваа изјава кажувате дека нема шанси испитот да се положи без нов компјутер. Сега не би било лага ако не 
+                                сте го положиле испитот, а сте добиле нов компјутер, но лага би било ако положите, а не сте добиле нов компјутер 
+                                (значи новиот комјутер не бил неопходен за положувањето на испитот).
+                            </p>
+        
+                            <h5>
+                                Ако `p` тогаш `q` и `p` само ако `q`
+                            </h5>
+
+                            <p>
+                                Нека
+                            </p>
+                            <ul>
+                                <li>
+                                    `p`: Сте добиле премија на лото и
+                                </li>
+                                <li>
+                                    `q`: Сте уплатиле ливче за лото
+                                </li>
+                            </ul>
+                            <p>
+                                Ако `p` тогаш `q` -   Ако сте добиле премија на лото тогаш сте уплатиле ливче за лото
+                            </p>
+                            <p>
+                                `p` само ако `q` - Ќе добиете премија на лото само ако уплатите ливче за лото.
+                            </p>
+        
+                            <h5>
+                                Конверзија, Контрапозитив и Инверзија 
+                            </h5>
+
+                            <p>
+                                Видовме дека можеме да формираме нови искази користејки го условниот исказ `p -> q`. Општо кажано, 
+                                постојат три меѓусебно поврзани искази кои се јавуваат толку често што имаат засебни имиња. Исказот `q -> p` 
+                                се нарекува конверзија од исказот `p -> q`. Контрапозитив од `p -> q` е исказот `not q -> not p`. Исказот 
+                                `not p -> not q` се нарекува инверзија од `p -> q`. Ќе видиме дека од сите три условни искази формирани од 
+                                `p -> q`, само контрапозитивот секогаш има иста вредност на вистинитост како и `p -> q`.
+                            </p>
+        
+                            <p>
+                                Прво да покажеме дека контрапозитивниот, `not q -> not p`, на условниот исказ `p -> q` секогаш ја има истата вредност 
+                                на вистинитост како и `p -> q`. За да го видиме ова, треба да се има предвид дека вредноста на вистиноста на контрапозитивниот 
+                                е неточно само кога `¬p` е неточно и `¬q` е точно, што е, само кога `p` е точно и `q` е неточно. Сега ќе покажеме дека ниту 
+                                конверзијата `q -> p`, ниту инверзијата, `not p -> not q`, ја имаат истата вредност на вистиноста како `p -> q` за сите можни 
+                                вредности на вистиноста на `p` и `q`.
+                            </p>
+        
+                            <p>
+                                Кога два сврзани искази секогаш ја имаат истата вредност на вистиноста, ги нарекуваме еквивалентни, па така условниот исказ 
+                                и неговиот контрапозитив се еквивалентни. Конверзијата и инверзијата на условниот исказ исто така се еквивалентни, но ниту една 
+                                не е еквивалентна на оригиналниот условен изказ. Една од најчестите логички грешки е претпоставката дека конверзијата или инверзијата 
+                                се еквивалент на условниот изказ.
+                            </p>
+
+                            <p id="ex9">
+                                <strong>Пример 9 <span><i class="fas fa-book"></i></span></strong>
+                            </p>
+                            <p>
+                                Што е контрапозитив, конверзија и инверзија на условниот исказ:
+                            </p>
+                            <p>
+                                <em>Домашниот тим победува секогаш кога паѓа дожд.</em>
+                            </p>
+                            <p>
+                                Решение:
+                            </p>
+                            <p>
+                                Бидејки `q` секогаш кога `p` е еден од начините на запис на условниот исказ `p -> q`, оргиналниот исказ 
+                                може да се презапише како :
+                            </p>
+                            <p>
+                                <em>Ако врне тогаш домашниот тим победува.</em>
+                            </p>
+                            <p>
+                                Последично, контрапозитивот на овој условен исказ е:
+                            </p>
+                            <p>
+                                <em>Ако домашниот тим не победи тогаш нема да врне.</em>
+                            </p>
+
+                            <p>
+                                Конверзија е:
+                            </p>
+                            <p>
+                                <em>Ако домашниот тим победи тогаш врне</em>
+                            </p>
+                            <p>
+                                Инверзија е:
+                            </p>
+                            <p>
+                                <em>Ако не врне домашниот тим нема да победи</em>
+                            </p>
+                            <p>
+                                Само контрапозитивот е еквивалент на оргиналниот условен исказ.
+                            </p>
+        
+                            <h5>
+                                Комбинации на условни искази  - Еквивалентност
+                            </h5>
+                            <p>
+                                Овде ќе покажеме друг начин на комбинација на искази кои искажуваат дека два искази имаат исти вредности на вистинитост. 
+                            </p>
+
+                            <div id="implication" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 6</h4>
+                                <p>
+                                    Нека `p` и `q` се искази. Еквивалентност на исказите `p harr q`, е исказот „<em>`p` е точно ако и само ако (акко) `q` е точно</em>“ (`p` if and only if `q`). 
+                                    Еквиваленцијата `p harr q` е точна кога `p` и `q` имаат ист вредности на вистинитост а во спротивно е неточно. Еквивалентноста се нарекува и 
+                                    би-импликација.</em> 
+                                </p>
+                            </div> 
+
+                            <p>
+                                Пример: <span class='text-warning'>Примеров е политички некоректен и математички неточен ама оваа што ти предава е скроз неточна не е за на факултет за на психијатар е</span>
+                            </p>
+        
+                            <p>
+                                Нека `p` - „Партијата XXX има премиер“.
+                            </p>
+                            <p>
+                                Нека `q` - „Партијата XXX победува на изборите“.
+                            </p>
+                            <p>
+                                Тогаш `p harr q` = „Партијата XXX ќе има премиер ако и само ако партијата XXX ги добие изборите“.
+                            </p>
+
+                            <div class='row'>
+                                <div class='col-md-3'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p harr q`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <p>
+                                        Табелата лево ја прикажува табелата на вистиноста за еквивалентниот исказ `p harr q`. Треба да се напомене дека исказот `p harr q` е 
+                                        точно кога и двата условни искази `p -> q` и `q -> p` се вистинити а во спротивно не е точно. Тоа е причина зошто го користиме „ака и само ако“ 
+                                        да ја искажеме логичката врска и зошто симболички се запишува со комбинација на симболите `->` и `<-`. 
+                                    </p> 
+                                </div>
+                            </div>
+
+                            <p>
+                                Постојат и неколку дриги вообичаени начини да се означи исказот `p harr q`:
+                            </p>
+        
+                            <ul>
+                                <li>
+                                    `p` е потребно и доволно за `q` - (`p` is necessary and sufficient for `q`).
+                                </li>
+                                <li>
+                                    ако `p` тогаш `q` и обратно - (if `p` then `q`, and conversely).
+                                </li>
+                                <li>
+                                    `p` ако и само ако `q` - (`p` iff `q`).
+                                </li>
+                            </ul>
+        
+                            <p>
+                                Последниот начин на запис за еквивалентен исказ `p harr q` ја користи кратенката „iff“ за „if and only if.“ 
+                                Треба да се напомене дека `p harr q` има еднаква вредност на вистиноста како и `(p -> q) ^^ (q -> p)`.
+                            </p>
+                            
+                            <p id="ex4">
+                                <strong>Пример 10 <span><i class="fas fa-book"></i></span></strong>
+                            </p>
+
+                            <p>
+                                Нека `p` е исказот „Можете да се качите на авион,” и нека `q` е исказот „Купете карта“. Тогаш `p harr q` е искзот:
+                            </p>
+        
+                            <p>
+                                <em>Можете да се качите на авион само и само ако купите карта</em>.
+                            </p>
+        
+                            <p>
+                                Овој исказ е вистинит ако давата искази `p` и `q` се точни или двата неточни, што е случај кога ако купите карта 
+                                можете да летате или ако не купите карта не може да летате. Исказот не е точен кога исказите `p` и `q` имаат спротивни 
+                                вредности на вистиност што е случај кога не сте купиле карта но може да се качите на авион (на пример кога добивате бесплатен лет)  и 
+                                кога сте купиле карта но не можете да се качите на авион (на пример кога авио компанијата ве одбива).
+                            </p>
+
+                            <p>
+                                Имплицитна употреба на еквивалентниот исказ
+                            </p>
+        
+                            <p>
+                                Треба да сме свесни дека еквивалентниот исказ не секогаш е експлицитен во говорниот јазик. На пример <em>само и само ако</em>  
+                                се користи многу ретко во говорниот јазик. Наместо тоа еквивалентноста се изразува со <em>ако, тогаш </em> или <em>само ако</em>. 
+                                Вториот дек од „само и само ако“ е имплицитен што значи дека обратното се подразбира но не е наведено. На пример да ја разгледаме 
+                                реченицата <em>Ако го изедеш оброкот тогаш може да добиеш десерт.</em> Она што стварно го искажува реченицата е <em>Ќе добиеш  
+                                десерт само и само ако го изедеш оброкот</em>. Последнава реченица е логички еквивалент  на двата исказа <em>Ако го изедеш 
+                                оброкот тогаш може да добиеш десерт.</em> и <em>Ќе добиеш десерт само ако го изедеш оброкот</em>. Поради оваа непрецизност во говорниот јазик 
+                                мораме да вршиме претпоставки секогаш кога условниот исказ во говорниот јазик имплицитно ја вклучува неговата инверзија. 
+                                Бидејки прецизноста е суштествена во математиката и логиката секогаш ќе правиме разлика помеѓу исказите `p -> q` и `p harr q`.
+                            
+                            </p>
+        
+                            <h5>
+                                Табела на вистинитост на збирни искази 
+                            </h5>
+                            
+                            <p>
+                                До сега претставивме четри логички врски, конјукција, дисјункција, условен исказ и еквиваленција како и негација. Овие логички врски можеме 
+                                да ги искористиме за градба на сложени збирни искази внесувајки било кој број на исказни променливи. Можеме да користиме табела на вистинитост 
+                                за да ги одредиме вредностите на вистиноста на збирните изрази, како што е наведено во примерот 11. За секој збирен израз кој се јавува во сложениот 
+                                збитен израз ќе употребиме посебна колона за да ја одредиме вредноста на вистиноста. Вредностите на вистинитост на сложениот израз ќе биде во 
+                                последната колона од табелата.
+                            </p>
+        
+                            <p id="ex4">
+                                <strong>Пример 11 <span><i class="fas fa-book"></i></span></strong>
+                            </p>
+
+                            <p>
+                                Да се формира табелата на вистиноста за збирниот исказ:
+                            </p>
+                            <p>
+                                `(p vv  not q) -> (p ^^ q)`
+                            </p>
+                            <p>
+                                Решение:
+                            </p>
+        
+                            <p>
+                                Бидејки оваа табела на вистинитост се однесува на две исказни променливи `p` и `q`, истата ќе има четри реда по еден за секој пар на 
+                                вредности на вистинитост `T T`, `T F`, `F T`, и `F F`. Првите две  колони се наменети за вредности на вистиност на променливите `p` и `q`. 
+                                Третата колона е за вредноста на вистинитост на изразот `not q`, потребен за наоѓање на вредноста на вистинитост на изразот `p vv not q`, 
+                                кои се во четвртата колона. Петата колона е наменета за вредноста на вистинитост на изразот `p ^^ q`. И  конечно , петата колона 
+                                е за вредноста на вистинитост на изразот `(p vv not q) -> (p ^^ q)`. 
+                            </p>    
+
+                            <div class="table-responsive-sm">
+                                <table class="table table-bordered table-sm">
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>`p`</td>
+                                            <td>`q`</td>
+                                            <td>`not p`</td>
+                                            <td>`p vv not p`</td>
+                                            <td>`p ^^ q`</td>
+                                            <td>`(p vv  not q) -> (p ^^ q)`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                            <td>`T`</td>
+                                            <td>`T`</td>
+                                            <td>`F`</td>
+                                            <td>`F`</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                   </div>
+
+                    
+
+                   <!--/ Conditional Statements -->
+                    
+
+                    <!-- Precedence of Logical Operators -->
+
+                    <!-- /Precedence of Logical Operators -->
+                    <div id='' class='row'>
+
+                        <div class='col-md-12'>
+
+                            <h5>
+                                Предност на логички сврзници (важност, редослед, ранк)
+                            </h5> 
+
+                            <p>
+                                Збирен исказ може да се формира со употреба на операторот за негација и логичките оператори кои ги дефиниравме до сега. Општо правило е да се 
+                                употребуваат мали загради за да го искажеме редоследот по кој се извршуваат логичките операции. На пример `(p vv q) ^^ (not r)` е конјукција 
+                                на изразите `p vv q` и `not r`. Со цел да го намалиме бројот на загради, одредуваме дека операторот за негација се употребува пред сите други 
+                                логички оператори. Тоа повлекува дека `not p ^^ q` е конјукција од `not p` и `q`, односно `(¬p) ^^ q`, а не негација од конјукцијата `p` `q`, 
+                                односно `¬(p ∧ q)`.
+                            </p>
+                            <p>
+                                Друго општо правило за редоследот е операторот за конјукција е со предност пред операторот за дисјункција, па од тука `p ^^ q vv r` означува 
+                                `(p ^^ q) vv r` а не `p ^^ (q vv r)`.
+                            </p>
+
+                            <p>
+                                И на крај, прифатено е правилото дека условниот оператор и опеараторот за еквиваленција (двостан условен оператор) `->` и `harr` имаат понизок редослед 
+                                отколку операторите за конјукција и дисјункција `^^` и `vv`. Од тука следи дека `p vv q -> r` е исто што и `(p vv q) -> r`. Но ќе продолжиме со употреба 
+                                на заградите кога станува збор за редоследот на условниот оператор и операторот за еквивалентност иако условниот оператор има предност над операторот за 
+                                еквивалентност. Долната табела го покажува редоследот на логичките оператори `not`, `^^`, `vv`, `->` и `harr`.
+                            </p>
+                            
+                        </div>
+
+                        <div class='col-md-3'>
+                            <div class="table-responsive-sm">
+                                <table class="table table-bordered table-sm">
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>Оператор</td>
+                                            <td>Редослед</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`not`</td>
+                                            <td>`1`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`^^`</td>
+                                            <td>`2`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`vv`</td>
+                                            <td>`3`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`->`</td>
+                                            <td>`4`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`harr`</td>
+                                            <td>`5`</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class='col-md-9'>
+                            <p>
+                                Табела лево го покажува редоследот на логичките оператори `not`, `^^`, `vv`, `->` и `harr`. Бидејки е полесно да се  употребуваа загради наместо 
+                                да се помни правилото за предност на конјункција и дисјункција и правилото за предност на условниот исказ (импликација) и еквивалентност
+                                ќе продолжиме да ги употребуваме заградите така да редоследот на операциите ќе биде јасно искажан.
+                            </p> 
+                        </div>
+
+                    </div>
+
+                    <!-- Precedence of Logical Operators -->
+                    <div id='Propositional Logic' class='row'>
+                        <div class='col-md-12'>
+
+                            <h5 id='Logic and Bit Operations'>
+                                Операции над битови
+                            </h5>
+
+                            <p>
+                                Компјутерите ги прикажуваат информациите користејки битови. Битот е симбол кој има две можни вредности, 0(нула) и 1(еден). Ова значење на зборот бит 
+                                диоаѓа од бинарните цифри бидејки 0 и 1 се цифри кои се користат кај бинарното претставување на броевите. Оваа терминологија е воведена во 1946 година. 
+                                Битот може да се користи за да ја претстави вредноста на вистиноста точно бидејки има две вредности на вистиноста точно и неточно. Општо е прифатено 
+                                да 1 се корист да ја претстави вредноста тоно а 0 да ја претставивредноста неточно. Од тука следува дека 1 го претставувува симболот `T` а 0 
+                                симболот `F`. Променливите се викаат Булови (Boolean) променливи ако вредноста на променливата е или точно или неточно. Последователно Булова-та 
+                                променлива може да се претстави користејки бит. 
+                            </p>
+                    
+                            <p>
+                                Компјутерските бит операции се соодветни на логичките сврзници. Заменувајки го `T` со `1` и `F` со `0` за вредност на вистинитоста во табелите 
+                                за операторите `vv`, `^^`, и `o+` и користејки ја ноотацијата OR, AND, и XOR за операторитр `∨`, `∧`, и `⊕`, онака како што се употребува во 
+                                програмските јазици  ја добиваме следната табела на вредности на вистиноста.
+                            </p>
+
+                            <div class='row'>
+                                <div class='col-md-3'
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>Truth value</td>
+                                                    <td>Bit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-9'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p vv not p`</td>
+                                                    <td>`p ^^ q`</td>
+                                                    <td>`(p vv  not q) -> (p ^^ q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

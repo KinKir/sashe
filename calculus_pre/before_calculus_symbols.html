@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item active">
+                <a class="nav-link" href="">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus/functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="videos.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exercise.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+    
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a class="bd-toc-link active" href="before_calculus_symbols.html">
+                                Симболи
+                            </a>
+                        </li>
+                        <li>
+                            <a href="before_calculus_numbers.html">
+                                Броеви
+                            </a>
+                        </li>
+                        <li>
+                            <a href="before_calculus_log.html">
+                                Логаритми
+                            </a>
+                        </li>
+                        <li>
+                            <a href="before_calculus_proportions.html">
+                                Пропорции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="before_calculus_quadratic.html">
+                                Квадратна равенка
+                            </a>
+                        </li>
+                        <li>
+                            <a href="before_calculus_trig.html">
+                                Тригонометрија
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#symbols">Симболи</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#symbol0">`in`</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#symbol1">`!in`</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#symbol2">`sube`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol3">`nn`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol4">`sub`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol5">`uu`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol6">`\\`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol7">`xx`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol8">`(a,b)`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol9">`rArr`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol10">`hArr`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol11">`AA`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol12">`abs(x)`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol13">`D(f)`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol14">`Im(f)`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol15">`a_n`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol16">`@`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol17">`f^-1`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol18">sup</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol19">imf</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol20">`|_b^a`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol21">`int_a^b`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol22">`<`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol23">`<=`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol24">`~~`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol25">`sum`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol26">`rarr`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol28">`|->`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol29">`n!`</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#symbol30">`((n), (k))`</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toc-entry toc-h2">
+                        <a href="#symbols">Букви</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#letterN">`NN`</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#letterZ">`ZZ`</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#letterQ">`QQ`</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#letterR">`RR`</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#letterR+">`RR_+`</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#letterRn">`RR^n`</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#letterC">`CC`</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#letterOm">`Omega`</a>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <p class=" bd-lead">
+            </p>
+
+            <!-- Symbols in Calculus -->
+
+            <h1 id="The Numbers of Arithmetic">
+                Значење на некои симболи
+            </h1>
+
+            <div class="table-responsive-sm">
+                <table class="table table-sm table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Симбол</th>
+                            <th scope="col">Употреба</th>
+                            <th scope="col">Значење</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='symbol0'>
+                            <th scope="row">`in`</th>
+                            <td>`x in A`</td>
+                            <td>`x` е елемент на множеството `A`</td>
+                        </tr>
+                        <tr id='symbol1'>
+                            <th scope="row">`!in`</th>
+                            <td>`x !in A`</td>
+                            <td>`x` не е елемент на множеството `A`</td>
+                        </tr>
+                        <tr id='symbol2'>
+                            <th scope="row">`sube`</th>
+                            <td>`A sube B`</td>
+                            <td>`А` е подмножество од множеството `B`</td>
+                        </tr>
+                        <tr id='symbol3'>
+                            <th scope="row">`sub`</th>
+                            <td>`A sub B`</td>
+                            <td>`А` е потполно подмножество од множеството `B`</td>
+                        </tr>
+                        <tr id='symbol4'>
+                            <th scope="row">`nn`</th>
+                            <td>`A nn B`</td>
+                            <td>пресек на множествата `А` и `B`</td>
+                        </tr>
+                        <tr id='symbol5'>
+                            <th scope="row">`uu`</th>
+                            <td>`A uu B`</td>
+                            <td>унија на множествата `А` и `B`</td>
+                        </tr>
+                        <tr id='symbol6'>
+                            <th scope="row">`\\`</th>
+                            <td>`A \\ B`</td>
+                            <td>разлика на множествата `А` и `B`</td>
+                        </tr>
+                        <tr id='symbol7'>
+                            <th scope="row">`xx`</th>
+                            <td>`A xx B`</td>
+                            <td>Картезиев производ на множествата `А` и `B`</td>
+                        </tr>
+                        <tr id='symbol8'>
+                            <th scope="row">`(a,b)`</th>
+                            <td>&nbsp;</td>
+                            <td>среден пар на броевие `a,b`</td>
+                        </tr>
+                        <tr id='symbol9'>
+                            <th scope="row">`rArr`</th>
+                            <td>`A rArr B`</td>
+                            <td>ознака за импликација. Од `A` следи `B`</td>
+                        </tr>
+                        <tr id='symbol10'>
+                            <th scope="row">`hArr`</th>
+                            <td>`A hArr B`</td>
+                            <td>знак за еквивалентност. Од `A` следи `B` и од `B` следи `A`.</td>
+                        </tr>
+                        <tr id='symbol11'>
+                            <th scope="row">`AA`</th>
+                            <td>`(AA a)(a in S)`</td>
+                            <td>универзален изедначувач. За сеое `a` koe e vo `S`</td>
+                        </tr>
+                        <tr id='symbol12'>
+                            <th scope="row">`abs()`</th>
+                            <td>`abs(x)`c</td>
+                            <td>апсолутна вредност на бројот `x`</td>
+                        </tr>
+                        <tr id='symbol13'>
+                            <th scope="row">`D(f)`</th>
+                            <td>&nbsp;</td>
+                            <td>домен на функцијата `f`</td>
+                        </tr>
+                        <tr id='symbol14'>
+                            <th scope="row">`Im f`</th>
+                            <td>&nbsp;</td>
+                            <td>слика на функцијата `f`</td>
+                        </tr>
+                        <tr id='symbol15'>
+                            <th scope="row">`a_n`</th>
+                            <td>&nbsp;</td>
+                            <td>низа на реални броеви `a1, a2, . . .`; функција `s` `NN` во множеството `RR`</td>
+                        </tr>
+                        <tr id='symbol16'>
+                            <th scope="row">`@`</th>
+                            <td>`f @ g`</td>
+                            <td>композиција на функциите `f` и `g` (прво `g` па потоа `f`)</td>
+                        </tr>
+                        <tr id='symbol17'>
+                            <th scope="row">`f^-1`</th>
+                            <td>&nbsp;</td>
+                            <td>инверзна функција на функцијата `f`</td>
+                        </tr>
+                        <tr id='symbol18'>
+                            <th scope="row">sup</th>
+                            <td>sup `A`</td>
+                            <td>супремум на множеството `A`</td>
+                        </tr>
+                        <tr id='symbol19'>
+                            <th scope="row">inf</th>
+                            <td>inf `A`</td>
+                            <td>инфимум на множеството `A`</td>
+                        </tr>
+                        <tr id='symbol20>
+                            <th scope="row">`|_b^a`</th>
+                            <td>`F(x) ||_b^a`</td>
+                            <td>разлика `F(b) - F(a)`</td>
+                        </tr>
+                        <tr id='symbol21'>
+                            <th scope="row">`int_a^b`</th>
+                            <td>`int_a^b f(x) dx`</td>
+                            <td>Реиманов интеграл од функцијата `f` на интервалот `[a, b]`</td>
+                        </tr>
+                        <tr id='symbol22'>
+                            <th scope="row">`<`</th>
+                            <td>`a < b`</td>
+                            <td>`a` е помало од `b`</td>
+                        </tr>
+                        <tr id='symbol23'>
+                            <th scope="row">`<=`</th>
+                            <td>bigcap</td>
+                            <td>`a` е помало или еднакво на `b`</td>
+                        </tr>
+                        <tr id='symbol24'>
+                            <th scope="row">`~~`</th>
+                            <td>`a ~~ b`</td>
+                            <td>`a` е приближно еднакво на `b`</td>
+                        </tr>
+                        <tr id='symbol25'>
+                            <th scope="row">`sum`</th>
+                            <td>`sum_(i=1)^n a_i`</td>
+                            <td>сума на низата `a1, a2, . . . , an`</td>
+                        </tr>
+                        <tr id='symbol26'>
+                            <th scope="row">`rarr`</th>
+                            <td>`f : D rarr K`</td>
+                            <td>функцијата `f` од множеството `D` во множеството `K`</td>
+                        </tr>
+                        <tr id='symbol27'>
+                            <th scope="row">&nbsp;</th>
+                            <td>`a_n rarr a`</td>
+                            <td>низата на реални броеви `a_n` конвергира кон броојот `a`</td>
+                        </tr>
+                        <tr id='symbol28'>
+                            <th scope="row">`|->`</th>
+                            <td>`x |-> f(x)`</td>
+                            <td>функција која на елементот `x` му придружува `f(x)`</td>
+                        </tr>
+                        <tr id='symbol29`>
+                            <th scope="row">`n!`</th>
+                            <td>&nbsp;</td>
+                            <td>факторијал `n! = 1 · 2 · . . . · n`</td>
+                        </tr>
+                        <tr id='symbol30`>
+                            <th scope="row">`((n), (k))`</th>
+                            <td>&nbsp;</td>
+                            <td>биномен коефициент `((n), (k)) = (n!)/(k!(n-k)!)`</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Значење на букви</h2>
+
+            <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Буква</th>
+                                <th scope="col">Значење</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id='letterN'>
+                                <th scope="row">`NN`</th>
+                                <td>Множество на природни броеви</td>
+                            </tr>
+                            <tr id='letterZ'>
+                                <th scope="row">`ZZ`</th>
+                                <td>Множество на цели броеви</td>
+                            </tr>
+                            <tr  id='letterQ'>
+                                <th scope="row">`QQ`</th>
+                                <td>Множество на рационални броеви</td>
+                            </tr>
+                            <tr  id='letterR'>
+                                <th scope="row">`RR`</th>
+                                <td>Множество на реални броеви</td>
+                            </tr>
+                            <tr  id='letterR+'>
+                                <th scope="row">`RR_+`</th>
+                                <td>Множество на позитивни реални броеви</td>
+                            </tr>
+                            <tr  id='letterRn'>
+                                <th scope="row">`RR^n`</th>
+                                <td>Картезиев производ `RR xx ... xx RR`</td>
+                            </tr>
+                            <tr  id='letterC'>
+                                <th scope="row">`CC`</th>
+                                <td>Множество на комплексни броеви</td>
+                            </tr>
+                            <tr  id='letterOm'>
+                                <th scope="row">`Omega`</th>
+                                <td>Отворено множество</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

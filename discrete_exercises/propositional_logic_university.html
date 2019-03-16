@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mayhematics">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="VS Code 2019">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../assets/img/icon/favicon.ico">
+        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <!-- material icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Знаење</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete/propositional_logic.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic_university.html">Вежби-IO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">Вежби-Книга</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Колоквиум</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Испитни прашања</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li class="active bd-sidenav-active">
+                                    <a href="">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                            <li>
+                                <a href="propositional_logic_app_university.html">
+                                    Примена на исказна логика
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lines.html">
+                                    Исказни еквиваленции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_families.html">
+                                    Предикати и квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_inverse.html">
+                                    Вгнездени квантификатори
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!--<div class="bd-toc-item">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+    
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+    
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Изводи
+                        </a>
+    
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>-->
+    
+                    </nav>
+                </div>
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Исказно сметање</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Propositions">Искази</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#def1">Негација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#def2">Конјукција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#def3">Дефиниција 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#graph">График на функција</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#def4">Дефиниција 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#vltest">Тест со вертикални прави</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex3">Пример</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#fabs">Функција од апсолутна вредност</a>
+                        </li>
+                    </ul>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#piecewise">Функции дефинирани по делови</a>
+                        </li>
+                    </ul>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#domein">Домен и ранг на функции</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#algebra">Влијание на алгебарски операции врз доменот</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                    <p class=" bd-lead">
+
+                    </p>
+    
+                    <!-- Propositional Logic -->
+    
+                    <h3 id="def">
+                        Исказно сметање
+                    </h3>
+
+                    <h6>
+                        <span>
+                            <i class="fas fa-chalkboard-teacher" data-toggle="modal" data-target="#propositionsModal"></i>
+                        </span> Дефениција
+                    </h6>
+
+                    <p>                                 
+                        <strong>Вежба 1.</strong> Дали се искази следниве реченици:<br>
+                        а) Секој рамностран триаголник е рамнокрак.<br>
+                        б) Секој рамнокрак триаголник е рамностран.<br>
+                        в) Парниот број n е делив со 3 без остаток.<br>
+                        В) Јас сега можам.
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    а) да (вистинит исказ)
+                                </p>
+                                <p>
+                                    б) да (невистинит исказ)
+                                </p>
+                                <p>
+                                    в) не (се искажува факт кој може да биде и вистинит и невисинит. пр. n=30, n=32)`
+                                </p>
+                                <p>
+                                    г) не (не се искажува факт)
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        <strong>Вежба 2.</strong> Да се запишат во вид на искази следниве реченици:<br>
+                        а) Или треба да се почитуваат сообраќајните правила или треба да се плати казна;<br>
+                        б) 35 и 60 се делат со 3;<br>
+                        в) Производот на два броја е позитивен акко броевите се со ист знак;<br>
+                        г) Само еден од броевите 60 и 34 се дели со 5;<br>
+                        д) Производот на 3 и 4 е 7.<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                   а) `p vv q` ( Дисјункција. `p` : Треба да се почитуваат сообраќајните правила, `q` : треба да се плати казна)
+                                </p>
+                                <p>
+                                    б) `3|35 ^^ 3|60` (Конјункција `p` : 36/3, `q` : 60/3)
+                                </p>
+                                <p>
+                                    в) `x*y >0 harr (x > 0 ^^ y > 0) vv (x < 0 ^^ y< 0)` (Еквивалентност `p` : Производот на два броја е позитивен, `q` : броевите се со ист знак)
+                                </p>
+                                <p>
+                                    г) `5|60 vv 5|34` (Конјункција невистинит исказ - 12 е точен исказ)
+                                </p>
+                                <p>
+                                    д) `3 * 4 = 7`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        <strong>Вежба 3.</strong>  Да се напишат вистиносни таблици за следниве исказни формули:<br>
+                        а) `p vv q -> r`<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    а)
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`r`</td>
+                                                    <td>`p vv q`</td>
+                                                    <td>`p vv q -> r`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`F`</td>
+                                                    <td>`T`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> 
+                                </p>
+                            </div>
+                        </details>
+                        б) `((p -> q) -> (not p -> q)) -> q`;<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    б)
+                                    <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`not p`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`not p -> q`</td>
+                                                            <td>`(p -> q) -> (not p -> q)`</td>
+                                                            <td>`((p -> q) -> (not p -> q)) -> q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                    </div> 
+                                </p>
+                            </div>
+                        </details>
+                        в) `(p -> q) ^^ (q -> r) -> (p -> r)`.<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    а)
+                                    <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`r`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`q -> r`</td>
+                                                            <td>`(p -> q) ^^ (q -> r)`</td>
+                                                            <td>`p -> r`</td>
+                                                            <td>`(p -> q) ^^ (q -> r) -> (p -> r)`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                    </div> 
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+                    
+                    <!-- modal what you need to know -->
+                    <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Што треба да се знае за решавање на задачи</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li>
+                                        Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
+                                    </li>
+                                    <li>
+                                        Негација од исказот `p`, означена со `not p` (или означен со `overset (-)(p)`), е исказот<br>
+                                        „Не е случај дека `p`“<br>
+                                        Исказот `not p` се чита „not `p`.“ Логичката вредност на негацијата од `p`, `not p`, e спротивна на 
+                                        логичкат вредност на `p`.
+                                    </li>
+                                    <li>
+                                        бесконечен лимес<br>
+                                        Понекогаш едностраните или двостраните лимеси не постојат бидејќи вредностите на 
+                                        функцијата неограничено растат или неограничено опаѓаат.<br>
+                                        ако вредноста на функцијата неограничено расте - `lim_(x->a^-)f(x) = +oo`;&nbsp`lim_(x->a^-)f(x) = +oo`<br>
+                                        ако вредноста на функцијата неограничено опаѓа - `lim_(x->a^-)f(x) = -oo`;&nbsp`lim_(x->a^-)f(x) = -oo`<br>
+                                        ако двата еднострани лимеси се `+oo` - `lim_(x->a)f(x) = +oo`<br>
+                                        ако двата еднострани лимеси се `-oo` - `lim_(x->a)f(x) = -oo`<br>
+                                    </li>
+                                    <li>
+                                        Вертикални асимптоти<br>
+                                        `a` е асимтота на графикот на функцијата `f(x)` ако<br>
+                                        `lim_(x -> a^-) f(x) = +oo`,`lim_(x_> a^+) f(x) = +oo`, `lim_(x -> a^-) f(x) = -oo`, `lim_(x -> a^+) f(x) = -oo`
+                                    </li>
+                                </ul>
+                            </div>                    
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal propositions-->
+                    <div class="modal fade" id="propositionsModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal negtion-->
+                    <div class="modal fade" id="negationModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Негација од исказот `p`, означена со `not p` (или означен со `overset (-)(p)`), е исказот<br>
+                                        „Не е случај дека `p`“<br>
+                                        Исказот `not p` се чита „not `p`.“ Логичката вредност на негацијата од `p`, `not p`, e спротивна на 
+                                        логичкат вредност на `p`.
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!-- modal onload-->
+        <script>
+            $(function() {
+                $("#myModal").modal();
+            });
+        </script>
+    </body>
+</html>

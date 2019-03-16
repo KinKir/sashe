@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="new_function.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="limes_infinity.html">
+                                Лимеси во бескрајност
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_continuity.html">
+                                Непрекинатост
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_infinity.html">
+                                Лимеси во бескрајност
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#infinity">Лимес во бесконечност</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#tangent_line">Тангента и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#areas_and_limits">Површина и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Децимални броеви и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#limit">Лимес</a>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#informal">Интиутивна метода</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#infinite">Бесконечни лимеси</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#v_asymtotes">Вертикални асимптоти</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <div class="row">
+                <div class="col-12">
+                    <p id="concept" class="lead">
+                        До сега изучувавме лимеси кои го опишуваат однесувањето на функцијата `f(x)` кога `x` тежи кон
+                        реалниот број `a`. Во овој дел ќе го изучуваме однесувањето на функцијата `f(x)` кога `x` расте
+                        или опаѓа без ограничување.
+                    </p>
+                    <h1 id="infinity">
+                        Лимеси во бескрајност
+                    </h1>
+                    <h3>
+                        Лимеси во бесконечност и хоризонтална асимтота
+                    </h3>
+                </div>
+                <div class="col-3">
+                    <div class="text-center">
+                        <img src="images/limes_18.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <p>
+                        Ако вредноста на варијабилата `x` бесконечно се зголемува, тогаш пишуваме `x->+oo` и ако
+                        вредноста на `x` бесконечно се намалува, тогаш пишуваме `x->-oo`. Однесувањето на функцијата
+                        `f(x)` кога `x` бесконечно се зголемува или бесконечно се намалува се нарекува однесување на
+                        функцијата во бесконечност. На пример:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->-oo)1/x=0`&nbsp; и &nbsp; `lim_(x->+oo)1/x=0`
+                    </p>
+                    <p>
+                        се претставени табеларно и графички.
+                    </p>
+                    <div class="text-center">
+                        <img src="images/limes_17.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p>
+                        Општо, може да се рече дека:
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 px-1">
+                    <div class="text-center">
+                        <img src="images/limes_19.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div id="informal" class="col-9">
+                    <p>
+                        <strong>Лимес во бескрајност (интиутивна метода)</strong> Ако вредностите на `f(x)`
+                        евентуално се стреми кон бројот `L` кога `x` бесконечно расте, може да запишеме:
+                    </p>,
+                    <p class="text-center">
+                        `lim_(x->+oo)f(x)=L`&nbsp; или `f(x)->L` кога `x->+oo`
+                    </p>
+                    <p>
+                        слично, ако вредностите на `f(x)` евентуално се стреми кон бројот `L` кога `x` бесконечно опаѓа,
+                        може да запишеме:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->-oo)f(x)=L`&nbsp; или `f(x)->L` кога `x->-oo`
+                    </p>
+                    <p>
+                        Графиците лево геометриски го опишуваат однесувањето на функцијата кога `x` бескрајно расте или
+                        опаѓа.<br>
+                        Во првиот случај графикот на `f` се стреми кон линијата `y = L` како `x` расте бескрајно а во
+                        вториот случај функцијата `f` се стреми кон линијата `y = L` кога `x` бескрајно опаѓа. Линијата
+                        `y = L` хоризонтална асимтотa за графикот од `f`.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 1.</h4>
+                    <p>
+                        Од интуитивната метода следи дека `y = 0` е хоризонтална асимтота за графикот `f(x) = 1/x` и за
+                        позитивната и за негативната страна. Ова е во соодност со графикот `y=1/x` прикажана предходно.
+                    </p>
+                </div>
+
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 2.</h4>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="text-center">
+                                <img src="images/limes_20.png" class="img-fluid img">
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="alert alert-light" role="alert">
+                                Графот лево е за функцијата `f(x)=tan^-1 x`. Како што може да се види од графикот:<br>
+                                `lim_(x->+oo)tan^-1 x = pi/2`&nbsp;`lim_(x->-oo)tan^-1 x = -pi/2`<br>
+                                така да линијата `y = pi/2` е хоризонтална асимтота за `f` во позитивниот смер а
+                                линијата `y = −pi/2` хоризонтална асимтота во негативниот смер.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 3.</h4>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="text-center">
+                                <img src="images/limes_21.png" class="img-fluid img">
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="alert alert-light" role="alert">
+                                Интуитивно може да закључиме дека според графикот `f(x) = (1 + 1/x)^x`.<br>
+                                `lim_(x->+oo)(1+1/x)^x = e`&nbsp;`lim_(x->-oo)(1+1/x)^x=e`<br>
+                                така линијата `y = e` е хоризонтална асимтота за `f` и за позитивниот и негативниот
+                                смер.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <h3>
+                    LIMIT LAWS FOR LIMITS AT INFINITY
+                </h3>
+                <p>
+                    Може да се покаже дека <a href="limes_computing.html#th2" target="_blank">теоремата за лимеси за
+                    реални броеви</a> важи без никаква измена и за лимеси за `-oo` и `+oo`.
+                </p>
+                <p class="text-center">
+                    `lim_(x->+oo)(f(x))^n=(lim_(x->+oo)f(x))^n`&nbsp;&nbsp;и&nbsp;&nbsp;`lim_(x->-oo)(f(x))^n=(lim_(x->-oo)f(x))^n`
+                </p>
+                <p class="text-center">
+                    `lim_(x->+oo)kf(x)=k lim_(x->+oo)f(x)`&nbsp; `lim_(x->-oo)kf(x)=k lim_(x->-oo)f(x)`
+                </p>
+                <p class="text-center">
+                    `lim_(x->+oo)k=k`&nbsp; `lim_(x->-oo)k=k`
+                </p>
+            </div>
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 4.</h4>
+                    <p>
+                        Ако `n` е позитивен цел број тогаш:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->+oo)1/x^n=lim_(x->+oo)1^n/x^n=(lim_(x->+oo)1/x)^n=0`<br>
+                        `lim_(x->-oo)1/x^n=lim_(x->-oo)1^n/x^n=(lim_(x->-oo)1/x)^n=0`
+                    </p>
+                    <hr>
+                    <p class="text-center">
+                        `lim_(x->-oo)(1+1/(2x))^x=lim_(x->-oo)[(1+1/(2x))^(2x)]^(1/2)=[lim_(x->-oo)(1+1/(2x))^(2x)]^(1/2)=e^(1/2)=sqrt
+                        e`
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h3>
+                    INFINITE LIMITS AT INFINITY
+                </h3>
+                <p>
+                    Лимесите во бесконечност, исто како и лимесите за реалниот број `a`, можат да непостојат поради
+                    мноду причини. Една таква можност е да вредностите на функцијата `f` растат или опаѓаат како
+                    `x->+oo` или `x->-oo`. Ке ја користиме следната нотација за да ја опишеме оваа ситуација.
+                </p>
+                <p>
+                    <strong>Бескрајни лимеси во бескрајност (интиутивна метода)</strong> Ако вредностите на `f(x)`
+                    бескрајно се зголемува кога `x->+oo` или `x->-oo`, може да запишеме:
+                </p>,
+                <p class="text-center">
+                    `lim_(x->+oo)f(x)=+oo`&nbsp; или `lim_(x->-oo)f(x)=+oo`
+                </p>
+                <p>
+                    слично, ако вредностите на `f(x)` бескрајно опаѓаат кога `x->+oo` или `x->-oo`, може да запишеме:
+                    може да запишеме:
+                </p>
+                <p class="text-center">
+                    `lim_(x->+oo)f(x)=-oo`&nbsp; или `lim_(x->-oo)f(x)=-oo`
+                </p>
+            </div>
+
+            <div class="row">
+                <h3>
+                    Лимеси од `x^n` кога `x->+-oo`
+                </h3>
+                <p>
+                    Долните графици го покажуваат однесувањето на полиномот `x^n` за вредностите на `n = 1, 2, 3,` и
+                    `4`. Ова се специјални случаи од следните општи резултати:
+                </p>
+                <p class="text-center">
+                    `lim_(x->+oo)x^n=+oo`&nbsp; за `n=1, 2, 3,...`
+                </p>
+                <p class="text-center">
+                    `lim_(x->-oo)x^n={(-oo,+,n=1, 3, 5, ...),(+oo,-,n=2, 4, 6, ... ):}`
+                </p>
+
+                <div class="text-center">
+                    <img src="images/limes_22.png" class="img-fluid img">
+                </div>
+                <p>
+                    Множењето на `x^n` со позитивен реален број нема ефект врз лимесите, но множењето со реален
+                    негативен број го менува предзнакот.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 5.</h4>
+                    <p class="text-center">
+                        `lim_(x->+oo)2x^5=+oo`&nbsp;`lim_(x->-oo)2x^5=-oo`<br>
+                        `lim_(x->+oo)-7x^6=-oo`&nbsp;`lim_(x->-oo)-7x^6=+oo`
+                    </p>
+                    <hr>
+                    <p class="text-center">
+                        `lim_(x->-oo)(1+1/(2x))^x=lim_(x->-oo)[(1+1/(2x))^(2x)]^(1/2)=[lim_(x->-oo)(1+1/(2x))^(2x)]^(1/2)=e^(1/2)=sqrt
+                        e`
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h3>
+                    Лимеси од полиномни функции кога `x->+-oo`
+                </h3>
+                <p>
+                    Однесувањето на полиномна функција во бесконечност е одредедено со однесувањето во бесконечност на
+                    нејзиниот член со највисок степен.<br>
+                    Ако `c`<sub>`n`</sub>`!=0` тогаш:
+                </p>
+                <p>
+                    `lim_(x->-oo)(c`<sub>`0`</sub>`+c`<sub>`1`</sub>`x+ . . . +
+                    c`<sub>`n`</sub>`x^n)=lim_(x->-oo)c`<sub>`n`</sub>`x^n`
+                </p>
+                <p>
+                    `lim_(x->+oo)(c`<sub>`0`</sub>`+c`<sub>`1`</sub>`x+ . . . +
+                    c`<sub>`n`</sub>`x^n)=lim_(x->+oo)c`<sub>`n`</sub>`x^n`
+                </p>
+                <p>
+                    Резултатите се добиваат со извлекување пред заграда на највисокиот степен на `x` (на полиномот), а
+                    потоа пресметување на лимесите на изразот во заграда. Според тоа,
+                </p>
+                <p>
+                    `c`<sub>`0`</sub>`+c`<sub>`1`</sub>`x+ . . . +
+                    c`<sub>`n`</sub>`x^n=x^n(c`<sub>`0`</sub>`/x^0 + c`<sub>`1`</sub>`/x^(n-1)+ . . . +c`<sub>`n`</sub>`)`
+                </p>
+                <p>
+                    Ако `x->+oo` и `x->−oo`, сите членови, кои содржат позитивни степени на `x` во именителот, тежат кон
+                    `0`.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 6.</h4>
+                    <p>
+                        `lim_(x->-oo)(7x^5-4x^3+2x-9)=lim_(x->-oo)7x^5=-oo`<br>
+                        `lim_(x->+oo)(-4x^8+17x^3-5x+1)=lim_(x->-oo)-4x^8=-oo`
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h3>
+                    Лимеси од рационални функции кога `x->+-oo`
+                </h3>
+                <p>
+                    Една техника за определување на однесувањето во бесконечност на рационална функција е да се подели
+                    секој член во именителот и броителот со највисокиот степен на `x`, кој што се појавува во
+                    именителот,
+                    a потоа однесувањето во бесконечност може да се определи со помош на правила кои се веќе
+                    востановени.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 7.</h4>
+                    <p>
+                        Најди: `lim_(x->+oo)(3x+5)/(6x-8)`
+                    </p>
+                    <p>
+                        Секој член од именителот и броителот го делиме со највисокиот степен на `x` кој се јавува во
+                        броителот а тоа е `x`:
+                    </p>
+                    <p>
+                        `lim_(x->-oo)(3x+5)/(6x-8)=lim_(x->-oo)(3+5/x)/(6-8/x)`<br>
+                        Лимес од количник е количник од лимесите<br>
+                        `=(lim_(x->+oo)(3+5/x))/(lim_(x->+oo)(6-8/x))`<br>
+                        Лимес од сума е сума од лимеси<br>
+                        `=(lim_(x->+oo)3+lim_(x->+oo)(5/x))/(lim_(x->+oo)6 - lim_(x->+oo)(8/x))`<br>
+                        Константа може да се извлече пред знакот за лимес<br>
+                        `=(3+5 lim_(x->+oo)(1/x))/(3+5 lim_(x->+oo)(1/x))=`<br>
+                        Знаеме дека`lim_(x->+oo)(1/x)=0`<br>
+                        Конечно е:<br>
+                        `=(3+5 lim_(x->+oo)(1/x))/(3+5 lim_(x->+oo)(1/x))=(3+0)/(6-0)=1/2`<br>
+                    </p>
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 8.</h4>
+                        <p>
+                            a. Најди: `lim_(x->+oo)(4x^2-x)/(2x^3-5)`
+                        </p>
+                        <p>
+                            Секој член од именителот и броителот го делиме со највисокиот степен на `x` кој се јавува во
+                            броителот а тоа е
+                            `x^3`:<br>
+                            `=lim_(x->-oo)(4/x-1/x^2)/(2-5/x^3)`<br>
+                            Лимес од количник е количник од лимесите<br>
+                            `=(lim_(x->-oo)(4/x-1/x^2))/(lim_(x->+oo)(2-5/x^3))`<br>
+                            Лимес од сума е сума од лимеси<br>
+                            `=(lim_(x->+oo)4/x-lim_(x->+oo)(1/x^2))/(lim_(x->+oo)2 - lim_(x->+oo)(5/x^3)`<br>
+                            Константа може да се извлече пред знакот за лимес<br>
+                            `=(4 lim_(x->+oo)1/x - lim_(x->+oo)(1/x))/(2-5 lim_(x->+oo)(1/x^3))=`<br>
+                            знаеме дека `lim_(x->+oo)(1/x)=0`&nbsp; и дека `lim_(x->+oo)(1/x^n)=0`<br>
+                            Конечно е:<br>
+                            `=(4*0-0)/(2-5*0)=0/2=0`<br>
+                        </p>
+                        <p>
+                            b. Најди: `lim_(x->+oo)(5x^3-2x^2+1)/(1-3x)`
+                        </p>
+                        <p>
+                            Секој член од именителот и броителот го делиме со највисокиот степен на `x` кој се јавува во
+                            броителот а тоа е `x` :<br>
+                            `=lim_(x->+oo)(5x^2-2x+1/x)/(1/x-3)`<br>
+                            Лимес од количник е количник од лимесите<br>
+                            `=(lim_(x->-oo)(5x^2-2x+1/x))/(lim_(x->+oo)(1/x-3))`<br>
+                            Лимес од сума е сума од лимеси<br>
+                            `=(lim_(x->+oo)(5x^2-2x) + lim_(x->+oo)(1/x))/(lim_(x->+oo)(1/x) - lim_(x->+oo)3`<br>
+                            знаеме дека `lim_(x->+oo)(1/x)=0`&nbsp; и дека `lim_(x->-oo)(5x^2-2x+1/x)=+oo`<br>
+                            Конечно е:<br>
+                            `=(+oo + 0)/(0 - 3)=-oo`<br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Брз начин за наоѓање на лимеси на рационални функции кога `x->+oo` или `x->-oo`:
+                    </h3>
+                    <p>
+                        Бидејки oднесувањето на полиномна функција во бесконечност е одредедено со однесувањето во
+                        бесконечност на нејзиниот член со највисок степен. може да се
+                        закључи дека:
+                    </p>
+                    <p>
+                        Однесувањето на полиномна функција во бесконечност е одредедено со однесувањето на количникот на
+                        членот со највисок степен во именителот поделено со членот со највисок степен во броителот.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 9.</h4>
+                        <p>
+                            Најди: Искористи го предходниот заклучок за да се пресметаат лимесите во примерите 7 и 8.
+                        </p>
+                        <p>
+                            Решение:
+                        </p>
+                        <p>
+                            `lim_(x->+oo)(3x+5)/(6x-8)`<br>
+                            `=lim_(x->+oo)(3x)/(6x)`<br>
+                            `=lim_(x->+oo)1/2=1/2`<br>
+                        <hr>
+                        `lim_(x->+oo)(4x^2-x)/(2x^3-5)`<br>
+                        `=lim_(x->+oo)(4x^2)/(2x^3)`<br>
+                        `=lim_(x->+oo)2/x`<br>
+                        `=2lim_(x->+oo)1/x=0`<br>
+                        <hr>
+                        `lim_(x->+oo)(5x^3-2x^2+1)/(1-3x)`<br>
+                        `=lim_(x->+oo)(5x^3)/(-3x)`<br>
+                        `=lim_(x->+oo)(5x^2)/(-3)`<br>
+                        `=5/3 * lim_(x->+oo)x^2=-oo`
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            Лимеси кои вклучуваат корени
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 10.</h4>
+                        <p>
+                            Најди: `lim_(x->+oo)(root()(3x+5))/(6x-8)`&nbsp; и &nbsp; `lim_(x->-oo)(sqrt
+                            (x^2+2))/(3x-6)`<br>
+                        </p>
+                        <p>
+                            Решение: И во двата случаи е згодно да се преработи функцијата `f` така да делот со степен
+                            на `x` се трансформира во степен `1/x` . Ова се постига во двата случаи со делење на
+                            именителот и броителот со `|x|` користејки го фактот што `sqrt x^2 = |x|`.
+                        </p>
+                        a. Бидејки `x->+oo` вредностите за`x` се позитивни па секаде можеме `|x|` да го ззаменимесо `x`.
+                        <p>
+                            `lim_(x->+oo)(root()(3x+5))/(6x-8)`<br>
+                            `=lim_(x->+oo)((root()(3x+5))/|x|)/((6x-8)/|x|)`<br>
+                            `=lim_(x->+oo)((root()(3x+5))/(|x|))/((6x-8)/(|x|)`<br>
+                            `= lim_(x->+oo)(root()(3+5/x))/(6-8/x)`<br>
+                            `=(lim_(x->+oo)(root()(3+5/x)))/(lim_(x->+oo)(6-8/x))`<br>
+                            `=(root() (lim_(x->+oo)(3+5/x)))/(lim_(x->+oo)(6-8/x))`<br>
+                            `=(root() ((lim_(x->+oo) 3) + 5(lim_(x->+oo)1/x))) / ((lim_(x->+oo) 6) -
+                            8(lim_(x->+oo)(1/x)))`<br>
+                            `= (3+5 *0)/(6 - 8 *0)=3/6`<br>
+                        </p>
+                        b. Бидејки `x->-oo` вредностите за`x` се негативни па секаде можеме `|x|` да го ззаменимесо
+                        `-x`.
+                        <p>
+                            `lim_(x->-oo)(root()(x^2+2))/(3x-6)`<br>
+                            `=lim_(x->-oo)((root()(x^2+2))/|x|)/((3x-6)/|x|)`<br>
+                            `=lim_(x->-oo)((root()(x^2+2))/sqrt x^2)/((3x-6)/(-x)`<br>
+                            `=lim_(x->-oo)(root()(1+2/x^2))/(-3+6/x)`<br>
+                            `=-1/3<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 11.</h4>
+                        <p>
+                            Најди: `lim_(x->+oo)(root()(x^6+5)-x^3)`&nbsp; и &nbsp; `lim_(x->+oo)(root()(x^6+5x^3)-x^3)`<br>
+                        </p>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="text-center">
+                                    <img src="images/limes_23.png" class="img-fluid img">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <p>
+                                    Графот на функцијата `f(x) = sqrt (x^6 - 5)-x^3`, и графикот `g(x) = sqrt (x^6 +
+                                    5x^3)− x3` за `x >= 0`, е прикажана на сликата лево. Од грфаикот може да видиме дека
+                                    лимесите се `0` и `5/2`, соодветно. За да го потврдиме ова секоја функција ќе ја
+                                    третираме како количник со броител `1` и ќе го рационализираме именителот.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>
+                            `lim_(x->+oo)(root()(x^6+5)-x^3)`<br>
+                            `=lim_(x->+oo)(root()(x^6+5)-x^3) * (root()(x^6+5)+ x^3)/( root()(x^6+5)+ x^3)`<br>
+                            `=lim_(x->+oo)((x^6+5)-x^6)/ ( root()(x^6+5)+ x^3)`<br>
+                            `=lim_(x->+oo)5 / ( root()(x^6+5)+ x^3)`<br>
+                            `=lim_(x->+oo)(5/x^3) / ( root()(1+5/x^6)+ 1)`&nbsp; бидејки `sqrt (x^6) = x^3 x>0`<br>
+                            `= 0 / ( root()(1+0)+ 1)=0`<br>
+                        </p>
+
+                        <p>
+                            `lim_(x->+oo)(root()(x^6+5x^3)-x^3)`<br>
+                            `=lim_(x->+oo)(root()(x^6+5x^3)-x^3) * (root()(x^6+5x^3)+ x^3)/( root()(x^6+5x^3)+ x^3)`<br>
+                            `=lim_(x->+oo)((x^6+5x^3)-x^6)/ ( root()(x^6+5x^3)+ x^3)`<br>
+                            `=lim_(x->+oo)(5x^3 )/ ( root()(x^6+5x^3)+ x^3)`<br>
+                            `=lim_(x->+oo) 5 / ( root()(1+5/x^3)+ 1)`&nbsp; бидејки `sqrt (x^6) = x^3 x>0`<br>
+                            `= 5 / ( root()(1+0)+ 1)= 5/2`<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h3>
+                            END BEHAVIOR OF TRIGONOMETRIC, EXPONENTIAL, AND LOGARITHMIC FUNCTIONS
+                        </h3>
+                        <p>
+                            Да ја разгледаме функцијата `f(x) = sin x` чиј график е преставен подоле. За оваа функција
+                            лимесите кога `x->+oo` и `x->-oo` не постојат не бидејки `f(x)` бесконечно опаѓа или расте
+                            туку поради тоа што вредностите осцилираат помеѓу `-1` и `1` без при тоа да се приближуваат
+                            кон некој реален број. Општо кажано тригонометриските функции немат лимес кога `x->+oo` и
+                            `x->-oo` поради периодичноста. Не постои одредена нотификација за да се запише ова
+                            однесување.
+                        </p>
+                        <p>
+                        <div class="text-center">
+                            <img src="images/limes_24.png" class="img-fluid img">
+                        </div>
+                        </p>
+                        <p>
+                            Предходно видовме дека функциите `e^x` и `ln x` бесконечно растат кога `x->+oo`. Поради тоа
+                            лимесите ќе бидат:
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->+oo) ln x = +oo` &nbsp; и `lim_(x->+oo) е^x = +oo`
+                        </p>
+                        <p>
+                            Следните лимеси се во корелација со долниот лев график.
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->-oo) е^x = 0` &nbsp; и `lim_(x->0‚+) ln x = -oo`
+                        </p>
+                        <p>
+                        <div class="text-center">
+                            <img src="images/limes_25.png" class="img-fluid img">
+                        </div>
+                        <p>
+                            И на крај следните лимеси можат да се одредат според тоа што графикот на `y = e^(−x)`  е рефлексија околу `y` - оската од графикот `y=e^x`.
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->+oo) е^(-x) = 0` &nbsp; и `lim_(x->-oo) e^(-x) = +oo`
+                        </p>
+                    </div>
+                </div>
+
+
+        </main>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="assets/js/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="assets/js/docs.min.js"></script>
+
+
+</body>
+</html>

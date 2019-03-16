@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="end user" content="Aleksandar Spirkovski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getbootstrap">
+    <meta name="twitter:creator" content="@getbootstrap">
+    <meta name="twitter:title" content="Introduction">
+    <meta name="twitter:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social-logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+    <meta property="og:title" content="Introduction">
+    <meta property="og:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calkulus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#def1">Дефиниција 1</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#def2">Дефиниција 2</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#moe">Објаснувања</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#vezbi">Вежби</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="history">Експоненцијална функција</h1>
+            <p class="bd-lead">
+
+            </p>
+
+            <p>
+                Функција од облик `f(x) = b^x,` каде што `b > 0` и `b != 1`, се нарекува експоненцијална функција со
+                основа `b`. Некои примери на експоненцијални функции се:
+            </p>
+            <p class="text-center">
+                `f(x)=2^x`, &nbsp;`f(x)=(1/2)^x,`&nbsp; `f(x)=pi^x`
+            </p>
+            <p>
+                Експоненцијална функција има константна основа и променлив експонент. Според тоа, функции како што се `f
+                (x) = x^2` и `f (x) = x^pi` не се експоненцијални функции, бидејќи имаат променлива основа и константен
+                експонент.
+            </p>
+            <div class="text-center">
+                <img src="images/exp_01.png" class="img-fluid img">
+            </div>
+            <p>
+                Претходниот цртеж го прикажува графикот на функцијата `y = bx` во зависност од вредноста на `b`.
+                Графикот на `y = bx` ги има следниве својства:
+            </p>
+            <ul>
+                <li>
+                    Графикот минува низ `(0, 1`) бидејќи `b^0 = 1`
+                </li>
+                <li>
+                    Aко `b > 1`, вредноста на `b^x` расте како што расте `x`. Ако се движиме по графикот на `y = b^x` од
+                    лево кон десно, вредноста на `b^x` се зголемува неограничено. Ако се движиме по графикот на `y =
+                    b^x` од десно кон лево, вредноста на `b^x` се намалува кон нула, но никогаш не е нула.
+                </li>
+                <li>
+                    Ако `0 < b < 1`, вредноста на вредноста на `b^x` опаѓа како што расте `x`. Ако се движиме по
+                    графикот на `y = b^x` од лево кон десно, вредноста на `b^x` се намалува кон нула, но никогаш не е
+                    нула. Ако се движиме по графикот на `y = bx` од десно кон лево, вредноста на `b^x` се зголемува
+                    неограничено.
+                </li>
+            </ul>
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Напомена</h4>
+                <p class="mb-0">Ако `b = 1`, вредноста на `b^x` е константна функција, бидејќи `bx = 1^x = 1`. Овој
+                    случај не е од интерес тука, па затоа оваа функција ја исклучуваме од фамилијата експоненцијални
+                    функции.</p>
+            </div>
+            <p>
+                На цртежот се прикажани графици на некои експоненцијални функции. Да забележиме дека графикот на `y =
+                (1/b)^x` е симетричен на графикот на `y = b^x` во однос на `y` – oската. Тоа се заснова на фактот дека
+                со замена на `x` со `−x` равенката `y = b^x` дава
+            </p>
+            </p>
+            <p class="text-center">
+                `y=-b^x=(1/b)^x`
+            </p>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text-center">
+                        <img src="images/exp_02.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p>Oд цртежот може да забележиме дека за `b > 1` колку е поголемо `b`, толку побрзо расте функцијата
+                        `y = b^x` за `x > 0`, и побавно расте за `x < 0`.</p>
+                    <p>Од цртежот може да се определи доменот и рангот на експоненцијална функција `f (x) = b^x`:</p>
+                    <p>Доменот на функцијата е `(−oo, +oo)`</p>
+                    <p>За `b > 1` функцијата расте неограничено кога `x` расте од лево кон десно, а за `0 < b < 1` опаѓа
+                        кон нула, но никогаш не е нула, кога `x` расте од лево кон десно. Според тоа рангот на
+                        функцијата е `(0, +oo)`.</p>
+                </div>
+            </div>
+
+            <p>
+                <strong>Пример 1:</strong> Нацртај го графикот на функцијата `f(x) = 1 − 2^x` и најди ги доменот и
+                рангот.
+            </p>
+            <p>
+                <strong>Решение</strong>. Започнуваме со графикот на `y = 2^x`. Со симетрија во однос на `x` – оската го
+                добиваме графикот на `y = −2^x`, а потоа со транслација за `1` единица нагоре го добиваме графикот на `y
+                = 1 − 2^x` (види цртеж).
+            </p>
+            <p>
+                Доменот на функцијата е `(−∞, +∞)` и рангот е `(−∞, 1)`
+            </p>
+            <div class="text-center">
+                <img src="images/exp_03.png" class="img-fluid img">
+            </div>
+
+
+            <h3>
+                Бројот e
+            </h3>
+            <p>
+                Меѓу сите основи на експоненцијална функција од посебен интерес е бројот чија што вредност до шест
+                децимали е:</p>
+            <p>
+                Од друга страна, домените на `f` и `g` се:
+            </p>
+            <p class="text-center">
+                `e ≈ 2,718282.`
+            </p>
+            <p>
+                Основата `b = e` е важна бидејќи, како што покажеме подоцна, ова е единствената база за која
+                коефициентот на правецот на тангентата во било која точка `P` од графикот на `y = b^x` e еднаков на `y`
+                – координатата на `P` (види цртеж).
+            </p>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text-center">
+                        <img src="images/exp_04.png" class="img-fluid img">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p>Тангентата на графикот `y = e^x` во точката `(0, 1`) има коефициент на правец 1.</p>
+                </div>
+            </div>
+            <p>
+                Бројот `e` се јавува и како константа кон која се приближуваат вредностите на функцијата
+            </p>
+            <p class="text-center">
+                `y=(1+1/(x))^x`
+            </p>
+            <p>
+                кога `x` неограничено расте или неограничено опаѓа.
+            </p>
+            <p>
+                Ако се искористи тој факт, вредноста `е` може да се апроксимира со било кој степен на точност со
+                пресметување на горната функција за доволно големи вредности на `x` по апсолутна вредност.
+            </p>
+            <div class="text-center">
+                <img src="images/exp_05.png" class="img-fluid img">
+            </div>
+
+            <h3>
+                Природна експоненцијална функција
+            </h3>
+            <p>
+                Функцијата `y = е^x` се нарекува експоненцијална функција со основа `e` или природна експоненцијална функција.
+            </p>
+            <p>
+                Понекогаш поради типографски причини, природната експоненцијална функција се означува со `exp(x)`. Taкa, изразот:
+            </p>
+            <p class="text-center">
+                `e^(x`<sub>`1`</sub>`+x`<sub>`2`</sub>)=`e^x`<sub>`1`</sub>`*e^x`<sub>`2`</sub>
+            </p>
+            <p>
+                се запишува како `exp(x1 + x2) = exp(x1) ⋅ exp(x2)`.
+            </p>
+
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

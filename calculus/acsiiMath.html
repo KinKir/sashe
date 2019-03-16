@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning JavaScript">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="PyCharm2018.3">
+
+        <title>Calculis</title>
+
+        <!-- next page -->
+        <link rel="next" href="html_technologies_css.html">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../assets/css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../assets/img/icon/favicon.ico">
+        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+              <div class="container">
+                    <span class="skiplink-text">Skip to main content</span>
+              </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Пред Калкулус</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="functions.html">Функции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="background_why_js.html">Лимеси</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Изводи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="ref_syntax.html">Интеграли</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="code_index.html">Фундаменталана Теорема</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events_index.html">Вежби</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lib_index.html">Колоквиум</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="es6_index.html">Испитни Задачи</a>
+                    </li>
+                 </ul>
+            </div>
+
+            <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <li class="nav-item dropdown">
+                    <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Библиотека
+                    </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                            <a class="dropdown-item active" href="https://www.w3.org/Style/CSS/" target="_blank">Calculus Lifesaver</a>
+                            <a class="dropdown-item" href="https://github.com/rwaldron/idiomatic.js" target="_blank">Idiomatic</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://caniuse.com/#home" target="_blank">Can I use __________ ?</a>
+                            <a class="dropdown-item" href="https://www.javascripting.com/?sort=rating" target="_blank">JavaScripting</a>
+                      </div>
+                </li>
+            </ul>
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..." aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com" data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="intro.html">
+                                Before Calculus
+                            </a>
+
+                            <ul class="nav bd-sidenav">
+                                <li class="active bd-sidenav-active">
+                                    <a href="/docs/4.2/getting-started/introduction/">
+                                        Introduction
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/docs/4.2/getting-started/download/">
+                                        Download
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="index.html">
+                                AsciiMath
+                            </a>
+                        </div>
+                        <div class="bd-toc-item  active">
+                            <a class="bd-toc-link" href="index.html">
+                                Симболи
+                            </a>
+                            <ul class="nav bd-sidenav">
+                                <li class="active bd-sidenav-active">
+                                    <a href="/docs/4.2/getting-started/introduction/">
+                                        Introduction
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="functions.html">
+                                Множества
+                            </a>
+                        </div>
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="basic_selector.html">
+                                Терминологија
+                            </a>
+                        </div>
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="basic_values.html">
+                                Values
+                            </a>
+                        </div>
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="basic_booleans.html">
+                                Boooleans
+                            </a>
+                        </div>
+
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#rendering">Rendering</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#modules">Getting Started</a>
+                        </li>
+                        <li class="toc-entry toc-h2">
+                            <a href="#syntax">Syntax</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Operation symbols">Operation symbols</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Miscellaneous symbols">Miscellaneous symbols</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Relation symbols">Relation symbols</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                    <h1 class="bd-title" id="history">ASCiiMath</h1>
+                    <p class="bd-lead">
+                        AsciiMath is an easy-to-write markup language for mathematics.
+                    </p>
+                    <h6 id="rendering">Input:</h6>
+                    <p>sum_(i=1)^n i^3=((n(n+1))/2)^2</p>
+                    <h6>Rendering:</h6>
+                    <p>`sum_(i=1)^n i^3=((n(n+1))/2)^2`</p>
+
+                    <h4 id="start">Getting Started</h4>
+                    <p>In order to get started you have two options:</p>
+                    <ul>
+                        <li>
+                            Use MathJax to render your formulas. MathJax is a full fledged open source JavaScript display engine for mathematics and works in all browsers.
+                            This is the recommended approach!<br>
+                            Get started by loading the default AsciiMath configuration:
+                            <pre><!-- CDN MathJax -->
+&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async>&lt;/scrip>
+                            </pre>
+                            Text in your HTML enclosed in ` (backticks) will now get rendered as a math formula. The math delimiters can also be customized.
+                        </li>
+                        <li>
+                            Load the AsciiMath javascript file (get it on GitHub) in either the head or the body tag of your website like this:
+                            <pre><!-- local MathJax -->
+&lt;script src="ASCIIMathML.js">&lt;/script>
+                            </pre>
+                            This file contains JavaScript to convert AsciiMath notation and (some) LaTeX to Presentation MathML. The conversion is done while the HTML page loads.<br><br>
+                            <div class="alert alert-danger" role="alert">
+                                Attention: Currently this only works in Firefox and Safari.
+                            </div>
+                            <p><em>While HTML5 now includes MathML as an official recommendation, the remaining browsers do not appear to be implementing it. For widest browser compatibility,
+                                the use of MathJax is recommended.</em>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h4 id="syntax">Syntax</h4>
+                    <p>
+                        Most AsciiMath symbols attempt to mimic in text what they look like rendered, like oo for `∞`. Many symbols can also be displayed using a TeX alternative,
+                        but a preceeding backslash is not required.
+                    </p>
+
+                    <h6 id="Operation symbols">Operation symbols</h6>
+
+                    <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">TeX alt</th>
+                                <th scope="col">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">+</th>
+                                <td>&nbsp;</td>
+                                <td>`+`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">-</th>
+                                <td>&nbsp;</td>
+                                <td>`-`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">*</th>
+                                <td>cdot</td>
+                                <td>`*`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">**</th>
+                                <td>ast</td>
+                                <td>`**`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">***</th>
+                                <td>star</td>
+                                <td>`***`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">//</th>
+                                <td>&nbsp;</td>
+                                <td>`//`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">\\</th>
+                                <td>backslash setminus</td>
+                                <td>`\\`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">xx</th>
+                                <td>times</td>
+                                <td>`xx`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">-:</th>
+                                <td>div</td>
+                                <td>`-:`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|><</th>
+                                <td>ltimes</td>
+                                <td>`|><`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">><|</th>
+                                <td>rtimes</td>
+                                <td>`><|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|><|</th>
+                                <td>bowtie</td>
+                                <td>`|><|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">@</th>
+                                <td>circ</td>
+                                <td>`@`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">o+</th>
+                                <td>oplus</td>
+                                <td>`o+`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ox</th>
+                                <td>otimes</td>
+                                <td>`ox`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">o.</th>
+                                <td>odot</td>
+                                <td>`o.`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">sum</th>
+                                <td>&nbsp;</td>
+                                <td>`sum`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">prod</th>
+                                <td>&nbsp;</td>
+                                <td>`prod`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">^^</th>
+                                <td>wedge</td>
+                                <td>`^^`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">^^^</th>
+                                <td>bidwedge</td>
+                                <td>`^^^`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vv</th>
+                                <td>vee</td>
+                                <td>`vv`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vvv</th>
+                                <td>bigvee</td>
+                                <td>`vvv`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">nn</th>
+                                <td>cap</td>
+                                <td>`nn`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">nnn</th>
+                                <td>bigcap</td>
+                                <td>`nnn`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">uu</th>
+                                <td>cup</td>
+                                <td>`uu`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">uuu</th>
+                                <td>bigcup</td>
+                                <td>`uuu`</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <h6 id="Miscellaneous symbols">Miscellaneous symbols</h6>
+
+                    <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">TeX alt</th>
+                                <th scope="col">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">2/3</th>
+                                <td>frac{2}{3}</td>
+                                <td>`2/3`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2^3</th>
+                                <td>&nbsp;</td>
+                                <td>`2^3`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">sqrt x</th>
+                                <td>&nbsp;</td>
+                                <td>`sqrt x`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">root(3)(x)</th>
+                                <td>&nbsp;</td>
+                                <td>`root(3)(x)`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">int</th>
+                                <td>&nbsp;</td>
+                                <td>`int`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">oint</th>
+                                <td>&nbsp;</td>
+                                <td>`oint`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">del</th>
+                                <td>partial</td>
+                                <td>`del`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">grad</th>
+                                <td>nabla</td>
+                                <td>`grad`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">+-</th>
+                                <td>pm</td>
+                                <td>`+-`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">O/</th>
+                                <td>emptyset</td>
+                                <td>`O/`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">oo</th>
+                                <td>infty</td>
+                                <td>`oo`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">aleph</th>
+                                <td>&nbsp;</td>
+                                <td>`aleph`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">:.</th>
+                                <td>therefore</td>
+                                <td>`:.`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">:'</th>
+                                <td>because</td>
+                                <td>`:'`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|...|</th>
+                                <td>|ldots|</td>
+                                <td>`|...|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|cdots|</th>
+                                <td>&nbsp;</td>
+                                <td>`|cdots|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vdots</th>
+                                <td>&nbsp;</td>
+                                <td>`vdots`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ddots</th>
+                                <td>&nbsp;</td>
+                                <td>`ddots`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|\ |</th>
+                                <td>&nbsp;</td>
+                                <td>`|\ |`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|quad|</th>
+                                <td>&nbsp;</td>
+                                <td>`|quad|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">/_</th>
+                                <td>angle</td>
+                                <td>`/_`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">frown</th>
+                                <td>&nbsp;</td>
+                                <td>`frown`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">/_\</th>
+                                <td>triangle</td>
+                                <td>`/_\`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">diamond</th>
+                                <td>&nbsp;</td>
+                                <td>`diamond`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">square</th>
+                                <td>&nbsp;</td>
+                                <td>`square`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|_</th>
+                                <td>lfloor</td>
+                                <td>`|_`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">_|</th>
+                                <td>rfloor</td>
+                                <td>`_|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|~</th>
+                                <td>lceiling</td>
+                                <td>`|~`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">~|</th>
+                                <td>rceiling</td>
+                                <td>`~|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CC</th>
+                                <td>&nbsp;</td>
+                                <td>`CC`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">NN</th>
+                                <td>&nbsp;</td>
+                                <td>`NN`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">QQ</th>
+                                <td>&nbsp;</td>
+                                <td>`QQ`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RR</th>
+                                <td>&nbsp;</td>
+                                <td>`RR`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ZZ</th>
+                                <td>&nbsp;</td>
+                                <td>`ZZ`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">"hi"</th>
+                                <td>text(hi)</td>
+                                <td>`"hi"`</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <h6 id="Relation symbols">Relation symbols</h6>
+
+                    <div class="table-responsive-sm">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">TeX alt</th>
+                                <th scope="col">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">=</th>
+                                <td>&nbsp;</td>
+                                <td>`=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">!=</th>
+                                <td>ne</td>
+                                <td>`!=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt;</th>
+                                <td>lt</td>
+                                <td>`<`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&gt;</th>
+                                <td>gt</td>
+                                <td>`>`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&lt;=</th>
+                                <td>le</td>
+                                <td>`&lt=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">&gt;=</th>
+                                <td>&nbspge</td>
+                                <td>`&gt;=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">-&lt;</th>
+                                <td>prec</td>
+                                <td>`-&lt;`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">-&lt;=</th>
+                                <td>preceq</td>
+                                <td>`-&lt;=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">+-</th>
+                                <td>pm</td>
+                                <td>`-&lt;=`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">O/</th>
+                                <td>emptyset</td>
+                                <td>`O/`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">in</th>
+                                <td>&nbsp;</td>
+                                <td>`in`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">!in</th>
+                                <td>notin</td>
+                                <td>`!in`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">sub</th>
+                                <td>subset</td>
+                                <td>`sub`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">sup</th>
+                                <td>supset</td>
+                                <td>`sup`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">sube</th>
+                                <td>subseteq</td>
+                                <td>`sube`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|cdots|</th>
+                                <td>&nbsp;</td>
+                                <td>`|cdots|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vdots</th>
+                                <td>&nbsp;</td>
+                                <td>`vdots`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ddots</th>
+                                <td>&nbsp;</td>
+                                <td>`ddots`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|\ |</th>
+                                <td>&nbsp;</td>
+                                <td>`|\ |`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|quad|</th>
+                                <td>&nbsp;</td>
+                                <td>`|quad|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">/_</th>
+                                <td>angle</td>
+                                <td>`/_`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">frown</th>
+                                <td>&nbsp;</td>
+                                <td>`frown`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">/_\</th>
+                                <td>triangle</td>
+                                <td>`/_\`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">diamond</th>
+                                <td>&nbsp;</td>
+                                <td>`diamond`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">square</th>
+                                <td>&nbsp;</td>
+                                <td>`square`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|_</th>
+                                <td>lfloor</td>
+                                <td>`|_`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">_|</th>
+                                <td>rfloor</td>
+                                <td>`_|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">|~</th>
+                                <td>lceiling</td>
+                                <td>`|~`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">~|</th>
+                                <td>rceiling</td>
+                                <td>`~|`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CC</th>
+                                <td>&nbsp;</td>
+                                <td>`CC`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">NN</th>
+                                <td>&nbsp;</td>
+                                <td>`NN`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">QQ</th>
+                                <td>&nbsp;</td>
+                                <td>`QQ`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RR</th>
+                                <td>&nbsp;</td>
+                                <td>`RR`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ZZ</th>
+                                <td>&nbsp;</td>
+                                <td>`ZZ`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">"hi"</th>
+                                <td>text(hi)</td>
+                                <td>`"hi"`</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+
+
+                </main>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="assets/js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+        <script src="assets/js/docs.min.js"></script>
+
+        <!-- codemirror -->
+        <script src="../assets/codemirror-5.40.2/lib/codemirror.js"></script>
+        <script src="../assets/codemirror-5.40.2/mode/htmlmixed/htmlmixed.js"></script>
+        <script src="../assets/codemirror-5.40.2/mode/xml/xml.js"></script>
+        <script src="../assets/codemirror-5.40.2/mode/javascript/javascript.js"></script>
+        <script src="../assets/codemirror-5.40.2/mode/css/css.js"></script>
+
+        <script>
+
+              var delay;
+
+              // Initialize CodeMirror editor with a nice html5 canvas demo.
+              var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+                mode: 'text/html',
+                lineNumbers: true,
+              });
+              editor.on("change", function() {
+                clearTimeout(delay);
+                delay = setTimeout(updatePreview, 300);
+              });
+
+              function updatePreview() {
+                var previewFrame = document.getElementById('preview');
+                var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+                preview.open();
+                preview.write(editor.getValue());
+                preview.close();
+              }
+              setTimeout(updatePreview, 300);
+        </script>
+    </body>
+</html>

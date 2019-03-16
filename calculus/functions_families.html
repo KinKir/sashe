@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="end user" content="Aleksandar Spirkovski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getbootstrap">
+    <meta name="twitter:creator" content="@getbootstrap">
+    <meta name="twitter:title" content="Introduction">
+    <meta name="twitter:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social-logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+    <meta property="og:title" content="Introduction">
+    <meta property="og:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calkulus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions_families.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#familyies">Фамилии од криви</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#power">Степенски функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#x^n">Фамилија `y =x^n`</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#x^-n">Фамилија `y =x^(-n)`</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#polynomials">Полиноми</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#ratio">Рационални функции</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <p class=" bd-lead">
+                Функциите често се групирани во фамилии според обликот на нивните формули или други 
+                општи карактеристики. Овде ќе бидат претсатвени некои од основните фамилии на функции.
+            </p>
+
+            <!-- FAMILIES OF CURVES -->
+
+            <h3 id="familyies">
+                Фамилии од криви
+            </h3>
+            <p>
+                Графикот на константна функција `f (x) = c` e хоризонтална права (види (а)). Ако c се менува во
+                множеството реални броеви добиваме фамилија од паралелни прави (види (б)).
+            </p>
+            <div class="text-center">
+                <img src="images/families_01.png" class="img-fluid img">
+            </div>
+
+            <p>
+                Константите кои варираат за да се добие фамилија од криви се нарекуваат параметри. На пример, равенка од
+                облик `y = mx + b` претставува права со коефициент на правец `m` и пресек `b` на `y`-оската.
+            </p>
+            <p>
+                Ако `b` се фиксира и `m` се третира како параметар, добиваме фамилија од прави во која сите членови
+                имаат пресек `b` на `y`-оската (види (а)).
+            </p>
+            <p>
+                Ако `m` се фиксира и `b` се третира како параметар, добиваме фамилија од паралелни прави чии членови
+                имаат коефициент на правец `m` (види (б)).
+            </p>
+            <div class="text-center">
+                <img src="images/families_02.png" class="img-fluid img">
+            </div>
+            <p>
+                <strong>Пример 1</strong>
+            </p>
+            <p>
+                a) Да се најде равенката на фамилијата прави со коефициент на правец `1/2`.
+            </p>
+            <p>
+                б) Да се најде правата од фамилијата под а) која минува низ точката (4,1).
+            </p>
+            <p>
+                в) Да се најде равенката на фамилијата прави чии членови се нормални на фамилијата прави под а).
+            </p>
+            <p>
+                Решение.
+            </p>
+            <p>
+                а) Правите чиј коефициент на правец е `1/2` имаат облик:
+            </p>
+            <p class="text-center">
+                `f(x)=(1/2)x+b`
+            </p>
+            <p>
+                каде параметарот `b` може да биде кој било реален број.
+            </p>
+            <p>
+                б) Да се определи правата од фамилијата која минува низ точката (4,1) треба да се определи `b` за кој
+                координатите `x = 4` и `y = 1` ja задоволуваат претходната равенка. Добиваме:
+            </p>
+            <p class="text-center">
+                `f(x)=(1/2)x+b <=> 1=(1/2)4+b <=> b=-1`
+            </p>
+            <p>
+                па бараната права има равенка:
+            </p>
+            <p class="text-center">
+                `y=(1/2)x-1`
+            </p>
+            <p>
+                в) од `m_1m_2 =-1 <=> (1/2)m_2 =-1 <=> m_2 = -2`
+            </p>
+            <p>
+                па бараната права има равенка:
+            </p>
+            <p class="text-center">
+                `y=-2x+b`
+            </p>
+
+            <!-- /FAMILIES OF CURVES -->
+
+            <!-- POWER FUNCTIONS; THE FAMILY y = xn -->
+
+            <h3 id='power'>
+                Степенски функции
+            </h3>
+            <p>
+                Функција од облик `f (x) = x^p`, каде што `p` е константа се нарекува степенска функција.
+            </p>
+
+            <h5 id='x^n'>
+                    Фамилијата `y =x^n`
+            </h5>
+            <p>
+                Нека `p` e природен број, да речеме `p = n`.
+            </p>
+            <p>
+                Графиците на кривите `y = x^n` за `n = 1, 2, 3, 4, и 5` се дадени на цртежот подолу.
+            </p>
+            <div class="text-center">
+                <img src="images/families_03.png" class="img-fluid img">
+            </div>
+            <p>
+                За `n>=2 `обликот на кривата `y =xn` зависи од тоа дали `n` е парен или непарен број.
+            </p>
+            <p>
+                Нека `n>=2` и `n` е парен број
+            </p>
+            <ul>
+                <li>
+                    Функцијата `y =xn` е парна, па графикот е симетричен во однос на `y`-оската.
+                </li>
+                <li>
+                    Сите графици го имаат обликот на графикот на `y =x^2`, и секој график минува низ точките `(–1, 1`),
+                    `(0, 0)` и `(1, 1)`.
+                </li>
+                <li>
+                    Како што расте `n` така графикот станува порамен во интервалот `–1 < x < 1` и пострмен на
+                    интервалите `x < –1` и `x > 1`.
+                </li>
+            </ul>
+            <div class="text-center">
+                <img src="images/families_04.png" class="img-fluid img">
+            </div>
+            <p>
+                Нека `n>=2` и `n` е непарен број
+            </p>
+            <ul>
+                <li>
+                    Функцијата `y =xn` е непарна, па графикот е симетричен во однос на координатниот почеток.
+                </li>
+                <li>
+                    Сите графици го имаат обликот на графикот на `y =x^3`, и секој график минува низ точките `(–1, –1)`,
+                    `(0, 0)`, и `(1, 1)`.
+                </li>
+                <li>
+                    Како што расте `n` така графикот станува порамен во интервалот `–1 < x < 1` и пострмен на
+                    интервалите `x < –1` и `x > 1`.
+                </li>
+            </ul>
+            <div class="text-center">
+                <img src="images/families_05.png" class="img-fluid img">
+            </div>
+
+            <h5 id='x^-n'>
+                Фамилијата `y =x^-n`
+            </h3>
+            <p>
+                Нека `p` e негативен цел број, да речеме `p = -n`.
+            </p>
+            <p>
+                Графиците на кривите `y = x^-n=1/x^n` за `n = 1, 2` се дадени на цртежот подолу.
+            </p>
+            <div class="text-center">
+                <img src="images/families_06.png" class="img-fluid img">
+            </div>
+            <p>
+                Обликот на кривата y` =x^-n` зависи од тоа дали `n` е парен или непарен број.
+            </p>
+            <p>
+                Нека `n` е парен број
+            </p>
+            <ul>
+                <li>
+                    Функцијата `y =1/x^n` е парна, па графикот е симетричен во однос на `y`-оската.
+                </li>
+                <li>
+                    Сите графици го имаат обликот на графикот на `y =1/x^2`, и секој график минува низ точките `(–1,
+                    1)`,и `(1, 1)`.
+                </li>
+                <li>
+                    Како што расте `n` така графикот станува пострмен во интервалот `–1 < x < 0` и `0< x < 1` и станува
+                    поплоснат на интервалите `x < –1` и `x > 1`.
+                </li>
+            </ul>
+            <div class="text-center">
+                <img src="images/families_07.png" class="img-fluid img">
+            </div>
+            <p>
+                Нека `n` е непарен број
+            </p>
+            <ul>
+                <li>
+                    Функцијата `y = 1/x^n` е непарна, па графикот е симетричен во однос на координатниот почеток.
+                </li>
+                <li>
+                    Сите графици го имаат обликот на графикот на `y =1/x`, и секој график минува низ точките `(–1, –1)`
+                    и `(1, 1)`.
+                </li>
+                <li>
+                    Како што расте `n` така графикот станува пострмен во интервалот `–1 < x < 0` и `0< x < 1` и станува
+                    поплоснат на интервалите `x < –1` и `x > 1`.
+                </li>
+            </ul>
+            <div class="text-center">
+                <img src="images/families_08.png" class="img-fluid img">
+            </div>
+            <p>
+                Независно од тоа дали `n` е парен или непарен број, функцијата `y =1/x^n` има прекин во координатниот
+                почеток бидејќи делењето со нула не е дефинирано.
+            </p>
+
+
+            <!-- /POWER FUNCTIONS; THE FAMILY y = xn -->
+
+            <!-- INVERSE PROPORTIONS -->
+
+            <!-- /INVERSE PROPORTIONS -->
+
+            <!-- POWER FUNCTIONS WITH NONINTEGER EXPONENTS -->
+
+            <!-- /POWER FUNCTIONS WITH NONINTEGER EXPONENTS -->
+
+            <!-- POLYNOMIALS -->
+
+            <h3 id="polynomials">
+                Полиноми
+            </h3>
+            <p>
+                Функцијата од облик
+            </p>
+            <p class="text-center">
+                `f (x) = c_nx^n + c_(n-1)x^(n-1) + ∙ ∙ ∙ + c_1x + c_0`
+            </p>
+            <p>
+                каде `n` е ненегативен цел број се нарекува <string>полиномна функција</string> или само <string>полином</string>
+                .
+            </p>
+            <p>
+                Некои примери на полиноми се:
+            </p>
+            <p class="text-center">
+                `2x+1, &nbsp; 3x^2+5x-sqrt(2), &nbsp; root(3)x, &nbsp; 4, 5x^7-x^4+3`
+            </p>
+            <p>
+                Функцијата `(x^2–4)^3` e исто така полином бидејќи може да се развие со помош на биномната формула и да
+                се претстави во следниот облик:
+            </p>
+            <p class="text-center">
+                `(x^2-4)^3=(x^2)^3-3(x^2)^2 *4+3*x^2*4^2-4^3=x^6-12x^4+48x^2-64`
+            </p>
+            <p>
+                Константите `c_0,c_1, * * * , c_n` се наречени коефициенти на полиномот. Највисокиот степен на `x` кој што 
+                се појавува со ненулти коефициент се нарекува степен на полиномот. Ненултите константни полиноми имаат 
+                степен `0`, бидејќи може да се запишат во облик `c = cx^0`.
+            </p>
+            <p>
+                <strong>Пример</strong>
+            </p>
+            <p class="text-center">
+                `f(x)=x^4+3x^3-x^2+3x-4`
+            </p>
+            <p class="text-center">
+                `g(x)=3x^3-x=5`
+            </p>
+            <p>
+                Доменот на полином по `x` e `(–oo, +oo)`, бидејќи единствени вклучени операции се собирање и множење.
+                Рангот се менува во зависнот од полиномот. Веќе знаеме дека графиците на полиноми со степен `0` и `1` се
+                прави, а графикот на полином со степен `2` е парабола.
+            </p>
+
+            <h3 id='ratio'>
+                Рационални функции
+            </h3>
+            <p>
+                Функција која што може да се изрази како количник од два полиноми се нарекува <strong>дробно-рационална
+                функција</strong>. Ако `P(x)` и `Q(x`) се полиноми, тогаш доменот на рационалната функција.
+            </p>
+            <p class="text-center">
+                `f(x)=(P(x))/(Q(x))`
+            </p>
+            <p>
+                ги содржи сите вредности на `x` за кои `Q(x)!=0`. На пример, доменот на рационалната функција
+            </p>
+            <p class="text-center">
+                `f(x)=(x^2+2x)/(x^2-1)`
+            </p>
+            <p>
+                се состои од сите вредности на `x` освен `–1` и `1`. Нејзиниот график, како и графикот на две други
+                рационални функции се прикажани на следната слика.
+            </p>
+
+            <div class="text-center">
+                <img src="images/poly_01.png" class="img-fluid img">
+            </div>
+
+
+            <!-- /POLYNOMIALS -->
+
+            <!-- ALGEBRAIC FUNCTIONS -->
+
+            <!-- /ALGEBRAIC FUNCTIONS -->
+
+            <!-- THE FAMILIES y = A sin Bx AND y = A cos Bx -->
+
+
+            <!-- THE FAMILIES y = A sin Bx AND y = A cos Bx -->
+
+
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

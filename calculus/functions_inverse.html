@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="end user" content="Aleksandar Spirkovski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getbootstrap">
+    <meta name="twitter:creator" content="@getbootstrap">
+    <meta name="twitter:title" content="Introduction">
+    <meta name="twitter:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social-logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+    <meta property="og:title" content="Introduction">
+    <meta property="og:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calkulus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#if">Инверзна функција</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#def1">Дефиниција 1</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#fold">Смена на независната променлива</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#ex1">Пример 1</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#ex2">Пример 2</a>
+                </li>
+
+            </ul>
+            <li class="toc-entry toc-h2">
+                <a href="#domain">Домен и ранг на инверзни функции</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#connection">Врска помеѓу инверзни функции</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#method">Метод за наоѓање на инверзна функција</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#exist">Егзистенција на инверзни функции</a>
+            </li>
+            <li class="toc-entry toc-h2">
+                <a href="#graph">График на инверзна функција</a>
+            </li>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="if">Инверзна функција</h1>
+            <p class="bd-lead">
+                Идејата за решавање на равенка `y = f (x`) по `x` како функција од `y`, да
+                речеме `x = g(y)`, e една од поважните идеи во математика. Понекогаш
+                решавањето на равенка е едноставна постапка; на пример, равенката
+            </p>
+            <p class="text-center">
+                `y=x^3+1`, од типот `y=f(x)`,
+            </p>
+            <p>
+                може да се реши по `x` како функција од `y`: `x=root(3)(y-1)` при што `x=g(y)`.
+            </p>
+
+            <p>
+                Првата равенка е попогодна за пресметување на `y`, кога е позната
+                вредноста на `x`, а втората равенка е подобра за пресметување на `x`, ако е
+                позната вредноста на `y` (види цртеж).
+            </p>
+
+            <div class="text-center">
+                <img src="images/inv_01.png" class="img-fluid img">
+            </div>
+
+            <p>
+                Примарен интерес во овој дел е да се определи врска која може да постои меѓу функциите `f` и `g`, кога
+                равенка од тип `y = f (x)` е изразена како `x = g (y)`, или обратно.
+            </p>
+            <p>
+                На пример, да ги разгледаме функциите `f(x) = x3 + 1` и `g(y)=root(3)(y-1)` дискутирани претходно.
+            </p>
+            <p>
+                Кога ќе се направи композиција од овие функции по било кој редослед се добива:
+            </p>
+            <p class="text-center">
+                `g(f(x))=g(x^3+1)=root(3)((x^3+1)-1)=x`
+            </p>
+            <p class="text-center">
+                `f(g(y))=f(root(3)(y-1))=(root(3)(y-1))^3+1=y`
+            </p>
+            <p>
+                Парот од функции што задоволува вакво својство има специјално име и е дефиниран со следната дефиниција.
+            </p>
+            <h6 id="def1">
+                Дефиниција 1
+            </h6>
+            <p>
+                Ако функциите `f` и `g` ги задоволуваат условите:
+            </p>
+            <p class="text-center">
+                `g(f(x))=x`, за секој `x in D`<sub>`f`</sub>,
+            </p>
+            <p class="text-center">
+                `f(g(y))=y`, за секој `y in D`<sub>`g`</sub>,
+            </p>
+            <p>
+                тогаш велиме дека `f` e инверзна на `g` и `g` e инверзна на `f`, или дека `f` и `g` се инверзни функции.
+            </p>
+            <p>
+                Може да се покаже дека ако функција `f` има инверзна функција, тогаш инверзната функција е единствена.
+            </p>
+            <p>
+                Ако функција `f` има инверзна функција, неа ќе ја означуваме со `f^(-1)`.
+            </p>
+            <p>
+                Претходните пресметки покажаа дека `g(y) = root(3)(y− 1)` e инверзна на `f(x) = x3 + 1`.
+            </p>
+            <p>
+                Според тоа, може да се запише `f^(-1)(y)=root(3)(y-1)`.
+            </p>
+            <p>
+                Важат следните равенства:
+            </p>
+            <p class="text-center">
+                `f^(-1)(f(x))=x` за седое `x in D`<sub>`f`</sub>
+            </p>
+            <p class="text-center">
+                `f(f^(-1)(y))=y` за седое `y in D`<sub>`f^(-1)`</sub>
+            </p>
+            <div id="def2" class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Забелешка</h4>
+                <p>
+                    Ако `f` e функција, тогаш `-1` во `f^(-1)` ознака за инверзна функција, а не за експонент. Поточно `f^(-1) != 1/f`
+                </p>
+            </div>
+
+            <h3 id="fold">
+                Смена на независната променлива
+            </h3>
+            <ul>
+                <li>
+                    Во последните формули `x` е независна променлива за `f` и `y` e независна променлива за `f^(-1)`.
+                </li>
+                <li>
+                    Иако понекогаш е згодно да се користат различни независни променливи за `f` и `f^(-)` , постојат
+                    ситуации во кои е потребно да се користи иста променлива за двете функции.
+                </li>
+                <li>
+                    Во последните формули `x` е независна променлива за `f` и `y` e независна променлива за `f^(-1)`.
+                </li>
+                <li>
+                    На пример, ако сакаме да ги нацртаме `f` и `f^(-1)`во ист `xy` - координатен систем, тогаш треба да
+                    сметаме дека `x` е независна променлива и `y` е зависна променлива за двете функции. Така, за да ги
+                    нацртаме графиците на функциите `f(x) = x3 + 1` и `f^(-1)=root(3)(y-1)` во ист `xy` - координатен
+                    систем, ја заменуваме независната променлива `y` со `x`, и ги цртаме графиците
+                    <p class="text-center">`y=x^3+1`</p> и: <p class="text-center">`y=root(3)(x-1)`</p>
+                </li>
+                <li>
+                    После овој договор може да се запише:
+                    <p class="text-center">
+                        `f^(-1)(f(x))=x` за седое `x in D`<sub>`f`</sub>
+                    </p>
+                    <p class="text-center">
+                        `f(f^(-1)(x))=x` за седое `x in D`<sub>`f^(-1)`</sub>
+                    </p>
+                </li>
+
+            </ul>
+            <h6 id="ex1">
+                Пример 1: Потврди дека е точно
+            </h6>
+            <p>
+                a)Инверзна на `f(x)=2x` e `f^(-1)(x)= (1/2)x`
+            </p>
+            <p>
+                б)Инверзна на `f(x)=x^3` e `f^(-1)(x)= root(3)x`
+            </p>
+
+            <h6>
+                Решение а)
+            </h6>
+            <p class="text-center">
+                `f^(-1)(f(x))=f^(-1)(2x)=(1/2)x=x`
+            </p>
+            <p class="text-center">
+                `f(f^(-1)(x))=f((1/2)x)=2(1/2)x=x`
+            </p>
+            <h6>
+                Решение б)
+            </h6>
+            <p class="text-center">
+                `f^(-1)(f(x))=f^(-1)(x^3)=root(3)(x^3)=x`
+            </p>
+            <p class="text-center">
+                `f(f^(-1)(x))=f(root(3)x)=(root(3)x)^3=x`
+            </p>
+
+            <h6 id="ex2">
+                Пример 2: Познато е дека функцијата `f` има инверзна и дека `f(3) = 5`. Пресметај колку е `f^(-1)(5)`.
+            </h6>
+
+            <p>
+                Со примена на `f^(-1)` на двете страни на равенството `f (3) = 5`, се добива `f^(-1)(f(3)) = f^(-1)(5)`.
+            </p>
+            <p>
+                Бидејќи `f^(-1)(f(3)) = 3`, следува дека `f^(-1)(5) = 3`.
+            </p>
+
+            <h3 id="domain">
+                Домен и ранг на инверзни функции
+            </h3>
+            <p>
+                Равенките:
+            </p>
+            <p class="text-center">
+                `f^(-1)(f(x))=x` за седое `x in D`<sub>`f`</sub>
+            </p>
+            <p class="text-center">
+                `f(f^(-1)(x))=x` за седое `x in D`<sub>`f^(-1)`</sub>
+            </p>
+            <p>
+                ги повлекуваат следниве врски помеѓу домените и ранговите на `f` и `f^(-1)`:
+            </p>
+            <p class="text-center">
+                доменот на `f^(-1)`= рангот на `f`
+            </p>
+            <p class="text-center">
+                рангот на `f^(-1)` = доменот на `f`
+            </p>
+
+            <h3 id="connection">
+                Врска помеѓу инверзни функции
+            </h3>
+            <p>
+                Нека претпоставиме дека инверзната функција `f^(-1)` постои.
+            </p>
+            <p>
+                Ако примениме `f^(-1)` на двете страни на равенката
+            </p>
+            <p class="text-center">
+                `y=f(x)`
+            </p>
+            <p>
+                се добива:
+            </p>
+            <p class="text-center">
+                `f^(-1)(y)=f^(-1)(f(x))=x`
+            </p>
+            <p>
+                Според тоа, важи следното:
+            </p>
+            <p class="text-center">
+                `y=f(x) <=> x=f^(-1)(y)` за `x in D`<sub>`f`</sub> и `x in D`<sub>`f^(-1)`</sub>`=R`<sub>`f</sub>
+            </p>
+
+            <!-- A METHOD FOR FINDING INVERSE FUNCTIONS -->
+
+            <h3 id="method">
+                Метод за наоѓање на инверзна функција
+            </h3>
+
+            <p>
+                Видовме дека решавањето на `y = f (x) = x3+1` по `x` , како функција од `y`, да ја означиме со `x = g
+                (y)`, дава `x = f^(-1)(y) =root(3)(y-1)`
+            </p>
+            <p>
+                Со следнава теорема се покажува кога постои инверзна функција на дадена функција:
+            </p>
+
+            <div id="th1" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 1</h4>
+                <p>
+                    Ако равенката `y = f (x)` може да се реши по `x` како функција од `y`, означуваме `x = g (y)`, тогаш
+                    `f` има инверзна функција `g (y) = f^(-1)(y)`.
+                </p>
+            </div>
+
+            <p>
+                <strong>Доказ:</strong>
+            </p>
+            <p>
+                Со замена на `y = f (x)` во `x = g(y)`, се добива `x = g(f(x))`, и со замена на `x = g (y)` во `y = f
+                (x)`, се добива `y = f (g(y))`, со што се потврдуваат равенствата во дефиницијата за инверзна функција.
+            </p>
+
+            <p>
+                <strong>Постапка за наоѓање на инверзна функција на дадена функција `f`</strong>
+            </p>
+
+            <ul>
+                <li>
+                    Чекор 1. Ја запишуваме равенката `y = f (x)`
+                </li>
+                <li>
+                    Чекор 2. Aко е можно ја решаваме равенката по `x` како функција од `y`.
+                </li>
+                <li>
+                    Чекор 3. Добиваме равенство `x = f^(-1)(y`), што дава формула за `f^(-1)` со `y` како независна
+                    променлива.
+                </li>
+                <li>
+                    Чекор 4. Ако `y` ја прифатиме како независна променлива за инверзната функција, тогаш постапката е
+                    завршена, но ако сакаме `x` да биде независна променлива, го заменуваме `x` со `y`, а `y` со `x` во
+                    равенката `x = f^(-1)(y)`, за да добиеме `y = f^(-1)(x)`.
+                </li>
+            </ul>
+
+            <p>
+                Алтернативен начин за добивање на формула за `f^(-1)` со `x` како независна променлива е да ги замениме
+                улогите на `x` и `y` и да ја решиме равенката `x = f (y)` по `y` како функција од `x`.
+            </p>
+
+            <p id="ex3">
+                <strong>Пример 3</strong>: Најди формула за инверзната функција на `f(x)=sqrt(3x-2)` со `x` како
+                независна промeнлива, и определи го доменот на `f^(-1)`.
+            </p>
+            <h6>
+                Решение:
+            </h6>
+            <p>
+                Според постапката што ја утврдивме, прво запишуваме
+            </p>
+            <p class="text-center">
+                `y=sqrt(3x-2)`
+            </p>
+            <p>
+                Потоа ја решаваме добиената равенка по `x` како функција од `y`:
+            </p>
+            <p class="text-center">
+                `y^2=3x-2 &nbsp; <=> x=(y^2+2)/3`
+            </p>
+            <p>
+                од каде што добиваме:
+            </p>
+            <p class="text-center">
+                `f^(-1)(y)=(y^2+2)/3`
+            </p>
+            <p>
+                Бидејќи сакаме `x` да биде независна променлива го заменуваме `x` со `y`, и обратно, за да ја добиеме
+                формулата:
+            </p>
+            <p class="text-center">
+                `f^(-1)(x)=(x^2+2)/3`
+            </p>
+            <p>
+                Знаеме дека доменот на `f^(-1)` е еднаков на рангот на `f`, a рангот на `f` е `[0,+oo`).
+            </p>
+            <p>
+                Според тоа, попрецизно е ако ова го презапишеме како:
+            </p>
+            <p class="text-center">
+                `f^(-1)(x)=(x^2+2)/3,` &nbsp;`x>=0`
+            </p>
+            <p>
+                Да воочиме дека, ако се определува доменот на `f^(-1)` директно од формулата, ќе се добие дека доменот е
+                `(-oo, +oo)`, што не е точно и на тоа треба посебно да се внимава.
+            </p>
+
+            <!-- /A METHOD FOR FINDING INVERSE FUNCTIONS-->
+
+            <!-- EXISTENCE OF INVERSE FUNCTIONS -->
+            <h3 id="exist">
+                Егзистенција на инверзни функции
+            </h3>
+
+            <p>
+                Постапката за наоѓање на инверзна функција `f` се засновува на решавање на равенката `y = f (x)` по `x`
+                како функција од `y`.
+            </p>
+            <p>
+                Оваа постапка може да е неприменлива од две причини – ако функцијата `f` нема инверзна, или ако има
+                инверзна, но равенката `y = f(x)` не може да се реши експлицитно по `x` како функција од `y`.
+            </p>
+            <p>
+                Според тоа, важно е да се најдат услови кои обезбедуваат егзистенција на инверзна функција, дури и ако
+                таа не може да се најде експлицитно.
+            </p>
+            <p>
+                Ако функција `f` има инверзна, таа мора да придружува различни излези на различни влезови.
+            </p>
+            <p>
+                На пример, функцијата `f(x)=x^2` нема инверзна, бидејќи таа придружува иста вредност на `x = 2` и `x =
+                -2`, имено `f (2) = f (-2) = 4`.
+            </p>
+            <p>
+                Според тоа, ако `f(x)= x^2` има инверзна функција, тогаш од равенството `f (2) = 4` ќе следува дека
+                `f^(-1)(4) = 2`, и од равенството `f (-2)= 4` ќе следува дека `f^(-1)(4) = -2`, што не е можно.
+            </p>
+            <p>
+                Друг начин да се покаже дека `f (x) = x^2` нема инверзна е да се обидеме да ја најдеме инверзната со
+                решавање на равенката `y = x^2` по `x` како функција од `y`. Веднаш наидуваме на потешкотии, бидејќи
+                добиваме `x=+-sqrt(y)` што не ја претставува x како една функција од `y`.
+            </p>
+            <p>
+                Функција која што придружува различни излези на различни влезови се нарекува <strong>инјекција</strong>
+                или <strong>еден – еден</strong> функција.
+            </p>
+            <p>
+                Од претходната дискусија знаеме дека ако `f` има инверзна, тогаш таа мора да биде инјекција. Важи и
+                обратното, т.е. точна е следната теорема.
+            </p>
+            <div id="th2" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 2</h4>
+                <p>
+                    Функција `f` има инверзна ако и само ако `f` е инјекција.
+                </p>
+            </div>
+            <p>
+                Алгебарски искажано, функција `f` има инверзна, ако и само ако:
+            </p>
+            <p class="text-center">
+                `f(x`<sub>`1`</sub>`)!=f(x`<sub>`2`</sub>`)`
+            </p>
+            <p>
+                Геометриски, дадена функција `f` има инверзна, ако и само ако која било хоризонтална права го сече
+                графикот на функцијата `y = f(x)` најмногу еднаш (види цртеж). Последното тврдење, заедно со Теорема 2,
+                го дава следниот тест за определување дали една функција има инверзна.
+            </p>
+            <div class="text-center">
+                <img src="images/inv_05.png" class="img-fluid img">
+            </div>
+            <div id="th3" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 3</h4>
+                <p>
+                    (Тест со хоризонтални прави) Дадена функција `f` има инверзна функција ако и само ако било која
+                    хоризонтална права го сече графикот на функцијата најмногу еднаш.
+                </p>
+            </div>
+            <p id="ex4">
+                <strong>Пример 4</strong>: Со помош на тестот со хоризонтални прави покажи дека `f (x) = x^2` нема
+                инверзна, и `f (x) = x^3` има инверзна.
+            </p>
+            <p>
+                <strong>Решение:</strong> На цртежот лево е прикажан графикот на `f (x) = x^2` кој има две пресечни
+                точки со хоризонталната права. На цртежот десно е прикажан графикот на `f (x) = x^3` кој има само една
+                пресечна точка со било која хоризонтална права. Нејзина инверзна функција е `f ^(-1)(x) = x^(1/3)`.
+            </p>
+            <div class="text-center">
+                <img src="images/inv_06.png" class="img-fluid img">
+            </div>
+            <p id="ex5">
+                <strong>Пример 5</strong>: Објасни зошто функцијата `f` на цртежот има инверзна. Определи `f ^(-1)(3)`.
+            </p>
+            <p>
+                <strong>Решение:</strong> Функцијата има инверзна бидејќи нејзиниот график го поминува тестот со
+                хоризонтални прави.
+            </p>
+            <p>
+                За да пресметаме `f^(-1)(3)` ќе ја разгледуваме вредноста `f^(-1)(3)` како број `x` за кој што `f (x) =
+                3`.
+                Oд графикот гледаме дека `f (2) = 3`, па `f^(-1)(3)=2`.
+            </p>
+            <div class="text-center">
+                <img src="images/inv_07.png" class="img-fluid img">
+            </div>
+
+
+            <!-- /EXISTENCE OF INVERSE FUNCTIONS -->
+
+
+            <h3>
+                Растечки и опаѓачки функции се инверзибилни
+            </h3>
+
+            <p>
+                Функција чии вредности растат кога `x` се зголемува (т.е. кога се движиме по `x`-оската од лево кон
+                десно), се нарекува <strong>растечка функција</strong>, а функција чии вредности опаѓаат кога `x` се
+                зголемува се нарекува <strong>опаѓачка функција</strong>. Ако `x_1` и `x_2` се точки од доменот на
+                функција `f`, тогаш `f` е растечка ако:
+            </p>
+            <p class="text-center">
+                `f (x1) < f (x2)`, кога `x1 < x2`
+            </p>
+            <p>
+                и опаѓачка ако:
+            </p>
+            <p class="text-center">
+                `f (x1) > f (x2)`, кога `x1 > x2`
+            </p>
+
+            <p>
+                На следните цртежи се гледа дека растечка и опаѓачка функција го поминуваат тестот со хоризонтална
+                права, па според тоа имаат инверзна функција.
+            </p>
+
+            <div class="text-center">
+                <img src="images/inv_04.png" class="img-fluid img">
+            </div>
+
+            <h3 id="graph">
+                График на инверзна функција
+            </h3>
+
+
+            <p>
+                Следна цел е да ја најдеме врската меѓу графиците на функциите `f` и `f^(-1)`. За таа цел ќе ја земеме
+                `x` како независна променлива на двете функции, односно ќе ги споредуваме графиците на `y = f (x)` и `y
+                = f^(-1)(x)`.
+            </p>
+            <p>
+                Aко `(а, b)` e точка од графикот на `y = f (x`), тогаш `b = f(a)`, па `a = f^(-1)(b)`. Оттука, `(b, a)`
+                е точка од графикот на `y = f^(-1)(x)`. Накусо, со замена на местата на координатите на точка од
+                графикот на `f` се добива точка од графикот на `f^(-1)`. Слично, со замена на координатите на точките од
+                графикот на `f^(-1)` се добиваат точки од графикот на `f`.
+            </p>
+
+            <p>
+                Геометрискиот ефект од замена на координатите на точки е симетрија на точките во однос на правата `y =
+                x`, па следува дека графиците на `y = f (x`) и `y = f^(-1)(x)` се симетрични во однос на правата `y =
+                x`.
+            </p>
+
+            <div class="text-center">
+                <img src="images/inv_03.png" class="img-fluid img">
+            </div>
+
+            <p>
+                Со тоа е покажана следната теорема.
+            </p>
+            <div id="th4" class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Теорема 4</h4>
+                <p>
+                    Ако `f` има инверзна, графиците на `y = f (x`) и `y = f^(-1)(x)` се симетрични еден на друг во однос
+                    на правата
+                    `y = x`.
+                </p>
+            </div>
+
+            <p>
+                <strong>Пример</strong>. На цртежот се прикажани графици на функции кои се инверзни едни на други.
+            </p>
+
+            <div class="text-center">
+                <img src="images/inv_02.png" class="img-fluid img">
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+
+</body>
+</html>

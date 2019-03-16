@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="end user" content="Aleksandar Spirkovski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@getbootstrap">
+    <meta name="twitter:creator" content="@getbootstrap">
+    <meta name="twitter:title" content="Introduction">
+    <meta name="twitter:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta name="twitter:image" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social-logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+    <meta property="og:title" content="Introduction">
+    <meta property="og:description"
+          content="Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:secure_url" content="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calkulus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#def1">Дефиниција 1</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#def2">Дефиниција 2</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#moe">Објаснувања</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#vezbi">Вежби</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="history">Логаритами</h1>
+
+            <p>
+                Ако `b > 0` и `b != 1`, тогаш за позитивна вредност на `x` изразот, логаритам од `x` со основа `b` се
+                означува со:
+            </p>
+            <p class="text-center">
+                `log`<sub>`b`</sub>`x`
+            </p>
+            <p>
+                и резултатот е степенот (експонентот) на кој треба да се крене `b` за да се добие `x`. На пример,
+            </p>
+            <div class="row">
+                <div class="col">`log`<sub>`10`</sub>`100=2`</div>
+                <!--div class="col">`log`<sub>`10`</sub>`(1/10)=-1`</div-->
+                <div class="col">`log`<sub>`2`</sub>`16=4`</div>
+                <div class="col">`log`<sub>`b`</sub>`1=0`</div>
+                <div class="col">`log`<sub>`b`</sub>`b=1`</div>
+                <div class="w-100"></div>
+                <div class="col">`10^2=100`</div>
+                <!--div class="col">`10^(-3)=1/1000`</div-->
+                <div class="col">`2^4=16`</div>
+                <div class="col">`b^0=1`</div>
+                <div class="col">`b^1=b`</div>
+            </div>
+            <p>
+                Ако `b = e`, тогаш вообичаено логаритамот се означува со `ln x` наместо `log`<sub>`e`</sub>`x` и
+                резултатот е степенот на кој треба да се крене `е` за да се добие `x`. На пример,
+            </p>
+            <div class="row">
+                <div class="col">`ln 1=0`</div>
+                <div class="col">`ln e=1`</div>
+                <div class="col">`ln (1/e) =-1`</div>
+                <div class="col">`ln e^2=2`</div>
+                <div class="w-100"></div>
+                <div class="col">`e^0=1`</div>
+                <div class="col">`e^1=e`</div>
+                <div class="col">`e^(-1)`</div>
+                <div class="col">`e^2=e^2`</div>
+            </div>
+
+            <h3>
+                Логаритамска функција
+            </h3>
+            <p>
+                Функцијата `y = b^x` е растечка функција за `b >1`, т.е. oпаѓачка функција за `0 < b <1`.
+            </p>
+            <p>
+                И во двата случаи, графикот на експоненцијалната функција го поминува тестот со хоризонтални прави, па
+                нејзина инверзна функција постои.
+            </p>
+            <p>
+                За да ја најдеме нејзината инверзна функција, во `y = b^x` ги менуваме местата на `x` и `y`, и ја
+                решаваме равенката `x` = `b^y` за да изразиме `y` како функција од `x`.
+            </p>
+            <p>
+                Ако во последното равенство побараме од двете страни логаритам со основа `b`, добиваме:
+            </p>
+            <p class="text-center">
+                `log`<sub>`b`</sub>`x=log` <sub>`b`</sub>`(b^y)`
+            </p>
+            <p>
+                Ако искористиме дека `log`<sub>`b`</sub>`(b^y) = y`, бидејќи `b` треба да се крене на степен `y` за да
+                се добие `b^y`, се добива дека:
+            </p>
+            <p class="text-center">
+                `y= log`<sub>`b`</sub>`x`
+            </p>
+            <div class="alert alert-info" role="alert">
+                Функцијата `f(x) = log`<sub>`b`</sub>`x` се нарекува логаритамска функција со основа `b`.
+            </div>
+
+            <h3>
+                График на логаритамска функција
+            </h3>
+            <p>
+                Графикот на логаритамската функција `y = log`<sub>`b`</sub>`x` може да се добие од графикот на
+                експоненцијалната функција `y = b^x` симетрично во однос на правата `y = x`.
+            </p>
+            <div class="text-center">
+                <img src="images/log_01.png" class="img-fluid img">
+            </div>
+
+            <p>
+                Ако `b = e`, тогаш логаритамската функција `y = ln x` се нарекува <strong>природна логаритамска
+                функција</strong>.
+            </p>
+            <p>
+                На цртежот долу се дадени графици на `y = log`<sub>`b`</sub>`x` за различни вредности на `b`.
+            </p>
+            <p>
+                Да забележиме дека сите графици поминуваат низ точката (1, 0).
+            </p>
+            <div class="text-center">
+                <img src="images/log_02.png" class="img-fluid img">
+            </div>
+
+            <h3>
+                Експоненцијална и логаритамска функција
+            </h3>
+            <p>
+                Од својствата на инверзни функции имаме дека
+            </p>
+
+            <p class="text-center">
+                `y= log`<sub>`b`</sub>`b^x,&nbsp; AA x in RR`
+            </p>
+            <p class="text-center">
+                `b^(log`<sub>`b`</sub>`x=x, &nbsp; AA x>=0`
+            </p>
+            <p>
+                Во случај кога `b = e`, равенките добиваат облик
+            </p>
+
+            <p class="text-center">
+                `ln e^x=x, AA x in RR`
+            </p>
+            <p class="text-center">
+                `e^(ln x), &nbsp; AA x>0`
+            </p>
+            <p>
+                Композицијата на функциите `b^x` и `log`<sub>`b`</sub>`x` дава идентично пресликување. Како резултат на
+                тоа имаме, на пример
+            </p>
+            <div class="row">
+                <div class="col">`log`<sub>`10`</sub>`x=x`</div>
+                <div class="col">`10^(log x)=x`</div>
+                <div class="col">`ln e^x =x`</div>
+                <div class="col">`e ^(ln x)=x`</div>
+                <div class="col">`ln e^(5)=5`</div>
+                <div class="col">`e ^(ln pi)=pi`</div>
+            </div>
+            <p>
+                Во следната табела се дадени својства на функциите `b^x` и `log`<sub>`b`</sub>x` што се должат на фактот
+                дека функциите се инверзни една на друга.
+            </p>
+
+            <div class="text-center">
+                <img src="images/log_03.png" class="img-fluid img">
+            </div>
+
+            <h3>
+                Решавање на равенки кои вклучуваат експоненти и логаритми
+            </h3>
+            <div id="th3" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 1: Алгебарски својства на логаритми</h4>
+                <p>Ако `b > 0, b != 1, a > 0, c > 0, r in RR`&nbsp; тогаш</p>
+                <ul>
+                    <li>`log`<sub>`b`</sub>`(ac)=log`<sub>`b`</sub>`a + log`<sub>`b`</sub>`c`;</li>
+                    <li>`log`<sub>`b`</sub>`(a/c)=log`<sub>`b`</sub>`a - log`<sub>`b`</sub>`c`;</li>
+                    <li>`log`<sub>`b`</sub>`(a^r)=r log`<sub>`b`</sub>`a`;</li>
+                    <li>`log`<sub>`b`</sub>`(1/c)=-log`<sub>`b`</sub>`c`;</li>
+                </ul>
+            </div>
+            <p>
+                Равенка од облик `log`<sub>`b`</sub>`x = k` може да се реши по `x` ако се презапише во облик `x = b^k`,
+                а равенка од облик `b^x = k` може да се реши по `x` ако се презапише во облик `x = log`<sub>`b`</sub>`k`.
+                Всушност, се користи следната еквивалентност:
+            </p>
+            <p>
+                `y=b^x <=> x=log`<sub>`b`</sub>`y, &nbsp; AA x in (-oo,+oo) uu y>0`
+            </p>
+
+            <h3>
+                Смена на основата за логаритмирање
+            </h3>
+            <p>
+                Калкулаторите вообичаено имаат можности за пресметување на логаритми со основа `10` и `е`. Тоа е
+                сериозен недостаток бидејќи имаме потреба за пресметување на логаритми со други основи.
+            </p>
+            <p>
+                Следната формула изразува логаритам со база `b` преку природниот логаритам:
+            </p>
+            <p class="text-center">
+                `log`<sub>`b`</sub>`x=ln x/ ln b`
+            </p>
+            <p>
+                За да го изведеме овој резултат тргнуваме од `y = log`<sub>`b`</sub>`x`, од каде што добиваме `b^y = x`.
+                Со
+                земање на природен логаритам од двете страни на добиваме `y ln b = ln x`, oд каде што следува бараното
+                равенство.
+            </p>
+            <p>
+                <strong>Пример 4: </strong>Пресметај `y = log`<sub>`2`</sub>`5`
+            </p>
+            <p class="text-center">
+                `log`<sub>`2`</sub>`5=ln 5/ ln 2 ~~ 2,321928`
+            </p>
+
+            <h3>
+                Експоненцијално и логаритамско растење
+            </h3>
+            <p>
+                Обликот на растење на `e^x` и `ln x` e даден во табелата подолу. Двете функции растат кога расте `x`, но
+                нивното растење е различно – вредностите на `e^x` растат многу брзо, а вредностите на `ln x` растат
+                многу бавно.
+            </p>
+            <p>
+                На пример, вредноста на `e^x` за `x = 10` е преку `22000`, додека за `x = 1000`, `ln x` не достигнува
+                ниту вредност `7`.
+            </p>
+
+            <div class="text-center">
+                <img src="images/log_04.png" class="img-fluid img">
+            </div>
+
+            <p>
+                За функција `f` велиме дека неограничено расте, кога `x` расте, ако вредностите на `f(x)` надминуваат било кој број `М` (не е важно колку голем), кога `x` неограничено расте.
+            </p>
+            <p>
+                Табелата на претходната страна сугерира дека `f(x) = e^x` расте неограничено, што е во согласност со фактот дека рангот на оваа функција е `(0, +oo)`.
+            </p>
+            <p>
+                Всушност ако избереме било кој позитивен број `М`, тогаш `e^x = M`, кога `x = ln M`, и бидејќи вредностите на `e^x` растат кога `x` расте, имаме
+            </p>
+            <p class="text-center">
+                `e^x>M,` &nbsp;ако&nbsp;`x>ln M`
+            </p>
+            <p>
+                (види го долниот цртеж)
+            </p>
+
+            <p>
+                Табелата на претходната страна сугерира дека `f(x) = ln x` расте неограничено, кога `x` неограничено расте (рангот на оваа функција е `(−oo +oo)`).
+            </p>
+            <p>
+                За да го согледаме ова алгебарски, нека `M` e било кој позитивен број.
+            </p>
+            <p>
+                Тогаш имаме `ln x = M` кога `x = е^M`, и бидејќи вредностите на `ln x` растат,
+            </p>
+            <p class="text-center">
+                `ln M >x`&nbsp;ако&nbsp;`x>e^M`
+            </p>
+
+            <div class="text-center">
+                <img src="images/log_05.png" class="img-fluid img">
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

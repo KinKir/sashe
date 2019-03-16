@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mayhematics">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="VS Code 2019">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../assets/img/icon/favicon.ico">
+        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Знаење</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_app_university.html">Вежби-IO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">Вежби-Книга</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Колоквиум</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Испитни прашања</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li>
+                                    <a href="propositional_logic.html">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic-app.html">
+                                        Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_equivalences.html">
+                                            Исказни еквиваленции
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Примена на исказна логика</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Translating">Преведување на реченици од говорниот јазик</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#negation">Негација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#conjunction">Конјукција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#disjunction">Дисјукција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#exclusive or">Екслузивно или</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#implication">Импликација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Logic and Bit Operations">Операции над битови</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                    <!-- intro -->
+                    <div id='intro' class='row'>
+                        <div class='col-md-12'>
+                            <p class=" nf bd-lead">
+                                Логиката има голема примена во математиката, компјутерските науки, и ред други научни дисциплини. Исказите во математиката и 
+                                науката и во природните јазици често се неточни и двосмислени. Со цел исказите да бидат прецизни се преведуваат во јазикот на 
+                                логиката. Логиката се користи при спецификација на софтвер и хардвер, бидејки овие спецификации треба да бидат прецизни пред 
+                                да отпочне развојот на системот, и уште повеќе исказната логика и нејзините закони се користат при конструкција на компјутерски 
+                                струјни кола и за конструкција на програми за верификација на компјутерските програми. Со логиката може да се анализараат и решат 
+                                многу познати проблеми.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- intro-->                    
+    
+                    <!-- Translating English Sentences -->
+                        <div id='Translating' class='row'>
+                            <div class='col-md-12'>
+                                <h3 id="def">
+                                    Преведување на реченици од говорниот јазик
+                                </h3>
+                                <p>
+                                    Постојат повеќе причини за преведување на реченици од говорниот јазик во изрази каде се користат променливи и логички сврзници. 
+                                    Речениците во природниот јазик често се двосмислени. Преведувањето на говорните реченици во сложени логички изрази и други 
+                                    видови логички изрази ја отстранува двослисменоста. Треба да се напомене дека овде може да се вклучат разумни претпоставки 
+                                    врз основа на претпоставеното значење на реченицата. Покрај тоа, откако ќе ги преведеме речениците од говорниот јазик во 
+                                    логички изрази, овие изрази можеме да ги анализираме, да ги одредиме нивните вредности на вистиноста, можеме да ги манипулираме 
+                                    и можеме да ги користиме правилата на носење на суд.
+                                </p>
+
+                                <p>
+                                    Процесот на преведување на реченица од говорниот јазик во логички израз ќе го покажеме со пример.
+                                </p> 
+
+                                <p id="ex1">
+                                    <strong>Пример 1</strong>
+                                </p>
+
+                                <p>
+                                    Да ја преведеме следната реченица во логички исказ.
+                                </p>
+
+                                <p class="nf">
+                                    Имате пристап до Интернет од факултет само ако сте студент на Финки или ако не сте бруцош.
+                                </p>
+            
+                                <p>
+                                    <strong>Решение:</strong>
+                                </p>
+
+                                <p>
+                                    Постојат многу начини да се преведе оваа реченица во логички израз. Иако е можно да се претстави реченицата со една исказна 
+                                    променлива, да речеме <span class='nf'>`p`</span>, тоа практично не е корисно при анализа на променливата. Наместо тоа попрактично 
+                                    е секој логички дел од реченицта да се претстави со содветна променлива и да се одредад врските помеѓу нив. Во суштина реченицата 
+                                    ќе ја претствиме со променливите <span class='nf'>`a`</span> и <span class='nf'>`c`</span> и <span class='nf'>`f`</span>. ( a - access, c - campus, f - freshman).
+                                </p>
+
+                                <ul>
+                                    <li class='nf'>
+                                        `a` : Имате пристап до Интернет од факултет
+                                    </li>
+                                    <li class='nf'>
+                                        `c` : Вие сте студент на Финки
+                                    </li>
+                                    <li class='nf'>
+                                        `f` : Вие сте бруцош
+                                    </li>
+                                </ul>
+
+                                <p>
+                                    Занејки дека „<span class="nf">само ако</span>“ е еден начин на изразување на условен исказ (импликација) оваа реченица можеме да ја 
+                                    претставиме како:
+                                </p>
+
+                                <p class='nf text-center'>
+                                    `a -> (c vv not f)` : „Пристап до интернет од факултет имате ако сте студент на Финки но не сте бруцош“
+                                </p>
+
+                                <p>
+                                    или:
+                                </p>
+
+                                <p class='nf text-center'>
+                                    `(c vv not f) -> a` : „Ако сте студент на Финки но не сте бруцош имате пристап до интернет од факултет.“
+                                </p>
+
+                                <p id="ex2">
+                                    <strong>Пример 2</strong>
+                                </p>
+            
+                                <p>
+                                    Како може да се преведе оваа реченица?
+                                </p>
+            
+                                <p>
+                                    <span class="nf" >Не можете да се возите на „roller coaster“ ако сте понизок од 121.92 cm освен ако сте постари од 16 години.</span>
+                                </p>
+            
+                                <p>
+                                    <strong>Решение:</strong>
+                                </p>
+
+                                <p>
+                                    Секој логички дел од реченицата ќе го претставиме со логички исказ.
+                                </p>
+
+                                <ul class='nf'>
+                                    <li>
+                                        `p` : Можете да се возите на „roller coaster“.
+                                    </li>
+                                    <li>
+                                        `q` : Вие сте понизок од 120 cm.
+                                    </li>
+                                    <li>
+                                        `r` : Вие сте постари од 16 години.
+                                    </li>
+                                </ul>
+
+                                <p>
+                                      Сега реченицата може да се запише како:
+                                </p>
+            
+                                <p class='nf text-center'>
+                                    `(r ^^ not q) -> p` : „Ако сте постари од 16 години но не сте понизок од 120 cm може да се возите на roller coaster“
+                                </p>
+            
+                                <p>
+                                    Секако дека постојат и други начини да се претстави оргиналната реченица како логички израз, но прикажаниот ги задоволува потребите.
+                                </p>
+
+
+
+                            </div>
+                        </div>
+                        <!-- /Translating English Sentences -->
+
+                        <!-- System Specifications-->
+                        <div id='System Specifications' class='row'>
+                            <div class='col-md-12'>
+                                <h3>
+                                    Системски спецификации
+                                </h3>
+
+                                <p>
+                                    Преведувањето на речениците од говорниот јазик во логички изрази е суштествен дел од специфицирањето на хардверските и
+                                    софтверските системи. Систем и софтвер инжинерите барањатa на клиентите ги примаат во говорен јазика а потоа 
+                                    формираат прецизна и недвојбена спецификација која може да се употреби како основа за развој на системот. Следниот пример 
+                                    покажува како сложен исказ се употребува во овој процес.
+                                </p>
+
+                                <p id="ex3">
+                                    <strong>Пример 3</strong>
+                                </p>
+        
+                                <p>
+                                    Да се искаже спецификацијата „<span class='nf'>Автоматскиот одговор не може да се испрати кога системот е полн</span>“ со употреба на логички сврзници.
+                                </p>
+        
+                            <p>
+                                <strong>Решение:</strong>
+                            </p>
+
+                            <p>
+                                Еден од начините да се преведе оваа реченица е променливата <span class='nf'>`p`</span> да го претставува логичкиот дел 
+                                „<span class='nf'>Автоматски одговор може да се испрати</span>“ а <span class='nf'>`q`</span> да го претставува логичкиот дел 
+                                „<span class='nf'>Системот е полн</span>“. Тогаш <span class='nf'>`not p`</span> ќе го претставува „<span class='nf'>Автоматскиот 
+                                одговор не може да се испрати</span>“. Последователно, спецификацијата може да се претстави со условниот исказ (импликација) 
+                                <span class='nf'>`q -> not p`</span>. 
+                            </p>
+
+                            <p>
+                                Системските спецификации треба да бидат конзистентни (доследни) со значење дека не треба да содржат спротиставени барања кои можат 
+                                да изведат спротиставени ситуации. Кога спецификацијата не е доследна не постои начин да се изгради систем кој ги задоволува сите барања.
+                            </p>
+
+                            <p id="ex4">
+                                <strong>Пример 4</strong>
+                            </p>
+            
+                            <p>
+                                Да се одреди дали следните системски спецификации се конзистентни:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    <span class='nf'>Дијагностичката порака се става во баферот или се препраќа.</span>
+                                </li>
+                                <li>
+                                        <span class='nf'>Дијагностичката порака не се става во бафер.</span>
+                                </li>
+                                <li>
+                                        <span class='nf'>Ако дијагностичката порака се стави во бафер тогаш таа се препраќа.</span>
+                                </li>
+                            </ul>
+            
+                            <p>
+                                <strong>Решение:</strong>
+                            </p>
+
+                            <p>
+                                За да одредиме дали спецификацијата е конзистентна прво треба да ја претставиме како логички исказ. Нека <br>
+                                <span class='nf'> `p` : Дијагностичката порака се става во баферот</span>. а <br>
+                                <span class='nf'> `q` : Дијагностичката порака се препраќа</span>.<br>
+                                Сега спецификацијата може да се запише како:
+                            </p>
+        
+                            <p class='nf text-center'>
+                                `(p vv q) ^^ not p ^^ ( p -> q)`
+                            </p>
+
+                            <p>
+                                Вредностите на вистинитост кои сите три спецификации ги прави вистинити мора да биде:<br>
+                                1. <span class='nf'>`not p = TT` : Дијагностичката порака не се става во бафер</span>.<br>
+                                2. за да биде <span class='nf'>`not p = TT` мора `p = _|_`</span><br>
+                                3. Бидејки се бара <span class='nf'>`p vv q`</span> да биде вистинито а при тоа мора 
+                                <span class='nf'>`p`</span> да биде невистинито, <span class='nf'>`q`</span> мора да е вистинито.<br> 
+                                4. Бидејки <span class='nf'>`p -> q`</span> е вистинито кога <span class='nf'>`p`</span> е невистинито 
+                                и <span class='nf'>`q`</span> е вистинито, може да заклучиме дека овие спецификации се конзистентни, бидејки сите имаат вредност на вистиност
+                                 <strong>точно</strong> кога <span class='nf'>`p`</span> e <strong>неточно</strong> а <span class='nf'>`q`</span> има вредност на вистинитост  <strong>точно</strong>.  
+                                 До истиот заклучок можеме да дојдеме со употреба на табели на вредности на вистинитост испитувајки ги сите четри можни вредност на вистинитост на <span class='nf'>`p`</span> и <span class='nf'>`q`</span>.
+                            </p>
+
+                            <div class="table-responsive-sm">
+                                <table class="table table-bordered table-sm">
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td>`p`</td>
+                                            <td>`q`</td>
+                                            <td>`not p`</td>
+                                            <td>`p vv q`</td>
+                                            <td>`(p vv q) ^^ not p`</td>
+                                            <td>`p -> q`</td>
+                                            <td>`(p vv q) ^^ not p ^^ ( p -> q)`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                        </tr>
+                                        <tr>
+                                            <td class='nf'>`_|_`</td>
+                                            <td class='nf'>`TT`</td>
+                                            <td class='nf'>`TT`</td>
+                                            <td class='nf'>`TT`</td>
+                                            <td class='nf'>`TT`</td>
+                                            <td class='nf'>`TT`</td>
+                                            <td class='nf'>`TT`</td>
+                                        </tr>
+                                        <tr>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                            <td>`_|_`</td>
+                                            <td>`TT`</td>
+                                            <td>`_|_`</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p id="ex5">
+                                <strong>Пример 5</strong>
+                            </p>
+            
+                            <p>
+                                Дали системските спецификации од примерот 4 остануваат конзистентни ако се додаде спецификацијата: <span class='nf'>Дијагностичката порака не се препраќа.</span>
+                            </p>
+
+                            <p>
+                                <strong>Решение:</strong>
+                            </p>
+
+                            <p>
+                                Во примерот 4, трите спецификациите се точни само кога <span class='nf'>`p`</span> е <strong>неточно</strong> а <span class='nf'>`q`</span> е <strong>точно</strong>. 
+                                Новата спецификација е <span class='nf'>`not q`</span>, што е <strong>неточно</strong> кога <span class='nf'>`q`</span> е  <strong>точно</strong>. 
+                                Па според вредноста на вистиноста на конјукцијата <span class='nf'>`((p vv q) ^^ not p ^^ ( p -> q)) ^^ not q`</span> 
+                                (<em>Вредноста на вистиноста на конјукцијата e точна кога и двата искази се точни).</em> четирите спецификации не се точни.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- System Specifications-->
+
+                    <!-- Boolean Searches -->
+                    <div id='System Specifications' class='row'>
+                        <div class='col-md-12'>
+                            <h3>
+                                Булови пребарувања - <span class='nf'>НЕ Е ПРЕДАВАНО</span>
+                            </h3>
+
+                            <p>
+                                Логичките сврзници се користат многу при пребарувањето на обемни колекции на информации како 
+                                индекси и web страни. Бидејки овие пребарувања се базираат на техниките на логичките искази, 
+                                истите се нарекуваат булови пребарувања.
+                            </p>
+
+                            <p>
+                                Кај буловите пребарувања сврзникот AND се користи да го најде записот кој ги содржи двата барани термини. Сврзникот OR 
+                                се употребува да го најде записот на еден или двата барани термина, а сврникот NOT (некогаш запишан како AND NOT ) 
+                                се употребува да исклучи одреден баран термин. За да се добијата информации од одреден интерес треба внимателно да се 
+                                планира употребата на логичките сврзници. Следниот пример употребата на буловото пребарување.
+                            </p>
+
+                            <p id="ex6">
+                                <strong>Пример 6</strong>
+                            </p>
+        
+                            <p>
+                                Пребарување на web страни. На пример, употребувајки булово пребарување да се најде страната за факултетите во Македонија. 
+                                Можеме да ги пребараме страните кои одговараат на следниот исказ University AND Macedonia. Резултатот на ова пребарување ќе ги вклучу оние страни 
+                                кои ги содржат двата збора University, и Macedonia. Ова пребарување ги содржи сите страни кои не интересираат заедно со сите други како страни 
+                                за факултети во покраината Makedonija vo Grcija. Kaj Google, и многу други пребарувачи зборот AND не е потребен туку истиот се подразбира. 
+                                Овие пребарувачи го подржуваат и знакот ? кој се корист за барање на одредени фрази. Така ако нас не итересираат факултетите во Македонија нај ефикасно 
+                                би било претрагата да се изврши на кирилица со исказот факултети Македонија. При ова се дабиваат резултати за факултети во Македонија, Република 
+                                Македонија и Република Северна Македонија како и страни каде се спомнуваат зборовите факултети и Македонија но не и за факултети во Грција.
+
+                            </p>
+
+                            <p>
+                                Понатаму за да ги најдеме факултетите во Македонија и Бугарија, би можеле да ги бараме станите каде се содржат зборовите 
+                                university Macedonia OR Bulgaria. На овој начин би го добиле старните за факултетите во Македонија и Бугарија но одново и 
+                                страни за факултети во областа Македонија Грција и сите други страни кои ги содржат трите збора. 
+                                Сега да извршиме пребарување по следниот исказ university North AND Macedonia OR Bulgaria. Само да се подсетиме дека логичкиот 
+                                сврзник AND е со предност пред OR. Сега резултатот на пребарување се факултетите во Република Македонија во Република Северна МАкедонија и 
+                                Бугарија но и во Македониа Грција. За да ги добиеме факултетите во Република Македонија но не и во Грција треба да пребаруваме 
+                                по следниов исказ University Macedonia NOT Greece. Треба да се напомени дека кај Google, и многу други пребарувачи, зборот NOT е 
+                                заменет со симболот `-`.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- /Boolean Searches -->
+
+                    <!-- Logic Puzzles -->
+                    <div id='Logic Puzzles' class='row'>
+                        <div class='col-md-12'>
+                            <h3>
+                                Логички проблеми - <span class='nf'>НЕ Е ПРЕДАВАНО</span>
+                            </h3>
+
+                            <p>
+                                Проблемите кои можат да се решат со логично размислување се познати како логички проблеми. 
+                                Решавањето на логичките проблеми е одличен начин да се практикуваат правилата на логиката. 
+                                Исто така, компјутерските програми дизајнирани да вршат логично размислување често користат добро 
+                                познати логички проблеми за да ги илустрираат нивните способности. Многу луѓе уживаат во решавањето на логичките проблеми, 
+                                кои се објавуваат во списанија, книги и на Интернет како рекреативна активност.
+                            </p>
+
+                            <p>
+                                Ке разгледаме два логички проблеми:
+                            </p>
+
+                            <p id="ex7">
+                                <strong>Пример 7</strong>
+                            </p>
+        
+                            <p>
+                                На еден остров има два вида не жители, едни се витези и постојано ја кажуваат вистината и едни се подлеци кои постојано лажат. Што се `A` и `B` 
+                                ако `A` вели `B` e витез а `B` вели, ние сме различен вид на луѓе.
+                            </p>
+
+                            <p>
+                                <strong>Решение:</strong>
+                            </p>
+
+                            <p>
+                                Нека `p` и `q` се искази „<span class='nf'>A е витез</span>“ и „<span class='nf'>B е витез</span>“ соодветно, така да `not p` 
+                                и `not q` се исказите „<span class='nf'>A е подлец</span>“ „<span class='nf'>B е подлец</span>“.
+                            </p>
+
+                            <p>
+                                Прво ќе претпоставиме дека A е витез, што значи дека исказот `p` е <strong>точен</strong>. Ако A е витез тогаш тој ја говори вистината 
+                                кога вели дека B е витез, па од таму B е витез и A и B се ист тип на луѓе. Но ако B е витез, тогаш исказот дека А и B се различен тип:<br>
+                                <span class='text-center nf'>`(p ∧ ¬q) ∨ (¬p ∧ q)`</span>,<br> треба да е точен што не е бидејки A и B се витези. Од овде може да се заклучи дека A не е витез, односно дека `p` 
+                                е <strong>неточно</strong>.
+                            </p>
+
+                            <p>
+                                Ако A е подлец, исказот на А дека B е витез е <strong>неточно</strong>. Ова значи дека и B е подлец. Понатаму ако B е подлец тогаш исказот на B дека A и B се различен тип на луѓе 
+                                е <strong>неточно</strong>. што води до заклучок дека и A и B се подлеци.  
+                            </p>
+
+                            <p class='text-center nf'>
+                                `(p ∧ ¬q) ∨ (¬p ∧ q)`
+                            </p>
+
+                            <div class='row'>
+                                <div class='col-md-7'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`not p`</td>
+                                                    <td>`not q`</td>
+                                                    <td>`p ^^ not q`</td>
+                                                    <td>`not p ^^ q`</td>
+                                                    <td>`(p ^^ not q) vv (not p ^^ q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class='col-md-5'>
+                                    <p>
+                                        Кој ред од табелава го претставува исказот А вели B e витез а B вели, ние сме различен вид на луѓе.
+                                    </p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Logic Puzzles -->
+
+                    <!-- Logic Circuits -->
+                    <div id='Logic Circuits' class='row'>
+                        <div class='col-md-12'>
+                            <h3>
+                                Логички кола - <span class='nf'>НЕ Е ПРЕДАВАНО</span>
+                            </h3>
+
+                            <p>
+                                Исказната логика наоѓа примена при конструкција на компјутески хардвер. Ова е прв пат спомната 1938 година од Claude Shannon 
+                                во неговата MIT докторска дисертација.
+                            </p>
+
+                            <p>
+                                Логичките струјни кола или дигиталните кола примаат влезни сигнали `p_1`, `p_2`, . . . , `p_n`, секој од нив е бит кој е или 
+                                [0 (off) или 1 (on)], и формираат излезни сигнали `s_1`, `s_2`, . . . , `s_n`, секој од нив е бит. Сега за сега ќе ги разгледуваме 
+                                логичките кола со еден излезен сигнал.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- /Logic Circuits -->
+               
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

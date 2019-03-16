@@ -1,0 +1,23 @@
+<title>point-faces</title>
+
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+ <div id="jxgbox" class="jxgbox" style="width:200px; height:200px"></div>
+ <script>
+    const board = JXG.JSXGraph.initBoard('jxgbox', {
+        boundingbox: [-5, 5, 5, -5],
+        showCopyright:false,
+        axis: true,
+    }); 
+
+    var point_0 = board.create('point', [-4, 1], {face: 'o'}, {name: 'A', size:3});
+    var point_1 = board.create('point', [-3, 1], {face: '[]'}, {name: 'B', size:3});
+    var point_2 = board.create('point', [-2, 1], {face: '+'}, {name: 'C', size:3});
+    var point_3 = board.create('point', [-1, 1], {face: 'x'}, {name: 'D', size:3});
+    var point_4 = board.create('point', [0, 1], {face: '^'}, {name: 'E', size:3})
+    var point_5 = board.create('point', [1, 1], {face: 'v'}, {name: 'F', size:3})
+    var point_6 = board.create('point', [2, 1], {face: '>'}, {name: 'G', size:3})
+    var point_7 = board.create('point', [3, 1], {face: '<'}, {name: 'H', size:3})
+    var point_8 = board.create('point', [4, 1], {face: '<>'}, {name: 'I', size:3})
+</script>

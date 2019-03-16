@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus/functions_new.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../calculus-colloquium/functions_new.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+    
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#def">Дефиниција на функција</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def1">Дефиниција 1</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def2">Дефиниција 2</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#var">Променливи</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex">Примери</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#graph">График на функција</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def4">Дефиниција 4</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#vltest">Тест со вертикални прави</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex3">Пример</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#fabs">Функција од апсолутна вредност</a>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#piecewise">Функции дефинирани по делови</a>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#domein">Домен и ранг на функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#algebra">Влијание на алгебарски операции врз доменот</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <h1 id="def">
+                Аритметички операции со функции
+            </h1>
+
+            <p>Не е најдена задача ....</p>
+
+            <h3 id="var">
+                Композиција на функции
+            </h3>
+            <strong>24.11.2018, Колоквиум I, Група 2, Задача 1</strong> Да се определи доменот на `f @ g` за :<br>
+                а) `f(x) = x + 1/(x^2 -2x -3), g(x) = (3 -x)/x` 
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинарана ако за именителот е `x^2 -2x -3 != 0`
+                        </p>
+                        <p>
+                            `= x_(1,2) = (2 +- sqrt(4 + 12))/2 => x_1 = 3, x_2 = -1`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = (-oo, -1] uu [-1, 3] uu [3, +oo)`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR \\ {0}`
+                        </p>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in RR\\{0} | g(x) in (-oo, -1] uu [-1, 3] uu [3, +oo)}`
+                        </p>
+                        <p>
+                            Излезите на  функцијата `g(x)` треба да се во доменот `D_f`.
+                        </p>
+                        <p>
+                            `(3 - x)/x  != -1 ` и `(3 - x)/x != 3 => x = 3/4`
+                        </p>
+                        <p>
+                            `D_(f@g) = (-oo, 0] uu [3/4, +oo)`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+
+            <h3 id="graph">
+                Графици на функции
+            </h3>
+
+            <strong>Задача 1</strong> Да се скицира графикот на функцијата:<br>
+                а) `y = 3x^2 + 6x`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div class='row'>
+                        <div class='col-5'>
+                            <p>
+                                `y = y_1 + y_2`                                
+                            </p>
+                            <p>
+                                `y_1 = x^2`, &nbsp `y_2 = x`
+                            </p>
+                        </div>
+                        <div class='col-7'>
+                            <iframe src="jsxgraph/graph_01.html" width="100%" height="320" frameborder="0"></iframe>
+                        </div>                        
+                        <div class='col-5'>
+                            <p>
+                                `y_1 = 3*x^2`, Множење со `c> 0`, истегање - вертикално со фактор `3`.
+                            </p>
+                            <p>
+                                `y_2 = 6*x`, Множење со `c> 0`, истегање - вертикално со фактор `6`.
+                            </p>
+                        </div>
+                        <div class='col-7'>
+                            <iframe src="jsxgraph/graph_02.html" width="100%" height="320" frameborder="0"></iframe>
+                        </div>
+                        <div class='col-5'>
+                            <p>
+                                `y = y_1 + y_2`
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                        <div class='col-7'>
+                            <iframe src="jsxgraph/graph_03.html" width="100%" height="320" frameborder="0"></iframe>
+                        </div>   
+                    </div>
+                </details>
+                б) `y = 1/(4x^2 -8x +4) +1`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                в) `y = 4x^2 -8x`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                г) `y = 1/(3x^2 +6x +3) -1`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                д) `y = - root(3)(x - 2) -3`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ѓ) `y = 1/2(x - 1)^2 - 2`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                е) `y = 2(x + 1)^2 - 3`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ж) `y = 1/2sqrt(x-3) - 3`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ѕ) `y = 2root(3)(x - 1) + 1`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                и) `y = 1/2(x -3)^2 + 2`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            
+                        </p>
+                        
+                        
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+
+            <h3 id="vltest">
+                Тест со вертикални прави
+            </h3>
+
+            <p>
+                <p>Не е најдена задача ....</p>
+            </p>
+            
+            <h3 id="fabs">
+                Функцијата апсолутна вредност
+            </h3>
+
+            <p>
+                <p>Не е најдена задача ....</p>
+            </p>
+
+            <h3 id="piecewise">
+                Функции дефинирани по делови
+            </h3>
+
+            <p>
+                <p>Не е најдена задача ....</p>
+            </p>
+            
+
+            <h3 id="domein">
+                Домен и ранг на функции
+            </h3>
+
+            <strong>Задача 1</strong> Да се одреди доменот и формулата за `f@g`:<br>
+                а) `f(x) = (x + 1)/(x^2 + x - 6); g(x) = sqrt(x^2 - 1)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` не е дефинирана ако именителот е `0`, односно
+                        </p>
+                        <p>
+                            `x^2 + x - 6 = 0`
+                        </p>
+                        <p>
+                            ` x_(1,2) = (-1 +- sqrt(1^2 -4(-6)))/2`
+                        </p>
+                        <p>
+                            `x_1 = 2; x_2 = -3`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = (-oo, -3) uu (2, +oo)`
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `x^2 - 1 >= 0`
+                        </p>
+                        <p>
+                            `x_1 = 1; x_2 = -1`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = (-oo,-1]uu[1, +oo)`
+                        </p>
+                        <p>
+                            `D_(f@g) = (-oo, -3] uu [-3, -1) uu (1, 2] uu [2, +oo)`
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = (sqrt(x^2 - 1) + 1)/((sqrt(x^2 - 1))^2 + sqrt(x^2 - 1) - 6)`
+                        </p>
+                        <p>
+                            `= (sqrt(x^2 - 1) + 1)/(sqrt(x^2 - 1) + x^2 - 7)`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `f(x) = sqrt(x^2 - 1); g(x) = (x + 1)/(x^2 + x - 2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за `x^2 - 1 >= 0`
+                        </p>
+                        <p>
+                            `x_1 = 1; x_2 = -1`
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = (-oo, -1) uu (1, +oo)`
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `x^2 + x - 2 != 0`
+                        </p>
+                        <p>
+                            `x_(1,2) = (-1 +- sqrt(1 + 8))/2`
+                        </p>
+                        <p>
+                            `x_1 = 1; x_2 = -2`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = (-oo,-2) uu (1, +oo)`
+                        </p>
+                        <p>
+                            `D_(f@g) = (-oo, -2) uu (-2, -1] uu [-1, 1) uu [1, +oo)`
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = sqrt(((x + 1)/(x^2 + x - 2))^2 - 1)`
+                        </p>
+                        <p>
+                            `= sqrt(((x + 1)/((x - 1)(x + 2)))^2 -1`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                в) `f(x) = (x + 2)/(x^2 + 2x -3); g(x) = sqrt(5 - x^2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за 
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако ``
+                        </p>_1 = 1; x_2 = -2`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g =`
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                г) `f(x) = sqrt(4 -x^2); g(x) = (x - 3)/(x^2 + 2x - 3)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                д) `f(x) = log_0.5(x^2 -5x + 4); g(x) = 1/(x + 2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ѓ) `f(x) = log_0.5(x^2 -3x + 2); g(x) = 1/(1 + x)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                е) `f(x) = log_2(5x - x^2); g(x) = 1/(2 - x)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ж) `f(x) = log_2(3x - x^2); g(x) = 1/(x - 1)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+            <strong>Задача 2</strong> Да се одредад домените на `f@g` и `g@f` и да се изразат експлицитно ако:<br>
+                a) `f(x) = sqrt(x - 3); g(x) = sqrt(x^2 + 3)`
+                    <details>   
+                        <summary class="mb-3">Решение</summary>
+                        <div>
+                            <p>
+                                Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                            </p>
+                            <p>
+                                Функцијата `f(x)` е дефинирана за ``
+                            </p>
+                            <p>
+                                
+                            </p>
+                            <p>
+                            <p>
+                                Доменот на функцијата `f` е `D_f = `
+                            </p>
+                            <p>
+                                Функцијата `g(x)` е дефинирана ако `0`
+                            </p>
+                            <p>
+                                ``
+                            </p>
+                            <p>
+                                Доменот на функцијата `g` е `D_g = `
+                            </p>
+                            <p>
+                                `D_(f@g) = `
+                            </p>
+                            <p>
+                                Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                            </p>
+                            <p>
+                                `= `
+                            </p>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                б) `f(x) = 1/(1 + x^2); g(x) = 1/x`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                в) `f(x) = x/(1 + x^2); g(x) = 3/x`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                г) `f(x) = 1/(x - 2); g(x) = x/(1 - x)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                д) `f(x) = 1/(2 + x); g(x) = 1/x^2`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ѓ) `f(x) = 2/x; g(x) = 1/(1 + x^2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                е) `f(x) = (x - 3)/x^3; g(x) = sqrt((x^2 + 3)/(x^2 - 1))`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ж) `f(x) = sqrt(1 - x^2); g(x) = (x^2 + 3)/(x^2 - 1)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                з) `f(x) = (x + 1)/(1 - x); g(x) = sqrt(4 - x^2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ѕ) `f(x) = sqrt(x^2 - 2); g(x) = 2/(8 - x^2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                и) `f(x) = 1/(x - 2); g(x) = x/(1 + x)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                ј) `f(x) = 1/(1 - x^2); g(x) = sqrt(4 - x^2)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                к) `f(x) = sqrt(2 - x); g(x) = x^2`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                к) `f(x) = x/sqrt(x^2 -3x - 4); g(x) = sqrt(x + 1)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Функцијата `f(x)` е дефинирана за ``
+                        </p>
+                        <p>
+                            
+                        </p>
+                        <p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = `
+                        </p>
+                        <p>
+                            Функцијата `g(x)` е дефинирана ако `0`
+                        </p>
+                        <p>
+                            ``
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = `
+                        </p>
+                        <p>
+                            `D_(f@g) = `
+                        </p>
+                        <p>
+                            Композицијата е: `(f @ g)(x) = f(g(x)) = `
+                        </p>
+                        <p>
+                            `= `
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+
+            <h3 id="algebra">
+                Влијание на алгебарски операции на доменот на функција
+            </h3>
+
+            <p>
+                <p>Не е најдена задача ....</p>
+            </p>
+            
+            
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

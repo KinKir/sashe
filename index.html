@@ -1,0 +1,52 @@
+<!--
+Autoplay Policy Changes - April of 2018
+---------------------------------------
+Note: The Autoplay Policy launched in M66 Stable for audio and video elements and is effectively blocking roughly half of
+unwanted media autoplays in Chrome. For the Web Audio API, the autoplay policy will launch in M71. This affects web games,
+some WebRTC applications, and other web pages using audio features. Developers will need to update their code to take
+advantage of the policy. More details can be found in the Web Audio API section below.
+
+Chrome's autoplay policies are simple:
+
+* Muted autoplay is always allowed.
+
+* Autoplay with sound is allowed if:
+* User has interacted with the domain (click, tap, etc.).
+* On desktop, the user's Media Engagement Index threshold has been crossed, meaning the user has previously play video with sound.
+* On mobile, the user has [added the site to their home screen].
+* Top frames can delegate autoplay permission to their iframes to allow autoplay with sound.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- site relate css -->
+    <link rel="stylesheet" href="css/sashe.css">
+    <link rel="stylesheet" href="css/signin.css">
+
+</head>
+<body>
+<section class="wrapper">
+    <div class="video-wrap">
+        <video src="videos/intro2.mp4" autoplay="" muted="" loop=""></video>
+    </div>
+    <div class="overlay"></div>
+    <div class="landing-text">
+        <h1 class='blog_title'>Sashe&nbsp;&nbsp;Django2&nbsp;&nbsp;Blog</h1>
+        <p>&nbsp;</p>
+        <form class="form-signin">
+                <img class="mb-4" src="images\letter-s-between-straight-parenthesis-symbol.svg" alt="Letter S" width="144" height="144">
+                <h1 class="h3 mb-3 font-weight-normal"><a href="index2.html" class='text-decoration-none'>Please log in</a></h1>
+                <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+        </form>
+    </div>
+</section>
+</body>
+</html>

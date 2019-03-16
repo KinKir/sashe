@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../assets/css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Библиотека
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                <a class="dropdown-item active" href="https://www.w3.org/Style/CSS/" target="_blank">Calculus
+                    Lifesaver</a>
+                <a class="dropdown-item" href="https://github.com/rwaldron/idiomatic.js" target="_blank">Idiomatic</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://caniuse.com/#home" target="_blank">Can I use __________ ?</a>
+                <a class="dropdown-item" href="https://www.javascripting.com/?sort=rating"
+                   target="_blank">JavaScripting</a>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="new_function.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_infinity.html">
+                                Лимеси во бескрајност
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="">
+                                Непрекинатост
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#infinity">Интуитивна дефиниција на непрекинатост</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#tangent_line">Дефиниција на непрекинатост</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#areas_and_limits">Непрекинатост на интервал</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Непрекинатост на полиноми</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Некои својства на непрекинати функции</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Непрекинати рационални функции</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#informal">Непрекинатост на композиција на функции</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#connection">Непрекинатост од лево и од десно</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#infinite">Непрекинатост на затворен интервал</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#v_asymtotes">Лимеси и непрекинатост на тригонометриски функции</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <div class="row">
+                <div class="col-12">
+                    <p id="concept" class="lead">
+                        A thrown baseball cannot vanish at some point and reappear someplace else to continue
+                        its motion. Thus, we perceive the path of the ball as an unbroken curve. In this section, we
+                        translate “unbroken curve” into a precise mathematical formulation called continuity,
+                        and develop some fundamental properties of continuous curves.
+                    </p>
+                    <h1 id="">
+                        Интуитивна дефиниција на непрекинатост
+                    </h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <p>
+                    Интуитивно, „непрекината крива“ може да се опише како крива, која може да се нацрта без кревање на
+                    моливот.
+                </p>
+                <p>
+                    Интуитивно, графикот на непрекината функција може да се опише ако „непрекината крива“, односно крива
+                    која нема прекини.
+                </p>
+                <p>
+                    За да се направи оваа идеја попрецизна, треба да се воочи кои својства на функцијата може да
+                    предизвикаат прекини.
+                </p>
+                <p>
+                    Анализирајќи ги следните цртежи, ќе видиме дека график на функција има прекин, ако се појави некој
+                    од следниве услови:
+                </p>
+                <div class="text-center">
+                    <img src="continuity_01.png" class="img-fluid img">
+                </div>
+                <ul>
+                    <li>
+                        a. `f` не е дефинирана во точката `x = c`
+                    </li>
+                    <li>
+                        b. `f` е дефинирана во точката `x = c` но `lim_(x->c)f(x)` не постои
+                    </li>
+                    <li>
+                        c. `f` е дефинирана во точката `x = c` но `lim_(x->c)f(x)` не постои
+                    </li>
+                    <li>
+                        d. `lim_(x->c)f(x) != f(c)`
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 id="int">
+                        Дефиниција на непрекинатост
+                    </h1>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Дефиниција. 1</strong> Функција `f` е непрекината во точка `x = c`, ако се исполнети
+                        следниве услови:<br>
+                        <ul>
+                            <li>
+                                1. `f (x)` e дефинирана во `x=c`.
+                            </li>
+                            <li>
+                                2. `lim_(x->c)f (x)` постои.
+                            </li>
+                            <li>
+                                3. `lim_(x->c)f(x) = f(c)`
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        Ако барем еден од овие услови не е исполнет, велиме дека функцијата има <strong>прекин</strong>
+                        во точката `x = c`. Сите функции од претходниот цртеж имаат прекин во `x = c`. Функцијата на
+                        цртежот (а) не е дефинирана во точката `x = c`, функциите на цртежите (b) и (c) немаат лимес во
+                        точката `x = c`, а за функцијата на цртежот (d) лимесот не е еднаков на вредноста на функцијата
+                        во точката `x = c`.
+                    </p>
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 1.</h4>
+                        <p>
+                            Да се определи дали следните функции се непрекинати во точката `x = 2`.
+                        </p>
+                        <p class="text-center">
+                            `f(x) = (x^2 - 4)/(x-2),` &nbsp: `g(x)= {((x^2 - 4) / (x - 2),x != 2),(3, x = 2):},` &nbsp:
+                            `h(x)= {((x^2 - 4) / (x - 2),x != 2),(4, x = 2):},`
+                        </p>
+                        <p>
+                            Решение:
+                        </p>
+                        <div class="text-center">
+                            <img src="continuity_02.png" class="img-fluid img">
+                        </div>
+                        <hr>
+                        <ul>
+                            <li>
+                                a. `f` е прекината, не е дефинирана во точката 2,
+                            </li>
+                            <li>
+                                a. `f` е прекината, не е дефинирана во точката 2 и `lim_(x->2)f(x) != f(2)`
+                            </li>
+                            <li>
+                                a. `f` е непрекината, бидејки е дефинирана во точката 2, `lim_(x->2)f(x),` постои и
+                                lim_(x->2)f(x) = f(2)`
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <h1 id="con">
+                        Непрекинатост на интервал
+                    </h1>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Дефиниција. 2</strong> Ако функција `f` е непрекината во секоја точка од отворениот
+                        интервал `(a, b)`, тогаш велиме дека `f` е непрекината на `(a, b)`.<br>
+                        <p>
+                            Оваа дефиниција може да се примени и на отворени интервали од обликот `(a, +∞)`, `(−∞, b)` и
+                            `(−∞,+∞)`.
+                        </p>
+                    </div>
+
+
+                    <p>
+                        Кога `f` е непрекината на интервалот `(−∞,+∞)`, велиме дека `f` е <strong>непрекината
+                        насекаде</strong>.
+                    </p>
+
+                    <h1 id="contin">
+                        Непрекинатост на полиноми
+                    </h1>
+                    <p>
+                        Од претходно докажаните својства, знаеме дека: ако `p(x)` е полином и `a` е било кој реален
+                        број, тогаш:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->a) p(x) = p(a)`
+                    </p>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 1</strong> Полиномна функција p(x) е непрекината насекаде.
+                    </div>
+
+
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 2.</h4>
+                        <p>
+                            Покажи дека функцијата `f(x) = abs(x)` е непрекината насекаде.<br>
+                        </p>
+
+                        <p>
+                            Решение:
+                        </p>
+                        <p class="text-center">
+                            `abs(x)= {(x, x > 0),(0, x = 0),(-x, x< 0):}`
+                        </p>
+                        <p>
+                            Функцијата `abs(x)` на интервалот `(0, +oo)` сe совпаѓа со полиномот `x`, а на интервалот
+                            `(oo, 0)` сe совпаѓа со полиномот `–x`. Полиномите се непрекинати насекаде, па, `x = 0`
+                            единствената точка во која функцијата `abs(x)` може да има прекин. Бидејќи `abs(x) = 0`, за
+                            да покажеме дека функцијата е непрекината во `x = 0` треба да покажеме дека:
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->0) abs(x) = 0`
+                        </p>
+                        <p>
+                            Бидејќи функцијата `abs(x)` e дефинирана по делови, треба да ги пресметаме едностраните
+                            лимеси во точката `x = 0`. Имаме:
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->0^-) abs(x) = lim_(x->0^-) (-x) = 0` &nbsp; и &nbsp; `lim_(x->0^+) abs(x) =
+                            lim_(x->0^+) x = 0`
+                        </p>
+                        <p>
+                            па според тоа двата еднострани лимеси се еднакви, и функцијата има лимес во точката `x = 0`
+                            и вредноста на лимесот е еднаква на `f(0)`.
+                        </p>
+                    </div>
+
+                    <h1 id="inter">
+                        Некои својства на непрекинати функции
+                    </h1>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 2</strong> Ако `f` и `g` се непрекинати функции во `x = c`, тогаш:
+                        <ul>
+                            <li>`f + g` e непрекинатa функција во `x = c,`</li>
+                            <li>`f - g` e непрекинатa функција во `x = c,`</li>
+                            <li>`f * g` e непрекинатa функција во `x = c,`</li>
+                            <li>`f / g` e непрекинатa функција во `x = c,` ако `g(c) != 0` и `f/g` има прекин во `x=c`
+                                ако `g(c)=0`
+                            </li>
+
+                        </ul>
+                        <hr>
+                        <p>
+                            Доказ. за `f / g`. Ако `g(c) = 0,` тогаш `f (c)/g(c)` не е дефинирано. Значи, функцијата `f
+                            /g` има прекин во `x = c`.
+                        </p>
+                        <p>
+                            Нека `g(c) != 0`. За да покажеме дека `f /g` е непрекината во `x = c`, треба да покажеме
+                            дека
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->c) (f(x)) / (g(x)) = f(c) / g(c)`
+                        </p>
+                        <p>
+                            Бидејќи `f` и `g` се непрекинати во `x = c`, . Од Теорема 2 (од 4тото предавање), имаме
+                        </p>
+                        <p>
+                            `lim_(x->c)(f/g)(x) = lim_(x->c) (f(x)) / (g(x)) = (lim_(x->c)f(c) )/ (lim_(x->c) g(c)) =
+                            f(c) / g(c) = (f/g) (c)`
+                        </p>
+
+                    </div>
+
+                    <h1 id="intersd">
+                        Непрекинати рационални функции
+                    </h1>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 3</strong> Дробно-рационална функција `f(x) = (p(x)) /(q(x))` е непрекината во
+                        секоја точка каде што именителот `q(x)` е различен од нула, а има прекини во сите точки каде што
+                        именителот `q(x)` е нула.
+                    </div>
+
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 3.</h4>
+                        <p>
+                            Најди ги вредностите на `x` во кои функцијата има прекини <br>
+                            `y= (x^2 - 9) / (x^2 - 5x + 6)`
+                        </p>
+
+                        <p>
+                            Решение:
+                        </p>
+                        <p>
+                            Функцијата е рационална, па според тоа таа е непрекината во секоја точка во која именителот
+                            е различен од нула. Со решaвање на равенката `x^2 – 5x + 6 = 0`, добиваме дека функцијата
+                            има прекини во `x = 2` и `x = 3`.
+                        </p>
+                        <div class="text-center">
+                            <img src="continuity_03.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                    <h1 id="intersdwqe">
+                        Непрекинатост на композиција на функции
+                    </h1>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 4</strong> Ако `lim_(x->) g(x) = L` и ако функцијата `f` е непрекината во `L`,
+                        тогаш `lim_(x->c) f(g(x)) = f(L)`. Поточно:<br>
+                        <p class="text-center">
+                            `lim_(x->c) f(g(x)) = f(lim_(x->c) g(x))`
+                        </p>
+                        <p>
+                            Равенството важи и во случај кога `lim_(x->c)` ќе се замени со `lim_(x->c‚-)`, &nbsp;
+                            `lim_(x->c‚+)`, &nbsp; `lim_(x->+oo)` или `lim_(x->-oo)`
+                        </p>
+                        (робно-рационална функција `f(x) = (p(x)) /(q(x))` е
+                        непрекината во
+                        секоја точка каде што именителот `q(x)` е различен од нула, а има прекини во сите точки каде што
+                        именителот `q(x)` е нула.
+                    </div>
+
+                    <p>
+                        Специјално, бидејки функцијата `f(x) = abs(x)` е непрекината насекаде, може да запишеме:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->c) abs(g(x)) = abs(lim_(x->c) g(x))`
+                    </p>
+                    <p>
+                        Под услов `lim_(x->c) g(x)` да постои,на приmer:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->3) abs(5 - x^2) = abs(lim_(x->3)(5 - x^2) = abs(-4) = 4`
+                    </p>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 5</strong> (а) Ако функцијата `g` е непрекината во `x = c`, и функцијата `f` е
+                        непрекината во `x = g (c)`, тогаш `f circ g` e непрекината во `x = c`.:<br>
+                        (b) Ако функцијата `g` е непрекината насекаде и функцијата `f` е непрекината насекаде, тогаш `f
+                        circ g` e непрекината насекаде.<br>
+                        <p>
+                            Доказ:
+                        </p>
+                        <p>
+                            <strong>Доказ.</strong> Ќе го докажеме само тврдењето под а), а доказот на b) се добива со
+                            примена на тврдењето под a) за било кој број `с`. За да докажеме дека `f circ g` непрекината
+                            во `с`, треба да покажеме дека вредноста на `f circ g` `x = c` и вредноста на нејзиниот
+                            лимес кога `x->c` се еднакви.
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->c) (f circ g) (x) = lim_(x->c)f(g(x)) = f(lim_(x->c) g(x)) = f(g(c)) = (f circ
+                            g)(c)`
+                        </p>
+
+                    </div>
+
+                    <h1 id="left">
+                        Непрекинатост од лево и од десно
+                    </h1>
+
+                    <p>
+                        Дефиницијата за непрекинатост на функција во точка `x = c`, вклучува двостран лимес во таа
+                        точка, па таа дефиниција не може да се примени во крајните точки на затворен интервал од облик
+                        `[a, b]` или интервал од облик `[a, b), (a, b], (–oo, b], [a, oo)`. За да го решиме овој
+                        проблем, воведуваме поим за непрекинатост од лево и непрекинатост од десно.
+                    </p>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Дефиниција. 3</strong> Функција `f` e непрекината од лево во точката `x = c`, ако<br>
+                        <p class="text-center">
+                            `lim_(x->c^-)f (x) = f(c)`
+                        </p>
+                        <p>
+                            и е непрекината од десно во точката `x = c`, ако
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->c^+)f (x) = f(c)`
+                        </p>
+
+                    </div>
+
+                    <div class="text-center">
+                        <img src="continuity_04.png" class="img-fluid img">
+                    </div>
+
+                    <h1 id="leftas">
+                        Непрекинатост на затворен интервал
+                    </h1>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>Дефиниција. 4</strong> Функција `f` е непрекината на затворен интервал `[a, b]`, ако се
+                        исполнети следниве услови:<br>
+                        <ul>
+                            <li>
+                                `f` e непрекината на отворениот интервал `(a, b)`;
+                            </li>
+                            <li>
+                                `f` e непрекината од десно во точката `x = а`;
+                            </li>
+                            <li>
+                                `f` e непрекината од лево во точката `x = b`.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 4.</h4>
+                        <p>
+                            Што може да се каже за непрекинатоста на функцијата:<br>
+                            `f(x) = root() (9 -x^2)`
+                        </p>
+
+                        <p>
+                            Решение:
+                        </p>
+                        <p>
+                            Бидејќи доменот на функцијата е затворениот интервал `[–3, 3]`, треба да ја испитаме
+                            непрекинатоста на функцијата на отворениот интервал `(–3, 3`) и во двете крајни точки. Ако
+                            `c` е било која точка од нтервалот `(–3, 3)`, тогаш:
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->c)f(x) = lim_(x->c) root() (9 - x^2) = root() (lim_(x->c)(9-x^2)) = root() (9-c^2)
+                            = f(c)`
+                        </p>
+                        <p>
+                            од каде следи дека функцијата е непрекината во секоја точка од интервалот `(-3, 3)` . Во
+                            крајните точки на интервалот имаме:
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->3^+)f(x) = lim_(x->3^+) root() (9 - x^2) = root() (lim_(x->3^+)(9-x^2)) = root()
+                            (9-(-3)^2) = 0 = f(3)`
+                        </p>
+                        <p class="text-center">
+                            `lim_(x->3^-)f(x) = lim_(x->3^-) root() (9 - x^2) = root() (lim_(x->3^-)(9-x^2)) = root()
+                            (9-(3)^2) = 0 = f(3)`
+                        </p>
+                        <p>
+                            Според тоа, функцијата е непрекината на затворениот интервал `[–3, 3]`.
+                        </p>
+
+                        <div class="text-center">
+                            <img src="continuity_05.png" class="img-fluid img">
+                        </div>
+
+
+                    </div>
+
+                    <h1 id="leftasas">
+                        Теорема за меѓувредност
+                    </h1>
+                    <p>
+                        На сликата подолу е даден график на функција која е непрекината на затворен интервал `[a, b]`.
+                        Сликата покажува дека ако нацртаме хоризонтална права `y = k`, каде `k` е произволен број помеѓу
+                        `f(a)` и `f(b)`, тогаш таа права ќе го пресече графикот на функцијата `y = f(x)` барем еднаш над
+                        интервалот `[a, b]`. Тоа значи дека ако `f` е непрекината на `[a, b]`, тогаш `f` мора да ја
+                        прими барем еднаш секоја вредност `k` помеѓу `f(a)` и `f(b)` кога `x` се менува од `a` до `b`.
+                    </p>
+                    <div class="text-center">
+                        <img src="continuity_06.png" class="img-fluid img">
+                    </div>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 6 (Теорема за меѓувредност)</strong> Ако f е непрекината на затворен интервал
+                        `[a,
+                        b]` и `k` е било кој број меѓу `f(a`) и `f(b)`, тогаш постои барем еден број `x` во интервалот
+                        `[a, b]` така што `f (x) = k`.<br>
+
+
+                    </div>
+
+                    <h1 id="leftasassd">
+                        Примена теоремата за меѓувредност (Постоење на корен на равенката `f (x) = 0`)
+                    </h1>
+
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Теорема 7</strong> Акo `f` е непрекината на `[a, b]` и ако `f (a)` и `f (b)` се различни
+                        од нула и имаат спротивен знак, тогаш во интервалот `(a, b)` постои барем еден корен на
+                        равенката `f (x) = 0`.<br>
+                        <p>
+                            Доказ:
+                        </p>
+                        <hr>
+                        <p>
+                            Бидејќи `f(a`) и `f(b`) имаат спротивен знак, `0` е помеѓу `f(a)` и `f(b)`, од теоремата за
+                            меѓувредност следува дека постои барем еден број `x` во интервалот `[a, b]`, така што `f(x)
+                            = 0`. Но, `f(a)` и `f(b)` се различни од нула, што значи дека `x` мора да е во интервалот
+                            `(a, b)`.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <img src="continuity_07.png" class="img-fluid img">
+                    </div>
+
+                    <h2 id="ader">
+                        Лимеси и непрекинатост на тригонометриски функции
+                    </h2>
+                    <p>
+                        Од тригонометрија знаеме дека графиците на `sin x` и `cos x` се непрекинати криви. Нема формално
+                        да докажеме дека овие функции се непрекинати, но можеме да го интуитивно да го разгледаме овој
+                        факт. Избираме `c` да биде фиксен агол во радијани и `x` да биде променлив агол во радијани.
+                        Кога аголот `x` се приближува кон аголот `c`, точката `P(cos x, sin x)` се придвижува по
+                        единечната кружница кон точката `Q(cos c, sin c)`, и координатите на точката `P` се приближуваат
+                        кон координатите на точката `Q`. Ова повлекува дека:
+                    </p>
+
+                    <p class="text-center">
+                        `lim_(x->c) sin x = sin c` &nbsp; и `lim_(x->c) cos x = cos c`
+                    </p>
+                    <p>
+                        Функциите `sin x` и `cos x` се непрекинати во произволна точка `c`, па така тие се непрекинати насекаде.
+                    </p>
+
+                    <div class="text-center">
+                        <img src="lim_trig_01.png" class="img-fluid img">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="assets/js/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="assets/js/docs.min.js"></script>
+
+
+</body>
+</html>

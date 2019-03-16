@@ -1,0 +1,15 @@
+<title>point-construction</title>
+
+<link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+ <div id="jxgbox" class="jxgbox" style="width:200px; height:200px"></div>
+ <script>
+    const board = JXG.JSXGraph.initBoard('jxgbox', {
+        boundingbox: [-5, 5, 5, -5],
+        showCopyright:false,
+        axis: true,
+    }); 
+
+    var point = board.create('point', [-3, 1]);
+</script>

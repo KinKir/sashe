@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Библиотека
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                <a class="dropdown-item active" href="https://www.w3.org/Style/CSS/" target="_blank">Calculus
+                    Lifesaver</a>
+                <a class="dropdown-item" href="https://github.com/rwaldron/idiomatic.js" target="_blank">Idiomatic</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://caniuse.com/#home" target="_blank">Can I use __________ ?</a>
+                <a class="dropdown-item" href="https://www.javascripting.com/?sort=rating"
+                   target="_blank">JavaScripting</a>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_new.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div  class="bd-toc-item active">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#def">Дефиниција на функција</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def1">Дефиниција 1</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def2">Дефиниција 2</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#var">Променливи</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex">Примери</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#graph">График на функција</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def4">Дефиниција 4</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#vltest">Тест со вертикални прави</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex3">Пример</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#fabs">Функција од апсолутна вредност</a>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#piecewise">Функции дефинирани по делови</a>
+                </li>
+            </ul>
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#domein">Домен и ранг на функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#algebra">Влијание на алгебарски операции врз доменот</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <p class=" bd-lead">
+                    Овде ќе воспоставиме две основни релации помеѓу определените и неопределените
+                    интеграли кои взаемно ја сочинуваат така наречената „Фундаментална теорема на калкулусот“. 
+                    Еден дел од оваа теорема се однесува методата на правоаголници и антиизводи за пресметка на 
+                    површина, а другиот дел обезбедува моќна метода за изнаоѓање на определени интеграли употрбувајки
+                    антиизводи.
+            </p>
+
+            <!-- THE FUNDAMENTAL THEOREM OF CALCULUS  -->
+
+            <h1 id="def">
+                    Фундаментална теорема на калкулус
+            </h1>
+
+            <!-- INDEPENDENT AND DEPENDENT VARIABLES -->
+
+            <h3 id="var">
+                    Определен интеграл наспроти неопределен интеграл
+            </h3>
+            <p>
+                <strong>Неопределен интеграл</strong> e фамилија функции кои се антиизводи на дадена функција `f` и сите се разликуваат за константа.
+            <p class="text-center">
+                `int f(x)dx`
+            </p>
+            <p>
+                    <strong>Определен интеграл</strong> е број = плоштина со знак.
+            </p>
+            <p class="text-center">
+                `int_a^b f(x)dx`
+            </p>
+            <p>
+                Дали постои врска помеѓу нив?
+            </p>
+
+            <h3 id="ex2">
+                    Фундаментална теорема на калкулус
+            </h3>
+
+            <div class='row'>
+                <div class='col-5'>
+                    <img src="images/fundamental_01.PNG" class="img-fluid img">
+                </div>
+                <div class='col-7'>
+                    <ul>
+                        <li>
+                            Нека `A(x)` е плоштината меѓу кривата `y = f(x)` и `x`- оската над интервалот `[a, x]`, за `x in [a, b]`.
+                        </li>
+                        <li>
+                            Тогаш `A′(x) = f (x)`, `A(a) = 0`, `A(b) = A`.
+                        </li>
+                        <li>
+                            Формулата `A ′ (x) = f(x)` покажува дека `A` е антиизвод на `f`, што значи дека секој друг антиизвод на `f` 
+                            може да се добие со избор на произволна константа.
+                        </li>
+                        <li>
+                            Нека `F(x) = A(x) + C` е произволен антиизвод на f. Тогаш<br>
+                            `F(b) - F(a) = [A(b) + C] - [A(a) +C]`<br>
+                            ` = A(b) - A(a) = A - 0 = int_a^b f(x)dx`
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p></p>
+
+            <div id="theorem" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 1</h4>
+                <p>
+                    <strong>(Фундаментална теорема на калкулус, дел 1) </strong> Ако `f` е непрекината на `[a, b]` и `F` е било кој 
+                    антиизвод на `f` на `[a, b]`, тогаш
+                </p>
+                <p class="text-center">
+                    `int_a^b f(x)dx = F(b) - F(a)`
+                </p>
+            </div>
+
+
+            <h3>
+                Ознаки
+            </h3>
+
+            <p>
+                Разликата `F(b) − F(a)` се означува со
+            </p>
+
+            <p class="text-center">
+                `F(x) ]_a^b = F(b) - F(a)` или `[F(x)]_a^b = F(b) - F(a)`
+            </p>
+
+            <p>
+                На пример, со помош на првата од овие ознаки може да го изразиме интегралот како
+            </p>
+
+            <p class="text-center">
+                `int_a^b f(x)dx = F(x)]_a^b`
+            </p>
+
+            <h6 id="ex3">
+                Пример 1: Да се пресмета `int_1^2 xdx`
+            </h6>
+            
+            <p>
+                <strong>Решение:</strong> Функцијата `(1/2)x^2` е антиизвод на `f(x) = x`. Според тоа:
+            </p>
+
+            <div class="text-center">
+                `int_1^2 xdx = (1/2)x^2]_1^2 = (1/2)2^2 - (1/2)1^2 = 3/2`
+            </div>
+
+           
+            <h3 id="graph">
+                    Врска помеѓу определен и неопределен интеграл
+            </h3>
+
+            <p>
+                Да воочиме дека во претходниот пример константата на интеграција не е вклучена.
+            </p>
+
+            <p>
+                Во општ случај, кога ја применуваме Фундаменталната теорема на калкулус нема потреба да вклучуваме константа на 
+                интеграција бидејќи таа во секој случај ќе отпадне. Имено, нека `F` e било кој антиизвод на интеграндот на `[a, b]`, 
+                и нека `C` e било која константа; тогаш
+            </p>
+
+            <div class="text-center">
+                `int_a^b f(x)dx = F(x) + C]_a^b = [F(b) + C] - [F(a) + C]`
+            </div>
+
+            <p>
+                Значи, со цел да го пресметаме определениот интеграл можеме да ја испуштиме константата на интеграција во
+            </p>
+
+            <div class="text-center">
+                `int_a^b f(x)dx = F(x) + C]_a^b`
+            </div>
+
+            <p>
+                Но, последното равенство ни ја дава врската помеѓу определен и неопределен интеграл:
+            </p>
+
+            <div class="text-center">
+                `int_a^b f(x)dx = [int f(x) dx]_a^b`
+            </div>
+
+            <h6 id="ex3">
+                Пример 2: Да се пресмета:`
+            </h6>
+            
+            <p>
+                а) `I_1 = int_4^9 x^2sqrt(x)dx`; б) `I_2 = int_-e^-1(1/x)dx`; в) `I_3 = int_0^ln(3) 5e^x dx`;<br>
+                <strong>Решение:</strong> <br>
+                <p>
+                    а) Функцијата `(2/7)x^(7/5)` е антиизвод на `f(x) = x^2 sqrt(x)`. Според тоа:
+                </p>
+                <p>
+                    `[(2/7)x^(7/2)]_4^9 = [(2/7)9^(7/2) - (2/7)9^(7/2)] - [(2/7)2187 * (2/7)128)]`
+                </p>
+                <p>
+                    `= 4374/7 - 256/7 = 4118/7`
+                </p>
+
+                <p>
+                    б) Функцијата `-1/2x^-2` е антиизвод на `f(x) = 1/x`. Според тоа:
+                </p>
+                <p>
+                    `[2x^-2]_-e^-1 = [(-(1/2)(-e)^-2 - 2(-1)^-2] - [(2/7)2187 - 2]`
+                </p>
+                <p>
+                    `= 4374/7 - 256/7 = 4118/7`
+                </p>
+
+            </p>
+
+            
+            <p>
+                <strong>Забрлешкa:</strong> Условот за непрекинатост на `f` на `[a, b]` во Фундаменталната теорема на калкулус 
+                (ФТК) е важен и не може да се изостави. На пример, функцијата
+            </p>
+
+            <p class="text-center">
+                `f(x) = 1/x^2, x in [-1,1]` 
+            </p>
+
+            <p>
+                не е непрекината во `x = 0` (не е дефинирана во `x = 0`). Ако ја примениме ФТК добиваме
+            </p>
+
+            <p class="text-center">
+                `I = int_-1^1 1/x^2 dx = -1/x]_-1^1 = -2` 
+            </p>
+
+            <p>
+                Ова е контрадикција бидејќи `f(x) >= 0`, па мора `I >= 0`. Дури кога би ја дефинирале `f` во `x = 0`, таа нема да биде 
+                непрекината, па и во тој случај не може да се примени ФТК.
+            </p>
+
+            <p>
+                Фундаменталната теорема на калкулус може да се примени без модификација на определени интеграли кај кои долната граница на 
+                интеграција е поголема или еднаква на горната граница на интеграција.
+            </p>
+
+            <p>
+                Имено,
+            </p>
+
+            <p class="text-center">
+                `int_a^a f(x) = F(x)]_a^a = F(a) - F(a) = 0` 
+            </p>
+
+            <p>
+                како што дефиниравме претходно.
+            </p>
+
+            
+            <p>
+                Ако `b < a`, тогаш
+            </p>
+
+            <p class="text-center">
+                `int_a^b f(x) = F(x)]_a^b = F(b) - F(a) = - [F(a) - F(b)] = - int_b^a f(x)` 
+            </p>
+
+            <h6 id="ex3">
+                <strong>Пример 3</strong>
+            </h6>
+
+            <p class="text-center">
+                `int_1^1 x^2 dx = x^3/3]_1^1 = 1/3 -1/3 = 0`
+            </p>
+
+            <p>
+                Последниот резултат е во согласност со резултатот што би се добил со заменување на местата на границите согласно претходната дефиниција.
+            </p>
+
+            <p class="text-center">
+                `int_4^0 x dx = - int_0^4 x dx = -x^2/2]_0^4 = - 16/2 + 0/2 = -8`
+            </p>
+
+            <p>
+                За да се интегрира непрекината функција која е дефинирана по делови на интервал, интервалот `[a, b]` се дели на 
+                подинтервали со користење на точките во кои се менува формулата со која е дефинирана функцијата и се интегрира 
+                oдделно на секој подинтервал.
+            </p>
+
+            <h6 id="ex3">
+                <strong>Пример 4</strong> Нека `f(x) = {(x^2, x < 2),(3x -2, x >= 2 ):}`,   да се пресмета `int_0^6 f(x) dx`
+            </h6>
+
+            <p>
+                <strong>Решение</strong>
+            </p>
+
+            <p>
+                Најпрво да покажеме дека функцијата `f` е непрекината на интервалот `[0,6]`.
+            </p>
+
+            <p>
+                Деловите со кои е зададена функцијата се полиномни функции, па тие се секако непрекинати. Единствена точка 
+                каде може да има прекин е `x = 2`.
+            </p>
+            <p>
+
+            <p class="text-center">
+                `lim_(x->2^-) f(x) = lim_(x->2^-)) x^2 = 4 = f(2)`
+            </p>
+
+            <p class="text-center">
+                `lim_(x->2^+) f(x) = lim_(x->2^-) (3x - 2) = 6 - 2 = 4 = f(2)`
+            </p>
+
+            <p>
+                Значи, `f` е непрекината и во `x = 2`.
+            </p>
+
+            <p class="text-center">
+                `int_0^6 f(x) dx = int_0^2 f(x) dx + int_2^6 f(x) dx`
+            </p>
+
+            <p class="text-center">
+                ` = int_0^2 x^2 dx + int_2^6 (3x - 2) dx`
+            </p>
+
+            <p class="text-center">
+                `= x^3/3]_0^2 + (3x^2/2 - 2x)]_2^6 = (8/3 - 0) + ((108/2 - 12) - (12/6 -4))`
+            </p>
+
+            <p class="text-center">
+                `= 8/3 + (42 - 2) = 128/3`
+            </p>
+
+            <h6 id="ex3">
+                <strong>Пример 5</strong> Да се пресмета `int_-1^2 abs(x) dx`
+            </h6>
+
+            <p>
+                <strong>Решение</strong>
+            </p>
+
+            <p>
+                Функцијата f е непрекината насекаде, па
+            </p>
+
+            <p class="text-center">
+                `int_-1^2 abs(x) dx = int_-1^0 abs(x) dx + int_0^2 abs(x) dx`
+            </p>
+
+            <p class="text-center">
+                `= int_-1^0 (-x) dx + int_0^2 x dx`
+            </p>
+
+            <p class="text-center">
+                `= -x^2/2]_-1^0 + x^2/2]_0^2`
+            </p>
+
+            <p class="text-center">
+                `= (0 + 1/2) + (4/2 - 0)`
+            </p>
+
+            p class="text-center">
+                `= 5/2`
+            </p>
+            
+
+            <h3 id="fabs">
+                Привидни променливи
+            </h3>
+
+            <p>
+                Ја определивме врската меѓу определениот и неопределениот интеграл
+            </p>
+
+            <p class="text-center">
+                `int_a^b f(x)dx` и `int f(x)dx`
+            </p>
+            <p>
+                Определениот и неопределениот интеграл битно се разликуваат.
+            </p>
+            <p>
+                Тие се, всушност, различни видови на објекти – определениот интеграл е <strong>број</strong> (плоштина со знак на областа меѓу 
+                графикот на `y = f(x)` и `x` - оската над интервалот `[a, b]`), додека неопределениот интеграл е фамилија од 
+                функции [антиизводи на `f(x)` кои меѓусебе се разликуваат за константа].
+            </p>
+            <p>
+                Од друга страна, двата типа на интеграли се разликуваат и во улогата која ја има променливата по која се интегрира. 
+                Во неопределениот интеграл, променливата по која интегрираме „минува низ интегралот“ во антиизводот, т.е. интегрирање 
+                на функција по `x` дава функција по `x`, интегрирање на функција по `t` дава функција по `t` , и така натаму. На 
+                пример, `
+            </p>
+            <p class="text-center">
+                `int x^2 dx = x^3/3 + C` и `int t^2 dt = t^3/3 + C`
+            </p>
+            <p>
+                Спротивно на тоа, кај определениот интеграл, променливата по која се интегрира не преминува во крајниот резултат бидејќи 
+                крајниот резултат е број.
+            </p>
+            <p>
+                Така, интегрирање на функцијата по `x` над еден интервал и интегрирањето на функцијата по `t` над истиот интервал на 
+                интеграција дава иста вредност на интегралот. На пример,
+            </p>
+            <p class="text-center">
+                `int_1^3 x^2 dx = x^3/3]_1^3 = 27/3 - 1/3 = 26/3` и `int_1^3 t^2 dx = t^3/3]_1^3 = 27/3 - 1/3 = 26/3`
+            </p>
+            <p>
+                Бидејќи во определениот интеграл, променливата по која се интегрира не игра улога во крајниот резултат ја нарекуваме привидна 
+                променлива.
+            </p>
+            <p>
+                Да резимираме:
+            </p>
+            <p>
+                <em>Секогаш кога е згодно да се замени буквата која се користи за променливата по која се интегрира во определениот интеграл, 
+                можеме да го направиме тоа без да се промени вредноста на интегралот.</em>
+            </p>
+
+            <h3 id="piecewise">
+                Фундаментална теорема на калкулус, дел 2
+            </h3>
+
+            <div id="theorem" class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Теорема 3</h4>
+                <p>
+                    <strong>(Фундаментална теорема на калкулус, дел 2) </strong> Ако `f` е непрекината на даден интервал, тогаш `f` има 
+                    антиизвод на тој интервал. Специјално, ако `a` е произволна точка од тој интервал, тогаш функцијата `F` дефинирана со
+                </p>
+                <p class="text-center">
+                    `F(x) = int_a^b f(t)dt`
+                </p>
+                <p>
+                    е антиизвод на `f`, т.е. `F′(x) = f(x)`, за секој `x` од тој интервал. Можеме да запишеме
+                </p>
+                <p class="text-center">
+                    `d/dx[int_a^ f(t) dt] = f(x)`
+                </p>
+            </div>
+
+            <h6 id="ex3">
+                <strong>Пример 7</strong> Да се определи `d/dx[int_1^x t^3 dt]`
+            </h6>
+
+            <p>
+                <strong>Решение</strong>
+            </p>
+
+            <p>
+                Интеграндот е непрекината функција, па со примена на ФТК, дел 2, имаме
+            </p>
+
+            <p class="text-center">
+                `d/dx[int_1^x t^3 dt] = x^3`
+            </p>
+    
+
+            <p>
+                Алтернативно, ако прво се пресмета интегралот и потоа се диференцира, се добива:
+            </p>
+
+            <p class="text-center">
+                `int_1^x t^3 dt = t^4/4]_1^x = x^4/4 - 1/4`
+            </p>
+            <p class="text-center">
+                `d/dx[int_1^x t^3 dt] = d/dx[x^4/4 - 1/4] = x^3`
+            </p>
+
+            <p>
+                па двата методи за диференцирање на интеграл се согласни.
+            </p>
+
+            <h3 id="domein">
+                Метод на замена кај определен интеграл
+            </h3>
+
+            <p>
+                Смена кај неопределени интеграли
+            </p>
+            <p class="text-center">
+                `int f(g(x)) g'(x) dx = int f(u) du = F(u) + C = F(g(x)) + C`<br>
+                `(u=g(x); du=g'(x)dx)`
+            </p>
+            <p>
+                Два методи за воведување на смена кај определени интеграли
+            </p>
+            <p>
+                <strong>I метод</strong>
+            </p>
+            <p class="text-center">
+                `int_a^b f(g(x))g'(x)dx = [int f(g(x)g'(x)dx]_a^b`<br>
+                `u=g(x); du = g'(x) dx; x=a; u=g(a); x=b; u=g(b)`
+            </p>
+            <p>
+                <strong>II метод</strong>
+            </p>
+            <p class="text-center">
+                `int_a^b f(g(x))g'(x)dx = int_g(a)^g(b) f(u)du = F(u)]_g(a)^g(b)`
+            </p>
+            <p>
+                <strong>Пример 1</strong>: Со користење на двата методи, да се пресмета
+            </p>
+            <p class="text-center">
+                `int_0^2 x(x^2 + 1)^3dx`
+            </p>
+
+            <p>
+                Решение според I метод
+            </p>
+
+            <p class="text-center">
+                `u = x^2 + 1; du = 2xdx`
+            </p>
+
+            <p class="text-center">
+                `1/2 int u^3 du = 1/2 u^4/4 +C = (x^2 + 1)^4/8 + C`
+            </p>
+
+            <p class="text-center">
+                `int_0^2 x(x^2 + 1)^3 dx = [int x(x^2 + 1)^3]_0^2 = [x(x^2 + 1)^2/8]_0^2 = 625/8 - 1/8 = 78`
+            </p>
+
+            <p>
+                Решение според II метод
+            </p>
+            <p class="text-center">
+                `u = x^2 + 1; du = 2xdx; x=0 => u(0) = 1; x = 2 => u(2) = 5`
+            </p>
+            <p class="text-center">
+                `= 1/2 int_0^5 u^3 = u^4/8]_1^5 = 625/4 - 1/8 =78`
+            </p>
+            <p>
+                Двата методи даваат исти резултат.
+            </p>
+
+            <h3 id="domein">
+                    Парцијална интеграција
+            </h3>
+
+            <p>
+                Нека `f` и `g` се диференцијабилни функции на интервалот `I`
+            </p>
+            <p class="text-center">
+                `[f(x)g(x)]' = f(x)'g(x) + f(x)g(x)' = `
+            </p>
+            <p class="text-center">
+                `= f(x)g(x)' = [f(x)g(x)]' - f(x)'g(x)`
+            </p>
+            <p class="text-center">
+                `= int f(x)g(x)' dx = int [f(x)g(x)]' dx - int f(x)'g(x) dx`
+            </p>
+            <p>
+                Ја добиваме следната формулата за парцијална интеграција
+            </p>
+
+            <p class="text-center">
+                `= int f(x)g(x)' dx = f(x)g(x) - int f(x)'g(x) dx`
+            </p>
+
+            <h3 id="domein">
+                Формула за парцијална интеграција
+            </h3>
+
+            <p class="text-center">
+                `= int f(x)g(x)' dx = f(x)g(x) - int f(x)'g(x) dx`
+            </p>
+
+            <p>
+                Во практиката, најчесто во последното равенство се воведуваат следните смени:
+            </p>
+
+            <p class="text-center">
+                `u = f(x); v = g(x)`
+            </p>
+
+            <p class="text-center">
+                `du = f'(x)dx; dv = g'(x)dx`
+            </p>
+
+            <p>
+                Со тоа, равенството може да се запише како:
+            </p>
+
+            <p class="text-center">
+                `int udv = uv - int vdu`
+            </p>
+
+            <p>
+                <strong>Пример 1</strong>: Да се пресметаат следните интеграли
+            </p>
+            <p>а) `int xcosxdx`; б) `int xe^xdx`; в) `int lnxdx`; г) `int e^xcosxdx`</p>
+            <p>
+                <strong>Забелешка.</strong> Нека `p(x)` е полиномна функција. Tогаш за интегралите
+            </p>
+            <p class="text-center">
+                `int_p(x)sinxdx`; `int p(x)cos(x)dx`; `int p(x)e^xdx`
+            </p>
+
+            <p>
+                се зема `u = p(x)`. Додека, за интегралите од облик
+            </p>
+
+            <p class="text-center">
+                `int p(x)lnxdx`
+            </p>
+
+            <p>
+                се зема `u = ln(x)`
+            </p>
+
+            <p>
+                <strong>Решение</strong>
+            </p>
+
+            <p>
+                а) `int xcosxdx`
+            </p>
+
+            <p>
+                `u = x; du = dx; dv = cosxdx; v = int cosxdx = sinx`
+            </p>
+
+            <p>
+                `= xsinx - int sinxdx = xsinx + cosx +C`
+            </p>
+
+            <p>
+                б) `int xe^xdx`
+            </p>
+
+            <p>
+                `u = x; du = dx; dv = e^xdx; v = int e^xdx = e^x`
+            </p>
+
+            <p>
+                `= xe^x - int e^xdx = xe^x - e^x +C = (x -1)e^x + C`
+            </p>
+
+            <p>
+                в) `int lnxdx`
+            </p>
+
+            <p>
+                `u = lnx; du = 1/xdx; dv = 1; v = int dx = x`
+            </p>
+
+            <p>
+                `= xlnx - int x*1/xdx = xlnx - x + C = x(lnx -1) + C`
+            </p>
+
+            <p>
+                г) `int x^2e^-xdx`
+            </p>
+
+            <p>
+                `u = x^2; du = 2xdx; dv = e^-x; v = int e^-1 = -e^-x`
+            </p>
+
+            <p>
+                `= -x^2e^-x + int 2xe^-xdx`
+            </p>
+            <p>
+                Сега ја применуваме формулта на интегралот `int xe^-xdx`
+            </p>
+
+            <p>
+                `= -x^2e^-x + 2(-x^2e^-x + int e^-xdx)`
+            </p>
+
+            <p>
+                `= -x^2e^-x -2x^2e^-x -2e^-x + C`
+            </p>
+
+            <p>
+                `= -e^-x(x^2 +2x + 2) + C`
+            </p>
+
+            <p>
+                д `I = int е^xcosxdx`
+            </p>
+
+            <p>
+                `u = e^x; du = e^xdx; dv = cosxdx; v = int cosxdx = sinx`
+            </p>
+
+            <p>
+                `I = e^xsinx + int e^xsinxdx`
+            </p>
+            <p>
+                Сега ја применуваме формулта на интегралот `int e^xsinx`
+            </p>
+            <p>
+                `u = e^x; du = e^xdx; dv = sinxdx; v = int sinxdx = -cosx`
+            </p>
+            <p>
+                `I = e^xsinx + e^xcosx - int e^cosxdx = e^x(sinx + cosx) - I`
+            </p>
+
+            <p>
+                `2I = e^x(sinx + cosx)`
+            </p>
+
+            <p>
+                `I = (e^x(sinx + cosx))/2 + C`
+            </p>
+
+            <h3 id="domein">
+                Парцијална интеграција кај определен интеграл
+            </h3>
+
+            <p>
+                Формула за парцијална интеграција кај определен интеграл
+            </p>
+
+            <p class="text-center">
+                `int_a^b f(x)g'(x)dx = f(x)g'(x)]_a^b - int_a^b f'(x)g(x)dx`
+            </p>
+
+            <p>
+                За определени интеграли, соодветна на `int udv = uv - int vdu` е формулата
+            </p>
+
+            <p class="text-center">
+                `int_a^b udv = uv]_a^b - int_a^b vdu`
+            </p>
+
+            <p>
+                Важно е да се воочи дека променливите `u` и `v` во оваа формула се функции од `x`. Според тоа границите во 
+                последниот интеграл се граници за променливата `x`. Понекогаш е корисно последното равенство да се запише 
+                како
+            </p>
+
+            <p class="text-center">
+                `int_(x=a)^(x=b) udv = uv]_(x=a)^(x=b) - int_(x=a)^(x=b) vdu`
+            </p>
+
+            <p>
+                <strong>Пример 2</strong>: Да се пресмета `int_1^e lnxdx`
+            </p>
+            <p>
+                <strong>Решение</strong>
+            </p>
+            <p>
+                `= int_1^e lnxdx`
+            </p>
+
+            <p>
+                `u = lnx du = 1/xdx; v = 1; dv =xdx`
+            </p>
+
+            <p>
+                `= xlnx]_1^e - int_1^e x * 1/x dx`
+            </p>
+
+            <p>
+                `= xlnx]_1^e - int_1^e dx`
+            </p>
+
+            <p>
+                `= (elne -ln1) - x]_1^e`
+            </p>
+
+            <p>
+                `= (e -1) - e`
+            </p>
+
+            <p>
+                `= 1`
+            </p>
+
+            <h3 id="domein">
+                Несвојствен интеграл
+            </h3>
+
+            <p>
+                Интегралите со бесконечни интервали на интеграција или бесконечни прекини на интервалот ќе ги викаме несвојствени интеграли. Еве неколку примери:
+            </p>
+
+            <p>
+                Несвојствени интеграли со бесконечни граници на интеграција:
+            </p>
+
+            <p class="text-center">
+                `int_1^(+oo) 1/x^2 dx`; `int_(-oo)^0 e^xdx`; `int_(-oo)^(+oo) (1/(1 + x^2))dx`
+            </p>
+
+            <p>
+                Несвојствени интеграли со бесконечни прекини на интервалот на интеграција:
+            </p>
+
+            <p class="text-center">
+                `int_-3^3 1/x^2 dx`; `int_1^2 dx/(x-1)`; `int_0^pi tanxdx`
+            </p>
+
+            <p>
+                Несвојствени интеграли со бесконечни прекини и бесконечни граници на интеграција:
+            </p>
+
+            <p class="text-center">
+                `int_0^(+oo) dx/sqrt x`; `int_(-oo)^(+oo) dx/(x^2 - 91)`
+            </p>
+
+            <p>
+                Во овој дел, ќе разгледаме несвојствени интеграли каде интегрирањето е на бесконечен интервал.
+            </p>
+
+            
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+</body>
+</html>

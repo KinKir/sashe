@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="PyCharm2018.3">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../assets/css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="exam.html">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item dropdown">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Библиотека
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+                <a class="dropdown-item active" href="https://www.w3.org/Style/CSS/" target="_blank">Calculus
+                    Lifesaver</a>
+                <a class="dropdown-item" href="https://github.com/rwaldron/idiomatic.js" target="_blank">Idiomatic</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://caniuse.com/#home" target="_blank">Can I use __________ ?</a>
+                <a class="dropdown-item" href="https://www.javascripting.com/?sort=rating"
+                   target="_blank">JavaScripting</a>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="intro.html">
+                        Before Calculus
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="functions.html">
+                                Фунции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="new_function.html">
+                                Нови функции од стари
+                            </a>
+                        </li>
+                        <li>
+                            <a href="families.html">
+                                Фамилии на функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inverse.html">
+                                Инверзни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_computing.html">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_infinity.html">
+                                Лимеси во бескрајност
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="">
+                                Детална метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="limes_continuity.html">
+                                Непрекинатост
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rigorously.html">
+                                Детална метода
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#infinity">Лимес во бесконечност</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#tangent_line">Тангента и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#areas_and_limits">Површина и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#decimal_and_limits">Децимални броеви и лимес</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#limit">Лимес</a>
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#informal">Интиутивна метода</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#infinite">Бесконечни лимеси</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#v_asymtotes">Вертикални асимптоти</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <div class="row">
+                <div class="col-12">
+                    <p id="concept" class="lead">
+                        Many real-world phenomena involve changing quantities—the speed of a rocket, the inflation
+                        of currency, the number of bacteria in a culture, the shock intensity of an earthquake, the
+                        voltage of an electrical signal, and so forth. In this chapter we will develop the concept of a
+                        “derivative,” which is the mathematical tool for studying the rate at which one quantity
+                        changes relative to another. The study of rates of change is closely related to the geometric
+                        concept of a tangent line to a curve, so we will also be discussing the general definition of a
+                        tangent line and methods for finding its slope and equation.
+                    </p>
+                    <h1 id="infinity">
+                        Изводи
+                    </h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h3>
+                    Наклон и рата на промена
+                </h3>
+                <p>
+                    Ако честичка се движи праволиниски долж `s` - оска тогаш нејзината положба може да се разгледува
+                    како функција од времето `t`, т.е.,
+                </p>
+                <p class="text-center">
+                    `s = f (t)`
+                </p>
+                <p>
+                    Оваа функција се нарекува <strong>функција на положбата на честичката</strong>. Средната брзина на
+                    честичката на временски интервал `[t`<sub>`0`</sub>`, t`<sub>'0+h'</sub>`], h > 0`, се дефинира со:
+                </p>
+                <p>
+                    `v`<sub>`средна`</sub>`= (поминат пат) / (време за кое е поминат тој пат) = (f(t`<sub>`0`</sub>` +
+                    h)-f(t`<sub>`0`</sub>`)) / h`
+                </p>
+                <p>
+                    Прашањето е како да ја определиме брзината во даден момент `t<sub>`0`</sub>` (наречена моментна
+                    брзина во `t<sub>`0`</sub>`). Ова е бројот кој што може да се прочита на брзинометарот. Еден начин
+                    да се пресмета оваа брзина е таа да се разгледува како лимес на средната брзина. Според тоа, таа
+                    може да се дефинира со:
+                </p>
+
+                <p>
+                    `v = `
+                </p>
+                <p>
+                    Да забележиме дека на цртежот интервалот `(x`<sub>`0`</sub>, `x`<sub>`1`</sub>`)` се протега повеќе
+                    на десната страна од `a`, отколку на левата страна од `a`.
+                </p>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="text-center">
+                            <img src="limes_27.png" class="img-fluid img">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <p>
+                            Меѓутоа, барањето на таков интервал ќе се поедностави, ако имаме интервал кој ќе се протега
+                            подеднакво на двете страни од `a`.
+                        </p>
+                        <p>
+                            Заради тоа, избираме било кој позитивен број `delta` таков што `delta <= min
+                            {x`<sub>`1`</sub>`-a, a-x`<sub>`0`</sub>`}` и го разгледуваме интервалот <br> `(a − delta, a
+                            +
+                            delta)`
+                        </p>
+                        <p>
+                            Овој интервал се протега подеднакво за растојание `delta` на двете страни од `a` и припаѓа
+                            во внатрешноста на интервалот `(x`<sub>`0`</sub>, `x`<sub>`1`</sub>`)` види цртеж). Уште
+                            повеќе, условот <br> `L − epsilon < f(x) < L + epsilon`<br> важи за секое `x` во овој
+                            интервал (освен можеби во `x = a`), бидејќи овој услов важи на поголемиот интервал `(x`<sub>`0`</sub>,
+                            `x`<sub>`1`</sub>`)`.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Условот:<br>
+                        </p>
+
+                        <p class="text-center">
+                            `L − epsilon < f(x) < L + epsilon`
+                        </p>
+                        <p>
+                            може да се искаже со
+                        </p>
+                        <p class="text-center">
+                            `− epsilon < f(x) - L < epsilon`
+                        </p>
+                        <p>
+                            односно,
+                        </p>
+                        <p class="text-center">
+                            `|f(x) - L |< epsilon`
+                        </p>
+                        <p>
+                            Од друга страна, условот `x in (a − delta, a + delta)`, но `x !=a`, може да се искаже како:
+                        </p>
+                        <p class="text-center">
+                            `a-delta < x < a+delta, &nbsp;x!=a`<br>
+                            `-delta < x-a < delta, &nbsp;x-a!=0`<br>
+                            `|x-a| < delta, &nbsp;x-a!=0`<br>
+                            `0<|x-a|< delta`<br>
+                        </p>
+                        <p>
+                            Претходната дискусија води до следната дефиниција за двостран лимес.
+                        </p>
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 1</strong> Нека `f` e дефинирана за секој `x` во некој отворен интервал
+                            што го содржи бројот `a`, освен можеби во точката `a`.<br>
+                            Тогаш:<br>
+                            <p class="text-center">
+                                `lim_(x->a)f(x)=L`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA epsilon > 0 )(EE delta > 0),` &nbsp; така што `0< abs(x-a) < delta implies
+                                abs(f(x)-L) < epsilon`
+                            </p>
+                        </div>
+                        <p>
+                            Оваа дефиниција, која што е дадена од германскиот математичар Карл Ваерштрас и вообичаено се
+                            нарекува „епсилон – делта“ дефиниција на двостран лимес, го дава преминот од неформален
+                            концепт на лимес во прецизна (формална) дефиниција.
+                        </p>
+                        <p>
+                            Поточно, неформалната фраза „колку што сакаме блиску до `L`“ има квантитативно значење за
+                            можноста да биде произволно избран позитивнио број `epsilon`, и фразата „доволно блиску до
+                            `a`“ е квантифицирана со позитивниот број `delta`.
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 1.</h4>
+                    <p>
+                        Со помош на Дефиниција 1 докажи дека за произволна константа `k`,
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->a) k = k`
+
+                    </p>
+                    <p>
+                        Решение:
+                    </p>
+                    <p class="text-center">
+                        Нeка `epsilon > 0` e произволен позитивен реален број. Треба да покажеме дека постои позитивен
+                        број `delta`, така што:
+                    </p>
+                    <hr>
+                    <p class="text-center">
+                        `0 < abs(x-a) < delta implies abs(f(x)-L)< epsilon`
+                    </p>
+                    <p>
+                        Во овој случај
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-a) < delta implies abs(k-k)< epsilon`
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-a) < delta implies 0 < epsilon`
+                    </p>
+                    <p>
+                        Но, последната импликација е точна за било кој позитивен број `delta`. Затоа, може да се избере,
+                        на пример, `delta = 1`.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 2.</h4>
+                    <p>
+                        Со помош на Дефиниција 1 докажи дека:
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->a) x = a`
+                    </p>
+                    <p>
+                        Решение:
+                    </p>
+                    <p class="text-center">
+                        Нeка `epsilon > 0` e произволен позитивен реален број. Треба да покажеме дека постои позитивен
+                        број `delta`, така што:
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-a) < delta implies abs(f(x)-L)< epsilon`
+                    </p>
+                    <p>
+                        Во овој случај
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-a) < delta implies abs(x-a)< epsilon`
+                    </p>
+                    <p>
+                        Можеме да избереме `delta = epsilon`.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h3>
+                    Вредноста на `delta` не е единствена
+                </h3>
+                <p>
+                    Да воочиме дека вредноста на δ во Дефиниција 1 не е единствена.
+                </p>
+                <p>
+                    Имено, кога ќе најдеме вредност `delta` која што го задоволува барањето од дефиницијата, тогаш било
+                    кој помал пoзитивен број `δ`<sub>`1`</sub> исто така ќе го задоволи барањето.<br>
+                    Попрецизно, ако е точно дека:
+                </p>
+                <p class="text-center">
+                    `0 < abs(x-a) < delta implies abs(f(x)-L)< epsilon` <br>
+                </p>
+                <p>
+                    тогаш исто така ќе биде точно дека
+                </p>
+                <p class="text-center">
+                    `0 < abs(x-a) < delta`<sub>`1`</sub>` implies abs(f(x)-L)< epsilon`<br>
+                </p>
+                <p>
+                    Ова е точно бидејќи `{x : 0 < abs(x − a) < delta`<sub>`1`</sub>`}` е подмножество од `{x : 0 < abs(x
+                    − a) < delta}` (види цртеж) и според тоа ако `|f(x) − L| < epsilon` е задоволено за секое `x` во
+                    дадено множество, тогаш ќе биде задоволено и за секое `x` во било кое негово подмножество.
+                </p>
+                <p>
+                    Така, во Пример 2, каде што ставивме `delta = epsilon`, можеме да избереме било која помала вредност
+                    на `delta`, така што може: `delta = epsilon/2, epsilon/3. . .`
+                </p>
+                <div class="text-center">
+                    <img src="limes_28.png" class="img-fluid img">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 3.</h4>
+                    <p>
+                        Докажи дека `lim_(x->3) x^2 = 9`
+                    </p>
+                    <p>
+                        Решение. Треба да покажеме дека за даден број `epsilon > 0` може да се најде позитивен број
+                        `delta` така што:
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-3) < delta implies abs(x^2-9) < epsilon`<br>
+                    </p>
+                    <p>
+                        Бидејќи `|x − 3|` се појавува во импликацијата корисно е да ја разложиме на множители десната
+                        страна за да воведеме множител `|x − 3|`. Така го добиваме следниот алтернативен облик:
+                    </p>
+                    <p class="text-center">
+                        `0 < abs(x-3) < delta implies abs(x+3) abs(x-3) < epsilon`&nbsp;(*)<br>
+                    </p>
+                    <p>
+                        Сакаме да го ограничиме множителот `|x + 3|`. Ако знаеме, на пример, дека `delta <= 1`, тогаш би
+                        имале `−1 < x − 3 < 1`, па `5 < x + 3 < 7`, и според тоа `|x + 3| < 7`. Затоа, ако `delta <= 1`
+                        и `0 < |x − 3| < delta`, тогаш
+                    </p>
+                    <p class="text-center">
+                        `abs(x+3) abs(x-3) < 7 delta`<br>
+                    </p>
+                    <p>
+                        Следува дека (*) ќе биде задоволено за било кој позитивен број `delta`, така што ` delta <= 1` и
+                        ` 7 delta < epsilon`. Ова може да го постигнеме избирајќи `delta` да биде минимумот од броевите
+                        `1` и `epsilon /7 `, што се запишува како ` delta = min { 1, epsilon /7}`. Со ова е докажано
+                        дека
+                    </p>
+                    <p class="text-center">
+                        `lim_(x->3) x^2 = 9`
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <h3>
+                    Еднострани лимеси
+                </h3>
+                <div class="col-12">
+                    <div class="alert alert-info" role="alert">
+                        <strong>Дефиниција. 2</strong> <br></br>i) Нека `f` e дефинирана на отворен интервал `(a, c)`.
+                        Тогаш <br>
+                        <p class="text-center">
+                            `lim_(x->a^-)f(x)=L`
+                        </p>
+                        <p>
+                            ако:
+                        </p>
+                        <p class="text-center">
+                            `(AA epsilon > 0 )(EE delta > 0),` &nbsp; така што `- delta< x-a < 0 implies
+                            abs(f(x)-L) < epsilon`
+                        </p>
+                        <p>ii) Нека `f` e дефинирана на отворен интервал `(a, c)`. Тогаш</p>
+                        <p class="text-center">
+                            `lim_(x->a^+)f(x)=L`
+                        </p>
+                        <p>
+                            ако:
+                        </p>
+                        <p class="text-center">
+                            `(AA epsilon > 0 )(EE delta > 0),` &nbsp; така што `0< x-a < delta implies
+                            abs(f(x)-L) < epsilon`
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="alert alert-light" role="alert">
+                    <h4 class="alert-heading">Пример 4.</h4>
+                    <p>
+                        Со помош на Дефиниција 2 докажи дека: `lim_(x->0^+) root() x = 0`
+                    </p>
+                    <p>
+                        Решение: Нeка `epsilon > 0` e произволен позитивен реален број. Треба да покажеме дека постои
+                        позитивен број `delta`, така што
+                    </p>
+                    <p>
+                        `0 < x - 0< delta implies abs(root() x -0) < epsilon`<br>
+                        `0 < x< delta implies root() x < epsilon`<br>
+                        `0 < x< delta implies root() x < root() delta = epsilon`<br>
+                    </p>
+                    <p>
+                        Можеме да избереме `delta = epsilon^2`.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 5.</h4>
+                        <p>
+                            Покажи дека лимесот не постои. `lim_(x->0)root() x` &nbsp; не постои
+                        </p>
+                        <p>
+                            Решение: Да претпоставиме дека `lim_(x->0) root() x = L` за некој реален број `L`.Tреба да
+                            покажеме дека за произволен позитивен реален број `epsilon`, постои позитивен реален број
+                            `delta`, така што
+                        </p>
+                        <p>
+                            `0 < x - 0< delta implies abs(root() x -L) < epsilon`<br>
+                            `( - delta < x < x!=0) implies root() x -L < epsilon`<br>
+                        </p>
+                        <p>
+                            Но, `delta` не постои бидејќи за било кој позитивен број `delta` , изразот `root()x` не
+                            постои за
+                            негативен реален број `x` во интервалот `(– delta, delta)`.
+                        </p>
+                        <p>
+                            Соред тоа `lim_()root(x->0) x` &nbsp; не постои
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Лимеси кога x → ±∞ (лимеси во бесконечност)
+                    </h3>
+                    <div class="col-12">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 3</strong> <br></br>i) Нека `f` e дефинирана на отворен интервал `(a,
+                            +oo)`.
+                            Тогаш <br>
+                            <p class="text-center">
+                                `lim_(x->+oo)f(x)=L`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA epsilon > 0 )(EE M > 0),` &nbsp; така што `x > M implies abs(f(x) - L ) < epsilon `
+                            </p>
+                            <p>ii) Нека `f` e дефинирана на отворен интервал `(-oo, a)`. Тогаш</p>
+                            <p class="text-center">
+                                `lim_(x->-oo)f(x)=L`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA epsilon > 0 )(EE M < 0),` &nbsp; така што `x < M implies abs(f(x) - L ) < epsilon `
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="limes_29.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 6.</h4>
+                        <p>
+                            Со помош на Дефиниција 3 покажи дека &nbsp; a. `lim_(x->+oo) 1/x =0` &nbsp; b. `lim_(x->-oo)
+                            1/x =0`
+                        </p>
+                        <p>
+                            Решение: a) Нека `epsilon > 0` e произволен позитивен реален број. Треба да најдеме
+                            позитивен број `M` така што
+                        </p>
+                        <p>
+                            `x > M implies abs( 1/x -0) < epsilon`<br>
+                            `x > M > 0 implies 1/x < epsilon`<br>
+                            `x > M > 0 implies 1/x < 1/M < epsilon`<br>
+                        </p>
+                        <p>
+                            Од последниот израз може да заклучиме дека `M =1/epsilon`.
+                        </p>
+                        <p>
+                            Решение: b) Нека `epsilon > 0` e произволен позитивен реален број. Треба да најдеме
+                            негативен број `M` така што
+                        </p>
+                        <p>
+                            `x < M implies abs( 1/x -0) < epsilon`<br>
+                            `x < M < 0 implies -1/x < epsilon`<br>
+                            `x < M < 0 implies 1/x > 1/M < epsilon implies -1/x < -1/M = epsilon`<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Бесконечни еднострани лимеси (кога `x->a^+`)
+                    </h3>
+                    <div class="col-12">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 4</strong> <br></br>Нека `f` e дефинирана на отворен интервал
+                            `(a,c)`.<br>
+                            i) Тогаш <br>
+                            <p class="text-center">
+                                `lim_(x->a^+)f(x)=+oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N > 0 )(EE delta > 0),` &nbsp; така што `0 < x-a < delta implies f(x) > N`
+                            </p>
+                            <p>ii) Тогаш</p>
+                            <p class="text-center">
+                                `lim_(x->a^+)f(x)=-oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N < 0 )(EE delta > 0),` &nbsp; така што `0 < x-a < delta implies f(x) < N`
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="limes_30.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Бесконечни еднострани лимеси (кога `x->a^-`)
+                    </h3>
+                    <div class="col-12">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 5</strong> <br></br>Нека `f` e дефинирана на отворен интервал `(c,
+                            a)`.<br>
+                            i) Тогаш <br>
+                            <p class="text-center">
+                                `lim_(x->a^-)f(x)=+oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N > 0 )(EE delta > 0),` &nbsp; така што `- delta < x-a < 0 implies f(x) > N`
+                            </p>
+                            <p>ii) Тогаш</p>
+                            <p class="text-center">
+                                `lim_(x->a^-)f(x)=-oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N < 0 )(EE delta > 0),` &nbsp; така што `- delta < x-a < 0 implies f(x) < N`
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="limes_32.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 7.</h4>
+                        <p>
+                            Со помош на Дефиниција 4 и Дефиниција 5 покажи дека &nbsp; a. `lim_(x->0^+) 1/x =+оо` &nbsp;
+                            b. `lim_(x->0^-)
+                            1/x =-оо`
+                        </p>
+                        <p>
+                            Решение: a) Нека `N >0` e произволен позитивен реален број. Треба да најдеме
+                            позитивен број `delta` така што
+                        </p>
+                        <p>
+                            `0 < x - 0 < delta implies 1/x > N`<br>
+                            `x < delta implies 1/x > N`<br>
+                            `x < delta implies 1/x > 1/ delta = N`
+                        </p>
+                        <p>
+                            Јасно е дека може да избереме `delta = 1 / N`.
+                        </p>
+                        <p>
+                            Решение: b) Нека `N > 0` e произволен негативен реален број. Треба да најдеме
+                            негативен број `delta` така што
+                        </p>
+                        <p>
+                            `- delta < x - 0 < 0 implies 1/x < N`<br>
+                            `- delta < x < 0 implies 1/x < N`<br>
+                            `x < delta implies 1/x < - 1/ delta = N`
+                        </p>
+                        <p>
+                            Јасно е дека може да избереме `delta = -1 / N`.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Бесконечни лимеси во бесконечност (кога `x->+oo`)
+                    </h3>
+                    <div class="col-12">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 6</strong> <br></br>Нека `f` e дефинирана на отворен интервал `(a,
+                            +oo)`.<br>
+                            i) Тогаш <br>
+                            <p class="text-center">
+                                `lim_(x->+oo)f(x)=+oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N > 0 )(EE M > 0),` &nbsp; така што `x > M implies f(x) > N`
+                            </p>
+                            <p>ii) Тогаш</p>
+                            <p class="text-center">
+                                `lim_(x->+oo)f(x)=-oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N < 0 )(EE M > 0),` &nbsp; така што `x > M implies f(x) < N`
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="limes_32.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h3>
+                        Бесконечни лимеси во бесконечност (кога `x->-oo`)
+                    </h3>
+                    <div class="col-12">
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 7</strong> <br></br>Нека `f` e дефинирана на отворен интервал `(-oo,
+                            a)`.<br>
+                            i) Тогаш <br>
+                            <p class="text-center">
+                                `lim_(x->-oo)f(x)=+oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N > 0 )(EE M < 0),` &nbsp; така што `x < M implies f(x) > N`
+                            </p>
+                            <p>ii) Тогаш</p>
+                            <p class="text-center">
+                                `lim_(x->-oo)f(x)=-oo`
+                            </p>
+                            <p>
+                                ако:
+                            </p>
+                            <p class="text-center">
+                                `(AA N < 0 )(EE M < 0),` &nbsp; така што `x < M implies f(x) < N`
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <img src="limes_32.png" class="img-fluid img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 8.</h4>
+                        <p>
+                            Со помош на Дефиниција 6 и Дефиниција 7 покажи дека &nbsp; a. `lim_(x->+oo) 1/x =+оо` &nbsp;
+                            b. `lim_(x->-oo)
+                            1/x =-оо`
+                        </p>
+                        <p>
+                            Решение: a) Нека `N >0` e произволен позитивен реален број. Треба да најдеме
+                            позитивен број `M` така што
+                        </p>
+                        <p>
+                            `x > M implies x > N`<br>
+                        </p>
+                        <p>
+                            Јасно е дека може да избереме `M = N`.
+                        </p>
+                        <p>
+                            Решение: b) Нека `N < 0` e произволен негативен реален број. Треба да најдеме
+                            негативен број `M` така што
+                        </p>
+                        <p>
+                            `x < M implies x < M`<br>
+                        </p>
+                        <p>
+                            Јасно е дека може да избереме `M = N`.
+                        </p>
+                    </div>
+                </div>
+
+
+        </main>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="assets/js/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="assets/js/docs.min.js"></script>
+
+
+</body>
+</html>

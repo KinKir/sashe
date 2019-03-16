@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus/functions.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../">Испитни прашања</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="functions.html">
+                        Функции
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Дефиниција, домен, ранг
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_new.html">
+                                Нови функции од постојни
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии од функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверсни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="limes.html">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="/docs/4.2/layout/overview/">
+                                Интуитивна метода
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/grid/">
+                                Пресметки на лимеси
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/docs/4.2/layout/utilities-for-layout/">
+                                Utilities for layout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="" data-toggle="modal" data-target="#myModal">Што треба да се знае</a>
+                </li>
+                <li class="toc-entry toc-h2">
+                    <a href="#def">Функции</a>
+                    <ul>
+                        <li class="toc-entry toc-h3">
+                            <a href="#def">Дефиниција</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#vl_test">Тест со вертикални прави</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#var">Променливи</a>
+                        </li>
+                        <li class="toc-entry toc-h3">
+                            <a href="#ex">Примери</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            <h3 id="operation">
+                Аритметички операции со функции
+            </h1>
+            
+            <p>     
+                <strong>Вежба 1.</strong> Да се одредат домените на функциите `f + g`, `fg` и `f/g` ако:<br>
+                а) `f(x) = 2/(x - 1)`, `g(x) = x-1`<br>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `D_f = RR \ {1}`, `D_g = RR`
+                        </p>
+                        <p>
+                            `D_(f + g) = D_f nn D_g = RR \\ {1}`
+                        </p>
+                        <p>
+                            `D_(fg) = D_f nn D_g = RR \\ {1}`
+                        </p>
+                        <p>
+                            `D_(f/g) = D_f nn D_g nn {x in D_g | g(x) != 0} = RR \\ {1}`
+                        </p>
+                        <p>
+                            `D_(f/g) = D_f nn D_g nn {x in RR | x-1 != 0} = RR \\ {1}`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `f(x) = sqrt (1 - x^2), g(x) = sqrt (2 + x - x^2)`<br>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            `D_f = [-1, 1], D_g = [-1, 2]`
+                        </p>
+                        <p>
+                            `D_(f+g) = D_f nn D_g = `
+                        </p>
+                        <p>
+                            `-x^2 + x + 2 >= 0`
+                        </p>
+                        <p>
+                            `x_(1,2)= (-1+- sqrt(1 + 8))/ (-2) <=> x_1 = -1, x_2 = 2`
+                        </p>
+                        <p>
+                            `D_(f + g) = D_f nn D_g = [-1, 1]`
+                        </p>
+                        <p>
+                            `D_(fg) = D_f nn D_g = [-1, 1]`
+                        </p>
+                        <p>
+                            `D_(fg) = D_f nn D_g nn {x in D_g | g(x) != 0}`
+                        </p>
+                        <p>
+                            `D_(fg) = D_f nn D_g nn {x in RR | sqrt(2+ x - x^2) != 0}`
+                        </p>
+                        <p>
+                            `= [-1, 1] nn {[-1, 2] \ {-1, 2} = (-1, 1]`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+
+                    </div>
+                </details>
+            </p>            
+
+            <h3 id="composition">
+                Композиција на функции
+            </h1>
+
+            <p id='1_1'>     
+                <strong>Вежба 1.</strong> Да се изрази функцијата F како композиција од три функции:<br>
+                а) `F(x) = (1 + sin(x^2))^3` 
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                           `f_1(x) = x^2`
+                        </p>
+                        <p>
+                            `f_2(x) = sin(x) `
+                        </p>
+                        <p>
+                            `f_3(x) = x^3`
+                        </p>
+                        <p>
+                            `F(x) = (f_3 @ f_2 @ f_1)(x)`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `F(x) = sqrt(1 - root(3)(x))` 
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                           `f_1(x) = root(3)(x)`
+                        </p>
+                        <p>
+                            `f_2(x) = 1- x `
+                        </p>
+                        <p>
+                            `f_3(x) = sqrt(x)`
+                        </p>
+                        <p>
+                            `F(x) = (f_3 @ f_2 @ f_1)(x)`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+                <strong>Вежба 2.</strong> Да се определи доменот и правилото за `f @ g` и `g @ f` ако:<br>
+                а) `f(x) = sqrt(x), g(x) = x^2 -5x + 6` 
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = [0, +oo)`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR`
+                        </p>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in RR | g(x) in [0, +oo)}`
+                        </p>
+                        <p>
+                            Излезите на  функцијата `g(x)` треба да се во доменот `D_f`.
+                        </p>
+                        <p>
+                            `x^2 -5x + 6 >= 0 => x^2 -5x + 6 = 0`
+                        </p>
+                        <p>
+                            `= x_(1,2) = (5 +- sqrt(25 -24))/2`
+                        </p>
+                        <p>
+                            `x_1 = 3, x_2 = 2`
+                        </p>
+                        <p>
+                            `=> x^2 -5x +6 >= 0, x in (-oo, 2] uu [3, +oo)`
+                        </p>
+                        <p>
+                            `D_(f@g) = (-oo, 2] uu [3, +oo)`
+                        </p>
+                        <p>
+                           Композицијата е: `(f @ g)(x) = f(g(x)) = sqrt(x^2 -5x +6)`
+                        </p>
+                        <p>-----------------------------------------------------------------------</p>
+                        <p>
+                            Доменот на композицијата `g @ f` е `D_(g @ f) = {x in D_f | f(x) in D_g}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = [0, +oo)`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR`
+                        </p>
+                        <p>
+                            Доменот на композицијата `g @ f` е `D_(g @ f) = {x in [0, +oo) | f(x) in RR}`
+                        </p>
+                        <p>
+                            Излезите од функцијата `f(x)` треба да се во доменот `D_g`.
+                        </p>
+                        <p>
+                            `sqrt(x) = 0`
+                        </p>
+                        <p>
+                            `x = 0 => sqrt(x) >= 0 x in [0, +oo)`
+                        </p>
+                            `D_(g@f) = [0, +oo)`
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) `f(x) = sqrt(9 - x^2), g(x) = |~ x ~|` (најмалиот цел број `>= x`)
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = [-3, 3]`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR` (зошто `RR` пр. `x = - 2.4 => g(x) = 2`)
+                        </p>
+                        <p>
+                            `f @ g` е `D_(f @ g) = {x in RR | g(x) in [-3, 3]} = [-3, 3]`
+                        </p>
+                        <P>
+                                `f@g = f(g(x)) = sqrt(9- |~x~|^2)`
+                        </P>
+                        <P>
+                            ----------------------------------------------------------------------------------
+                        </P>
+                        <p>
+                            Доменот на композицијата `g @ f` е `D_(g @ f) = {x in D_f | f(x) in D_g}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = [-3, 3]`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR`
+                        </p>
+                        <p>
+                            `g(x) = 3,  x in (-4, -3) uu (2,3)`
+                        </p>
+                        <p>
+                            `f @ g` е `D_(f @ g) = {x in [-3, 3] | g(x) in RR} = (-4, 3]`
+                        </p>
+                        <P>
+                                `g@f = g(f(x)) = |~sqrt(9 - x^2)~|`
+                        </P>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+
+                в) `f(x) = 1/(x - 1), g(x) = 1/(x +1)`
+                <details>   
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        <p>
+                            Доменот на композицијата `f @ g` е `D_(f @ g) = {x in D_g | g(x) in D_f}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = RR \\{1}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR \\{-1}`
+                        </p>
+                        <p>
+                            Доменот на `f @ g` е `D_(f @ g) = {x in RR \\ {-1} | g(x) in {1}`
+                        </p>
+                        <p>
+                            Излезите на функцијата `g(x)` треба да припаѓаат на доменот `D_f`.
+                        </p>
+                        <p>
+                            `1/(x + 1) = 1 => x = 0`
+                        </p>
+                        <p>
+                            `f @ g` е `D_(f @ g) = {x in RR \\ {-1} | g(x) in {1} = RR\\{-1, 0}`
+                        </p>
+                        <P>
+                            `f@g = f(g(x)) = 1/(1/(x + 1) - 1) = 1/((1- x - 1)/(x + 1)) = - (x + 1)/x`
+                        </P>
+                        <P>
+                            ----------------------------------------------------------------------------------
+                        </P>
+                        <p>
+                            Доменот на композицијата `g @ f` е `D_(g @ f) = {x in D_f | f(x) in D_g}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `f` е `D_f = RR \\ {1}`
+                        </p>
+                        <p>
+                            Доменот на функцијата `g` е `D_g = RR \\{-1}`
+                        </p>
+                        <p>
+                            Доменот на `g @ f` е `D_(g @ f) = {x in RR \\ {1} | f(x) in {-1}`
+                        </p>
+                        <p>
+                            Излезите на функцијата `f(x)` треба да припаѓаат на доменот `D_g`.
+                        </p>
+                        <p>
+                            `1/(x - 1) != -1 => x= 0`.
+                        </p>
+                        <p>
+                            `D_(g @ f) = {x in RR \\ {1} | f(x) in {-1} = RR \\{0, 1}`
+                        </p>
+                        <p>
+                            `g @ f = g(f(x)) = 1/(x + 1) = 1/(1/(x-1) + 1) = (x - 1)/1`
+                        </p>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+            </p>
+
+            <h3 id="graph">
+                График на функција
+            </h3>
+
+            <p id='1'>     
+                    <strong>Вежба 1.</strong> Да се скицира графикот на функцијата:<br>
+                    а) `y = 2- 1/(x + 1)` користејки го графикот `y = 1/x`<br>
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                `y = 1/x`
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_01.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                    Со додавање на позитвна константа `c` на `x`, `f(x)`<br>
+                                    функцијате е : `y = 1/(x +1)`<br>
+                                    Со ова се врши поместување на графикот по `x` оската налево за вредноста на позитивната константа `c = 1`<br>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_02.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                    Со множење на функцијата со `-1`<br>
+                                    функцијате е : `y = -(1/(x +1))`<br>
+                                    со што се добива рефлекција по `x` оската.<br>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_03.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                    Со додавање на позитивна констанра `c` на функцијата `f(x)`<br>
+                                    функцијате е : `y = 2 - (1/(x +1))`<br>
+                                    со што се добива поместување нагоре по `y` - оската.<br>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_04.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                            <p>
+                                `&#x25A0`
+                            </p>
+                        </div>
+                    </details>
+                    б) `y = abs(2x - 1) + 1`, користејки `y = abs(x)`<br>
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                `y = abs(x)`
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_05.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                Со множење со константа `c, c > 0`, `y = cf(x)`<br>
+                                функцијата е: `y = abs(2x)`<br>
+                                со што се добива вертикално истегање со фактор `c`.
+                                
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_06.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                Со вадење на позитивна константа `c`, `y = f(x - c)`<br>
+                                функцијата е: `y = abs(2(x - 1/2))`<br>
+                                со што се добива поместување надесно по `x` оската за `c = 1/2`.
+                                
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_07.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                Со додавање на позитивна константа `c`, `y = f(x) + c`<br>
+                                функцијата е: `y = abs(2x - 1)) + 1`<br>
+                                со што се добива поместување нагоре по `y` оската за `c = 1`.
+                                
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_08.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </details>
+                    в) `y = - sqrt(3x)`, користејки `y = sqrt(x)`<br>
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                `y = sqrt(x)`
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_09.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                Со множење со константа `c, c > 0`, `y = cf(x)`<br>
+                                функцијата е: `y = sqrt(3)sqrt(x)`<br>
+                                со што се добива вертикално истегање со фактор `c = sqrt(3)`.
+                                
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_10.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-5'>
+                                Со множење на функцијата со `-1`, `y = -f(x)`<br>
+                                функцијата е: `y = - sqrt(3x)`<br>
+                                со што се добива рефлекција по `x` оската.
+                                
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_11.html" width="100%" height="320" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </details>
+                </p>  
+
+            <h3 id="even">
+                Парни и непарни функции
+            </h3>
+
+            <p id='1'>     
+                <strong>Вежба 1.</strong> Да се одреди парноста/непарноста на функциите<br>
+                а) <iframe src="jsxgraph/graph_12.html" width="100%" height="320" frameborder="0"></iframe>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        Бидејки е `f(x) = f(-x)`, односно е симетрична во однос на `y` оската, функцијате е парна.
+                    </div>
+                    <div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                б) <iframe src="jsxgraph/graph_13.html" width="100%" height="320" frameborder="0"></iframe>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        Бидејки е `-f(x) = f(-x)`, односно е симетрична во однос на кординатниот почеток, функцијате е не-парна.
+                    </div>
+                    <div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                г) <iframe src="jsxgraph/graph_01.html" width="100%" height="320" frameborder="0"></iframe>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        Бидејки е `-f(x) = f(-x)`, односно е симетрична во однос на кординатниот почеток, функцијате е не-парна.
+                    </div>
+                    <div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+                д) <iframe src="jsxgraph/graph_13.html" width="100%" height="320" frameborder="0"></iframe>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div>
+                        Бидејки функцијата не е симетрична во однос на `y` оската ниту е симетрична во однос на кординатниот 
+                        почеток, функцијате не е ниту парна ниту не-парна.
+                    </div>
+                    <div>
+                        <p>
+                            `&#x25A0`
+                        </p>
+                    </div>
+                </details>
+            </p>
+
+            <p id='def_2'>     
+                    <strong>Вежба 2.</strong> Да се испита парноста на функциите:<br>
+                    а) `f(x) = (x^5 - x)/(1 + x^2)`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                <p>
+                                        `f(-x) = (-x^5 - (-x))/((1 + (-x^2))`
+                                    </p>
+                                    <p>
+                                        `f(-x) = (-x^5 + x)/(1 + x^2)`
+                                    </p>
+                                    <p>
+                                        `f(-x) = -(x^5 + x)/(1 + x^2)`
+                                    </p>
+                                    <p>
+                                        `f(-x) = -f(x)`
+                                    </p>
+                                    <p>
+                                         Функцијата е непарна
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                </p>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_14.html" width="100%" height="220" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </details>
+                    б) `f(x) = 2`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                <p>
+                                        `f(-x) = 2`
+                                    </p>
+                                    <p>
+                                        `f(-x) = f(x)`
+                                    </p>
+                                    <p>
+                                        Функцијата е парна
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                </p>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_15.html" width="100%" height="220" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </details>
+                    в) `f(x) = abs(x)/x`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                <p>
+                                        `f(-x) = abs(-x)/-x`
+                                    </p>
+                                    <p>
+                                        `f(-x) = abs(x)/-x`
+                                    </p>
+                                    <p>
+                                        `f(-x) = -(abs(x)/x)`
+                                    </p>
+                                    <p>
+                                        `f(-x) = -f(x)`
+                                    </p>
+                                    <p>
+                                        Функцијата е непарна
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                </p>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_16.html" width="100%" height="220" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </details>
+                    г) `f(x) = (x - 2)^2`
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row'>
+                            <div class='col-5'>
+                                <p>
+                                        `f(-x) = (-x - 2)^2`
+                                    </p>
+                                    <p>
+                                        `f(-x) = (x + 2)^2`
+                                    </p>
+                                    <p>
+                                        `f(-x) != -f(x) != f(x)`
+                                    </p>
+                                    <p>
+                                        Функцијата ниту е парна ниту е непарна
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                </p>
+                            </div>
+                            <div class='col-7'>
+                                <iframe src="jsxgraph/graph_17.html" width="100%" height="220" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </details>
+                </p>
+            
+            <!-- modal what you need to know -->
+            <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Што треба да се знае на памет</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>
+                                <strong>Дефиниција:</strong> За функциите `f + g`, `f – g`, и `fg` доменот е пресек на домените на `f` и `g` , 
+                                a за функцијата `f/g` доменот e пресек на домените на `f` и `g` без оние точки `x` за кои `g(x) = 0`.
+                            </li>
+                            <li>
+                                <strong>Дефиниција:</strong> Композиција `f@g` на функциите `f` и `g` се дефинира со:`(f@g)(x) = f(g(x))`. Доменот на `f@g` 
+                                се состои од сите `x` од доменот на `g` за кои `g(x)` е во доменот на `f`, oдносно:<br>
+                                `D_(f@g) = {x in D_g | g(x) in D_f}`<br>
+                                Аналогно, композицијата `g@f` на функциите `g` и `f` се дефинира со:<br>
+                                `(g@f)(x) = g(f(x))`<br>
+                                Доменот на `g@f` се состои од сите `x` од доменот на `f` за кои `f(x)` е во доменот на `g`, oдносно:<br>
+                                `D_(g@f) = {x in D_f | f(x) in D_g}`
+                            </li>
+                            <li>
+                                <strong>Нови функции добиени од постојни</strong><br>
+                                Транслација:<br>
+                                `y = f(x) + c`&nbsp; транслација нагоре по `y` оската<br>
+                                `y = f(x) - c`&nbsp; транслација надоле по `y` оската<br>
+                                `y = f(x + c)`&nbsp; транслација налево по `x` оската<br>
+                                `y = f(x - c)`&nbsp; транслација надесно по `x` оската<br>
+                                Рефлексија:<br>
+                                `y = f(-x)`&nbsp; рефлексија по `y` оската<br>
+                                `y = -f(x)`&nbsp; рефлексија по `x` оската<br>
+                                `y = f(x + c)`&nbsp; транслација налево по `x` оската<br>
+                                `y = f(x - c)`&nbsp; транслација надесно по `x` оската<br>
+                                Растегање и збивање:<br>
+                                `y = cf(x), c > 1`&nbsp; растегање по `x` оската со фактор `c`<br>
+                                `y = cf(x), 0 < c < 1`&nbsp; збивање по `x` оската со фактор c<br>
+                                `y = f(cx), c > 1`<&nbsp; збивање по `x` оската со фактор c<br>
+                                `y = f(cx), 0 < c < 1`&nbsp; растегање по `x` оската со фактор `c`<br>
+                            </li>
+                            <li>
+                                <strong>Парни и непарни функции:</strong><br>
+                                Парна функција (симетрична во однос на `y` оската):&nbsp;`f(x) = f(-x), x in D_f`<br>
+                                Непарна функција (симетрична во однос на кординатнот почеток):&nbsp; `f(-x) = -f(x)`<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+<!-- modal onload-->
+<script>
+    $(function() {
+        $("#myModal").modal();
+    });
+</script>
+
+</body>
+</html>
