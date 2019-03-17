@@ -22,13 +22,13 @@
                 async></script>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
-        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-        <link rel="icon" href="../assets/img/icon/favicon.ico">
-        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
         <meta name="theme-color" content="#563d7c">
 
         <!-- Font Awesome JS -->
@@ -63,22 +63,23 @@
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Знаење</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="../discrete/propositional_logic.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="propositional_logic_university.html">Вежби-IO</a>
+                        <a class="nav-link  active" href="propositional_logic_university.html">
+                            <span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            Вежби
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">Вежби-Книга</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Колоквиум</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Испитни прашања</a>
+                        <a class="nav-link" href="propositional_logic_book.html">
+                            <span>
+                                <i class="fas fa-book"></i>
+                            </span>
+                            Вежби
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -256,10 +257,6 @@
 
                 <!-- main -->
                 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
-                    <p class=" bd-lead">
-
-                    </p>
     
                     <!-- Propositional Logic -->
     
@@ -579,65 +576,236 @@
                     
                     <!-- modal what you need to know -->
                     <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
-                        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Што треба да се знае за решавање на задачи</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Што треба да се знае за решавање на задачи</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul>
+                                        <li>
+                                            Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Негација - `not p`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`not p`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Конјункција - `p ^^ q`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p ^^ q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Дисјункција - `p vv q`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p vv q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Екслизивна дисјункција - `p o+ q`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p 0+ q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Ипликација - `p -> q`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p -> q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="table-responsive-sm">
+                                                <p>Еквивалентност - `p harr q`</p>
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p harr q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                            <td>`F`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`F`</td>
+                                                            <td>`F`</td>
+                                                            <td>`T`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>                    
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <ul>
-                                    <li>
-                                        Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
-                                    </li>
-                                    <li>
-                                        Негација од исказот `p`, означена со `not p` (или означен со `overset (-)(p)`), е исказот<br>
-                                        „Не е случај дека `p`“<br>
-                                        Исказот `not p` се чита „not `p`.“ Логичката вредност на негацијата од `p`, `not p`, e спротивна на 
-                                        логичкат вредност на `p`.
-                                    </li>
-                                    <li>
-                                        бесконечен лимес<br>
-                                        Понекогаш едностраните или двостраните лимеси не постојат бидејќи вредностите на 
-                                        функцијата неограничено растат или неограничено опаѓаат.<br>
-                                        ако вредноста на функцијата неограничено расте - `lim_(x->a^-)f(x) = +oo`;&nbsp`lim_(x->a^-)f(x) = +oo`<br>
-                                        ако вредноста на функцијата неограничено опаѓа - `lim_(x->a^-)f(x) = -oo`;&nbsp`lim_(x->a^-)f(x) = -oo`<br>
-                                        ако двата еднострани лимеси се `+oo` - `lim_(x->a)f(x) = +oo`<br>
-                                        ако двата еднострани лимеси се `-oo` - `lim_(x->a)f(x) = -oo`<br>
-                                    </li>
-                                    <li>
-                                        Вертикални асимптоти<br>
-                                        `a` е асимтота на графикот на функцијата `f(x)` ако<br>
-                                        `lim_(x -> a^-) f(x) = +oo`,`lim_(x_> a^+) f(x) = +oo`, `lim_(x -> a^-) f(x) = -oo`, `lim_(x -> a^+) f(x) = -oo`
-                                    </li>
-                                </ul>
-                            </div>                    
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- modal propositions-->
                     <div class="modal fade" id="propositionsModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
-                                </p>
-                            </div>
+                            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Исказот е декларативна реченица (т.е. реченица која изнесува факт) кој е точен или неточен но не и двете.
+                                    </p>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                     <!-- modal negtion-->
                     <div class="modal fade" id="negationModal" tabindex="-1" role="dialog">
