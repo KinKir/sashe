@@ -296,6 +296,10 @@
                                 </p>
                             </div>
                         </details>
+                    </p>
+
+                    <p>
+                    
                         <strong>Вежба 2.</strong> Да се запишат во вид на искази следниве реченици:<br>
                         а) Или треба да се почитуваат сообраќајните правила или треба да се плати казна;<br>
                         б) 35 и 60 се делат со 3;<br>
@@ -325,7 +329,10 @@
                                 </p>
                             </div>
                         </details>
-                        <strong>Вежба 3.</strong>  Да се напишат вистиносни таблици за следниве исказни формули:<br>
+                    </p>
+
+                    <p>
+                        <strong>Вежба 3.</strong>  Да се формираат табелите на вистинитост за следниве исказни формули:<br>
                         а) `p vv q -> r`<br>
                         <details>
                             <summary class="mb-3">Решение</summary>
@@ -573,6 +580,158 @@
                             </div>
                         </details>
                     </p>
+
+                    <p>
+                        <strong>Вежба 4.</strong>  Да се провери дали следните исказни формули се задоволиви:<br>
+                            а) `(p vv q) -> (not p ^^ r) vv not q`;<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Исказот го запишуваме како исказна функција: `alpha: ubrace(p vv q)_(beta) -> ubrace((not p ^^ r) vv not q)_(gamma)` каде,<br>
+                                        `tau(alpha) = TT`&nbsp;ако:<br>
+                                        `tau(beta) = TT` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = _|_`; или <br>
+                                        Нека `tau(beta)= _|_` и `tau(gamma) = TT`<br>
+                                        Од `tau(beta)=_|_` следи `tau(p)=_|_` и `tau(q)=_|_`<br>
+                                        Ако се замени во `gamma` се добива вредноста на `r`:<br>
+                                        `tau((not p ^^ r) vv not q) = TT`<br>
+                                        `tau((TT ^^ r) vv TT) = TT`<br>
+                                        Од замената се гледа дека за која било вредност на `r`, `tau(gamma)=TT`, па една вредност на исказните променливи за кои 
+                                        формулата прима вредност `Т` е:<br>
+                                        `tau(p) = _|_`, `tau(q) = _|_` и `tau(r) = T`<br>
+                                        Следува формулата е задоволива.
+                                    </p>
+                                </div>
+                            </details>
+                            б) `q harr (((not p vv not q) ^^ not r) -> r`;<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Исказот го запишуваме како исказна функција: `alpha: q harr ubrace(((not p vv not q) ^^ r) -> r)_(beta)` каде,<br>
+                                            `tau(alpha) = TT`&nbsp;ако:<br>
+                                            `tau(q) = TT` и `tau(beta) = TT`; или<br>
+                                            `tau(q) = _|_` и `tau(beta) = _|_`;<br>
+                                            Нека `tau(q)= _|_` и `tau(beta) = _|_`<br>
+                                            Од `tau(beta)=_|_` следи `tau((not p vv not q) ^^ not r) = TT` и `tau(r)=_|_`<br>
+                                            Ако за вредностите `q` и `r`се замени во `tau((not p vv not q) ^^ not r) = TT` се добива дека p може да прими 
+                                            било која вредност, па една вредност на исказните променливи за кои формулата прима вредност `ТT` е::<br>
+                                            `tau(p) = TT`, `tau(q)=_|_` и `tau(r)=_|_`<br>
+                                            Следува формулата е задоволива.
+                                    </p>
+                                </div>
+                            </details>
+                            в) `(not p vv (q ^^ s)) vv p harr (not s vv not p)`.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        а)
+                                        <div class="table-responsive-sm">
+                                                    <table class="table table-bordered table-sm">
+                                                        <tbody class="text-center">
+                                                            <tr>
+                                                                <td>`p`</td>
+                                                                <td>`q`</td>
+                                                                <td>`r`</td>
+                                                                <td>`p -> q`</td>
+                                                                <td>`q -> r`</td>
+                                                                <td>`(p -> q) ^^ (q -> r)`</td>
+                                                                <td>`p -> r`</td>
+                                                                <td>`(p -> q) ^^ (q -> r) -> (p -> r)`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                        </div> 
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
                     
                     <!-- modal what you need to know -->
                     <div class="modal fade" tabindex="-1" id="myModal" role="dialog">
@@ -611,73 +770,78 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="table-responsive-sm">
-                                                <p>Конјункција - `p ^^ q`</p>
-                                                <table class="table table-bordered table-sm">
-                                                    <tbody class="text-center">
-                                                        <tr>
-                                                            <td>`p`</td>
-                                                            <td>`q`</td>
-                                                            <td>`p ^^ q`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`T`</td>
-                                                            <td>`T`</td>
-                                                            <td>`T`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`T`</td>
-                                                            <td>`F`</td>
-                                                            <td>`F`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`F`</td>
-                                                            <td>`T`</td>
-                                                            <td>`F`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`F`</td>
-                                                            <td>`F`</td>
-                                                            <td>`F`</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                            <div class='row'>
+                                                <div class="col-md-6">
+                                                    <div class="table-responsive-sm">
+                                                            <p>Конјункција - `p ^^ q`</p>
+                                                            <table class="table table-bordered table-sm">
+                                                                <tbody class="text-center">
+                                                                    <tr>
+                                                                        <td>`p`</td>
+                                                                        <td>`q`</td>
+                                                                        <td>`p ^^ q`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`T`</td>
+                                                                        <td>`T`</td>
+                                                                        <td>`T`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`T`</td>
+                                                                        <td>`F`</td>
+                                                                        <td>`F`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`F`</td>
+                                                                        <td>`T`</td>
+                                                                        <td>`F`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`F`</td>
+                                                                        <td>`F`</td>
+                                                                        <td>`F`</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="table-responsive-sm">
+                                                            <p>Дисјункција - `p vv q`</p>
+                                                            <table class="table table-bordered table-sm">
+                                                                <tbody class="text-center">
+                                                                    <tr>
+                                                                        <td>`p`</td>
+                                                                        <td>`q`</td>
+                                                                        <td>`p vv q`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`T`</td>
+                                                                        <td>`T`</td>
+                                                                        <td>`T`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`T`</td>
+                                                                        <td>`F`</td>
+                                                                        <td>`T`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`F`</td>
+                                                                        <td>`T`</td>
+                                                                        <td>`T`</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>`F`</td>
+                                                                        <td>`F`</td>
+                                                                        <td>`F`</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
                                         </li>
-                                        <li>
-                                            <div class="table-responsive-sm">
-                                                <p>Дисјункција - `p vv q`</p>
-                                                <table class="table table-bordered table-sm">
-                                                    <tbody class="text-center">
-                                                        <tr>
-                                                            <td>`p`</td>
-                                                            <td>`q`</td>
-                                                            <td>`p vv q`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`T`</td>
-                                                            <td>`T`</td>
-                                                            <td>`T`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`T`</td>
-                                                            <td>`F`</td>
-                                                            <td>`T`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`F`</td>
-                                                            <td>`T`</td>
-                                                            <td>`T`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`F`</td>
-                                                            <td>`F`</td>
-                                                            <td>`F`</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </li>
+                                        
                                         <li>
                                             <div class="table-responsive-sm">
                                                 <p>Екслизивна дисјункција - `p o+ q`</p>
@@ -686,7 +850,7 @@
                                                         <tr>
                                                             <td>`p`</td>
                                                             <td>`q`</td>
-                                                            <td>`p 0+ q`</td>
+                                                            <td>`p o+ q`</td>
                                                         </tr>
                                                         <tr>
                                                             <td>`T`</td>
@@ -779,6 +943,9 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+                                        </li>
+                                        <li>
+                                            Сложениот логички исказ е остварлив ако постојат вредности на вистината на неговите променливи што исказот го прави вистинит. 
                                         </li>
                                     </ul>
                                 </div>                    
