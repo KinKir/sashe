@@ -22,13 +22,13 @@
                 async></script>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-        <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
-        <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-        <link rel="icon" href="../assets/img/icon/favicon.ico">
-        <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
         <meta name="theme-color" content="#563d7c">
 
         <!-- Font Awesome JS -->
@@ -257,12 +257,204 @@
 
                 <!-- main -->
                 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
-                    <p class=" bd-lead">
-
-                    </p>
-    
                     <!-- Propositional Logic -->
+
+                    <p>
+                        <strong>Вежба 4.</strong>  Да се провери дали следните исказни формули се задоволиви:<br>
+                            а) `(p vv q) -> (not p ^^ r) vv not q`;<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Исказот го запишуваме како исказна функција: `alpha: ubrace(p vv q)_(beta) -> ubrace((not p ^^ r) vv not q)_(gamma)` каде,<br>
+                                        `tau(alpha) = TT`&nbsp;ако:<br>
+                                        `tau(beta) = TT` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = _|_`; или <br>
+                                        Нека `tau(beta)= _|_` и `tau(gamma) = TT`<br>
+                                        Од `tau(beta)=_|_` следи `tau(p)=_|_` и `tau(q)=_|_`<br>
+                                        Ако се замени во `gamma` се добива вредноста на `r`:<br>
+                                        `tau((not p ^^ r) vv not q) = TT`<br>
+                                        `tau((TT ^^ r) vv TT) = TT`<br>
+                                        Од замената се гледа дека за која било вредност на `r`, `tau(gamma)=TT`, па една вредност на исказните променливи за кои 
+                                        формулата прима вредност `Т` е:<br>
+                                        `tau(p) = _|_`, `tau(q) = _|_` и `tau(r) = T`<br>
+                                        Следува формулата е задоволива.
+                                    </p>
+                                </div>
+                            </details>
+                            б) `q harr (((not p vv not q) ^^ not r) -> r`;<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Исказот го запишуваме како исказна функција: `alpha: q harr ubrace(((not p vv not q) ^^ r) -> r)_(beta)` каде,<br>
+                                            `tau(alpha) = TT`&nbsp;ако:<br>
+                                            `tau(q) = TT` и `tau(beta) = TT`; или<br>
+                                            `tau(q) = _|_` и `tau(beta) = _|_`;<br>
+                                            Нека `tau(q)= _|_` и `tau(beta) = _|_`<br>
+                                            Од `tau(beta)=_|_` следи `tau((not p vv not q) ^^ not r) = TT` и `tau(r)=_|_`<br>
+                                            Ако за вредностите `q` и `r`се замени во `tau((not p vv not q) ^^ not r) = TT` се добива дека p може да прими 
+                                            било која вредност, па една вредност на исказните променливи за кои формулата прима вредност `ТT` е::<br>
+                                            `tau(p) = TT`, `tau(q)=_|_` и `tau(r)=_|_`<br>
+                                            Следува формулата е задоволива.
+                                    </p>
+                                </div>
+                            </details>
+                            в) `(not p vv (q ^^ s)) vv p harr (not s vv not p)`.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        а)
+                                        <div class="table-responsive-sm">
+                                                    <table class="table table-bordered table-sm">
+                                                        <tbody class="text-center">
+                                                            <tr>
+                                                                <td>`p`</td>
+                                                                <td>`q`</td>
+                                                                <td>`r`</td>
+                                                                <td>`p -> q`</td>
+                                                                <td>`q -> r`</td>
+                                                                <td>`(p -> q) ^^ (q -> r)`</td>
+                                                                <td>`p -> r`</td>
+                                                                <td>`(p -> q) ^^ (q -> r) -> (p -> r)`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`F`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                                <td>`T`</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                        </div> 
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                    </p>
+
+                    <p>
+                        <strong>Вежба 5.</strong>  Да се утврдат вредности за `p`, `q` и `r` така што исказната формула:<br>
+                            а) `alpha: ((p vv q) -> r) harr (p -> r) vv (q -> r)`;<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Исказот го запишуваме како исказна функција: `alpha: ubrace(p vv q)_(beta) -> ubrace((not p ^^ r) vv not q)_(gamma)` каде,<br>
+                                        `tau(alpha) = TT`&nbsp;ако:<br>
+                                        `tau(beta) = TT` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = TT`; или<br>
+                                        `tau(beta) = _|_` и `tau(gamma) = _|_`; или <br>
+                                        Нека `tau(beta)= _|_` и `tau(gamma) = TT`<br>
+                                        Од `tau(beta)=_|_` следи `tau(p)=_|_` и `tau(q)=_|_`<br>
+                                        Ако се замени во `gamma` се добива вредноста на `r`:<br>
+                                        `tau((not p ^^ r) vv not q) = TT`<br>
+                                        `tau((TT ^^ r) vv TT) = TT`<br>
+                                        Од замената се гледа дека за која било вредност на `r`, `tau(gamma)=TT`, па една вредност на исказните променливи за кои 
+                                        формулата прима вредност `Т` е:<br>
+                                        `tau(p) = _|_`, `tau(q) = _|_` и `tau(r) = T`<br>
+                                        Следува формулата е задоволива.
+                                    </p>
+                                </div>
+                            </details>
+                    </p>
+
+                    <h3>
+                        Тавтологија
+                    </h3>
+
+                    <p>
+                        <strong>Вежба 1.</strong> Дали се тавтологии исказните формули:<br>
+                            а) `p -> q harr not p vv q`;<br>
+                            b) `(p -> q) -> p) -> p`;<br>
+                            c) `(p -> q) -> ((p -> r) -> (p -> (q ^^ r)))
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                       
+                                    </p>
+                                </div>
+                            </details>
+                    </p>
     
                     <h3>
                         Преведување на реченици од говорниот јазик
