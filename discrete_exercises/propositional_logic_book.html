@@ -407,19 +407,19 @@
 
                     <!-- Exercise 6 -->
                     <p id='ex6'>                                 
-                        <strong>Вежба 6.</strong> Suppose that Smartphone A has 256 MB RAM and 32 GB ROM, and the resolution of its camera is 8 MP; 
-                        Smartphone B has 288 MB RAM and 64 GB ROM, and the resolution of its camera is 4 MP; and Smartphone C has 128 MB RAM and 32 GB ROM, 
-                        and the resolution of its camera is 5 MP. Determine the truth value of each of these propositions<br>
-                        a) Smartphone B has the most RAM of these three smartphones.<br>
-                        b) Smartphone C has more ROM or a higher resolution camera than Smartphone B.<br>
-                        c) Smartphone B has more RAM, more ROM, and a higher resolution camera than Smartphone A<br>
-                        d) If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.<br>
-                        e) Smartphone A has more RAM than Smartphone B if and only if Smartphone B has more RAM than Smartphone A.
+                        <strong>Вежба 6.</strong> Да претпоставиме дека смартфонот A има 256 MB RAM и 32 GB ROM, а резолуцијата на неговата камера е 8 MP; 
+                        Смартфонот B има 288 MB RAM и 64 GB ROM, а резолуцијата на неговата камера е 4 MP; и смартфонот C има 128 MB RAM и 32 GB ROM, 
+                        а резолуцијата на неговата камера е 5 MP. Одредете ја вредноста на вистиноста за секој од исказите:<br>
+                        a) Смартфонот B има најголем RAM од сите три смартфони.<br>
+                        b) Смартфонот C има поголем ROM или поголема резолуција од смартфонот B.<br>
+                        c) Смартфонот B има повеќе RAM, повеќе ROM, и поголема резолуција од смартфонот A<br>
+                        d) Ако смартфонот B има повеќе RAM и повеќе ROM отколу смартфонот C, тогаш тојисто така има поголема резолуција.<br>
+                        e) Смартфонот A има повеќе RAM од смартфонот B ако и само ако смартфонот B има повеќе RAM отколу смартфонот A.
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div>
                                 <p>
-                                    a) Станува збор за исказ `p`: Smartphone B has the most RAM of these three smartphones.<br>
+                                    a) Станува збор за исказ `p`: Смартфонот B има најголем RAM од трите смартфони.<br>
                                     `T` ( 288 MB> 256 > 128MB)
                                 </p>
                                 <p>
@@ -1672,6 +1672,597 @@
                     </p>
                     <!-- /Exercise 31 -->
 
+                    <!-- Exercise 32 -->
+                    <p id='ex32'>                                 
+                        <strong>Вежба 32.</strong>  Да се конструира табела на вредности на вистинитост за следните искази:<br>
+                        a) `p -> not p`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=3>Табела a</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`not p`</td>
+                                                <td>`p -> not p`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                        b) `p harr not p`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=3>Табела b</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`not p`</td>
+                                                <td>`p harr not p`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                        c) `p o+ (p vv q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=5>Табела c</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`q`</td>
+                                                <td>`p vv q`</td>
+                                                <td>`p o+ (p vv q)`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                        d) `(p ^^ q) ->  (p vv q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=5>Табела d</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`q`</td>
+                                                <td>`p ^^ q`</td>
+                                                <td>`p vv q`</td>
+                                                <td>`(p vv q) ->  (p ^^ q)`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                        e) `(q -> not p) harr (p harr q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=6>Табела e</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`q`</td>
+                                                <td>`not p`</td>
+                                                <td>`q -> not p`</td>
+                                                <td>`p harr q`</td>
+                                                <td>`(q -> not p) harr (p harr q)`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                        f) `(p harr q) o+ (p harr not q)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <div class="table-responsive-sm">
+                                    <table class="table table-bordered table-sm">
+                                        <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=6>Табела f</td>
+                                                </tr>                                                    
+                                            </thead>
+                                            <tr>
+                                                <td>`p`</td>
+                                                <td>`q`</td>
+                                                <td>`not q`</td>
+                                                <td>`p harr q`</td>
+                                                <td>`p harr not q`</td>
+                                                <td>`(p harr q) o+ (p harr not q)`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                            <tr>
+                                                <td>`_|_`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                                <td>`TT`</td>
+                                                <td>`_|_`</td>
+                                                <td>`TT`</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </details>
+                    </p>
+                    <!-- /Exercise 32 -->
+
+                    <!-- Exercise 33 -->
+                    <p id='ex33'>                                 
+                            <strong>Вежба 33.</strong>  Да се конструира табела на вредности на вистинитост за следните искази:<br>
+                            a) `(p vv q) -> (p o+ q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Табела 33</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p vv q`</td>
+                                                    <td>`p o+ q`</td>
+                                                    <td>`(p vv q) -> (p o+ q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                            b) `(p o+ q) -> (p ^^ q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=3>Табела b</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`not p`</td>
+                                                    <td>`p harr not p`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                            c) `(p vv q) o+ (p ^^ q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Табела c</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p vv q`</td>
+                                                    <td>`p o+ (p vv q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                            d) `(p harr q) o+  (not p harr q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Табела d</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`p ^^ q`</td>
+                                                    <td>`p vv q`</td>
+                                                    <td>`(p vv q) ->  (p ^^ q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                            e) `(p harr q) o+ (not p -> not r)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Табела e</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`not p`</td>
+                                                    <td>`q -> not p`</td>
+                                                    <td>`p harr q`</td>
+                                                    <td>`(q -> not p) harr (p harr q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                            f) `(p o+ q) -> (p -> not q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=6>Табела f</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`p`</td>
+                                                    <td>`q`</td>
+                                                    <td>`not q`</td>
+                                                    <td>`p harr q`</td>
+                                                    <td>`p harr not q`</td>
+                                                    <td>`(p harr q) o+ (p harr not q)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`_|_`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`TT`</td>
+                                                    <td>`_|_`</td>
+                                                    <td>`TT`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </details>
+                    </p>
+                    <!-- /Exercise 32 -->
+
+                    <!-- Exercise 50 -->
+                    <p id='ex50'>                                 
+                        <strong>Вежба 50.</strong>  Една стара сицилијанска легенда вели дека берберот во еден далечен град до кој се стасува само 
+                        патувајки преку опасен планински пат ги бричи оние луѓе и само оние луѓе кои не се бричат сами. Дали таков бербер постои?
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Приказната треба да се преведе во логички искази.Да претпоставиме дека берберот не се бричи сам. Тогаш тој припаѓа на оние луѓе кои ги бричи берберот. Ако берберот 
+                                    го бричи берберот значи се бричи сам тоест припаѓа на оние луѓе кои не ги бричи берберот. Значи овој бербер и се бричи сам 
+                                    и не се бричи што е контрадикција. Заклучок таков бербер не постои.
+                                    Берберот не може да се бричи себе си бидејќи ги бричи само оние кои не се бричат сами. Од тука ако тој се бричи сам тогаш не е 
+                                    бербер. Од друга страна пак ако не се бричи сам, тогаш е во групата на луѓе кој ги бричи берберот и од тука како бербер мора да 
+                                    се обричи сам. 
+                                </p>
+                                <p>
+                                    `p`: берберот бричи луѓе<br>
+                                    `q`: луѓе кои не се бричат сами
+                                </p>
+                                <p>
+                                    Сега исказот „Берберот ги бричи оние луѓе и само оние луѓе кои не се бричат сами“.
+                                </p>
+                                <p>
+                                    `p harr q`
+                                </p>
+                            </details
+                        </details>
+                    </p>
+                    <!-- /Exercise 50 -->
+
 
 
                     
@@ -1848,6 +2439,10 @@
                                         </div>
                                     </li>
                                     <li>
+                                        `q -> p` - се нарекува конверзија од исказот `p -> q`<br>
+                                        `` -
+                                    </li>
+                                    <li>
                                         <div class="table-responsive-sm">
                                             <p>Еквивалентност - `p harr q`</p>
                                             <table class="table table-bordered table-sm">
@@ -1880,6 +2475,11 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                    </li>
+                                    <li>
+                                        `q -> p` - се нарекува конверзија од исказот `p -> q`<br>
+                                        `not q -> not p` - се нарекува контрапозитив од исказот `p -> q`<br>
+                                        `not p -> not q` - се нарекува инверзија од изразот `p -> q`
                                     </li>
                                 </ul>
                             </div>                    

@@ -569,9 +569,14 @@
                                     искази кои содржат импликација и еквиваленција. 
                                 </p>
 
-                                <div class="table-responsive-sm">
+                                <div id= 'logical_equivalences'class="table-responsive-sm">
                                     <table class="table table-bordered table-sm">
-                                        <tbody class="text-center">
+                                        <tbody id='tb6' class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=4>Табела 6</td>
+                                                </tr>                                                    
+                                            </thead>
                                             <tr>
                                                 <td colspan='2'>Логички еквиваленции</td>
                                             </tr>
@@ -626,36 +631,50 @@
                                 <div class='row'>
                                     <div class='col-md-6'>
                                             <div class="table-responsive-sm">
-                                                <table class="table table-bordered table-sm">
+                                                <table id='tb7' class="table table-bordered table-sm">
                                                     <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=4>Табела 7</td>
+                                                            </tr>                                                    
+                                                        </thead>
                                                         <tr>
-                                                            <td>Логички еквиваленции кои содржат условни искази</td>
+                                                            <td  colspan=2>Логички еквиваленции кои содржат условни искази</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>1</td>
                                                             <td>`p -> q -= not p vv q`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>2</td>
                                                             <td>`p -> q -= not q -> not p`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>3</td>
                                                             <td>`p vv q -= not p -> q`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>4</td>
                                                             <td>`p ^^ q -= not (p -> not q)`</td>
                                                         </tr>
-                                                        <tr>
+                                                        <tr id='tb7tr5'>
+                                                            <td>5</td>
                                                             <td>`not (p -> q) -= p ^^ not q`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>6</td>
                                                             <td>`(p -> q) ^^ (p -> r) -= p -> (q ^^ r)`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>7</td>
                                                             <td>`(p -> r) ^^ (q -> r) -= (p vv q) -> r`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>8</td>
                                                             <td>`(p -> q) vv (p -> r) -= p -> (q vv r)`</td>
                                                         </tr>
                                                         <tr>
+                                                            <td>9</td>
                                                             <td>`(p -> r) vv (q -> r) -= (p ^^ q) -> r`</td>
                                                         </tr>
                                                     </tbody>
@@ -666,6 +685,11 @@
                                         <div class="table-responsive-sm">
                                             <table class="table table-bordered table-sm">
                                                 <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=4>Табела 8</td>
+                                                        </tr>                                                    
+                                                    </thead>
                                                     <tr>
                                                         <td>Логички еквиваленции кои содржат условни искази</td>
                                                     </tr>
