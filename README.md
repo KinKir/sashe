@@ -4,7 +4,7 @@
 
 - https://github.com/itaseski/sashe
 - click button (green) Clone or Download
-- on pull-down menu click Open in Desctop
+- on pull-down menu click Open in Desktop
 
 If you have installed github Desktop, folder sashe will be greated in C:..\Documents\GitHub
 
