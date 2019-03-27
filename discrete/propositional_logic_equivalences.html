@@ -60,7 +60,7 @@
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                        <a class="nav-link href="propositional_logic.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../discrete_exercises/propositional_logic_equivalences.html">
@@ -70,7 +70,7 @@
                             Вежби
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">
                             <span>
                                 <i class="fas fa-book"></i>
@@ -121,7 +121,7 @@
                                         Примена на исказна логика
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active bd-sidenav-active">
                                     <a href="propositional_logic_equivalences.html">
                                         Исказни еквиваленции
                                     </a>
@@ -151,30 +151,20 @@
                 <div class="d-none d-xl-block col-xl-2 bd-toc">
                     <ul class="section-nav">
                         <li class="toc-entry toc-h2">
-                            <a href="#Propositional Equivalences">Исказни еквиваленции</a>
+                            <a href="#intro">Вовед</a>
                             <ul>
                                 <li class="toc-entry toc-h3">
-                                    <a href="#Propositions">Искази</a>
+                                    <a href="#Logical Equivalences">Логичка еквиваленција</a>
                                 </li>
                                 <li class="toc-entry toc-h3">
-                                    <a href="#negation">Негација</a>
+                                    <a href="#Using De Morgan’s Laws">Употреба на законте на Де Морган</a>
                                 </li>
                                 <li class="toc-entry toc-h3">
-                                    <a href="#conjunction">Конјукција</a>
+                                    <a href="#Constructing New Logical Equivalences">Формирање на нови логички еквиваленции</a>
                                 </li>
                                 <li class="toc-entry toc-h3">
-                                    <a href="#disjunction">Дисјукција</a>
+                                    <a href="#Propositional Satisfiability">Остварливост на исказот</a>
                                 </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#exclusive or">Екслузивно или</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#implication">Импликација</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#Logic and Bit Operations">Операции над битови</a>
-                                </li>
-                                
                             </ul>
                         </li>
                     </ul>
@@ -183,19 +173,19 @@
                 <!-- main -->
                 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
                     <!-- intro -->
-                    <div id='Propositional Equivalences' class='row'>
+                    <div id='intro' class='row'>
                         <div class='col-md-12'>
                             <p class="nf">
                                 Еден од важните чекори во математичката аргументација (расправа, изнесување на образложенија) е замената на изказ со друг исказ со 
                                 еднаква вредност на вистинитост. Поради ова, методите кои формираат искази со иста вредност на вистинитост како и појдовниот сложен исказ 
-                                се користат многу при изградбата на математичка аргументација.
+                                се користат многу при градба на математички аргумени.
                             </p>
                         </div>
                     </div>
                     <!-- intro -->                    
     
-                    <!-- Introduction -->
-                    <div id='Introduction' class='row'>
+                    <!-- Logical Equivalences -->
+                    <div id='Logical Equivalences' class='row'>
                         <div class='col-md-12'>
                             <p>
                                 <strong>Напомена:</strong> терминот „сложен исказ“ се однесува на исказ формиран од исказни променливи со употреба на логички сврзнице, како на 
@@ -213,9 +203,9 @@
                             <div id="def_tautology" class="alert alert-success swatch-purple" role="alert">
                                 <h4 class="alert-heading">Дефиниција 1</h4>
                                 <p>
-                                    Сложениот исказ кој секогаш е вистина, без разлика какви се вредностите на вистионост на исказните променливи кои се појавуваат во него, се нарекува 
-                                    тавтологија. Сложениот исказ кој секогаш е неточен се нарекува контрадикција. Сложениот исказ кој не е ниту тавтологија, ниту е контрадикторност се 
-                                    нарекува непредвидливост.
+                                    Сложениот исказ кој секогаш е вистина, без разлика какви се вредностите на вистионост на исказните променливи кои се појавуваат 
+                                    во него, се нарекува  тавтологија. Сложениот исказ кој секогаш е неточен се нарекува контрадикција. Сложениот исказ кој не е ниту 
+                                    тавтологија, ниту е контрадикторност се нарекува непредвидливост.
                                 </p>
                             </div>
 
@@ -228,6 +218,11 @@
                                     <div class="table-responsive-sm">
                                         <table class="table table-bordered table-sm">
                                             <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=4>Табела 1</td>
+                                                    </tr>                                                    
+                                                </thead>
                                                 <tr>
                                                     <td>`p`</td>
                                                     <td>`not p`</td>
@@ -275,7 +270,7 @@
                                 <div id="def2" class="alert alert-success swatch-purple" role="alert">
                                     <h4 class="alert-heading">Дефиниција 2</h4>
                                     <p>
-                                        Сложениот исказ `p` и `q` се нарекува логички еквивалент ако `p -> q` е тавтологија  и се означува `p -=q`. 
+                                        Сложениот исказ `p` и `q` се нарекува логички еквивалент ако `p harr q` е тавтологија  и се означува `p -=q`. 
                                     </p>                            
                                 </div>  
 
@@ -289,8 +284,13 @@
                                         <div class="table-responsive-sm">
                                             <table class="table table-bordered table-sm">
                                                 <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=2>Табела 2</td>
+                                                        </tr>                                                    
+                                                    </thead>
                                                     <tr>
-                                                        <td>Закон на ДеМорган</td>
+                                                        <td>Закон на Де Морган</td>
                                                     </tr>
                                                     <tr>
                                                         <td>`not(p ^^ q) -= not p vv not q`</td>
@@ -307,7 +307,7 @@
                                             Еден од начите за одредување дали два сложени искази се еквивалентни е да се користи табелата на вредности на вистинитост. 
                                             И уште повеќе, сложените искази `p` и `q` се еквивалентни ако и само ако колоните кои ги даваат вредностите на вистиност <strong>точно</strong> 
                                             се слагаат.  Примерот 2 го илустрира методот за воспоставување на логичката еквивалентност. Имено, онаа на исказот `not (p vv q)` со исказот 
-                                            `not p ^ not q`. Оваа логичка еквивалентност е една од двата закони на ДеМорган (De Morgan) покажана во табелата. 
+                                            `not p ^^ not q`. Оваа логичка еквивалентност е една од двата закони на Де Морган (De Morgan) покажана во табелата. 
                                         </p> 
                                     </div>
                                 </div>
@@ -333,6 +333,11 @@
                                 <div class="table-responsive-sm">
                                     <table class="table table-bordered table-sm">
                                         <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=7>Табела 3</td>
+                                                </tr>                                                    
+                                            </thead>
                                             <tr>
                                                 <td>`p`</td>
                                                 <td>`q`</td>
@@ -387,7 +392,7 @@
                                 </p>
 
                                 <p>
-                                    Да се покаже дека `p -> q` и `not p vv q`.                            
+                                    Да се покаже дека `p -> q` и `not p vv q` се логички еквиваленти.                            
                                 </p>
 
                                 <p>
@@ -403,6 +408,11 @@
                                 <div class="table-responsive-sm">
                                     <table class="table table-bordered table-sm">
                                         <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=5>Табела 4</td>
+                                                </tr>                                                    
+                                            </thead>
                                             <tr>
                                                 <td>`p`</td>
                                                 <td>`q`</td>
@@ -474,6 +484,11 @@
                                 <div class="table-responsive-sm">
                                     <table class="table table-bordered table-sm">
                                         <tbody class="text-center">
+                                            <thead class='swatch-purple'>
+                                                <tr>
+                                                    <td colspan=8>Табела 5</td>
+                                                </tr>                                                    
+                                            </thead>
                                             <tr>
                                                 <td>`p`</td>
                                                 <td>`q`</td>
@@ -727,7 +742,7 @@
                                 </p>
 
                                 <p>
-                                    Исто така треба да се напомене дека, зконот на ДеМорган се проширува:
+                                    Исто така треба да се напомене дека, зконот на Де Морган се проширува:
                                 </p>
 
                                 <p class=' text-center nf'>
@@ -747,14 +762,14 @@
                     <!-- /Logical Equivalences -->
 
                     <!-- Using De Morgan’s Laws -->
-                    <div id='Logical Equivalences' class='row'>
+                    <div id='Using De Morgan’s Laws' class='row'>
                         <div class='col-md-12'>
                             <h5>
-                                Употреба на ДеМоргановите закони
+                                Употреба на Де Моргановите закони
                             </h5>
 
                             <p>
-                                Двете логички еквиваленции познати како ДеМорганови закони се особено важни. Тие кажуваат како да се изврши негација на 
+                                Двете логички еквиваленции познати како Де Морганови закони се особено важни. Тие кажуваат како да се изврши негација на 
                                 конјунција и како да се изврши негација на дисјункција. Еквиваленцијата `not (p vv q) -= not p ^^ not q` кажува дека негација 
                                 на дисјункција се формира правејки дисјункција од негациите од исказите.
                             </p>
@@ -920,18 +935,16 @@
 
                     <!-- Propositional Satisfiability -->
                     <div id='Propositional Satisfiability' class='row'>
-                            <div class='col-md-12 card'>
+                            <div class='col-md-12'>
 
                                 <h5>
-                                    Остварливос на исказот
+                                    Остварливост на исказот
                                 </h5>
 
                                 <p>
-                                    Сложениот логички исказ е остварлив ако постојат вредности на вистината на неговите променливи што исказот го прави вистинит. Кога такви задачи не постојат, односно кога соединението е лошо
-                                </p>
-    
-                                <p>
-                                    Кога сложениот исказ е невистинит за сите доделени вредности на вистиност на променливите велиме дека сложениот исказ не е остварлив.                          
+                                    Сложениот логички исказ е остварлив ако постојат вредности на вистината на неговите променливи што исказот го прави вистинит. 
+                                    Кога такви вредности на променливите не постојат, односно кога сложениот исказ е невистинит за сите доделени вредности на вистиност на 
+                                    променливите велиме дека сложениот исказ не е остварлив.                          
                                 </p>
     
                                 <p>
@@ -939,12 +952,13 @@
                                 </p>
     
                                 <p>
-                                    Кога ќе најдеме одреден сет на вредности на вистиност што сложениот исказ го прават вистинит покажуваме дека сложениот исказ е остварлив а сетот на 
-                                    вредностите претставува решение на сложениот исказ.                           
+                                    Кога ќе најдеме одреден сет на вредности на вистиност што сложениот исказ го прават вистинит покажуваме дека сложениот исказ е остварлив а 
+                                    сетот на вредностите претставува решение на сложениот исказ.                           
                                 </p>
     
                                 <p>
-                                    Иако секогаш можеме да користиме табела за вистинитост за да утврдиме дали сложениот исказ е остварлив, често е поефикасно да не го правиме тоа.
+                                    Иако секогаш можеме да користиме табела за вистинитост за да утврдиме дали сложениот исказ е остварлив, често е поефикасно да не го правиме 
+                                    тоа.
                                 </p>
 
                                 <p id="ex9">
@@ -981,20 +995,20 @@
 
                                 <p>
                                     Наместо да ја користиме табелата на вистинитост за да се реши овој проблем, ќе судиме за вредностите на вистинитост. 
-                                    Може да се покаже дека <span class='nf'>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p)`</span> е вистинит кога трите променливи 
-                                    <span class='nf'>`p, q`</span> и <span class='nf'>`r`</span></span> имаат еднакви вредности на вистиноста. Од тука,
+                                    Може да се покаже дека <strong>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p)`</strong> е вистинит кога трите променливи 
+                                        <strong>>`p, q`</strong> и <strong>`r`</strong> имаат еднакви вредности на вистиноста. Од тука,
                                     сложениот исказ е остварлив.
                                 <p>
-                                    Слично, може да се покаже дека исказот <span class='nf'>`(p vv q vv r) ^^ (not p ∨ not q vv not r) ^^ (r vv not p)`</span> 
-                                    е вистинит кога барем една од променливите <span class='nf'>`p, q`</span> и <span class='nf'>`r`</span></span> е вистинита 
+                                    Слично, може да се покаже дека исказот <strong>`(p vv q vv r) ^^ (not p ∨ not q vv not r) ^^ (r vv not p)`</strong> 
+                                    е вистинит кога барем една од променливите <strong>`p, q`</strong> и <strong>`r`</strong> е вистинита 
                                     и барем една е невистинита. имаат еднакви вредности на вистиноста. Од тука,
                                     сложениот исказ е остварлив. Од тука, сложениот исказ е остварлив.
                                 </p>
 
                                 <p>
-                                    И конечно, може да се покаже дека за да исказот <span class='nf'>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p) ^^ (p vv q vv r) ^^ 
-                                        (not p vv not q vv not r)`</span> биде вистинит двата изрази <span class='nf'>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p)</span> и 
-                                        изразот <span class='nf'>`(p vv q vv r) ^^ (not p vv not q vv not r)`</span> мора да се вистинити. За да првиот израз биде вистинит трите 
+                                    И конечно, може да се покаже дека за да исказот <strong>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p) ^^ (p vv q vv r) ^^ 
+                                        (not p vv not q vv not r)`</strong> биде вистинит, двата изрази <strong>`(p vv not q) ^^ (q ∨ not r) ^^ (r vv not p)`</strong> и 
+                                        изразот <strong>`(p vv q vv r) ^^ (not p vv not q vv not r)`</strong> мора да се вистинити. За да првиот израз биде вистинит трите 
                                         променливи треба да имаат еднакви вредности на вистиност а за да вторит израз биде вистинит најмалку една променлива треб ада биде 
                                         вистинита и најмаку една невистинита. Но овие барања се к0нтрадикторни  така да сложениот израз е неостварлив.
                                 </p>

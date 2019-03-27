@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mayhematics">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="VS Code 2019">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <!-- material icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete/propositional_logic-app.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="propositional_logic_university.html">
+                            <span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic_book.html">
+                            <span>
+                                <i class="fas fa-book"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic_book.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li>
+                                    <a href="propositional_logic_book.html">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_book_1_2.html">
+                                        Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic_book_1_3.html">
+                                        Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Предикати и квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="functions_inverse.html">
+                                            Вгнездени квантификатори
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Исказно сметање</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex1">Вежба 1</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex2">Вежба 2</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex3">Вежба 3</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex4">Вежба 4</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex5">Вежба 5</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex6">Вежба 6</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex7">Вежба 7</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex8">Вежба 8</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex9">Вежба 9</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex10">Вежба 10</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex11">Вежба 11</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                    <div id='Translating' class='row'>
+                        <div class='col-md-12'>
+                    
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>                               
+                            <strong>Вежба 1.</strong>  Со употреба на табела на вредности на вистиноста да се верифицираат еквиваленциите<br>
+                            а) `p ^^ TT -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела a</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p ^^ TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p ^^ TT` е идентична со првата колона `p`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                                
+                            </details>
+                            b) `p vv _|_ -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела b</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p vv _|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p vv _|_` е идентична со првата колона `p`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                            c) `p ^^ _|_ -= _|_`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела c</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p ^^ _|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p ^^ _|_` е `_|_`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                            d) `p vv TT -= TT`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела d</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p vv TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p vv TT` е `TT`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                            e) `p vv p -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела e</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p vv p`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p vvp` е идентична со `p`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                            f) `p ^^ p -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела f</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`p ^^ p`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки втората колонa `p vvp` е идентична со `p`.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+                   
+                        <!-- Exercise 2 -->
+                        <p id='ex2'>
+                            <strong>Вежба 2.</strong> Покажи дека `not(not p)` и `p` се логички еквивалент:<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row'>
+                                        <div class='col-md-3'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=6>Табела 2</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`not p`</td>
+                                                            <td>`not(not p)`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class='col-md-9'>
+                                            <p>
+                                                Еквиваленцијата е валидна бидејки третата колонa `not(not p)` е идентична со `p`.
+                                            </p>
+    
+                                        </div>
+                                    </div>
+                                </details>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3 -->
+                        <p id='ex3'>                                 
+                            <strong>Вежба 3.</strong> Да се преведе реченицата во логички исказ:<br>
+                            Можете да дипломирате само ако сте ги положиле сите испити и ако не му должите пари на факултетот 
+                            или ако немате вратено книга. Одговорот да се прикаже користејки ги исказните променливи:<br>
+                            `g`: Може да дипломирате<br>
+                            `m`: Должите пари на факултетот<br>
+                            `r`: Сте ги положиле сите испити<br>
+                            `y`: Имате не вратена книга.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `(r ^^ not m ^^ not y) -> g`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>                                 
+                            <strong>Вежба 4.</strong> Да се преведе реченицата во логички исказ:<br>
+                            За да користите без жицен интернет на аеродром мора да платите днева карта или да сте претплатник. 
+                            Одговорот да се прикаже користејки ги исказните променливи:<br>
+                            `w`: Можете да користите безичен интернет на аеродром<br>
+                            `d`: Имате платено дневна карта<br>
+                            `s`: Вие сте претплатник насервисот.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `(d vv s) -> w`
+                                    </p>
+                                    <p>
+                                        b) Кај пекарската дванаестка нема 13 пецива.
+                                    </p>
+                                    <p>
+                                        c) Гордана не испраќа повеќе од 100 пораки секој ден.
+                                    </p>
+                                    <p>
+                                        d) 121 не е идеален квадрат.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>                                 
+                            <strong>Вежба 5.</strong> Да се преведе реченицата во логички исказ:<br>
+                            Може да се кандидирате за претседател ако сте постар од 45 години ако сте роден во Македонија или ако 
+                            во моментот на вашето раѓање вашите родители биле граѓани на Македонија и ако сте живееле во Македонија најмалку
+                            14 години. Одговорот да се прикаже користејки ги исказните променливи:<br>
+                            `e`: Можете да се кандидирате за претседател.<br>
+                            `a`: Имате најмалку 45 години.<br>
+                            `b`: Роден сте во Македонија<br>
+                            `p`: Во времето на вашето раѓање двата родители биле граѓани на Македонија<br>
+                            `r`: Сте живееле најмалку 14 години во Македонија.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `(a ^^ (b vv p) ^^ r) -> e`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id='ex6'>                                 
+                            <strong>Вежба 6.</strong> Да се преведе реченицата во логички исказ:<br>
+                            Може да го надградите вашиот оперативен систем само ако имате процесор на 32 битен процесор кој работи на 1GHz или повеќе, 
+                            најмалку 1GB RAM и 16 GB слободен диск простор или кој работи на 2GHz или повеќе и имате најмалку 2GB RAM и најмалку 32 ГБ 
+                            sloboden disk prostor. Одговорот да се прикаже користејки ги исказните променливи:<br>
+                            `u`: Можете да го надградите вашиот оперативен систем.<br>
+                            `b_32`: Имаш 32 битен процесор.<br>
+                            `b_64`: Имаш 64 битен процесор<br>
+                            `g_1`: Процесорот работи на 1GHz или повеќе.<br>
+                            `g_2`: Процесорот работи на 2GHz или повеќе.<br>
+                            `r_1`: Процесорот има најмалку 1 GB RAM.<br>
+                            `r_2`: Процесорот има најмалку 2 GB RAM.<br>
+                            `h_16`: 16 GB слободен диск простор.<br>
+                            `h_32`: 16 GB слободен диск простор.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `(b_32 ^^ g_1 ^^ r_1 ^^ h_16 ) vv (b_64 ^^g_2 ^^ r_2 ^^ h_32) -> u`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7 -->
+                        <p id='ex7'>                                 
+                            <strong>Вежба 7.</strong> Да се претстават следните системски спецификации користејки ги исказите `p` „Пораката е скенирана за вируси“ 
+                            и `q` „Пораката е испратена од непознат систем“.<br>
+                            a) „Пораката се скенира секогаш кога се испраќа од непознат систем.<br>
+                            b) „Пораката е испратена од непозната систем и не е скенирана за вируси“.<br>
+                            c) „Пораката треба да се скенира за вируси секoгаш кога е испратена од непознат систем“<br>
+                            d) „Кога пораката не е испратена од непознат систем не се скенира за вируси.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        a) `q -> p`
+                                    </p>
+                                    <p>
+                                        b) `q ^^ not p`
+                                    </p>
+                                    <p>
+                                        c) `q -> p`
+                                    </p>
+                                    <p>
+                                        d) `not q -> not p`  
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 7 -->
+
+                        <!-- Exercise 8 -->
+                        <p id='ex8'>                                 
+                            <strong>Вежба 8.</strong> Да се претстават следните системски спецификации користејки ги исказите `p` „Корисникот внел валидна лозика“ 
+                            , `q` „Пристапот е дозволен.“ и `r` „Корисникот има платено претплата“.<br>
+                            a) Корисникот има платено претплата но нема внесено валидна лозика.<br>
+                            b) Пристапот се дозволува кога корисникот има платено претплата и внесено валидна лозинка.<br>
+                            c) Пристапот не се дозволува ако корисникот нема платено претплата.<br>
+                            d) Ако корисникот има платено претплата и внесе погрешна лозинка пристапот се дозволува
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        a) ` r ^^ not p`
+                                    </p>
+                                    <p>
+                                        b) `r ^^ p -> q`
+                                    </p>
+                                    <p>
+                                        c) `not r -> not q`
+                                    </p>
+                                    <p>
+                                        d) `(r ^^ not p) -> q`
+                                    </p>                    
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- Exercise 8 -->
+
+                        <!-- Exercise 9 -->
+                        <p id='ex9'>                                 
+                            <strong>Вежба 9.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Системот е во состојба на повеќе корисници ако и само ако работи нормално. Ако системот работи нормално керналот функционира. 
+                            Керналот не функционира или системот е во состојба на прекин. Ако системот не е во состојба на повеќе корисници тогаш е во 
+                            состојба на прекин. Системот не е во состојба на прекин.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека:.
+                                    </p>
+                                    <p>
+                                        `m`: системот е во состојба на повеќе корисници<br>
+                                        `n`: системот функционира нормално<br>
+                                        `k`: керналот функционира<br>
+                                        `i`: системот е во состојба на прекин 
+                                    </p>
+                                    <p>
+                                        `m harr n` - Системот е во состојба на повеќе корисници ако и само ако работи нормално.
+                                    </p>
+                                    <p>
+                                        `n -> k` - Ако системот работи нормално керналот функционира.
+                                    </p>
+                                    <p>
+                                        `not k vv i` - Керналот не функционира или системот е во состојба на прекин.
+                                    </p>
+                                    <p>
+                                        `not m -> i` -  Ако системот не е во состојба на повеќе корисници тогаш е во состојба на прекин.
+                                    </p>
+                                    <p>
+                                        `not i` - Системот не е во состојба на прекин.
+                                    </p>
+                                    <p>
+                                        Сите искази истовремено треба да се вистинити.
+                                    </p>
+                                    <p>
+                                        Очигледно дека за да `not i = TT` `i = _|_`. Со цел да `not m -> i` биде вистинит при `i = _|_` `not m = _|_` односно 
+                                        `m = TT`. Сега за да `m harr n` биде вистинит двата искази треба за се иста вредност на вистинитост, односно `n = TT`. И н а
+                                        крај за да `n -> k` биде вистинито при `n = t` требa `k = TT`. Ако `k = TT` и `i = _|_` исказот `not k VV i` не е вистинит. Од тука 
+                                        заклучуваме дека системот не е конзистентен.
+                                    </p>                    
+                                    <p>
+
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 9 -->
+
+                        <!-- Exercise 10 -->
+                        <p id='ex10'>                                 
+                            <strong>Вежба 10.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Секогаш кога системскиот софтвер се надградува, корисникот не може да пристапи на системот. Ако корисникот може да пристапи кон системот
+                            тогаш моше да зачувува нови фајлови. Ако корисникот не може да зачуваа нови фајлови тогаш системот не се надградува.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека:
+                                    </p>
+                                    <p>
+                                        `u`: системот се надградува
+                                    </p>
+                                    <p>
+                                        `a`: корисникот може да пристапи на системот
+                                    </p>
+                                    <p>
+                                        `s`: може да зачува нови фајлови
+                                    </p>
+                                    <p>
+                                        `u -> not a` - Секогаш кога системскиот софтвер се надградува, корисникот не може да пристапи на системот.
+                                    </p>
+                                    <p>
+                                        `a -> s` - Ако корисникот не може да зачуваа нови фајлови тогаш системот не се надградува. 
+                                    </p>
+                                    <p>
+                                        `not s -> not u` - g) Изборите се решени ако и сами ако гласовите се избројани.
+                                    </p>
+                                    <p>
+                                        Сите искази истовремено треба да се вистинити. 
+                                    </p>
+                                    <p>
+                                        Да претпоставиме, на што имамае право, дека системот се надградува односно дека `u = TT`. За да исказот `u -> not a` биде 
+                                        вистинит при `u=TT` треба `not a = TT` односно `a=_|_`. За да исказот `a -> s` биде вистинит при `a=_|_` `s` може да биде 
+                                        вистинит или невистинит. Кога `u=TT` исказот `not s -> not u` е вистинит било `s` да е вистинит или невистинит. Бидејки сите три искази 
+                                        се истовремено вистинити спецификацијата е конзистентна.
+                                    </p>           
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 10 -->
+
+                        <!-- Exercise 11 -->
+                        <p id='ex11'>                                 
+                            <strong>Вежба 11.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Рутерот може да испрати пакети до периферниот систем само ако го подржува новиот адресен простор. За да рутерот го подржува 
+                            новиот адресен простор потребно е да се инсталира последната верзија на софтверот. Рутерот може да испраќа пакети до периферниот 
+                            систем ако последната верзија на софтверот е инсталирана. Рутерот не го подржува новиот aдресен простор.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `s`: - Рутерот може да испраќа пакети до периферниот систем
+                                    </p>
+                                    <p>
+                                        `a`: - Рутерот го подржува новиот адресен простор.
+                                    </p>
+                                    <p>
+                                        `r`: - Последната верзија на софтвер е инсталирана.
+                                    </p>
+                                    <p>
+                                        `s -> a` - Рутерот може да испрати пакети до периферниот систем само ако го подржува новиот адресен простор. (Ако рутерот може да испраќа пакети до периферниот систем тогаш рутерот го подржува новиот адресен простор.)
+                                    </p>
+                                    <p>
+                                        `a -> r` - За да рутерот го подржува новиот адресен простор потребно е да се инсталира последната верзија на софтверот.(Ако рутерот го подржува новиот адресен простор најновата верзија на софтвер е инсталирана.)
+                                    </p>
+                                    <p>
+                                    `r -> s` - Рутерот може да испраќа пакети до периферниот систем ако последната верзија на софтверот е инсталирана. (Ако последната верзија на софтвер е инсталирана рутерот може да испраќа пакети до периферниот систем.)
+                                    </p>
+                                    <p>
+                                        `not a` - Рутерот не го подржува новиот aдресен простор.
+                                    </p> 
+                                    <p>
+                                        За да спецификацијата биде конзистентна сите искази истовремено треба да се вистинити. <em>Помош: Исказите на конјукција треба да се напишат така заклучокот биде со вредност `_|_`. Од тука премисата за тој исказ е еднозначно 
+                                            дефинирана како `_|_`. Исказот `not a` ни диктира наместо `a -> s` да користиме `s -> a`.
+                                        </em>
+                                    </p>      
+                                    <p>
+                                        За да исказот `not a = TT` треба `a = _|_`. За да исказот `s -> a` биде вистинит treba `s =_|_`. Ако `s = _|_`. За да исказот `r -> s` биде вистинит 
+                                        треба `r = _|_`. За да исказот `a -> r` биде вистинит треба `a=_|_` што и е. Од тоа што сите изрази се вистинити следи дека спецификацијата е конзистентна.
+
+                                    </p>     
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11 -->
+
+                        <!-- Exercise 18 -->
+                        <p id='ex18'>                                 
+                                <strong>Вежба 18.</strong> Покажи дека `p -> q` и `not q -> not p` се логички еквиваленти:
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                        <div class='row'>
+                                            <div class='col-md-6'>
+                                                <div class="table-responsive-sm">
+                                                    <table class="table table-bordered table-sm">
+                                                        <tbody class="text-center">
+                                                            <thead class='swatch-purple'>
+                                                                <tr>
+                                                                    <td colspan=6>Табела 18</td>
+                                                                </tr>                                                    
+                                                            </thead>
+                                                            <tr>
+                                                                <td>`p`</td>
+                                                                <td>`q`</td>
+                                                                <td>`not p`</td>
+                                                                <td>`not q`</td>
+                                                                <td>`p -> q`</td>
+                                                                <td>`not p -> not q`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class='col-md-6'>
+                                                <p>
+                                                    Еквиваленцијата е валидна бидејки колоната `p -> q` е идентична со колоната `not q -> not p`.
+                                                </p>
+        
+                                            </div>
+                                        </div>
+                                    
+                                        <p>
+                                            `&#x25A0`
+                                        </p>
+                                    </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 18 -->
+
+                    </div>
+                </div>
+                    
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+    </body>
+</html>
