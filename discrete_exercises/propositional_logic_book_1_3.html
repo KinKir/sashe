@@ -1302,12 +1302,10 @@
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
-                                                            <td>`TT`</td>
                                                         </tr>
                                                         <tr>
                                                             <td>`_|_`</td>
                                                             <td>`_|_`</td>
-                                                            <td>`TT`</td>
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
@@ -1340,7 +1338,7 @@
                                                         <tr>
                                                             <td>`p`</td>
                                                             <td>`q`</td>
-                                                            <td>`P ^^ q`</td>
+                                                            <td>`p ^^ q`</td>
                                                             <td>`p -> q`</td>
                                                             <td>`(p ^^ q) -> (p -> q)`</td>
                                                         </tr>
@@ -1364,13 +1362,11 @@
                                                             <td>`_|_`</td>
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
-                                                            <td>`TT`</td>
                                                         </tr>
                                                         <tr>
                                                             <td>`_|_`</td>
                                                             <td>`_|_`</td>
                                                             <td>`_|_`</td>
-                                                            <td>`TT`</td>
                                                             <td>`TT`</td>
                                                             <td>`TT`</td>
                                                         </tr>
@@ -1396,13 +1392,13 @@
                                                     <tbody class="text-center">
                                                         <thead class='swatch-purple'>
                                                             <tr>
-                                                                <td colspan=5>Табела 9d</td>
+                                                                <td colspan=5>Табела 9e</td>
                                                             </tr>                                                    
                                                         </thead>
                                                         <tr>
                                                             <td>`p`</td>
                                                             <td>`q`</td>
-                                                            <td>`P -> q`</td>
+                                                            <td>`p -> q`</td>
                                                             <td>`not(p -> q)`</td>
                                                             <td>`not (p -> q) -> p`</td>
                                                         </tr>
@@ -1450,43 +1446,248 @@
 
                         <!-- Exercise 10 -->
                         <p id='ex10'>                                 
-                            <strong>Вежба 10.</strong> Дали следните системски спецификации се конзистентни?<br>
-                            Секогаш кога системскиот софтвер се надградува, корисникот не може да пристапи на системот. Ако корисникот може да пристапи кон системот
-                            тогаш моше да зачувува нови фајлови. Ако корисникот не може да зачуваа нови фајлови тогаш системот не се надградува.
+                            <strong>Вежба 10.</strong> Да се покаже дека секој од условните искази е тафтологија со употреба на табела на вредности на вистиноста.<br>
+                            a) `(not p ^^ (p vv q )) -> q`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=6>Табела 10a</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`not p`</td>
+                                                            <td>`p vv q`</td>
+                                                            <td>`(not p ^^ (p vv q ))`</td>
+                                                            <td>`(not p ^^ (p vv q )) -> q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        Нека:
+
+                                        `&#x25A0`
                                     </p>
+                                </div>
+                            </details>
+                            b) `((p -> q) ^^ (q -> r)) -> (p -> r)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=8>Табела 10b</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`r`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`p -> r`</td>
+                                                            <td>`q -> r`</td>
+                                                            <td>`(p -> q) ^^ (q -> r)`</td>
+                                                            <td>`((p -> q) ^^ (q -> r)) -> (p -> r)`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td> 
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        `u`: системот се надградува
+
+                                        `&#x25A0`
                                     </p>
+                                </div>
+                            </details>
+                            c) `(p ^^ (p -> q )) -> q`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=6>Табела 10c</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`p ^^ (p -> q)`</td>
+                                                            <td>`p ^^ (p vv q ))`</td>
+                                                            <td>`(p ^^ (p -> q )) -> q``</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        `a`: корисникот може да пристапи на системот
-                                    </p>
-                                    <p>
-                                        `s`: може да зачува нови фајлови
-                                    </p>
-                                    <p>
-                                        `u -> not a` - Секогаш кога системскиот софтвер се надградува, корисникот не може да пристапи на системот.
-                                    </p>
-                                    <p>
-                                        `a -> s` - Ако корисникот не може да зачуваа нови фајлови тогаш системот не се надградува. 
-                                    </p>
-                                    <p>
-                                        `not s -> not u` - g) Изборите се решени ако и сами ако гласовите се избројани.
-                                    </p>
-                                    <p>
-                                        Сите искази истовремено треба да се вистинити. 
-                                    </p>
-                                    <p>
-                                        Да претпоставиме, на што имамае право, дека системот се надградува односно дека `u = TT`. За да исказот `u -> not a` биде 
-                                        вистинит при `u=TT` треба `not a = TT` односно `a=_|_`. За да исказот `a -> s` биде вистинит при `a=_|_` `s` може да биде 
-                                        вистинит или невистинит. Кога `u=TT` исказот `not s -> not u` е вистинит било `s` да е вистинит или невистинит. Бидејки сите три искази 
-                                        се истовремено вистинити спецификацијата е конзистентна.
-                                    </p>           
-                                    <p>
+
                                         `&#x25A0`
                                     </p>
                                 </div>
