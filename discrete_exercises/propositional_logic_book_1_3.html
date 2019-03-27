@@ -63,7 +63,7 @@
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" href="../discrete/propositional_logic-app.html">Дискретна математика</a>
+                        <a class="nav-link" href="../discrete/propositional_logic_equivalences.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="propositional_logic_university.html">
@@ -193,6 +193,11 @@
 
                     <div id='Translating' class='row'>
                         <div class='col-md-12'>
+                            <p>
+                                The solutions to Exercises 1-10 are routine; we use truth tables to show that a proposition is a tautology or
+                                    that two propositions are equivalent. The reader should do more than this, however; think about what the
+                                    equivalence is saying.
+                            </p>
                     
                         <!-- Exercise 1 -->
                         <p id='ex1'>                               
@@ -426,100 +431,355 @@
                         <!-- Exercise 2 -->
                         <p id='ex2'>
                             <strong>Вежба 2.</strong> Покажи дека `not(not p)` и `p` се логички еквивалент:<br>
-                            <details>
+                            <details>                                
                                 <summary class="mb-3">Решение</summary>
-                                <details>
-                                    <summary class="mb-3">Решение</summary>
-                                    <div class='row'>
-                                        <div class='col-md-3'>
-                                            <div class="table-responsive-sm">
-                                                <table class="table table-bordered table-sm">
-                                                    <tbody class="text-center">
-                                                        <thead class='swatch-purple'>
-                                                            <tr>
-                                                                <td colspan=6>Табела 2</td>
-                                                            </tr>                                                    
-                                                        </thead>
+                                <div class='row'>
+                                    <div class='col-md-3'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
                                                         <tr>
-                                                            <td>`p`</td>
-                                                            <td>`not p`</td>
-                                                            <td>`not(not p)`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`TT`</td>
-                                                            <td>`_|_`</td>
-                                                            <td>`TT`</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>`_|_`</td>
-                                                            <td>`TT`</td>
-                                                            <td>`_|_`</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class='col-md-9'>
-                                            <p>
-                                                Еквиваленцијата е валидна бидејки третата колонa `not(not p)` е идентична со `p`.
-                                            </p>
-    
+                                                            <td colspan=6>Табела 2</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`not p`</td>
+                                                        <td>`not(not p)`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </details>
+                                    <div class='col-md-9'>
+                                        <p>
+                                            Еквиваленцијата е валидна бидејки третата колонa `not(not p)` е идентична со `p`.
+                                        </p>
+
+                                    </div>
+                                </div>
                             </details>
                         </p>
-                        <!-- /Exercise 2 -->
+                        <!-- /Exercise 2 --:
 
                         <!-- Exercise 3 -->
                         <p id='ex3'>                                 
-                            <strong>Вежба 3.</strong> Да се преведе реченицата во логички исказ:<br>
-                            Можете да дипломирате само ако сте ги положиле сите испити и ако не му должите пари на факултетот 
-                            или ако немате вратено книга. Одговорот да се прикаже користејки ги исказните променливи:<br>
-                            `g`: Може да дипломирате<br>
-                            `m`: Должите пари на факултетот<br>
-                            `r`: Сте ги положиле сите испити<br>
-                            `y`: Имате не вратена книга.
+                            <strong>Вежба 3.</strong> Со употреба на табела на вредности на вистинитост да се докаже комулативниот закон:<br>
+                            а) `p vv q -= q vv p`
                             <details>
                                 <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `(r ^^ not m ^^ not y) -> g`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела 3a</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`p vv q`</td>
+                                                        <td>`q vv p`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </details>
+                            b) `p ^^ q -= q ^^ P`
+                            <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row'>
+                                            <div class='col-md-12'>
+                                                <div class="table-responsive-sm">
+                                                    <table class="table table-bordered table-sm">
+                                                        <tbody class="text-center">
+                                                            <thead class='swatch-purple'>
+                                                                <tr>
+                                                                    <td colspan=6>Табела 3b</td>
+                                                                </tr>                                                    
+                                                            </thead>
+                                                            <tr>
+                                                                <td>`p`</td>
+                                                                <td>`q`</td>
+                                                                <td>`p ^^ q`</td>
+                                                                <td>`q ^^ p`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`TT`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`_|_`</td>
+                                                                <td>`TT`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                                <td>`_|_`</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </details>
                         </p>
                         <!-- /Exercise 3 -->
 
                         <!-- Exercise 4 -->
                         <p id='ex4'>                                 
-                            <strong>Вежба 4.</strong> Да се преведе реченицата во логички исказ:<br>
-                            За да користите без жицен интернет на аеродром мора да платите днева карта или да сте претплатник. 
-                            Одговорот да се прикаже користејки ги исказните променливи:<br>
-                            `w`: Можете да користите безичен интернет на аеродром<br>
-                            `d`: Имате платено дневна карта<br>
-                            `s`: Вие сте претплатник насервисот.
+                            <strong>Вежба 4.</strong> Со употреба на табела на вредности на вистинитост да се докаже асоцијативниот закон:<br>
+                            а) `(p vv q) vv r -= p vv (q vv r)`
                             <details>
                                 <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `(d vv s) -> w`
-                                    </p>
-                                    <p>
-                                        b) Кај пекарската дванаестка нема 13 пецива.
-                                    </p>
-                                    <p>
-                                        c) Гордана не испраќа повеќе од 100 пораки секој ден.
-                                    </p>
-                                    <p>
-                                        d) 121 не е идеален квадрат.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=7>Табела 4a</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`r`</td>
+                                                        <td>`p vv q`</td>
+                                                        <td>`q vv r`</td>
+                                                        <td>`(p vv q) vv r`</td>
+                                                        <td>`p vv (q vv r) vv`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            b) `(p ^^ q) ^^ r -= p ^^ (q ^^ r)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=7>Табела 4b</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`r`</td>
+                                                        <td>`p ^^ q`</td>
+                                                        <td>`q ^^ r`</td>
+                                                        <td>`(p ^^ q) ^^ r`</td>
+                                                        <td>`p vv (q vv r)`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </details>
                         </p>
@@ -527,24 +787,115 @@
 
                         <!-- Exercise 5 -->
                         <p id='ex5'>                                 
-                            <strong>Вежба 5.</strong> Да се преведе реченицата во логички исказ:<br>
-                            Може да се кандидирате за претседател ако сте постар од 45 години ако сте роден во Македонија или ако 
-                            во моментот на вашето раѓање вашите родители биле граѓани на Македонија и ако сте живееле во Македонија најмалку
-                            14 години. Одговорот да се прикаже користејки ги исказните променливи:<br>
-                            `e`: Можете да се кандидирате за претседател.<br>
-                            `a`: Имате најмалку 45 години.<br>
-                            `b`: Роден сте во Македонија<br>
-                            `p`: Во времето на вашето раѓање двата родители биле граѓани на Македонија<br>
-                            `r`: Сте живееле најмалку 14 години во Македонија.
+                            <strong>Вежба 5.</strong> Со употреба на табела на вредности на вистинитост да се докаже дистрибутивниот закон:<br>
+                            `p ^^ (q vv r) -= (p ^^ q) vv (p ^^ r)`
                             <details>
                                 <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `(a ^^ (b vv p) ^^ r) -> e`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=8>Табела 5</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`r`</td>
+                                                        <td>`p ^^ q`</td>
+                                                        <td>`p ^^ r`</td>
+                                                        <td>`q vv r`</td>
+                                                        <td>`p ^^ (q ^^r)`</td>
+                                                        <td>`(p ^^ q) vv (p ^^ r)`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </details>
                         </p>
@@ -552,28 +903,106 @@
 
                         <!-- Exercise 6 -->
                         <p id='ex6'>                                 
-                            <strong>Вежба 6.</strong> Да се преведе реченицата во логички исказ:<br>
-                            Може да го надградите вашиот оперативен систем само ако имате процесор на 32 битен процесор кој работи на 1GHz или повеќе, 
-                            најмалку 1GB RAM и 16 GB слободен диск простор или кој работи на 2GHz или повеќе и имате најмалку 2GB RAM и најмалку 32 ГБ 
-                            sloboden disk prostor. Одговорот да се прикаже користејки ги исказните променливи:<br>
-                            `u`: Можете да го надградите вашиот оперативен систем.<br>
-                            `b_32`: Имаш 32 битен процесор.<br>
-                            `b_64`: Имаш 64 битен процесор<br>
-                            `g_1`: Процесорот работи на 1GHz или повеќе.<br>
-                            `g_2`: Процесорот работи на 2GHz или повеќе.<br>
-                            `r_1`: Процесорот има најмалку 1 GB RAM.<br>
-                            `r_2`: Процесорот има најмалку 2 GB RAM.<br>
-                            `h_16`: 16 GB слободен диск простор.<br>
-                            `h_32`: 16 GB слободен диск простор.<br>
+                            <strong>Вежба 6.</strong> Со употреба на табела на вредности на вистинитост да се докаже првиот закон на Де Морган::<br>
+                            `not (p ^^ q) -= not p vv not q`
                             <details>
                                 <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `(b_32 ^^ g_1 ^^ r_1 ^^ h_16 ) vv (b_64 ^^g_2 ^^ r_2 ^^ h_32) -> u`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=8>Табела 6</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`not p`</td>
+                                                        <td>`not q`</td>
+                                                        <td>`p ^^ q`</td>
+                                                        <td>`not (p ^^ q)`</td>
+                                                        <td>`not p vv not q`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </details>
                         </p>
@@ -581,26 +1010,65 @@
 
                         <!-- Exercise 7 -->
                         <p id='ex7'>                                 
-                            <strong>Вежба 7.</strong> Да се претстават следните системски спецификации користејки ги исказите `p` „Пораката е скенирана за вируси“ 
-                            и `q` „Пораката е испратена од непознат систем“.<br>
-                            a) „Пораката се скенира секогаш кога се испраќа од непознат систем.<br>
-                            b) „Пораката е испратена од непозната систем и не е скенирана за вируси“.<br>
-                            c) „Пораката треба да се скенира за вируси секoгаш кога е испратена од непознат систем“<br>
-                            d) „Кога пораката не е испратена од непознат систем не се скенира за вируси.
+                            <strong>Вежба 7.</strong> Со помош на законот на Де Морган да се најде негацијата на следните искази:<br>
+                            a) Јанко е богат и среќен. 
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div>
                                     <p>
-                                        a) `q -> p`
+                                        `p`: Јанко е богат<br>
+                                        `q`: Јанко е среќен.<br>
+                                        `p ^^ q` : Јанко е богат и среќен. Ова е конјукција.<br>
+                                        Според законот на Де Морган негација на конјункција е дисјункција на негациите - `not (p ^^ q) -= not p vv not q`.<br>
+                                        `not p vv not q` - Јанко не е богат или не е среќен.
                                     </p>
                                     <p>
-                                        b) `q ^^ not p`
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            b) Крсте утре ќе вози точак или ќе трча.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `p`: Крсте утре ќе вози точак.<br>
+                                        `q`: Крсте утре ќе трча.<br>
+                                        `p vv q` : Крсте утре ќе вози точак или ќе трча. Ова е дисјункција.<br>
+                                        Според законот на Де Морган негација на дисјункција е конјукција на негациите - `not (p vv q) -= not p ^^ not q`.<br>
+                                        `not p ^^ not q` - Крсте утре нема да вози точак и нема да трча.
                                     </p>
                                     <p>
-                                        c) `q -> p`
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            c) Мили оди пешки или со автобус на факултет.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `p`: Мили оди пешки на факултет.<br>
+                                        `q`: Мили оди на факултет со автобус.<br>
+                                        `p vv q` : Мили оди пешки или со автобус на факултет. Ова е дисјункција.<br>
+                                        Според законот на Де Морган негација на дисјункција е конјукција на негациите - `not (p vv q) -= not p ^^ not q`.<br>
+                                        `not p ^^ not q` - Мили утре нема да оди на факултет ниту пешки ниту со автобус.
                                     </p>
                                     <p>
-                                        d) `not q -> not p`  
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            d) Иван е паметен и напорно работи.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `p`: Иван е паметен.<br>
+                                        `q`: Иван напорно работи.<br>
+                                        `p ^^ q` : Иван е паметен и напорно работи. Ова е конјукција.<br>
+                                        Според законот на Де Морган негација на конјукција е дисјункција на негациите - `not (p ^^ q) -= not p vv not q`.<br>
+                                        `not p vv not q` - Иван ниту е паметен ниту напорно работи.
                                     </p>
                                     <p>
                                         `&#x25A0`
@@ -643,46 +1111,295 @@
 
                         <!-- Exercise 9 -->
                         <p id='ex9'>                                 
-                            <strong>Вежба 9.</strong> Дали следните системски спецификации се конзистентни?<br>
-                            Системот е во состојба на повеќе корисници ако и само ако работи нормално. Ако системот работи нормално керналот функционира. 
-                            Керналот не функционира или системот е во состојба на прекин. Ако системот не е во состојба на повеќе корисници тогаш е во 
-                            состојба на прекин. Системот не е во состојба на прекин.
+                            <strong>Вежба 9.</strong> Да се покаже дека секој од условните искази е тафтологија со употреба на табела на вредности на вистиноста.<br>
+                            a) `(p ^^ q ) -> q`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=4>Табела 9a</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p ^^ q`</td>
+                                                            <td>`(p ^^ q) -> q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        Нека:.
+
+                                        `&#x25A0`
                                     </p>
+                                </div>
+                            </details>
+                            b) `p -> (p vv q )`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=4>Табела 9b</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`p vv q`</td>
+                                                            <td>`p -> (p vv q)`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        `m`: системот е во состојба на повеќе корисници<br>
-                                        `n`: системот функционира нормално<br>
-                                        `k`: керналот функционира<br>
-                                        `i`: системот е во состојба на прекин 
+
+                                        `&#x25A0`
                                     </p>
+                                </div>
+                            </details>
+                            c) `not p -> (p -> q )`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=5>Табела 9c</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`not p`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`not p -> (p -> q )`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        `m harr n` - Системот е во состојба на повеќе корисници ако и само ако работи нормално.
+
+                                        `&#x25A0`
                                     </p>
+                                </div>
+                            </details>
+                            d) `(p ^^ q) -> (p -> q)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=5>Табела 9d</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`P ^^ q`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`(p ^^ q) -> (p -> q)`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
-                                        `n -> k` - Ако системот работи нормално керналот функционира.
+
+                                        `&#x25A0`
                                     </p>
-                                    <p>
-                                        `not k vv i` - Керналот не функционира или системот е во состојба на прекин.
-                                    </p>
-                                    <p>
-                                        `not m -> i` -  Ако системот не е во состојба на повеќе корисници тогаш е во состојба на прекин.
-                                    </p>
-                                    <p>
-                                        `not i` - Системот не е во состојба на прекин.
-                                    </p>
-                                    <p>
-                                        Сите искази истовремено треба да се вистинити.
-                                    </p>
-                                    <p>
-                                        Очигледно дека за да `not i = TT` `i = _|_`. Со цел да `not m -> i` биде вистинит при `i = _|_` `not m = _|_` односно 
-                                        `m = TT`. Сега за да `m harr n` биде вистинит двата искази треба за се иста вредност на вистинитост, односно `n = TT`. И н а
-                                        крај за да `n -> k` биде вистинито при `n = t` требa `k = TT`. Ако `k = TT` и `i = _|_` исказот `not k VV i` не е вистинит. Од тука 
-                                        заклучуваме дека системот не е конзистентен.
-                                    </p>                    
+                                </div>
+                            </details>
+                            e) `not (p -> q) -> p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
+                                                            <tr>
+                                                                <td colspan=5>Табела 9d</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`P -> q`</td>
+                                                            <td>`not(p -> q)`</td>
+                                                            <td>`not (p -> q) -> p`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>                
                                     <p>
 
                                         `&#x25A0`
@@ -740,18 +1457,27 @@
 
                         <!-- Exercise 11 -->
                         <p id='ex11'>                                 
-                            <strong>Вежба 11.</strong> Дали следните системски спецификации се конзистентни?<br>
-                            Рутерот може да испрати пакети до периферниот систем само ако го подржува новиот адресен простор. За да рутерот го подржува 
-                            новиот адресен простор потребно е да се инсталира последната верзија на софтверот. Рутерот може да испраќа пакети до периферниот 
-                            систем ако последната верзија на софтверот е инсталирана. Рутерот не го подржува новиот aдресен простор.
+                            <strong>Вежба 11.</strong> Да се покаже дека сите условни искази од вежбата 9 се тафтологија без употреба на табели на вредности на вистинитост.<br>
+                            Начин на решавање: Условниот исказ единствено не е вистинит кога хипотезата е вистинита а заклучокот да биде невистинит. Од тука доволно 
+                            е да се покаже дека заклучокот мора да е вистинит секогаш кога хипотезата е вистината.<br>
+                            Алтернативен начин кој работи за некои од овие тафтолгии е да се искористат еквиваленциите и да се докажат алгебарски.<br>
+                            a) `(p ^^ q ) -> q`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div>
                                     <p>
-                                        `s`: - Рутерот може да испраќа пакети до периферниот систем
+                                        Ако хипотезата `(p ^^ q)` е вистинита, тогаш според дефиницијата за конјункција `^^`, `p` е вистинит и заклучокот `q` е вистинит. 
+                                        Според тоа условниот исказ е тафтологија.
                                     </p>
                                     <p>
-                                        `a`: - Рутерот го подржува новиот адресен простор.
+                                        За да се изведе алгебарски доказ, се прикажуваат низата на еквиваленции кои произлегуваат од еден од законите за логичка 
+                                        еквиваленција за условни искази :<br>
+                                        `(p ^^ q ) -> q -= not (p ^^ q) vv p` - според Табела 7.1 (`p ^^ q` е  `p` во табелата)<br>
+                                        `not (p ^^ q) vv p -= (not p vv not q) vv p` - според закон на Де Морган<br>
+                                        `(not p vv not q) vv p -= (not q vv not p) vv p` - според закон за комукативност<br>
+                                        `(not q vv not p) vv p -= not q vv (not p vv p)` - според законот за асоцијативност<br>
+                                        `(not q vv (not p vv p) -= not q vv TT)` - според законот за негација со комулативност<br>
+                                        `not q vv TT -= TT` - според законот за доминација<br>
                                     </p>
                                     <p>
                                         `r`: - Последната верзија на софтвер е инсталирана.
