@@ -218,7 +218,7 @@
                             </div>
                         </details>
                         г) <i class="material-icons">filter_6</i> Нека `p` и `q` се искази. Со ДА или НЕ одговори дали секој од следните искази е тавтологија:<br>                        
-                        i) `p vv _|_ harr _|_` &nbsp; ii) `TT -> q harr q` &nbsp;iii) `_|_ vv p` &nbsp;iv) `(p -> q) harr (not p harr not q)` &nbsp;v) `p vv q -> p` &nbsp;vi) `p -> p ^^ q` <br>
+                        i) `p vv _|_ harr _|_` &nbsp; ii) `TT -> q harr q` &nbsp;iii) `TT vv p` &nbsp;iv) `(p -> q) harr (not p harr not q)` &nbsp;v) `p vv not p -> _|_` &nbsp;vi) `p -> p vv q` <br>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div>
@@ -227,17 +227,20 @@
                                         i) Не
                                     </li>
                                     <li>
-                                        ii) Да
+                                        ii) Не
                                     </li>
                                     <li>
-                                        iii) Не
+                                        iii) Да
                                     </li>
                                     
                                     <li>
                                         iv) Не
                                     </li>
                                     <li>
-                                        v) Да
+                                        v) Не
+                                    </li>
+                                    <li>
+                                        vi) Не
                                     </li>
                                 </ul>
                                 <p>
@@ -246,20 +249,18 @@
                             </div>
                         </details>
                         д) <i class="material-icons">filter_4</i> Запиши формули еквивалентни на дадените, но различни од нив и знакот за негација да не е пред заград:<br>
-                        i) `p vv _|_ harr _|_ -=` _________ ii)`not(TT vv p) -=` _________<br>
+                        i) `not (p harr q)`&nbsp; ii)`not(_|_ vv p) -=` _________<br>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div>
                                 <ul>
                                     <li>
                                         i) <br>
-                                        `not (p -> q) -= not ( not p vv q)`<br>
-                                        `not (not p vv q) -= p ^^ not q`<br>
+                                        `not (p harr q) -= p harr not q`<br>
                                     </li>
                                     <li>
                                         ii) <br>
-                                        `not (TT vv p) -= _|_ ^^ not p -= _|_`&nbsp;или<br>
-                                        `not (TT vv p) -= not (TT) -= _|_`&nbsp;или<br>
+                                        `not (_|_ vv p) -= TT ^^ not p -= not p`<br>
                                     </li>
                                 </ul>
                                 <p>
@@ -270,8 +271,7 @@
                         ѓ) <i class="material-icons">filter_3</i> Дополни за да добиеш точно правило за заклучување:<br>
                         i) 
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p vv q`<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`not p vv r`<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p ^^ q`<br>
                             ____________<br>
                             `:.&nbsp;`
                         </p>
@@ -280,11 +280,10 @@
                             <summary class="mb-3">Решение</summary>
                             <div>
                                 <p>
-                                    Резолуција<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p vv q`<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`not p vv q`<br>
+                                    Упростување<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p ^^ q`<br>
                             ____________<br>
-                            `:.&nbsp;q vv r`
+                            `:.&nbsp;p`
                                 </p>
                                 <p>
                                     `&#x25A0`
@@ -294,19 +293,19 @@
 
                         ii) 
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p -> q`<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p vv q`<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``<br>
                             ____________<br>
-                            `:.&nbsp;p -> r`
+                            `:.&nbsp;q`
                         </p>
 
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div>
                                 <p>
-                                    Хипотетички силогизам<br>
+                                    Дисјунктивен силогизам<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p -> q`<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`q -> r`<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`not p`<br>
                                     ____________<br>
                                     `:.&nbsp;p -> r`
                                 </p>
@@ -319,7 +318,7 @@
                         iii) 
                         <p>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p -> q`<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p`<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`not q`<br>
                             ____________<br>
                             `:.&nbsp;`
                         </p>
@@ -328,11 +327,11 @@
                             <summary class="mb-3">Решение</summary>
                             <div>
                                 <p>
-                                    Модус поненс<br>
+                                    Модус толенс<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p -> q`<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`p`<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`nort q`<br>
                                     ____________<br>
-                                    `:.&nbsp;q`
+                                    `:.&nbsp;not p`
                                 </p>
                                 <p>
                                     `&#x25A0`
@@ -342,7 +341,7 @@
                     </p>
 
                     <p>                    
-                        <strong><i class="material-icons">filter_7</i> Задача 2.</strong> Со помош на дискусија по исказна буква покажи дека важи законот за контрапозиција.
+                        <strong><i class="material-icons">filter_7</i> Задача 2.</strong> Со помош на дискусија по исказна буква покажи дека важи законот за апсорпција.
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div>
