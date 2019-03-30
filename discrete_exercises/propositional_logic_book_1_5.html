@@ -63,7 +63,7 @@
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" href="../discrete/predicates.html">Дискретна математика</a>
+                        <a class="nav-link" href="../discrete/predicates_nested.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="propositional_logic_university.html">
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="propositional_logic_book_1_4.html">
+                        <a class="nav-link active" href="propositional_logic_book_1_5.html">
                             <span>
                                 <i class="fas fa-book"></i>
                             </span>
@@ -129,12 +129,17 @@
                                         Исказни еквиваленции
                                     </a>
                                 </li>
-                                <li class="active bd-sidenav-active">
+                                <li>
+                                    <a href="propositional_logic_book_1_3.html">
+                                        Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="propositional_logic_book_1_4.html">
                                         Предикати и квантификатори
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active bd-sidenav-active">
                                     <a href="propositional_logic_book_1_5.html">
                                         Вгнездени квантификатори
                                     </a>
@@ -206,26 +211,27 @@
                     
                         <!-- Exercise 1 -->
                         <p id='ex1'>                               
-                            <strong>Вежба 1.</strong>  Нека `P(x)` го претставува исказот `x <= 4`. Кои се вредностите на вистинитоста за:<br>
-                            а) `P(0)`
+                            <strong>Вежба 1.</strong>  Да се преведат следните искази ако доменот се состои од сите реални броеви.<br>
+                            а) `AAx EEy P(x < y)`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <p>
-                                    `P(0) = TT`&nbsp; - бидејки `0 <= 4`
+                                    За секој реален број `x` постои реален број `y` така да е `x < y`.
                                 </p>                                
                             </details>
-                            b) `P(4)`
+                            b) `AAx EEy (((x ≥ 0) ^^ (y ≥ 0)) -> (xy ≥ 0))`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <p>
-                                    `P(4) = TT`&nbsp; - бидејки `4 <= 4`
+                                    За секој реален број `x` постои реален број `y` така да ако `x` и `y` се поголеми или еднакви на `0` 
+                                    тогаш нивниот производ е еднаков или поголем од нула.
                                 </p>                                
                             </details>
-                            c) `P(6)`
+                            c) `AAx AAy EEz(xy = z)`
                             <details>                                
                                 <summary class="mb-3">Решение</summary>
                                 <p>
-                                    `P(6) = _|_`&nbsp; - бидејки  `6 <= 4` не е вистинито.
+                                    За секој реален број `x` и `y` постои реален број `z` така да е `xy = z`.
                                 </p>                                
                             </details>
                         </p>
@@ -233,19 +239,19 @@
                    
                         <!-- Exercise 2 -->
                         <p id='ex2'>
-                            <strong>Вежба 2.</strong> Нека `P(x)` го претставува исказот „зборот `x` ја содржи буквата `a`“. Кои се вредностите на вистинитоста за:<br>
-                            а) `P(below)`
+                            <strong>Вежба 2.</strong> Да се преведат следните искази ако доменот се состои од сите реални броеви.<br>
+                            а) `EEx AAy (xy = y)`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <p>
-                                    `P(below)` `= _|_`&nbsp;
+                                    За секој реален број `y` постои реален број `x` така да нивниот производ е бројот `y`.
                                 </p>                                
                             </details>
-                            b) `P(ballon)`
+                            b) `AAx AAy (((x ≥ 0) ^^ (y < 0)) -> (x − y > 0))`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <p>
-                                    `P(ballon) = TT`&nbsp;
+                                    За секој реален број `x` и `y`, ако `x` е еднакв или поголем од `0` и `y` е помал од `0` тогаш `x -y = 0`.
                                 </p>                                
                             </details>
                         </p>
@@ -423,117 +429,6 @@
                             </details>
                         </p>
                         <!-- /Exercise 7 -->
-
-                        <!-- Exercise 8 -->
-                        <p id='ex8'>                                 
-                            <strong>Вежба 8.</strong> Да се преведат следните реченици, каде `R(x)` е исказот „`x` е зајак“, а `H(x)` е исказот „`x` скока“ 
-                            при што доменот се сите животни.<br>
-                            a) `AAx (R(x) -> H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Секој зајак скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            b) `AAx (R(x) ^^ H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Секое животно е зајак и скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            c) `EEx (R(x) -> H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Постои животно што ако е зајак тогаш скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            d) `EEx (R(x) ^^ H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Постои животно зајак и скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 8 -->
-
-                        <!-- Exercise 9 -->
-                        <p id='ex9'>                                 
-                            <strong>Вежба 9.</strong> Нека `L(x)` е исказот „`x` знае Руски“, а `Q(x)` е исказот „`x` знае C++“ . 
-                            Да се искажат следните реченици со  исказите `L(x)` и `Q(X)`, квантивикатори и логички конектори.
-                            при што доменот се сите животни.<br>
-                            a) Постои студент што знае Руски и C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `EEx (L(x) ^^ Q(x)`.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            b) Постои студент што знае Руски но не и C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `EEx (L(x) ^^ not Q(x)`.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            c) Секој студент или знае Руски или C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                       `AAx (L(x) vv Q(x))`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            d) Ниту еден студент знае Руски или C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `AAx (not L(X) ^^ not Q(X)) -= AAx not(L(x) vv Q(x))`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 9 -->
                      
 
                     </div>

@@ -63,7 +63,7 @@
             <div class="navbar-nav-scroll">
                 <ul class="navbar-nav bd-navbar-nav flex-row">
                     <li class="nav-item">
-                        <a class="nav-link" href="../discrete/predicates.html">Дискретна математика</a>
+                        <a class="nav-link" href="../discrete/predicates_inference.html">Дискретна математика</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="propositional_logic_university.html">
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="propositional_logic_book_1_4.html">
+                        <a class="nav-link active" href="propositional_logic_book_1_6.html">
                             <span>
                                 <i class="fas fa-book"></i>
                             </span>
@@ -129,7 +129,7 @@
                                         Исказни еквиваленции
                                     </a>
                                 </li>
-                                <li class="active bd-sidenav-active">
+                                <li>
                                     <a href="propositional_logic_book_1_4.html">
                                         Предикати и квантификатори
                                     </a>
@@ -139,7 +139,7 @@
                                         Вгнездени квантификатори
                                     </a>
                                 </li>
-                                <li>
+                                <li class="active bd-sidenav-active">
                                     <a href="propositional_logic_book_1_6.html">
                                         Правила за изведување на заклучок
                                     </a>
@@ -241,7 +241,7 @@
                                     `P(below)` `= _|_`&nbsp;
                                 </p>                                
                             </details>
-                            b) `P(ballon)`
+                            а) `P(ballon)`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <p>
@@ -423,117 +423,6 @@
                             </details>
                         </p>
                         <!-- /Exercise 7 -->
-
-                        <!-- Exercise 8 -->
-                        <p id='ex8'>                                 
-                            <strong>Вежба 8.</strong> Да се преведат следните реченици, каде `R(x)` е исказот „`x` е зајак“, а `H(x)` е исказот „`x` скока“ 
-                            при што доменот се сите животни.<br>
-                            a) `AAx (R(x) -> H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Секој зајак скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            b) `AAx (R(x) ^^ H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Секое животно е зајак и скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            c) `EEx (R(x) -> H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Постои животно што ако е зајак тогаш скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            d) `EEx (R(x) ^^ H(X))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Постои животно зајак и скока.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 8 -->
-
-                        <!-- Exercise 9 -->
-                        <p id='ex9'>                                 
-                            <strong>Вежба 9.</strong> Нека `L(x)` е исказот „`x` знае Руски“, а `Q(x)` е исказот „`x` знае C++“ . 
-                            Да се искажат следните реченици со  исказите `L(x)` и `Q(X)`, квантивикатори и логички конектори.
-                            при што доменот се сите животни.<br>
-                            a) Постои студент што знае Руски и C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `EEx (L(x) ^^ Q(x)`.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            b) Постои студент што знае Руски но не и C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `EEx (L(x) ^^ not Q(x)`.
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            c) Секој студент или знае Руски или C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                       `AAx (L(x) vv Q(x))`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                            d) Ниту еден студент знае Руски или C++.
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        `AAx (not L(X) ^^ not Q(X)) -= AAx not(L(x) vv Q(x))`
-                                    </p>
-                                    <p>
-                                        `&#x25A0`
-                                    </p>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 9 -->
                      
 
                     </div>
