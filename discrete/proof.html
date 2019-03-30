@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mathematics">
+        <meta name="author" content="Ilija Taseski">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_university.html">
+                            <span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">
+                            <span>
+                                <i class="fas fa-book"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_colloquium/propositional_logic_colloquium.html">
+                            <span>
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            Колокфиум
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li>
+                                    <a href="propositional_logic.html">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic-app.html">
+                                        Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_equivalences.html">
+                                        Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_predicates.html">
+                                        Предикати и квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_predicates_nested.html">
+                                            Вгнездени квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="predicates_inference.html">
+                                        Правила за изведување на заклучоци
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="proof.html">
+                                        Докази
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#Introduction">Доказ</a>
+                            <a href="#Some Terminology">Терминологија</a>
+                            <a href="#Methods of Proving Theorems">Методи за докажување на теореми</a>
+                            <a href="#Direct Proofs">Директен доказ</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#exclusive or">Екслузивно или</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#implication">Импликација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Combining Rules of Inference for Propositions and Quantified Statements">Комбинирање на правила за искази и тврдења со квантификатори</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                    <!-- Introduction to Proofs -->
+
+                    <div id='proof' class='row'>
+
+                        <!-- intro -->
+                        <div class='mb-3 card'>
+                            <div id='Introduction' class="card-header">
+                                <h5  class="card-title">
+                                    Доказ
+                                </h5>
+                            </div>
+                            <div class="card-body">
+
+                                <p>
+                                    Овде ќе се воведе поимот за <em>доказ</em> и ќе се прикажат методите за нивно формирање. Доказ е важечки аргумент кој ја 
+                                    воспоставува вистинитоста на математички исказ. Доказот може да користи хипотези на теореми, ако постојат, аксиоми кои 
+                                    се сметаат за вистинити и предходно докажани теореми. Користејки ги и правилата за изведување на заклучоци, последниот 
+                                    чекор на оказот ја воспоставува вистинитоста на исказот кој треба да се потврди.
+                                </p>
+                            
+
+                                <p>
+                                    При проучувањето на доказите се оди од формални докази за теоремите кон повеќе неформални докази. Аргументите што ги 
+                                    прикажуваат исказите што вклучуваат искази и квантифицирани изкази се вистинити каде формални докази се сите чекори и 
+                                    правилата за секој чекор во аргументот. Но формален доказ за корисна теорема може да биде екстремно долг и тежек за следење. 
+                                    Во пракса, доказите за теоремите кои се наменети за употреба од страна на човекот се речиси секогаш неформални докази, 
+                                    каде што повеќе од едно правило за изведување на заклучок се користи во еден чекор, каде што чекорите може да се прескокнат, 
+                                    каде има аксиоми кои се претпоставуваат и правилата за изведување на заклучоци што се користат не се експлицитно наведени.
+                                    Неформалните докази често можат на луѓето да им објаснат зошто некоја теорема е точна додека компјутерите креираат 
+                                    формални докази употребувајки автоматски системи за расудување.
+                                </p>
+
+                                <p>
+                                    Методите на докажување се важни не само затоа што се користат да докажат математички теореми, но исто така и поради нивните многу 
+                                    апликации во компјутерски науки. Овие апликации вклучуваат потврдување дека компјутерските програми се точни, утврдуваат дека системите 
+                                    се безбедни, изведуваат заклучоци кај вештачката интелигенција, покажуваат дека спецификациите на системот се конзистентни и така натаму. 
+                                    Следствено, разбирањето на техниките што се користат во доказите е од суштинско значење и во математиката и во компјутерската наука.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- intro -->
+
+                        <!-- Some Terminology -->
+                        <div class='mb-3 card'>
+                                <div id='Some Terminology' class="card-header">
+                                    <h5  class="card-title">
+                                        Терминологија
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+    
+                                    <p>
+                                        Формално теорема е исказ за кој може да се утврди дека е вистинит. Во математиката теорема е терминрезервиран за 
+                                        исказ за кој се смета дека на некојначине важен. Помалку важните теореми понекогаш се нарекуваат искази. Теорема може 
+                                        да биде универзална квантификација на условен исказ со една или повеќе премиси и заклучок. Секако може да има и други 
+                                        логички искази. Доказот е важечки аргумент кој ја установува вистинитоста на теоремата. Исказите кои се вклучени 
+                                        во теоремата можат да содржат аксиоми (или постулати) кои претставуват искази за кои се претпоставува дека се 
+                                        вистинити, премиси, ако ги има, на теоремата и порано докажани теореми. Аксиомите можат да бидат наведени со 
+                                        употреба на најпрости термини кои не бараат дефинирање но сите други термини кои се употребуваат во теоремата 
+                                        и нејзиниот доказ мора да се дефинирани. Правилата за изведување на на заклучок заедно со дефинициите на термините 
+                                        се употребуваат да извлечат заклучок од други тврдења поврзувајки ги заедно чекорите на доказот. Во практиката 
+                                        крајниот чекор на доказот е само заклучок на теоремата.
+                                    </p>
+    
+                                    <p>
+                                        За да ја докажеме теоремата на формата `AAx (P(x) -> Q(x))`, потребно е да покажеме дека `P(c) -> Q(c)` 
+                                        е точно, каде што `c` е произволен елемент на доменот, а потоа да се примени универзалното обопштување. 
+                                        Во овој доказ, треба да покажеме дека условниот исказ е вистинит. Поради ова, сега се фокусираме на 
+                                        методи кои покажуваат дека условните изјави се вистинити. Да се потсетиме дека `p -> q` е вистина, освен ако 
+                                        `p` е вистина а `q` не е вистина. Треба да се забележи дека за го докажеме исказот `p -> q`, треба само да 
+                                        покажеме дека `q` е вистина кога `p` е вистина. 
+                                    </p>
+
+                                    <p>
+                                        Кога се читаат докази, често се среќаваат <em>очигледно</em> или <em>јасно</em>". Овие зборови укажуваат на тоа 
+                                        одредени чекори се исфрлени и дека авторот очекува дека читателот може да ги пополни. За жал, оваа претпоставка 
+                                        честопати не е оправдана и читателите воопшто не се сигурни како да ги пополнат празнините. Ќе се обидеме да 
+                                        избегнуваме да ги користиме овие зборови и да не пропуштаме премногу чекори. Меѓутоа, ако ги вклучиме сите чекори 
+                                        во доказите, доказите би биле беа вознемирувачки долги.
+                                    </p>
+                                </div>
+                        </div>
+                        <!-- /Some Terminology -->
+                        
+                        <!-- Methods of Proving Theorems -->
+                        <div class='mb-3 card'>
+                                <div id='Methods of Proving Theorems' class="card-header">
+                                    <h5  class="card-title">
+                                        Методи за докажување на теореми
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+    
+                                    <p>
+                                        Докажувањето на математичките теореми може да биде тешко. За да се изгради доказ, потребн и се различни методи на докажување. 
+                                        Овие методи обезбедуваат целокупниот пристап и стратегијата на докази. Разбирањето на овие методи е клучна компонента во 
+                                        учењето како да се читаат и конструираат математички докази. Откако ќе се избере метод на докажување се употребуваат 
+                                        аксиоми, дефиниции на термини предходно докажани резултати и правила за изведување на заклучоци за да се комплетира доказот. 
+
+                                    </p>
+    
+                                    <p>
+                                        Помалку важна теорема се нарекува лема. Сложените докази полесно се разбираат ако се докажат со низа на леми каде секоја 
+                                        лема се докажува поединечно. Последица е теорема која лесно може да се утврди од теорема која предходно била докажана. 
+                                        Претпоставка е исказ  кој се предлага да биде вистинит обично врз основа на делумни доказа, научени аргументи или претчуство 
+                                        на експерт. Кога ќе се најде доказ за претпоставката, претпоставката станува теорема.
+                                    </p>
+                                </div>
+                        </div>
+                        <!-- /Methods of Proving Theorems -->
+
+                        <!-- Direct Proofs -->
+                        <div class='mb-3 card'>
+                                <div id='Direct Proofs' class="card-header">
+                                    <h5  class="card-title">
+                                        Директен доказ
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+    
+                                    <p>
+                                        Директниот доказ за условниот исказ `p -> q` се конструира така да првиот чекор е претпоставката дека `p` е вистина, 
+                                        следните чекори се конструиaраат со правилата за изведување на заклучоци  а со последниот чекор се покажува дека `q` 
+                                         исто така мора да биде вистина. Директниот доказ покажува дека условниот исказ `p -> q` е вистина, покажувајќи дека 
+                                         ако `p` е вистина, тогаш `q` мора да биде вистина, така што никогаш не се појавува комбинацијата `p` е вистина и 
+                                         `q` не е истина. При директниот доказ, претпоставуваме дека `p` е вистина и употребуваме аксиоми, дефиниции и претходно 
+                                         докажани теореми, заедно со правилата за изведување на заклучоци, за да покажеме дека `q` исто така, мора да биде вистина. 
+                                        Се гледа дека директните докази за многу резултати се сосема јасни, со прилично очигледна низа чекори што води од хипотезата 
+                                        до заклучокот. Сепак, директните докази понекогаш бараат одредени согледувања и може да бидат доста незгодни. 
+                                        Првите директни докази што ги презентираме овде се сосема јасни но подоцна ќе видиме некои кои се помалку очигледни.
+
+                                    </p>
+    
+                                    <p>
+                                        Ќе наведеме примери од неколку различни дирекни докази. Пред да го прикажеме првиот пример потребно е да се дефинираа маку 
+                                        терминологија.
+                                    </p>
+
+                                    <div class='mb-3 card'>
+                                        <div id='Direct Proofs' class="card-header">
+                                            <h5  class="card-title">
+                                                Дефиниција 1
+                                            </h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>
+                                                Целиот број `n` е парен ако постои цел број `k` таков што `n = 2k`, и `n` е непарен ако постои 
+                                                цел број  `k` таков да `n = 2k + 1`. Два цели броја имаат ист паритет ког двата се парни или двата се непарни, 
+                                                броевите имаат спротивен паритет ако едниот е парен а другиот непарен.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class='mb-3 card'>
+                                        <div id='Direct Proofs' class="card-header">
+                                            <h5  class="card-title">
+                                                Пример 1
+                                            </h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>
+                                                Да се даде директен доказ на теоремата „Ако `n` е  непарен број тогаш `n^2` е непарен број“.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            <h5  class="card-title">
+                                                Решение
+                                            </h5>
+                                            <p>
+                                                Оваа теорема тврди дека `AAn P((n) → Q(n))`, каде `P(n)` е исказот „`n` е непарен број“, и `Q(n)` е 
+                                                исказот „`n^2` е непарен број“. Ќе се следи вообичаената конвенција при математичкиот доказ 
+                                                со покажување дека од `P(n)` произлегува `Q(n)`, а нема експлицитно да се употребува 
+                                                универзалното конкретизирање. За да отпочнеме со дирекниот доказ за оваа теорема, претпоставуваме дека 
+                                                хипотезата на овој условен исказ е вистинита, односно дека `n` е непарен број. Според дефиницијата за 
+                                                непарни броеви следи дека `n = 2k + 1`, каде `k` е некој цел број. Сакаме да докажеме дека `n^2` е исто така 
+                                                непарен број. Можеме да извршиме факторизација на равенството `n = 2k + 1` за да добиеме ново равенство 
+                                                кое го искажува `n^2`. Добиваме `n^2 = (2k + 1)2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1`. Според дефиницијата 
+                                                за непарни броеви може да се заклучи дека `n^2` е непарен број. Споре тоа докажавме дека ако `n` тогаш 
+                                                `n^2` е непарен број.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class='mb-3 card'>
+                                        <div id='Direct Proofs' class="card-header">
+                                            <h5  class="card-title">
+                                                Пример 2
+                                            </h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>
+                                                Да се даде директен доказ на теоремата „Ако `m` и `n` се  совршени квадрати, тогаш `nm` е истотака совршен 
+                                                квадрат“. (Цел број е совршен квадрат ако постои цел број `b` така да `a = b^2`).
+                                            </p>
+                                        </div>
+                                        <div class="card-footer text-muted">
+                                            <h5  class="card-title">
+                                                Решение
+                                            </h5>
+                                            <p>
+                                                За да се изведе директен доказ на оваа теорема се претпоставува дека хипотезата на условниот исказ е вистинит,имено 
+                                                претпоставуваме дека двата броја `n` и `m` се совршени квадрат. Според дефиницијата за совршен квадрат следи дека 
+                                                постојат цели броеви `s` и `t` такви да `m = s^2` и `n = t^2`. Целта на овој доказ е да докаже дека `nm` е исто така 
+                                                совршен квадрат кога `n` и `m` се. Со замена на `s^2` и `t^2` во `nm` се добива `nm = s^2t^2 =(st)^2`. Според дефиницијата 
+                                                за совршен квадрат следи декаи `nm` е совршен квадрат бидејки еквадрат од `st` што е цел број. Со ова се докажува дека 
+                                                ако `n` и `m` се совршени квадрати тогаш и `nm` е совршен квадрат.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- /Direct Proofs -->
+
+                    </div>
+                    <!-- /Introduction to Proofs -->
+
+                    <!-- end of page-->
+                    <footer>
+                        <p class='text-center'>
+                            ###
+                        </p>
+                    </footer>
+                    
+                    <!-- /end of page-->
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
