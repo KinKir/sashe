@@ -1932,7 +1932,7 @@
                         <!-- /Exercise 11 -->
 
                         <!-- Exercise 12 -->
-                        <p id='ex11'>                                 
+                        <p id='ex12'>                                 
                             <strong>Вежба 12.</strong> Да се покаже дека сите условни искази од вежбата 10 се тафтологија без употреба на табели на вредности на вистинитост.<br>
                             a) `(not p ^^ (p vv q )) -> q`
                             <details>
@@ -2000,80 +2000,221 @@
                             </details>
                         </p>
                         <!-- /Exercise 12 -->
+                        
+                        <!-- Exercise 13 -->
+                        <p id='ex13'>                                 
+                            <strong>Вежба 13.</strong> Со употреба на табела на вредностите на вистинитоса да се декаже законот за абсорпција.<br>
+                            a) `p vv (p ^^ q ) -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела 113a</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`p ^^ q`</td>
+                                                        <td>`p vv (p ^^ q)`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p>
+                                            Алтернативен пристап<br>
+                                            Ако `p` е вистина, тогаш и `p vv (p ^^ q)` е вистинит, бидејки првиот исказ во дисјункцијата 
+                                            е вистинит. Ако пак `p` не е вистина, тогаш и `p vv (p ^^ q)` не е вистинит. Бидејки исказот 
+                                            `p vv (p ^^ q)` има секогаш исти логички вредности какои p`, исказите се еквивалентни.                                         
+                                        </p>
+                                    </div>
+                                </div>    
+                            </details>
+                            b) `p ^^ (p vv q ) -= p`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=6>Табела 113a</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>`p`</td>
+                                                        <td>`q`</td>
+                                                        <td>`p vv q`</td>
+                                                        <td>`p ^^ (p vv q)`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`TT`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                        <td>`_|_`</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </details>
+                        </p>
+                        <!-- /Exercise 13 -->
+
+                        <!-- Exercise 14 -->
+                        <p id='ex14'>                                 
+                            <strong>Вежба 14.</strong> Да се утврди дали `not p ^^ (p -> q)) -> not q` e тавтологија.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row'>
+                                    <div class='col-md-12'>
+                                            Ако хипотезата `not p ^^ (p -> q))` е вистинита, тогаш според дефиницијата за конјункција `∧` 
+                                            `p` не е вистинит и `p -> q` е вистинит , одкаде следи дека и `q` е вистинито. За да `not p ^^ (p -> q)) -> not q` 
+                                            биде вистинито треба `nor q` да е вистинити, што не е случај. Според тоа условниот исказ ne e тафтологија.
+                                    </div>
+                                </div>    
+                            </details>
+                        </p>
+                        <!-- /Exercise 14 -->
+
+                        <!-- Exercise 15 -->
+                        <p id='ex15'>                                 
+                                <strong>Вежба 15.</strong> Да се утврди дали `not q ^^ (p -> q)) -> not p` e тавтологија.<br>
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row'>
+                                        <div class='col-md-12'>
+                                                Ако хипотезата `not p ^^ (p -> q))` е вистинита, тогаш според дефиницијата за конјункција `∧` 
+                                                `p` е вистинит и `p -> q` е вистинит , одкаде следи дека и `q` е вистинито. За да `not p ^^ (p -> q)) -> not q` 
+                                                биде вистинито треба `nor q` да е вистинити, што не е случај. Според тоа условниот исказ ne e тафтологија.
+                                        </div>
+                                    </div>    
+                                </details>
+                            </p>
+                            <!-- /Exercise 15 -->
 
                         <!-- Exercise 18 -->
                         <p id='ex18'>                                 
-                                <strong>Вежба 18.</strong> Покажи дека `p -> q` и `not q -> not p` се логички еквиваленти:
-                                <details>
-                                    <summary class="mb-3">Решение</summary>
-                                        <div class='row'>
-                                            <div class='col-md-6'>
-                                                <div class="table-responsive-sm">
-                                                    <table class="table table-bordered table-sm">
-                                                        <tbody class="text-center">
-                                                            <thead class='swatch-purple'>
-                                                                <tr>
-                                                                    <td colspan=6>Табела 18</td>
-                                                                </tr>                                                    
-                                                            </thead>
+                            <strong>Вежба 18.</strong> Покажи дека `p -> q` и `not q -> not p` се логички еквиваленти:
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                    <div class='row'>
+                                        <div class='col-md-6'>
+                                            <div class="table-responsive-sm">
+                                                <table class="table table-bordered table-sm">
+                                                    <tbody class="text-center">
+                                                        <thead class='swatch-purple'>
                                                             <tr>
-                                                                <td>`p`</td>
-                                                                <td>`q`</td>
-                                                                <td>`not p`</td>
-                                                                <td>`not q`</td>
-                                                                <td>`p -> q`</td>
-                                                                <td>`not p -> not q`</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>`TT`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`_|_`</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>`_|_`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
+                                                                <td colspan=6>Табела 18</td>
+                                                            </tr>                                                    
+                                                        </thead>
+                                                        <tr>
+                                                            <td>`p`</td>
+                                                            <td>`q`</td>
+                                                            <td>`not p`</td>
+                                                            <td>`not q`</td>
+                                                            <td>`p -> q`</td>
+                                                            <td>`not p -> not q`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
 
-                                                            </tr>
-                                                            <tr>
-                                                                <td>`_|_`</td>
-                                                                <td>`_|_`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                                <td>`TT`</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class='col-md-6'>
-                                                <p>
-                                                    Еквиваленцијата е валидна бидејки колоната `p -> q` е идентична со колоната `not q -> not p`.
-                                                </p>
-        
+                                                        </tr>
+                                                        <tr>
+                                                            <td>`_|_`</td>
+                                                            <td>`_|_`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                            <td>`TT`</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
-                                    
-                                        <p>
-                                            `&#x25A0`
-                                        </p>
+                                        <div class='col-md-6'>
+                                            <p>
+                                                Еквиваленцијата е валидна бидејки колоната `p -> q` е идентична со колоната `not q -> not p`.
+                                            </p>
+    
+                                        </div>
                                     </div>
-                                </details>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
                         </p>
                         <!-- /Exercise 18 -->
 
