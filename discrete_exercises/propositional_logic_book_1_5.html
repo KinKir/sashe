@@ -313,6 +313,157 @@
                             </details>
                         </p>
                         <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>                                 
+                            <strong>Вежба 4.</strong> Нека `P(x, y)` го претставува исказот „студентот `x` го посетува предметот `y`“, 
+                            каде доменот за `x` се сите студенти на факултетот a `y` е доменот на сите предмети од компјутерски наики. 
+                            Да се преведат следните искази:<br>
+                            а) `EEx EEy P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои студент на факултетот кој посетува барем еден предмет од компјутерските науки.
+                                </p>                                
+                            </details>
+                            b) `EEx AAy P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои студент на факултетот кој ги посетува сите предмети од компјутерски науки.
+                                </p>                                
+                            </details>
+                            c) `AAx EEy P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој студент на факултетот има посетувано барем еден предмет од компјутерски науки.
+                                </p>                                
+                            </details>
+                            d) `EEy AAx P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои предмет од компјутески науки кого го посетувале сите студенти на факултетот.
+                                </p>                                
+                            </details>
+                            e) `AAy EEx P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој предмет бил посетуван барем од еден студент.
+                                </p>                                
+                            </details>
+                            f) `AAx AAy P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој студент на факултетот ги има посетувано сите предмети од компјутерските науки.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>                                 
+                            <strong>Вежба 5.</strong> Нека `W(x, y)` го претставува исказот „студентот `x` ја посетил web сајтот `y`“, 
+                            каде доменот за `x` се сите студенти на факултетот a `y` е доменот на сите web страни. 
+                            Да се преведат следните искази:<br>
+                            а) `W (Sarah Smith, www.att.com)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Студентот Sarah Smith ја има посетено страната www.att.com).
+                                </p>                                
+                            </details>
+                            b) `EEx W(x, www.imdb.org)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои студент на факултетот кој ja посетил страната www.imdb.org.
+                                </p>                                
+                            </details>
+                            c) `AAx EEy W(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој студент на факултетот има посетeno барем еден сајт.
+                                </p>                                
+                            </details>
+                            d) `EEy AAx P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои сајт кого го посетувале сите студенти на факултетот.
+                                </p>                                
+                            </details>
+                            e) `AAy EEx P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој сајт бил посетуван барем од еден студент.
+                                </p>                                
+                            </details>
+                            f) `AAx AAy P(x, y)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој студент на факултетот ги има посетувано сите сајтови.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 7 -->
+                        <p id='ex7'>                                 
+                            <strong>Вежба 7.</strong> Нека `T(x, y)` го претставува исказот „студентот `x` ја сака кујната `y`“, 
+                            каде доменот за `x` се сите студенти на факултетот a `y` е доменот на светски кујни. 
+                            Да се преведат следните искази:<br>
+                            а) `not T(Sarah Smith, Japanese)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Студентот Sarah Smith не сака јапанска кујна.
+                                </p>                                
+                            </details>
+                            b) `EEx T(x, Korean) ^^ AAx T(x, Mexican)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои студент кој не сака корејска кујна но сите студенти сакаат мексиканска кујна.
+                                </p>                                
+                            </details>
+                            c) `EEy (T(Monique Arsenault, y) vv T(Jay Johnson, y))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постои кујна која ја сака Monique Arsenault или Jay Johnson.
+                                </p>                                
+                            </details>
+                            d) `AAx AAz EEy ((x != z) -> not (T(x, y) ^^ T(z, y)))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Исказот кажува: За секое `x` и секое `z` постои `y` така да ако `x` и `z` не се еднакви тогаш `x` и `z` не сакаат иста `y`.<br>
+                                    За секој пар на студенти постои кујна која барем еден од нив не ја сака.
+                                </p>                                
+                            </details>
+                            e) `ЕЕx EEz AAy (T(x, y) harr T(z, y))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Постојат двајца студенти кои имаат потполно ист вкус (сакаат исти кујни).
+                                </p>                                
+                            </details>
+                            f) `AAx AAz EEy (T(x, y) harr T(z, y))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Секој студент на факултетот ги има посетувано сите сајтови.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 7 -->
                      
 
                     </div>
