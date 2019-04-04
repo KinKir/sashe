@@ -957,6 +957,274 @@
                             <h5>
                                 Идентитети со множества
                             </h5>
+                            <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=4>Идентитети на множества</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>Идентитет</td>
+                                                        <td>Име</td>
+                                                        <td>Идентитет</td>
+                                                        <td>Име</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup emptyset = A`<br>
+                                                            `А cap U = A`
+                                                        </td>
+                                                        <td>Закони за идентитети</td>
+                                                        <td>
+                                                            `A cup U = U`<br>
+                                                            `A cap emptyset = emptyset`
+                                                        </td>
+                                                        <td>Закони за доминација</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup A = A`<br>
+                                                            `А cup U = A`
+                                                        </td>
+                                                        <td>Закони за идемпотентност</td>
+                                                        <td>
+                                                            `(A^C)^C`
+                                                        </td>
+                                                        <td>Двоен комплемент</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup A = B cup A`<br>
+                                                            `А cup U = b cap A`
+                                                        </td>
+                                                        <td>Закони за комутативност</td>
+                                                        <td>
+                                                            `(A cup B)^C = A^C cap B^C`<br>
+                                                            `(A cap B)^C = A^C cup B^C`
+                                                        </td>
+                                                        <td>Де Морганови закони</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup (B cup C) = (A cup B) cup C`<br>
+                                                            `А cap (B cap C) = (A cap B) cap C`
+                                                        </td>
+                                                        <td>Закони за асоцијативност</td>
+                                                        <td>
+                                                            `А cup (B cap C) = (A cup B) cap (A cup C)`<br>
+                                                            `А cap (B cup C) = (A cap B) cup (A cap C)`
+                                                        </td>
+                                                        <td>Дистрибутивни закони</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup (A cap B) = A`<br>
+                                                            `А cap (A cup B) = A`
+                                                        </td>
+                                                        <td>Закони за абсорпција</td>
+                                                        <td>
+                                                            `А cup A^C = U`<br>
+                                                            `А cap A^C = emptyset`
+                                                        </td>
+                                                        <td>Закони за комплемент</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <h6>
+                                Докажување на идентитети
+                            </h6>
+
+                            <p>
+                                За да се докажат тврдења за множества од облик `L = D`, каде `L` е изразот од левата страна, а `D` е изразот од десната страна 
+                                како корисни се покажуваат следните техники :
+                            </p>
+                            <p>
+                                1. Да се докаже `L subseteq D` и `D subseteq L` пооделно, врз база на логички еквивалентности.
+                            </p>
+                            <p>
+                                2. Да се користи претставување на множествата со исказни функции, врз база на логички еквивалентности.
+                            </p>
+                            <p>
+                                3. Разгледување на сите различни случаи.
+                            </p>
+                            <p>
+                                4. Да се користат основните и веќе докажаните идентитети
+                            </p>
+
+                            <h6>
+                                Метод 1: Докажување дека едното множество е подмножество од другото и обратно
+                            </h6>
+                            <p>
+                                `(A cap B)^C = A^C cup B^C`
+                            </p>
+                            <p>
+                                Доказ: Трeба да докажеме дека
+                            </p>
+                            <p>
+                                `(A cap B)^C subseteq A^C cup B^C`<br>
+                                `x in (A cap B)^C`<br>
+                                `rArr x notin (A cap B)`<br>
+                                `rArr not (x in A cap B)`<br>
+                                `rArr not (x in A ^^ x in B)`<br>
+                                `rArr not (x in A) vv not(x in B)`<br>
+                                `rArr x notin A vv x notin B`<br>
+                                `rArr x in A^C vv x n B^C`<br>
+                                `rArr x in A^C cup B^C`<br>
+                                `rArr x in (A^C cap B^C`) subseteq (A^C cup B^C)<br>
+                            </p>
+                            <p>
+                                и дека `A^C cup B^C subseteq (A cap B)^C`<br>
+                                `x in A^C cup B^C`<br>
+                                `rArr x in A^C vv x in B^C`<br>
+                                `rArr x notin A vv notin B`<br>
+                                `rArr not (x in A) vv not (x in B)`<br>
+                                `rArr not(x in A ^^ x in B)`<br>
+                                `rArr not (x in A cap B)`<br>
+                                `rArr x notin (A cap B)`<br>
+                                `rArr x in (A cap B)^C`<br>
+                                `rArr A^C cup B^C subseteq (A cap B)^C`
+                            </p>
+
+                            <h6>
+                                Метод 3: Разгледување на сите случаи
+                            </h6>
+                            <p>
+                                Слично како вистинитосни таблици во исказното сметање.
+                            </p>
+                            <p>
+                                Се дефинираат колони за секој подизраз и редици за сите комбинации на припадност во вклучените множества.
+                            </p>
+                            <p>
+                                Kористиме `1` да означиме припадност во дадено множество и `0` за означиме неприпадност.
+                            </p>
+                            <p>
+                                Ако `L = D`, тогаш важи:
+                            </p>
+                            <p>
+                                `(AAx) ((x in L iff x in D) ^^ (x notin L iff x notin D)`
+                            </p>
+                            <p>
+                                Ако колоните за `L` и `D` се исти, множествата се еднакви
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Доказ со таблица на припадност
+                            </h5>
+
+                            <p>
+                                Да се докаже `(A cup B) - B = A - B`.
+                            </p>
+                            <div class='row'>
+                                <div class='col-md-12'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Доказ со таблица на припадност</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`A`</td>
+                                                    <td>`B`</td>
+                                                    <td>`A cup B`</td>
+                                                    <td>`(A cup B) - B`</td>
+                                                    <td>`A -B`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                Да се докаже `(A cup B) - C = (A - B) cup (B - C)`.
+                            </p>
+                            <div class='row'>
+                                <div class='col-md-12'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Доказ со таблица на припадност</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`A`</td>
+                                                    <td>`B`</td>
+                                                    <td>`A cup B`</td>
+                                                    <td>`(A cup B) - B`</td>
+                                                    <td>`A -B`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
