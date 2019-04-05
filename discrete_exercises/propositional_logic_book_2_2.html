@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mayhematics">
+        <meta name="author" content="Ilija Taseski">
+        <meta name="generator" content="VS Code 2019">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <!-- material icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Calculus</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete/proof.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="propositional_logic_university.html">
+                            <span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic_book_1_7.html">
+                            <span>
+                                <i class="fas fa-book"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="propositional_logic_book.html">
+                                Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li>
+                                    <a href="propositional_logic_book.html">
+                                        Исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_book_1_2.html">
+                                        Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_book_1_3.html">
+                                        Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic_book_1_4.html">
+                                        Предикати и квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_book_1_5.html">
+                                        Вгнездени квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_book_1_6.html">
+                                        Правила за изведување на заклучок
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic_book_1_7.html">
+                                        Доказ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bd-toc-item active">
+                                <a class="bd-toc-link" href="">
+                                    2. Основни структури
+                                </a>
+        
+                                <ul class="nav bd-sidenav">
+                                    <li>
+                                        <a href="">
+                                            2.1 Множества
+                                        </a>
+                                    </li>
+                                    <li class="active bd-sidenav-active">
+                                        <a href="propositional_logic_book_2_2.html">
+                                            2.2 Операции над множества
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            2.3 Функции
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Исказно сметање</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex1">Вежба 1</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex2">Вежба 2</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex3">Вежба 3</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex4">Вежба 4</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex5">Вежба 5</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex6">Вежба 6</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex7">Вежба 7</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex8">Вежба 8</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex9">Вежба 9</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex10">Вежба 10</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#ex11">Вежба 11</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                    <div id='Translating' class='row'>
+                        <div class='col-md-12'>
+                    
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>                               
+                            <strong>Вежба 1.</strong>  Нека `A` е множеството на студенти кои живеат на помалку од два километри од факултетот и нека `B` 
+                            е множеството на студентите кои одат пешки на часови. Да се опуишат студентите во секое од овие множества.<br>
+                            a) `A cap B`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    `A cap B = {`само студенти кои живееат на помалку од 2 километри и истовремено одат пешки на факултет`}`
+                                </p>                                
+                            </details>
+                            b) `A cup B`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    `A cuap B = {`од сите студенти кои живееат на помалку од 2 километри и сите кои одат пешки на факултет`}`
+                                </p>                                
+                            </details>
+                            c) `A - B`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    `A - B = {`студенти кои живееат на помалку од 2 километри и не одат пешки на факултет`}`
+                                </p>                                
+                            </details>
+                            d) `B - A`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    `B - A = {`студенти кои одат пешки на факултет но не живеат на помалку од 2 километри`}`
+                                </p>                                
+                            </details>
+
+
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>                               
+                            <strong>Вежба 5.</strong>  Да се докаже законот закомплемент подажувајки дека `A^C =A`.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Треба да се докаже дека ако имаме дава парни броја нивната сума е парен број. Да претпоставиме дека `a` и `b` се два 
+                                    парни броја. Потоа ќе претпоставиме дека постојат целите броеви `s` и `t` такви да `a = 2s` и `b = 2t`. Со нивно 
+                                    собирање се добива `a + b = 2s + 2t = 2(s + t)`. Бидејки ова претставува 2 помножено со цел број докажавме дека 
+                                    `a + b` е парен број.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 3 -->
+                        <p id='ex3'>                               
+                            <strong>Вежба 3.</strong>  Со употреба на директен доказ да се покаже дека квадратот на непарен број е непарен број.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Треба да се докаже дека ако имаме непарен број неговиот квадрт е непарен број. Да претпоставиме дека `a` е непарен 
+                                    број. Потоа ќе претпоставиме дека постои целиот број `k` така да `a = 2к + 1`. Со квадрирање добиваме `a^2 = (2k + 1)^2 = 
+                                    4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1`. Бидејки ова претставува 2 помножено со цел број плус еден, докажавме дека `a^2` е 
+                                    непарен број.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>                               
+                            <strong>Вежба 4.</strong>  Со употреба на директен доказ да се покаже дека инверзниот број од парен број е парен број.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Треба да се докаже дека ако имаме парен број неговиот инверзен број е парен. Да претпоставиме дека `a` е парен 
+                                    број. Потоа ќе претпоставиме дека постои целиот број `k` така да `a = 2к`. Со негација добиваме `-a = -(2k) = 
+                                    2(-k)`. Бидејки ова претставува 2 помножено со цел број, докажавме дека `-a` е парен број.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>                               
+                            <strong>Вежба 5 .</strong>  Да се покаже дека ако `m + n` и `n + p` се парни цели броеви каде 
+                            `m`, `n` и `p` се цели броеви `m + p` е парен број. <br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Да претпоставиме дека `m + n` и `n + p` се парни броеви. Да претпоставиме дека дека постојат целите броеви `r` и `s` така 
+                                    да `m + n = 2r` и `n + p = 2s`. Со замена добиваме `m + p = 2r -n + 2s -n = 2(r -n + s)`. Бидејки ова претставува 2 помножено 
+                                    со цел број, докажавме дека `m + p` е парен број.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id='ex6'>                               
+                            <strong>Вежба 6 .</strong>  Со употреба на директен доказ да се покаже дека производот на два непарни броја е непарен број.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Треба да се докаже дека производот на два непарни броја е непаренброј. Да претпоставиме дека `a и `b` се непарни броеви. 
+                                    Да претпоставиме дека дека постојат целите броеви `r` и `s` така да `а = 2r + 1` и `b = 2s + 1`. Со замена добиваме 
+                                    `ab = (2r + 1)(2s + 1) = 4rs + 2r + 2s + 1 = 2(2rs + r + s) + 1`. Бидејки ова претставува 2 помножено со цел број плус еден, 
+                                    докажавме дека `ab` е нeпарен број.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7 -->
+                        <p id='ex7'>                               
+                            <strong>Вежба 7 .</strong>  Со употреба на директен доказ да се покаже дека секој непарен број е разлика од два корена.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Разликата на два квадрати може да се факторизира односно `a^2 - b^2 = (a + b)(a - b)`. Кога би можеле нашиот даден цел 
+                                    непарен број да го изедначиме со `a + b` а `a - b` да го изедначиме со 1 би биле готови со докажувањето. Но нека 
+                                    `a` и `b` се цели броеви кои формираат половинка `n/2`. На пример ако `n = 11` тогаш можеме да земеме да `a = 6` а `b = 5`. 
+                                    Ако `n = 2k + 1` тогаш `a = k + 1` а `b = k`. Од тука произлегува и доказот. Бидејки `n` е непарен број можеме да запишеме 
+                                    `n = 2k + 1` за некој цел број `k`. Понатаму `(k + 1)^2 - k^2  = k^2+ 2k +1 -k^2 = 2k + 1 = n`. На овј начин го искажавме `n` 
+                                    разлика од два квадрати.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 7 -->
+
+                        <!-- Exercise 8 -->
+                        <p id='ex7'>                               
+                            <strong>Вежба 8 .</strong>  Да се докаже дека ако `m` е совршен квадрат тогаш `n + 2` не е совршен квадрат.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Нека `n = m^2`. Ако `m = 0`, тогаш `n + 2 = 2`, што не е совршен квадрат, така да можеме да претпоставиме дека 
+                                    `m ≥ 1`. Најмалиот совршен квадрат тогаш е `(m + 1)^2`, и од тука имаме `(m + 1)^2 = m^2 + 2m + 1 = n + 2m + 1 > 
+                                    n + 2*1 + 1 > n + 2`. Од тука `n + 2` не може да е совршен квадрат.
+                                </p>                                
+                            </details>
+                        </p>
+                        <!-- /Exercise 8 -->
+
+                    </div>
+                </div>
+                    
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
+    </body>
+</html>
