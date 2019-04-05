@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Learning Discrete Mathematics">
+        <meta name="author" content="Ilija Taseski">
+
+        <title>io sashe</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Documentation extras -->
+        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+
+        <!-- MathJax -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+                async></script>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="../images/favicons/manifest.json">
+        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="../images/icon/favicon.ico">
+        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c">
+
+        <!-- Font Awesome JS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+   
+    </head>
+    <body>
+        <!-- Header -->
+        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+            <div class="container">
+                <span class="skiplink-text">Skip to main content</span>
+            </div>
+        </a>
+
+        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                        focusable="false">
+                    <title>Саше учи Discrete Matematics</title>
+                    <path fill="currentColor"
+                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+                    <path fill="currentColor"
+                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+                </svg>
+            </a>
+        
+            <div class="navbar-nav-scroll">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="propositional_symbols.html">Симболи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_exercises/propositional_logic_university.html">
+                            <span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <span>
+                                <i class="fas fa-book"></i>
+                            </span>
+                            Вежби
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../discrete_colloquium/propositional_logic_colloquium.html">
+                            <span>
+                                <i class="fas fa-graduation-cap"></i>
+                            </span>
+                            Колоквиум
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <!--Container -->
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap">
+                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                    <form class="bd-search d-flex align-items-center">
+                        <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
+                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                                data-docs-version="4.1">
+                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                                aria-expanded="false" aria-label="Toggle docs navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                                    focusable="false">
+                                <title>Menu</title>
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                        d="M4 7h22M4 15h22M4 23h22"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Left Sidenav -->
+                    <nav class="collapse bd-links" id="bd-docs-nav">
+
+                        <div class="bd-toc-item">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                1. Логика и докази
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic.html">
+                                        1.1 Исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic-app.html">
+                                        1.2 Примена на исказна логика
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="propositional_logic_equivalences.html">
+                                        1.3 Исказни еквиваленции
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="predicates.html">
+                                        1.4 Предикати и квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="predicates_nested.html">
+                                        1.5 Вгнездени квантификатори
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="predicates_inference.html">
+                                        1.6 Правила за изведување на заклучоци
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="proof.html">
+                                        1.7 Докази
+                                    </a>
+                                </li>  
+                            </ul>
+                        </div>
+
+                        <div class="bd-toc-item active">
+                            <a class="bd-toc-link" href="propositional_logic.html">
+                                2. Основни структури
+                            </a>
+    
+                            <ul class="nav bd-sidenav">
+                                <li>
+                                    <a href="sets.html">
+                                        2.1 Множества
+                                    </a>
+                                </li>
+                                <li class="active bd-sidenav-active">
+                                    <a href="propositional_logic-app.html">
+                                        2.2 Операции над множества
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        2.3 Функции
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </nav>
+                </div>
+
+                <!-- right nav -->
+                <div class="d-none d-xl-block col-xl-2 bd-toc">
+                    <ul class="section-nav">
+                        <li class="toc-entry toc-h2">
+                            <a href="#def">Исказно сметање</a>
+                            <ul>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Propositions">Искази</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#negation">Негација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#conjunction">Конјункција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#disjunction">Дисјункција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#exclusive or">Екслузивно или</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#implication">Импликација</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#CONVERSE, CONTRAPOSITIVE, AND INVERSE">Конверзија, Контрапозитив и Инверзија</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#BICONDITIONALS">Еквиваленција</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Truth Tables of Compound Propositions">Табела на вистинитост за сложени искази</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Precedence of Logical Operators">Преднот на логичките сврзници</a>
+                                </li>
+                                <li class="toc-entry toc-h3">
+                                    <a href="#Logic and Bit Operations">Операции над битови</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- main -->
+                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                        
+                    <!-- sets operations -->
+                    <div id='Translating' class='row'>
+                        <div class='col-md-12'>
+                           <h5>
+                               Операции над множества
+                           </h5>
+
+                           <p>
+                                Две или повеќе множества можат да се комбинираат на многу различни начини. 
+                           </p>                                 
+
+                            <h5>
+                                Унија на множества
+                            </h5>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Унија на множества</h4>
+                                <p>
+                                    Унија на две множества `A` и `B`, `A cup B`, е множество кое ги содржи елементите кои се во `A`, или (`vv`) во `B` (или, се разбира , и во 
+                                    двете множества).
+                                </p>
+                            </div>
+                            
+                            <p>
+                                Според тоа , `AA A,B: A cup B = {x | x in A vv x in B}`.
+                            </p>
+                            <p>
+                                Од дефиницијата непосредно следува дека секое од множествата е подмножество од нивната унија, односно : `AA A, B: (A subseteq A cup B ) ^^ (B subseteq A cup B )`.
+                            </p>
+                            <p>
+                                Унијата всушност е заедништво на елементите од двете множества.
+                            </p>
+                            <p>
+                                Примери за унија
+                            </p>
+                            <p>
+                                1. `{a,b,c} cup {2,3} = {a,b,c,2,3}`
+                            </p>
+                            <p>
+                                2. `{2,3,5} cup {3,5,7} = {2,3,5,3,5,7} = {2,3,5,7}`
+                            </p>
+                            <p>
+                                3. `{1, 2, 3} cup {3, 4, 5} = {1, 2, 3, 4, 5}`
+                            </p>
+                            <p>
+                                4. `{a, b} cup {3, 4} = {a, b, 3, 4}`
+                            </p>
+                            <p>
+                                5. `{1, 2} cup emptyset = {1, 2}`
+                            </p>
+
+                            <div class="text-center">
+                                <img src="../images/sets_03.PNg" class="img-fluid img">
+                            </div>
+
+                            <h5>
+                                Својства на операцијата унија на множества
+                            </h5>
+                            <p>
+                                Својства на унија на множества
+                            </p>
+                            <p>
+                                `A cup emptyset = A` - Закон за идентитет
+                            </p>
+                            <p>
+                                `A cup U = U` - Закон за доминација
+                            </p>
+                            <p>
+                                `A cup A = A` - Закон за идемпотентност
+                            </p>
+                            <p>
+                                `A cup B = B cup A` - Закон за комутативност
+                            </p>
+                            <p>
+                                `A cup (B cup C) = (A cup B) cup C` - Закон за асоцијативност
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Пресек на множества
+                            </h5>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Пресек на множества</h4>
+                                <p>
+                                    Пресек на две множества `A` и `B`, `A cap B` е множеството кое ги содржи елементите кои се истовремено во `A` и (`^^`) во `B`.
+                                </p>
+                            </div>
+                            
+                            <p>
+                                Според тоа: `AA A,B: A cap B={x | x in A ^^ x in B}`.
+                            </p>
+                            <p>
+                                Непосредно од дефиницијата следува дека пресекот на две множества е подмножество од секое од множествата, односно:<br>
+                                `AAA, B: (A cap B subseteq A) ^^ (A cap B subseteq B)`
+                            </p>
+                            <p>
+                                Примери на пресек
+                            </p>
+                            <p>
+                                1.  `{a,b,c} cap {2,3} = emptyset`
+                            </p>
+                            <p>
+                                2. `{2,4,6} cap {3,4,5} = {4}`
+                            </p>
+                            <p>
+                                3. `{1, 2, 3} cap {3, 4, 5} = {3}`
+                            </p>
+                            <p>
+                                4. `{a, b} cap {3, 4} = emptyset`
+                            </p>
+                            <p>
+                                5. `{1, 2} cap emptyset = emptyset`
+                            </p>
+
+                            <div class="text-center">
+                                <img src="../images/sets_04.PNg" class="img-fluid img">
+                            </div>
+
+                            <h6>
+                                Својства на пресек
+                            </h6>
+                            <p>
+                                `A cap U = A` - Закон за идентитет
+                            </p>
+                            <p>
+                                `A cap emptyset = emptyset` - Закон за доминација
+                            </p>
+                            <p>
+                                `A cap A = A` - Закон за идемпотентност
+                            </p>
+                            <p>
+                                `A cap B = B cap A` - Закон за комутативност
+                            </p>
+                            <p>
+                                `A cap (B cap C) = (A cap B) cap C` - Закон за асоцијативност
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Својства на унија и пресек
+                            </h5>
+                            <p>
+                                За било кои три множества `A`, `B` и `C`, аналогно како кај исказите, важат дистрибутивните закони
+                            </p>
+                            <p>
+                                `А cup (B cap C) = (A cup B) cap (A cup C)`
+                            </p>
+                            <p>
+                                `А cap (B cup C) = (A cap B) cup (A cap C)`
+                            </p>
+
+                            <p>
+                                Дисјунктност
+                            </p>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Дисјунктност</h4>
+                                <p>
+                                    За две множества `A` и `B` велиме дека се дисјунктни акко нивниот пресек е празен, односно немаат ништо заедничко.
+                                </p>
+                            </div>
+                            
+                            <p>
+                                `A cap B= emptyset`
+                            </p>
+                            <p>
+                                Пример: множеството на парни и множеството на непарни цели броеви се дисјунктни множества.
+                            </p>
+                            <p>
+                                `{1, 2, 3}` и `{3, 4, 5}` не се дисјунктни
+                            </p>
+                            <p>
+                                `{a, b}` и `{3, 4}` се дисјунктни
+                            </p>
+                            <p>
+                                `{1, 2}` и `emptyset` се дисјунктни
+                            </p>
+                            <p>
+                                `emptyset и emptyset` се дисјунктни!
+                            </p>
+                            <h6>
+                                Принцип на влучување и исклучување
+                            </h6>
+                            <p>
+                                Нека `A` и `B` се конечни множества. Како да пресметаме колку елементи има во `A cup B`?
+                            </p>
+                            <p>
+                                `|A cup B| = |A| + |B| - |A cap B|`
+                            </p>
+                            <p>
+                                Имено, во збирот `|A|+|B|` два пати се броени заедничките елементи, односно елементоите од пресекот.
+                            </p>
+                            <p>
+                                Пример: Колку вкупно различни студенти има на калкулус и дискретна математика?
+                            </p>
+                            <p>
+                                Ја бараме кардиналноста на `E = C cup M`,<br>
+                                `C = {s | s` има запишано калкулус`}, M = {s | s` има запишано дискретна математика`}`. <br>
+                                Некои студенти ги имаат запишано и двата предмети!<br>
+                                `|E| = |C cup M| = |C| + |M| - |C cap M|`
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Разлика на множества
+                            </h5>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Разлика на множества</h4>
+                                <p>
+                                    Разлика на две множества `A` и `B`, `A - B`, (или `A\B`) е множеството на сите елементи кои се во `A` но не се во `B`. 
+                                </p>
+                            </div>
+                            
+                            <p>
+                                Односно:
+                            </p>
+                            <p>
+                                `A - B =  {x | x in A ^^ x notin B } = {x | not (x in A -> x in B)}`
+                            </p>
+                            <p>
+                                Понекогаш се нарекува комплемент на `B` во однос на `A`.
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Венов дијаграм за разлика на множества
+                            </h5>
+
+                            <p>
+                                `A − B` е она што останува од `А` откако `B` ќе си го земе својот дел.
+                            </p>
+                            <div class="text-center">
+                                <img src="../images/sets_05.PNg" class="img-fluid img">
+                            </div>
+
+                            <p>
+                                Примери за разлика
+                            </p>
+                            <p>
+                                `{1,2,3,4,5,6} - {2,3,5,7,9,11} = {1, 4, 6}`<br>
+                                `ZZ - NN = {… , −1, 0, 1, 2, … } - {0, 1, … }`<br>
+                                `= {x | x` е цел број кој не е природен борј`}`<br>
+                                ` = {x | x` е негативен цел број`}`<br>
+                                ` = {. . . , −3, −2, −1}`
+                            </p>
+
+                            <h6>
+                                Својства на разлика
+                            </h6>
+                            <p>
+                                `not AA A,B A-B = B-A` ?
+                            </p>
+                            <p>
+                                (не важи комутативен закон)
+                            </p>
+                            <p>
+                                Пример
+                            </p>
+                            <p>
+                                `A={2,3,5,8,9}, B={1,5,8,11}`
+                            </p>
+                            <p>
+                                `A-B={2,9}&nbsp;  - B-A={1,11}`
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Симетрична разлика на множества
+                            </h5>
+
+                            <p>
+                                Симетрична разлика на две множества `A` и `B`, се означува со `A o+ B`, и се дефинира со:<br>
+                                `A o+ B={x | x` е во `A` или во `B`, но не и во двете`}`<br>
+                                `={x | x in A cup B ^^ x notin A cap B}`<br>
+                                `= (A cup B) - (A cap B)`<br>
+                                `= (A-B) cup (B-A)`
+                            </p>
+                            <p>
+                                За симетрична разлика важи комутативниот закон `A o+B = B o+ A`
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Комплемент на множество
+                            </h5>
+
+                            <div id="def1" class="alert alert-success swatch-purple" role="alert">
+                                <h4 class="alert-heading">Комплемент на множество</h4>
+                                <p>
+                                    Нека `U` е универзалното множество во однос на даден контекст. За секое множество `A subset U`, комплемент на `A` во 
+                                    однос на `U`, го нарекуваме множеството `U - A`, и ги запишуваме со , `bar A` или со `A^C` или `А^,`. 
+                                </p>
+                            </div>
+                            
+                            <p>
+                                На пример ако `U = NN`, `{3, 5} ^ C = {0,1,2,4,6,7,8,….}`
+                            </p>
+                            <p>
+                                Кога е јасно што е универзумот `U`, еквивалентна дефиниција на комплемент е :
+                            </p>
+                            <p>
+                                `bar A ={x | x notin A} = A^C`
+                            </p>
+                            <div class="text-center">
+                                <img src="../images/sets_06.PNg" class="img-fluid img">
+                            </div>
+                            <h6>
+                                Својства на комплемент
+                            </h6>
+                            <p>
+                                `(A^C)^C = A` - Закон за двоен комплемент
+                            </p>
+                            <p>
+                                `A cup A^C = U` - Закон за комплемент
+                            </p>
+                            <p>
+                                `A cap A^C = emptyset` - Закон за комплемент
+                            </p>
+                            <p>
+                                `(A cap B)^C = A^C cup B^C` - Де Морганов закон
+                            </p>
+                            <p>
+                                `(A cup B)^C = A^C cap B^C` - Де Морганов закон
+                            </p>
+
+                            <h6>
+                                Врска меѓу разлика и комплемент
+                            </h6>
+                            <p>
+                                `A - B = A cap B^C`
+                            </p>
+                            <div class="text-center">
+                                <img src="../images/sets_07.PNG" class="img-fluid img">
+                            </div>
+                            <hr>
+
+                            <h5>
+                                Идентитети со множества
+                            </h5>
+                            <div class='row'>
+                                    <div class='col-md-12'>
+                                        <div class="table-responsive-sm">
+                                            <table class="table table-bordered table-sm">
+                                                <tbody class="text-center">
+                                                    <thead class='swatch-purple'>
+                                                        <tr>
+                                                            <td colspan=4>Идентитети на множества</td>
+                                                        </tr>                                                    
+                                                    </thead>
+                                                    <tr>
+                                                        <td>Идентитет</td>
+                                                        <td>Име</td>
+                                                        <td>Идентитет</td>
+                                                        <td>Име</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup emptyset = A`<br>
+                                                            `А cap U = A`
+                                                        </td>
+                                                        <td>Закони за идентитети</td>
+                                                        <td>
+                                                            `A cup U = U`<br>
+                                                            `A cap emptyset = emptyset`
+                                                        </td>
+                                                        <td>Закони за доминација</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup A = A`<br>
+                                                            `А cup U = A`
+                                                        </td>
+                                                        <td>Закони за идемпотентност</td>
+                                                        <td>
+                                                            `(A^C)^C`
+                                                        </td>
+                                                        <td>Двоен комплемент</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup A = B cup A`<br>
+                                                            `А cup U = b cap A`
+                                                        </td>
+                                                        <td>Закони за комутативност</td>
+                                                        <td>
+                                                            `(A cup B)^C = A^C cap B^C`<br>
+                                                            `(A cap B)^C = A^C cup B^C`
+                                                        </td>
+                                                        <td>Де Морганови закони</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup (B cup C) = (A cup B) cup C`<br>
+                                                            `А cap (B cap C) = (A cap B) cap C`
+                                                        </td>
+                                                        <td>Закони за асоцијативност</td>
+                                                        <td>
+                                                            `А cup (B cap C) = (A cup B) cap (A cup C)`<br>
+                                                            `А cap (B cup C) = (A cap B) cup (A cap C)`
+                                                        </td>
+                                                        <td>Дистрибутивни закони</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            `А cup (A cap B) = A`<br>
+                                                            `А cap (A cup B) = A`
+                                                        </td>
+                                                        <td>Закони за абсорпција</td>
+                                                        <td>
+                                                            `А cup A^C = U`<br>
+                                                            `А cap A^C = emptyset`
+                                                        </td>
+                                                        <td>Закони за комплемент</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <h6>
+                                Докажување на идентитети
+                            </h6>
+
+                            <p>
+                                За да се докажат тврдења за множества од облик `L = D`, каде `L` е изразот од левата страна, а `D` е изразот од десната страна 
+                                како корисни се покажуваат следните техники :
+                            </p>
+                            <p>
+                                1. Да се докаже `L subseteq D` и `D subseteq L` пооделно, врз база на логички еквивалентности.
+                            </p>
+                            <p>
+                                2. Да се користи претставување на множествата со исказни функции, врз база на логички еквивалентности.
+                            </p>
+                            <p>
+                                3. Разгледување на сите различни случаи.
+                            </p>
+                            <p>
+                                4. Да се користат основните и веќе докажаните идентитети
+                            </p>
+
+                            <h6>
+                                Метод 1: Докажување дека едното множество е подмножество од другото и обратно
+                            </h6>
+                            <p>
+                                `(A cap B)^C = A^C cup B^C`
+                            </p>
+                            <p>
+                                Доказ: Трeба да докажеме дека
+                            </p>
+                            <p>
+                                `(A cap B)^C subseteq A^C cup B^C`<br>
+                                `x in (A cap B)^C`<br>
+                                `rArr x notin (A cap B)`<br>
+                                `rArr not (x in A cap B)`<br>
+                                `rArr not (x in A ^^ x in B)`<br>
+                                `rArr not (x in A) vv not(x in B)`<br>
+                                `rArr x notin A vv x notin B`<br>
+                                `rArr x in A^C vv x n B^C`<br>
+                                `rArr x in A^C cup B^C`<br>
+                                `rArr x in (A^C cap B^C`) subseteq (A^C cup B^C)<br>
+                            </p>
+                            <p>
+                                и дека `A^C cup B^C subseteq (A cap B)^C`<br>
+                                `x in A^C cup B^C`<br>
+                                `rArr x in A^C vv x in B^C`<br>
+                                `rArr x notin A vv notin B`<br>
+                                `rArr not (x in A) vv not (x in B)`<br>
+                                `rArr not(x in A ^^ x in B)`<br>
+                                `rArr not (x in A cap B)`<br>
+                                `rArr x notin (A cap B)`<br>
+                                `rArr x in (A cap B)^C`<br>
+                                `rArr A^C cup B^C subseteq (A cap B)^C`
+                            </p>
+
+                            <h6>
+                                Метод 3: Разгледување на сите случаи
+                            </h6>
+                            <p>
+                                Слично како вистинитосни таблици во исказното сметање.
+                            </p>
+                            <p>
+                                Се дефинираат колони за секој подизраз и редици за сите комбинации на припадност во вклучените множества.
+                            </p>
+                            <p>
+                                Kористиме `1` да означиме припадност во дадено множество и `0` за означиме неприпадност.
+                            </p>
+                            <p>
+                                Ако `L = D`, тогаш важи:
+                            </p>
+                            <p>
+                                `(AAx) ((x in L iff x in D) ^^ (x notin L iff x notin D)`
+                            </p>
+                            <p>
+                                Ако колоните за `L` и `D` се исти, множествата се еднакви
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Доказ со таблица на припадност
+                            </h5>
+
+                            <p>
+                                Да се докаже `(A cup B) - B = A - B`.
+                            </p>
+                            <div class='row'>
+                                <div class='col-md-12'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=5>Доказ со таблица на припадност</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`A`</td>
+                                                    <td>`B`</td>
+                                                    <td>`A cup B`</td>
+                                                    <td>`(A cup B) - B`</td>
+                                                    <td>`A -B`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                Да се докаже `(A cup B) - C = (A - C) cup (B - C)`.
+                            </p>
+                            <div class='row'>
+                                <div class='col-md-12'>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered table-sm">
+                                            <tbody class="text-center">
+                                                <thead class='swatch-purple'>
+                                                    <tr>
+                                                        <td colspan=8>Доказ со таблица на припадност</td>
+                                                    </tr>                                                    
+                                                </thead>
+                                                <tr>
+                                                    <td>`A`</td>
+                                                    <td>`B`</td>
+                                                    <td>`C`</td>
+                                                    <td>`A cup B`</td>
+                                                    <td>`(A cup B) - C`</td>
+                                                    <td>`A - C`</td>
+                                                    <td>`B - C`</td>
+                                                    <td>`(A - C) cup (B - C)`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`1`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                    <td>`0`</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6>
+                                Метод 4: Доказ со користење на основните својства
+                            </h6>
+                            <p>
+                                Да се докаже `A cap B = B-(B-A)`
+                            </p>
+                            <p>
+                                Доказ:
+                            </p>
+                            <p>
+                                `A - (A - B) = A - (A cap B^C)`<br>
+                                `= A cap (A cap B^C)^C`<br>
+                                `= A cap (A^C cap B)`<br>
+                                `= (A cap A^C) cup (A cap B)`<br>
+                                `= emptyset cup (A cap B)`<br>
+                                `A cap B`
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Заклучоци во врска со множества
+                            </h5>
+                            <p>
+                                Докажи дека ако `А subseteq B`, тогаш, `A cup B = B`.
+                            </p>
+                            <p>
+                                Решение:
+                            </p>
+                            <p>
+                                Прво ќе докажеме дека секогаш важи `В subseteq A cup B`:
+                            </p>
+                            <p>
+                                Нека `x in B`. Од правилото на заклучување `p => p vv q` имаме дека `x in B => (x in А vv x in B) iff x in А cup B`
+                            </p>
+                            <p>
+                                Треба да докажеме дека: `А subseteq B => ((A cup B subseteq B) ^^ (B subseteq A cup B))`,<br>
+                                т.е. `(А subseteq B => A cup B subseteq B) ^^ (А subseteq B => B subseteq A cup B)`,
+                            </p>
+                            <p>
+                                `А subseteq B => B subseteq A cup B` е празен доказ, затоа што `B subseteq A cup B` е секогаш точно
+                            </p>
+                            <p>
+                                Нека `А subseteq B`. Тогаш `AAx (x in A => x in B)` 
+                            </p>
+
+                            <p>
+                                Докажи дека ако `А subseteq B`, тогаш, `A subseteq B = B`.
+                            </p>
+                            <p>
+                                Решение:
+                            </p>
+                            <p>
+                                . . . Да докажеме дека `А subseteq B => A subseteq B subseteq B`
+                            </p>
+                            <p>
+                                Нека `А subseteq B`. Тогаш `AAx (x in A => x in B)`.....(*)
+                            </p>
+                            <p>
+                                Сега нека `x` е произволно такво што `x in A subset B`. Имаме:
+                            </p>
+                            <p>
+                                `x in A subseteq B iff x in A vv x in B => x in A vv x in А iff x in A`
+                            </p>
+                            <p>
+                                Од произволноста на `x` следува дека `AAx (x in A => x in B)`
+                            </p>
+                            <hr>
+
+                            <h5>
+                                Обопштени пресеци
+                            </h5>
+                            <p>
+                                `n` - арен пресек:
+                            </p>
+                            <p>
+                                `A_1 cap A_2 cap . . .  cap A_n -= ((...((A1 cap A2)cap...)cap An)` - групирањето и редоследот не се битни
+                            </p>
+                            <p>
+                                `A_1 cap A_2 cap . . .  cap A_n = nnn_(i =1)^n A_i = {x | AAi in {1, 2, 3, ..., n}, x in A_i}`
+                            </p>
+                            <p>
+                                Пресек на множества од фамилија `X = {А | P(А)}` :
+                            </p>
+                            <p>
+                                `nnn_(A in X) A = {x | AAA in X, x in A}`,
+                            </p>
+                            <p>
+                                `n`- арена унија:
+                            </p>
+                            <p>
+                                `A_1 cup A_2 cup . . .  cup A_n -= ((...((A1 cup A2)cup...)cup An)` - групирањето и редоследот не се битни
+                            </p>
+                            <p>
+                                `A_1 cup A_2 cup . . .  cup A_n = uuu_(i =1)^n A_i = {x | EEi in {1, 2, 3, ..., n}, x in A_i}`
+                            </p>
+                            <p>
+                                Унија на множества од фамилија `X = {А | P(А)}` :
+                            </p>
+                            <p>
+                                `uuu_(A in X) A = {x | EEA in X, x in A}`,
+                            </p>
+
+
+        
+                        </div>
+                    </div>
+                    <!-- /Propositional Logic -->
+                    
+
+                    <p class='text-center'>
+                        ###
+                    </p>
+                </main>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
