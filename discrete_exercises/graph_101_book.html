@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Learning Discrete Mayhematics" />
+    <meta name="author" content="Ilija Taseski" />
+    <meta name="generator" content="VS Code 2019" />
+
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+    <link href="../css/docs.css" rel="stylesheet" />
+
+    <!-- MathJax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="manifest" href="../images/favicons/manifest.json" />
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c" />
+    <link rel="icon" href="../images/icon/favicon.ico" />
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#563d7c" />
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete/propositional_logic-app.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="graph_101.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="graph_101_book.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1" />
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic_book.html">
+                            Логика и докази
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="propositional_logic_book.html">
+                                    Исказна логика
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="propositional_logic_book_1_2.html">
+                                    Примена на исказна логика
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_3.html">
+                                    Исказни еквиваленции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_4.html">
+                                    Предикати и квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_5.html">
+                                    Вгнездени квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_6.html">
+                                    Правила за изведување на заклучок
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_7.html">
+                                    Доказ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            10. Графови
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="../discrete_exercises/graph_101.html">
+                                    10.1 Граф
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../discrete_exercises/graph_102.html">
+                                    10.2 Терминологија и специјални типови на графови
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_representing.html">
+                                    10.3 Претставување на граф
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_connecting.html">
+                                    10.4 Поврзување
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_euler.html">
+                                    10.5 Оилеров пат
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_shortest_path_problem.html">
+                                    10.6 Проблем на најкраток пат
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            11. Дрва
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="sets.html">
+                                    2.1 Множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sets_operations.html">
+                                    2.2 Операции над множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    2.3 Функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Граф</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex1">Вежба 1</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex2">Вежба 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <div id="Translating" class="row">
+                    <div class="col-md-12">
+                        <!-- Exercise 1 -->
+                        <p id="ex1">
+                            <strong>Вежба 1.</strong> Draw graph models, stating the type of
+                            graph (from Table 1 ) used, to represent airline routes where
+                            every day there are four ﬂights fom Boston to Newark, two ﬂights
+                            fom Newark to Boston, three ﬂights fom Newark to Miami, two
+                            ﬂights fom Miami to Newark, one ﬂight fom Newark to Detroit, two
+                            ﬂights fom Detroit to Newark, three ﬂights fomNewarkto
+                            Washington, two ﬂights fom Washington to Newark, and one ﬂight
+                            fom Washington to Miami, with:<br />
+                            a) a edge between vertices representing cities that have a ﬂight
+                            between them (in either direction).
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="graph_01a.png" class="img-fluid" alt="graph_01a" />
+                                    <p>
+                                        <strong>едноставен граф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            b) an edge between vertices representing cities for each ﬂight
+                            that operates between them (in either direction).
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="graph_01b.png" class="img-fluid" alt="graph_01b" />
+                                    <p>
+                                        <strong>мултиграф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            c) an edge between vertices representing cities for each ﬂight
+                            that operates between them (in either direction), plus a loop
+                            for a special sightseeing trip that takes oﬀ and lands in Miami.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="graph_01c.png" class="img-fluid" alt="graph_01c" />
+                                    <p>
+                                        <strong>псеудограф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            d) an edge from a vertex representing a city where a ﬂight
+                            starts to the vertex representing the city where it ends
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="graph_01e.png" class="img-fluid" alt="graph_01e" />
+                                    <p>
+                                        <strong>Едноставен ориентиран граф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            e) an edge for each ﬂight fom a vertex representing a city where
+                            the ﬂight begins to the vertex representing the city where the
+                            ﬂight ends.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="graph_01d.png" class="img-fluid" alt="graph_01d" />
+                                    <p>
+                                        <strong>Ориентиран мултиграф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 2 -->
+                        <p id="ex2">
+                            <strong>Вежба 2.</strong> What kind of graph (from Table 1 ) can
+                            be used to model a highway system between major cities where:<br />
+                            a) there is an edge between the vertices representing cities if
+                            there is an interstate highway between them?
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        <strong>едноставен граф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            b) there is an edge between the vertices representing cities for
+                            each interstate highway between them?
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        <strong>мултиграф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                            c) there is an edge between the vertices representing cities for
+                            each interstate highway between them, and there is a loop at the
+                            vertex representing a city if there is an interstate highway
+                            that circles this city?
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        <strong>псеудограф</strong>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3-9 -->
+                        <p class="text-danger">
+                            Вежбите 3 до 9 се дадени како аудиториска вежба 1.
+                        </p>
+                        <!-- /Exercise 3-9 -->
+
+                        <!-- Exercise 10 -->
+                        <p id="ex10">
+                            <strong>Вежба 10.</strong> За секој неориентиран граф во вежбите
+                            3-9 кој не е едноставен, најди го множеството на ребра кои треба
+                            да се отстранат па графот да стане едноставен.<br />
+                            вежба 3.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот е едноставен бидејки нема повеќе од едно ребро
+                                        помеѓу било кој пар на јазли
+                                    </p>
+                                </div>
+                            </details>
+                            вежба 4.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот е мултиграф. За да стане едноставен треба да се
+                                        отстрани едно ребро помеѓу јазлите `{a, b)` и две ребра
+                                        помеѓу јазлите `{b, d}`.
+                                    </p>
+                                </div>
+                            </details>
+                            вежба 5.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот е псеудограф. За да стане едноставен треба да се
+                                        отстрани едно ребро помеѓу јазлите `{a, b)` едно ребро
+                                        помеѓу јазлите `{b, d}` и едно помеѓу ребрата `{c, d}`.
+                                        Исто така треба да се отстранат и алките кајјазлите `a, b,
+                                        d`.
+                                    </p>
+                                </div>
+                            </details>
+                            вежба 6.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот е мултиграф. За да стане едноставен треба да се
+                                        отстрани едно ребро помеѓу јазлите `{a, c)` и две ребра
+                                        помеѓу јазлите `{b, d}`.
+                                    </p>
+                                </div>
+                            </details>
+                            вежба 7, 8, 9.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графовите се ориентирани и вежбата на се однесува за нив.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 10 -->
+
+                        <!-- Exercise 11 -->
+                        <p id="ex11">
+                            <strong>Вежба 11.</strong> Нека `G` е едноставен граф. Покажи
+                            дека релацијата `R` во множеството на јазли од `G` таква да
+                            `uRv` ако и само ако постои ребро `{u, v}` е симетрична,
+                            непостоечка релација во `G`.<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Релацијата `R` во множеството `G` е симетрична ако `(b, a)
+                                        in R` секогаш кога `(a, b) in R`<br />
+                                        Релацијата `R` во множеството `G` е непостојана ако `(a,
+                                        a) notin R` за секој елемент `а in G`<br />
+                                        Дадено е дека `G` е едноставен граф.<br />
+                                        `R = {(u, v) | `Постои ребро помеѓу јазолот ` u ` и `
+                                        v.}`<br />
+                                        Треба да се докаже дека `R` е симетрична и непостојана
+                                        релација.<br />
+                                        <strong>Симетрична релација:</strong> Нека `(a, b) in
+                                        R`<br />
+                                        Бидејки графот е едноставен пости ребро помеѓу јазлите
+                                        `(a, b)`<br />
+                                        Бидејки ребрата кај едноставниот граф се неориентирани
+                                        следи дека постои и реброто `(b, a)` односно `(b, a) in
+                                        R`.<br />
+                                        Со ова покажавме дека релацијата е симетрична.<br />
+                                        <strong>Непостоечка релација:</strong> Нека `a` е јазол во
+                                        `G`.<br />
+                                        Кај едноставниот граф нема алки (ребро кое почнува и
+                                        завршува во ист јазол) па од тука `(a, a) not in R`<br />
+                                        Со ова се покажа дека релацијата R е непостоечка.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11 -->
+
+                        <!-- Exercise 12 -->
+                        <p id="ex12">
+                            <strong>Вежба 12.</strong> Нека `G` е неориентиран граф со алки
+                            на секој јазол. Покажи дека релацијата `R` во множеството на
+                            јазли од `G` таква да `uRv` ако и само ако постои ребро `{u, v}`
+                            е симетрична, постојана релација во `G`.<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Релацијата `R` во множеството `G` е симетрична ако `(b, a)
+                                        in R` секогаш кога `(a, b) in R`<br />
+                                        Релацијата `R` во множеството `G` е непостојана ако `(a,
+                                        a) notin R` за секој елемент `а in G`<br />
+                                        Дадено е дека `G` е неориентиран граф.<br />
+                                        `R = {(u, v) | `Постои ребро помеѓу јазолот ` u ` и `
+                                        v.}`<br />
+                                        Треба да се докаже дека `R` е симетрична и непостојана
+                                        релација.<br />
+                                        <strong>Симетрична релација:</strong> Нека `(a, b) in
+                                        R`<br />
+                                        Бидејки графот е едноставен пости ребро помеѓу јазлите
+                                        `(a, b)`<br />
+                                        Бидејки ребрата кај едноставниот граф се неориентирани
+                                        следи дека постои и реброто `(b, a)` односно `(b, a) in
+                                        R`.<br />
+                                        Со ова покажавме дека релацијата е симетрична.<br />
+                                        <strong>Постоечка релација:</strong> Нека `a` е јазол во
+                                        `G`.<br />
+                                        Бидејки кај секојјазол има алки па од тука `(a, a) in
+                                        R`<br />
+                                        Со ова се покажа дека релацијата R е постоечка.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 12 -->
+
+                        <!-- Exercise 14 -->
+                        <p id="ex14">
+                            <strong>Вежба 14.</strong> Користејки го графот на преклопувања
+                            во екологијата одреди кои животни се конкурентни на hawks (јастреб).<br />
+                            <img src="../discrete/images/graph_11.PNG" class="img-fluid" alt="eco" />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        На јастребот му се конкурентни: Raccoon (Ракун), Owl(Був), и Crow(Врана). Значи
+                                        сите јадат иста храна.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 14 -->
+
+                        <!-- Exercise 15 -->
+                        <p id="ex15">
+                            <strong>Вежба 15.</strong> Да се конструира граф на преклопување во еклогијата за шест
+                            видови на птици каде hermit trush (дрозд самотник) конкурира на robin (црвеноперка) и
+                            bluejay (?), дроздод самотник исто така му конкурира на mockingbird (срби викаат птица
+                            ругалица), mockingbird е исто така also конкурентна на blue jay, а nuthatch (?) e
+                            конкурентен на competes with the hairy woodpecker (клукајдрвец шизик).<br />
+
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="ex15.PNG" class="img-fluid" alt="e15" />
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 15 -->
+
+                        <!-- Exercise 16 -->
+                        <p id="ex16">
+                            <strong>Вежба 16.</strong> Да се граф на познанства и пријателства кој покажува дека Tom и
+                            Patricia, Tom и Hope, Tom и Sandy, Tom и Amy, Tom и Marika, Jeﬀ и Patricia, Jeﬀ и Mary,
+                            Patricia и Hope, Amy и Hope, и Amy и Marika се познаваат меѓусебно, но никој од другите
+                            парови не се знае помеѓу себе.<br />
+
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="ex16.PNG" class="img-fluid" alt="ex16" />
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 16 -->
+
+                        <!-- Exercise 18 -->
+                        <p id="ex18">
+                            <strong>Вежба 18.</strong> Кој влијае на Fred а кому влијае Fred според долниот граф?<br />
+                            <img src="../discrete/images/graph_07.PNG" class="img-fluid" alt="ex18" />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    На Fred влијааат Deborah и Yvonne а Fred влијае на Brian.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 18 -->
+
+
+                        <!-- Exercise 20 -->
+                        <p id="ex20">
+                            <strong>Вежба 20.</strong> Кои тимови ги има победено тимот `4` и кои тимови го имаат
+                            победено тимот `4` според графот за турнир?<br />
+                            <img src="../discrete/images/graph_13.PNG" class="img-fluid" alt="ex20" />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Тимот `4` ги има победено тимот 3. Тимовите `1, 2, 5` и `6` го имаат победено тимот
+                                    `4`.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 20 -->
+
+                        <!-- Exercise 22 -->
+                        <p id="ex22">
+                            <strong>Вежба 22.</strong> Нацртај го графот на телефонски разговори за броевите 555-0011 ,
+                            555-1221 , 555-1333, 555-8888, 555-2222, 555-0091 , и 555-1200 ако имало повик од 55-0011
+                            кон 555-8888 и два повика од 555-8888 кон 555-0011 , два повика од 555-2222 кон 555-0091 ,
+                            два повика од 555-1221 кон дрѕхите броеви и еден повик од 555-1333 кон секој од 555-0011 ,
+                            555-1221 , и 555-1200<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src="ex22.PNG" class="img-fluid" alt="ex22" />
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 22 -->
+
+                        <!-- Exercise 29 -->
+                        <p id="ex29">
+                            <strong>Вежба 29.</strong> Опиши го графот кој е модел на традиционалните бракови помеѓу маж
+                            и жена. Дали овој граф иманекои специјални особини?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Јазлите се множество од сите луѓе.<br>
+                                    Ребрата `{u, v}` се неориентирани бидејки ако `u` е во брак со `v` тогаш и `v` е во брак со `u`.<br>
+                                    Повеќекратни ребра не се дозволени.(не е дозволена бигамија)<br>
+                                    Графот нема алки ( не е можно да си во брак сам со себе).<br>
+                                    Од овде следи дека графот е едноставен.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 29 -->
+
+                        <!-- Exercise 30 -->
+                        <p id="ex30">
+                            <strong>Вежба 30.</strong> Која наредба треба да се изврши пред да се изврши наредбата `S6` во долниот граф?<br />
+                            <img src="../discrete/images/graph_21.PNG" class="img-fluid" alt="ex30" />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Пред да се изврши наредбата `S6` треба да се извршат наредбите `S1, S2, S3` и `S4`.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 30 -->
+
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

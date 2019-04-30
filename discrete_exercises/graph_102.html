@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Discrete Mayhematics">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="VS Code 2019">
+
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="../images/favicons/manifest.json">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete/propositional_logic-app.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="propositional_logic_university.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="propositional_logic_book_1_2.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic_book.html">
+                            Логика и докази
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="propositional_logic_book.html">
+                                    Исказна логика
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="propositional_logic_book_1_2.html">
+                                    Примена на исказна логика
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_3.html">
+                                    Исказни еквиваленции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_4.html">
+                                    Предикати и квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_5.html">
+                                    Вгнездени квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_6.html">
+                                    Правила за изведување на заклучок
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_7.html">
+                                    Доказ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            10. Графови
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="../discrete_exercises/graph_101.html">
+                                    10.1 Граф
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active" class="active bd-sidenav-active">
+                                <a href="../discrete_exercises/graph_102.html">
+                                    10.2 Терминологија и специјални типови на графови
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_representing.html">
+                                    10.3 Претставување на граф
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_connecting.html">
+                                    10.4 Поврзување
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_euler.html">
+                                    10.5 Оилеров пат
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_shortest_path_problem.html">
+                                    10.6 Проблем на најкраток пат
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            11. Дрва
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="sets.html">
+                                    2.1 Множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sets_operations.html">
+                                    2.2 Операции над множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    2.3 Функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Граф</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex2">Вежба 2</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex3">Вежба 3</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex4">Вежба 4</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex5">Вежба 5</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex6">Вежба 6</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex7">Вежба 7</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex8">Вежба 8</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex9">Вежба 9</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex10">Вежба 10</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex11">Вежба 11</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div id='Translating' class='row'>
+                    <div class='col-md-12'>
+
+
+                        <!-- Exercise 2 -->
+                        <p id='ex2'>
+                            <strong>Вежба 2.</strong> Да се најде степенската низа на следните два графа:<br>
+                            <img src='graph3.PNG' class='img-fluid' alt='graph_3'>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        а) 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2;
+                                    </p>
+                                    <p>
+                                        б) 6, 5, 4, 4, 4, 3, 2, 2, 2, 2, 2, 2, 2.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3 -->
+                        <p id='ex3'>
+                            <strong>Вежба 3.</strong> Колку ребра има граф кој има степенска низа 4, 3, 3, 2, 2?
+                            Нацртајте го тој граф.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според теорема на ракување, следи<br>
+                                        `2*e = 4 + 3 + 3 + 2 + 2`<br>
+                                        `2*e = 14`<br>
+                                        `e = 7`
+                                    </p>
+                                    <p>
+                                        <img src='graph4.PNG' class='img-fluid' alt='graph_4'>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>
+                            <strong>Вежба 4.</strong> Дали постои граф со степенска низа 5, 5, 4, 3, 3, 3, 2, 1, 1,
+                            0?<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според теорема на ракување, следи<br>
+                                        `2*e =5 + 5 + 4 + 3 + 3 + 3 + 2 + 1 + 1 + 0 = 27`<br>
+                                        Бројот на ребра е 13,5, па од тука ваков граф не постои.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>
+                            <strong>Вежба 5.</strong> Граф со 21 ребро има 7 темиња со степен 1, 3 темиња со степен 2, 7
+                            темиња со степен 3, а останатите темиња се со степен 4. Колку вкупно темиња
+                            има графот?<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека бројот на темиња со степен 4 во овој граф го означиме со x.<br>
+                                        Според теорема на ракување, следи<br>
+                                        7 + 2*3 + 3*7 + 4*x = 2*21<br>
+                                        7 + 6 + 21 + 4*x = 42<br>
+                                        34 + 4*x = 42<br>
+                                        x = 2<br>
+                                        Според тоа, графот има 2 темиња со степен 4, па вкупниот број на темиња е 7 + 3
+                                        + 7 + 2 = 19.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id='ex6'>
+                            <strong>Вежба 6.</strong> Докажете дека во едноставен граф со најмалку две темиња мора да
+                            постојат две темиња кои имаат ист степен.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека `G` е едноставен граф со `n` јазли. Бидејќи `G` e едноставен, најголемиот
+                                        степен кој може да го има едно теме е `n - 1`, а најмалиот можен степен е `0`.
+                                        Нека претпоставиме дека сите темиња имаат различен степен (`0, 1, 2, ..., n–1`),
+                                        и нека темето `v` има степен `0`, а темето `u` има степен `n–1`. Но, за да
+                                        темето `u` има степен `n-1` мора да постои ребро помеѓу `u` и `v`. Ако постои
+                                        тоа ребро помеѓу `u` и `v`, степенот на `v` треба да е `1`, што е контрадикција
+                                        со
+                                        претпоставката дека `v` има степен 0.<br>
+                                        Со тоа е покажана вистинитоста на тврдењето од задачата.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7 -->
+                        <p id='ex7'>
+                            <strong>Вежба 7.</strong> Докажете дека во една група на луѓе мора да постојат двајца кои
+                            познаваат ист број на луѓе од таа група.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Конструираме едноставен граф `G = (V, E)`, каде множеството `V` е множество од
+                                        сите луѓе во групата, а постои ребро помеѓу човекот `v` и човекот `u` доколку
+                                        `v` и `u` меѓусебно се познаваат. Според тоа, степенот на секое теме `t` би го
+                                        претставувал бројот на луѓе кои `t` ги познава во таа група. Тука можеме да го
+                                        искористиме тврдењето од Задача 6 кое гласи дека во `G` постојат две темиња со
+                                        ист степен. Тоа би значело дека во групата постојат двајца луѓе кои познаваат
+                                        ист број на други луѓе од групата, со што и се докажува тврдењето од Задача 7.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 7 -->
+
+                        <!-- Exercise 8 -->
+                        <p id='ex8'>
+                            <strong>Вежба 8.</strong> Најди го влезниот и излезниот степен на секое теме во ориентираниот
+                            граф G прикажан на сликата.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        a) ` r ^^ not p`
+                                    </p>
+                                    <p>
+                                        b) `r ^^ p -> q`
+                                    </p>
+                                    <p>
+                                        c) `not r -> not q`
+                                    </p>
+                                    <p>
+                                        d) `(r ^^ not p) -> q`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- Exercise 8 -->
+
+                        <!-- Exercise 9 -->
+                        <p id='ex9'>
+                            <strong>Вежба 9.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Системот е во состојба на повеќе корисници ако и само ако работи нормално. Ако системот
+                            работи нормално керналот функционира.
+                            Керналот не функционира или системот е во состојба на прекин. Ако системот не е во состојба
+                            на повеќе корисници тогаш е во
+                            состојба на прекин. Системот не е во состојба на прекин.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека:.
+                                    </p>
+                                    <p>
+                                        `m`: системот е во состојба на повеќе корисници<br>
+                                        `n`: системот функционира нормално<br>
+                                        `k`: керналот функционира<br>
+                                        `i`: системот е во состојба на прекин
+                                    </p>
+                                    <p>
+                                        `m harr n` - Системот е во состојба на повеќе корисници ако и само ако работи
+                                        нормално.
+                                    </p>
+                                    <p>
+                                        `n -> k` - Ако системот работи нормално керналот функционира.
+                                    </p>
+                                    <p>
+                                        `not k vv i` - Керналот не функционира или системот е во состојба на прекин.
+                                    </p>
+                                    <p>
+                                        `not m -> i` - Ако системот не е во состојба на повеќе корисници тогаш е во
+                                        состојба на прекин.
+                                    </p>
+                                    <p>
+                                        `not i` - Системот не е во состојба на прекин.
+                                    </p>
+                                    <p>
+                                        Сите искази истовремено треба да се вистинити.
+                                    </p>
+                                    <p>
+                                        Очигледно дека за да `not i = TT` `i = _|_`. Со цел да `not m -> i` биде
+                                        вистинит при `i = _|_` `not m = _|_` односно
+                                        `m = TT`. Сега за да `m harr n` биде вистинит двата искази треба за се иста
+                                        вредност на вистинитост, односно `n = TT`. И н а
+                                        крај за да `n -> k` биде вистинито при `n = t` требa `k = TT`. Ако `k = TT` и `i
+                                        = _|_` исказот `not k VV i` не е вистинит. Од тука
+                                        заклучуваме дека системот не е конзистентен.
+                                    </p>
+                                    <p>
+
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 9 -->
+
+                        <!-- Exercise 10 -->
+                        <p id='ex10'>
+                            <strong>Вежба 10.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Секогаш кога системскиот софтвер се надградува, корисникот не може да пристапи на системот.
+                            Ако корисникот може да пристапи кон системот
+                            тогаш моше да зачувува нови фајлови. Ако корисникот не може да зачуваа нови фајлови тогаш
+                            системот не се надградува.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека:
+                                    </p>
+                                    <p>
+                                        `u`: системот се надградува
+                                    </p>
+                                    <p>
+                                        `a`: корисникот може да пристапи на системот
+                                    </p>
+                                    <p>
+                                        `s`: може да зачува нови фајлови
+                                    </p>
+                                    <p>
+                                        `u -> not a` - Секогаш кога системскиот софтвер се надградува, корисникот не
+                                        може да пристапи на системот.
+                                    </p>
+                                    <p>
+                                        `a -> s` - Ако корисникот не може да зачуваа нови фајлови тогаш системот не се
+                                        надградува.
+                                    </p>
+                                    <p>
+                                        `not s -> not u` - g) Изборите се решени ако и сами ако гласовите се избројани.
+                                    </p>
+                                    <p>
+                                        Сите искази истовремено треба да се вистинити.
+                                    </p>
+                                    <p>
+                                        Да претпоставиме, на што имамае право, дека системот се надградува односно дека
+                                        `u = TT`. За да исказот `u -> not a` биде
+                                        вистинит при `u=TT` треба `not a = TT` односно `a=_|_`. За да исказот `a -> s`
+                                        биде вистинит при `a=_|_` `s` може да биде
+                                        вистинит или невистинит. Кога `u=TT` исказот `not s -> not u` е вистинит било
+                                        `s` да е вистинит или невистинит. Бидејки сите три искази
+                                        се истовремено вистинити спецификацијата е конзистентна.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 10 -->
+
+                        <!-- Exercise 11 -->
+                        <p id='ex11'>
+                            <strong>Вежба 11.</strong> Дали следните системски спецификации се конзистентни?<br>
+                            Рутерот може да испрати пакети до периферниот систем само ако го подржува новиот адресен
+                            простор. За да рутерот го подржува
+                            новиот адресен простор потребно е да се инсталира последната верзија на софтверот. Рутерот
+                            може да испраќа пакети до периферниот
+                            систем ако последната верзија на софтверот е инсталирана. Рутерот не го подржува новиот
+                            aдресен простор.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `s`: - Рутерот може да испраќа пакети до периферниот систем
+                                    </p>
+                                    <p>
+                                        `a`: - Рутерот го подржува новиот адресен простор.
+                                    </p>
+                                    <p>
+                                        `r`: - Последната верзија на софтвер е инсталирана.
+                                    </p>
+                                    <p>
+                                        `s -> a` - Рутерот може да испрати пакети до периферниот систем само ако го
+                                        подржува новиот адресен простор. (Ако рутерот може да испраќа пакети до
+                                        периферниот систем тогаш рутерот го подржува новиот адресен простор.)
+                                    </p>
+                                    <p>
+                                        `a -> r` - За да рутерот го подржува новиот адресен простор потребно е да се
+                                        инсталира последната верзија на софтверот.(Ако рутерот го подржува новиот
+                                        адресен простор најновата верзија на софтвер е инсталирана.)
+                                    </p>
+                                    <p>
+                                        `r -> s` - Рутерот може да испраќа пакети до периферниот систем ако последната
+                                        верзија на софтверот е инсталирана. (Ако последната верзија на софтвер е
+                                        инсталирана рутерот може да испраќа пакети до периферниот систем.)
+                                    </p>
+                                    <p>
+                                        `not a` - Рутерот не го подржува новиот aдресен простор.
+                                    </p>
+                                    <p>
+                                        За да спецификацијата биде конзистентна сите искази истовремено треба да се
+                                        вистинити. <em>Помош: Исказите на конјукција треба да се напишат така заклучокот
+                                            биде со вредност `_|_`. Од тука премисата за тој исказ е еднозначно
+                                            дефинирана како `_|_`. Исказот `not a` ни диктира наместо `a -> s` да
+                                            користиме `s -> a`.
+                                        </em>
+                                    </p>
+                                    <p>
+                                        За да исказот `not a = TT` треба `a = _|_`. За да исказот `s -> a` биде вистинит
+                                        treba `s =_|_`. Ако `s = _|_`. За да исказот `r -> s` биде вистинит
+                                        треба `r = _|_`. За да исказот `a -> r` биде вистинит треба `a=_|_` што и е. Од
+                                        тоа што сите изрази се вистинити следи дека спецификацијата е конзистентна.
+
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11 -->
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
