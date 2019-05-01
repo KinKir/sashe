@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Discrete Mayhematics">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="VS Code 2019">
+
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="../images/favicons/manifest.json">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete/graphs_terminology.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="graph_102.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="graph_102_book.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic_book.html">
+                            Логика и докази
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="propositional_logic_book.html">
+                                    Исказна логика
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="propositional_logic_book_1_2.html">
+                                    Примена на исказна логика
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_3.html">
+                                    Исказни еквиваленции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_4.html">
+                                    Предикати и квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_5.html">
+                                    Вгнездени квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_6.html">
+                                    Правила за изведување на заклучок
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_7.html">
+                                    Доказ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            10. Графови
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="../discrete_exercises/graph_101_book.html">
+                                    10.1 Граф
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="../discrete_exercises/graph_102.html">
+                                    10.2 Терминологија и специјални типови на графови
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_representing.html">
+                                    10.3 Претставување на граф
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_connecting.html">
+                                    10.4 Поврзување
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_euler.html">
+                                    10.5 Оилеров пат
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_shortest_path_problem.html">
+                                    10.6 Проблем на најкраток пат
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            11. Дрва
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="sets.html">
+                                    2.1 Множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sets_operations.html">
+                                    2.2 Операции над множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    2.3 Функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Граф - Терминологија</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex1">Вежба 1</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex2">Вежба 2</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex3">Вежба 3</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex4">Вежба 4</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex5">Вежба 5</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex6">Вежба 6</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex7">Вежба 7</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex8">Вежба 8</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex9">Вежба 9</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex10">Вежба 10</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex11">Вежба 11</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div id='Translating' class='row'>
+                    <div class='col-md-12'>
+
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>
+                            <strong>Вежба 1-3.</strong> Да се најде бројот на јазли, број на ребра, степен на секој
+                            јазол во неориентираниот граф. Да се одредат сите изолирани и приврзани јазли.<br>
+                            <img src='_10_2_1.PNG' class='img-fluid' alt='ex1'><br>
+                            a)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 6`<br>
+                                        Број на ребра `e = 6`<br>
+                                        Степен на секој јазол:<br>
+                                        `deg(a) = 2`<br>
+                                        `deg(b) = 4`<br>
+                                        `deg(c) = 1`<br>
+                                        `deg(d) = 0`<br>
+                                        `deg(e) = 2`<br>
+                                        `deg(f) = 3`<br>
+                                        Изолиран јазол - `d`<br>
+                                        Приврзан јазол - `c`.
+                                    </p>
+                                </div>
+                            </details>
+                            b)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 5`<br>
+                                        Број на ребра `e = 11`<br>
+                                        Број на алки `e = 2`<br>
+                                        Степен на секој јазол:<br>
+                                        `deg(a) = 6`<br>
+                                        `deg(b) = 6`<br>
+                                        `deg(c) = 6`<br>
+                                        `deg(d) = 5`<br>
+                                        `deg(e) = 3`<br>
+                                        Изолиран јазол - нема<br>
+                                        Приврзан јазол - нема`
+                                    </p>
+                                </div>
+                            </details>
+                            c)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 9`<br>
+                                        Број на ребра `e = 12`<br>
+                                        Степен на секој јазол:<br>
+                                        `deg(a) = 3`<br>
+                                        `deg(b) = 2`<br>
+                                        `deg(c) = 4`<br>
+                                        `deg(d) = 0`<br>
+                                        `deg(e) = 6`<br>
+                                        `deg(f) = 0`<br>
+                                        `deg(g) = 4`<br>
+                                        `deg(h) = 2`<br>
+                                        `deg(i) = 3`<br>
+                                        Изолиран јазол - `d, f`<br>
+                                        Приврзан јазол - нема`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>
+                            <strong>Вежба 4.</strong> Да се најде сумата на степени на јазлите во секој граф од вежбата
+                            1-3 и да се потврди дека е еднакво на двојната вредност на ребрата во графот.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Станува збор за едноставен граф.<br>
+                                        Степен на едно теме во неориентиран граф е бројот на ребра кои се поврзани со
+                                        него, освен што алка се брои два пати.<br>
+                                    </p>
+                                    <p>
+                                        1) `2*e = 2 + 4 + 1 + 0 + 2 + 3 = 12 -> e = 6`;
+                                    </p>
+                                    <p>
+                                        2) `2*e = 6 + 6 + 6 + 5 + 3 = 16 -> e = 13`;<br>
+                                        Забелешка: Теоремата на ракување важи кога има повеќекратни ребра и алки
+                                    </p>
+                                    <p>
+                                        3) `2*e = 3 + 2 + 4 + 0 + 6 + 0 + 4 + 2 + 3 = 24 -> e = 12`;<br>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>
+                            <strong>Вежба 5.</strong> Постои ли едноставен граф со 15 јазли секој со степен пет?<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според теорема на ракување, следи<br>
+                                        `2*e = 15 *5 = 75`<br>
+                                        `e = 37,5`<br>
+                                        Не постои.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id='ex6'>
+                            <strong>Вежба 6.</strong> Да се покаже дека сумата, на множе ството луѓе на една забава, f
+                            people at a party, од бројот на луѓе со кого личноста се ракувала е парен број. Да се
+                            претпостави дека никој не се ракува сам со себе.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека `V` (јазлите) е множеството на луѓе на забвата<br>
+                                        Нека `E`(ребра) е множеството на луѓе на забавата кои се ракувале со `u`.<br>
+                                        Ребрата на графот треба да се неориентирани бидејки ако личноста `u` се ракувала
+                                        со личноста `v` значи дека и личноста `v` се ракувал со личноста `u`.<br>
+                                        Според теоремата на ракување, сумата на степените од множеството од сите луќе на
+                                        забавата е парен број.<br>
+                                        Бидејки степенот го претставува бројот на луѓе со кого личноста се поздравила,
+                                        сумата од бројот на луѓе со кои личноста се поздравиле е парен..
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7-9 -->
+                        <p id='ex7-9'>
+                            <strong>Вежба 7-9.</strong> Да се одреди бројот на јазли и ребра и да се најде влезниот и
+                            излезниот степен на секој јазол за ориентираниот мултиграф.<br>
+                            <img src='_10_2_2.PNG' class='img-fluid' alt='ex7-9'><br>
+                            7)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 4`<br>
+                                        Број на ребра `e = 8`<br>
+                                        Влезен степен на секој јазол:<br>
+                                        `deg^(-)(a) = 3`<br>
+                                        `deg^(-)(b) = 1`<br>
+                                        `deg^(-)(c) = 2`<br>
+                                        `deg^(-)(d) = 1`<br>
+                                        Излезен степен на секој јазол:<br>
+                                        `deg^(+)(a) = 1`<br>
+                                        `deg^(+)(b) = 2`<br>
+                                        `deg^(+)(c) = 1`<br>
+                                        `deg^(+)(d) = 3`
+                                    </p>
+                                </div>
+                            </details>
+                            8)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 4`<br>
+                                        Број на ребра `e = 10`<br>
+                                        Влезен степен на секој јазол:<br>
+                                        `deg^(-)(a) = 2`<br>
+                                        `deg^(-)(b) = 3`<br>
+                                        `deg^(-)(c) = 2`<br>
+                                        `deg^(-)(d) = 1`<br>
+                                        Излезен степен на секој јазол:<br>
+                                        `deg^(+)(a) = 2`<br>
+                                        `deg^(+)(b) = 4`<br>
+                                        `deg^(+)(c) = 1`<br>
+                                        `deg^(+)(d) = 1`<br>
+                                    </p>
+                                </div>
+                            </details>
+                            9)
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Број на јазли `v = 4`<br>
+                                        Број на ребра `e = 10`<br>
+                                        Влезен степен на секој јазол:<br>
+                                        `deg^(-)(a) = 6`<br>
+                                        `deg^(-)(b) = 2`<br>
+                                        `deg^(-)(c) = 2`<br>
+                                        `deg^(-)(d) = 4`<br>
+                                        `deg^(-)(е) = 0`<br>
+                                        Излезен степен на секој јазол:<br>
+                                        `deg^(+)(a) = 1`<br>
+                                        `deg^(+)(b) = 5`<br>
+                                        `deg^(+)(c) = 5`<br>
+                                        `deg^(+)(d) = 2`<br>
+                                        `deg^(+)(е) = 0`<br>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 7-9 -->
+
+                        <!-- Exercise 10 -->
+                        <p id='ex10'>
+                            <strong>Вежба 10.</strong> За секој граф од вежбите 7–9 одреди ја сумата на влезните јазли и
+                            сумата на излезните јазли, дирекно. Да се покаже дека сумите се еднакви со бројот на ребра
+                            во графот.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        7) deg^(-) = deg^(-)(a) + deg^(-)(b) + deg^(-)(c) + deg^(-)(d) = 7<br>
+                                        deg^(+) = deg^(+)(a) + deg^(+)(b) + deg^(+)(c) + deg^(+)(d) = 7<br>
+                                        e = 7<br>
+                                        8) 8, 8, 8<br>
+                                        9) 13, 13, 13<br>
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 10 -->
+
+                        <!-- Exercise 11 -->
+                        <p id='ex11'>
+                            <strong>Вежба 11.</strong> Да се конструира изведен неориентиран граф заграфот со
+                            ориентирани ребра од сликата 2.<br>
+                            <img src='../discrete/images/graph_16.PNG' class='img-fluid' alt='ex11'><br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Неориентираниот граф кој е резултат на игнорирање на ориентираноста на ребрата
+                                        се нарекува изведен неориентиран граф. Ориентираниот граф и изведениот
+                                        неориентиран граф имаат ист број на ребра.<br>
+                                        Значи треба само да се избришат ознаките (стреликите) за ориентираност.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11 -->
+
+                        <!-- Exercise 12 -->
+                        <p id='ex12'>
+                            <strong>Вежба 12.</strong> Што претставува степенот на јазел во графот на познаства и
+                            пријателства, каде јазлите ги претставуваат сите луѓе на светот? Што претставува соседството
+                            на јазли? Што претставуваат изолираните и приврзаните јазли? Во една студија е наведено дека
+                            просечен степен на јазел во овој граф е 1000. Што тоа значи?<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        a) степен на јазел - број на познанства
+                                    </p>
+                                    <p>
+                                        b) соседство на јазли - сите познати
+                                    </p>
+                                    <p>
+                                        c) изолиран јазол - нема познанства
+                                    </p>
+                                    <p>
+                                        d) приврзан јазол - познава само еден човек
+                                    </p>
+                                    <p>
+                                        e) човек просечно познава 1000 луѓе.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- Exercise 12 -->
+
+                        <!-- Exercise 14 -->
+                        <p id='ex14'>
+                            <strong>Вежба 14.</strong> Што преставува степенот на јазел во графот на Холивуд? Што
+                            преставува соседството на јазли? Што претпоставуваат изолираните и приврзаните јазли?
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека е `V` множество од сите јазли (глумци) и `Е` множество од ребра (филмови на
+                                        кои работел глумецот).<br>
+                                        степен на јазел - број на филмови во кои глумецот работел<br>
+                                        соседство на јазли - сите глумци со глумецот работел на филмови<br>
+                                        изолиран јазол - не глумел нигде<br>
+                                        приврзан јазол - глумел само во еден филм
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 14 -->
+
+                        <!-- Exercise 17 -->
+                        <p id='ex17'>
+                            <strong>Вежба 17.</strong> Што претставуваат влезните и излезните степени на јазелот во
+                            ориентиран граф за турнир.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        влезни степен - изгубен меч
+                                    </p>
+                                    <p>
+                                        излезан степен - добиен меч
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 17 -->
+
+                        <!-- Exercise 18 -->
+                        <p id='ex18'>
+                            <strong>Вежба 18.</strong> Ова е задача 6 од аудиториски вежби.
+                        </p>
+                        <!-- /Exercise 18 -->
+
+                        <!-- Exercise 19 -->
+                        <p id='ex19'>
+                            <strong>Вежба 19.</strong> Ова е задача 7 од аудиториски вежби.
+                        </p>
+                        <!-- /Exercise 19 -->
+
+                        <!-- Exercise 21 -->
+                        <p id='ex21'>
+                            <strong>Вежба 21-25.</strong> Нацртај ги следните графови:<br>
+                            a) `K_7`, b) `K_(1,8)`, c) `K_(4,4)`, d) `C_7`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Вежба 9 од аудиториски вежби.
+                                    </p>
+                                </div>
+                            </details>
+                            e) `W_7`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ова е тркало граф, кој се добива кога на циклус графот му се додава дополнителен
+                                        јазол и истиот се повре со сите јазли во циклус графот.
+                                    </p>
+                                    <img src='ex13.PNG' class='img-fluid' alt='ex13'>
+                                </div>
+                            </details>
+                            f) `Q_4`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ova e `n` коцка граф, кој има јазли кои претставуваат `2^n` низа со должина `n`
+                                        (`2^4 = 16` jазли). Два јазли се соседни ако и само ако бројните низи кои ги
+                                        претставуваат се разликуваат во еден бит.
+                                    </p>
+                                    <img src='ex14.PNG' class='img-fluid' alt='ex14'>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 21 -->
+
+                        <!-- Exercise 26 -->
+                        <p id='ex26'>
+                            <strong>Вежба 26.</strong> За кои врености на `n` следните графови се дводелни?<br>
+                            a) `K_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        За `n = 1` ако е дозволено да `V_1` или `V_2` биде празно множество.<br>
+                                        За `n = 2` ако `V_1` и `V_2` имаат по еден јазоло.<br>
+                                        За `n => 3` графот не е дводелен.
+                                    </p>
+                                </div>
+                            </details>
+                            b) `C_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ако `n` е парен број тогаш графот е двореден.<br>
+                                        Ако `n` е непарен број тогаш графот не е двореден.<br>
+                                    </p>
+                                    <img src='ex13.PNG' class='img-fluid' alt='ex13'>
+                                </div>
+                            </details>
+                            c) `W_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Не е дводелен бидејки централниот јазол е соседен со секој јазол.
+                                    </p>
+                                </div>
+                            </details>
+                            d) `Q_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Е биполарен за сите вредности на `n` бидејки зголемувањето на доведува до
+                                        додавање на јазли со спротивна боја.
+                                    </p>
+                                    <img src='ex25.PNG' class='img-fluid' alt='ex25'>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 26 -->
+
+                        <!-- Exercise 27 -->
+                        <p id='ex27'>
+                            <strong>Вежба 27.</strong> Да претпоставиме дека има четворица запослени во групата за
+                            компјутерска подршка на факултетот. Секој запослен дава подршка на различна област :
+                            hardware, software, networking, and wireless. Господинот Ping е квалификуван за hadware,
+                            networking, and wireless; Quiggley е квалификуван за software and networking; Ruiz е
+                            квалификуван за networking and wireless, и Sitea е квалифицирана за hardware and
+                            software<br>
+                            а) Со помош на дводелен граф да се изгради модел за четворицата запослени и нивните
+                            квалификации.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <img src='ex26.PNG' class='img-fluid' alt='ex26'>
+                                </div>
+                            </details>
+                            b) Со помош на Халовата терема одреди дали е можна распределба на запослени така да секој
+                            добие една работна задача.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p class='text-danger'>
+                                        Бидејки секој јазол кој претставува област (хардвер, софтвер, ..) има степен
+                                        најмалку 2, условот на Халовата теорема е исполнет за множества со големина
+                                        помала од 3. Може да се провери дека бројот на запослени кваливикувани за секое
+                                        од четирите подмножества со големина 3 е најмалку 3 и да се потврди дека бројот
+                                        на запослени за секое од подмножествата со големина 4 има големина 4.
+                                    </p>
+
+                                </div>
+                            </details>
+                            c) `W_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Не е дводелен бидејки централниот јазол е соседен со секој јазол.
+                                    </p>
+                                </div>
+                            </details>
+                            d) `Q_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Е биполарен за сите вредности на `n` бидејки зголемувањето на доведува до
+                                        додавање на јазли со спротивна боја.
+                                    </p>
+                                    <img src='ex25.PNG' class='img-fluid' alt='ex25'>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 27 -->
+
+
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
