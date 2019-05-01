@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Discrete Mayhematics">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="VS Code 2019">
+
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="../images/favicons/manifest.json">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete/graphs_connecting.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="graph_104.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="graph_104_book.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic_book.html">
+                            Логика и докази
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="propositional_logic_book.html">
+                                    Исказна логика
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="propositional_logic_book_1_2.html">
+                                    Примена на исказна логика
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_3.html">
+                                    Исказни еквиваленции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_4.html">
+                                    Предикати и квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_5.html">
+                                    Вгнездени квантификатори
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_6.html">
+                                    Правила за изведување на заклучок
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_book_1_7.html">
+                                    Доказ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            10. Графови
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="../discrete_exercises/graph_101.html">
+                                    10.1 Граф
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../discrete_exercises/graph_102.html">
+                                    10.2 Терминологија и специјални типови на графови
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graph_103.html">
+                                    10.3 Претставување на граф
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="graph_104.html">
+                                    10.4 Поврзување
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_euler.html">
+                                    10.5 Оилеров пат
+                                </a>
+                            </li>
+                            <li>
+                                <a href="graphs_shortest_path_problem.html">
+                                    10.6 Проблем на најкраток пат
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            11. Дрва
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="sets.html">
+                                    2.1 Множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sets_operations.html">
+                                    2.2 Операции над множества
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    2.3 Функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Граф - Терминологија</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex17">Вежба 17</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex18">Вежба 18</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div id='Translating' class='row'>
+                    <div class='col-md-12'>
+
+                        <!-- Exercise 19 -->
+                        <p id='ex19'>
+                            <strong>Вежба 19.</strong> Дали низите од темиња формираат пат во следниот граф? Кои
+                            патишта се прости? Кои се циклуси? Кои се должините на патиштата?<br>
+                            <img src='_10_4_9.PNG' class='img-fluid' alt='ex19'><br>
+                            а) `а, b, e, c, b`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Пат - бидејки е <small>(непрекината)</small> низа од јазли<br>
+                                        Едноставен пат - не содржи исто ребро повеќе од еднаш<br>
+                                        Должината на патот е - 4 `{a, b}`, `{b, e}`, `{e, c}` и `{c, b}`.<br>
+                                        Не е циклус - бидејки не завршува во ист јазол од кај што почнал.
+                                    </p>
+                                </div>
+                            </details>
+                            б) `a, d, a, d, a`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Пат - бидејки е низа од јазли<br>
+                                        Не е едноставен пат - содржи исто ребро повеќе од еднаш `{a, d}` два пати<br>
+                                        Должината на патот е - 4 `{a, d}`, `{d, a}`, `{a, d}` и `{d, a}`.<br>
+                                        Циклус - бидејки завршува во ист јазол од кај што почнал `a`.
+                                    </p>
+                                </div>
+                            </details>
+                            в) `a, d, b, e, a`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Не е пат - не постои ребро `{d, b}`
+                                    </p>
+                                </div>
+                            </details>
+                            г) `a, b, e, c, b, d, a.`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Не е пат - не постои ребро `{b, d}`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 19 -->
+
+                        <!-- Exercise 20 -->
+                        <p id='ex20'>
+                            <strong>Вежба 20.</strong> Одредете дали следните графови се сврзани. Колку сврзани
+                            компоненти има секој од овие графови?<br>
+                            a) <img src='_10_4_20a.PNG' class='img-fluid' alt='ex20a'>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        За неориентиран граф се вели дека е сврзан ако постои пат помеѓу секој пар на
+                                        различни јазли на графот.<br>
+                                        Не е сврзан.<br>
+                                        3 сврзни компоненти
+                                    </p>
+                                </div>
+                            </details>
+                            б) <img src='_10_4_20b.PNG' class='img-fluid' alt='ex20b'>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Сврзан.<br>
+                                        1 сврзна компонента
+                                    </p>
+                                </div>
+                            </details>
+                            в) <img src='_10_4_20c.PNG' class='img-fluid' alt='ex20c'>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Сврзан.<br>
+                                    2 сврзна компонента
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 20 -->
+
+                        <!-- Exercise 21 -->
+                        <p id='ex21'>
+                            <strong>Вежба 21.</strong> За секој од следните графови одредете дали е слабо или силно
+                            сврзан.<br>
+                            <img src='_10_4_21.PNG' class='img-fluid' alt='ex21'>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        а) Слабо сврзан (на пр. нема пат помеѓу а и b во ориентираниот граф, но
+                                        би имало во соодветниот неориентиран граф);<br>
+                                        б) Слабо сврзан (на пр. нема пат помеѓу c и b во ориентираниот граф, но би имало
+                                        во соодветниот неориентиран граф);<br>
+                                        в) Не е ниту слабо ниту силно сврзан;<br>
+                                        г) Слабо сврзан (на пр. нема пат помеѓу f и a во ориентираниот граф, но би имало
+                                        во соодветниот неориентиран граф);<br>
+                                        д) Силно сврзан;<br>
+                                        ѓ) Не е ниту слабо ниту силно сврзан.<br>
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 21 -->
+
+                        <!-- Exercise 22 -->
+                        <p id='ex22'>
+                            <strong>Вежба 22.</strong> Докажете дека ако `u` е теме со непарен степен во граф `G`, тогаш
+                            постои пат од `u` до друго теме `v` во `G`, кое исто така има непарен степен.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ќе изградиме пат кој не користи претходно поминати ребра. Како што го
+                                        градиме патот, замислуваме дека ги бришеме ребрата кои ги поминуваме
+                                        со цел да не ги користиме повторно. Започнуваме од теме `u` и избираме
+                                        произволен пат/ребро. Тоа ќе биде првата компонента од патот. Во било
+                                        кој момент, ако патот достигне до теме со непарен степен, нашата задача
+                                        е завршена; но секогаш кога ќе пристигнеме до теме со парен степен, ни се
+                                        гарантира дека постои излезно ребро од тоа теме. Кога ќе го
+                                        напуштиме тоа теме ќе избришеме по две ребра (тоа со кое влеговме и
+                                        тоа со кое излеговме од темето). Темето кое го посетивме имаше парен
+                                        степен, а ние избришавме 2 ребра, па според тоа повторно ќе има парен
+                                        број на ребра. На овој начин кога ќе стигнеме до теме со парен степен,
+                                        секогаш има начин да продолжиме. Бидејќи постојат само конечен број
+                                        на ребра, нашиот пат мора некогаш да заврши и единствениот начин на
+                                        кој може да заврши е ако пристигне во теме со непарен степен.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 22 -->
+
+                        <!-- Exercise 23 -->
+                        <p id='ex23'>
+                            <strong>Вежба 23.</strong> Докажи дека секој конечен граф во кој секое теме има степен
+                            најмалку два содржи циклус.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нека `v_0` е теме во графот и `e_1` е ребро кое го содржи темето `v_0` . Нека
+                                        `v_1` е
+                                        другото теме на `e_1` . Бидејќи `v_1` има степен најмалку два, следува дека
+                                        постои ребро `e_2` различно од `e_1` , кое го содржи темето `v_1` и нека `v_2` е
+                                        другото теме на `e_2` . За `v_2` на сличен начин наоѓаме ребро `e_3` и теме
+                                        `v_3` и
+                                        ја продолжуваме оваа постапка се додека некое од темињата не се
+                                        повтори (некое теме мора да се повтори, бидејќи графот е конечен, т.е.
+                                        има конечно многу темиња). Нека `v_n` е првото теме што се повторува, т.е.
+                                        `v_n -= v_(n-k)` , тогаш патот `v_nv_(n-1)...v_(n-k)` кој минува низ ребрата
+                                        `e_(n-1), e_(n_2) , . . .,
+                                        e_(n_k)` е циклус.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 23 -->
+
+                        <!-- Exercise 24 -->
+                        <p id='ex24'>
+                            <strong>Вежба 24.</strong> Докажи дека секој граф со `n` темиња и најмалку `n` ребра содржи
+                            циклус.<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ако во графот има темиња со степен нула или еден, тогаш одбираме едно
+                                        такво теме и го исфрламе заедно со ребрата кои го содржат (одбираме
+                                        подграф кој се состои од сите ребра кои не го содржат избраното теме и
+                                        сите темиња освен избраното). На овој начин, бројот на темиња се
+                                        намалува за еден, а бројот на ребра за најмногу еден, т.е. бројот на ребра
+                                        ќе остане поголем од бројот на темиња. Постапката ја продолжуваме се
+                                        додека постојат темиња со степен нула или еден. Бидејќи графот е
+                                        конечен, постапката мора да заврши после конечно многу чекори. После
+                                        завршување на постапката мора да остане барем едно теме (ако има само
+                                        едно теме, мора да има барем едно ребро, а во тој случај степенот на
+                                        темето е барем два). После завршување на оваа постапка секое теме во
+                                        графот има степен барем два, па од претходната задача следува дека
+                                        постои циклус во овој граф. Бидејќи крајниот граф е подграф од
+                                        почетниот, следува дека и почетниот граф содржи циклус.
+                                        Второ решение – со индукција:<br>
+                                        <img src='_10_4_24.PNG' class='img-fluid' alt='ex24'>
+
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 24 -->
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
