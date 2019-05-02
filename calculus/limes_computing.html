@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="utf-8">
@@ -15,7 +16,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <!-- Documentation extras -->
     <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -23,7 +24,7 @@
 
     <!-- MathJax -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
-            async></script>
+        async></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -37,679 +38,706 @@
 
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
 
 <body>
-<!-- Header -->
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-    <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-    </div>
-</a>
-
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
-        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
-             focusable="false">
-            <title>Саше учи Calculus</title>
-            <path fill="currentColor"
-                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
-            <path fill="currentColor"
-                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
-        </svg>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
     </a>
 
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="functions.html">Калкулус</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="exam.html">Испитни прашања</a>
-            </li>
-        </ul>
-    </div>
-</header>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
 
-<!--Container -->
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <form class="bd-search d-flex align-items-center">
-                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
-                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
-                       data-docs-version="4.1">
-                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
-                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
-                        aria-expanded="false" aria-label="Toggle docs navigation">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
-                         focusable="false">
-                        <title>Menu</title>
-                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                              d="M4 7h22M4 15h22M4 23h22"/>
-                    </svg>
-                </button>
-            </form>
-
-            <!-- Left Sidenav -->
-            <nav class="collapse bd-links" id="bd-docs-nav">
-
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="intro.html">
-                        Before Calculus
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li class="active bd-sidenav-active">
-                            <a href="functions.html">
-                                Фунции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="new_function.html">
-                                Нови функции од стари
-                            </a>
-                        </li>
-                        <li>
-                            <a href="families.html">
-                                Фамилии на функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="inverse.html">
-                                Инверзни функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="trig.html">
-                                Тригонометриски функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="exp.html">
-                                Експоненцијални функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="log.html">
-                                Логаритамски функции
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="limes.html">
-                        Лимеси
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="limes.html">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li class="active bd-sidenav-active">
-                            <a href="limes_computing.html">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="limes_infinity.html">
-                                Лимеси во бескрајност
-                            </a>
-                        </li>
-                        <li>
-                            <a href="limes_rigorously.html">
-                                Детална метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="limes_continuity.html">
-                                Непрекинатост
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Изводи
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="/docs/4.2/layout/overview/">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Интеграли
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="/docs/4.2/layout/overview/">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Фундаментална теорема
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="limes.html">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="limes_computing.html">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="limes_infinity.html">
-                                Лимеси во бескрајност
-                            </a>
-                        </li>
-                        <li>
-                            <a href="rigorously.html">
-                                Детална метода
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-
-            </nav>
-
-        </div>
-
-        <!-- right nav -->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#concept">Концепт на лимес</a>
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
                 </li>
-                <li class="toc-entry toc-h2">
-                    <a href="#tangent_line">Тангента и лимес</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../calculus/limes_computing.html">Калкулус</a>
                 </li>
-                <li class="toc-entry toc-h2">
-                    <a href="#areas_and_limits">Површина и лимес</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/">Видео предавања</a>
                 </li>
-                <li class="toc-entry toc-h2">
-                    <a href="#decimal_and_limits">Децимални броеви и лимес</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-exercises/limes_computing.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
                 </li>
-                <li class="toc-entry toc-h2">
-                    <a href="#limit">Лимес</a>
-                    <ul class="section-nav">
-                        <li class="toc-entry toc-h2">
-                            <a href="#informal">Интиутивна метода</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#infinite">Бесконечни лимеси</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#v_asymtotes">Вертикални асимптоти</a>
-                        </li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exam.html">Испитни прашања</a>
                 </li>
             </ul>
         </div>
+    </header>
 
-        <!-- main -->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
 
-            <div class="row">
-                <div class="col-12">
-                    <p id="concept" class="lead">
-                        Овде ќе се разгледаат техники за пресметки на лимеси на повеќе функции. Реултатите ќе ги темелиме врз 
-                        интуитивниот пристап на лимесот.
-                    </p>
-                </div>
-                <!-- SOME BASIC LIMITS -->
-                <div class="col-12">
-                    <h3 id="basic_limits">
-                        Некои основни лимеси
-                    </h3>
-                </div>
-                <div class="col-12">
-                    <p>
-                        Стратегијата за решавање на лимеси по алгебарски пат е од два дела:
-                    </p>
-                    <ul>
-                        <li>
-                            Прво че ги добиеме лимесите на некои едноставни функции.
-                        </li>
-                        <li>
-                            Потоа ќе развиеме неколку теореми кои ќе ни овозможат да ги употребиме
-                            лимесите на едноставните функции како основа за изнаоѓање на лимеси од 
-                            покомплицирани функции.
-                        </li>
-                    </ul>
-                    <p>
-                        Ќе ги прикажеме основните резултати кои се илустрирани на долната слика.
-                    </p>
-                    <div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Теорема 1. Нека `а` и `k` се реални броеви.</h4>
-                        <hr>
-                        <p class="mb-0">
-                            `lim_(x->a)k=k,`&nbsp;&nbsp;`lim_(x->a^+)x=a,`&nbsp;&nbsp;`lim_(x->o^-)1/x=-oo,`&nbsp;&nbsp;`lim_(x->o^+)1/x=+oo,`
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <img src="images/limes_13.PNG" class="img-fluid img">
-                    </div>
-                    <div class="alert alert-light" role="alert">
-                        <p>
-                            The following examples explain these results further.
-                        </p>
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
 
-                        <h4 class="alert-heading">Пример 1.</h4>
-                        <p>
-                            Ако функцијата `f(x)=k` е константна функција, тогаш при промена на `x` вредностите на
-                            `f(x)`
-                            e константата `k`, со што се објаснува зошто `f(x)->k` кога `x->a` за сите вредности на `a`.
-                            На пример:
-                        </p>
-                        <p class="text-center">
-                            `lim_(x->25)3=3`&nbsp;&nbsp;,&nbsp;&nbsp;`lim_(x->0)3=3`&nbsp;&nbsp;,&nbsp;&nbsp;`lim_(x->pi)3=3`
-                        </p>
-                    </div>
-                    <div id ="th2" class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Теорема 2.</h4> Нека `а` е даден реален број, и нека
-                        `lim_(x->a)f(x)=L`<sub>`1`</sub> и `lim_(x->a)g(x)=L`<sub>`2`</sub>
-                        <ul>
-                            <li>
-                                а) `lim_(x->a)[f(x)+g(x)]=lim_(x->a)f(x) +
-                                lim_(x->a)g(x)=L`<sub>`1`</sub>`+L`<sub>`2`</sub>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="intro.html">
+                            Before Calculus
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="functions.html">
+                                    Фунции
+                                </a>
                             </li>
                             <li>
-                                b) `lim_(x->a)[f(x)-g(x)]=lim_(x->a)f(x) -
-                                lim_(x->a)g(x)=L`<sub>`1`</sub>`-L`<sub>`2`</sub>
+                                <a href="new_function.html">
+                                    Нови функции од стари
+                                </a>
                             </li>
                             <li>
-                                c) `lim_(x->a)[f(x)*g(x)]=lim_(x->a)f(x) * lim_(x->a)g(x)=L`<sub>`1`</sub>`*
-                                L`<sub>`2`</sub>
+                                <a href="families.html">
+                                    Фамилии на функции
+                                </a>
                             </li>
                             <li>
-                                d) `lim_(x->a)[f(x)/g(x)]=(lim_(x->a)f(x)) / (lim_(x->a)g(x))=L`<sub>`1`</sub>`/ L`<sub>`2`</sub>,
-                                под услов `L`<sub>`2`</sub>`!=0`
+                                <a href="inverse.html">
+                                    Инверзни функции
+                                </a>
                             </li>
                             <li>
-                                e) `lim_(x->a)root(n)f(x)=root(n)(lim_(x->a)f(x))=root(n)L`<sub>`1`</sub>, под услов
-                                `L>=0`, aкo `n` парен број
+                                <a href="trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="exp.html">
+                                    Експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="log.html">
+                                    Логаритамски функции
+                                </a>
                             </li>
                         </ul>
-                        <hr>
-                        <p class="mb-0">
-                            Тврдењата важат и за едностраните лимеси, кога `x->a^–` или кога `x->a^+`.<br>
-                            За специјалниот случај на (c) каде `f(x) = k` е константна функција следи:<br>
-                            `lim_(x->a)(k*f(x))=lim_(x->a>)k * lim_(x->a)f(x)= k * lim_(x->a)f(x)`
-                        </p>
                     </div>
-                    <p>
-                        Иако деловите (a) и (c) од Теоремата 2 се однесуваат за две функции, резултатот се однесува за
-                        било кој конечен број на функции. Уште повеќе, различни делови од теоремата можат да се користат
-                        во комбинација за преобликување на изразот кој ги вклучува лимесите.
-                    </p>
-                    <div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Теорема 3.</h4> Ако за функциите `f`<sub>`1`</sub>`,f`<sub>`2`</sub>`,
-                        * * * f`<sub>`n`</sub> постои лимесот кога `x->a` тогаш:
-                        <ul>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+
+                        <ul class="nav bd-sidenav">
                             <li>
-                                i) `lim_(x->a)[f`<sub>`1`</sub>`(x)+f`<sub>`2`</sub>`(x)+ * * * + f`<sub>`n`</sub>`(x)]=lim_(x->a)f`<sub>`1`</sub>`(x)
-                                + lim_(x->a)f`<sub>`2`</sub>`(x)+ * * * +f`<sub>`n`</sub>`(x)`
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="limes_computing.html">
+                                    Пресметки на лимеси
+                                </a>
                             </li>
                             <li>
-                                ii) `lim_(x->a)[f`<sub>`1`</sub>`(x)*f`<sub>`2`</sub>`(x) * * * f`<sub>`n`</sub>`(x)]=[lim_(x->a)f`<sub>`1`</sub>`(x)]*[lim_(x->a)f`<sub>`2`</sub>`(x)]*[lim_(x->a)f`<sub>`n`</sub>`(x)]`
-                            </li>
-                        </ul>
-                        <hr>
-                        <p class="mb-0">
-                            Тврдењата важат и за едностраните лимеси, кога `x->a^–` или кога `x->a^+`.
-                        </p>
-                    </div>
-                </div>
-                <p>
-                </p>
-                <div class="alert alert-light" role="alert">
-                    <h4 class="alert-heading">Пример 2.</h4>
-                    <p>
-                        `lim_(x->a)[f(x)-g(x)+2h(x)]=lim_(x->a)f(x)+lim_(x->a)g(x)+2lim_(x->a)h(x)`<br>
-                        `lim_(x->a)[f(x)]^3=lim_(x->a)[f(x)*f(x)*f(x)]=[lim_(x->a)f(x)]*[lim_(x->a)f(x)]*[lim_(x->a)f(x)]=(lim_(x->a)f(x))^3`<br>
-                        `lim_(x->a)x^n=(lim_(x->a)x)^n=a^n`
-                    </p>
-                </div>
-
-                <!-- LIMITS OF POLYNOMIALS AND RATIONAL FUNCTIONS AS `x->a` -->
-
-                <div class="col-12">
-                    <h5 id="rational">
-                        Лимес од полиноми и рационални функции кога `x->a`
-                    </h5>
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 3.</h4>
-                        <p>
-                            <strong>Најди:</strong> `lim_(x->5)(x^2-4x+3)`
-                        </p>
-                        <p>
-                            <strong>Решение:</strong><br>
-                            `lim_(x->5)(x^2-4x+3)=lim_(x->5)x^2 - lim_(x->5)4*x + lim_(x->5)3`<br>
-                            `=lim_(x->5)x^2 - 4lim_(x->5)x + lim_(x->5)3`<br>
-                            `=5^2 - 4*5 + 3`<br>
-                            `=8`
-                        </p>
-                    </div>
-                    <div class="alert alert-info" role="alert">
-                        Може да се примети дека лимесот од полиномор `p(x) = x^2-4x+3` кога `x->5` е еднаков на
-                        вредноста на полиномот `p(5)`. Следната теорема покажува дека лимесот на полиномот `p(x)` кога
-                        `x->a` е ист со вредноста на полиномот за `a`. Знаејки го ова пресметката на лимес на полином ја
-                        сведуваме на пресметка на полиномот за дадената точка.
-                    </div>
-
-                    <div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Теорема 4.</h4> За билокој полином:
-                        <p class="text-center">
-                            `p(x) = c`<sub>`0`</sub>` + c`<sub>`1`</sub>`x + · · · + c`<sub>`n`</sub>`x^n`
-                        </p>
-                        <p>
-                            и реален број `a`
-                        </p>
-                        <p class="text-center">
-                            `lim_(x->a)p(x)= c`<sub>`0`</sub>` + c`<sub>`1`</sub>`a + · · · + c`<sub>`n`</sub>`a^n=p(a)`
-                        </p>
-                        <hr>
-                        <p class="mb-0">
-                            Доказ:<br>
-                            `lim_(x->a)p(x)= lim_(x->a)(c`<sub>`0`</sub>` + c`<sub>`1`</sub>`x + · · · +
-                            c`<sub>`n`</sub>`x^n)=`<br>
-                            `= lim_(x->a)c`<sub>`0`</sub>` + lim_(x->a)c`<sub>`1`</sub>`x + · · · +
-                            lim_(x->a)c`<sub>`n`</sub>`x^n=`<br>
-                            `= lim_(x->a)c`<sub>`0`</sub>` + c`<sub>`1`</sub>`lim_(x->a)x + · · · +
-                            c`<sub>`n`</sub>`lim_(x->a)x^n=`<br>
-                            `= c`<sub>`0`</sub>` + c`<sub>`1`</sub>`a + · · · + c`<sub>`n`</sub>`a^n=p(a)`<br>
-
-                        </p>
-                    </div>
-
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 4.</h4>
-                        <p>
-                            <strong>Најди:</strong> `lim_(x->2)(5x^3+4)/(x-3)`
-                        </p>
-                        <p>
-                            <strong>Решение:</strong><br>
-                            `lim_(x->2)(5x^3+4)/(x-3)=(lim_(x->2)(5x^3+4))/(lim_(x->2)(x-3))=`<br>
-                            `=(5*2^3+4)/(2-3)=-44`
-                        </p>
-                        <p>
-                            Методот користен во последниот пример нема да даде резултат за рационални функции каде
-                            лимесот на броителот е нула бидејки теоремата 2 (d). Постојат два случаи кои треба да се
-                            разгледаат, случајот каде лимесот на именителот е нула и случајот каде и именителот и
-                            броителот се нули. Во случајот кога лимесот на именителот е нула но на броителот не е нула,
-                            може да се докаже дека лимес не постои и дека ја имаме една од следите ситуации:
-                        </p>
-                        <ul>
-                            <li>
-                                Лимесот може да биде `-oo` од една страна и `+oo` од друга страна.
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
                             </li>
                             <li>
-                                Лимесот може да биде `+oo`.
+                                <a href="limes_rigorously.html">
+                                    Детална метода
+                                </a>
                             </li>
                             <li>
-                                Лимесот може да биде `-oo`.
+                                <a href="limes_continuity.html">
+                                    Непрекинатост
+                                </a>
                             </li>
                         </ul>
-                        <p>
-                            Долната слика ги прикажува овие три можностиза рационалните функции:<br>`1/(x − a)`, `1/(x −
-                            a)^2`, и `(−1)/(x − a)^2`.
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Изводи
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_computing.html">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rigorously.html">
+                                    Детална метода
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#concept">Концепт на лимес</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#tangent_line">Тангента и лимес</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#areas_and_limits">Површина и лимес</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#decimal_and_limits">Децимални броеви и лимес</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#limit">Лимес</a>
+                        <ul class="section-nav">
+                            <li class="toc-entry toc-h2">
+                                <a href="#informal">Интиутивна метода</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#infinite">Бесконечни лимеси</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#v_asymtotes">Вертикални асимптоти</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div class="row">
+                    <div class="col-12">
+                        <p id="concept" class="lead">
+                            Овде ќе се разгледаат техники за пресметки на лимеси на повеќе функции. Реултатите ќе ги
+                            темелиме врз
+                            интуитивниот пристап на лимесот.
                         </p>
+                    </div>
+                    <!-- SOME BASIC LIMITS -->
+                    <div class="col-12">
+                        <h3 id="basic_limits">
+                            Некои основни лимеси
+                        </h3>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            Стратегијата за решавање на лимеси по алгебарски пат е од два дела:
+                        </p>
+                        <ul>
+                            <li>
+                                Прво ќе ги добиеме лимесите на некои едноставни функции.
+                            </li>
+                            <li>
+                                Потоа ќе развиеме неколку теореми кои ќе ни овозможат да ги употребиме
+                                лимесите на едноставните функции како основа за изнаоѓање на лимеси од
+                                покомплицирани функции.
+                            </li>
+                        </ul>
+                        <p>
+                            Ќе ги прикажеме основните резултати кои се илустрирани на долната слика.
+                        </p>
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Теорема 1. Нека `a` и `k` се реални броеви.</h4>
+                            <hr>
+                            <p class="mb-0">
+                                `lim_(x->a)k=k,`&nbsp;&nbsp;`lim_(x->a^+)x=a,`&nbsp;&nbsp;`lim_(x->o^-)1/x=-oo,`&nbsp;&nbsp;`lim_(x->o^+)1/x=+oo,`
+                            </p>
+                        </div>
                         <div class="text-center">
-                            <img src="images/limes_14.png" class="img-fluid img">
+                            <img src="images/limes_13.PNG" class="img-fluid img">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            <p>
+                                The following examples explain these results further.
+                            </p>
+
+                            <h4 class="alert-heading">Пример 1.</h4>
+                            <p>
+                                Ако функцијата `f(x)=k` е константна функција, тогаш при промена на `x` вредностите на
+                                `f(x)`
+                                e константата `k`, со што се објаснува зошто `f(x)->k` кога `x->a` за сите вредности на
+                                `a`.
+                                На пример:
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->25)3=3`&nbsp;&nbsp;,&nbsp;&nbsp;`lim_(x->0)3=3`&nbsp;&nbsp;,&nbsp;&nbsp;`lim_(x->pi)3=3`
+                            </p>
+                        </div>
+                        <div id="th2" class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Теорема 2.</h4> Нека `а` е даден реален број, и нека
+                            `lim_(x->a)f(x)=L`<sub>`1`</sub> и `lim_(x->a)g(x)=L`<sub>`2`</sub>
+                            <ul>
+                                <li>
+                                    a) `lim_(x->a)[f(x)+g(x)]=lim_(x->a)f(x) +
+                                    lim_(x->a)g(x)=L`<sub>`1`</sub>`+L`<sub>`2`</sub>
+                                </li>
+                                <li>
+                                    b) `lim_(x->a)[f(x)-g(x)]=lim_(x->a)f(x) -
+                                    lim_(x->a)g(x)=L`<sub>`1`</sub>`-L`<sub>`2`</sub>
+                                </li>
+                                <li>
+                                    c) `lim_(x->a)[f(x)*g(x)]=lim_(x->a)f(x) * lim_(x->a)g(x)=L`<sub>`1`</sub>`*
+                                    L`<sub>`2`</sub>
+                                </li>
+                                <li>
+                                    d) `lim_(x->a)[f(x)/g(x)]=(lim_(x->a)f(x)) / (lim_(x->a)g(x))=L`<sub>`1`</sub>`/
+                                    L`<sub>`2`</sub>,
+                                    под услов `L`<sub>`2`</sub>`!=0`
+                                </li>
+                                <li>
+                                    e) `lim_(x->a)root(n)f(x)=root(n)(lim_(x->a)f(x))=root(n)L`<sub>`1`</sub>, под услов
+                                    `L>=0`, aкo `n` парен број
+                                </li>
+                            </ul>
+                            <hr>
+                            <p class="mb-0">
+                                Тврдењата важат и за едностраните лимеси, кога `x->a^–` или кога `x->a^+`.<br>
+                                За специјалниот случај на (c) каде `f(x) = k` е константна функција следи:<br>
+                                `lim_(x->a)(k*f(x))=lim_(x->a>)k * lim_(x->a)f(x)= k * lim_(x->a)f(x)`
+                            </p>
+                        </div>
+                        <p>
+                            Иако деловите (a) и (c) од Теоремата 2 се однесуваат за две функции, резултатот се однесува
+                            за
+                            било кој конечен број на функции. Уште повеќе, различни делови од теоремата можат да се
+                            користат
+                            во комбинација за преобликување на изразот кој ги вклучува лимесите.
+                        </p>
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Теорема 3.</h4> Ако за функциите
+                            `f`<sub>`1`</sub>`,f`<sub>`2`</sub>`,
+                            * * * f`<sub>`n`</sub> постои лимесот кога `x->a` тогаш:
+                            <ul>
+                                <li>
+                                    i) `lim_(x->a)[f`<sub>`1`</sub>`(x)+f`<sub>`2`</sub>`(x)+ * * * +
+                                    f`<sub>`n`</sub>`(x)]=lim_(x->a)f`<sub>`1`</sub>`(x)
+                                    + lim_(x->a)f`<sub>`2`</sub>`(x)+ * * * +f`<sub>`n`</sub>`(x)`
+                                </li>
+                                <li>
+                                    ii) `lim_(x->a)[f`<sub>`1`</sub>`(x)*f`<sub>`2`</sub>`(x) * * *
+                                    f`<sub>`n`</sub>`(x)]=[lim_(x->a)f`<sub>`1`</sub>`(x)]*[lim_(x->a)f`<sub>`2`</sub>`(x)]*[lim_(x->a)f`<sub>`n`</sub>`(x)]`
+                                </li>
+                            </ul>
+                            <hr>
+                            <p class="mb-0">
+                                Тврдењата важат и за едностраните лимеси, кога `x->a^–` или кога `x->a^+`.
+                            </p>
                         </div>
                     </div>
-
-                    <div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Теорема 5.</h4> Нека:
-                        <p class="text-center">
-                            `f(x)=(p(x))/(q(x))`
-                        </p>
+                    <p>
+                    </p>
+                    <div class="alert alert-light" role="alert">
+                        <h4 class="alert-heading">Пример 2.</h4>
                         <p>
-                            е дробно рационална функција, и нека `а` е било кој реален број
+                            `lim_(x->a)[f(x)-g(x)+2h(x)]=lim_(x->a)f(x)+lim_(x->a)g(x)+2lim_(x->a)h(x)`<br>
+                            `lim_(x->a)[f(x)]^3=lim_(x->a)[f(x)*f(x)*f(x)]=[lim_(x->a)f(x)]*[lim_(x->a)f(x)]*[lim_(x->a)f(x)]=(lim_(x->a)f(x))^3`<br>
+                            `lim_(x->a)x^n=(lim_(x->a)x)^n=a^n`
                         </p>
-                        <ul>
-                            <li>
-                                a). ако `q(a) !=0`&nbsp; тогаш `lim_(x->a)f(x)=f(a)`
-                            </li>
-                            <li>
-                                b). ако `q(a) =0`&nbsp; и &nbsp; `p(a)!=0`&nbsp;,тогаш `lim_(x->a)f(x)` &nbsp; не
-                                постои
-                            </li>
-                        </ul>
-                        <hr>
-                        <p class="mb-0">
-                            Доказ:<br>
-                            `lim_(x->a)p(x)=p(a)`&nbsp;, `lim_(x->a)q(x)=q(a)`<br>
-                        <ul>
-                            <li>
-                                а. Нека `q(a)!=0`<br>
-                                `lim_(x->a)f(x)=lim_(x->a)(p(x))/(q(x))=(lim_(x->a)p(x))/(lim_(x->a)q(x))=(p(a))/(q(a))=f(a)`
-                            </li>
-                            <li>
-                                b. Нека `q(a)=0`&nbsp; и `p(a)!=0`<br>
-                                тогаш за вредности на `x` доволно блиски до `a`, кога `p(x)` ќе се подели со `q(x)`
-                                (многу мала вредност, блиска до `0`) се добива број кој е многу голем (тежи кон
-                                `+oo`) или многу мал (тежи кон `−oo`), зависно од знакот на `p(x)` и `q(x)`. Значи,
-                                во овој случај `lim_(x->a)f(x)`не постои и можен е еден од следните 3 случаи:
+                    </div>
+
+                    <!-- LIMITS OF POLYNOMIALS AND RATIONAL FUNCTIONS AS `x->a` -->
+
+                    <div class="col-12">
+                        <h5 id="rational">
+                            Лимес од полиноми и рационални функции кога `x->a`
+                        </h5>
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 3.</h4>
+                            <p>
+                                <strong>Најди:</strong> `lim_(x->5)(x^2-4x+3)`
+                            </p>
+                            <p>
+                                <strong>Решение:</strong><br>
+                                `lim_(x->5)(x^2-4x+3)=lim_(x->5)x^2 - lim_(x->5)4*x + lim_(x->5)3`<br>
+                                `=lim_(x->5)x^2 - 4lim_(x->5)x + lim_(x->5)3`<br>
+                                `=5^2 - 4*5 + 3`<br>
+                                `=8`
+                            </p>
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            Може да се примети дека лимесот од полиномор `p(x) = x^2-4x+3` кога `x->5` е еднаков на
+                            вредноста на полиномот `p(5)`. Следната теорема покажува дека лимесот на полиномот `p(x)`
+                            кога
+                            `x->a` е ист со вредноста на полиномот за `a`. Знаејки го ова пресметката на лимес на
+                            полином ја
+                            сведуваме на пресметка на полиномот за дадената точка.
+                        </div>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Теорема 4.</h4> За билокој полином:
+                            <p class="text-center">
+                                `p(x) = c`<sub>`0`</sub>` + c`<sub>`1`</sub>`x + · · · + c`<sub>`n`</sub>`x^n`
+                            </p>
+                            <p>
+                                и реален број `a`
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->a)p(x)= c`<sub>`0`</sub>` + c`<sub>`1`</sub>`a + · · · +
+                                c`<sub>`n`</sub>`a^n=p(a)`
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                                Доказ:<br>
+                                `lim_(x->a)p(x)= lim_(x->a)(c`<sub>`0`</sub>` + c`<sub>`1`</sub>`x + · · · +
+                                c`<sub>`n`</sub>`x^n)=`<br>
+                                `= lim_(x->a)c`<sub>`0`</sub>` + lim_(x->a)c`<sub>`1`</sub>`x + · · · +
+                                lim_(x->a)c`<sub>`n`</sub>`x^n=`<br>
+                                `= lim_(x->a)c`<sub>`0`</sub>` + c`<sub>`1`</sub>`lim_(x->a)x + · · · +
+                                c`<sub>`n`</sub>`lim_(x->a)x^n=`<br>
+                                `= c`<sub>`0`</sub>` + c`<sub>`1`</sub>`a + · · · + c`<sub>`n`</sub>`a^n=p(a)`<br>
+
+                            </p>
+                        </div>
+
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 4.</h4>
+                            <p>
+                                <strong>Најди:</strong> `lim_(x->2)(5x^3+4)/(x-3)`
+                            </p>
+                            <p>
+                                <strong>Решение:</strong><br>
+                                `lim_(x->2)(5x^3+4)/(x-3)=(lim_(x->2)(5x^3+4))/(lim_(x->2)(x-3))=`<br>
+                                `=(5*2^3+4)/(2-3)=-44`
+                            </p>
+                            <p>
+                                Методот користен во последниот пример нема да даде резултат за рационални функции каде
+                                лимесот на броителот е нула бидејки теоремата 2 (d). Постојат два случаи кои треба да се
+                                разгледаат, случајот каде лимесот на именителот е нула и случајот каде и именителот и
+                                броителот се нули. Во случајот кога лимесот на именителот е нула но на броителот не е
+                                нула,
+                                може да се докаже дека лимес не постои и дека ја имаме една од следите ситуации:
+                            </p>
+                            <ul>
+                                <li>
+                                    Лимесот може да биде `-oo` од една страна и `+oo` од друга страна.
+                                </li>
+                                <li>
+                                    Лимесот може да биде `+oo`.
+                                </li>
+                                <li>
+                                    Лимесот може да биде `-oo`.
+                                </li>
+                            </ul>
+                            <p>
+                                Долната слика ги прикажува овие три можностиза рационалните функции:<br>`1/(x − a)`,
+                                `1/(x −
+                                a)^2`, и `(−1)/(x − a)^2`.
+                            </p>
+                            <div class="text-center">
+                                <img src="images/limes_14.png" class="img-fluid img">
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning" role="alert">
+                            <h4 class="alert-heading">Теорема 5.</h4> Нека:
+                            <p class="text-center">
+                                `f(x)=(p(x))/(q(x))`
+                            </p>
+                            <p>
+                                е дробно рационална функција, и нека `а` е било кој реален број
+                            </p>
+                            <ul>
+                                <li>
+                                    a). ако `q(a) !=0`&nbsp; тогаш `lim_(x->a)f(x)=f(a)`
+                                </li>
+                                <li>
+                                    b). ако `q(a) =0`&nbsp; и &nbsp; `p(a)!=0`&nbsp;,тогаш `lim_(x->a)f(x)` &nbsp; не
+                                    постои
+                                </li>
+                            </ul>
+                            <hr>
+                            <p class="mb-0">
+                                Доказ:<br>
+                                `lim_(x->a)p(x)=p(a)`&nbsp;, `lim_(x->a)q(x)=q(a)`<br>
                                 <ul>
                                     <li>
-                                        1. Едниот едностран лимес е `−oo`, а другиот `+oo`.
+                                        а. Нека `q(a)!=0`<br>
+                                        `lim_(x->a)f(x)=lim_(x->a)(p(x))/(q(x))=(lim_(x->a)p(x))/(lim_(x->a)q(x))=(p(a))/(q(a))=f(a)`
                                     </li>
                                     <li>
-                                        2. Двата еднострани лимеси се `+oo`.
-                                    </li>
-                                    <li>
-                                        3. Двата еднострани лимеси се −∞.
+                                        b. Нека `q(a)=0`&nbsp; и `p(a)!=0`<br>
+                                        тогаш за вредности на `x` доволно блиски до `a`, кога `p(x)` ќе се подели со
+                                        `q(x)`
+                                        (многу мала вредност, блиска до `0`) се добива број кој е многу голем (тежи кон
+                                        `+oo`) или многу мал (тежи кон `−oo`), зависно од знакот на `p(x)` и `q(x)`.
+                                        Значи,
+                                        во овој случај `lim_(x->a)f(x)`не постои и можен е еден од следните 3 случаи:
+                                        <ul>
+                                            <li>
+                                                1. Едниот едностран лимес е `−oo`, а другиот `+oo`.
+                                            </li>
+                                            <li>
+                                                2. Двата еднострани лимеси се `+oo`.
+                                            </li>
+                                            <li>
+                                                3. Двата еднострани лимеси се −∞.
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 5.</h4>
-                        <p>
-                            <strong>Најди:</strong> a.`lim_(x->4^+)(2-x)/((x-4)(x+2))`&nbsp;b.`lim_(x->4^-)(2-x)/((x-4)(x+2))`,&nbsp;c.`lim_(x->4)(2-x)/((x-4)(x+2))`
-                        </p>
-                        <p>
-                            <strong>Решение:</strong><br>
-                            во сите три случаи лимесот на нумераторот е `-2` и лимесот на именителот е `0` така да
-                            лимесот не постои. За да бидеме по прецизни треба да го одредиме предзнакот на дробно
-                            рационалната функција. (<em class="text-danger">Убаво само што никаде не најдоов дека се
-                            изучува методот на испитни точки</em>). Предзнакот е одреден од изразите `2-x, x-4`&nbsp; и
-                            `x+2`. Според долната слика ако на `x` му се приближуваме од десно предзнакот е секогаш
-                            негативен а ако на `x` му се приближуваме од лево предзнакот евентуално е позитивен, па
-                            според тоа:<br>
-                            `lim_(x->4^+)(2-x)/((x-4)(x+2))=-oo`<br>
-                            `lim_(x->4^-)(2-x)/((x-4)(x+2))=+oo`<br>
-                            Бидејки едностраните лимеси имаат различен предзнак с што можe да кажеме дека двостраниот
-                            лимес не постои.
-                        </p>
-                        <div class="text-center">
-                            <img src="images/limes_15.png" class="img-fluid img">
-                        </div>
-                    </div>
-
-                    <h5 id="zer_zero">
-                        Неопределеност од облик `0/0`
-                    </h5>
-                    <p>
-                        Ако `(p(x))/(q(x))` e дробно-рационална функција за која што `p(a) = 0 = q(a)`, тогаш броителот
-                        и именителот имаат заеднички фактор `x – a`, т.е., може да се поделат со `x – a`. Во овој
-                        случај, прво се крати заедничкиот множител `x – a`, а потоа се бара лимесот на добиената
-                        поедноставна функција.
-                    </p>
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 6.</h4>
-                        <p>
-                            <strong>Најди:</strong> a.`lim_(x->3)(x^2-6x+9 )/(x-3)`&nbsp;b.`lim_(x->-4)(2x+8)/(x^2+x-12)`
-                        </p>
-                        <p>
-                            <strong>Решение a.</strong><br>
-                            Броителот и именителот имаат заеднички фактор `x – 3`.<br>
-                            `lim_(x->3)(x^2-6x+9 )/(x-3)=lim_(x->3)(x-3)^2/(x-3)=lim_(x->3)(x-3)=0`<br>
-                        </p>
-                        <p>
-                            <strong>Решение b.</strong><br>
-                            Броителот и именителот имаат заеднички фактор `x + 4`.<br>
-                            `lim_(x->4^-)(2x+8
-                            )/(x^2+x-12)=lim_(x->4^-)(2(x+4))/((x+4)(x-3))=lim_(x->3)2/(x-3)=-2/7`<br>
-                        </p>
-
-                    </div>
-
-                    <h5 id="root">
-                        Лимеси кои содржат корени
-                    </h5>
-
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 7.</h4>
-                        <p>
-                            <strong>Најди:</strong> a.`lim_(x->1)(x-1)/(sqrt x-1)`
-                        </p>
-                        <p>
-                            <strong>Решение a.</strong><br>
-                            Имаме неопределеност од облик `0/0`. Со рационализација на именителот добиваме:<br>
-                            `lim_(x->3)(x^2-6x+9 )/(x-3)=lim_(x->3)(x-3)^2/(x-3)=lim_(x->3)(x-3)=0`<br>
-                        </p>
-                        <p>
-                            <strong>Решение b.</strong><br>
-                            Броителот и именителот имаат заеднички фактор `x + 4`.<br>
-                            `lim_(x->1)(x-1)/(sqrtx-1)=lim_(x->1)((x-1)/(sqrtx-1)*
-                            (sqrtx+1)/(sqrtx+1))=lim_(x->1)((x-1)(sqrt1+1))/(x-1)=lim_(x->1)(sqrt1+1)=2`<br>
-                        </p>
-
-                    </div>
-
-                    <h5 id="part">
-                        Лимеси на функции дефинирани по делови
-                    </h5>
-                    <p>
-                        За функции кои што се дефинирани по делови, двострани лимеси во точките во кои формулата се
-                        менува се определуваат со пресметување на едностраните лимеси.
-                    </p>
-
-                    <div class="alert alert-light" role="alert">
-                        <h4 class="alert-heading">Пример 8.</h4>
-                        <p>
-                            <strong>Нека:</strong> a.`f(x)={(1/(x+2),x<-2),(x^2-5,-2 < x =< 3), (sqrt (x+13), x > 3):}`
-                        </p>
-                        <p>
-                            Да се определат следните лимеси:
-                        </p>
-                        <p>
-                            a.`lim_(x->-2)f(x)`<br>
-                            b.`lim_(x->0)f(x)`<br>
-                            c. `lim_(x->3)f(x)`<br>
-                        </p>
-                        <strong>Решение a.</strong><br>
-                        За да го определиме двостраниот лимес прво треба да ги најдиме двата еднострани лимеси. При
-                        определување на едностраните лимеси мора да го користиме делот од формулата соодветен на
-                        интервалот во кој што се менува `x`. На пример, кога `x` тежи кон `–2` oд лево, функцијата
-                        е:<br>
-                        `f(x)=1/(x+2)`<br>
-                        а кога `x` тежи кон `2` oд десно, функцијата е<br>
-                        `f(x)=x^2-5`<br>
-                        Според тоа,<br>
-                        `lim_(x->2^-)f(x)=lim_(x->2^-)1/(x+2)=-oo`<br>
-                        `lim_(x->2^+)f(x)=lim_(x->2^+)x^2-5=-1`<br>
-                        Од каде следи дека двостраниот лимес `lim_(x->2)f(x)`не постои<br>
-                        <strong>Решение b.</strong><br>
-                        Од двете страни на `x = 0` формулата e:<br>
-                        `f(x)=x^2-5`<br>
-                        па затоа не е потребно да се бараат двата еднострани лимеси. Директно добиваме<br>
-                        `lim_(x->0)(x^2-5)=-5`<br>
-                        <strong>Решение c.</strong><br>
-                        Користејќи ги соодветните формули за `f(x)` имаме:<br>
-                        `lim_(x->3^-)f(x)=lim_(x->3^-)(x^2-5)=(-3)^2-5=4`<br>
-                        <div class="text-center">
-                            <img src="images/limes_16.png" class="img-fluid img">
                         </div>
 
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 5.</h4>
+                            <p>
+                                <strong>Најди:</strong>
+                                a.`lim_(x->4^+)(2-x)/((x-4)(x+2))`&nbsp;b.`lim_(x->4^-)(2-x)/((x-4)(x+2))`,&nbsp;c.`lim_(x->4)(2-x)/((x-4)(x+2))`
+                            </p>
+                            <p>
+                                <strong>Решение:</strong><br>
+                                во сите три случаи лимесот на нумераторот е `-2` и лимесот на именителот е `0` така да
+                                лимесот не постои. За да бидеме по прецизни треба да го одредиме предзнакот на дробно
+                                рационалната функција. (<em class="text-danger">Убаво само што никаде не најдоов дека се
+                                    изучува методот на испитни точки</em>). Предзнакот е одреден од изразите `2-x,
+                                x-4`&nbsp; и
+                                `x+2`. Според долната слика ако на `x` му се приближуваме од десно предзнакот е секогаш
+                                негативен а ако на `x` му се приближуваме од лево предзнакот евентуално е позитивен, па
+                                според тоа:<br>
+                                `lim_(x->4^+)(2-x)/((x-4)(x+2))=-oo`<br>
+                                `lim_(x->4^-)(2-x)/((x-4)(x+2))=+oo`<br>
+                                Бидејки едностраните лимеси имаат различен предзнак с што можe да кажеме дека
+                                двостраниот
+                                лимес не постои.
+                            </p>
+                            <div class="text-center">
+                                <img src="images/limes_15.png" class="img-fluid img">
+                            </div>
+                        </div>
+
+                        <h5 id="zer_zero">
+                            Неопределеност од облик `0/0`
+                        </h5>
+                        <p>
+                            Ако `(p(x))/(q(x))` e дробно-рационална функција за која што `p(a) = 0 = q(a)`, тогаш
+                            броителот
+                            и именителот имаат заеднички фактор `x – a`, т.е., може да се поделат со `x – a`. Во овој
+                            случај, прво се крати заедничкиот множител `x – a`, а потоа се бара лимесот на добиената
+                            поедноставна функција.
+                        </p>
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 6.</h4>
+                            <p>
+                                <strong>Најди:</strong> a.`lim_(x->3)(x^2-6x+9
+                                )/(x-3)`&nbsp;b.`lim_(x->-4)(2x+8)/(x^2+x-12)`
+                            </p>
+                            <p>
+                                <strong>Решение a.</strong><br>
+                                Броителот и именителот имаат заеднички фактор `x – 3`.<br>
+                                `lim_(x->3)(x^2-6x+9 )/(x-3)=lim_(x->3)(x-3)^2/(x-3)=lim_(x->3)(x-3)=0`<br>
+                            </p>
+                            <p>
+                                <strong>Решение b.</strong><br>
+                                Броителот и именителот имаат заеднички фактор `x + 4`.<br>
+                                `lim_(x->4^-)(2x+8
+                                )/(x^2+x-12)=lim_(x->4^-)(2(x+4))/((x+4)(x-3))=lim_(x->3)2/(x-3)=-2/7`<br>
+                            </p>
+
+                        </div>
+
+                        <h5 id="root">
+                            Лимеси кои содржат корени
+                        </h5>
+
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 7.</h4>
+                            <p>
+                                <strong>Најди:</strong> a.`lim_(x->1)(x-1)/(sqrt x-1)`
+                            </p>
+                            <p>
+                                <strong>Решение a.</strong><br>
+                                Имаме неопределеност од облик `0/0`. Со рационализација на именителот добиваме:<br>
+                                `lim_(x->3)(x^2-6x+9 )/(x-3)=lim_(x->3)(x-3)^2/(x-3)=lim_(x->3)(x-3)=0`<br>
+                            </p>
+                            <p>
+                                <strong>Решение b.</strong><br>
+                                Броителот и именителот имаат заеднички фактор `x + 4`.<br>
+                                `lim_(x->1)(x-1)/(sqrtx-1)=lim_(x->1)((x-1)/(sqrtx-1)*
+                                (sqrtx+1)/(sqrtx+1))=lim_(x->1)((x-1)(sqrt1+1))/(x-1)=lim_(x->1)(sqrt1+1)=2`<br>
+                            </p>
+
+                        </div>
+
+                        <h5 id="part">
+                            Лимеси на функции дефинирани по делови
+                        </h5>
+                        <p>
+                            За функции кои што се дефинирани по делови, двострани лимеси во точките во кои формулата се
+                            менува се определуваат со пресметување на едностраните лимеси.
+                        </p>
+
+                        <div class="alert alert-light" role="alert">
+                            <h4 class="alert-heading">Пример 8.</h4>
+                            <p>
+                                <strong>Нека:</strong> a.`f(x)={(1/(x+2),x<-2),(x^2-5,-2 < x=< 3), (sqrt (x+13), x>
+                                    3):}`
+                            </p>
+                            <p>
+                                Да се определат следните лимеси:
+                            </p>
+                            <p>
+                                a.`lim_(x->-2)f(x)`<br>
+                                b.`lim_(x->0)f(x)`<br>
+                                c. `lim_(x->3)f(x)`<br>
+                            </p>
+                            <strong>Решение a.</strong><br>
+                            За да го определиме двостраниот лимес прво треба да ги најдиме двата еднострани лимеси. При
+                            определување на едностраните лимеси мора да го користиме делот од формулата соодветен на
+                            интервалот во кој што се менува `x`. На пример, кога `x` тежи кон `–2` oд лево, функцијата
+                            е:<br>
+                            `f(x)=1/(x+2)`<br>
+                            а кога `x` тежи кон `2` oд десно, функцијата е<br>
+                            `f(x)=x^2-5`<br>
+                            Според тоа,<br>
+                            `lim_(x->2^-)f(x)=lim_(x->2^-)1/(x+2)=-oo`<br>
+                            `lim_(x->2^+)f(x)=lim_(x->2^+)x^2-5=-1`<br>
+                            Од каде следи дека двостраниот лимес `lim_(x->2)f(x)`не постои<br>
+                            <strong>Решение b.</strong><br>
+                            Од двете страни на `x = 0` формулата e:<br>
+                            `f(x)=x^2-5`<br>
+                            па затоа не е потребно да се бараат двата еднострани лимеси. Директно добиваме<br>
+                            `lim_(x->0)(x^2-5)=-5`<br>
+                            <strong>Решение c.</strong><br>
+                            Користејќи ги соодветните формули за `f(x)` имаме:<br>
+                            `lim_(x->3^-)f(x)=lim_(x->3^-)(x^2-5)=(-3)^2-5=4`<br>
+                            <div class="text-center">
+                                <img src="images/limes_16.png" class="img-fluid img">
+                            </div>
+
+                        </div>
+
+
                     </div>
-
-
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<!-- Popper.JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
-<script src="assets/js/popper.min.js"
+    <script src="assets/js/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script src="assets/js/docs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
 
 
 </body>
+
 </html>

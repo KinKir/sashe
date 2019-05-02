@@ -66,13 +66,17 @@
                 <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../calculus/functions.html">Калкулус</a>
+                <a class="nav-link" href="../calculus/limes_computing.html">Калкулус</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="../calculus-exercises/functions.html">Вежби</a>
+                <a class="nav-link active" href="../calculus-exercises/limes_computing.html">
+                    <span>
+                        <i class="fas fa-book"></i>
+                    </span>Вежби
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
@@ -174,7 +178,7 @@
                         </li>
                         <li>
                             <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
+                                Лимеси во бескрајност
                             </a>
                         </li>
                     </ul>
@@ -267,10 +271,10 @@
                     <a href="#def">Лимеси</a>
                     <ul>
                         <li class="toc-entry toc-h3">
-                            <a href="#intuitive">Интуитивен пристап</a>
+                            <a href="#ex1">Вежба 1</a>
                         </li>
                         <li class="toc-entry toc-h3">
-                            <a href="#computing">Пресметување на лимес</a>
+                            <a href="#ex2">Вежба 2</a>
                         </li>
                         <li class="toc-entry toc-h3">
                             <a href="#var">Променливи</a>
@@ -286,17 +290,91 @@
         <!-- main -->
         <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
             <h3 id='limes'>
-                Лимеси
+                Лимеси - пресметка
             </h3>
-            
-            <h5 id='intuitive'>
-                Интуитивен пристап
-            </h5>
+
+            <div id="Translating" class="row">
+                <div class="col-md-12">
+                    <!-- Exercise 1 -->
+                    <p>     
+                        <strong>Вежба 1.</strong> Нека е дадено:<br>
+                        `lim_(x -> a) f(x) = 2; lim_(x -> a) g(x) = -4; lim_(x -> a) h(x) = 0`<br>да се најде лимесот<br>
+                        a. `lim_(x -> a) [f(x) + 2g(x)]`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> a) [f(x) + 2g(x)] = lim_(x -> a) f(x) + 2lim_(x -> a) g(x) = 2 + 2*(-4) = -6`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        b. `lim_(x -> a) [h(x) - 3g(x) +1]`<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> a) [h(x) - 3g(x) +1] = lim_(x -> a) h(x) - 3lim_(x -> a) g(x) + 1 = 0 - 3*(-4) + 1 = 13`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        c. `lim_(x -> a) [f(x) * g(x)]`<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> a) [f(x) * g(x)] = lim_(x -> a) f(x) * lim_(x -> a) g(x) = 2 * (-4) = -8`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        d. `lim_(x -> a) root(3) [6 + f(x)]`<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> a) root(3) [6 + f(x)] = root(3) (lim_(x -> a) (6 + f(x)) = root(3) 8 = 2`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        e. `lim_(x -> a) 2/g(x)`<br>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> a) 2/g(x) = (lim_(x->2) 2)/( lim_(x->2) g(x)) = 2/(-4)= -1/2`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+                    <!-- /Exercise 1 -->
+
+
+                </div>
+            </div>
+
                         
             <p>     
-                <strong>Вежба 1.</strong> За функцијата од графикот да се определи:<br>
-                а) `lim_(x -> 2^-) f(x)` б) `lim_(x -> 2^+) f(x)` в) `lim_(x -> 2) f(2)` г) `f(2)` д) `lim_(x -> -oo) f(x)` ѓ) `lim_(x -> +oo) f(x)`<br>
-                <img src='images/limes_01.PNG' class='img fluid'>
+                <strong>Вежба 1.</strong> Со помош на графикот за `f` и `g` најди го лимесот. Ако не постои објасни зошто.<br>
+                <img src='_1_2_2.PNG' class='ex2'>
                 <details>
                     <summary class="mb-3">Решение</summary>
                     <div>
@@ -1104,11 +1182,11 @@
 <script src="js/docs.min.js"></script>
 
 <!-- modal onload-->
-<script>
+<!-- script>
     $(function() {
         $("#myModal").modal();
     });
-</script>
+</script -->
 
 
 
