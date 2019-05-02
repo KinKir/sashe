@@ -66,10 +66,10 @@
         <div class="navbar-nav-scroll">
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li class="nav-item">
-                    <a class="nav-link" href="../discrete/graphs_connecting.html">Дискретна математика</a>
+                    <a class="nav-link" href="../discrete/graphs_euler.html">Дискретна математика</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="graph_104.html">
+                    <a class="nav-link" href="graph_105.html">
                         <span>
                             <i class="fas fa-chalkboard-teacher"></i>
                         </span>
@@ -78,7 +78,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="graph_104_book.html">
+                    <a class="nav-link" href="graph_105_book.html">
                         <span>
                             <i class="fas fa-book"></i>
                         </span>
@@ -163,12 +163,12 @@
 
                         <ul class="nav bd-sidenav">
                             <li>
-                                <a href="../discrete_exercises/graph_101_book.html">
+                                <a href="graph_101_book.html">
                                     10.1 Граф
                                 </a>
                             </li>
                             <li>
-                                <a href="../discrete_exercises/graph_102.html">
+                                <a href="graph_102_book.html">
                                     10.2 Терминологија и специјални типови на графови
                                 </a>
                             </li>
@@ -177,12 +177,12 @@
                                     10.3 Претставување на граф
                                 </a>
                             </li>
-                            <li class="active bd-sidenav-active">
+                            <li>
                                 <a href="graph_104_book.html">
                                     10.4 Поврзување
                                 </a>
                             </li>
-                            <li>
+                            <li class="active bd-sidenav-active">
                                 <a href="graph_105_book.html">
                                     10.5 Оилеров пат
                                 </a>
@@ -191,7 +191,9 @@
                                 <a href="graphs_shortest_path_problem.html">
                                     10.6 Проблем на најкраток пат
                                 </a>
-                            </li>
+                                </In Exercises 1–8 determine whether the given graph has an Euler circuit. Construct
+                                    such a circuit when one exists. If no Euler circuit exists, determine whether the
+                                    graph has an Euler path and construct such a path if one existsli>
                         </ul>
                     </div>
 
@@ -234,16 +236,34 @@
                                 <a href="#ex2">Вежба 2</a>
                             </li>
                             <li class="toc-entry toc-h3">
-                                <a href="#ex3">Вежба 3-6</a>
+                                <a href="#ex3">Вежба 3</a>
                             </li>
                             <li class="toc-entry toc-h3">
-                                <a href="#ex11">Вежба 11</a>
+                                <a href="#ex4">Вежба 4</a>
                             </li>
                             <li class="toc-entry toc-h3">
-                                <a href="#ex12">Вежба 12</a>
+                                <a href="#ex5">Вежба 5</a>
                             </li>
                             <li class="toc-entry toc-h3">
-                                <a href="#ex13">Вежба 13</a>
+                                <a href="#ex6">Вежба 6</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex7">Вежба 7</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex14">Вежба 14</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex15">Вежба 15</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex26">Вежба 26</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex30">Вежба 30</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex31">Вежба 31</a>
                             </li>
                         </ul>
                     </li>
@@ -258,96 +278,147 @@
 
                         <!-- Exercise 1 -->
                         <p id='ex1'>
-                            <strong>Вежба 1.</strong> Дали низите од темиња формираат пат во следниот граф? Кои
-                            патишта се прости? Кои се циклуси? Кои се должините на патиштата?<br>
-                            <img src='_10_4_book_1.PNG' class='img-fluid' alt='ex1'><br>
-                            a) `a, e, b, c, b`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Пат - бидејки е низа од јазли<br>
-                                        Не е едноставен пат - содржи исто ребро повеќе од еднаш `{b, c}`<br>
-                                        Должината на патот е - 4 `{a, e}`, `{e, b}`, `{b, c}` и `{c, b}`.<br>
-                                        Не е циклус - бидејки не завршува во ист јазол од кај што почнал.
-                                    </p>
-                                </div>
-                            </details>
-                            b) `a, e, a, d, b, c, a`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Не пат - бидејки нема ребро `{c, a}`
-                                    </p>
-                                </div>
-                            </details>
-                            c) `e, b, a, d, b, e`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Не пат - бидејки нема ребро `{b, a}`
-                                    </p>
-                                </div>
-                            </details>
-                            d) `c, b, d, a, e, c`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div>
-                                    <p>
-                                        Пат - бидејки е низа од јазли<br>
-                                        Eдноставен пат - ne содржи исто ребро повеќе од еднаш<br>
-                                        Должината на патот е - 5 `{c, b}`, `{b, d}`, `{d, a}, {a, e}` и `{e, c}`.<br>
-                                        Циклус - бидејки завршува во ист јазол од кај што почнал. `c`
-                                    </p>
-                                </div>
-                            </details>
+                            <strong>Вежба 1.</strong> Одредете дали графовите имаат Ојлеров циклус. Доколку постои,
+                            конструирајте го. Ако не постои Ојлеров циклус, одредете дали графот има Ојлеров пат, и
+                            доколку постои – конструирајте го.<br>
+                            a) Ова е задача 25а од аудиториски вежби
                         </p>
                         <!-- /Exercise 1 -->
 
                         <!-- Exercise 2 -->
                         <p id='ex2'>
-                            <strong>Вежба 2.</strong> Ова е аудиториска вежба 19
+                            <strong>Вежба 2.</strong> Ова е задача 25б од аудиториски вежби
                         </p>
                         <!-- /Exercise 2 -->
 
                         <!-- Exercise 3-6 -->
                         <p id='ex3'>
-                            <strong>Вежба 3-6.</strong> Ова е аудиториска вежба 20
+                            <strong>Вежба 3.</strong> Ова е задача 25ѓ од аудиториски вежби
                         </p>
                         <!-- /Exercise 3-6 -->
 
-                        <!-- Exercise 11 -->
+                        <!-- Exercise 4 -->
                         <p id='ex11'>
-                            <strong>Вежба 11.</strong> Ова е аудиториска вежба 21
+                            <strong>Вежба 4.</strong> Ова е задача 25в од аудиториски вежби
                         </p>
-                        <!-- /Exercise 11 -->
+                        <!-- /Exercise 4 -->
 
-                        <!-- Exercise 12 -->
+                        <!-- Exercise 5 -->
                         <p id='ex12'>
-                            <strong>Вежба 12.</strong> Ова е аудиториска вежба 21
+                            <strong>Вежба 5.</strong> Ова е задача 25г од аудиториски вежби
                         </p>
-                        <!-- /Exercise 12 -->
+                        <!-- /Exercise 5 -->
 
-                        <!-- Exercise 13-->
-                        <p id='ex13'>
-                            <strong>Вежба 13.</strong> Што претставуваат јако сврзаните компоненти кај графот на
-                            телефонската мрежа.<br>
+                        <!-- Exercise 6 -->
+                        <p id='ex6'>
+                            <strong>Вежба 6.</strong> Ова е задача 25д од аудиториски вежби
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7-->
+                        <p id='ex7'>
+                                <strong>Вежба 7.</strong> Одредете дали графовите имаат Ојлеров циклус. Доколку постои,
+                                конструирајте го. Ако не постои Ојлеров циклус, одредете дали графот има Ојлеров пат, и
+                                доколку постои – конструирајте го.<br>
+                                <img src='_10_5_7a.PNG' class='img-fluid' alt='ex7a'><br>
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div>
+                                        <p>
+                                            Прво ќе го одредиме степенот на јазлите<br>
+                                            `deg(a) = 4; deg(b)=4; deg(c)=6; deg(d)=4; deg(e)=4; deg(f)=2; deg(g)=4; deg(h)=6; deg(i)=4`<br>
+                                            Бидејки сите степени се парен број постои Ојлеров циклус.<br>
+                                            Можен Ојлеров циклус е:`a,c,b,a,i, b, h,i,c,g,h,e,f,g,d,e,c,d,h.a`
+                                            <img src='_10_5_7.PNG' class='img-fluid' alt='ex7'><br>
+                                        </p>
+                                    </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 7 -->
+
+                        <!-- Exercise 14-->
+                        <p id='ex14'>
+                            <strong>Вежба 14.</strong> Ова е задача 31a од аудиториски вежби
+                        </p>
+                        <!-- /Exercise 14 -->
+
+                        <!-- Exercise 15-->
+                        <p id='ex15'>
+                            <strong>Вежба 15.</strong> Ова е задача 31b од аудиториски вежби
+                        </p>
+                        <!-- /Exercise 15 -->
+
+                        <!-- Exercise 26-->
+                        <p id='ex26'>
+                            <strong>Вежба 26.</strong> За која вредност на `n` графот има Ојлеров циклус?<br>
+                            `K_n`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div>
                                     <p>
-                                        Тоа е максимално множество на телефонски броеви за кои е можно да се најде
-                                        директен пат помеѓу секои два различни броја во множеството, каде дирекниот од
-                                        телефонскиот број `x` до друг телефонски број пат значи дега тел. број повикува
-                                        некој друг број, кој повикува друг број , ..., кој го повикува бројот `y`.
-                                        be any natural number.)
+                                        Ове е задача 26 од аудиториски вежби.
+                                    </p>
+                                </div>
+                            </details>
+                            `C_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Секој јазол кај циклус графот има степен 2. Значи циклус графот има Ојлеров пат за секое `n`.
+                                    </p>
+                                </div>
+                            </details>
+                            `W_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Секој јазол кај тркало граф има степен 3.Значи трало граф нема Ојлеров пат за секое `n`.
+                                    </p>
+                                </div>
+                            </details>
+                            `C_n`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Ове е задача 32 од аудиториски вежби.
                                     </p>
                                 </div>
                             </details>
                         </p>
-                        <!-- /Exercise 13 -->
+                        <!-- /Exercise 26 -->
+
+                        <!-- Exercise 30-->
+                        <p id='ex30'>
+                            <strong>Вежба 30.</strong> Одреди дали графот има Хамилтонов циклус. Ако има најди го.Ако нема објасни зошто.<br>
+                            <img src='_10_5_30_book.PNG' class='img-fluid' alt='ex30'><br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот не е Хамилтонов циклус. Има ребро на засек `{c, f}
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 30 -->
+
+                        <!-- Exercise 31-->
+                        <p id='ex31'>
+                            <strong>Вежба 31.</strong> Одреди дали графот има Хамилтонов циклус. Ако има најди го.Ако нема објасни зошто.<br>
+                            <img src='_10_5_31_book.PNG' class='img-fluid' alt='ex30'><br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Графот има Хамилтонов циклус. `a, b, c, d, e, a`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 31 -->
 
 
                     </div>
