@@ -296,7 +296,7 @@
             <div id="Translating" class="row">
                 <div class="col-md-12">
                     <!-- Exercise 1 -->
-                    <p>     
+                    <p id='ex1'>     
                         <strong>Вежба 1.</strong> Нека е дадено:<br>
                         `lim_(x -> a) f(x) = 2; lim_(x -> a) g(x) = -4; lim_(x -> a) h(x) = 0`<br>да се најде лимесот<br>
                         a. `lim_(x -> a) [f(x) + 2g(x)]`
@@ -367,208 +367,90 @@
                     </p>
                     <!-- /Exercise 1 -->
 
+                    <!-- Exercise 2 -->
+                    <p id='ex2'>     
+                        <strong>Вежба 2.</strong> Со помош на графикот за `f` и `g` најди го лимесот. Ако не постои објасни зошто.<br>
+                        <img src='_1_2_2.PNG' class='ex2'><br>
+                        a.`lim_(x -> 2) [f(x) + g(x)]`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Функцијата `f(x)` нема лимес `lim_(x->2) f(x)`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        b.`lim_(x -> 0) [f(x) + g(x)]`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Функцијата `f(x)` нема лимес `lim_(x->0) f(x)`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        c.`lim_(x -> 0^+) [f(x) + g(x)]`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    `lim_(x -> 0^+) [f(x) + g(x)] = -2 + 2 = 0`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        d.`lim_(x -> 0^-) [f(x) + g(x)]`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    `lim_(x -> 0^-) [f(x) + g(x)] = 1 + 2 = 3`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+                    <!-- /Exercise 2 -->
+
+                    <!-- Exercise 3 -->
+                    <p id='ex3'>     
+                        <strong>Вежба 3.</strong>`lim_(x -> 2) x(x-1)(x+1)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Според Теоремата 2, <br>
+                                    `lim_(x -> 2) x(x-1)(x+1) = lim_(x->2) 2 * lim_(x->2) (3 - 1) * lim_(x->2) (x+1) = 2*1*3 = 6`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                    </p>
+                    <!-- /Exercise 3 -->
+
 
                 </div>
             </div>
 
                         
-            <p>     
-                <strong>Вежба 1.</strong> Со помош на графикот за `f` и `g` најди го лимесот. Ако не постои објасни зошто.<br>
-                <img src='_1_2_2.PNG' class='ex2'>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            а) `L = 2`
-                        </p>
-                        <p>
-                            б) `L = 0`
-                        </p>
-                        <p>
-                            в) не постои
-                        </p>
-                        <p>
-                            г) `f(2) = 2`
-                        </p>
-                        <p>
-                            д) `L = 0`
-                        </p>
-                        <p>
-                            ѓ) `L = 2`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                а) `lim_(x -> 0^-) f(x)` б) `lim_(x -> 0^+) f(x)` в) `lim_(x -> 0) f(x)` г) `f(0)` д) `lim_(x -> -oo) f(x)` ѓ) `lim_(x -> +oo) f(x)`<br>
-                <img src='images/limes_02.PNG' class='img fluid'>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            а) `L = 3`
-                        </p>
-                        <p>
-                            б) `L = 3`
-                        </p>
-                        <p>
-                            в) `L = 3`
-                        </p>
-                        <p>
-                            г) `f(0) = 3`
-                        </p>
-                        <p>
-                            д) `L = +oo`
-                        </p>
-                        <p>
-                            ѓ) `L = +oo`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                а) `lim_(x -> 2^+) p(x)` б) `lim_(x -> 3^+) p(x)` в) `lim_(x -> 3) p(x)` г) `lim_(x -> 5^-) p(x)` д) `lim_(x -> 5^+) p(x)` ѓ) `lim_(x -> -1) p(x)`<br>
-                <img src='images/limes_03.PNG' class='img fluid'>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            а) `L = +оо`
-                        </p>
-                        <p>
-                            б) `L = -1`
-                        </p>
-                        <p>
-                            в) `L = -1`
-                        </p>
-                        <p>
-                            г) `L = 1`
-                        </p>
-                        <p>
-                            д) `L = -1`
-                        </p>
-                        <p>
-                            ѓ) `L = 0`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-            </p>
+            
 
-            <p id='1'>     
-                <strong>Вежба 2.</strong> Ако  `lim_(x -> a) f(x) = 2, lim_(x -> a) g(x) = 4, lim_(x -> a) h(x) = 0` да се определат лимесите 
-                кои постојат, а ако не постојат да се објасни зошто.<br>
-                а) `lim_(x -> a)(h(x) - 3g(x) +1)`
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            `= lim_(x-> a) h(x) - lim_(x -> a)3*lim_(x -> a) g(x) + lim_(x -> a) 1`
-                        </p>
-                        <p>
-                            `= 0 - 3*4 + 1`
-                        </p>
-                        <p>
-                            `= 12`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                б) `lim_(x -> a)(g(x))^2`
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            `= (lim_(x-> a) g(x))^2`
-                        </p>
-                        <p>
-                            `= 4^2`
-                        </p>
-                        <p>
-                            `= 16`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                в) `lim_(x -> a) root(3)(6 + f(x))`
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            `= root(3)(lim_(x-> a) (6 + f(x))`
-                        </p>
-                        <p>
-                            `= root(3) (lim_(x -> a) 6 + lim_(x -> a) f(x))`
-                        </p>
-                        <p>
-                            `= root(3) (6 + 2)`
-                        </p>
-                        <p>
-                            `= root(3) 8`
-                        </p>
-                        <p>
-                            `= 2`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                г) `lim_(x -> a) 2/g(x)`
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            `= lim_(x -> a) 2/lim_(x -> a) g(x)`
-                        </p>
-                        <p>
-                            `= 2 / 4`
-                        </p>
-                        <p>
-                            `= 1 / 2`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                д) `lim_(x -> a) (3f(x) - 8g(x))/(h(x))`
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        <p>
-                            `= (lim_(x -> a) 3 * lim_(x -> a) f(x) - lim_(x -> a) 8 * lim_(x -> a) g(x))/(lim_(x -> a) h(x))`
-                        </p>
-                        <p>
-                            `= 3 * 2 - 8 * 4 / 0`
-                        </p>
-                        <p>
-                            лимесот не постои бидејки `h(x) =0`
-                        </p>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-            </p>
+            
 
-            <h5 id='computing'>
-                Пресметување на лимес - <small class="text-muted">кога функцијата се стреми кон определена вредност</small>
-                <span>
-                    <i class="fas fa-chalkboard-teacher" data-toggle="modal" data-target="#substituteModal"></i>
-                </span>
-            </h5>
-
-            <p id='1_1'>     
-                <strong>Вежба 1.</strong> Да се определат лимесите:<br>
+            <p id='ex5'>     
+                <strong>Вежба 5.</strong> Да се определат лимесите:<br>
                 а) `lim_(x -> 3) (x^2 - 2x)/(x + 1)`
                 <details>
                     <summary class="mb-3">Решение</summary>
