@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Learning CALCULUS">
     <meta name="author" content="Ilija Taseski">
-    <meta name="generator" content="PyCharm2018.3">
 
     <title>Calculis</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Documentation extras -->
     <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
@@ -19,848 +20,871 @@
 
     <!-- MathJax -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
-            async></script>
+        async></script>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
     <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
-    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="../assets/img/icon/favicon.ico">
-    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
 
 <body>
-<!-- Header -->
-<a id="skippy" class="sr-only sr-only-focusable" href="#content">
-    <div class="container">
-        <span class="skiplink-text">Skip to main content</span>
-    </div>
-</a>
-
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
-        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
-             focusable="false">
-            <title>Саше учи Calculus</title>
-            <path fill="currentColor"
-                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
-            <path fill="currentColor"
-                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
-        </svg>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
     </a>
 
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="functions.html">Калкулус</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="exam.html">Испитни прашања</a>
-            </li>
-        </ul>
-    </div>
-</header>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
 
-<!--Container -->
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <form class="bd-search d-flex align-items-center">
-                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
-                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
-                       data-docs-version="4.1">
-                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus_pre/before_calculus_symbols.html">пред Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="functions.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exam.html">Испитни прашања</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
                         data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
                         aria-expanded="false" aria-label="Toggle docs navigation">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
-                         focusable="false">
-                        <title>Menu</title>
-                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                              d="M4 7h22M4 15h22M4 23h22"/>
-                    </svg>
-                </button>
-            </form>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
 
-            <!-- Left Sidenav -->
-            <nav class="collapse bd-links" id="bd-docs-nav">
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
 
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="intro.html">
-                        Before Calculus
-                    </a>
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="intro.html">
+                            Before Calculus
+                        </a>
 
-                    <ul class="nav bd-sidenav">
-                        <li class="active bd-sidenav-active">
-                            <a href="functions.html">
-                                Фунции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_new.html">
-                                Нови функции од стари
-                            </a>
-                        </li>
-                        <li>
-                            <a href="lines.html">
-                                Прави
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_families.html">
-                                Фамилии на функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_inverse.html">
-                                Инверзни функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_trig.html">
-                                Тригонометриски функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_exp.html">
-                                Експоненцијални функции
-                            </a>
-                        </li>
-                        <li>
-                            <a href="functions_log.html">
-                                Логаритамски функции
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="functions.html">
+                                    Фунции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_new.html">
+                                    Нови функции од стари
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lines.html">
+                                    Прави
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_families.html">
+                                    Фамилии на функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_inverse.html">
+                                    Инверзни функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_exp.html">
+                                    Експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_log.html">
+                                    Логаритамски функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="limes.html">
-                        Лимеси
-                    </a>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="limes.html">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Изводи
-                    </a>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Изводи
+                        </a>
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="/docs/4.2/layout/overview/">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Интеграли
-                    </a>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="/docs/4.2/layout/overview/">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
-                        Фундаментална теорема
-                    </a>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="/docs/4.2/layout/overview/">
-                                Интуитивна метода
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/grid/">
-                                Пресметки на лимеси
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/docs/4.2/layout/utilities-for-layout/">
-                                Utilities for layout
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
 
-            </nav>
+                </nav>
 
-        </div>
-
-        <!-- right nav -->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#def">Дефиниција на функција</a>
-                    <ul>
-                        <li class="toc-entry toc-h3">
-                            <a href="#def1">Дефиниција 1</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#def2">Дефиниција 2</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#var">Променливи</a>
-                        </li>
-                        <li class="toc-entry toc-h3">
-                            <a href="#ex">Примери</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#graph">График на функција</a>
-                    <ul>
-                        <li class="toc-entry toc-h3">
-                            <a href="#def4">Дефиниција 4</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#vltest">Тест со вертикални прави</a>
-                    <ul>
-                        <li class="toc-entry toc-h3">
-                            <a href="#ex3">Пример</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#fabs">Функција од апсолутна вредност</a>
-                </li>
-            </ul>
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#piecewise">Функции дефинирани по делови</a>
-                </li>
-            </ul>
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2">
-                    <a href="#domein">Домен и ранг на функции</a>
-                    <ul>
-                        <li class="toc-entry toc-h3">
-                            <a href="#algebra">Влијание на алгебарски операции врз доменот</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <!-- main -->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-
-            <p class=" bd-lead">
-                Функцијата е основен математички објект кој математичарите и научниците го користат за да го опишат
-                односот на една количина со друга.
-            </p>
-
-            <!-- DEFINITION OF A FUNCTION -->
-
-            <h1 id="def">
-                Дефиниција на функција
-            </h1>
-
-            <div id="def1" class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Дефиниција 1</h4>
-                <p>
-                    Ако променливата `y` зависи од променливата `x` така што секоја вредност на `x` определува точно
-                    една вредност на `y`, тогаш велиме дека `y` е функција од `x`.
-                </p>
-                <hr>
-                <p class="mb-0">
-                    <strong>Gottfried Wilhelm Leibniz</strong> го воведува терминот функција за да ја покаже зависноста
-                    на една количина од друга.
-                </p>
             </div>
 
-            <p>Функциите вообичаено се преставуваат на еден од следните начини:</p>
-            <ul>
-                <li>нумерички со табели</li>
-                <li>геометриски со график</li>
-                <li>алгебарски со формула</li>
-                <li>описно со зборови</li>
-            </ul>
-
-            <p>
-                <strong>Leonhard Euler</strong> осмислил идеја функциите да се означуваат со букви од абецедата, со што
-                се овозможува повикување на функции без да се
-                наведуваат специфични формули, графици или табели. За да се разбере Euler-овата идеа функцијата треба да
-                се замисли како компјутерски програм кој го обработува
-                на некој начин влезот `x` и произведува точно еден излез `y`. Компјутерскиот програм сам по себе е
-                објект па може да му дадеме име, да речеме `f`.
-                Па според тоа функцијата `f` (компјутерскиот програм) произведува единствен илез `y` за секој влез `x`.
-                Тоа го укажува и Дефеницијата 2.
-            </p>
-            <div class="text-center">
-                <img src="images/def1_03.png" class="img-fluid img">
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Дефиниција на функција</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#def1">Дефиниција 1</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#def2">Дефиниција 2</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#var">Променливи</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex">Примери</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#graph">График на функција</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#def4">Дефиниција 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#vltest">Тест со вертикални прави</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex3">Пример</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#fabs">Функција од апсолутна вредност</a>
+                    </li>
+                </ul>
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#piecewise">Функции дефинирани по делови</a>
+                    </li>
+                </ul>
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#domein">Домен и ранг на функции</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#algebra">Влијание на алгебарски операции врз доменот</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
 
-            <div id="def2" class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Дефиниција 2</h4>
-                <p>
-                    <strong>График на функција</strong> `y = f(x`) е множеството точки од `xy`- рамнината од облик `(x,
-                    f(x))`, за `x in D_f`, т.е.
-                </p>
-            </div>
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-            <p>
-                Во оваа дефиниција терминот „единствен излез“ значи „точно еден“ па според тоа функцијата не може да
-                додели два различни излези за еден ист влез. Долната слика прикажува график за просечна тежина на
-                примерок од 100 студенти. Овој график не ја преставува зависноста `W` како функција од `А` бидејки за
-                некои вредностина `A` има повеќе различни вредности за. Ова е нормално бидејки луѓе со исти години можат
-                да тежат различно.
-            </p>
-
-            <div class="text-center">
-                <img src="images/def1_04.png" class="img-fluid img">
-            </div>
-
-            <!-- /DEFINITION OF A FUNCTION -->
-
-            <!-- INDEPENDENT AND DEPENDENT VARIABLES -->
-
-            <h3 id="var">
-                Независни и зависни променливи
-            </h3>
-            <p>
-                За дадено `x`, излезот на функцијата `f` се нарекува <strong>вредност</strong> на `f` во `x` или
-                <strong>слика</strong> на `x` со `f`. Понекогаш излезот го
-                означуваме со една буква, да речеме `y`, и тогаш пишуваме:</p>
-            <p class="text-center">
-                `y = f(x)`.
-            </p>
-            <p>
-                Во последното равенство променливата `x` се нарекува <strong>независна променлива</strong> (или
-                аргумент) на `f`, а променливата `y` се нарекува <strong>зависна
-                променлива</strong> на `f`.
-            </p>
-            <p>
-                Оваа терминологија има намера да укаже дека `x` може слободно да се менува, но кога еднаш `x` ќе добие
-                одредена вредност соодветната вредност за `y` се одредува.
-                За сега ќе ги земаме во предвид функциите каде независната и зависната променлива се реални броеви, при
-                што велиме дека функцијата `f` е со реална вредност од реална променлива.
-            </p>
-            <div id="moe"></div>
-            <details>
-                <summary class="text-primary mb-3">Објаснување на дефиниција на функција</summary>
-                <p>
-                    Прво треба да се потсетиме на поимот равенство. Равенство е математички исказ што вели дека левата и
-                    десната страна на знакот за равенство
-                    `=` се истоветни. Пример за равенство би бил `2 + 2 = 4`.
-                </p>
-                <p>
-                    Сега кога знаеме што е равенство, наједноставно објаснување за функција би било: Равенство е
-                    функција ако за секое `x` во доменот (<em>сите `x` кои можат да се внесат во равенството</em>)
-                    равенството ќе даде точно една вредност на `y`, кога се решава равенството за дадено `x`.
-                </p>
-                <p>
-                    Пример за функција е `f(x)=(x * 9/5) + 32` (Конверзија на целзиусови степени во фаренхајт скалата)
-                </p>
-                <p>
-                    На долната слика се гледа дека за секое `x` се добива точно една вредност на `y`.
-                </p>
-                <img src="images/def1_01.png" class="img-fluid">
-                <p>
-                    Функцијата можеме да ја замислиме како некоја машина која има еден влез. Во машината се внесува
-                    некој објект кој е во доменот и според некое зададено правило
-                    се претвара во друг објект и се исфрла од машината.
-                </p>
-                <img src="images/def1_02.png" class="img-fluid">
-                <p>
-                    Правилото по кое работи горната машина е функцијата `f(x)=(x * 9/5) + 32`
-                </p>
-                <p>
-                    Прашање е зошто машината не дава излез кога вредноста на влезот е -275. Уште поголемо прашање е
-                    зашто Google конверторот дава вредност -463.
+                <p class=" bd-lead">
+                    Функцијата е основен математички објект кој математичарите и научниците го користат за да го опишат
+                    односот на една количина со друга.
                 </p>
 
-            </details>
+                <!-- DEFINITION OF A FUNCTION -->
 
-            <div class="card" id="vezbi">
-                <div class="card-body">
-                    Вежба 1 Одреди дали равенства се функцијии.<br>
-                    a. `y = x^2 + 1`<br>
-                    <details>
-                        <summary class="mb-3">Прикажи решенија</summary>
-                        <p>
-                            Без разлика која вредност ја доделуваме на `x` се добива точно една вредност на `y`, при
-                            решавање на равенството за вредност `x`. Ова е во согласност
-                            со Дефиниција 1 за функција, па според тоа равенството е функција.
-                        </p>
+                <h1 id="def">
+                    Дефиниција на функција
+                </h1>
 
-                    </details>
-                    b. `y^2 = x + 1` <br>
-                    <details>
-                        <summary class="mb-3">Прикажи решенија</summary>
-                        <p>
-                            Да ја дадеме вредноста на `x`, на пример `x = 3` и да ја вметнеме во равенството.
-                        </p>
-                        <p class="text-center">
-                            `y^2 = 3 + 1`
-                        </p>
-                        <p>
-                            Сега добивме две вредности за `y`, `y = 2` и `y =-2`.
-                        </p>
-                        <p>
-                            Ова е во спротивност со Дефиницијата 1 па според тоа ова равенство не е функција.
-                        </p>
-                        <p>
-                            Треба да се напомене дека е доволно ова да биде случај само за една вредност на `x` за да
-                            равенството не биде функција. На пример ако ја користевме
-                            вредноста `x = - 1` ќе добиевме точно една вредност за `y`, `y = 0` што е во согласност со
-                            Дефиниција 1 но поради двојната вредност за `x = 3`
-                            ова равенство не е функција.
-                        </p>
-                    </details>
+                <div id="def1" class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Дефиниција 1</h4>
+                    <p>
+                        Ако променливата `y` зависи од променливата `x` така што секоја вредност на `x` определува точно
+                        една вредност на `y`, тогаш велиме дека `y` е функција од `x`.
+                    </p>
+                    <hr>
+                    <p class="mb-0">
+                        <strong>Gottfried Wilhelm Leibniz</strong> го воведува терминот функција за да ја покаже
+                        зависноста
+                        на една количина од друга.
+                    </p>
                 </div>
-            </div>
 
+                <p>Функциите вообичаено се преставуваат на еден од следните начини:</p>
+                <ul>
+                    <li>нумерички со табели</li>
+                    <li>геометриски со график</li>
+                    <li>алгебарски со формула</li>
+                    <li>описно со зборови</li>
+                </ul>
 
-            <div id="ex" class="row">
-                <div class="col-sm">
-                    <p id="ex1">
-                        <strong>Пример 1</strong>
+                <p>
+                    <strong>Leonhard Euler</strong> осмислил идеја функциите да се означуваат со букви од абецедата, со
+                    што
+                    се овозможува повикување на функции без да се
+                    наведуваат специфични формули, графици или табели. За да се разбере Euler-овата идеа функцијата
+                    треба да
+                    се замисли како компјутерски програм кој го обработува
+                    на некој начин влезот `x` и произведува точно еден излез `y`. Компјутерскиот програм сам по себе е
+                    објект па може да му дадеме име, да речеме `f`.
+                    Па според тоа функцијата `f` (компјутерскиот програм) произведува единствен илез `y` за секој влез
+                    `x`.
+                    Тоа го укажува и Дефеницијата 2.
+                </p>
+                <div class="text-center">
+                    <img src="images/def1_03.png" class="img-fluid img">
+                </div>
+
+                <div id="def2" class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Дефиниција 2</h4>
+                    <p>
+                        <strong>График на функција</strong> `y = f(x`) е множеството точки од `xy`- рамнината од облик
+                        `(x,
+                        f(x))`, за `x in D_f`, т.е.
+                    </p>
+                </div>
+
+                <p>
+                    Во оваа дефиниција терминот „единствен излез“ значи „точно еден“ па според тоа функцијата не може да
+                    додели два различни излези за еден ист влез. Долната слика прикажува график за просечна тежина на
+                    примерок од 100 студенти. Овој график не ја преставува зависноста `W` како функција од `А` бидејки
+                    за
+                    некои вредностина `A` има повеќе различни вредности за. Ова е нормално бидејки луѓе со исти години
+                    можат
+                    да тежат различно.
+                </p>
+
+                <div class="text-center">
+                    <img src="images/def1_04.png" class="img-fluid img">
+                </div>
+
+                <!-- /DEFINITION OF A FUNCTION -->
+
+                <!-- INDEPENDENT AND DEPENDENT VARIABLES -->
+
+                <h3 id="var">
+                    Независни и зависни променливи
+                </h3>
+                <p>
+                    За дадено `x`, излезот на функцијата `f` се нарекува <strong>вредност</strong> на `f` во `x` или
+                    <strong>слика</strong> на `x` со `f`. Понекогаш излезот го
+                    означуваме со една буква, да речеме `y`, и тогаш пишуваме:</p>
+                <p class="text-center">
+                    `y = f(x)`.
+                </p>
+                <p>
+                    Во последното равенство променливата `x` се нарекува <strong>независна променлива</strong> (или
+                    аргумент) на `f`, а променливата `y` се нарекува <strong>зависна
+                        променлива</strong> на `f`.
+                </p>
+                <p>
+                    Оваа терминологија има намера да укаже дека `x` може слободно да се менува, но кога еднаш `x` ќе
+                    добие
+                    одредена вредност соодветната вредност за `y` се одредува.
+                    За сега ќе ги земаме во предвид функциите каде независната и зависната променлива се реални броеви,
+                    при
+                    што велиме дека функцијата `f` е со реална вредност од реална променлива.
+                </p>
+                <div id="moe"></div>
+                <details>
+                    <summary class="text-primary mb-3">Објаснување на дефиниција на функција</summary>
+                    <p>
+                        Прво треба да се потсетиме на поимот равенство. Равенство е математички исказ што вели дека
+                        левата и
+                        десната страна на знакот за равенство
+                        `=` се истоветни. Пример за равенство би бил `2 + 2 = 4`.
+                    </p>
+                    <p>
+                        Сега кога знаеме што е равенство, наједноставно објаснување за функција би било: Равенство е
+                        функција ако за секое `x` во доменот (<em>сите `x` кои можат да се внесат во равенството</em>)
+                        равенството ќе даде точно една вредност на `y`, кога се решава равенството за дадено `x`.
+                    </p>
+                    <p>
+                        Пример за функција е `f(x)=(x * 9/5) + 32` (Конверзија на целзиусови степени во фаренхајт
+                        скалата)
+                    </p>
+                    <p>
+                        На долната слика се гледа дека за секое `x` се добива точно една вредност на `y`.
+                    </p>
+                    <img src="images/def1_01.png" class="img-fluid">
+                    <p>
+                        Функцијата можеме да ја замислиме како некоја машина која има еден влез. Во машината се внесува
+                        некој објект кој е во доменот и според некое зададено правило
+                        се претвара во друг објект и се исфрла од машината.
+                    </p>
+                    <img src="images/def1_02.png" class="img-fluid">
+                    <p>
+                        Правилото по кое работи горната машина е функцијата `f(x)=(x * 9/5) + 32`
+                    </p>
+                    <p>
+                        Прашање е зошто машината не дава излез кога вредноста на влезот е -275. Уште поголемо прашање е
+                        зашто Google конверторот дава вредност -463.
                     </p>
 
-                    <div class="table-responsive-sm">
-                        <table class="table table-bordered table-sm">
-                            <tbody class="text-center">
-                            <tr>
-                                <th class="table-primary">`x`</th>
-                                <td>`0`</td>
-                                <td>`1`</td>
-                                <td>`2`</td>
-                                <td>`3`</td>
-                            </tr>
-                            <tr>
-                                <th class="table-primary">`y`</th>
-                                <td>`3`</td>
-                                <td>`4`</td>
-                                <td>`-1`</td>
-                                <td>`6`</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                </details>
+
+                <div class="card" id="vezbi">
+                    <div class="card-body">
+                        Вежба 1 Одреди дали равенства се функцијии.<br>
+                        a. `y = x^2 + 1`<br>
+                        <details>
+                            <summary class="mb-3">Прикажи решенија</summary>
+                            <p>
+                                Без разлика која вредност ја доделуваме на `x` се добива точно една вредност на `y`, при
+                                решавање на равенството за вредност `x`. Ова е во согласност
+                                со Дефиниција 1 за функција, па според тоа равенството е функција.
+                            </p>
+
+                        </details>
+                        b. `y^2 = x + 1` <br>
+                        <details>
+                            <summary class="mb-3">Прикажи решенија</summary>
+                            <p>
+                                Да ја дадеме вредноста на `x`, на пример `x = 3` и да ја вметнеме во равенството.
+                            </p>
+                            <p class="text-center">
+                                `y^2 = 3 + 1`
+                            </p>
+                            <p>
+                                Сега добивме две вредности за `y`, `y = 2` и `y =-2`.
+                            </p>
+                            <p>
+                                Ова е во спротивност со Дефиницијата 1 па според тоа ова равенство не е функција.
+                            </p>
+                            <p>
+                                Треба да се напомене дека е доволно ова да биде случај само за една вредност на `x` за
+                                да
+                                равенството не биде функција. На пример ако ја користевме
+                                вредноста `x = - 1` ќе добиевме точно една вредност за `y`, `y = 0` што е во согласност
+                                со
+                                Дефиниција 1 но поради двојната вредност за `x = 3`
+                                ова равенство не е функција.
+                            </p>
+                        </details>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <p>`f (0) = 3` &nbsp;&nbsp;&nbsp;`f` придружува `y = 3` за `x = 0`.</p>
-                    <p>`f (1) = 4` &nbsp;&nbsp;&nbsp;`f` придружува `y = 4` за `x = 1`.</p>
-                    <p>`f (2) = -1` &nbsp;&nbsp;&nbsp;`f` придружува `y = -1` за `x = 2`.</p>
-                    <p>`f (3) = 6` &nbsp;&nbsp;&nbsp;`f` придружува `y = 6` за `x = 3`.</p>
+
+
+                <div id="ex" class="row">
+                    <div class="col-sm">
+                        <p id="ex1">
+                            <strong>Пример 1</strong>
+                        </p>
+
+                        <div class="table-responsive-sm">
+                            <table class="table table-bordered table-sm">
+                                <tbody class="text-center">
+                                    <tr>
+                                        <th class="table-primary">`x`</th>
+                                        <td>`0`</td>
+                                        <td>`1`</td>
+                                        <td>`2`</td>
+                                        <td>`3`</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="table-primary">`y`</th>
+                                        <td>`3`</td>
+                                        <td>`4`</td>
+                                        <td>`-1`</td>
+                                        <td>`6`</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <p>`f (0) = 3` &nbsp;&nbsp;&nbsp;`f` придружува `y = 3` за `x = 0`.</p>
+                        <p>`f (1) = 4` &nbsp;&nbsp;&nbsp;`f` придружува `y = 4` за `x = 1`.</p>
+                        <p>`f (2) = -1` &nbsp;&nbsp;&nbsp;`f` придружува `y = -1` за `x = 2`.</p>
+                        <p>`f (3) = 6` &nbsp;&nbsp;&nbsp;`f` придружува `y = 6` за `x = 3`.</p>
+                    </div>
                 </div>
-            </div>
 
-            <p id="ex2">
-                <strong>Пример 2</strong>
-            </p>
-            <p>
-                Равенството
-            </p>
-            <p class="text-center">
-                `y = 3x^2 –4x+2`
-            </p>
-            <p>
-                го има обликот `y = f(x)` каде функцијата `f` е дадена со формулата:
-            </p>
-            <p>
-                За функцијата
-            </p>
-            <p class="text-center">
-                `f (x) = 3x^2 –4x+2`
-            </p>
-            <p class="text-center">
-                `f (0) = 3*(0)^2 –4*(0)+2=2`
-            </p>
-            <p class="text-center">
-                т.е. `f` придружува `y = 2` за `x = 0`.
-            </p>
-            <p>придружува - дава, соодветствува, вредноста на функцијата за `x` e, </p>
-
-            <!-- GRAPHS OF FUNCTIONS -->
-
-            <h3 id="graph">
-                Графици на функции
-            </h3>
-            <p>
-                Ако `f ` е реална функција од реална променлива, тогаш графикот од `f` во `xy`- рамнината е дефиниран
-                како график на равенството `y = f(x)`. На пример графикот на функцијата `f(x) = x` е график на
-                равенството `y = x`,
-            </p>
-
-            <div class="text-center">
-                <img src="images/graph_01.png" class="img-fluid img">
-            </div>
-
-            <p>
-                График на функција дава визуелна информација за самата функција.
-            </p>
-
-            <div id="def4" class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Дефиниција 4</h4>
+                <p id="ex2">
+                    <strong>Пример 2</strong>
+                </p>
                 <p>
-                    <strong>График на функција</strong> `y = f(x`) е множеството точки од `xy`-рамнината од облик `(x,
-                    f(x))`, за `x in D_f, т.е.
+                    Равенството
                 </p>
                 <p class="text-center">
-                    `Gamma_f {(x, f(x)) | x in D_f}`
+                    `y = 3x^2 –4x+2`
                 </p>
-            </div>
+                <p>
+                    го има обликот `y = f(x)` каде функцијата `f` е дадена со формулата:
+                </p>
+                <p>
+                    За функцијата
+                </p>
+                <p class="text-center">
+                    `f (x) = 3x^2 –4x+2`
+                </p>
+                <p class="text-center">
+                    `f (0) = 3*(0)^2 –4*(0)+2=2`
+                </p>
+                <p class="text-center">
+                    т.е. `f` придружува `y = 2` за `x = 0`.
+                </p>
+                <p>придружува - дава, соодветствува, вредноста на функцијата за `x` e, </p>
 
-            <div class="text-center">
-                <img src="images/def1_05.png" class="img-fluid img">
-            </div>
-            <p>
-                `y` – координатата на точка од графикот на `f` е<br>
-                вредноста на `f` во соодветната `x`-координата.
-            </p>
-            <p>
-                Вредностите на `x` за кои што `f(x) = 0` се `x`-координатите на точките во кои што графикот на `f` ја
-                сече `x`-оската. Тие се нарекуваат нули на функцијата `f`, корени на равенката `f(x) = 0`, или пресеци
-                на
-                графикот на `y = f(x)` со `x`-оската.
-            </p>
+                <!-- GRAPHS OF FUNCTIONS -->
 
-            <div class="text-center">
-                <img src="images/def1_08.png" class="img-fluid img">
-            </div>
+                <h3 id="graph">
+                    Графици на функции
+                </h3>
+                <p>
+                    Ако `f ` е реална функција од реална променлива, тогаш графикот од `f` во `xy`- рамнината е
+                    дефиниран
+                    како график на равенството `y = f(x)`. На пример графикот на функцијата `f(x) = x` е график на
+                    равенството `y = x`,
+                </p>
 
-            <!-- /GRAPHS OF FUNCTIONS -->
+                <div class="text-center">
+                    <img src="images/graph_01.png" class="img-fluid img">
+                </div>
 
-            <!-- THE VERTICAL LINE TEST -->
+                <p>
+                    График на функција дава визуелна информација за самата функција.
+                </p>
 
-            <h3 id="vltest">Тест со вертикални прави</h3>
+                <div id="def4" class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Дефиниција 4</h4>
+                    <p>
+                        <strong>График на функција</strong> `y = f(x`) е множеството точки од `xy`-рамнината од облик
+                        `(x,
+                        f(x))`, за `x in D_f, т.е.
+                    </p>
+                    <p class="text-center">
+                        `Gamma_f {(x, f(x)) | x in D_f}`
+                    </p>
+                </div>
 
-            <p>
-                Крива во `xy`-рамнината е график на некоја функција `f` ако и само ако не постои вертикална права која
-                што ја сече кривата во повеќе од една точка.
-            </p>
-            <div class="text-center">
-                <img src="images/def1_09.png" class="img-fluid img">
-            </div>
-            <p class="text-center">
-                Оваа крива не може да биде график на функција.
-            </p>
+                <div class="text-center">
+                    <img src="images/def1_05.png" class="img-fluid img">
+                </div>
+                <p>
+                    `y` – координатата на точка од графикот на `f` е<br>
+                    вредноста на `f` во соодветната `x`-координата.
+                </p>
+                <p>
+                    Вредностите на `x` за кои што `f(x) = 0` се `x`-координатите на точките во кои што графикот на `f`
+                    ја
+                    сече `x`-оската. Тие се нарекуваат нули на функцијата `f`, корени на равенката `f(x) = 0`, или
+                    пресеци
+                    на
+                    графикот на `y = f(x)` со `x`-оската.
+                </p>
 
-            <h6 id="ex3">
-                Пример 3
-            </h6>
-            <p>
-                Кривата определена со равенството:
-            </p>
-            <p class="text-center">
-                `x2 + y2 = 25`
-            </p>
-            <p>
-                е кружница со радиус 5 и центар во координатниот почеток и поради тоа постојат вертикални линии кој го
-                сечат графикот во повеќе од една точка. Поради ова ова равенство не ја дефинира `y` како функција од
-                `x`.
-            </p>
+                <div class="text-center">
+                    <img src="images/def1_08.png" class="img-fluid img">
+                </div>
 
-            <div class="text-center">
-                <img src="images/graph_02.png" class="img-fluid img">
-            </div>
+                <!-- /GRAPHS OF FUNCTIONS -->
 
-            <!-- /THE VERTICAL LINE TEST -->
+                <!-- THE VERTICAL LINE TEST -->
 
-            <!-- THE ABSOLUTE VALUE FUNCTION -->
+                <h3 id="vltest">Тест со вертикални прави</h3>
 
-            <h3 id="fabs">
-                Функцијата апсолутна вредност
-            </h3>
+                <p>
+                    Крива во `xy`-рамнината е график на некоја функција `f` ако и само ако не постои вертикална права
+                    која
+                    што ја сече кривата во повеќе од една точка.
+                </p>
+                <div class="text-center">
+                    <img src="images/def1_09.png" class="img-fluid img">
+                </div>
+                <p class="text-center">
+                    Оваа крива не може да биде график на функција.
+                </p>
 
-            <p>
-                Апсолутна вредност на реален број `x` се дефинира со:
-            </p>
+                <h6 id="ex3">
+                    Пример 3
+                </h6>
+                <p>
+                    Кривата определена со равенството:
+                </p>
+                <p class="text-center">
+                    `x2 + y2 = 25`
+                </p>
+                <p>
+                    е кружница со радиус 5 и центар во координатниот почеток и поради тоа постојат вертикални линии кој
+                    го
+                    сечат графикот во повеќе од една точка. Поради ова ова равенство не ја дефинира `y` како функција од
+                    `x`.
+                </p>
 
-            <p class="text-center">
-                `|x|={(x, x, >=, 0),(-x, x, <, 0):}`
-            </p>
-            <p>
-                Ефектот од примена на апсолутна вредност на некој број е бришење на знакот минус пред бројот ако тој е
-                негативен, а бројот не се менува ако тој е позитивен.
-            </p>
-            <p class="text-center">
-                `|5|=5, |-4/7|=4/7, |0|=0`
-            </p>
-            <p>
-                Својства на апсолутна вредност. Ако `a` и `b` се реални броеви тогаш:
-            </p>
-            <p>
-                a) `|-a|=|a|` &nbsp; Еден број и неговиот спротивен имаат иста апсолутна вредност
-            </p>
-            <p>
-                b) `|ab|=|a||b|` &nbsp; Апсолутна вредност на производ е производ од апсолутните вредности на
-                множителите.
-            </p>
-            <p>
-                c) `|a/b|=|a|/|b|, b!=0` &nbsp; Апсолутна вредност на количник е количник од апсолутните вредности на
-            </p>
-            <p>
-                d)`|a+b|<=|a||b|` &nbsp; Неравенство на триаголник
-            </p>
-            <p>
-                Графикот на функцијата `f (x) = |x|` се добива со цртање на двата дела на равенството
-            </p>
-            <p class="text-center">
-                `y={(x, x>=0),(-x, x<0):}`
-            </p>
-            <div class="text-center">
-                <img src="images/def1_10.png" class="img-fluid img">
-            </div>
-            <div class="alert alert-info" role="alert">
-                За секој реален број `x` важи равенството `sqrt(x^2)=|x|`
-            </div>
+                <div class="text-center">
+                    <img src="images/graph_02.png" class="img-fluid img">
+                </div>
 
-            <!-- THE /ABSOLUTE VALUE FUNCTION -->
+                <!-- /THE VERTICAL LINE TEST -->
 
-            <!-- PIECEWISE-DEFINED FUNCTIONS -->
+                <!-- THE ABSOLUTE VALUE FUNCTION -->
 
-            <h3 id="piecewise">
-                Функции дефинирани по делови
-            </h3>
+                <h3 id="fabs">
+                    Функцијата апсолутна вредност
+                </h3>
 
-            <p>
-                Функцијата на апсолутна вредност `f (x) = |x|` е пример на функција која што е дефинирана по делови, во
-                смисла дека формулата за `f` се менува во зависност од вредноста на `x`.
-            </p>
-            <p>
-                Ефектот од примена на апсолутна вредност на некој број е бришење на знакот минус пред бројот ако тој е
-                негативен, а бројот не се менува ако тој е позитивен.
-            </p>
-            <p>
-                <strong>Пример 4</strong>
-            </p>
-            <p>
-                Нацртај го графикот на функцијата дефинирана по делови со формулата
-            </p>
-            <p class="text-center">
-                `f={(0,x<=-1),(sqrt(1-x^2),x<1),(x,x>=1):}`
-            </p>
-            <div class="text-center">
-                <img src="images/def1_11.png" class="img-fluid img">
-            </div>
+                <p>
+                    Апсолутна вредност на реален број `x` се дефинира со:
+                </p>
 
-            <!-- /PIECEWISE-DEFINED FUNCTIONS -->
+                <p class="text-center">
+                    `|x|={(x, x, >=, 0),(-x, x, <, 0):}` </p> <p>
+                        Ефектот од примена на апсолутна вредност на некој број е бришење на знакот минус пред бројот ако
+                        тој е
+                        негативен, а бројот не се менува ако тој е позитивен.
+                </p>
+                <p class="text-center">
+                    `|5|=5, |-4/7|=4/7, |0|=0`
+                </p>
+                <p>
+                    Својства на апсолутна вредност. Ако `a` и `b` се реални броеви тогаш:
+                </p>
+                <p>
+                    a) `|-a|=|a|` &nbsp; Еден број и неговиот спротивен имаат иста апсолутна вредност
+                </p>
+                <p>
+                    b) `|ab|=|a||b|` &nbsp; Апсолутна вредност на производ е производ од апсолутните вредности на
+                    множителите.
+                </p>
+                <p>
+                    c) `|a/b|=|a|/|b|, b!=0` &nbsp; Апсолутна вредност на количник е количник од апсолутните вредности
+                    на
+                </p>
+                <p>
+                    d)`|a+b|<=|a||b|` &nbsp; Неравенство на триаголник </p> <p>
+                        Графикот на функцијата `f (x) = |x|` се добива со цртање на двата дела на равенството
+                </p>
+                <p class="text-center">
+                    `y={(x, x>=0),(-x, x<0):}` </p> <div class="text-center">
+                        <img src="images/def1_10.png" class="img-fluid img">
+        </div>
+        <div class="alert alert-info" role="alert">
+            За секој реален број `x` важи равенството `sqrt(x^2)=|x|`
+        </div>
 
-            <!-- /DOMAIN AND RANGE -->
+        <!-- THE /ABSOLUTE VALUE FUNCTION -->
 
-            <h3 id="domein">
-                Домен и ранг на функции
-            </h3>
+        <!-- PIECEWISE-DEFINED FUNCTIONS -->
 
-            <p>
-                Ако `x` и `y` се одредени со равенството `y = f(x)`, тогаш множеството од сите дозволени влезови (`x`-
-                вредности) се вика <strong>домен</strong> на `f` , а мноеството од излезите (`y`- вредностите) се вика
-                <strong>ранг</strong> на `f` . На пример ако `f` е функција дефинирана со табелата во примерот 1, тогаш
-                доменот е множеството `{0, 1, 2, 3}` а рангот е множеството `{−1, 3, 4, 6}`.
-            </p>
-            <p>
-                Понекогаш физичките или геометриските размислувања наметнуваат ограничувања на дозволените влезови на
-                функцијата. На пример, ако `y` ја означува областа на квадрат на страна `x`, тогаш овие променливи се
-                поврзани со равенката `y = x^2`. Иако оваа равенка дава единствена вредност на `y` за секој реален број
-                `x`, фактот дека должините не треба да бидат негативни, го наметнува условот дека `x ≥ 0`.
-            </p>
-            <p>
-                Кога функцијата е дефинирана со математичка формула, самата формула може да наметне ограничувања на
-                дозволените влезови. На пример, ако `y = 1 / x`, тогаш `x = 0` не е дозволен влез, бидејќи поделбата со
-                нула е недефинирана, а ако `y = sqrt(x)`, тогаш негативните вредности на `x` не се дозволени влезови,
-                бидејќи тие создаваат имагинарни вредности за `y` и ние се согласивме да ги земеме предвид само реалните
-                функции на вистинска променлива. Во принцип, ја даваме следната дефиниција.
-            </p>
-            <div class="alert alert-info" role="alert">
-                Ако функцијата е зададена со формула и ако доменот не е експлицитно наведен тогаш подразбираме дека
-                доменот ги содржи сите реални броеви за кои што формулата со која што е зададена функцијата има смисла,
-                т.е. дава реални вредности.
-            </div>
-            <p>
-                Во некои случаи кога дефинираме функција доменот може да биде експлицитно наведен. На пример, ако `f (x) = x2` е плоштина на квадрат со страна `x`, тогаш пишуваме:
-            </p>
-            <p class="text-center">
-                `f(x)=x^2 &nbsp; x>=0`
-            </p>
-            <p>
-                што значи дека доменот на `f` е множеството од ненегативни реални броеви.
-            </p>
-            <p>
-                <strong>Пример 3</strong>: Најди го доменот на функцијата
-            </p>
-            <p class="text-center">
-                `f(x)=(x^4-+1)/(x-1)`
-            </p>
-            <p>
-                <strong>Пример 3</strong>: Најди го доменот на функцијата
-            </p>
-            <p class="text-center">
-                `D_f = RR \\ {1}`
-            </p>
+        <h3 id="piecewise">
+            Функции дефинирани по делови
+        </h3>
+
+        <p>
+            Функцијата на апсолутна вредност `f (x) = |x|` е пример на функција која што е дефинирана по делови, во
+            смисла дека формулата за `f` се менува во зависност од вредноста на `x`.
+        </p>
+        <p>
+            Ефектот од примена на апсолутна вредност на некој број е бришење на знакот минус пред бројот ако тој е
+            негативен, а бројот не се менува ако тој е позитивен.
+        </p>
+        <p>
+            <strong>Пример 4</strong>
+        </p>
+        <p>
+            Нацртај го графикот на функцијата дефинирана по делови со формулата
+        </p>
+        <p class="text-center">
+            `f={(0,x<=-1),(sqrt(1-x^2),x<1),(x,x>=1):}`
+        </p>
+        <div class="text-center">
+            <img src="images/def1_11.png" class="img-fluid img">
+        </div>
+
+        <!-- /PIECEWISE-DEFINED FUNCTIONS -->
+
+        <!-- /DOMAIN AND RANGE -->
+
+        <h3 id="domein">
+            Домен и ранг на функции
+        </h3>
+
+        <p>
+            Ако `x` и `y` се одредени со равенството `y = f(x)`, тогаш множеството од сите дозволени влезови (`x`-
+            вредности) се вика <strong>домен</strong> на `f` , а мноеството од излезите (`y`- вредностите) се вика
+            <strong>ранг</strong> на `f` . На пример ако `f` е функција дефинирана со табелата во примерот 1, тогаш
+            доменот е множеството `{0, 1, 2, 3}` а рангот е множеството `{−1, 3, 4, 6}`.
+        </p>
+        <p>
+            Понекогаш физичките или геометриските размислувања наметнуваат ограничувања на дозволените влезови на
+            функцијата. На пример, ако `y` ја означува областа на квадрат на страна `x`, тогаш овие променливи се
+            поврзани со равенката `y = x^2`. Иако оваа равенка дава единствена вредност на `y` за секој реален број
+            `x`, фактот дека должините не треба да бидат негативни, го наметнува условот дека `x ≥ 0`.
+        </p>
+        <p>
+            Кога функцијата е дефинирана со математичка формула, самата формула може да наметне ограничувања на
+            дозволените влезови. На пример, ако `y = 1 / x`, тогаш `x = 0` не е дозволен влез, бидејќи поделбата со
+            нула е недефинирана, а ако `y = sqrt(x)`, тогаш негативните вредности на `x` не се дозволени влезови,
+            бидејќи тие создаваат имагинарни вредности за `y` и ние се согласивме да ги земеме предвид само реалните
+            функции на вистинска променлива. Во принцип, ја даваме следната дефиниција.
+        </p>
+        <div class="alert alert-info" role="alert">
+            Ако функцијата е зададена со формула и ако доменот не е експлицитно наведен тогаш подразбираме дека
+            доменот ги содржи сите реални броеви за кои што формулата со која што е зададена функцијата има смисла,
+            т.е. дава реални вредности.
+        </div>
+        <p>
+            Во некои случаи кога дефинираме функција доменот може да биде експлицитно наведен. На пример, ако `f (x) =
+            x2` е плоштина на квадрат со страна `x`, тогаш пишуваме:
+        </p>
+        <p class="text-center">
+            `f(x)=x^2 &nbsp; x>=0`
+        </p>
+        <p>
+            што значи дека доменот на `f` е множеството од ненегативни реални броеви.
+        </p>
+        <p>
+            <strong>Пример 3</strong>: Најди го доменот на функцијата
+        </p>
+        <p class="text-center">
+            `f(x)=(x^4-+1)/(x-1)`
+        </p>
+        <p>
+            <strong>Пример 3</strong>: Најди го доменот на функцијата
+        </p>
+        <p class="text-center">
+            `D_f = RR \\ {1}`
+        </p>
 
 
-            <!-- THE EFFECT OF ALGEBRAIC OPERATIONS ON THE DOMAIN -->
+        <!-- THE EFFECT OF ALGEBRAIC OPERATIONS ON THE DOMAIN -->
 
-            <h3 id="algebra">
-                Влијание на алгебарски операции на доменот на функција
+        <h3 id="algebra">
+            Влијание на алгебарски операции на доменот на функција
 
-            </h3>
-            <p>
-                Алгебарски изрази често се упростуваат со скратување на заедничките множители во броителот и именителот.
-                Меѓутоа, мора да внимаваме кога упростуваме формули со
-                кои се зададени функции, бидејќи оваа постапка може да го промени доменот на функцијата, па според тоа и
-                самата функција.
-            </p>
-            <p>
-                <strong>Пример 5</strong>
-            </p>
-            <p>
-                Доменот на функцијата се `f(x)=(x^2-4)/(x-2)`состои од сите реални `x` освен `x = 2`. Но, ако го
-                скратиме заедничкиот множител во броителот и именителот, добиваме:
-            </p>
-            <p class="text-center">
-                `f(x)=(x^2-4)/(x-2)=((x-2)(x+2))/(x-2)=x+2`
-            </p>
-            <p>
-                Ако се определува домен од овој израз, ќе се добие дека домен на функцијата е `RR`, што не е точно.
-            </p>
-            <p>
-                Да ги разгледаме графиците на функциите
-            </p>
-            <p class="text-center">
-                `f(x)=(x^2-4)/(x-2)`, `g(x)=x+2`
-            </p>
-            <p>
-                Тие се разликуваат само во точката `x = 2`.
-            </p>
-            <p>
-                Графикот на функцијата `g` е правата `y = x + 2` (Слика а)), a графикот на `f` е истата права со дупка
-                во `x = 2` (Слика б), бидејќи функцијата не е дефинирана
-                во таа точка.
-            </p>
+        </h3>
+        <p>
+            Алгебарски изрази често се упростуваат со скратување на заедничките множители во броителот и именителот.
+            Меѓутоа, мора да внимаваме кога упростуваме формули со
+            кои се зададени функции, бидејќи оваа постапка може да го промени доменот на функцијата, па според тоа и
+            самата функција.
+        </p>
+        <p>
+            <strong>Пример 5</strong>
+        </p>
+        <p>
+            Доменот на функцијата се `f(x)=(x^2-4)/(x-2)`состои од сите реални `x` освен `x = 2`. Но, ако го
+            скратиме заедничкиот множител во броителот и именителот, добиваме:
+        </p>
+        <p class="text-center">
+            `f(x)=(x^2-4)/(x-2)=((x-2)(x+2))/(x-2)=x+2`
+        </p>
+        <p>
+            Ако се определува домен од овој израз, ќе се добие дека домен на функцијата е `RR`, што не е точно.
+        </p>
+        <p>
+            Да ги разгледаме графиците на функциите
+        </p>
+        <p class="text-center">
+            `f(x)=(x^2-4)/(x-2)`, `g(x)=x+2`
+        </p>
+        <p>
+            Тие се разликуваат само во точката `x = 2`.
+        </p>
+        <p>
+            Графикот на функцијата `g` е правата `y = x + 2` (Слика а)), a графикот на `f` е истата права со дупка
+            во `x = 2` (Слика б), бидејќи функцијата не е дефинирана
+            во таа точка.
+        </p>
 
-            <div class="text-center">
-                <img src="images/def1_12.png" class="img-fluid img">
-            </div>
+        <div class="text-center">
+            <img src="images/def1_12.png" class="img-fluid img">
+        </div>
 
-            <div class="alert alert-danger" role="alert">
-                Доменот на функцијата се определува пред да се изврши било каква алгебарска операција над формулата со
-                која е зададена функцијата. После определување на доменот, може да се изврши кратење.
-            </div>
-            <p>
-                Така функцијата
-            </p>
-            <p class="text-center">
-                `f(x)=(x^2-4)/(x-2)`
-            </p>
-            <p>
-                може да се запише како
-            </p>
-            <p class="text-center">
-                `f(x)=x+2`, `x in RR \\{2}`
-            </p>
+        <div class="alert alert-danger" role="alert">
+            Доменот на функцијата се определува пред да се изврши било каква алгебарска операција над формулата со
+            која е зададена функцијата. После определување на доменот, може да се изврши кратење.
+        </div>
+        <p>
+            Така функцијата
+        </p>
+        <p class="text-center">
+            `f(x)=(x^2-4)/(x-2)`
+        </p>
+        <p>
+            може да се запише како
+        </p>
+        <p class="text-center">
+            `f(x)=x+2`, `x in RR \\{2}`
+        </p>
 
-            <p>
-                <strong>Дефиниција 8</strong>
-            </p>
-            <p>
-                Две функции `f` и `g` се еднакви ако
-            </p>
-            <p>
-                1. `D_f = D_g`
-            </p>
-            <p>
-                и
-            </p>
-            <p>
-                2. `f (x) = g (x)`, за секое `x` in `D_f =D_gg`
-            </p>
-            <div class="alert alert-danger" role="alert">
-                `f(x)=(x^2-4)/(x-2)` не е еднаква на `g(x)=x+2`
-            </div>
+        <p>
+            <strong>Дефиниција 8</strong>
+        </p>
+        <p>
+            Две функции `f` и `g` се еднакви ако
+        </p>
+        <p>
+            1. `D_f = D_g`
+        </p>
+        <p>
+            и
+        </p>
+        <p>
+            2. `f (x) = g (x)`, за секое `x` in `D_f =D_gg`
+        </p>
+        <div class="alert alert-danger" role="alert">
+            `f(x)=(x^2-4)/(x-2)` не е еднаква на `g(x)=x+2`
+        </div>
 
-            <!-- THE EFFECT OF ALGEBRAIC OPERATIONS ON THE DOMAIN -->
+        <!-- THE EFFECT OF ALGEBRAIC OPERATIONS ON THE DOMAIN -->
 
 
         </main>
     </div>
-</div>
+    </div>
 
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-<!-- Optional JavaScript -->
-<script src="js/docs.min.js"></script>
+    <!-- Optional JavaScript -->
+    <script src="js/docs.min.js"></script>
 
 </body>
+
 </html>
