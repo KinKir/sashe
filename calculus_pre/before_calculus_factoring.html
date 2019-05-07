@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../assets/img/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Потсетување</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus/functions.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="videos.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exercise.html">Вежби</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exam.html">Испитни прашања</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="limes.html">
+                            Before Calculus
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a class="bd-toc-link active" href="before_calculus_symbols.html">
+                                    Симболи
+                                </a>
+                            </li>
+                            <li>
+                                <a href="before_calculus_numbers.html">
+                                    Броеви
+                                </a>
+                            </li>
+                            <li>
+                                <a href="before_calculus_log.html">
+                                    Логаритми
+                                </a>
+                            </li>
+                            <li>
+                                <a href="before_calculus_proportions.html">
+                                    Пропорции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="before_calculus_quadratic.html">
+                                    Квадратна равенка
+                                </a>
+                            </li>
+                            <li>
+                                <a href="before_calculus_trig.html">
+                                    Тригонометрија
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#symbols">Симболи</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Greatest Common Factor">Најголем множител</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Greatest Common Factor">Групирање</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#Factoring Quadratic Polynomials">Полиноми од втор степен</a>
+                            </li>
+                            <li class="toc-entry toc-h2">
+                                <a href="#Factoring Polynomials with Degree Greater than 2">Полиноми со степен поголем од 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <div class='row'>
+                    <div class='col-md-12'>
+                        <p class=" bd-lead">
+                            Кај голем број на задачи првиот чекор е потребата да се разложи полином. Ако не се знае да
+                            се разложи полиномот тогаш не можете да го отпочнете решавањето на задачата а камоли да ја
+                            решите.
+                        </p>
+
+                        <p>
+                            Разложување е процес на одредување кои се множителите на полиномот. Овој процес цело време
+                            го користиме на броевите, н апример постојат различни начини да се разложи бројот `12`.
+                        </p>
+
+                        <p class='text-center'>
+                            `12 = 2 * 6; 12 = 3 * 4; 12 = 2 * 2 * 3; 12 = 24 * (1/2); ...`
+                        </p>
+
+                        <P>
+                            Најчест разложувањето на броевите е <strong>комплетното разложување </strong> односно на
+                            прости множители.
+                        </P>
+                        <p>
+                            Комплетно разложување на бројот `12` е:
+                        </p>
+                        <p class='text-center'>
+                            `12 = 2 * 2 * 3`
+                        </p>
+                        <p>
+                            Разложувањето на полиноми се врши горе долена ист начин. Се одредуваат сите членови кои
+                            помножени заедно го даваат полиномот. Потоа пробуваме да ги разложиме сите членови кои сме
+                            ги нашле во првиот чекор. Се продолжува се додека не може да се разложува понатаму. Кога
+                            веќе не може да се разложува се вели дека полиномот е комплетно разложен.
+                        </p>
+                        <p>
+                            Неколку примери:
+                        </p>
+                        <p class='text-center'>
+                            `(x^2 -16) = (x^2 - 4^2) = (x + 4)(x - 4)`
+                        </p>
+                        <p>
+                            Овде станува збор за комплетно разложување бидејки ниту еден член не може да се разложува
+                            понатаму.
+                        </p>
+                        <p>
+                            Додека:
+                        </p>
+                        <p class='text-center'>
+                            `(x^4 - 16) = (x^2 + 4)(x^2 - 4)`
+                        </p>
+                        <p>
+                            не е целосно разложен бидејки вториот член може понатаму да се разложува. Комплетното
+                            разложување е:
+                        </p>
+                        <p class='text-center'>
+                            `(x^4 - 16) = (x^2 + 4)(x + 2)(x - 2)`
+                        </p>
+                        <p>
+                            Целта е да се прикажат неколку од многуте техники на разложување на полиноми.
+                        </p>
+
+                        <h5 id='Greatest Common Factor'>
+                            Најголем заеднички множител
+                        </h5>
+
+                        <p>
+                            Првиот метод на разложување на полиноми е разложувањена на најголем заеднички множител. При
+                            разложувањето на полиноми ова е првиот чекор кој треба да се проба.
+                        </p>
+                        <p>
+                            Неколку примери:
+                        </p>
+                        <p class='text-center'>
+                            `8x^4 - 4x^3 + 10x^2 = 2x^2(4x^2 - 2x + 5)`
+                        </p>
+                        <p class='text-center'>
+                            `x^3y^2 - 3x^4y + 5x^5y^3 = x^3y(y - 3x + 5x^2y^2)`
+                        </p>
+                        <p class='text-center'>
+                            `9x^2(2x + 7) - 12x(2x + 7) = 3x(2x + 7)(3x - 4)`
+                        </p>
+                        <hr>
+
+                        <h5 id='Greatest Common Factor'>
+                            Разложување со групирање
+                        </h5>
+                        <p>
+                            Овој метод не се користи толку често, примери:
+                        </p>
+                        <p class='text-center'>
+                            `3x^2 - 2x + 12x - 8`<br>
+                            Прво ги групираме првите два члена а потоа крајните два члена:<br>
+                            `(3x^2 - 2x) + (12x - 8)`<br>
+                            Сега со користење на методот на најголем заеднички множител добиваме, прво:<br>
+                            `x(3x - 2) + 4(3x -2)`<br>
+                            и конечно:<br>
+                            `(x + 4)(3x - 2)`<br>
+                        </p>
+                        <hr>
+
+                        <h5 id='Factoring Quadratic Polynomials'>
+                            Разложување на полиноми од втор степен
+                        </h5>
+                        <p>
+                            Целта е да се разложи полиномот од втор степен на два монома. Неколку примери:
+                        </p>
+                        <p>
+                            Пример 1: `x^2 + 2x - 15`
+                        </p>
+                        <p>
+                            Бидејки станува збор за полином од втор степен разложувањето е со облик:
+                        </p>
+                        <p>
+                            `(x + _)(x + _)`<br>
+                        </p>
+                        <p>
+                            Сега треба да ги одредиме двата цели броја кои ќе ги вметнеме на празните места. Бројот на
+                            можните цели броеви можеме значително да ја намалиме знаејки дека нивниот производ треба да
+                            даде вредност `-15`. Еве ги сите можни комбинации:
+                        </p>
+                        <p>
+                            `[-1, 15]; [1,-15]; [-3, 5]; [3, -5]`
+                        </p>
+                        <p>
+                            Сега едноставно можеме да ги вметнеме овие парови на броеви да множиме се додека не добиеме
+                            исправен резултат. Но постои една особина која може да ни помогне. Збирот на исправниот пар
+                            на цели броеви треба да го даде коефициентот на `x`. Во нашиот случај парот `-3, 5` го дава
+                            потребниот резултат `+2` така да парот кој го бараме е `-3, 5`.
+                        </p>
+                        <p>
+                            Разложениот полином е:
+                        </p>
+                        <p>
+                            `x^2 + 2x -15 = (x + 5)(x - 3)`<br>
+                        </p>
+                        <p>
+                            <em>Забелешка: Методот е валиден само ако коефициентот пред `x^2` е 1`.</em>
+                        </p>
+                        <p>
+                            Пример 2: `x^2 -10x + 24`
+                        </p>
+                        <p>
+                            Бидејки станува збор за полином од втор степен разложувањето е со облик:
+                        </p>
+                        <p>
+                            `(x + _)(x + _)`<br>
+                        </p>
+                        <p>
+                            Сега треба да ги одредиме двата цели броја кои ќе ги вметнеме на празните места. Нивниот
+                            производ треба да даде вредност `24` а нивниот збир `-10`. Комбинацијата е `-4, -6`.
+                        </p>
+                        <p>
+                            `x^2 - 10x + 24 = (x - 4)(x - 6)`<br>
+                        </p>
+                        <p>
+                            Пример 3: `x^2 + 5x + 1`
+                        </p>
+                        <p>
+                            Бидејки станува збор за полином од втор степен разложувањето е со облик:
+                        </p>
+                        <p>
+                            `(x + _)(x + _)`<br>
+                        </p>
+                        <p>
+                            Сега треба да ги одредиме двата цели броја кои ќе ги вметнеме на празните места. Нивниот
+                            производ треба да даде вредност `1` а нивниот збир `5`. Вакви два цели броја не постојат
+                            така да полиномот не може да се разложи.
+                        </p>
+                        <p>
+                            Пример 4: `3x^2 + 2x - 8`
+                        </p>
+                        <p>
+                            Кај овој полином од втор степен немаме коефициент `1` кај членот `x^2`. Бидејки коефициентот
+                            кај членот `x^2` е `3` постои само една комбинација од цели броеви која го дава производот
+                            `3`. Па од тука:
+                        </p>
+                        <p>
+                            `(3x + _)(x + _)`
+                        </p>
+                        <p>
+                            Но одредувањето на двата цели броја не е така лесно како во предходните примери. Ќе треба да
+                            се отпочне со сите производи од `-8`.
+                        </p>
+                        <p>
+                            `[-1, 8], [1,-15], [-3, 5], [3, -5]`
+                        </p>
+                        <p>
+                            Во овој момент единствена опција е да се одбере некој пар да и да се тестира. Нека се одбере
+                            четвртиот пар.
+                        </p>
+                        <p>
+                            `(3x + 2)(x - 4) = 3x^2 - 10x -8`
+                        </p>
+                        <p>
+                            Се гледа дека средниот член не е точен, но ова не значи дека сме одбрале погрешен пар на
+                            броеви.
+                        </p>
+                        <p>
+                            Кај предходните пример не беше важно во кој моном ги ставаме броевите но во овој случа е.
+                            Сега нека броевите си ги сменат местата.
+                        </p>
+                        <p>
+                            `(3x - 4)(x + 2) = 3x^2 + 2x -8`
+                        </p>
+                        <p>
+                            Сега го добивме исправниот резултат.
+                        </p>
+                        <p>
+                            Пример 5: `4x^2 + 10x - 6`
+                        </p>
+                        <p>
+                            Овде имаме потежок пример. Кофициентот кај членот `x^2` сега има повеќе од еден пар на
+                            множители. Ова значи дека почетната форма мора да биде една од двете мпжности:
+                        </p>
+                        <p>
+                            `4x^2 + 10x - 6 = (4x+ _)(x + _)`<br>
+                            `4x^2 + 10x - 6 = (2x+ _)(2x + _)`
+                        </p>
+                        <p>
+                            Сите производи од `-6` се:
+                        </p>
+                        <p>
+                            `[-1, 6][1, -6][-2, 3][3, -2]`
+                        </p>
+                        <p>
+                            Со неколку проби може да се најде дека исправното разложување е:,
+                        </p>
+                        <p>
+                            `4x^2 + 10x - 6 = (2x - 1)(2x + 6)`
+                        </p>
+                        <p>
+                            Специјални форми
+                        </p>
+                        <p>
+                            Постојат неколку згодни форми на полиноми кои разложувањето го прават полесно.
+                        </p>
+                        <p>
+                            <strong>Квадрат на бином:</strong>
+                        </p>
+                        <p>
+                            `(a + b)^2 = a^2 + 2ab + b^2`<br>
+                            `(a - b)^2 = a^2 -2ab + b^2`
+                        </p>
+                        <p>
+                            `a^2 - b^2 = (a +b)(a - b)`<br>
+                            `a^3 + b^3 = (a + b)(a^2 - ab +  b^2)`<br>
+                            `a^3 - b^3 = (a - b)(a^2 + ab +  b^2)`
+                        </p>
+                        <p>
+                            Пример 6: `x^2 - 20x + 100`
+                        </p>
+                        <p>
+                            `= (x - 10)^2`
+                        </p>
+                        <p>
+                            Пример 7: `25x^2 - 9`
+                        </p>
+                        <p>
+                            `= (5x)^2 - (3)^2`
+                        </p>
+                        <p>
+                            `= (5x + 3)(5x -3)`
+                        </p>
+                        <p>
+                            Пример 8: `8x^3 + 1`
+                        </p>
+                        <p>
+                            `= (2x)^3 + (1)^3`<br>
+                            `= (2x +1)(4x^2 - 2x + 1`
+                        </p>
+                        <p>
+                            `= (2x + 1)(5x -3)`
+                        </p>
+
+                        <h3 id='Factoring Polynomials with Degree Greater than 2'>
+                            Разложување на полиноми со степен поголем од 2
+                        </h3>
+                        <p>
+                            Не постои општ метод за разложување на полиноми со степен поголем од 2.
+                        </p>
+                        <p>
+                            Пример 9: `3x^4 - 3x^3 - 36x^2`
+                        </p>
+                        <p>
+                            Најголем заеднички множител<br>
+                            `= 3x^2(x^2 - x + 12)`<br>
+                            `= (2x +1)(x^2 - x + 12)`<br>
+                            Разложување на полином од втор степен<br>
+                            `= (2x + 1)(x - 4)(x + 3) `
+                        </p>
+                        <p>
+                            Пример 10: `x^4 - 25`
+                        </p>
+                        <p>
+                            Разлика на два квадрати<br>
+                            `= (x^2)^2 - 5^2`<br>
+                            `= (x^2 - 5)(x^2 + 5)`
+                        </p>
+                        <p>
+                            Пример 11: `x^4 + x^2 - 20`
+                        </p>
+                        <p>
+                            Полиномот го презапишуваме во друг облик (пресликување) и добиваме полином од втор степен.<br>
+                            `= u^2 + u - 20`<br>
+                            `= (u + 5)(u - 4)`<br>
+                            Се враќаме на непознатата `x`.<br>
+                            `= (x^2 - 5)(x^2 + 4)`<br>
+                            Вториот член може и понатаму да се разложува.<br>
+                            `(x^2 - 5)(x - 2)(x + 2)`
+                        </p>
+
+
+
+                        <hr>
+
+
+
+
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="js/docs.min.js"></script>
+
+</body>
+
+</html>
