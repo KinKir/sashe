@@ -3,20 +3,20 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Learning Discrete Mathematics" />
-    <meta name="author" content="Ilija Taseski" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Learning Discrete Mathematics"/>
+    <meta name="author" content="Ilija Taseski"/>
 
     <title>io sashe</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Documentation extras -->
     <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-    <link href="../css/docs.css" rel="stylesheet" />
+    <link href="../css/docs.css" rel="stylesheet"/>
 
     <!-- MathJax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
@@ -24,492 +24,553 @@
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
-    <link rel="manifest" href="../images/favicons/manifest.json" />
-    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c" />
-    <link rel="icon" href="../images/icon/favicon.ico" />
-    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml" />
-    <meta name="theme-color" content="#563d7c" />
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png"/>
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png"/>
+    <link rel="manifest" href="../images/favicons/manifest.json"/>
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c"/>
+    <link rel="icon" href="../images/icon/favicon.ico"/>
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml"/>
+    <meta name="theme-color" content="#563d7c"/>
 
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
 </head>
 
 <body>
-    <!-- Header -->
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-        <div class="container">
-            <span class="skiplink-text">Skip to main content</span>
-        </div>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
     </a>
 
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
-            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
-                focusable="false">
-                <title>Саше учи Calculus</title>
-                <path fill="currentColor"
-                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
-                <path fill="currentColor"
-                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
-            </svg>
-        </a>
-
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link active" href="graphs_euler.html">Дискретна математика</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../discrete_exercises/graph_105.html">
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link active" href="graphs_euler.html">Дискретна математика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../discrete_exercises/graph_105.html">
                         <span>
                             <i class="fas fa-chalkboard-teacher"></i>
                         </span>
-                        Вежби
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../discrete_exercises/graph_105_book.html">
+                    Вежби
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../discrete_exercises/graph_105_book.html">
                         <span>
                             <i class="fas fa-book"></i>
                         </span>
-                        Вежби
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../discrete_colloquium/propositional_logic_colloquium.html">
+                    Вежби
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../discrete_colloquium/propositional_logic_colloquium.html">
                         <span>
                             <i class="fas fa-graduation-cap"></i>
                         </span>
-                        Колокфиум
+                    Колокфиум
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1"/>
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="propositional_logic.html">
+                        1. Логика и докази
                     </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="propositional_logic.html">
+                                Исказна логика
+                            </a>
+                        </li>
+                        <li>
+                            <a href="propositional_logic-app.html">
+                                Примена на исказна логика
+                            </a>
+                        </li>
+                        <li>
+                            <a href="propositional_logic_equivalences.html">
+                                Исказни еквиваленции
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="predicates.html">
+                                Предикати и квантификатори
+                            </a>
+                        </li>
+                        <li>
+                            <a href="predicates_nested.html">
+                                Вгнездени квантификатори
+                            </a>
+                        </li>
+                        <li>
+                            <a href="predicates_inference.html">
+                                Правила за изведување на заклучоци
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proof.html">
+                                Докази
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="sets.html">
+                        2. Основни структури
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="sets.html">
+                                2.1 Множества
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sets_operations.html">
+                                2.2 Операции над множества
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                2.3 Функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="graphs.html">
+                        10. Графови
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="graphs.html">
+                                10.1 Граф
+                            </a>
+                        </li>
+                        <li>
+                            <a href="graphs_terminology.html">
+                                10.2 Терминологија и специјални типови на графови
+                            </a>
+                        </li>
+                        <li>
+                            <a href="graphs_representing.html">
+                                10.3 Претставување на граф
+                            </a>
+                        </li>
+                        <li>
+                            <a href="graphs_connecting.html">
+                                10.4 Поврзување
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="graphs_euler.html">
+                                10.5 Ојлеров пат
+                            </a>
+                        </li>
+                        <li>
+                            <a href="graphs_shortest_path_problem.html">
+                                10.6 Проблем на најкраток пат
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="sets.html">
+                        11. Дрва
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li class="active bd-sidenav-active">
+                            <a href="sets.html">
+                                2.1 Множества
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sets_operations.html">
+                                2.2 Операции над множества
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                2.3 Функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#Oiler">Ојлеров пат и Ојлеров циклус</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#conditions">Улови за постоење на Oјлеров циклус</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#Algorithm1">Алгоритам за конструкција на Ојлеров циклус</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#Algorithm2">Улови за постоење на Oјлеров циклус</a>
                 </li>
             </ul>
         </div>
-    </header>
 
-    <!--Container -->
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <form class="bd-search d-flex align-items-center">
-                    <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
-                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
-                        data-docs-version="4.1" />
-                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
-                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
-                        aria-expanded="false" aria-label="Toggle docs navigation">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
-                            focusable="false">
-                            <title>Menu</title>
-                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                                d="M4 7h22M4 15h22M4 23h22" />
-                        </svg>
-                    </button>
-                </form>
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <div class="row">
+                <div class="col-md-12">
 
-                <!-- Left Sidenav -->
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="propositional_logic.html">
-                            1. Логика и докази
-                        </a>
+                    <p class="lead">
+                        Дали може да се патува долж ребрата почнувајки од некој јазол и враќајки се на него поминувајки
+                        го секое ребро точно еднаш. Слично е и прашањето дали можеме да се движиме долж ребрата и при
+                        тоа да го посетиме секој јазол точно еднаш. На прв поглед прашањате се слични, на првото кое
+                        прашува дали графот има Ојлеров циклус може реалтивнио лесно да се одговори преку утврдувањето
+                        на степените на јазлите на графот, додека на второто кое прашува дали графот има Хамилтонов
+                        циклус е многу тешко. И двете прашања имаат многу практични апликации.
+                    </p>
 
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="propositional_logic.html">
-                                    Исказна логика
-                                </a>
-                            </li>
-                            <li>
-                                <a href="propositional_logic-app.html">
-                                    Примена на исказна логика
-                                </a>
-                            </li>
-                            <li>
-                                <a href="propositional_logic_equivalences.html">
-                                    Исказни еквиваленции
-                                </a>
-                            </li>
-                            <li class="active bd-sidenav-active">
-                                <a href="predicates.html">
-                                    Предикати и квантификатори
-                                </a>
-                            </li>
-                            <li>
-                                <a href="predicates_nested.html">
-                                    Вгнездени квантификатори
-                                </a>
-                            </li>
-                            <li>
-                                <a href="predicates_inference.html">
-                                    Правила за изведување на заклучоци
-                                </a>
-                            </li>
-                            <li>
-                                <a href="proof.html">
-                                    Докази
-                                </a>
-                            </li>
-                        </ul>
+                    <h3 id='Oiler'>
+                        Ојлеров пат и Ојлеров циклус
+                    </h3>
+
+                    <p>
+                        Градот Königsberg, Prussia (сега Калининград и дел на Русија)), е поделен не четри дела со
+                        бреговите на реката Pregel. Овие четри дела се состојат од два региона на обалата на реката
+                        Pregel, островот Kneiphof, и регионот помеѓу гранки на реката Pregel. Овие региони, во
+                        осумнаестиот век биле поврзани со седум моста. Сликата 1 ги прикажува овие мостови и региони.
+                    </p>
+
+                    <img src='images/graph_40а.PNG' class='img-fluid' alt='graph_40а'>
+
+                    <div id="term_01" class="alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Дефиниција 1</h4>
+                        <p>
+                            <strong>Ојлеров циклус</strong> во графот `G` е едноставен циклус кој го содржи секој
+                            јазол на графот. <strong>Ојлеров пат</strong> во графот `G` е едноставен пат кој го
+                            содржи секое ребро од графот.
+                        </p>
                     </div>
 
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="sets.html">
-                            2. Основни структури
-                        </a>
+                    <p>
+                        Примерот 1 и примерот 2 го илустрираат концептот на Ојлеровиот циклус и Ојлеровиот пат.
+                    </p>
 
-                        <ul class="nav bd-sidenav">
-                            <li class="active bd-sidenav-active">
-                                <a href="sets.html">
-                                    2.1 Множества
-                                </a>
-                            </li>
-                            <li>
-                                <a href="sets_operations.html">
-                                    2.2 Операции над множества
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    2.3 Функции
-                                </a>
-                            </li>
-                        </ul>
+                    <p>
+                        <strong>Пример 1.</strong> Кои од графовите на сликата 3 имаат Ојлеров циклус? Од тие што
+                        немаат Ојлеров циклус, кои имаат Ојлеров пат?
+                    </p>
+
+                    <img src='images/graph_40.PNG' class='img-fluid' alt='graph_40'>
+
+                    <p>
+                        <strong>Решение:</strong> Графот `G_1` има ојлеров циклус, на пример `a, e, c, d, e, b, a`.
+                        Ниту графот `G_2` ниту графот `G_3` има Ојлеров циклус. Но графот `G_3` има ојлеров пат,
+                        имено `a, c,
+                        d, e, b, d, a, b`. Графот `G_2` нема Ојлеров пат.
+                    </p>
+
+                    <p>
+                        <strong>Пример 2.</strong> Кои од оирентираните графови на сликата 4 имаат Ојлеров циклус?
+                        Од тие што немаат Ојлеров циклус, кои имаат Ојлеров пат?
+                    </p>
+
+                    <img src='images/graph_41.PNG' class='img-fluid' alt='graph_41'>
+
+                    <p>
+                        <strong>Решение:</strong> Графот `H_2` има Ојлеров циклус, на пример `a, g, c, b, g, e, d,
+                        f,
+                        a`. Ниту графот `H_1` и `H_3` има Ојлеров циклус. Но графот `H_3` има Ојлеров пат, имено `c,
+                        a, b, c, d, b`. Графот `H_1` нема Oјлеров пат.
+                    </p>
+
+                    <h3 id='conditions'>
+                        Потребни и доволни улови за постоење на Oјлеров циклус
+                    </h3>
+
+                    <p>
+                        Постои едноставен критериум за одредување дали еден мултиграф има Ојлеров циклус или Ојлеров
+                        пат.
+                    </p>
+
+                    <p>
+                        Кога еден сврзан мултиграф има Ојлеров циклус, она што може да се покаже е дека секој јазол
+                        мора да има парен степен. За да го покажеме ова нека Ојлеровиот пат отпочнува со јазелот `a`
+                        и продолжува со ребро сврзано со јазелот `a`, да речеме реброто `{a, b}`. Реброто `{a, b}`
+                        додава еден на степенот `deg(a)`. Секој пат кога циклусот поминува низ јазол тој додава два
+                        на степенот на јазолот, бидејки циклусот влегува преку ребро поврзано со тој јазол и
+                        излегува преку друго ребро. На крајот, циклусот завршува онаму каде што и почнал, додавајки
+                        еден на степенот на јазолот `a`. Поради ова степенот на `a` морада е парен, циклусот го
+                        зголемува степенот за еден кога почнува, еден кога завршува и два секогаш кога поминува низ
+                        `a` (ако поминува). Јазлите различни од `a` имаат парен степен бидејки циклусот додава два
+                        на степенот секој пат кога поминува низ јазолот. Од овде може да се заклучи дека ако графот
+                        има Ојлеров циклус, тогаш секој јазол мора да има парен степен.
+                    </p>
+
+                    <p>
+                        Следното прашање е дали овој потребен услов е и доволен за постоење на Ојлеров циклус?
+                        Односно
+                        дали постои Ојлеров циклус во сврзан мултиграф ако сите јазли се со парен степен. На ова
+                        прашање може да се одговори потврдно ако конструираме циклус.
+                    </p>
+
+                    <img src='images/graph_43a.PNG' class='img-fluid' alt='graph_43'>
+
+                    <p>
+                        Нека графот `G` е сврзен граф со најмалку два јазли и степенот на секој агол е парен. Ќе
+                        формираме едноставен граф кој почнува од случајно одбран јазол од графот `G`, и ќе го
+                        градиме додавајки ребро по ребро. Нека `x_0=a`. Прво случајно ќе го
+                        одбереме реброто `{x_0, x_1}` кое треба да е сврзано со јазолот `a`, што е можно бидејки
+                        графот е сврзан. Продолжуваме со градење на едноставен пат`{x_0, x_1}, {x_1, x_2}, . . . ,
+                        {x_(n−1), x_n}`, додавајки ребро по ребро се додека не можеме да додадеме ново ребро. Ова се
+                        случува доаѓаме до јазол чии ребра веќе сме ги вклучиле во патот. На пример во графот `G` од
+                        сликата 5 почнуваме од јазелот `a` и ги одбираме ребрата `{a, f}, {f, c}, {c, b},` и `{b,
+                        a`}.
+                    </p>
+                    <p>
+                        Патот кој го конструираме мора да заврши бидејки графот има конечен број на ребра, така да е
+                        гарантирано дека ќе дојдеме до јазол каде не е можно да се додаде ребро на патот. Патот
+                        отопчнува во јазелот `a` со реброто со форма `{a, x}`, а и покажавме дека мора да заврши со
+                        ребро со форма `{y, a}`. За да покажеме дека патот мора да заврши во јазелот `a`, треба да
+                        не се заборави дека секогаш кога патот поминува низ јазол со парен степен се користи само
+                        еден степен за да патот влезе во јазолот а бидејки степенот е најмалку два, најмалку едно
+                        ребро останува за патот да го напушти јазолот. И уште повеќе секогаш кога патот влегува и
+                        напушта јазол со парен степен остануав парен степен на ребра кои не се употребени во патот.
+                        Според ова кога го формираме патот, секогаш кога влегуваме во јазол различен од `a` можеме
+                        да го напуштиме. Ова значи дека патот може да заврши само во јазолот `a`. Исто така треба да
+                        се забележи дека патот кој го конструираме може да ги употреби сите ребра или може да не ги
+                        употреби сите ребра во зависност кога се враќаме до јазолот `a`.
+                    </p>
+                    <p>
+                        Ојлеров циклус е конструиран ако се употребени сите ребра. Да го земеме во предвид подграфот
+                        `H` добиен од графот `G` со бришење на веќе употребени ребра и јазли кои не се сврзани со
+                        преостанатите ребра. Кога ќе го избришеме циклусот `a, f, c, b, a` од графот прикажан на
+                        слика 5, го добиваме подграфот означен со `H`.
+                    </p>
+                    <p>
+                        Бидејки графот `G` е сврзан, подграфот `H` има најмалку еден јазол поврзан со циклусот кој
+                        го избришавме. Нека јазолот `w` е ваков јазол (во нашиот случај тоа е јазолот `c`).
+                    </p>
+                    <p>
+                        Секој јазол во подграфот `H` има парен степен (бидејки во графот `G` сите јазли имаа парен
+                        степен, и за секој јазол, паровите на јазлите поврзани со овој јазол се избришани за да се
+                        формира графот `H`). Треба да се забележи дека графот `H` може да биде несврзан. Почнувајки
+                        од `w`, се конструира едноставен граф во `H` со избор на ребра се додека е можно. Овој пат
+                        мора да заврши во `w`. На пример, на сликата 5, `c, d, e, c` е пат во графот `H`. Понатаму,
+                        формираме циклус во графот `G` со спојување на циклусот во графот `H` со оргиналниот циклус
+                        во `G` (ова може да се направи бидејки `w` е еден од јазлите во циклусот). Кога ова ќе се
+                        направи во графот на сликата 5 се добива циклусот `a, f, c, d, e, c, b, a`.
+                    </p>
+                    <p>
+                        Овој процес се продолжува додека не се искористат сите ребра (Процесот мора да продолжи
+                        бидејки бројот на ребра во графот е конечен). Овој процес дава Ојлеров циклус.
+                        Конструкцијата покажува дека ако јазлите на сврзан мултиграф се со парен степен, тогаш
+                        графот има Ојлеров циклус. Сето ова се сумира во Теоремата 1.
+                    </p>
+
+                    <div id="term_02" class="alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Теорема 1</h4>
+                        <p>
+                            Сврзан мултиграф со најмалку два јазли има Ојлеров циклус ако и само ако секој од
+                            јазлите има парен број на степен.
+                        </p>
                     </div>
 
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link" href="graphs.html">
-                            10. Графови
-                        </a>
+                    <p>
+                        We can now solve the Königsberg bridge problem. Because the multigraph representing
+                        these bridges, shown in Figure 2, has four vertices of odd degree, it does not have an Euler
+                        circuit. There is no way to start at a given point, cross each bridge exactly once, and return
+                        to
+                        the starting point.
+                    </p>
 
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="graphs.html">
-                                    10.1 Граф
-                                </a>
-                            </li>
-                            <li>
-                                <a href="graphs_terminology.html">
-                                    10.2 Терминологија и специјални типови на графови
-                                </a>
-                            </li>
-                            <li>
-                                <a href="graphs_representing.html">
-                                    10.3 Претставување на граф
-                                </a>
-                            </li>
-                            <li>
-                                <a href="graphs_connecting.html">
-                                    10.4 Поврзување
-                                </a>
-                            </li>
-                            <li class="active bd-sidenav-active">
-                                <a href="graphs_euler.html">
-                                    10.5 Ојлеров пат
-                                </a>
-                            </li>
-                            <li>
-                                <a href="graphs_shortest_path_problem.html">
-                                    10.6 Проблем на најкраток пат
-                                </a>
-                            </li>
-                        </ul>
+                    <div id="term_03" class="alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Теорема 2</h4>
+                        <p>
+                            Сврзан мултиграф има Oјлеров пат но не и Ојлеров циклус ако и само ако има точно два
+                            јазли со непарен степен.
+                        </p>
                     </div>
 
-                    <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="sets.html">
-                            11. Дрва
-                        </a>
+                    <p>
+                        <strong>Пример 3.</strong> Кој граф прикажан на сликата 7 има ојлеров пат.
+                    </p>
 
-                        <ul class="nav bd-sidenav">
-                            <li class="active bd-sidenav-active">
-                                <a href="sets.html">
-                                    2.1 Множества
-                                </a>
-                            </li>
-                            <li>
-                                <a href="sets_operations.html">
-                                    2.2 Операции над множества
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    2.3 Функции
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                    <img src='images/graph_42.PNG' class='img-fluid' alt='graph_42'>
 
-            <!-- right nav -->
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h2">
-                        <a href="#Oiler">Ојлеров пат и Ојлеров циклус</a>
-                    </li>
-                    <li class="toc-entry toc-h3">
-                        <a href="#conditions">Улови за постоење на Oјлеров циклус</a>
-                    </li>
-                    <li class="toc-entry toc-h3">
-                        <a href="#Algorithm1">Алгоритам за конструкција на Ојлеров циклус</a>
-                    </li>
-                    <li class="toc-entry toc-h3">
-                        <a href="#Algorithm2">Улови за постоење на Oјлеров циклус</a>
-                    </li>
-                </ul>
-            </div>
+                    <p>
+                        <strong>Решение:</strong> Графот `G_1` содржи точно два јазли со непарен степен, `b` и `d`.
+                        Од тука, има Ојлеров пат кој мора да ги има јазлите `b` и `d` како крајни точки. Еден ваков
+                        ојлеров пат е `d, a, b, c, d, b`. Слично графот `G_2` има точно два јазли со непарен степен,
+                        `b` и `d`. Од тука и тој има Ојлеров пат кој мора да ги има `b` и `d` како крајни точки.
+                        Еден ваков Ојлеров пат е `b, a, g, f, e, d, c, g, b, c, f, d`. Графот `G_3` нема Ојлеров пат
+                        бидејки има шест јазли со непарен степен.
+                    </p>
 
-            <!-- main -->
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-                <div class="row">
-                    <div class="col-md-12">
+                    <hr>
 
-                        <p class="lead">
-                            Дали може да се патува долж ребрата почнувајки од некој јазол и враќајки се на него
-                            поминувајки го секое ребро точно еднаш. Слично е и прашањето дали можеме да се движиме долж
-                            ребрата и при тоа да го посетиме секој јазол точно еднаш. На прв поглед прашањате се слични,
-                            на првото кое прашува дали графот има Ојлеров циклус може реалтивнио лесно да се одговори
-                            преку утврдувањето на степените на јазлите на графот, додека на второто кое прашува дали
-                            графот има Хамилтонов циклус е многу тешко. И двете прашања имаат многу практични
-                            апликации.
-                        </p>
-                        <h3 id='Oiler'>
-                            Ојлеров пат и Ојлеров циклус
-                        </h3>
+                    <h3 id='Algorithm1'>
+                        Алгоритам за конструкција на Ојлеров циклус
+                    </h3>
 
-                        <div id="term_01" class="alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Дефиниција 1</h4>
-                            <p>
-                                <strong>Ојлеров циклус</strong> во графот `G` е едноставен циклус кој го содржи секој
-                                јазол на графот. <strong>Ојлеров пат</strong> во графот `G` е едноставен пат кој го
-                                содржи секое ребро од графот.
-                            </p>
-                        </div>
+                    <p>
+                        Алгоритамот ја дава процедурата за одредување на Ојлеровиот циклус.
+                    </p>
 
+                    <ol>
+                        <li>
+                            Се конструира некој циклус во `G`, почнувајки од произволно одбран јазол со ребра така
+                            додадени да се формира пат кој се враќа на почетниот јазол.
+                        </li>
+                        <li>
+                            Бидејќи циклусот не мора да ги помине сите ребра, може да останат ребра.
+                        </li>
+                        <li>
+                            Од останатите ребра пак се прави циклус од јазол кое веќе го има во претходниот циклус.
+                            Тој се лепи до претходниот циклус на местото на темето кое се наоѓа во претходниот
+                            циклус
+                        </li>
+                        <li>
+                            Ова се повторува се додека не се истрошат сите ребра.
+                        </li>
+                    </ol>
+
+                    <p>
+                        <em>Алгоритамот е ефикасен начин како да се одреди Ојлеровит циклус во поврзан мултиграф
+                            каде сите јазли се со парен степен. Комплексност на алгоритамот е `O(abs(E))` бидејки
+                            секое ребро се поминува точно еднаш.`</em>
+                    </p>
+
+
+                    <p>
+                        <strong>Пример 5. </strong> Да се нацрта фигурта на сликата 6 без подигање на моливот од
+                        хартијата. Задачата се решава со користење на Ојлеров циклус и Ојлеров пат.
+                    </p>
+
+                    <img src='images/graph_43.PNG' class='img-fluid' alt='graph_43'>
+
+                    <p>
+                        <strong>Решение:</strong> Задачата може да се реши бидејки фигурата има Ојлеров циклус.
+                        Фигурата има Ојлеров циклус бидејки сите јазли имаат парен степен. Со помош на алгоритамот
+                        ќе го конструираме Ојлеровиот циклус. Прво ќе ги формираме циклусот `a, b, d, c, b, e, i, f,
+                        e, a`. Подграфот `H` го добиваме со бришење на ребрата во овој циклус и сите јазли кои
+                        остануваат изолирани кога овие ребра се бришат. Сега формираме циклус `d, g, h, j, i, h, k,
+                        g, f, d` во подграфот `H`. Со формирањето на овој граф сите јазли од графот `G` се
+                        употребени. Со спојување на овој нов циклус со првиот циклус се добива Ојлеровиот пат `a, b,
+                        d, g, h, j, i, h, k, g, f, d, c, b, e, i, f, e, a`. Овој циклус го одредува начинот како да
+                        се наццрта фигурата без да се подигне моливот од хартијата.
+                    </p>
+
+
+                    <h3 id='Hamilton'>
+                        Хамилтонов пат
+                    </h3>
+
+                    <div id="term_04" class="alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Дефиниција 2</h4>
                         <p>
-                            Примерот 1 и примерот 2 го илустрираат концептот на Ојлеровиот циклус и Ојлеровиот пат.
-                        </p>
-
-                        <p>
-                            <strong>Пример 1.</strong> Кои од графовите на сликата 3 имаат Ојлеров циклус? Од тие што
-                            немаат Ојлеров циклус, кои имаат Ојлеров пат?
-                        </p>
-
-                        <img src='images/graph_40.PNG' class='img-fluid' alt='graph_40'>
-
-                        <p>
-                            <strong>Решение:</strong> Графот `G_1` има ојлеров циклус, на пример `a, e, c, d, e, b, a`.
-                            Ниту графот `G_2` ниту графот `G_3` има Ојлеров циклус. Но графот `G_3` има ојлеров пат,
-                            имено `a, c,
-                            d, e, b, d, a, b`. Графот `G_2` нема Ојлеров пат.
-                        </p>
-
-                        <p>
-                            <strong>Пример 2.</strong> Кои од оирентираните графови на сликата 4 имаат Ојлеров циклус?
-                            Од тие што немаат Ојлеров циклус, кои имаат Ојлеров пат?
-                        </p>
-
-                        <img src='images/graph_41.PNG' class='img-fluid' alt='graph_41'>
-
-                        <p>
-                            <strong>Решение:</strong> Графот `H_2` има Ојлеров циклус, на пример `a, g, c, b, g, e, d,
-                            f,
-                            a`. Ниту графот `H_1` и `H_3` има Ојлеров циклус. Но графот `H_3` има Ојлеров пат, имено `c,
-                            a, b, c, d, b`. Графот `H_1` нема Oјлеров пат.
-                        </p>
-
-                        <h3 id='conditions'>
-                            Потребни и доволни улови за постоење на Oјлеров циклус
-                        </h3>
-
-                        <div id="term_02" class="alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Теорема 1</h4>
-                            <p>
-                                Сврзан мултиграф со најмалку два јазли има Ојлеров циклус ако и само ако секој од
-                                јазлите има парен број на степен.
-                            </p>
-                        </div>
-
-                        <div id="term_03" class="alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Теорема 2</h4>
-                            <p>
-                                Сврзан мултиграф има Oјлеров пат но не и Ојлеров циклус ако и само ако има точно два
-                                јазли со непарен степен.
-                            </p>
-                        </div>
-
-                        <p>
-                            <strong>Пример 3.</strong> Кој граф прикажан на сликата 7 има ојлеров пат.
-                        </p>
-
-                        <img src='images/graph_42.PNG' class='img-fluid' alt='graph_42'>
-
-                        <p>
-                            <strong>Решение:</strong> Графот `G_1` содржи точно два јазли со непарен степен, `b` и `d`.
-                            Од тука, има Ојлеров пат кој мора да ги има јазлите `b` и `d` како крајни точки. Еден ваков
-                            ојлеров пат е `d, a, b, c, d, b`. Слично графот `G_2` има точно два јазли со непарен степен,
-                            `b` и `d`. Од тука и тој има Ојлеров пат кој мора да ги има `b` и `d` како крајни точки.
-                            Еден ваков Ојлеров пат е `b, a, g, f, e, d, c, g, b, c, f, d`. Графот `G_3` нема Ојлеров пат
-                            бидејки има шест јазли со непарен степен.
-                        </p>
-
-                        <hr>
-
-                        <h3 id='Algorithm1'>
-                            Алгоритам за конструкција на Ојлеров циклус
-                        </h3>
-
-                        <p>
-                            Алгоритамот ја дава процедурата за одредување на Ојлеровиот циклус.
-                        </p>
-
-                        <ol>
-                            <li>
-                                Се конструира некој циклус во `G`, почнувајки од произволно одбран јазол со ребра така
-                                додадени да се формира пат кој се враќа на почетниот јазол.
-                            </li>
-                            <li>
-                                Бидејќи циклусот не мора да ги помине сите ребра, може да останат ребра.
-                            </li>
-                            <li>
-                                Од останатите ребра пак се прави циклус од јазол кое веќе го има во претходниот циклус.
-                                Тој се лепи до претходниот циклус на местото на темето кое се наоѓа во претходниот
-                                циклус
-                            </li>
-                            <li>
-                                Ова се повторува се додека не се истрошат сите ребра.
-                            </li>
-                        </ol>
-
-                        <p>
-                            <em>Алгоритамот е ефикасен начин како да се одреди Ојлеровит циклус во поврзан мултиграф
-                                каде сите јазли се со парен степен. Комплексност на алгоритамот е `O(abs(E))` бидејки
-                                секое ребро се поминува точно еднаш.`</em>
-                        </p>
-
-                        <img src='images/graph_43a.PNG' class='img-fluid' alt='graph_43'>
-
-                        <p>
-                            <strong>Пример 4. </strong> Нека графот `G` е сврзен граф со најмалку два јазли и степенот
-                            на секој агол е парен. Ќе формираме едноставен граф кој почнува од случајно одбран јазол од
-                            графот `G`, и ќе го градиме додавајки ребро по ребро. Нека `x_0=a`. Прво случајно ќе го
-                            одбереме реброто `{x_0, x_1}` кое треба да е сврзано со јазолот `a`, што е можно бидејки
-                            графот е сврзан. Продолжуваме со градење на едноставен пат`{x_0, x_1}, {x_1, x_2}, . . . ,
-                            {x_(n−1), x_n}`, додавајки ребро по ребро се додека не можеме да додадеме ново ребро. Ова се
-                            случува доаѓаме до јазол чии ребра веќе сме ги вклучиле во патот. На пример во графот `G` од
-                            сликата 5 почнуваме од јазелот `a` и ги одбираме ребрата `{a, f}, {f, c}, {c, b},` и `{b,
-                            a`}.
-                        </p>
-                        <p>
-                            Патот кој го конструираме мора да заврши бидејки графот има конечен број на ребра, така да е
-                            гарантирано дека ќе дојдеме до јазол каде не е можно да се додаде ребро на патот. Патот
-                            отопчнува во јазелот `a` со реброто со форма `{a, x}`, а и покажавме дека мора да заврши со
-                            ребро со форма `{y, a}`. За да покажеме дека патот мора да заврши во јазелот `a`, треба да
-                            не се заборави дека секогаш кога патот поминува низ јазол со парен степен се користи само
-                            еден степен за да патот влезе во јазолот а бидејки степенот е најмалку два, најмалку едно
-                            ребро останува за патот да го напушти јазолот. И уште повеќе секогаш кога патот влегува и
-                            напушта јазол со парен степен остануав парен степен на ребра кои не се употребени во патот.
-                            Според ова кога го формираме патот, секогаш кога влегуваме во јазол различен од `a` можеме да
-                            го напуштиме. Ова значи дека патот може да заврши само во јазолот `a`. Исто така треба да се
-                            забележи дека патот кој го конструираме може да ги употреби сите ребра или може да не ги
-                            употреби сите ребра во зависност кога се враќаме до јазолот `a`.
-                        </p>
-                        <p>
-                            An Euler circuit has been constructed if all the edges have been used. Otherwise, consider
-                            the subgraph H obtained from G by deleting the edges already used and vertices that are not
-                            incident with any remaining edges. When we delete the circuit a, f, c, b, a from the graph in
-                            Figure 5, we obtain the subgraph labeled as H.
-                        </p>
-                        <p>
-
-                        </p>
-
-                        <p>
-                            <strong>Пример 5. </strong> Да се нацрта фигурта на сликата 6 без подигање на моливот од
-                            хартијата. Задачата се решава со користење на Ојлеров циклус и Ојлеров пат.
-                        </p>
-
-                        <img src='images/graph_43.PNG' class='img-fluid' alt='graph_43'>
-
-                        <p>
-                            <strong>Решение:</strong> Задачата може да се реши бидејки фигурата има Ојлеров циклус.
-                            Фигурата има Ојлеров циклус бидејки сите јазли имаат парен степен. Со помош на алгоритамот
-                            ќе го конструираме Ојлеровиот циклус. Прво ќе ги формираме циклусот `a, b, d, c, b, e, i, f,
-                            e, a`. Подграфот `H` го добиваме со бришење на ребрата во овој циклус и сите јазли кои
-                            остануваат изолирани кога овие ребра се бришат. Сега формираме циклус `d, g, h, j, i, h, k,
-                            g, f, d` во подграфот `H`. Со формирањето на овој граф сите јазли од графот `G` се
-                            употребени. Со спојување на овој нов циклус со првиот циклус се добива Ојлеровиот пат `a, b,
-                            d, g, h, j, i, h, k, g, f, d, c, b, e, i, f, e, a`. Овој циклус го одредува начинот како да
-                            се наццрта фигурата без да се подигне моливот од хартијата.
-                        </p>
-
-
-                        <h3 id='Hamilton'>
-                            Хамилтонов пат
-                        </h3>
-
-                        <div id="term_04" class="alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Дефиниција 2</h4>
-                            <p>
-                                Едноставен пат во графот `G` кој поминува низ секој јазол точно еднаш се нарекува
-                                Хамилтонов пат. Односно едноставниот пат `x_0, x_1, . . . , x_(n−1),x_n` во графот `G =
-                                (V, E)` е Хамилтонов пат ако `V = {x_0, x_1, . . . , x_(n−1), x_n}` и `x_i != x_j` за `0
-                                ≤ i < j ≤ n` , и едноставниот пат `x_0, x_1, . . . , x_(n−1), x_n, x_0` (со `n> 0`) е
-                                    Хамилтонов циклус ако `x_0, x_1, . . . , x_(n−1), x_n` е Хамилтонов пат.
-                            </p>
-                        </div>
-
-                        <p>
-                            <strong>Пример 6. </strong> Кој од едноставните графови на сликата 10 има Хамилтонов циклус
-                            или ако не Хамилтонов пат?
-                        </p>
-
-                        <img src='images/graph_44.PNG' class='img-fluid' alt='graph_44'>
-
-                        <p>
-                            <strong>Решение:</strong> Грфаот `G_1` има Хамилтонов циклус: `a, b, c, d, e, a`. Графот
-                            `G_2` нема Хамилтонов циклус (секој циклус кој ги содржи сите јазли мора да го содржи
-                            реброто `{a, b}` два пати, но има Хамилтонов пат (a, b, c, d). Графот `G_3` нема ниту
-                            Хамилтонов циклус ниту Хамилтонов пат, бидејки секој пат кој ги содржи сите јазли мора да ги
-                            содржи едно од ребрата `{a, b}, {e, f }, и {c, d}` повеќе од еднаш.
-                        </p>
-
-                        <p>
-                            <strong>Пример 7. </strong> Да се покаже дека `K_n` има Хамилтонов циклус кога `n >= 3`
-                        </p>
-
-                        <p>
-                            <strong>Решение:</strong> Може да се формира Хамилтонов циклус во графот `K_n` почнувајки од
-                            било кој јазол. Ваков циклус може да добие одејки кон било кој јазол по избор, се додека
-                            патот почнува и завршува во ист јазол и поминува низ секој јазол само еднаш. Ова е можно
-                            бидејки во графот `K_n` има ребра помеѓу било кои два јазли.
-                        </p>
-
-
-                        <p class="text-center">
-                            ---------- EOP ----------
+                            Едноставен пат во графот `G` кој поминува низ секој јазол точно еднаш се нарекува
+                            Хамилтонов пат. Односно едноставниот пат `x_0, x_1, . . . , x_(n−1),x_n` во графот `G =
+                            (V, E)` е Хамилтонов пат ако `V = {x_0, x_1, . . . , x_(n−1), x_n}` и `x_i != x_j` за `0
+                            ≤ i < j ≤ n` , и едноставниот пат `x_0, x_1, . . . , x_(n−1), x_n, x_0` (со `n> 0`) е
+                            Хамилтонов циклус ако `x_0, x_1, . . . , x_(n−1), x_n` е Хамилтонов пат.
                         </p>
                     </div>
+
+                    <p>
+                        <strong>Пример 6. </strong> Кој од едноставните графови на сликата 10 има Хамилтонов циклус
+                        или ако не Хамилтонов пат?
+                    </p>
+
+                    <img src='images/graph_44.PNG' class='img-fluid' alt='graph_44'>
+
+                    <p>
+                        <strong>Решение:</strong> Грфаот `G_1` има Хамилтонов циклус: `a, b, c, d, e, a`. Графот
+                        `G_2` нема Хамилтонов циклус (секој циклус кој ги содржи сите јазли мора да го содржи
+                        реброто `{a, b}` два пати, но има Хамилтонов пат (a, b, c, d). Графот `G_3` нема ниту
+                        Хамилтонов циклус ниту Хамилтонов пат, бидејки секој пат кој ги содржи сите јазли мора да ги
+                        содржи едно од ребрата `{a, b}, {e, f }, и {c, d}` повеќе од еднаш.
+                    </p>
+
+                    <p>
+                        <strong>Пример 7. </strong> Да се покаже дека `K_n` има Хамилтонов циклус кога `n >= 3`
+                    </p>
+
+                    <p>
+                        <strong>Решение:</strong> Може да се формира Хамилтонов циклус во графот `K_n` почнувајки од
+                        било кој јазол. Ваков циклус може да добие одејки кон било кој јазол по избор, се додека
+                        патот почнува и завршува во ист јазол и поминува низ секој јазол само еднаш. Ова е можно
+                        бидејки во графот `K_n` има ребра помеѓу било кои два јазли.
+                    </p>
+
+
+                    <p class="text-center">
+                        ---------- EOP ----------
+                    </p>
                 </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
+</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+</script>
 </body>
 
 </html>
