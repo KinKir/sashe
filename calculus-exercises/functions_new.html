@@ -25,13 +25,13 @@
             async></script>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
     <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
-    <link rel="mask-icon" href="../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="../assets/img/icon/favicon.ico">
-    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
     <!-- Font Awesome JS -->
@@ -307,7 +307,7 @@
                             `D_(fg) = D_f nn D_g = RR \\ {1}`
                         </p>
                         <p>
-                            `D_(f/g) = D_f nn D_g nn {x in D_g | g(x) != 0} = RR \\ {1}`
+                            `D_(f/g) = D_f nn D_g nn {x in D_g | g(x) != 0}`
                         </p>
                         <p>
                             `D_(f/g) = D_f nn D_g nn {x in RR | x-1 != 0} = RR \\ {1}`
@@ -361,7 +361,7 @@
             </h1>
 
             <p id='1_1'>     
-                <strong>Вежба 1.</strong> Да се изрази функцијата F како композиција од три функции:<br>
+                <strong>Вежба 1.</strong> Да се изрази функцијата `F` како композиција од три функции:<br>
                 а) `F(x) = (1 + sin(x^2))^3` 
                 <details>   
                     <summary class="mb-3">Решение</summary>
@@ -465,7 +465,13 @@
                         <p>
                             `x = 0 => sqrt(x) >= 0 x in [0, +oo)`
                         </p>
+                        <p>
                             `D_(g@f) = [0, +oo)`
+                        </p>
+                        <p>
+                            Композицијата е: `(g @ f)(x) = g(f(x)) = x + 5sqrt(x) +6)`
+                        </p>
+                            
                         <p>
                             `&#x25A0`
                         </p>
@@ -558,7 +564,7 @@
                             Доменот на функцијата `g` е `D_g = RR \\{-1}`
                         </p>
                         <p>
-                            Доменот на `g @ f` е `D_(g @ f) = {x in RR \\ {1} | f(x) in {-1}`
+                            Доменот на `g @ f` е `D_(g @ f) = {x in RR \\ {1} | f(x) in RR \\ {-1}`
                         </p>
                         <p>
                             Излезите на функцијата `f(x)` треба да припаѓаат на доменот `D_g`.
@@ -588,42 +594,113 @@
                     а) `y = 2- 1/(x + 1)` користејки го графикот `y = 1/x`<br>
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
-                                `y = 1/x`
-                            </div>
+                        <div class='row py-3'>
                             <div class='col-7'>
-                                <iframe src="jsxgraph/graph_01.html" width="100%" height="320" frameborder="0"></iframe>
+                                <strong>Чекор 1: </strong>`y = 1/x`
+                            </div>
+                            <div class='col-5'>
+                                    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    
+                                     <div id="jxgbox00" class="jxgbox" style="width:240px; height:240px"></div>
+                                    
+                                     <script>
+                                    
+                                            const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright:false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            }); 
+                                    
+                                            graph = board00.create('functiongraph', [function(x){ return 1/x; },-10, 10], {strokeColor:'#00ff00',strokeWidth:2});                                  
+                                         
+                                               
+                                    </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                    Со додавање на позитвна константа `c` на `x`, `f(x)`<br>
-                                    функцијате е : `y = 1/(x +1)`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                    <strong>Чекор 2: </strong>Со додавање на позитвна константа `c` на `x`, `f(x)`<br>
+                                    функцијате е : `y = f(x + 1) = 1/(x +1)`<br>
                                     Со ова се врши поместување на графикот по `x` оската налево за вредноста на позитивната константа `c = 1`<br>
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_02.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'><link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                
+                                
+                                 <div id="jxgbox01" class="jxgbox" style="width:240px; height:240px"></div>
+                                
+                                 <script>
+                                
+                                        const board01 = JXG.JSXGraph.initBoard('jxgbox01', {
+                                            boundingbox: [-10, 10, 10, -10],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        }); 
+
+                                        graph = board01.create('functiongraph', [function(x){ return 1/x; },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});   
+                                        graph = board01.create('functiongraph', [function(x){ return 1/(x+1); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                
+                                     
+                                           
+                                </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                    Со множење на функцијата со `-1`<br>
-                                    функцијате е : `y = -(1/(x +1))`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                    <strong>Чекор 3: </strong>Со множење на функцијата `f(x)` со `-1`<br>
+                                    функцијате е : `y = -f(x) = -(1/(x +1))`<br>
                                     со што се добива рефлекција по `x` оската.<br>
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_03.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+
+                                    <div id="jxgbox02" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+                                   
+                                           const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
+                                               boundingbox: [-10, 10, 10, -10],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            graph = board02.create('functiongraph', [function(x){ return 1/x; },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});   
+                                            graph = board02.create('functiongraph', [function(x){ return 1/(x+1); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                            graph = board02.create('functiongraph', [function(x){ return -(1/(x+1)); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                   
+                                        
+                                              
+                                   </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                    Со додавање на позитивна констанра `c` на функцијата `f(x)`<br>
-                                    функцијате е : `y = 2 - (1/(x +1))`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                    <strong>Чекор 4: </strong>Со додавање на позитивна констанра `c` на функцијата `f(x)`<br>
+                                    функцијате е : `y = f(x) + 2 = 2 - (1/(x +1))`<br>
                                     со што се добива поместување нагоре по `y` - оската.<br>
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_04.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+
+                                    <div id="jxgbox03" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+                                   
+                                           const board03 = JXG.JSXGraph.initBoard('jxgbox03', {
+                                               boundingbox: [-10, 10, 10, -10],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            graph = board03.create('functiongraph', [function(x){ return 1/x; },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});   
+                                            graph = board03.create('functiongraph', [function(x){ return 1/(x+1); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                            graph = board03.create('functiongraph', [function(x){ return -(1/(x+1)); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                            graph = board03.create('functiongraph', [function(x){ return 2-(1/(x+1)); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});                                  
+                                        
+                                              
+                                   </script>
                             </div>
                             <p>
                                 `&#x25A0`
@@ -634,44 +711,101 @@
                     <details>
                         <summary class="mb-3">Решение</summary>
                         <div class='row'>
-                            <div class='col-5'>
-                                `y = abs(x)`
-                            </div>
                             <div class='col-7'>
-                                <iframe src="jsxgraph/graph_05.html" width="100%" height="320" frameborder="0"></iframe>
+                                <strong>Чекор 1: </strong>`y = abs(x)`
+                            </div>
+                            <div class='col-5'>
+                                    <div id="jxgbox10" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+                                   
+                                           const board10 = JXG.JSXGraph.initBoard('jxgbox10', {
+                                               boundingbox: [-10, 10, 10, -10],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            graph = board10.create('functiongraph', [function(x){ return Math.abs(x); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});                                
+                                        
+                                              
+                                   </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                Со множење со константа `c, c > 0`, `y = cf(x)`<br>
-                                функцијата е: `y = abs(2x)`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                <strong>Чекор 2: </strong>Со множење на функцијата со константа `c, c > 0`,<br>
+                                функцијата е: `y = cf(x) = abs(2x)`<br>
                                 со што се добива вертикално истегање со фактор `c`.
                                 
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_06.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                <div id="jxgbox11" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                <script>
+                            
+                                    const board11 = JXG.JSXGraph.initBoard('jxgbox11', {
+                                        boundingbox: [-10, 10, 10, -10],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    }); 
+                            
+                                        graph = board11.create('functiongraph', [function(x){ return Math.abs(x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:2});                                
+                                        graph = board11.create('functiongraph', [function(x){ return Math.abs(2*x); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                        
+                                </script>
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-5'>
-                                Со вадење на позитивна константа `c`, `y = f(x - c)`<br>
-                                функцијата е: `y = abs(2(x - 1/2))`<br>
+                            <div class='col-7'>
+                                <strong>Чекор 3: </strong>Со вадење на позитивна константа `c`,<br>
+                                функцијата е: `y = f(x - c) = abs(2(x - 1/2))`<br>
                                 со што се добива поместување надесно по `x` оската за `c = 1/2`.
                                 
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_07.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                <div id="jxgbox12" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                <script>
+                            
+                                    const board12 = JXG.JSXGraph.initBoard('jxgbox12', {
+                                        boundingbox: [-5, 5, 5, -5],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    }); 
+                            
+                                        graph = board12.create('functiongraph', [function(x){ return Math.abs(x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:2});                                
+                                        graph = board12.create('functiongraph', [function(x){ return Math.abs(2*x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                        graph = board12.create('functiongraph', [function(x){ return Math.abs(2*(x -1/2)); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                </script>
                             </div>
                         </div>
                         <div class='row'>
-                            <div class='col-5'>
-                                Со додавање на позитивна константа `c`, `y = f(x) + c`<br>
-                                функцијата е: `y = abs(2x - 1)) + 1`<br>
+                            <div class='col-7'>
+                                <strong>Чекор 4: </strong>Со додавање на позитивна константа `c` н афункцијата,<br>
+                                функцијата е: `y = f(x) + c = abs(2x - 1)) + 1`<br>
                                 со што се добива поместување нагоре по `y` оската за `c = 1`.
                                 
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_08.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                <div id="jxgbox13" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                <script>
+                            
+                                    const board13 = JXG.JSXGraph.initBoard('jxgbox13', {
+                                        boundingbox: [-5,5, 5, -5],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    }); 
+                            
+                                        graph = board13.create('functiongraph', [function(x){ return Math.abs(x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:2});                                
+                                        graph = board13.create('functiongraph', [function(x){ return Math.abs(2*x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                        graph = board13.create('functiongraph', [function(x){ return Math.abs(2*(x -1/2)); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                        graph = board13.create('functiongraph', [function(x){ return Math.abs(2*x -1)+1; },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                </script>
                             </div>
                         </div>
                         <p>
@@ -681,34 +815,73 @@
                     в) `y = - sqrt(3x)`, користејки `y = sqrt(x)`<br>
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
-                                `y = sqrt(x)`
-                            </div>
+                        <div class='row py-3'>
                             <div class='col-7'>
-                                <iframe src="jsxgraph/graph_09.html" width="100%" height="320" frameborder="0"></iframe>
+                                <strong>Чекор 1: </strong>`y = sqrt(x)`
+                            </div>
+                            <div class='col-5'>
+                                <div id="jxgbox20" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                <script>
+                            
+                                    const board20 = JXG.JSXGraph.initBoard('jxgbox20', {
+                                        boundingbox: [-10,10, 10, -10],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    }); 
+
+                                        graph = board20.create('functiongraph', [function(x){ return Math.sqrt(x); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                Со множење со константа `c, c > 0`, `y = cf(x)`<br>
-                                функцијата е: `y = sqrt(3)sqrt(x)`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                <strong>Чекор 2: </strong>Со множење со константа `c, c > 0`,<br>
+                                функцијата е: `y = cf(x) = sqrt(3)sqrt(x) = sqrt(3x)`<br>
                                 со што се добива вертикално истегање со фактор `c = sqrt(3)`.
                                 
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_10.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                    <div id="jxgbox21" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+                                
+                                        const board21 = JXG.JSXGraph.initBoard('jxgbox21', {
+                                            boundingbox: [-10,10, 10, -10],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        }); 
+    
+                                            graph = board21.create('functiongraph', [function(x){ return Math.sqrt(x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                            graph = board21.create('functiongraph', [function(x){ return Math.sqrt(x) * Math.sqrt(3); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                    </script>
                             </div>
                         </div>
-                        <div class='row'>
-                            <div class='col-5'>
-                                Со множење на функцијата со `-1`, `y = -f(x)`<br>
-                                функцијата е: `y = - sqrt(3x)`<br>
+                        <div class='row py-3'>
+                            <div class='col-7'>
+                                <strong>Чекор 3: </strong>Со множење на функцијата со `-1`,<br>
+                                функцијата е: `y = -f(x) = - sqrt(3x)`<br>
                                 со што се добива рефлекција по `x` оската.
                                 
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_11.html" width="100%" height="320" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                    <div id="jxgbox22" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+                                
+                                        const board22 = JXG.JSXGraph.initBoard('jxgbox22', {
+                                            boundingbox: [-10,10, 10, -10],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        }); 
+    
+                                            graph = board22.create('functiongraph', [function(x){ return Math.sqrt(x); },-10, 10], {strokeColor:'#00ff00',strokeWidth:.5});
+                                            graph = board22.create('functiongraph', [function(x){ return Math.sqrt(x) * Math.sqrt(3); },-10, 10], {strokeColor:'#00ff00',strokeWidth:2});
+                                            graph = board22.create('functiongraph', [function(x){ return -(Math.sqrt(3*x)); },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                                    </script>
                             </div>
                         </div>
                         <p>
@@ -723,55 +896,50 @@
 
             <p id='1'>     
                 <strong>Вежба 1.</strong> Да се одреди парноста/непарноста на функциите<br>
-                а) <iframe src="jsxgraph/graph_12.html" width="100%" height="320" frameborder="0"></iframe>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
+
+                а) `f(x) = x^2`
+                <div class='row py-3'>
+                    <div class='col-7'>
                         Бидејки е `f(x) = f(-x)`, односно е симетрична во однос на `y` оската, функцијате е парна.
                     </div>
-                    <div>
-                        <p>
-                            `&#x25A0`
-                        </p>
+                    <div class='col-5'>
+                            <div id="jxgbox30" class="jxgbox" style="width:240px; height:240px"></div>
+
+                            <script>
+                        
+                                const board30 = JXG.JSXGraph.initBoard('jxgbox30', {
+                                    boundingbox: [-10,10, 10, -10],
+                                    showCopyright:false,
+                                    showNavigation: false,
+                                    axis: true,
+                                }); 
+
+                                    graph = board30.create('functiongraph', [function(x){ return x**2; },-10, 10], {strokeColor:'#0000ff',strokeWidth:2});
+                            </script>
                     </div>
-                </details>
-                б) <iframe src="jsxgraph/graph_13.html" width="100%" height="320" frameborder="0"></iframe>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        Бидејки е `-f(x) = f(-x)`, односно е симетрична во однос на кординатниот почеток, функцијате е не-парна.
+                </div>
+                б) `f(x) = -x +  2`
+                <div class='row py-3'>
+                        <div class='col-7'>
+                            Бидејки функцијата не е симетрична во однос на `y` оската ниту е симетрична во однос на кординатниот 
+                            почеток, функцијате не е ниту парна ниту не-парна.
+                        </div>
+                        <div class='col-5'>
+                                <div id="jxgbox31" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                <script>
+                            
+                                    const board31 = JXG.JSXGraph.initBoard('jxgbox31', {
+                                        boundingbox: [-10,10, 10, -10],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    }); 
+    
+                                        graph = board31.create('functiongraph', [function(x){ return -x+2; },-10, 10] , {strokeColor:'#0000ff',strokeWidth:2});
+                                </script>
+                        </div>
                     </div>
-                    <div>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                г) <iframe src="jsxgraph/graph_01.html" width="100%" height="320" frameborder="0"></iframe>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        Бидејки е `-f(x) = f(-x)`, односно е симетрична во однос на кординатниот почеток, функцијате е не-парна.
-                    </div>
-                    <div>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
-                д) <iframe src="jsxgraph/graph_13.html" width="100%" height="320" frameborder="0"></iframe>
-                <details>
-                    <summary class="mb-3">Решение</summary>
-                    <div>
-                        Бидејки функцијата не е симетрична во однос на `y` оската ниту е симетрична во однос на кординатниот 
-                        почеток, функцијате не е ниту парна ниту не-парна.
-                    </div>
-                    <div>
-                        <p>
-                            `&#x25A0`
-                        </p>
-                    </div>
-                </details>
             </p>
 
             <p id='def_2'>     
@@ -779,8 +947,8 @@
                     а) `f(x) = (x^5 - x)/(1 + x^2)`
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
+                        <div class='row py-3'>
+                            <div class='col-7'>
                                 <p>
                                         `f(-x) = (-x^5 - (-x))/((1 + (-x^2))`
                                     </p>
@@ -800,16 +968,30 @@
                                         `&#x25A0`
                                 </p>
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_14.html" width="100%" height="220" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                <div id="jxgbox40" class="jxgbox" style="width:200px; height:200px"></div>
+
+                                <script>
+                                
+                                        const board40 = JXG.JSXGraph.initBoard('jxgbox40', {
+                                            boundingbox: [-10, 10, 10, -10],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        }); 
+                                
+                                        graph40 = board40.create('functiongraph', [function(x){ return (x**5 - x)/(1 + x**2); },-10, 10] , {strokeColor:'#0000ff',strokeWidth:2});
+                                                                   
+                                            
+                                </script>
                             </div>
                         </div>
                     </details>
                     б) `f(x) = 2`
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
+                        <div class='row py-3'>
+                            <div class='col-7'>
                                 <p>
                                         `f(-x) = 2`
                                     </p>
@@ -823,16 +1005,29 @@
                                         `&#x25A0`
                                 </p>
                             </div>
-                            <div class='col-7'>
-                                <iframe src="jsxgraph/graph_15.html" width="100%" height="220" frameborder="0"></iframe>
+                            <div class='col-5'>
+                                <div id="jxgbox50" class="jxgbox" style="width:200px; height:200px"></div>
+
+                                <script>
+                                
+                                        const board50 = JXG.JSXGraph.initBoard('jxgbox50', {
+                                            boundingbox: [-10, 10, 10, -10],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        }); 
+                                
+                                        graph50 = board50.create('functiongraph', [function(x){ return 2; },-10, 10] , {strokeColor:'#0000ff',strokeWidth:2});                            
+                                            
+                                </script>
                             </div>
                         </div>
                     </details>
                     в) `f(x) = abs(x)/x`
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
+                        <div class='row py-3'>
+                            <div class='col-7'>
                                 <p>
                                         `f(-x) = abs(-x)/-x`
                                     </p>
@@ -852,7 +1047,7 @@
                                         `&#x25A0`
                                 </p>
                             </div>
-                            <div class='col-7'>
+                            <div class='col-5'>
                                 <iframe src="jsxgraph/graph_16.html" width="100%" height="220" frameborder="0"></iframe>
                             </div>
                         </div>
@@ -860,8 +1055,8 @@
                     г) `f(x) = (x - 2)^2`
                     <details>
                         <summary class="mb-3">Решение</summary>
-                        <div class='row'>
-                            <div class='col-5'>
+                        <div class='row py-3'>
+                            <div class='col-7'>
                                 <p>
                                         `f(-x) = (-x - 2)^2`
                                     </p>
@@ -878,7 +1073,7 @@
                                         `&#x25A0`
                                 </p>
                             </div>
-                            <div class='col-7'>
+                            <div class='col-5'>
                                 <iframe src="jsxgraph/graph_17.html" width="100%" height="220" frameborder="0"></iframe>
                             </div>
                         </div>
@@ -953,12 +1148,15 @@
 <!-- Optional JavaScript -->
 <script src="js/docs.min.js"></script>
 
-<!-- modal onload-->
+<!-- jsxgrapf -->
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+<!-- modal onload
 <script>
     $(function() {
         $("#myModal").modal();
     });
-</script>
+</script>-->
 
 </body>
 </html>
