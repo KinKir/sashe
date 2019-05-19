@@ -1000,6 +1000,58 @@
                             </div>
                         </details>
 
+                        <h5 id=''>
+                            16 08 2017, II група, Задача 3:
+                        </h5>
+                        <p>г. <i class="material-icons">filter_1</i> <i class="material-icons">filter_1</i> <i
+                                class="material-icons">filter_1</i> Да се најде инверзната функција на функцијата `f(x)
+                            = -x + 5, x in [-1, 5]`. Да се наведе формулата со која е наведена, доменот и да се скицира
+                            нејзиниот график.
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <strong>Чекор 1.</strong> Ја запишуваме равенката `y = f(x)`<br>
+                                    `y = -x + 5`<br>
+                                    <strong>Чекор 2.</strong> Ја решаваме равенката по `x` како функција од `y`<br>
+                                    `x = -y + 5`<br>
+                                    <strong>Чекор 3.</strong> Добиваме равенство `x = f^(−1)(y)`, што дава формула за
+                                    `f^(-1)` со `y` како независна променлива.<br>
+                                    `f^(-1)(y) = -y + 5`<br>
+                                    <strong>Чекор 4.</strong> Бидејќи сакаме `x` да биде независна променлива го
+                                    заменуваме `x` со `y`, и обратно, за да ја добиеме формулата:.<br>
+                                    `f^(-1)(x) = -x + 5`<br>
+                                    ------------------------------------------------------<br>
+                                    Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
+                                    функцијата `f` e `D_f = [-1, 5]`, рангот на функцијата `f` е `R_f = [-(-1) + 5, -5 + 5] = [0, 6]`. Од тука `D_(f^(-1)) = [0, 6]`.
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+                                    <div id="jxgbox16" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+
+                                        const board16 = JXG.JSXGraph.initBoard('jxgbox16', {
+                                            boundingbox: [-10,10, 10, -10],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+
+                                        graph = board16.create('functiongraph', [function (x) { return (-x + 5); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
+                                        graph = board16.create('functiongraph', [function (x) { return (-x + 5); }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board16.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                    </script>
+
+                                </div>
+                            </div>
+                        </details>
+
                     </div>
 
                     <!-- 16 08 2017, III група, Задача 1:-->
@@ -1237,6 +1289,57 @@
                                     `h(x) = f(g(x))`.<br>
                                     `h(x) = f@g = f(g(x))`каде `g(x) = root(5)x` и `f(x) = 1/5 + x`<br>
                                     `h(x) = f(1/5 + g(x))`
+                                </div>
+                            </div>
+                        </details>
+
+                        <h5 id=''>
+                            16 08 2017, III група, Задача 3:
+                        </h5>
+                        <p>г. <i class="material-icons">filter_1</i> <i class="material-icons">filter_1</i> <i
+                                class="material-icons">filter_1</i> Да се најде инверзната функција на функцијата `f(x)
+                            = 2x - 3, x in [2, -3]`. Да се наведе формулата со која е наведена, доменот и да се скицира
+                            нејзиниот график.
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <strong>Чекор 1.</strong> Ја запишуваме равенката `y = f(x)`<br>
+                                    `y = 2x -3`<br>
+                                    <strong>Чекор 2.</strong> Ја решаваме равенката по `x` како функција од `y`<br>
+                                    `x = (y + 3)/2`<br>
+                                    <strong>Чекор 3.</strong> Добиваме равенство `x = f^(−1)(y)`, што дава формула за
+                                    `f^(-1)` со `y` како независна променлива.<br>
+                                    `f^(-1)(y) = (y + 3)/2`<br>
+                                    <strong>Чекор 4.</strong> Бидејќи сакаме `x` да биде независна променлива го
+                                    заменуваме `x` со `y`, и обратно, за да ја добиеме формулата:.<br>
+                                    `f^(-1)(x) = (x + 3)/2`<br>
+                                    ------------------------------------------------------<br>
+                                    Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
+                                    функцијата `f` e `D_f = [2, -3]`, рангот на функцијата `f` е `R_f = [2 * 2 - 3, 2 * (-3) - 3] = [-9, 1]`. Од тука `D_(f^(-1)) = [-9, 1]`.                               </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+                                    <div id="jxgbox26" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+
+                                        const board26 = JXG.JSXGraph.initBoard('jxgbox26', {
+                                            boundingbox: [-10,10, 10, -10],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+
+                                        graph = board26.create('functiongraph', [function (x) { return (2*x - 3); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
+                                        graph = board26.create('functiongraph', [function (x) { return (x + 3)/2; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board26.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                    </script>
+
                                 </div>
                             </div>
                         </details>
@@ -1480,6 +1583,57 @@
                             </div>
                         </details>
 
+                        <h5 id=''>
+                            16 08 2017, IV група, Задача 3:
+                        </h5>
+                        <p>г. <i class="material-icons">filter_1</i> <i class="material-icons">filter_1</i> <i
+                                class="material-icons">filter_1</i> Да се најде инверзната функција на функцијата `f(x)
+                            = -3x + 1, x in [-3, 1]`. Да се наведе формулата со која е наведена, доменот и да се скицира
+                            нејзиниот график.
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <strong>Чекор 1.</strong> Ја запишуваме равенката `y = f(x)`<br>
+                                    `y = -3x + 1`<br>
+                                    <strong>Чекор 2.</strong> Ја решаваме равенката по `x` како функција од `y`<br>
+                                    `x = (-y + 1)/3`<br>
+                                    <strong>Чекор 3.</strong> Добиваме равенство `x = f^(−1)(y)`, што дава формула за
+                                    `f^(-1)` со `y` како независна променлива.<br>
+                                    `f^(-1)(y) = (-y + 1)/3`<br>
+                                    <strong>Чекор 4.</strong> Бидејќи сакаме `x` да биде независна променлива го
+                                    заменуваме `x` со `y`, и обратно, за да ја добиеме формулата:.<br>
+                                    `f^(-1)(x) = (-x + 1)/3`<br>
+                                    ------------------------------------------------------<br>
+                                    Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
+                                    функцијата `f` e `D_f = [-3, 1]`, рангот на функцијата `f` е `R_f = [(-3 + 1)/3, (1 + 1)/3] = [-2/3, 2/3]`. Од тука `D_(f^(-1)) = [-2/3, 2/3]`.                               </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+                                    <div id="jxgbox36" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+
+                                        const board36 = JXG.JSXGraph.initBoard('jxgbox36', {
+                                            boundingbox: [-10,10, 10, -10],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+
+                                        graph = board36.create('functiongraph', [function (x) { return -3*x + 1; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
+                                        graph = board36.create('functiongraph', [function (x) { return (-x + 1)/3; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board36.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                    </script>
+
+                                </div>
+                            </div>
+                        </details>
+
                     </div>
 
 
@@ -1495,136 +1649,138 @@
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div class='row py-3'>
-                                <div class='col-7'>
+                                <div class='col-8'>
                                     <strong>Чекор 1: </strong>Функцијата `f(x)` ја претставуваме како збир од две
                                     функции
                                     `f(x)
                                     = g(x) + h(x)` каде `g(x)= -x^2` а `h(x) = 2x`. Прво ја цртаме функцијата `y = x^2`
                                 </div>
-                                <div class='col-5'>
+                                <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
                                         href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
 
-                                    <div id="jxgbox201" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <div id="jxgbox40" class="jxgbox" style="width:240px; height:240px"></div>
 
                                     <script>
 
-                                        const board20 = JXG.JSXGraph.initBoard('jxgbox201', {
+                                        const board40 = JXG.JSXGraph.initBoard('jxgbox40', {
                                             boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board20.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                        graph = board40.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 });
 
 
                                     </script>
                                 </div>
                             </div>
                             <div class='row py-3'>
-                                <div class='col-7'>
+                                <div class='col-8'>
                                     <strong>Чекор 2: </strong>Со множење на функцијат со `-1`<br>
                                     функцијате е : `y = -f(x) = -x^2`<br>
                                     Со ова се врши рефлексија по `x`-оската<br>
                                 </div>
-                                <div class='col-5'>
+                                <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
                                         href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
 
-                                    <div id="jxgbox21" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <div id="jxgbox41" class="jxgbox" style="width:240px; height:240px"></div>
 
                                     <script>
 
-                                        const board21 = JXG.JSXGraph.initBoard('jxgbox21', {
+                                        const board41 = JXG.JSXGraph.initBoard('jxgbox41', {
                                             boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board21.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
-                                        graph = board21.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+                                        graph = board41.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                        graph = board41.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
 
 
                                     </script>
                                 </div>
                             </div>
                             <div class='row py-3'>
-                                <div class='col-7'>
+                                <div class='col-8'>
                                     <strong>Чекор 3: </strong>Сега ја цртаме функцијата `y = x`<br>
                                 </div>
-                                <div class='col-5'>
+                                <div class='col-4'>
 
-                                    <div id="jxgbox22" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <div id="jxgbox42" class="jxgbox" style="width:240px; height:240px"></div>
 
                                     <script>
 
-                                        const board22 = JXG.JSXGraph.initBoard('jxgbox22', {
+                                        const board42 = JXG.JSXGraph.initBoard('jxgbox42', {
                                             boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board22.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
-                                        graph = board22.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
-                                        graph = board22.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board42.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                        graph = board42.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+                                        graph = board42.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
                                     </script>
                                 </div>
                             </div>
                             <div class='row py-3'>
-                                <div class='col-7'>
+                                <div class='col-8'>
                                     <strong>Чекор 4: </strong>Со множење со позитивна констанра `c` на функцијата
                                     `f(x)`,
                                     функцијате е : `y = 2f(x)= 2x`<br>
                                     со што се добива вертикално истегање со фактор 2.<br>
                                 </div>
-                                <div class='col-5'>
+                                <div class='col-4'>
 
-                                    <div id="jxgbox23" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <div id="jxgbox43" class="jxgbox" style="width:240px; height:240px"></div>
 
                                     <script>
 
-                                        const board23 = JXG.JSXGraph.initBoard('jxgbox23', {
+                                        const board43 = JXG.JSXGraph.initBoard('jxgbox43', {
                                             boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board23.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
-                                        graph = board23.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
-                                        graph = board23.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
-                                        graph = board23.create('functiongraph', [function (x) { return 2 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board43.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                        graph = board43.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+                                        graph = board43.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
+                                        graph = board43.create('functiongraph', [function (x) { return 2 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
 
 
                                     </script>
                                 </div>
                             </div>
                             <div class='row py-3'>
-                                <div class='col-7'>
+                                <div class='col-8'>
                                     <strong>Чекор 5: </strong>Сега ги собираме функциите `g(x)` и `h(x)` ,
                                     функцијате е : `y = g(x) + h(x) = -x^2 + 2x`<br>
                                 </div>
-                                <div class='col-5'>
+                                <div class='col-4'>
 
-                                    <div id="jxgbox24" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <div id="jxgbox44" class="jxgbox" style="width:240px; height:240px"></div>
 
                                     <script>
 
-                                        const board24 = JXG.JSXGraph.initBoard('jxgbox24', {
+                                        const board44 = JXG.JSXGraph.initBoard('jxgbox44', {
                                             boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board24.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#0000ff', strokeWidth: .5 });
-                                        graph = board24.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                        graph = board24.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
-                                        graph = board24.create('functiongraph', [function (x) { return 2 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 2 });
-                                        graph = board24.create('functiongraph', [function (x) { return -(x ** 2) + 2 * x; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 4 });
+                                        graph = board44.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#0000ff', strokeWidth: .5 });
+                                        graph = board44.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        graph = board44.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
+                                        graph = board44.create('functiongraph', [function (x) { return 2 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 2 });
+                                        graph = board44.create('functiongraph', [function (x) { return -(x ** 2) + 2 * x; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 4 });
 
                                     </script>
                                 </div>
