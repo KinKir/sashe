@@ -75,12 +75,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../calculus-exercises/functions.html">Вежби</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../calculus-colloquium/functions.html">Колоквиум</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="exam.html">Испитни прашања</a>
-                </li>
             </ul>
         </div>
     </header>
@@ -449,12 +443,12 @@
                                     <script>
 
                                         const board2009 = JXG.JSXGraph.initBoard('jxgbox2009', {
-                                            boundingbox: [-2, .4, 20, -.2],
+                                            boundingbox: [-2, .4, 40, -.2],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
-                                        graph = board2009.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 6); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
+                                        graph = board2009.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 6); }, -10, 50], { strokeColor: '#00ff00', strokeWidth: 2 });
                                     </script>
                                 </div>
                             </div>
@@ -733,7 +727,8 @@
                                     `f^(-1)(x) = (x + 1) / 2`<br>
                                     ------------------------------------------------------<br>
                                     Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
-                                    функцијата `f` e `D_f = [-1, 2]`, рангот на функцијата `f` е `R_f = [2*(-1)-1 , 2*2 -1] = [-3, 3]`. Од тука `D_(f^(-1)) = [-3, 3]`.
+                                    функцијата `f` e `D_f = [-1, 2]`, рангот на функцијата `f` е `R_f = [2*(-1)-1 , 2*2
+                                    -1] = [-3, 3]`. Од тука `D_(f^(-1)) = [-3, 3]`.
                                 </div>
                                 <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
@@ -746,15 +741,23 @@
                                     <script>
 
                                         const board06 = JXG.JSXGraph.initBoard('jxgbox06', {
-                                            boundingbox: [-10,10, 10, -10],
+                                            boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board06.create('functiongraph', [function (x) { return (2 * x - 1); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
-                                        graph = board06.create('functiongraph', [function (x) { return (x + 1)/2; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board06.create('functiongraph', [function (x) { return (2 * x - 1); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 }, { size: 2, face: '[]', name: 'f(x)' });
+                                        graph = board06.create('functiongraph', [function (x) { return (x + 1) / 2; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
                                         graph = board06.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                        // Create a undefine point for f(x)
+                                        p1 = board06.create('point', [-1.0, -3.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        p2 = board06.create('point', [2, 3.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        // Create a undefine point for inverse f(x)
+                                        p3 = board06.create('point', [-3.0, -1.0], {strokeColor:'#ff0000', fillColor:'#ffffff'});
+                                        p4 = board06.create('point', [3, 2.0], {strokeColor:'#ff0000', fillColor:'#ffffff'});
+                                        
+
                                     </script>
 
                                 </div>
@@ -1024,7 +1027,8 @@
                                     `f^(-1)(x) = -x + 5`<br>
                                     ------------------------------------------------------<br>
                                     Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
-                                    функцијата `f` e `D_f = [-1, 5]`, рангот на функцијата `f` е `R_f = [-(-1) + 5, -5 + 5] = [0, 6]`. Од тука `D_(f^(-1)) = [0, 6]`.
+                                    функцијата `f` e `D_f = [-1, 5]`, рангот на функцијата `f` е `R_f = [-(-1) + 5, -5 +
+                                    5] = [0, 6]`. Од тука `D_(f^(-1)) = [0, 6]`.
                                 </div>
                                 <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
@@ -1037,15 +1041,21 @@
                                     <script>
 
                                         const board16 = JXG.JSXGraph.initBoard('jxgbox16', {
-                                            boundingbox: [-10,10, 10, -10],
+                                            boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board16.create('functiongraph', [function (x) { return (-x + 5); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
+                                        graph = board16.create('functiongraph', [function (x) { return (-x + 5); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 }, { size: 2, face: '[]', name: 'f(x)' });
                                         graph = board16.create('functiongraph', [function (x) { return (-x + 5); }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
                                         graph = board16.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                        // Create a undefine point for f(x)
+                                        p1 = board16.create('point', [-1.0, 6.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        p2 = board16.create('point', [5, 0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        // Create a undefine point for inverse f(x)
+                                        p3 = board16.create('point', [0, 5.0], {strokeColor:'#ff0000', fillColor:'#ffffff'});
+                                        p4 = board16.create('point', [6, -1.0], {strokeColor:'#ff0000', fillColor:'#ffffff'});
                                     </script>
 
                                 </div>
@@ -1317,7 +1327,8 @@
                                     `f^(-1)(x) = (x + 3)/2`<br>
                                     ------------------------------------------------------<br>
                                     Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
-                                    функцијата `f` e `D_f = [2, -3]`, рангот на функцијата `f` е `R_f = [2 * 2 - 3, 2 * (-3) - 3] = [-9, 1]`. Од тука `D_(f^(-1)) = [-9, 1]`.                               </div>
+                                    функцијата `f` e `D_f = [2, -3]`, рангот на функцијата `f` е `R_f = [2 * 2 - 3, 2 *
+                                    (-3) - 3] = [-9, 1]`. Од тука `D_(f^(-1)) = [-9, 1]`. </div>
                                 <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
                                         href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
@@ -1329,15 +1340,21 @@
                                     <script>
 
                                         const board26 = JXG.JSXGraph.initBoard('jxgbox26', {
-                                            boundingbox: [-10,10, 10, -10],
+                                            boundingbox: [-10, 10, 10, -10],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board26.create('functiongraph', [function (x) { return (2*x - 3); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
-                                        graph = board26.create('functiongraph', [function (x) { return (x + 3)/2; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board26.create('functiongraph', [function (x) { return (2 * x - 3); }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 }, { size: 2, face: '[]', name: 'f(x)' });
+                                        graph = board26.create('functiongraph', [function (x) { return (x + 3) / 2; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
                                         graph = board26.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                        // Create a undefine point for f(x)
+                                        p1 = board26.create('point', [2, 1.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        p2 = board26.create('point', [-3, -9.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        // Create a undefine point for inverse f(x)
+                                        p3 = board26.create('point', [-9, -3], {strokeColor:'#ff0000', fillColor:'#ffffff'});
+                                        p4 = board26.create('point', [1, 2.0], {strokeColor:'#ff0000', fillColor:'#ffffff'});
                                     </script>
 
                                 </div>
@@ -1607,7 +1624,7 @@
                                     `f^(-1)(x) = (-x + 1)/3`<br>
                                     ------------------------------------------------------<br>
                                     Доменот на инверзната функција `f^(-1)` е рангот на функцијата `f`. Како доменот на
-                                    функцијата `f` e `D_f = [-3, 1]`, рангот на функцијата `f` е `R_f = [(-3 + 1)/3, (1 + 1)/3] = [-2/3, 2/3]`. Од тука `D_(f^(-1)) = [-2/3, 2/3]`.                               </div>
+                                    функцијата `f` e `D_f = [-3, 1]`, рангот на функцијата `f` е `R_f = [(-3(-3) + 1, -3*1 + 1] = [10, -2]`. Од тука `D_(f^(-1)) = [10, -2]`. </div>
                                 <div class='col-4'>
                                     <link rel="stylesheet" type="text/css"
                                         href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
@@ -1619,15 +1636,21 @@
                                     <script>
 
                                         const board36 = JXG.JSXGraph.initBoard('jxgbox36', {
-                                            boundingbox: [-10,10, 10, -10],
+                                            boundingbox: [-12, 12, 12, -12],
                                             showCopyright: false,
                                             showNavigation: false,
                                             axis: true,
                                         });
 
-                                        graph = board36.create('functiongraph', [function (x) { return -3*x + 1; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3} , { size:2, face:'[]', name:'f(x)' });
-                                        graph = board36.create('functiongraph', [function (x) { return (-x + 1)/3; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        graph = board36.create('functiongraph', [function (x) { return -3 * x + 1; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 }, { size: 2, face: '[]', name: 'f(x)' });
+                                        graph = board36.create('functiongraph', [function (x) { return (-x + 1) / 3; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
                                         graph = board36.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .2 });
+                                        // Create a undefine point for f(x)
+                                        p1 = board36.create('point', [-3, 10.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        p2 = board36.create('point', [1, -2.0], {strokeColor:'#00ff00', fillColor:'#ffffff'});
+                                        // Create a undefine point for inverse f(x)
+                                        p3 = board36.create('point', [10, -3], {strokeColor:'#ff0000', fillColor:'#ffffff'});
+                                        p4 = board36.create('point', [-2, 1], {strokeColor:'#ff0000', fillColor:'#ffffff'});
                                     </script>
 
                                 </div>
@@ -1645,7 +1668,8 @@
                         </h5>
                         <p>a. <i class="material-icons">filter_4</i> Користејќи го графикот на `y = x^2`, да се нацрта
                             (постепено во 4 чекори) графикот на
-                            функцијата `y = -x^2 + 2x`</p>
+                            функцијата `y = -x^2 + 2x`
+                        </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div class='row py-3'>
@@ -1789,7 +1813,296 @@
                                 </p>
                             </div>
                         </details>
+                        <p>б. <i class="material-icons">filter_4</i> Нека `f(x) = 2sqrt(x-1)` и `g(x) = sqrt(x-1)`. Да
+                            се определи формулата и доменот на `f/g` и да се скицира графикот на `y = (f/g)(x)`.
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-0'>
+                                <div class='col-8'>
+                                    `(f/g)(x) = f(x)/g(x), D_(f/g) = D_f nn D_g \ {x in D_g | g(x) = 0}`<br>
+                                    `y = (2sqrt(x-1))/sqrt(x-1) = 2`
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+                                    <div id="jxgbox45" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script>
+
+                                        const board45 = JXG.JSXGraph.initBoard('jxgbox45', {
+                                            boundingbox: [-8, 8, 8, -8],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+
+                                        graph = board45.create('functiongraph', [function (x) { return  2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 });
+                                        // Create a free point using affine euclidean coordinates
+                                        var p1 = board45.create('point', [1.0, 2.0], {fillColor:'#ffffff'});
+
+                                    </script>
+
+                                </div>
+                            </div>
+                        </details>
+
+                        <h5 id="">
+                            1 јуни 2018, I група, Задача 3:
+                        </h5>
+                        <p>
+                            a. <i class="material-icons">filter_4</i> Да се провери точноста на тврдењето и се напише ДА
+                            или НЕ пред тврдењето.
+                        </p>
+                        <div class='row -py-3'>
+                            <div class='col-12'>
+                                <p>
+                                    <i class="material-icons">done</i> `arcsin(sin(pi/7)) = pi/7`<br>
+                                    Според дефиниција `sin(alpha) = a/c` и `arcsin(a/b) = alpha`, па тврдењето е точно.
+                                </p>
+                                <p>
+                                    <i class="material-icons">done</i> `arcsin(sin(pi)) = pi`<br>
+                                    Според дефиниција `sin(alpha) = a/c` и `arcsin(a/b) = alpha`, па тврдењето е точно.
+                                </p>
+                                <p>
+                                    <i class="material-icons">done</i> `sin(arcsin(1/7)) = 1/7`<br>
+                                    Според дефиниција `sin(alpha) = a/c` и `arcsin(a/b) = alpha`, па тврдењето е точно.
+                                </p>
+                                <p>
+                                    <i class="material-icons">done</i> `sin(arcsin(7)) = 7`<br>
+                                    Според дефиниција `sin(alpha) = a/c` и `arcsin(a/b) = alpha`, па тврдењето е точно.
+                                </p>
+
+                            </div>
+                        </div>
+
+
                     </div>
+
+                    <!--1 јуни 2018, II група, Задача 1:-->
+                    <div class='col-12'>
+
+                            <h5 id="">
+                                1 јуни 2018, II група, Задача 1:
+                            </h5>
+                            <p>a. <i class="material-icons">filter_4</i> Користејќи го графикот на `y = x^2`, да се нацрта
+                                (постепено во 4 чекори) графикот на
+                                функцијата `y = -x^2 + 4x`
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <strong>Чекор 1: </strong>Функцијата `f(x)` ја претставуваме како збир од две
+                                        функции
+                                        `f(x)
+                                        = g(x) + h(x)` каде `g(x)= -x^2` а `h(x) = 2x`. Прво ја цртаме функцијата `y = x^2`
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    
+                                        <div id="jxgbox50" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board50 = JXG.JSXGraph.initBoard('jxgbox50', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board50.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 });
+    
+    
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <strong>Чекор 2: </strong>Со множење на функцијат со `-1`<br>
+                                        функцијате е : `y = -f(x) = -x^2`<br>
+                                        Со ова се врши рефлексија по `x`-оската<br>
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    
+                                        <div id="jxgbox51" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board51 = JXG.JSXGraph.initBoard('jxgbox51', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board51.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                            graph = board51.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+    
+    
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <strong>Чекор 3: </strong>Сега ја цртаме функцијата `y = x`<br>
+                                    </div>
+                                    <div class='col-4'>
+    
+                                        <div id="jxgbox52" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board52 = JXG.JSXGraph.initBoard('jxgbox52', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board52.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                            graph = board52.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+                                            graph = board52.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <strong>Чекор 4: </strong>Со множење со позитивна констанра `c` на функцијата
+                                        `f(x)`,
+                                        функцијате е : `y = 4f(x)= 4x`<br>
+                                        со што се добива вертикално истегање со фактор 4.<br>
+                                    </div>
+                                    <div class='col-4'>
+    
+                                        <div id="jxgbox53" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board53 = JXG.JSXGraph.initBoard('jxgbox53', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board53.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: .5 });
+                                            graph = board53.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 3 });
+                                            graph = board53.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
+                                            graph = board53.create('functiongraph', [function (x) { return 4 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 3 });
+    
+    
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <strong>Чекор 5: </strong>Сега ги собираме функциите `g(x)` и `h(x)` ,
+                                        функцијате е : `y = g(x) + h(x) = -x^2 + 4x`<br>
+                                    </div>
+                                    <div class='col-4'>
+    
+                                        <div id="jxgbox54" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board54 = JXG.JSXGraph.initBoard('jxgbox54', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board54.create('functiongraph', [function (x) { return x ** 2; }, -10, 10], { strokeColor: '#0000ff', strokeWidth: .5 });
+                                            graph = board54.create('functiongraph', [function (x) { return -(x ** 2); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            graph = board54.create('functiongraph', [function (x) { return x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: .5 });
+                                            graph = board54.create('functiongraph', [function (x) { return 4 * x; }, -10, 10], { strokeColor: '#ff0000', strokeWidth: 2 });
+                                            graph = board54.create('functiongraph', [function (x) { return -(x ** 2) + 4 * x; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 4 });
+    
+                                        </script>
+                                    </div>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            <p>б. <i class="material-icons">filter_1</i> <i class="material-icons">filter_3</i> <i class="material-icons">filter_2</i>Нека `f(x) = 3sqrt(x-2)` и `g(x) = sqrt(x-2)`. Да
+                                се определи формулата и доменот на `f/g` и да се скицира графикот на `y = (f/g)(x)`.
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-0'>
+                                    <div class='col-8'>
+                                        `(f/g)(x) = f(x)/g(x), D_(f/g) = D_f nn D_g \ {x in D_g | g(x) = 0}`<br>
+                                        `y = (3sqrt(x-2))/sqrt(x-2) = 3`
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    
+                                        <div id="jxgbox55" class="jxgbox" style="width:240px; height:240px"></div>
+    
+                                        <script>
+    
+                                            const board55 = JXG.JSXGraph.initBoard('jxgbox55', {
+                                                boundingbox: [-8, 8, 8, -8],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+    
+                                            graph = board55.create('functiongraph', [function (x) { return  3; }, -10, 10], { strokeColor: '#00ff00', strokeWidth: 3 });
+                                            // Create a free point using affine euclidean coordinates
+                                            var p1 = board55.create('point', [2, 3.0], {fillColor:'#ffffff'});
+    
+                                        </script>
+    
+                                    </div>
+                                </div>
+                            </details>
+    
+                            <h5 id="">
+                                1 јуни 2018, II група, Задача 3:
+                            </h5>
+                            <p>
+                                a. <i class="material-icons">filter_4</i> Да се провери точноста на тврдењето и се напише ДА
+                                или НЕ пред тврдењето.
+                            </p>
+                            <div class='row -py-3'>
+                                <div class='col-12'>
+                                    <p>
+                                        <i class="material-icons">done</i> `cos(arccos(6)) = 6`<br>
+                                        Според дефиниција `cos(alpha) = b/c` и `arccos(b/c) = alpha`, па тврдењето е точно.
+                                    </p>
+                                    <p>
+                                        <i class="material-icons">done</i> `cos(arccos(1/6)) = 1/6`<br>
+                                        Според дефиниција `cos(alpha) = b/c` и `arccos(b/c) = alpha`, па тврдењето е точно.
+                                    </p>
+                                    <p>
+                                        <i class="material-icons">done</i> `arccos(cos(pi/6)) = pi/6`<br>
+                                        Според дефиниција `cos(alpha) = b/c` и `arcc0s(b/c) = alpha`, па тврдењето е точно.
+                                    </p>
+                                    <p>
+                                        <i class="material-icons">done</i> `arccos(cos(-pi)) = -pi`<br>
+                                        Според дефиниција `cos(alpha) = b/c` и `arccos(b/c) = alpha`, па тврдењето е точно.
+                                    </p>
+    
+                                </div>
+                            </div>
+    
+    
+                        </div>
 
                 </div>
 
