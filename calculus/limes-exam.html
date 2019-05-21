@@ -410,11 +410,10 @@
                             </details>
                     </div>
 
-
                     <!-- 01-06-2012 група 2 Задача 2:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            08-2012 група 2:
+                            08-2012 група 2: Задача 2
                         </h5>
                         <p>
                             <i class="material-icons">filter_3</i> Да се определи (без лопиталово правило):<br>
@@ -461,14 +460,14 @@
                         </details>
                     </div>
 
-                    <!-- 16 08 2012, II група, Задача 4:-->
+                    <!-- 08 2012, II група, Задача 4:-->
                     <div class='col-12'>
                             <h5 id=''>
                                 08-2012 група 2 -  Задача 4:
                             </h5>
                             <p>
                                 <i class="material-icons">filter_5</i> Да се определи:<br>
-                                `lim_(x ->0)(cos3x)^(2/x)`
+                                `lim_(x ->0) x^tan(x)`
                             </p>
                             <details>
                                 <summary class="mb-3">Решение</summary>
@@ -479,13 +478,13 @@
                                                 Ќе го примениме експоненциалното правило: `a^x = e^ln(a^x) = e^(xln(a))`
                                             </p>
                                             <p>
-                                                `(cos3x)^(2/x) = e^ln((cos3x)^(2/3)) = e^((2/3)ln(cos3x))`.
+                                                `x^tan(x) = e^ln(x^tan(x)) = e^(tan(x)ln(x))`.
                                             </p>
                                             <p>
-                                                `lim_(x -> 0)(cos3x)^(2/x)`<br>
-                                                `= lim_(x -> 0)e^((2/3)ln(cos3x))`<br>
-                                                `= lim_(x -> 0)e^((2/3)ln(cos0))`<br>
-                                                `= lim_(x -> 0)e^((2/3)ln(1))`<br>
+                                                `lim_(x -> 0)x^tan(x)`<br>
+                                                `= lim_(x -> 0)e^ln(x^tan(x))`<br>
+                                                `= lim_(x -> 0)e^(tan(x)ln(x))`<br>
+                                                `= lim_(x -> 0)e^(0 * -oo)`<br>
                                                 `= lim_(x -> 0)e^0`<br>
                                                 `= lim_(x -> 0) 1`<br>
                                                 `= 1`<br>
@@ -494,14 +493,12 @@
                                     </div>
                                 </div>
                             </details>
-                    </div>
+                    </div>                    
 
-
-
-                    <!-- 1-02-2012 група 3 Задача 2:-->
+                    <!-- 08-2012 група III Задача 2:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            08-2012 група 3:
+                            08-2012 група 3: Задача 2
                         </h5>
                         <p>
                             <i class="material-icons">filter_3</i> Да се определи (без лопиталово правило):<br>
@@ -547,10 +544,45 @@
                         </details>
                     </div>
 
-                    <!-- 16 08 2012, IV група, Задача 2:-->
+                    <!-- 08 2012, III група, Задача 4:-->
+                    <div class='col-12'>
+                            <h5 id=''>
+                                08-2012 група 3 -  Задача 4:
+                            </h5>
+                            <p>
+                                <i class="material-icons">filter_5</i> Да се определи:<br>
+                                `lim_(x ->0) x^sin(3x)`
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='row py-3'>
+                                        <div class='col-12'>
+                                            <p>
+                                                Ќе го примениме експоненциалното правило: `a^x = e^ln(a^x) = e^(xln(a))`
+                                            </p>
+                                            <p>
+                                                `x^sin(3x) = e^ln(x^sin(3x)) = e^(sin(3x)ln(x))`.
+                                            </p>
+                                            <p>
+                                                `lim_(x -> 0)x^sin(3x)`<br>
+                                                `= lim_(x -> 0)e^ln(x^sin(3x))`<br>
+                                                `= lim_(x -> 0)e^(sin(3x)ln(x))`<br>
+                                                `= lim_(x -> 0)e^(0 * -oo)`<br>
+                                                `= lim_(x -> 0)e^0`<br>
+                                                `= lim_(x -> 0) 1`<br>
+                                                `= 1`<br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                    </div> 
+
+                    <!-- 08 2012, IV група, Задача 2:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            08-2012 група 4:
+                            08-2012 група 4: Задача 2
                         </h5>
                         <p>
                             <i class="material-icons">filter_3</i> Да се определи:<br>
@@ -615,51 +647,38 @@
                         </details>
                     </div>
 
-
-                    <!--1-08-2012 група 4:-->
+                    <!-- 16 08 2012, IV група, Задача 4:-->
                     <div class='col-12'>
-                        <h5 id=''>
-                            1-08-2009 група 1:
-                        </h5>
-                        <p>
-                            <i class="material-icons">filter_4</i>За функцијата `f(x) = (sqrt(x) - 36)/(x - 36)` да се
-                            определи функцијата со идентичен график, но без
-                            прекин.
-                        </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
-                                    <p>Функцијата `f(x) = (sqrt(x) - 6)/(x - 36)` има прекин точката `x = 36`. Со
-                                        разложување на
-                                        функцијата `f(x)` се добива функија `g(x)` која има ист график но друг домен.
-                                    </p>
-                                    <p>
-                                        `f(x) = (sqrt(x) - 6)/(x - 36) = (sqrt(x) - 2)/((sqrt(x))^2 -6^2`<br>
-                                        `= (sqrt(x) - 6)/((sqrt(x) - 6)(sqrt(x) + 6))`<br>
-                                        `= 1 / (sqrt(x) + 6)`
-                                    </p>
+                            <h5 id=''>
+                                08-2012 група 4 -  Задача 4:
+                            </h5>
+                            <p>
+                                <i class="material-icons">filter_5</i> Да се определи:<br>
+                                `lim_(x ->0)(sinx)^(5x)`
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='row py-3'>
+                                        <div class='col-12'>
+                                            <p>
+                                                Ќе го примениме експоненциалното правило: `a^x = e^ln(a^x) = e^(xln(a))`
+                                            </p>
+                                            <p>
+                                                `(sinx)^(5x) = e^ln((sinx)^(5x)) = e^(5xln(sinx))`.
+                                            </p>
+                                            <p>
+                                                `lim_(x -> 0)(sinx)^(5x)`<br>
+                                                `= lim_(x -> 0)e^(5xln(sinx))`<br>
+                                                `= lim_(x -> 0)e^(5*0ln(0))`<br>
+                                                `= lim_(x -> 0)e^(0 * -oo)`<br>
+                                                `= lim_(x -> 0) e^0`<br>
+                                                `= 1`<br>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox2009" class="jxgbox" style="width:240px; height:240px"></div>
-
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-
-                                        const board2009 = JXG.JSXGraph.initBoard('jxgbox2009', {
-                                            boundingbox: [-2, .4, 40, -.2],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                        graph = board2009.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 6); }, -10, 50], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                    </script>
-                                </div>
-                            </div>
-                        </details>
+                            </details>
                     </div>
 
                 </div>
