@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href=".../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus/limes_computing.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../calculus-exercises/limes_computing.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="functions.html">
+                            Функции
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="functions.html">
+                                    Дефиниција, домен, ранг
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_new.html">
+                                    Нови функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lines.html">
+                                    Прави
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_families.html">
+                                    Фамилии од функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_inverse.html">
+                                    Инверсни функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_exp.html">
+                                    Експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_log.html">
+                                    Логаритамски функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_computing.html">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_rigorously.html">
+                                    Детална метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_continuity.html">
+                                    Непрекинатост
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes-exam.html">
+                                    Испитни задачи
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Изводи
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_rigorously.html">
+                                    Детална метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_continuity.html">
+                                    Непрекинатост
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes-exam.html">
+                                    Испитни задачи
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex1">Вежба 1</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#zero/zero">Неопределена вредност `0/0`</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex3">Вежба 3</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex5">Вежба 5</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex7">Вежба 7</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h3 id=''>
+                    Лимеси во бескрајност
+                </h3>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>
+                            <strong>Вежба 1.</strong> Да се пресмета:<br>
+                            `lim_(x -> +oo) 1/(3x + 4)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Броителот и именителот го делиме со најголемиот степен на `x`<br>
+                                            `= lim_(x -> +oo) (1/x)/((3x)/x + 4/x)`<br>
+                                            `= lim_(x -> +oo) (1/x)/(3 + 4/x)`<br>
+                                            `= lim_(x -> +oo) (1/(+oo))/(3 + 4/(+oo))`<br>
+                                            `= lim_(x -> +oo) 0/(3 + 0)`<br>
+                                            `= 0`
+                                        </p>
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox00" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
+                                                boundingbox: [-20, 1, 20, -1],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board00.create('functiongraph', [function (x) { return (1 / (3 * x + 4)); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board00.create('point', [-22, 0], { name: 'A', size: 1 });
+                                            var p2 = board00.create('point', [22, 0], { name: 'B', size: 1 });
+                                            vert_line = board00.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 2 -->
+                        <p id=''>
+                            <strong>Вежба 2.</strong> Да се пресмета:<br>
+                            `lim_(x -> +oo) [x^2(x + 1)(3 - x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Треба да се изврши множење за да се добие полином:
+                                        </p>
+                                        <p>
+                                            `= lim_(x -> +oo) [-x^4 + 2x^3 + 3x^2]`
+                                        </p>
+                                        <p>
+                                            Однесувањето на полиномна функција во бесконечност е одредедено со
+                                            однесувањето во бесконечност на нејзиниот член со највисок степен.
+                                        </p>
+                                        <p>
+                                            `=lim_(x -> +oo) (-x^4)`<br>
+                                            `= -oo`
+                                        </p>
+
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox01" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board01 = JXG.JSXGraph.initBoard('jxgbox01', {
+                                                boundingbox: [-4, 12, 4, -.3],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board01.create('functiongraph', [function (x) { return (-x) ** 4 + 2 * x ** 3 + 3 * x ** 2; }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board01.create('point', [-22, 0], { name: 'A', size: 1 });
+                                            var p2 = board01.create('point', [22, 0], { name: 'B', size: 1 });
+                                            vert_line = board01.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3 -->
+                        <p id=''>
+                                <strong class='m'>Вежба 3.</strong> Да се пресмета:<br>
+                                `lim_(x -> +oo) (3x +4)/(x-7)`
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row py-3'>
+                                        <div class='col-8'>
+                                            <p>
+                                                Броителот и именителот го делиме со најголемиот степен на `x`<br>
+                                            </p>
+                                            <p>
+                                                `= lim_(x -> +oo) ((3x)/x + 4/x)/(x/x - 7/x)`<br>
+                                                `= lim_(x -> +oo) (3 + 4/(+oo))/(1 - 7/(+oo))`<br>
+                                                `= lim_(x -> +oo) (3 + 0)/(1 - 0)`<br>
+                                                `= 3`
+                                            </p>
+                                            <p>
+                                                `=lim_(x -> +oo) (-x^4)`<br>
+                                                `= -oo`
+                                            </p>
+    
+                                        </div>
+                                        <div class='col-4'>
+                                            <link rel="stylesheet" type="text/css"
+                                                href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                            <div id="jxgbox02" class="jxgbox" style="width:240px; height:240px"></div>
+                                            <script type="text/javascript"
+                                                src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                            <script>
+    
+                                                const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
+                                                    boundingbox: [-10, 5, 10, -15],
+                                                    showCopyright: false,
+                                                    showNavigation: false,
+                                                    axis: true,
+                                                });
+                                                graph = board02.create('functiongraph', [function (x) { return (3*x + 4)/(x -7); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                                var p1 = board02.create('point', [-22, 0], { name: 'A', size: 1 });
+                                                var p2 = board02.create('point', [22, 0], { name: 'B', size: 1 });
+                                                vert_line = board02.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id=''>
+                                <strong>Вежба 4.</strong> Да се пресмета:<br>
+                                `lim_(x -> +oo) cosx`
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row py-3'>
+                                        <div class='col-3'>
+                                            <p>
+                                                Бидејки `cosx` не клони кон некоја одредена вредност кога `x` клони кон `+oo`, лимесот не постои.
+                                            </p>
+                                        </div>
+                                        <div class='col-9'>
+                                            <link rel="stylesheet" type="text/css"
+                                                href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                            <div id="jxgbox03" class="jxgbox" style="width:640px; height:240px"></div>
+                                            <script type="text/javascript"
+                                                src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                            <script>
+    
+                                                const board03 = JXG.JSXGraph.initBoard('jxgbox03', {
+                                                    boundingbox: [-3*Math.PI, 1.3, 3*Math.PI, -1.3],
+                                                    showCopyright: false,
+                                                    showNavigation: false,
+                                                    axis: true,
+                                                });
+                                                graph = board03.create('functiongraph', [function (x) { return Math.cos(x); }, -3*Math.PI, 3*Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                                var p1 = board03.create('point', [-22, 0], { name: 'A', size: 1 });
+                                                var p2 = board03.create('point', [22, 0], { name: 'B', size: 1 });
+                                                vert_line = board03.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id=''>
+                            <strong class='m'>Вежба 5.</strong> Да се пресмета:<br>
+                            `lim_(x -> +oo) (5x^4 + 5)/((x^2 - 1)(2x^3 + 3))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-7'>
+                                        <p>
+                                            Множиме во именителот за да добиеме полином.<br>
+                                        </p>
+                                        <p>
+                                            `= lim_(x -> +oo) (5x^4 + 5)/(2x^5 - 2x^3 + 3x^2 - 3)`<br>
+                                        </p>
+                                        <p>
+                                            Сега делиме со највисокиот степен на `x` во именителот:
+                                        </p>
+                                        <p>
+                                            `= lim_(x -> +oo) (5x^4/x^5 + 5/x^5)/(2x^5/x^5 - 2x^3/x^5 + 3x^2/x^5 - 3/x^5)`<br>
+                                            `= lim_(x -> +oo) (5/x + 5/x^5)/(2 - 2/x^2 + 3/x^3 - 3/x^5)`<br>
+                                            `= lim_(x -> +oo) (0 + 0)/(2 - 0 + 0 - 0)`<br>
+                                            `= 0`
+                                        </p>    
+                                    </div>
+                                    <div class='col-5'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox05" class="jxgbox" style="width:340px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board05 = JXG.JSXGraph.initBoard('jxgbox05', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board05.create('functiongraph', [function (x) { return (5*(x**4) + 5)/(2*(x**5) -2*(x**3) + 3* (x**2) - 3); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board05.create('point', [-22, 0], { name: 'A', size: 1 });
+                                            var p2 = board05.create('point', [22, 0], { name: 'B', size: 1 });
+                                            vert_line = board05.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id=''>
+                            <strong>Вежба 6.</strong> Да се пресмета:<br>
+                            `lim_(x -> -oo) x/sqrt(x^2 - 1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-7'>
+                                        <p>
+                                            Делиме со највисокиот степен на `x` во именителот:<br>
+                                        </p>
+                                        <p>
+                                            `lim_(x -> -oo) (x/x)/(sqrt(x^2 - 1)/x)`
+                                        </p>
+                                        <p>
+                                            Бидејки `x` се стреми кон `-oo` треба да го означиме со знак `-`.
+                                        </p>
+                                        <p>
+                                            `lim_(x -> -oo) 1/(sqrt(x^2 - 1)/(-x)`<br>
+                                            `lim_(x -> -oo) 1/-(sqrt(x^2/x^2 - 1/x^2)`<br>
+                                            `lim_(x -> -oo) 1/-(sqrt(1 - 1/x^2)`<br>
+                                            `lim_(x -> -oo) 1/-(sqrt(1 - 0)`<br>
+                                            `= -1`
+
+                                        </p>
+                                    </div>
+                                    <div class='col-5'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox06" class="jxgbox" style="width:340px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board06 = JXG.JSXGraph.initBoard('jxgbox06', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board06.create('functiongraph', [function (x) { return x/ Math.sqrt(x**2 - 1); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board06.create('point', [-22, -1], { name: 'A', size: 1 });
+                                            var p2 = board06.create('point', [22, -1], { name: 'B', size: 1 });
+                                            vert_line = board06.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+                        
+                        <!-- Exercise 7 -->
+                        <p id=''>
+                                <strong>Вежба 7.</strong> Да се пресмета:<br>
+                                `lim_(x -> -oo) (8x^4 + 3x - 5)/(x^2 + 1)`
+                                <details>
+                                    <summary class="mb-3">Решение</summary>
+                                    <div class='row py-3'>
+                                        <div class='col-7'>
+                                            <p>
+                                                Делиме со највисокиот степен на `x` во именителот:<br>
+                                            </p>
+                                            <p>
+                                                `= lim_(x -> -oo) ((8x^4)/x^2 + 3x/x^2 - 5/x^2)/(x^2/x^2 + 1/x^2)`<br>
+                                                `= lim_(x -> -oo) (8x^2 + 3/x - 5/x^2)/(1 + 1/x^2)`<br>
+                                                `= lim_(x -> -oo) (8x^2 + 0 - 0)/(1 + 0)`<br>
+                                                `= +oo`
+                                            </p>
+                                        </div>
+                                        <div class='col-5'>
+                                            <link rel="stylesheet" type="text/css"
+                                                href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                            <div id="jxgbox07" class="jxgbox" style="width:340px; height:240px"></div>
+                                            <script type="text/javascript"
+                                                src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                            <script>
+    
+                                                const board07 = JXG.JSXGraph.initBoard('jxgbox07', {
+                                                    boundingbox: [-5, 10, 5, -6],
+                                                    showCopyright: false,
+                                                    showNavigation: false,
+                                                    axis: true,
+                                                });
+                                                graph = board07.create('functiongraph', [function (x) { return (8*(x**4) + 3*x -5)/ (x**2 + 1); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                                var p1 = board07.create('point', [-22, -111], { name: 'A', size: 1 });
+                                                var p2 = board07.create('point', [22, -111], { name: 'B', size: 1 });
+                                                vert_line = board07.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                            </script>
+                                        </div>
+                                    </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 7 -->   
+
+                        <!-- Exercise 8 -->
+                        <p id=''>
+                            <strong>Вежба 8.</strong> Да се пресмета:<br>
+                            `lim_(x -> +oo) (sqrt(x) - x)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-7'>
+                                        <p>
+                                            Со зaмена се добива обликот `+oo - +oo`. Потребно е изразот да го упростиме:<br>
+                                        </p>
+                                        <p>
+                                            `= lim_(x -> +oo) sqrt((x))(1 - sqrt(x))`<br>
+                                            `= lim_(x -> +oo) sqrt(x) * lim_(x->-oo)(1- sqrt(x))`<br>
+                                            `= lim_(x -> +oo) sqrt(x) * lim_(x->-oo)1  - lim_(x->+oo) sqrt(x))`<br>
+                                            `= +oo * 1 -oo`<br>
+                                            `= +oo * -oo`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+                                    <div class='col-5'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox08" class="jxgbox" style="width:340px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board08 = JXG.JSXGraph.initBoard('jxgbox08', {
+                                                boundingbox: [-2, 1, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board08.create('functiongraph', [function (x) { return Math.sqrt(x) - x; }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board08.create('point', [-22, -111], { name: 'A', size: 1 });
+                                            var p2 = board08.create('point', [22, -111], { name: 'B', size: 1 });
+                                            vert_line = board08.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 8 -->   
+
+
+
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="js/docs.min.js"></script>
+</body>
+
+</html>
