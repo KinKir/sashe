@@ -65,7 +65,7 @@
         <div class="navbar-nav-scroll">
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li class="nav-item">
-                    <a class="nav-link" href="../calculus/limes_computing.html">Калкулус</a>
+                    <a class="nav-link" href="../calculus/limes_continuity.html">Калкулус</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
@@ -169,7 +169,7 @@
                                     Пресметки на лимеси
                                 </a>
                             </li>
-                            <li class="active bd-sidenav-active">
+                            <li>
                                 <a href="limes_infinity.html">
                                     Лимеси во бескрајност
                                 </a>
@@ -179,7 +179,7 @@
                                     Детална метода
                                 </a>
                             </li>
-                            <li>
+                            <li class="active bd-sidenav-active">
                                 <a href="limes_continuity.html">
                                     Непрекинатост
                                 </a>
@@ -308,29 +308,59 @@
 
             <!-- main -->
             <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-                <h3 id=''>
-                    Лимеси во бескрајност
-                </h3>
 
                 <div class="row">
                     <div class="col-md-12">
 
+                        <h3 id=''>
+                            Непрекинатост на функција
+                        </h3>
+
+                        <p>
+                            Да се одреди дали функцијата е за дадена вредност на `a`. Ако е непрекината да се пресмета
+                            вредноста
+                            на функцијата за `a`.
+                        </p>
+
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 1</strong> Функција `f` е непрекината во точка `x = c`, ако се исполнети
+                            следниве услови:<br>
+                            <ul>
+                                <li>
+                                    1. `f (x)` e дефинирана во `x=c`.
+                                </li>
+                                <li>
+                                    2. `lim_(x->c)f (x)` постои.
+                                </li>
+                                <li>
+                                    3. `lim_(x->c)f(x) = f(c)`
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Exercise 1 -->
                         <p id='ex1'>
-                            <strong>Вежба 1.</strong> Да се пресмета:<br>
-                            `lim_(x -> +oo) 1/(3x + 4)`
+                            <strong>Вежба 1.</strong> `a = 2`<br>
+                            `f(x) = {(1/(x - 2), x !=2),(3, x = 2):}`
                             <details>
                                 <summary class="mb-3">Решение</summary>
                                 <div class='row py-3'>
                                     <div class='col-8'>
                                         <p>
-                                            Броителот и именителот го делиме со најголемиот степен на `x`<br>
-                                            `= lim_(x -> +oo) (1/x)/((3x)/x + 4/x)`<br>
-                                            `= lim_(x -> +oo) (1/x)/(3 + 4/x)`<br>
-                                            `= lim_(x -> +oo) (1/(+oo))/(3 + 4/(+oo))`<br>
-                                            `= lim_(x -> +oo) 0/(3 + 0)`<br>
-                                            `= 0`
+                                            Услов 1: Функцијата да e дефинирана во `f(a)`<br>
+                                            `f(a) = 3`
                                         </p>
+                                        <p>
+                                            Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
+                                            `lim_(x->2^-) 1/(x - 2)`<br>
+                                            `= lim_(x->2^-) -1/0`<br>
+                                            `= -oo`<br>
+                                            `lim_(x->2^+) 1/(x - 2)`<br>
+                                            `= lim_(x->2^-) +1/0`<br>
+                                            `= +oo`
+                                            Лимес не постои
+                                        </p>
+                                        <p><strong>Функцијата е прекината во точката `a`</strong></p>
                                     </div>
                                     <div class='col-4'>
                                         <link rel="stylesheet" type="text/css"
@@ -341,15 +371,15 @@
                                         <script>
 
                                             const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
-                                                boundingbox: [-20, 1, 20, -1],
+                                                boundingbox: [-10, 4, 10, -1],
                                                 showCopyright: false,
                                                 showNavigation: false,
                                                 axis: true,
                                             });
-                                            graph = board00.create('functiongraph', [function (x) { return (1 / (3 * x + 4)); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            var p1 = board00.create('point', [-22, 0], { name: 'A', size: 1 });
-                                            var p2 = board00.create('point', [22, 0], { name: 'B', size: 1 });
-                                            vert_line = board00.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+
+                                            graph = board00.create('functiongraph', [function (x) { return 1 / (x - 2); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            point = board00.create('point', [2, 3], { name: 'A', size: 1 });
+
                                         </script>
                                     </div>
                                 </div>
@@ -358,332 +388,217 @@
                         <!-- /Exercise 1 -->
 
                         <!-- Exercise 2 -->
-                        <p id=''>
-                            <strong>Вежба 2.</strong> Да се пресмета:<br>
-                            `lim_(x -> +oo) [x^2(x + 1)(3 - x)]`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div class='row py-3'>
-                                    <div class='col-8'>
-                                        <p>
-                                            Треба да се изврши множење за да се добие полином:
-                                        </p>
-                                        <p>
-                                            `= lim_(x -> +oo) [-x^4 + 2x^3 + 3x^2]`
-                                        </p>
-                                        <p>
-                                            Однесувањето на полиномна функција во бесконечност е одредедено со
-                                            однесувањето во бесконечност на нејзиниот член со највисок степен.
-                                        </p>
-                                        <p>
-                                            `=lim_(x -> +oo) (-x^4)`<br>
-                                            `= -oo`
-                                        </p>
-
-                                    </div>
-                                    <div class='col-4'>
-                                        <link rel="stylesheet" type="text/css"
-                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                        <div id="jxgbox01" class="jxgbox" style="width:240px; height:240px"></div>
-                                        <script type="text/javascript"
-                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                        <script>
-
-                                            const board01 = JXG.JSXGraph.initBoard('jxgbox01', {
-                                                boundingbox: [-4, 12, 4, -.3],
-                                                showCopyright: false,
-                                                showNavigation: false,
-                                                axis: true,
-                                            });
-                                            graph = board01.create('functiongraph', [function (x) { return (-x) ** 4 + 2 * x ** 3 + 3 * x ** 2; }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            var p1 = board01.create('point', [-22, 0], { name: 'A', size: 1 });
-                                            var p2 = board01.create('point', [22, 0], { name: 'B', size: 1 });
-                                            vert_line = board01.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                        </script>
-                                    </div>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 2 -->
-
-                        <!-- Exercise 3 -->
-                        <p id=''>
-                                <strong class='m'>Вежба 3.</strong> Да се пресмета:<br>
-                                `lim_(x -> +oo) (3x +4)/(x-7)`
+                        <p id='ex1'>
+                            <strong>Вежба 2.</strong> `a = 1`<br>
+                            `f(x) = {(1 +x^2, x <= 1),(4sqrt(x)-2, x> 1):}`
                                 <details>
                                     <summary class="mb-3">Решение</summary>
                                     <div class='row py-3'>
                                         <div class='col-8'>
                                             <p>
-                                                Броителот и именителот го делиме со најголемиот степен на `x`<br>
+                                                Услов 1: Функцијата да e дефинирана во `f(a)`<br>
+                                                `f(a) = 1 + a^2 = 2`
                                             </p>
                                             <p>
-                                                `= lim_(x -> +oo) ((3x)/x + 4/x)/(x/x - 7/x)`<br>
-                                                `= lim_(x -> +oo) (3 + 4/(+oo))/(1 - 7/(+oo))`<br>
-                                                `= lim_(x -> +oo) (3 + 0)/(1 - 0)`<br>
-                                                `= 3`
+                                                Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
+                                                `lim_(x->1^-) 1 + x^2`<br>
+                                                `= lim_(x->1^-) 1 + 1`<br>
+                                                `= 2`<br>
+                                                `lim_(x->1^+) 4sqrt(x)-2`<br>
+                                                `= lim_(x->2^-) 4*1 -2`<br>
+                                                `= 2`
+                                                Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
                                             </p>
                                             <p>
-                                                `=lim_(x -> +oo) (-x^4)`<br>
-                                                `= -oo`
+                                                Услов 3: `lim_(x->a)f(x) = f(a)`<br>
+                                                `lim_(x->1)f(x) = f(1) = 2`
                                             </p>
-    
+                                            <p><strong>Функцијата е непрекината во точката `a = 1`</strong></p>
                                         </div>
                                         <div class='col-4'>
                                             <link rel="stylesheet" type="text/css"
                                                 href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                            <div id="jxgbox02" class="jxgbox" style="width:240px; height:240px"></div>
+                                            <div id="jxgbox01" class="jxgbox" style="width:240px; height:240px"></div>
                                             <script type="text/javascript"
                                                 src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
                                             <script>
-    
-                                                const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
-                                                    boundingbox: [-10, 5, 10, -15],
+
+                                                const board01 = JXG.JSXGraph.initBoard('jxgbox01', {
+                                                    boundingbox: [-10, 10, 10, -1],
                                                     showCopyright: false,
                                                     showNavigation: false,
                                                     axis: true,
                                                 });
-                                                graph = board02.create('functiongraph', [function (x) { return (3*x + 4)/(x -5); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                                var p1 = board02.create('point', [-22, 0], { name: 'A', size: 1 });
-                                                var p2 = board02.create('point', [22, 0], { name: 'B', size: 1 });
-                                                vert_line = board02.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+
+                                                graph = board01.create('functiongraph', [function (x) { return 1 + x ** 2; }, -10, 1], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                                graph = board01.create('functiongraph', [function (x) { return 4 * Math.sqrt(x) - 2; }, 1, 10], { strokeColor: '#00ff00', strokeWidth: 2 });
+                                                point = board01.create('point', [1, 2], { name: 'L(1)', size: 1 });
+
                                             </script>
                                         </div>
                                     </div>
+                                </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3 -->
+                        <p id=''>
+                            <strong>Вежба 3.</strong> `a = 0` и `a = pi`<br>
+                            `f(x) = {(2+ x^2, x <= 0),(2cosx, 0 < x <=pi), (sinx -2, pi < x):}` <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            `a = 0`
+                                        </p>
+                                        <p>
+                                            Услов 1: Функцијата да e дефинирана во `f(a)`<br>
+                                            `f(a) = 2 + a^2 = 2cos(a) = 2`
+                                        </p>
+                                        <p>
+                                            `a = 0`
+                                        </p>
+                                        <p>
+                                            Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
+                                            `lim_(x->0^-) 2 + x^2`<br>
+                                            `= lim_(x->0^-) 2 + 0^2`<br>
+                                            `= 2`<br>
+                                            `lim_(x->0^+) 2cosx`<br>
+                                            `= lim_(x->0^+) 2*1`<br>
+                                            `= 2`<br>
+                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
+                                        </p>
+                                        <p>
+                                            Услов 3: `lim_(x->a)f(x) = f(a)`<br>
+                                            `lim_(x->1)f(x) = f(0) = 2`
+                                        </p>
+                                        <p><strong>Функцијата е непрекината во точката `a = 0`</strong></p>
+                                        <p>
+                                            `a = pi`
+                                        </p>
+                                        <p>
+                                            Услов 1: Функцијата да e дефинирана во `f(a)`<br>
+                                            `f(a) = 2cos(pi) = sin(pi) -2 = -2`
+                                        </p>
+                                        <p>
+                                            `a = 0`
+                                        </p>
+                                        <p>
+                                            Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
+                                            `lim_(x->pi^-) 2cosx`<br>
+                                            `= lim_(x->0^-) 2 * -1`<br>
+                                            `= 2`<br>
+                                            `lim_(x->0^+) sinx -2`<br>
+                                            `= lim_(x->0^-) 0 - 2`<br>
+                                            `= -2`
+                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
+                                        </p>
+                                        <p>
+                                            Услов 3: `lim_(x->a)f(x) = f(a)`<br>
+                                            `lim_(x->pi)f(x) = f(0) = -2`
+                                        </p>
+                                        <p><strong>Функцијата е непрекината во точката `a = 0`</strong></p>
+
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox02" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
+                                                boundingbox: [-2 * Math.PI, 5, 2 * Math.PI, -5],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+
+                                            graph = board02.create('functiongraph', [function (x) { return 2 + x ** 2; }, -10, 0], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            graph = board02.create('functiongraph', [function (x) { return 2 * Math.cos(x); }, 0, Math.PI], { strokeColor: '#00ff00', strokeWidth: 2 });
+                                            graph = board02.create('functiongraph', [function (x) { return Math.sin(x) - 2; }, Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            point = board02.create('point', [0, 2], { name: 'L(0)', size: 1 });
+                                            point = board02.create('point', [Math.PI, -2], { name: 'L(0)', size: 1 });
+
+                                        </script>
+                                    </div>
+                                </div>
                                 </details>
                         </p>
                         <!-- /Exercise 3 -->
 
-                        <!-- Exercise 4 -->
-                        <p id=''>
-                                <strong>Вежба 4.</strong> Да се пресмета:<br>
-                                `lim_(x -> +oo) cosx`
-                                <details>
-                                    <summary class="mb-3">Решение</summary>
-                                    <div class='row py-3'>
-                                        <div class='col-3'>
-                                            <p>
-                                                Бидејки `cosx` не клони кон некоја одредена вредност кога `x` клони кон `+oo`, лимесот не постои.
-                                            </p>
-                                        </div>
-                                        <div class='col-9'>
-                                            <link rel="stylesheet" type="text/css"
-                                                href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                            <div id="jxgbox03" class="jxgbox" style="width:640px; height:240px"></div>
-                                            <script type="text/javascript"
-                                                src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                            <script>
-    
-                                                const board03 = JXG.JSXGraph.initBoard('jxgbox03', {
-                                                    boundingbox: [-3*Math.PI, 1.3, 3*Math.PI, -1.3],
-                                                    showCopyright: false,
-                                                    showNavigation: false,
-                                                    axis: true,
-                                                });
-                                                graph = board03.create('functiongraph', [function (x) { return Math.cos(x); }, -3*Math.PI, 3*Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                                var p1 = board03.create('point', [-22, 0], { name: 'A', size: 1 });
-                                                var p2 = board03.create('point', [22, 0], { name: 'B', size: 1 });
-                                                vert_line = board03.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                            </script>
-                                        </div>
+                        <p>
+                            <strong>Да се одреди вредноста на `c` така да функцијата биде непрекината секаде.</strong>
+                        </p>
+
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>
+                            <strong>Вежба 1.</strong><br>
+                            `f(x) = {(cx - 2, x <= 2),(cx^2 + 1, 2 < x):}` <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Пресметуваме лев и десен лимес:
+                                            `lim_(x->2^-) cx - 2`<br>
+                                            `= lim_(x->2^-)c*2 - 2`<br>
+                                            `= lim_(x->2^-) 2c - 2`<br>
+                                            ---------------------------
+                                            `lim_(x->2^+) cx^2 + 2`<br>
+                                            `= lim_(x->2^+)c*2^2 + 2`<br>
+                                            `= lim_(x->2^+) 4c + 2`<br>
+                                        </p>
+                                        <p>За да функцијата биде непрекината <del>насекаде</del> во деменот на
+                                            функцијата (ова е глуп гооглe транслате превод на elsewheare без да се води
+                                            сметка за контекстот на реченицата. Предходно баравме непрекинатост на
+                                            функција во одредена точка а сеgа - elsewhere - на друго место), трeба
+                                            `lim_(x->a)f(x)=f(a)`, односно:
+                                            `2c - 2 = 4c + 2`<br>
+                                            `c = -3/2`
                                     </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox04" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board04 = JXG.JSXGraph.initBoard('jxgbox04', {
+                                                boundingbox: [-10, 4, 10, -1],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+
+                                            graph = board04.create('functiongraph', [function (x) { return 1 / (x - 2); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            point = board04.create('point', [2, 3], { name: 'A', size: 1 });
+
+                                        </script>
+                                    </div>
+                                </div>
                                 </details>
                         </p>
-                        <!-- /Exercise 4 -->
+                        <!-- /Exercise 1 -->
 
-                        <!-- Exercise 5 -->
-                        <p id=''>
-                            <strong class='m'>Вежба 5.</strong> Да се пресмета:<br>
-                            `lim_(x -> +oo) (5x^4 + 5)/((x^2 - 1)(2x^3 + 3))`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div class='row py-3'>
-                                    <div class='col-7'>
-                                        <p>
-                                            Множиме во именителот за да добиеме полином.<br>
-                                        </p>
-                                        <p>
-                                            `= lim_(x -> +oo) (5x^4 + 5)/(2x^5 - 2x^3 + 3x^2 - 3)`<br>
-                                        </p>
-                                        <p>
-                                            Сега делиме со највисокиот степен на `x` во именителот:
-                                        </p>
-                                        <p>
-                                            `= lim_(x -> +oo) (5x^4/x^5 + 5/x^5)/(2x^5/x^5 - 2x^3/x^5 + 3x^2/x^5 - 3/x^5)`<br>
-                                            `= lim_(x -> +oo) (5/x + 5/x^5)/(2 - 2/x^2 + 3/x^3 - 3/x^5)`<br>
-                                            `= lim_(x -> +oo) (0 + 0)/(2 - 0 + 0 - 0)`<br>
-                                            `= 0`
-                                        </p>    
-                                    </div>
-                                    <div class='col-5'>
-                                        <link rel="stylesheet" type="text/css"
-                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                        <div id="jxgbox05" class="jxgbox" style="width:340px; height:240px"></div>
-                                        <script type="text/javascript"
-                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                        <script>
-
-                                            const board05 = JXG.JSXGraph.initBoard('jxgbox05', {
-                                                boundingbox: [-10, 10, 10, -10],
-                                                showCopyright: false,
-                                                showNavigation: false,
-                                                axis: true,
-                                            });
-                                            graph = board05.create('functiongraph', [function (x) { return (5*(x**4) + 5)/(2*(x**5) -2*(x**3) + 3* (x**2) - 3); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            var p1 = board05.create('point', [-22, 0], { name: 'A', size: 1 });
-                                            var p2 = board05.create('point', [22, 0], { name: 'B', size: 1 });
-                                            vert_line = board05.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                        </script>
-                                    </div>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 5 -->
-
-                        <!-- Exercise 6 -->
-                        <p id=''>
-                            <strong>Вежба 6.</strong> Да се пресмета:<br>
-                            `lim_(x -> -oo) x/sqrt(x^2 - 1)`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div class='row py-3'>
-                                    <div class='col-7'>
-                                        <p>
-                                            Делиме со највисокиот степен на `x` во именителот:<br>
-                                        </p>
-                                        <p>
-                                            `lim_(x -> -oo) (x/x)/(sqrt(x^2 - 1)/x)`
-                                        </p>
-                                        <p>
-                                            Бидејки `x` се стреми кон `-oo` треба да го означиме со знак `-`.
-                                        </p>
-                                        <p>
-                                            `lim_(x -> -oo) 1/(sqrt(x^2 - 1)/(-x)`<br>
-                                            `lim_(x -> -oo) 1/-(sqrt(x^2/x^2 - 1/x^2)`<br>
-                                            `lim_(x -> -oo) 1/-(sqrt(1 - 1/x^2)`<br>
-                                            `lim_(x -> -oo) 1/-(sqrt(1 - 0)`<br>
-                                            `= -1`
-
-                                        </p>
-                                    </div>
-                                    <div class='col-5'>
-                                        <link rel="stylesheet" type="text/css"
-                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                        <div id="jxgbox06" class="jxgbox" style="width:340px; height:240px"></div>
-                                        <script type="text/javascript"
-                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                        <script>
-
-                                            const board06 = JXG.JSXGraph.initBoard('jxgbox06', {
-                                                boundingbox: [-10, 10, 10, -10],
-                                                showCopyright: false,
-                                                showNavigation: false,
-                                                axis: true,
-                                            });
-                                            graph = board06.create('functiongraph', [function (x) { return x/ Math.sqrt(x**2 - 1); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            var p1 = board06.create('point', [-22, -1], { name: 'A', size: 1 });
-                                            var p2 = board06.create('point', [22, -1], { name: 'B', size: 1 });
-                                            vert_line = board06.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                        </script>
-                                    </div>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 6 -->
-                        
-                        <!-- Exercise 7 -->
-                        <p id=''>
-                                <strong>Вежба 7.</strong> Да се пресмета:<br>
-                                `lim_(x -> -oo) (8x^4 + 3x - 5)/(x^2 + 1)`
-                                <details>
-                                    <summary class="mb-3">Решение</summary>
-                                    <div class='row py-3'>
-                                        <div class='col-7'>
-                                            <p>
-                                                Делиме со највисокиот степен на `x` во именителот:<br>
-                                            </p>
-                                            <p>
-                                                `= lim_(x -> -oo) ((8x^4)/x^2 + 3x/x^2 - 5/x^2)/(x^2/x^2 + 1/x^2)`<br>
-                                                `= lim_(x -> -oo) (8x^2 + 3/x - 5/x^2)/(1 + 1/x^2)`<br>
-                                                `= lim_(x -> -oo) (8x^2 + 0 - 0)/(1 + 0)`<br>
-                                                `= +oo`
-                                            </p>
-                                        </div>
-                                        <div class='col-5'>
-                                            <link rel="stylesheet" type="text/css"
-                                                href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                            <div id="jxgbox07" class="jxgbox" style="width:340px; height:240px"></div>
-                                            <script type="text/javascript"
-                                                src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                            <script>
-    
-                                                const board07 = JXG.JSXGraph.initBoard('jxgbox07', {
-                                                    boundingbox: [-5, 10, 5, -6],
-                                                    showCopyright: false,
-                                                    showNavigation: false,
-                                                    axis: true,
-                                                });
-                                                graph = board07.create('functiongraph', [function (x) { return (8*(x**4) + 3*x -5)/ (x**2 + 1); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                                var p1 = board07.create('point', [-22, -111], { name: 'A', size: 1 });
-                                                var p2 = board07.create('point', [22, -111], { name: 'B', size: 1 });
-                                                vert_line = board07.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                            </script>
-                                        </div>
-                                    </div>
-                                </details>
-                        </p>
-                        <!-- /Exercise 7 -->   
-
-                        <!-- Exercise 8 -->
-                        <p id=''>
-                            <strong>Вежба 8.</strong> Да се пресмета:<br>
-                            `lim_(x -> +oo) (sqrt(x) - x)`
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div class='row py-3'>
-                                    <div class='col-7'>
-                                        <p>
-                                            Со зaмена се добива обликот `+oo - +oo`. Потребно е изразот да го упростиме:<br>
-                                        </p>
-                                        <p>
-                                            `= lim_(x -> +oo) sqrt((x))(1 - sqrt(x))`<br>
-                                            `= lim_(x -> +oo) sqrt(x) * lim_(x->-oo)(1- sqrt(x))`<br>
-                                            `= lim_(x -> +oo) sqrt(x) * lim_(x->-oo)1  - lim_(x->+oo) sqrt(x))`<br>
-                                            `= +oo * 1 -oo`<br>
-                                            `= +oo * -oo`<br>
-                                            `= -oo`
-                                        </p>
-                                    </div>
-                                    <div class='col-5'>
-                                        <link rel="stylesheet" type="text/css"
-                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                        <div id="jxgbox08" class="jxgbox" style="width:340px; height:240px"></div>
-                                        <script type="text/javascript"
-                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                        <script>
-
-                                            const board08 = JXG.JSXGraph.initBoard('jxgbox08', {
-                                                boundingbox: [-2, 1, 10, -10],
-                                                showCopyright: false,
-                                                showNavigation: false,
-                                                axis: true,
-                                            });
-                                            graph = board08.create('functiongraph', [function (x) { return Math.sqrt(x) - x; }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            var p1 = board08.create('point', [-22, -111], { name: 'A', size: 1 });
-                                            var p2 = board08.create('point', [22, -111], { name: 'B', size: 1 });
-                                            vert_line = board08.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
-                                        </script>
-                                    </div>
-                                </div>
-                            </details>
-                        </p>
-                        <!-- /Exercise 8 -->   
+                        <div class="alert alert-info" role="alert">
+                            <strong>Дефиниција. 3</strong> Функција `f` e непрекината од лево во точката `x = c`,
+                            ако<br>
+                            <p class="text-center">
+                                `lim_(x->c^-)f (x) = f(c)`
+                            </p>
+                            <p>
+                                и е непрекината од десно во точката `x = c`, ако
+                            </p>
+                            <p class="text-center">
+                                `lim_(x->c^+)f (x) = f(c)`
+                            </p>
 
 
 
-
+                        </div>
                     </div>
-                </div>
 
             </main>
         </div>
