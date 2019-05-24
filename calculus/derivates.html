@@ -19,7 +19,7 @@
 
     <!-- Documentation extras -->
     <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-    <link href="../assets/css/docs.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
 
     <!-- MathJax -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
@@ -70,28 +70,10 @@
                 <a class="nav-link" href="functions.html">Вежби</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="exam.html">Испитни прашања</a>
+                <a class="nav-link" href="">Испитни прашања</a>
             </li>
         </ul>
     </div>
-
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-        <li class="nav-item dropdown">
-            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-                Библиотека
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                <a class="dropdown-item active" href="https://www.w3.org/Style/CSS/" target="_blank">Calculus
-                    Lifesaver</a>
-                <a class="dropdown-item" href="https://github.com/rwaldron/idiomatic.js" target="_blank">Idiomatic</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://caniuse.com/#home" target="_blank">Can I use __________ ?</a>
-                <a class="dropdown-item" href="https://www.javascripting.com/?sort=rating"
-                   target="_blank">JavaScripting</a>
-            </div>
-        </li>
-    </ul>
 </header>
 
 <!--Container -->
@@ -161,7 +143,7 @@
                     </ul>
                 </div>
 
-                <div class="bd-toc-item active">
+                <div class="bd-toc-item">
                     <a class="bd-toc-link" href="limes.html">
                         Лимеси
                     </a>
@@ -195,7 +177,7 @@
                     </ul>
                 </div>
 
-                <div class="bd-toc-item">
+                <div class="bd-toc-item active">
                     <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
                         Изводи
                     </a>
@@ -327,7 +309,6 @@
                 </div>
             </div>
 
-
             <div class="row">
                 <h3>
                     Наклон и рата на промена
@@ -341,15 +322,14 @@
                 </p>
                 <p>
                     Оваа функција се нарекува <strong>функција на положбата на честичката</strong>. Средната брзина на
-                    честичката на временски интервал `[t`<sub>`0`</sub>`, t`<sub>'0+h'</sub>`], h > 0`, се дефинира со:
+                    честичката на временски интервал `[t_0, t_(0+h)], h > 0`, се дефинира со:
                 </p>
                 <p>
-                    `v`<sub>`средна`</sub>`= (поминат пат) / (време за кое е поминат тој пат) = (f(t`<sub>`0`</sub>` +
-                    h)-f(t`<sub>`0`</sub>`)) / h`
+                    `v`<sub>средна</sub>= (поминат пат) / (време за кое е поминат тој пат) = `(f_(t_(0) + h) - f_(t_0)) / h`
                 </p>
                 <p>
-                    Прашањето е како да ја определиме брзината во даден момент `t<sub>`0`</sub>` (наречена моментна
-                    брзина во `t<sub>`0`</sub>`). Ова е бројот кој што може да се прочита на брзинометарот. Еден начин
+                    Прашањето е како да ја определиме брзината во даден момент `t_0` (наречена моментна
+                    брзина во `t_0`). Ова е бројот кој што може да се прочита на брзинометарот. Еден начин
                     да се пресмета оваа брзина е таа да се разгледува како лимес на средната брзина. Според тоа, таа
                     може да се дефинира со:
                 </p>
@@ -358,13 +338,13 @@
                     `v = `
                 </p>
                 <p>
-                    Да забележиме дека на цртежот интервалот `(x`<sub>`0`</sub>, `x`<sub>`1`</sub>`)` се протега повеќе
+                    Да забележиме дека на цртежот интервалот `(x_0, x_1)` се протега повеќе
                     на десната страна од `a`, отколку на левата страна од `a`.
                 </p>
                 <div class="row">
                     <div class="col-4">
                         <div class="text-center">
-                            <img src="limes_27.png" class="img-fluid img">
+                            <img src="images/limes_27.png" class="img-fluid img">
                         </div>
                     </div>
                     <div class="col-8">
@@ -374,16 +354,16 @@
                         </p>
                         <p>
                             Заради тоа, избираме било кој позитивен број `delta` таков што `delta <= min
-                            {x`<sub>`1`</sub>`-a, a-x`<sub>`0`</sub>`}` и го разгледуваме интервалот <br> `(a − delta, a
+                            {x_1`-a, a-x`<sub>`0`</sub>`}` и го разгледуваме интервалот <br> `(a − delta, a
                             +
                             delta)`
                         </p>
                         <p>
                             Овој интервал се протега подеднакво за растојание `delta` на двете страни од `a` и припаѓа
-                            во внатрешноста на интервалот `(x`<sub>`0`</sub>, `x`<sub>`1`</sub>`)` види цртеж). Уште
+                            во внатрешноста на интервалот `(x_0, x_1)` види цртеж). Уште
                             повеќе, условот <br> `L − epsilon < f(x) < L + epsilon`<br> важи за секое `x` во овој
                             интервал (освен можеби во `x = a`), бидејќи овој услов важи на поголемиот интервал `(x`<sub>`0`</sub>,
-                            `x`<sub>`1`</sub>`)`.
+                            `x_1)`.
                         </p>
                     </div>
                 </div>
@@ -552,7 +532,7 @@
                     на `delta`, така што може: `delta = epsilon/2, epsilon/3. . .`
                 </p>
                 <div class="text-center">
-                    <img src="limes_28.png" class="img-fluid img">
+                    <img src="images/limes_28.png" class="img-fluid img">
                 </div>
             </div>
 
@@ -707,7 +687,7 @@
                             </p>
                         </div>
                         <div class="text-center">
-                            <img src="limes_29.png" class="img-fluid img">
+                            <img src="images/limes_29.png" class="img-fluid img">
                         </div>
 
                     </div>
@@ -775,7 +755,7 @@
                             </p>
                         </div>
                         <div class="text-center">
-                            <img src="limes_30.png" class="img-fluid img">
+                            <img src="images/limes_30.png" class="img-fluid img">
                         </div>
 
                     </div>
@@ -812,7 +792,7 @@
                             </p>
                         </div>
                         <div class="text-center">
-                            <img src="limes_32.png" class="img-fluid img">
+                            <img src="images/limes_32.png" class="img-fluid img">
                         </div>
 
                     </div>
@@ -884,7 +864,7 @@
                             </p>
                         </div>
                         <div class="text-center">
-                            <img src="limes_32.png" class="img-fluid img">
+                            <img src="images/limes_32.png" class="img-fluid img">
                         </div>
 
                     </div>
@@ -921,7 +901,7 @@
                             </p>
                         </div>
                         <div class="text-center">
-                            <img src="limes_32.png" class="img-fluid img">
+                            <img src="images/limes_32.png" class="img-fluid img">
                         </div>
 
                     </div>
@@ -932,12 +912,11 @@
                     <div class="alert alert-light" role="alert">
                         <h4 class="alert-heading">Пример 8.</h4>
                         <p>
-                            Со помош на Дефиниција 6 и Дефиниција 7 покажи дека &nbsp; a. `lim_(x->+oo) 1/x =+оо` &nbsp;
-                            b. `lim_(x->-oo)
-                            1/x =-оо`
+                            Со помош на Дефиниција 6 и Дефиниција 7 покажи дека &nbsp; a. `lim_(x->+oo) 1/x = +оо` &nbsp;
+                            b. `lim_(x->-oo) 1/x = -оо`
                         </p>
                         <p>
-                            Решение: a) Нека `N >0` e произволен позитивен реален број. Треба да најдеме
+                            Решение: a) Нека `N > 0` e произволен позитивен реален број. Треба да најдеме
                             позитивен број `M` така што
                         </p>
                         <p>
@@ -958,8 +937,6 @@
                         </p>
                     </div>
                 </div>
-
-
         </main>
     </div>
 </div>
@@ -980,7 +957,7 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script src="assets/js/docs.min.js"></script>
+<script src="js/docs.min.js"></script>
 
 
 </body>
