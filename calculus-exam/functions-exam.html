@@ -363,6 +363,52 @@
                         </details>
                     </div>
 
+                    <!-- 1-02-2007 група 1:-->
+                    <div class='col-12'>
+                        <h5 id=''>
+                            1-02-2007 група 1:
+                        </h5>
+                        <p>
+                            <i class="material-icons">filter_4</i> За функцијата `f(x) = (sqrt(x) - 2)/(x - 4)` да се
+                            определи функцијата со идентичен график, но без
+                            прекин.
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>Функцијата `f(x) = (sqrt(x) - 2)/(x - 4)` има прекин точката `x = 4`. Со
+                                        разложување на
+                                        функцијата `f(x)` се добива функија `g(x)` која има ист график но друг домен.
+                                    </p>
+                                    <p>
+                                        `f(x) = (sqrt(x) - 2)/(x - 4) = (sqrt(x) - 2)/((sqrt(x))^2 -2^2`<br>
+                                        `= (sqrt(x) - 4)/((sqrt(x) - 2)(sqrt(x) + 2))`<br>
+                                        `= 1 / (sqrt(x) + 2)`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgbox2007" class="jxgbox" style="width:240px; height:240px"></div>
+
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const board2007 = JXG.JSXGraph.initBoard('jxgbox2007', {
+                                            boundingbox: [-2, .4, 20, -.2],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = board2007.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 2); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
                     <!--1-08-2009 група 1:-->
                     <div class='col-12'>
                         <h5 id=''>
