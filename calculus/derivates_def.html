@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning CALCULUS">
+    <meta name="author" content="Ilija Taseski">
+    <meta name="generator" content="vs code">
+
+    <title>Calculus</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus_pre/intro.html" target='_blank'>Припрема</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="functions.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Вежби</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="functions.html">
+                            Фунции
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="derivates.html">
+                            Изводи
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="derivates.html">
+                                    Наклон и рата на промена
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="derivates_def.html">
+                                    Функција на извод
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Техники на диференцирање
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="../calculus-exam/_2006_02_2.html">
+                            Испитни прашања
+                        </a>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#rate">Дефиниција</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#tangent_line">Тангенти</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#areas_and_limits">Еквивалентна дефиниција</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#decimal_and_limits">Рата на промена</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#informal">Интиутивна метода</a>
+                    </li>
+
+                    <li class="toc-entry toc-h2">
+                        <a href="#limit">Лимес</a>
+                        <ul class="section-nav">
+
+                            <li class="toc-entry toc-h3">
+                                <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#infinite">Бесконечни лимеси</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#v_asymtotes">Вертикални асимптоти</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div class="row">
+                    <div class="col-12">
+                        <p id="concept" class="lead">
+                        </p>
+
+                        <p>
+                            Како што видовме претходно, наклонот на графикот на `y = f(x`) во `x = x_0` е даден со:
+                        </p>
+
+                        <p class='text-center'>
+                            `m_(tan) = lim_(x_1->x_0) (f(x_1) - f(x_0))/(x_1 - x_0)`
+                        </p>
+
+                        <div id="def1" class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Дефиниција 2</h4>
+                            <p>
+                                Нека `x_0` е број од доменот на функцијата `f`. Ако лимесот
+                            </p>
+                            <p class='text-center'>
+                                `lim_(x_1-x_0) (f(x_1) - f(x_0))/(x_1 - x_0)`
+                            </p>
+                            <p>
+                                постои, тогаш неговата вредност се нарекува извод на `f` во `x = x_0` и се означува со
+                                `f'(x_0)`, т.е.
+                            </p>
+                            <p class='text-center'>
+                                `f'(x) = lim_(x_1-x_0) (f(x_1) - f(x_0))/(x_1 - x_0)`
+                            </p>
+                        </div>
+
+                        <ul>
+                            <li>
+                                Ако лимесот постои, `f'(x_0)` е наклон на графикот на `f` во точкатa `P(x_0, f(x_0))`.
+                            </li>
+                            <li>
+                                Ако лимесот не постои, тогаш велиме дека наклонот на графикот на `f` не е дефиниран во
+                                `x = x_0`.
+                            </li>
+                        </ul>
+
+                        <h5>
+                            Тангенти
+                        </h5>
+
+                        <p>
+                            Сега ќе започнеме со одговарање на прашање кое беше мотивација за раниот развој на
+                            калкулусот. Математичарите од седумнаесеттиот век биле преокупирани со проблемот на
+                            дефинирање на тангента на општа крива.
+                        </p>
+
+                        <p>
+                            Во случај на кружница, права е тангента на кружница ако има само една заедничка точка со
+                            кружницата.
+                        </p>
+
+                        <p>
+                            Но, јасно е дека оваа едноставна дефиниција не може да задоволува во многу случаи.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center">
+                                    <img src="images/derivates_03.PNG" class="img-fluid img">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    На пример, `y`-оската има само една заедничка точка со параболата `y = x^2`, но таа
+                                    не е тангента на кривата.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center">
+                                    <img src="images/derivates_04.PNG" class="img-fluid img">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Од друга страна, правата `y = 1` е тангента на графикот на `y = sinx`, иако го
+                                    допира графикот бесконечно многу пати.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p>
+                            Кон крајот на седумнаесеттиот век, Декарт и Ферма развиле различни процедури за конструирање
+                            на тангенти.
+                        </p>
+
+                        <p>
+                            Сепак, општа дефиниција за тангента сè уште недостасува.
+                        </p>
+
+                        <p>
+                            Грубо кажано, една права ќе биде тангента на графикот на функција `y = f(x)` во точка `(x_0,
+                            f (x_0)`, ако во таа точка правата и кривата имаат ист правец (наклон).
+                        </p>
+
+                        <p>
+                            Бидејќи правецот на права е определен со нејзиниот коефициент на правец, може да очекуваме
+                            права да биде тангента на графикот на `f` во `(x_0, f(x_0))` ако коефициентот на правец на
+                            правата е еднаков со наклонот на графикот на `f` во `x_0`.
+                        </p>
+
+                        <p>
+                            Затоа, може да користиме извод за да дефинираме тангента на крива кога кривата е графикот на
+                            функција `y = f (x)`.
+                        </p>
+
+                        <div id="def1" class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Дефиниција 3</h4>
+                            <p>
+                                Нека `x in D_f`. Ако
+                            </p>
+                            <p class='text-center'>
+                                `f'(x) = lim_(x_1->x_0) (f(x_1) - f(x_0))/(x_1 - x_0)`
+                            </p>
+                            <p>
+                                тогаш постои тангентата на графикот во точката `P(x_0, f(x_0))` koja e зададена со
+                                равенката
+                            </p>
+                            <p class='text-center'>
+                                `y - f(0) = f'(0)(x-x_0)`
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center">
+                                    <img src="images/derivates_05.PNG" class="img-fluid img">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>Забелешка.</strong> Тангента на график на произволна крива ги нема сите
+                                    својства како тангента на кружница. На пример, тангента на кружница има само една
+                                    заедничка точка со кружницата, додека тангента на произволен график може да го сече
+                                    графикот и во други точки (види цртеж).
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <p>
+                            <strong>Пример 3.</strong> Да се определи наклонот на графикот на `y = x^2` во точката
+                            `(1,1)` и со помош на добиениот резултат да се определи равенката на тангентата на `y = x^2`
+                            во `x = 1`.
+                        </p>
+                        <p>
+                            <strong>Решение.</strong>
+                        </p>
+                        <p>
+                            Со помош на дефиниција 3, наклонот на графикот на `y = x^2` во точката `(1,1)` е даден со:
+                        </p>
+                        <p>
+                            `f'(x) = f'(1) = lim_(x_1->1)(f(x_1) - f(1))/(x_1 - 1)`<br>
+                            `= lim_(x_1->1)(x_1^2 - 1)/(x_1 - 1)`<br>
+                            `= lim_(x_1->1) ((x_1 - 1)(x_1 + 1))/(x_1 - 1)`<br>
+                            `= lim_(x_1->1) (x_1 + 1)`<br>
+                            `= 2`
+                        </p>
+                        <p>
+                            Тангентата е правата низ точката (1,1) со коефициент на правец `2`, т.е.
+                        </p>
+                        <p class='text-center'>
+                            `m = (y - y_0)/(x - x_0) = (y - 1)/(x - 1)`<br>
+                            `y = 2x - 1`
+                        </p>
+
+                        <p>
+                            Во општ случај, наклонот на крива `y = f(x)` ќе зависи од точката `(x, f (x))` во која се
+                            пресметува.
+                        </p>
+
+                        <p>
+                            Според тоа, наклонот е функција од `x`.
+                        </p>
+
+                        <p>
+                            За да го илустрираме овој факт, ќе го пресметаме `f(x_0)` во произволна точка `x_0` на
+                            кривата `y = x^2`.
+                        </p>
+
+                        <p>
+                            `f'(x_0) = lim_(x_1->x_0)(f(x_1) - f(x_0))/(x_1 - x_0)`<br>
+                            `= lim_(x_1->x_0)(x_1^2 - x_0^2)/(x_1 - x_0)`<br>
+                            `= lim_(x_1->x_0) ((x_1 - x_0)(x_1 + x_0))/(x_1 - x_0)`<br>
+                            `= lim_(x_1->1) (x_1 + x_0)`<br>
+                            `= 2x_0`
+                        </p>
+
+                        <p>
+                            Сега, може да ја искористиме општата формула `f(x_0) = 2x_0` за да го пресметаме
+                            коефициентот на правец на тангентата во било која точка од кривата `y = x_2` едноставно со
+                            замена на соодветната вредност `x = x_0`.
+                        </p>
+
+                        <p>
+                            На пример, `f'(2) = 4`, `f'(0) = 0`.
+                        </p>
+
+                        <p>
+                            За да ја обопштиме оваа идеја, го заменуваме `x_0` со `x` во
+                        </p>
+
+                        <p class='text-center'>
+                            `f'(x_0) = lim_(x_1->x_0)(f(x_1) - f(x_0))/(x_1 - x_0)`
+                        </p>
+                        <p>
+                            Наклонот на графикот на `y = f(x)` во општа точка `(x, f(x))` е даден со
+                        </p>
+                        <p class='text-center'>
+                            `f'(x) = lim_(x_1->x)(f(x_1) - f(x))/(x_1 - x)`
+                        </p>
+                        <p>
+                            За да ја поедноставиме ознаката, ќе ставиме `w` на местото на `x_1`
+                        </p>
+
+                        <div id="def1" class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Дефиниција 4</h4>
+                            <p>
+                                Функцијата `f'` дефинирана со формулата
+                            </p>
+                            <p class='text-center'>
+                                `f'(x) = lim_(w->x) (f(w) - f(x))/(w - x)`
+                            </p>
+                            <p>
+                                се нарекува извод на `f` во однос на `x`. Доменот на `f'` се состои од сите `x` од
+                                доменот на `f` за кои што лимесот постои.
+                            </p>
+                        </div>
+
+                        <p>
+                            Покрај присуството на симболот `w` во дефиницијата, формулата ја дефинира функција `f'` како
+                            функција од една променлива `x`.
+                        </p>
+
+                        <p>
+                            За да ја пресметаме вредноста на `f'(x)` за конкретна вредност на `x`, допуштаме `w -> x` во
+                            претходната формула.
+                        </p>
+                        <p>
+                            Резултатот на овој лимес не го содржи симболот `w`; `w` „исчезнува“ во чекорот во кој што се
+                            пресметува лимесот.
+                        </p>
+
+                        <h5>
+                            Еквивалентна дефиниција
+                        </h5>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center">
+                                    <img src="images/derivates_02.PNG" class="img-fluid img">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Во претходната формула, може да се замени `w - x` со `h`, односно,
+                                </p>
+                                <p class='text-center'>
+                                    `h = w - x`.
+                                </p>
+                                <p>
+                                    Тогаш `w = x + h` и `w -> x` е еквивалентно со `h -> 0`.
+                                </p>
+                                <p>
+                                    Според тоа, претходната формула (за извод) има облик
+                                </p>
+                                <p class='text-center'>
+                                    `f'(x) = lim_(h->0) (f(x+h) - f(x))/h`
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <p>
+                            <strong>Пример 4.</strong> <br>
+                            a. Да се определи извод на `f (x) = x^3 - x`.<br>
+                            б. Да се нацртаат `f` и `f'` заедно, и да се дискутира врската меѓу двата графика.
+                        </p>
+                        <p>
+                            <strong>Решение.</strong>
+                        </p>
+                        <div class="row">
+                            <div class="col-5">
+                                <img src="images/derivates_06.PNG" class="img-fluid img"><br>
+                                б. Бидејќи `f'` може да се интерпретира како наклон на графикот во точката `x`,
+                                следува дека `f'(x)` e позитивен каде што наклонот е позитивен (кривата „расте” од
+                                лево на десно), и негативен каде што наклонот е негативен (кривата @опаѓа” од лево на десно).
+                            </div>
+                            <div class="col-7">
+                                <p>
+                                    `f'(x) = lim_(h->0)(f(x+h) - f(x))/h`
+                                </p>
+                                <p>
+                                    `= lim_(h->0) (((x+h)^3 - (x+h)) - (x^3 - x))/h`
+                                </p>
+                                <p>
+                                    `= lim_(h->0) ((x^3 + 3x^2h + 3xh^2 + h^3 - x -h) - (x^3 - x))/h`
+                                </p>
+                                <p>
+                                    `= lim_(h->0) (3x^2h + 3xh^2 + h^3 - h)/h`
+                                </p>
+                                <p>
+                                    `= lim_(h->0) 3x^2 + 3xh + h^2 - 1`
+                                </p>
+                                <p>
+                                    `= lim_(h->0) 3x^2 - 1`
+                                </p>
+                                <p>
+                                    `= 3x^2 - 1`
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="js/docs.min.js"></script>
+
+
+</body>
+
+</html>
