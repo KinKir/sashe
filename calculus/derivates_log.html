@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Learning CALCULUS" />
+    <meta name="author" content="Ilija Taseski" />
+    <meta name="generator" content="vs code 1.34" />
+
+    <title>Calculus</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+    <link href="../css/docs.css" rel="stylesheet" />
+
+    <!-- MathJax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c" />
+    <link rel="icon" href="../images/icon/favicon.ico" />
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#563d7c" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus_pre/intro.html" target="_blank">Припрема</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="functions.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Вежби</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1" />
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="functions.html">
+                            Фунции
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="derivates.html">
+                            Изводи
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="derivates.html">
+                                    Наклон и рата на промена
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_def.html">
+                                    Функција на извод
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_tech.html">
+                                    Техники на диференцирање
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_chain.html">
+                                    Верижно правило
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_implicit.html">
+                                    Имплицитно диференцирање
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="derivates_log.html">
+                                    Извод од логаритамски и експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="derivates_hopital.html">
+                                    Лопиталово правило
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="../calculus-exam/_2006_02_2.html">
+                            Испитни прашања
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#rate">Бројот `e`</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#tangent_line">Експоненцијални и логаритамски функции</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#areas_and_limits">Правило за извод од степенска функција со степен реален број</a>
+                    </li>
+                    <li class="toc-entry toc-h2">
+                        <a href="#decimal_and_limits">Извод од експоненцијална функција</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <div class="row">
+                    <div class="col-12">
+                        <p id="concept" class="lead">
+                            In this section we will obtain derivative formulas for logarithmic functions, and we will
+                            explain why the natural logarithm function is preferred over logarithms with other bases in
+                            calculus.
+                        </p>
+
+                        <h5>
+                            Бројот e
+                        </h5>
+
+                        <p>
+                            Константата e се јавува како константа кон која се приближуваат вредностите на функцијата
+                        </p>
+
+                        <p class="text-center">
+                            `y = (1+ 1/x)^x`
+                        </p>
+
+                        <img src="images/derivates_20.PNG" class="img-fluid img">
+
+                        <p class="text-center">
+                            `lim_(x->+oo) = (1+ 1/x)^x = e`, `lim_(x->-oo) = (1+ 1/x)^x = e`, `lim_(v->0) = (1 +
+                            v)^(1/v)
+                            = e`
+                        </p>
+
+                        <h5>
+                            Експоненцијални и логаритамски функции
+                        </h5>
+
+                        <p>
+                            <strong>Потсетување:</strong>
+                        </p>
+
+                        <p class="text-center">
+                            `lim_(x->+oo) e^x = +oo`, `lim_(x->-oo) e^x = 0`, `lim_(x->+oo) lnx = +oo`, `lim_(x->0^+)
+                            lnx = -oo`
+                        </p>
+
+                        <h5>
+                            Изводи од експоненцијални и логаритамски функции
+                        </h5>
+
+                        <p>
+                            Во овој дел, ќе покажеме дека `f(x) = log_bx` е диференцијабилна функција за `x > 0` и `b >
+                            0` `(b != 1)`. За определување на `f ′(x)` ќе користиме дефиниција за извод на `f(x)`. За да
+                            го пресметаме лимесот,
+                            ќе го искористиме фактот дека `log_b x` е непрекината функција и ќе искористиме дека
+                        </p>
+
+                        <p>
+                            `lim_(v->0) = (1+ v)^(1/v) = e`
+                        </p>
+                        <p>
+                            `(log_bx)^' = lim_(w->x) (log_bw - log_bx)/(w-x) = lim_(w->x) [1/(w-x) * log_b(w/x)]`
+                        </p>
+                        <p>
+                            ... ... ... ...
+                        </p>
+                        <p>
+                            `(log_bx)^' = 1/x log_be = 1/x * lne/lnb = 1/x * 1/lnb, x>0`
+                        </p>
+                        <p>
+                            Kога `b = e` имаме
+                        </p>
+                        <p>
+                            `lnx = 1/x`
+                        </p>
+                        <p>
+
+                            <p>
+                                <strong>Пример 1.</strong> Дали функцијата `y = ln x` има хоризонтална тангента?
+                            </p>
+                            <p>
+                                <strong>Решение.</strong>
+                            </p>
+                            <p>
+                                За да има хоризонтална тангента првиот извод треба да е`0` односно `(lnx)^' = 0`, но
+                                како `(lnx)^' = 1/x, x>0` следи дека `y = lnx` нема хоризонтална тангента.
+                            </p>
+
+                            <p>
+                                <strong>Пример 2.</strong> Најди `(ln(x^2 + 1))^'`
+                            </p>
+                            <p>
+                                `= 1/(x^2 +1 ) * 2x = 2x/(x^2 +1)`
+                            </p>
+
+                            <p>
+                                <strong>Пример 3.</strong> Најди `(lnx^2sinx/sqrt(1 + x))^'`
+                            </p>
+                            <p>
+                                <strong>Решение.</strong>
+                            </p>
+                            <P>
+                                `(lnx^2sinx/sqrt(1 + x))^' = (2lnx + lnsinx - 1/2 ln(1+x))^'`
+                            </P>
+                            <P>
+                                `= 2/x + 1/sinx * (sinx)^' - 1/2 * 1/(1 + x)`
+                            </P>
+                            <p>
+                                ` = 2/x + cosx/sinx - 1/(2(1 +x))`
+                            </p>
+                            <p>
+                                `= 2/x + cotx -1/(2 + 2x)`
+                            </p>
+
+                            <p>
+                                <strong>Пример 4.</strong> Најди `(lnabs(x))^'`
+                            </p>
+                            <p>
+                                <strong>Решение </strong> `D_f = RR \ 0`
+                            </p>
+                            <p>
+                                За `x>0` `f(x) = lnx` па `f^'(x) = 1/x`
+                            </p>
+                            <p>
+                                За `x<0` `f(x)=ln(-x)` па `f^'(x)=1/(-x)(-x)^'=1/x` </p> <p>
+                                    Значи, добиваме дека:
+                            </p>
+                            <p>
+                                `(lnabs(x))^' = 1/x`
+                            </p>
+
+                            <p>
+                                <strong>Пример 5.</strong> Најди `(lnabs(sinx))^'`
+                            </p>
+                            <p>
+                                <strong>Решение </strong>
+                            </p>
+                            <p>
+                                `= 1/sinx * (sinx)^' = 1/sinx * cosx = cotx`
+                            </p>
+
+                            <p>
+                                <strong>Пример 6.</strong> Најди `y^'` ако `y= (x^2 root(3)(7x - 14))/(x^2 + 1)^4`
+                            </p>
+                            <p>
+                                <strong>Решение </strong> Изводот `y^′` може да се добие со користење на добро познатите
+                                правила за извод од количник и производ. Во овој случај, постапката ќе биде
+                                поедноставена, ако прво логаритмираме, а потоа диференцираме користејќи ја постапката за
+                                имплицитно диференцирање.
+                            </p>
+                            <p>
+                                `ln(y) = ln(x^2) + ln(root(3)(7x - 14)) - ln (x^2 + 1)^4`
+                            </p>
+                            <p>
+                                `ln(y) = 2ln(x) + 1/3ln(7x - 14) - 4ln (x^2 + 1)`
+                            </p>
+                            <p>
+                                `(ln(y))^' = 2*1/x + 1/3* 1/(7x - 14)*(7x - 14)^' - 4 * 1/(x^2 + 1) * (x^2 +1)^'`
+                            </p>
+                            <p>
+                                `1/y dy/dx = 2/x + 1/(3(x - 2)) - (8x)/(x^2 + 1)`
+                            </p>
+                            <p>
+                                `dy/dx = y(2/x + 1/(3(x - 2)) - (8x)/(x^2 + 1))`
+                            </p>
+                            <p>
+                                `dy/dx = (x^2 root(3)(7x - 14))/(x^2 + 1)^4 (2/x + 1/(3(x - 2)) - (8x)/(x^2 + 1))`
+                            </p>
+
+                            <h5>
+                                Правило за извод од степенска функција со степен реален број
+                            </h5>
+
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Теорема 1</h4>
+                                <p>
+                                    Ако `r` е било кој реален број, тогаш
+                                </p>
+                                <p class='text-center'>
+                                    `(x^r)^' = rx^(r-1)`
+                                </p>
+                            </div>
+                            <p>
+                                <strong>Доказ.</strong>
+                            </p>
+                            <p>
+                                Бидејќи `y = x^r`, имаме `lnabs(y) = r ln(x)`.
+                            </p>
+                            <p>
+                                Со имплицитно диференцирање добиваме
+                            </p>
+                            <p>
+                                `1/y dy/dx = r 1/x`
+                            </p>
+                            <p>
+                                `dy/dx = r y/x = r x^r/x = rx^(r-1)`
+                            </p>
+                            <p>
+                                <strong>Пример 7.</strong>
+                            </p>
+                            <p>
+                                `(x^pi)^' = pi x^ (pi-1)`
+                            </p>
+                            <p>
+                                `(x^sqrt(2))^' = sqrt(2) x^ (sqrt(2)-1)`
+                            </p>
+
+                            <h5>
+                                Извод од експоненцијална функција
+                            </h5>
+                            <p>
+                                Досега ја најдовме формулата за извод на логаритамска функција. Добивме дека
+                            </p>
+                            <p>
+                                `(log_bx)^' = 1/x 1/lnb, x>0` и `(lnx)^' = 1/x, x> 0`
+                            </p>
+                            <p>
+                                За да најдеме извод на експоненцијална функција, ќе искористиме дека експоненцијалната
+                                функција е инверзна на логаритамската и ќе го искористиме имплицитно диференцирање.
+                                Имено,
+                            </p>
+                            <p>
+                                `y = b^x harr x = log_by; x in RR, y>0`
+                            </p>
+                            <p>
+                                `1 = 1/(ylnb) * dy/dx`
+                            </p>
+                            <p>
+                                `dy/dx = ylnb = b^xlnb`
+                            </p>
+                            <p>
+                                `(b^x)^' = b^xlnb`
+                            </p>
+                            <p>
+                                Во случај кога `b = e` имаме:
+                            </p>
+                            <p>
+                                `(e^x)^' = e^xlne = e^x`
+                            </p>
+                            <p>
+                                <strong>Пример 8.</strong>
+                            </p>
+                            <p>
+                                `(2^x)^' = 2^xln2`
+                            </p>
+                            <p>
+                                `(e^(-2x))^' = e^(-2x) * (-2x)^' = -2e^(-2x)`
+                            </p>
+                            <p>
+                                `(e^(x^3))^' = e^(x^3) * (x^3)^' = 3x^2e^(x^3)`
+                            </p>
+                            <p>
+                                `(e^(cosx))^' = e^(cosx) * (cosx)^' = -sinxe^(cosx)`
+                            </p>
+                            <p>
+                                Функциите од облик `f (x) = u^v` во кои `u` и `v` се неконстантни функции од `x` не се
+                                ниту експоненцијални ниту степенски. Функциите од овој облик се диференцираат со логаритамско диференцирање.
+                            </p>
+                            <p>
+                                <strong>Пример 9.</strong> Со помош на логаритамско диференцирање најди `d/dx[(x^2 + 1)^sinx]`
+                            </p>
+                            <p>
+                                <strong>Решение. </strong>
+                            </p>
+                            <p>
+                                Нека `y = (x^2 +1)^sinx`
+                            </p>
+                            <p>
+                                Тогаш `lny = ln(x^2 +1)^sinx = sinxln(x^2 +1)`
+                            </p>
+                            <p>
+                                Со диференцирање на двете страни по `x` добиваме
+                            </p>
+                            <p>
+                                `1/y dy/dx = cosxln(x^2 + 1) + 2xsinx 1/(x^2 + 1)`
+                            </p>
+                            <p>
+                                Според тоа
+                            </p>
+                            <p>
+                                `dy/dx = (x^2 +1)^sinx [cosxln(x^2 + 1) + 2xsinx 1/(x^2 + 1)]`
+                            </p>
+
+
+
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery ||
+            document.write(
+                '<script src="/assets/js/vendor/jquery-slim.min.js"><\/script>'
+            );
+    </script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script src="js/docs.min.js"></script>
+</body>
+
+</html>
