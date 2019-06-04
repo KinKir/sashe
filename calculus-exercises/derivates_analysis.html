@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Calculus">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculus</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+            async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<!-- Header -->
+<a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+    </div>
+</a>
+
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+        <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+             focusable="false">
+            <title>Саше учи Calculus</title>
+            <path fill="currentColor"
+                  d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
+            <path fill="currentColor"
+                  d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
+        </svg>
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus/functions_new.html">Калкулус</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../calculus-video/functions_new.html">Видео предавања</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../calculus-exercises/functions.html">Вежби</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<!--Container -->
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                       aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                       data-docs-version="4.1">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                         focusable="false">
+                        <title>Menu</title>
+                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                              d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Left Sidenav -->
+            <nav class="collapse bd-links" id="bd-docs-nav">
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="functions.html">
+                        Функции
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="functions.html">
+                                Дефиниција, домен, ранг
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="functions_new.html">
+                                Нови функции од постојни
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lines.html">
+                                Прави
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_families.html">
+                                Фамилии од функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_inverse.html">
+                                Инверсни функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_exp.html">
+                                Експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="functions_log.html">
+                                Логаритамски функции
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="limes.html">
+                        Лимеси
+                    </a>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Изводи
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="derivates.html">
+                                Наклон и рата на промена
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_def.html">
+                                Функција на извод
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_tech.html">
+                                Техники на диференцирање
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_trig.html">
+                                Тригонометриски функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_chain.html">
+                                Верижно правило
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_implicit.html">
+                                Имплицитно диференцирање
+                            </a>
+                        </li>
+                        <li>
+                            <a href="derivates_log.html">
+                                Извод од логаритамски и експоненцијални функции
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" derivates_hopital.html">
+                                Лопиталово правило
+                            </a>
+                        </li>
+                        <li class="active bd-sidenav-active">
+                            <a href="derivates_analysis.html">
+                                Анализа на функции
+                            </a>
+                        </li>
+                </div><ul class="nav bd-sidenav">
+                    <li>
+                        <a href="derivates.html">
+                            Наклон и рата на промена
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_def.html">
+                            Функција на извод
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_tech.html">
+                            Техники на диференцирање
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_trig.html">
+                            Тригонометриски функции
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_chain.html">
+                            Верижно правило
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_implicit.html">
+                            Имплицитно диференцирање
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivates_log.html">
+                            Извод од логаритамски и експоненцијални функции
+                        </a>
+                    </li>
+                    <li>
+                        <a href=" derivates_hopital.html">
+                            Лопиталово правило
+                        </a>
+                    </li>
+                    <li class="active bd-sidenav-active">
+                        <a href="derivates_analysis.html">
+                            Анализа на функции
+                        </a>
+                    </li>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Интеграли
+                    </a>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                        Фундаментална теорема
+                    </a>
+                </div>
+
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="../calculus-exam/_2006_02_2.html">
+                        Испитни прашања
+                    </a>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <!-- right nav -->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2">
+                    <a href="#def">Аритметички операции со функции</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#def">Композиција на функции</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#vl_test">График на функција</a>
+                </li>
+                <li class="toc-entry toc-h3">
+                    <a href="#var">Парни и непарни функции</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+            
+
+            <h3 id="graph">
+                Да се анализира и скицира графот на функција
+            </h3>
+
+            <p id='1'>     
+                    <strong>`y = -12x^5 + 25x^3 -15x`</strong>
+                    <details>
+                        <summary class="mb-3">Решение</summary>
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                <strong>Чекор 1: </strong>Домен<br>
+                                `D_f = RR`
+                            </div>
+                            <div class='col-3'>
+                                    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    
+                                     <div id="jxgbox00" class="jxgbox" style="width:180px; height:180px"></div>
+                                    
+                                     <script>
+                                    
+                                            const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
+                                                boundingbox: [-4, 12, 4, -12],
+                                                showCopyright:false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            }); 
+                                    
+                                               
+                                    </script>
+                            </div>
+                        </div>
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 2: </strong>Симетричност, периодичност<br>
+                                    `f(-x) = -(-12x^5) -(+25x^3) -(-15x)`<br>
+                                    `= -(-12x^5) + 25x^3 -15x`<br>
+                                    `f(-x) = -f(x)`<br>
+                                    Функцијата е непарна, графот е симетричен во однос на кординатниот почеток.
+                            </div>
+                            <div class='col-3'><link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                
+                                
+                                 <div id="jxgbox01" class="jxgbox" style="width:180px; height:180px"></div>
+                                
+                                 <script>
+                                
+                                        const board01 = JXG.JSXGraph.initBoard('jxgbox01', {
+                                            boundingbox: [-4, 12, 4, -12],
+                                            showCopyright:false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });                                     
+                                     
+                                           
+                                </script>
+                            </div>
+                        </div>
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 3: </strong>Пресеци со `x` и `y` оската<br>
+                                    Пресек со `x`-оската<br>
+                                    `-12x^5 + 25x^3 - 15x = 0`<br>
+                                    `x =0`<br>
+                                    Пресек со `y`-оската<br>
+                                    `y = -12*0^5 + 25*0^3 - 15*0`<br>
+                                    `y = 0`<br>
+                                    Ја цртаме точката пресек `[0, 0]`
+
+                            </div>
+                            <div class='col-3'>
+
+                                    <div id="jxgbox02" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                    <script>
+                                   
+                                           const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
+                                               boundingbox: [-4, 12, 4, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+
+                                            point = [];
+                                            point['null']= board02.create('point',[0,0], {name:'[0, 0]',size:1});  
+                                            point_null.setProperty({fixed:true});
+                                              
+                                   </script>
+                            </div>
+                        </div>
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 4: </strong>Однесување на графикот кога `x -> -oo` и `x -> +00` , сите хоризонтални, коси и вертикални асимптоти<br>
+                                    Не постои реален број така да `lim_(x->a^-) f(x) = +-oo` или `lim_(x->a^+) f(x) = +-oo`<br>
+                                    нема вертикална асимтота.<br>
+                                    `lim_(x->+oo)f(x) =-oo`; `lim(x->-oo)f(x) = +oo`<br>
+                                    нема хоризонтална асимтота<br>
+                                    `k_1 = lim_(x->+oo)f(x)/x = -oo` - нема коса асимтота<br>
+                                    `k_2 = lim_(x->-oo)f(x)/x = -oo` - нема коса асимтота
+                            </div>
+                            <div class='col-3'>
+
+                                    <div id="jxgbox03" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                    <script>
+                                   
+                                           const board03 = JXG.JSXGraph.initBoard('jxgbox03', {
+                                               boundingbox: [-3, 12, 3, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            point = [];
+                                            point['null']= board03.create('point',[0,0], {name:'[0, 0]',size:1});  
+                                            point_null.setProperty({fixed:true});                              
+                                        
+                                              
+                                   </script>
+                            </div>
+                        </div>
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 5: </strong>Интервали на монотоност<br>
+                                    Анализа на знакот на првиот извод - Функцијата има релативни екстреми каде првиот извод го менува знакот.<br>
+                                    `f^' = -60x^4 +75x^2 - 15`<br>
+                                    Првиот извод може да го смени знакот во нулите и точките каде не е дефиниран.<br>
+                                    Доменот на функцијата на изводот е `D_(f^') = (-oo, +oo)`<br>
+                                    Нулите се:<br>
+                                    `-60x^4 + 75x^2 -15 = 0`<br>
+                                    Равенката е биквадратна каде коефициентите на членот `x^3` и `x` се `0`. Сега може да замениме `y = x^2` со што добиваме <br>
+                                    `-60y^2 + 75y -15 = 0`; што е квадратна равенка чии решенија се:<br>
+                                    `y_1 = (-75 + sqrt(75^2 - 4*(-60)*(-15)))/(2*(-60)) = (-75 + 45)/(-120) = 1/4`<br>
+                                    `y_2 = (-75 - sqrt(75^2 - 4*(-60)*(-15)))/(2*(-60)) = (-75 - 45)/(-120) = 1`<br>
+                                    Од `y_1 = -(1/4) = x^2 -> x_1 = 1/2; x_2 = -(1/2)`<br>
+                                    Од `y_2 = 1 = x^2 -> x_3 = 1; x_4 = -1`<br>
+                                    Точките каде се менува наклонот на графот се: `[-1, 2][-0.5, 4.75][0.5, -4.75]` и `[1, -2]`<br>
+                                    Точките ги означуваме на графот и креираме табела за знакот на `f^'`
+                            </div>
+                            <div class='col-3'>
+
+                                    <div id="jxgbox04" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                    <script>
+                                   
+                                           const board04 = JXG.JSXGraph.initBoard('jxgbox04', {
+                                               boundingbox: [-3, 12, 3, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            point = [];
+                                            point['null']= board04.create('point',[0,0], {name:'[0, 0]',size:1});  
+                                            point['null'].setProperty({fixed:true}); 
+                                            point['ch_sign00'] = board04.create('point',[-1, 2], {name:'[-1, 2]',size:1, strokeColor:'#0000ff'}); 
+                                            point['ch_sign01'] = board04.create('point',[-0.5, 4.75], {name:'[-0.5, 4.75]',size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign02'] = board04.create('point',[0.5, -4.75], {name:'[0.5, -4.75]',size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign03'] = board04.create('point',[1, -2], {name:'[1, -2]',size:1, strokeColor:'#0000ff'});
+                                              
+                                   </script>
+                            </div>
+                        </div>
+                        <table class=" table table responsive">
+                            <thead>
+                                <tr>
+                                    <th scope="col">интервал</th>
+                                    <th scope="col">Знак на `f`</th>
+                                    <th scope="col">Знак на `f^'`</th>
+                                    <th scope="col">Расте/Опаѓа</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">`(-oo, -1)`</th>
+                                    <td>`(+)`</td>
+                                    <td>`(-)`</td>
+                                    <td>`darr`</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">`(-1, -1/2)`</th>
+                                    <td>`(+)`</td>
+                                    <td>`(+)`</td>
+                                    <td>`uarr`</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">`(-1/2, 1/2)`</th>
+                                    <td>`(-)`</td>
+                                    <td>`(-)`</td>
+                                    <td>`darr`</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">`(1/2, +oo)`</th>
+                                    <td>`(-)`</td>
+                                    <td>`(+)`</td>
+                                    <td>`uarr`</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 6: </strong>Локални екстреми<br>
+                                    Се определуваат критичните точки на `f` (оние точки x каде `f'(x) = 0` или `f'(x)` не постои.<br>
+                                    Ако `f'` го менува знакот во `x_0` од `(+)` во `(-)` (или ако `f'(x_0) = 0` и `f''(x_0) < 0`), тогаш `f` има локален максимум во `x_0`.<br>
+                                    Ако `f'` го менува знакот во `x_0` од `(-)` во `(+)` (или ако `f'(x_0) = 0` и `f''(x_0) > 0`), тогаш `f` има локален минимум во `x_0`.<br>
+                                    Вториот извод е: `f''(x) = -240x^3 + 150x`<br>
+                                    Во точката `x = -1` првиот извод го менува знакот од `(-)` во `(+)` па функцијата има локален минимум (плус `f''(-1) > 0`)<br>
+                                    Во точката `x = -1/2` првиот извод го менува знакот од `(+)` во `(-)` па функцијата има локален максимум (плус `f''(-1/2) < 0`)<br>
+                                    Во точката `x = 1/2` првиот извод го менува знакот од `(-)` во `(+)` па функцијата има локален минимум (плус `f''(1/2) > 0`)<br>
+                                    Во точката `x = 1` првиот извод го менува знакот од `(+)` во `(-)` па функцијата има локален максимум (плус `f''(1) < 0`)<br>
+                            </div>
+                            <div class='col-3'>
+
+                                    <div id="jxgbox05" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                    <script>
+                                   
+                                           const board05 = JXG.JSXGraph.initBoard('jxgbox05', {
+                                               boundingbox: [-3, 12, 3, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            point = [];
+                                            point['null']= board05.create('point',[0,0], {name:[], size:1});  
+                                            point['null'].setProperty({fixed:true}); 
+                                            point['ch_sign00'] = board05.create('point',[-1, 2], {name:[], size:1, strokeColor:'#0000ff'}); 
+                                            point['ch_sign01'] = board05.create('point',[-0.5, 4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign02'] = board05.create('point',[0.5, -4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign03'] = board05.create('point',[1, -2], {name:[], size:1, strokeColor:'#0000ff'});
+                                              
+                                   </script>
+                            </div>
+                        </div>
+
+                        <div class='row py-3'>
+                            <div class='col-9'>
+                                    <strong>Чекор 7: </strong>Конвексност, конкавност и превојни точки<br>
+                                    Нулите на вториот извод се:<br>
+                                    `f''(x) = -240x^3 + 150x = -x(8x^2 + 5)`<br>
+                                    `x_1 = 0`; `x_2 = -sqrt(10)/4` и `x_3 = sqrt(10)/4`<br>
+                                    На интервалот `[-sqrt(10)/4, 0]` , вториот извод е помал од нула па графот на функцијата е конвексен (испакнат).<br>
+                                    На интервалот `[0, sqrt(10)/4]` , вториот извод е поголеммал од нула па графот на функцијата е конкавна (вдлабната).<br>
+                            </div>
+                            <div class='col-3'>
+
+                                    <div id="jxgbox06" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                    <script>
+                                   
+                                           const board06 = JXG.JSXGraph.initBoard('jxgbox06', {
+                                               boundingbox: [-3, 12, 3, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            point = [];
+                                            point['null']= board06.create('point',[0,0], {name:[], size:1});  
+                                            point['null'].setProperty({fixed:true}); 
+                                            point['ch_sign00'] = board06.create('point',[-1, 2], {name:[], size:1, strokeColor:'#0000ff'}); 
+                                            point['ch_sign01'] = board06.create('point',[-0.5, 4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign02'] = board06.create('point',[0.5, -4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign03'] = board06.create('point',[1, -2], {name:[], size:1, strokeColor:'#0000ff'});
+                                              
+                                   </script>
+                            </div>
+                        </div>
+
+                        <div class='row py-3'>
+                            <div class='col-3'>
+                                    <strong>Чекор 8: </strong>Скицирање на графикот<br>
+                                    Се скицира графикот на функцијата со внесување на сите претходни заклучоци.<br>
+                            </div>
+                            <div class='col-9'>
+
+                                    <div id="jxgbox07" class="jxgbox" style="width:500px; height:500px"></div>
+
+                                    <script>
+                                   
+                                           const board07 = JXG.JSXGraph.initBoard('jxgbox07', {
+                                               boundingbox: [-3, 12, 3, -12],
+                                               showCopyright:false,
+                                               showNavigation: false,
+                                               axis: true,
+                                           }); 
+                                   
+                                            point = [];
+                                            point['null']= board07.create('point',[0,0], {name:[], size:1});  
+                                            point['null'].setProperty({fixed:true}); 
+                                            point['ch_sign00'] = board07.create('point',[-1, 2], {name:[], size:1, strokeColor:'#0000ff'}); 
+                                            point['ch_sign01'] = board07.create('point',[-0.5, 4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign02'] = board07.create('point',[0.5, -4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                            point['ch_sign03'] = board07.create('point',[1, -2], {name:[], size:1, strokeColor:'#0000ff'});
+                                            graph = board07.create('functiongraph', [function(x){ return -12*x**5 + 25*x**3 -15*x}], {strokeColor:'#0000ff',strokeWidth:2});
+
+                                              
+                                   </script>
+                            </div>
+                        </div>
+                    </details>
+                </p>    
+            
+            
+        </main>
+    </div>
+</div>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<script src="js/docs.min.js"></script>
+
+<!-- jsxgrapf -->
+<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
+
+</body>
+</html>
