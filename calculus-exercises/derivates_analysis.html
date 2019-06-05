@@ -24,6 +24,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
             async></script>
 
+    <!-- jsxgrapf -->
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -278,10 +282,10 @@
         <div class="d-none d-xl-block col-xl-2 bd-toc">
             <ul class="section-nav">
                 <li class="toc-entry toc-h2">
-                    <a href="#def">Аритметички операции со функции</a>
+                    <a href="#1">`y = -12x^5 + 25x^3 - 15x`</a>
                 </li>
                 <li class="toc-entry toc-h3">
-                    <a href="#def">Композиција на функции</a>
+                    <a href="#2">`y = (2x^2-x-3)/(x^2-x-2)`</a>
                 </li>
                 <li class="toc-entry toc-h3">
                     <a href="#vl_test">График на функција</a>
@@ -302,7 +306,7 @@
             </h3>
 
             <p id='1'>     
-                    <strong>`y = -12x^5 + 25x^3 -15x`</strong>
+                    <strong>`y = -12x^5 + 25x^3 - 15x`</strong>
                     <details>
                         <summary class="mb-3">Решение</summary>
                         <div class='row py-3'>
@@ -580,7 +584,7 @@
                                     <script>
                                    
                                            const board07 = JXG.JSXGraph.initBoard('jxgbox07', {
-                                               boundingbox: [-3, 12, 3, -12],
+                                               boundingbox: [-6, 12, 8, -12],
                                                showCopyright:false,
                                                showNavigation: false,
                                                axis: true,
@@ -594,13 +598,350 @@
                                             point['ch_sign02'] = board07.create('point',[0.5, -4.75], {name:[], size:1, strokeColor:'#0000ff'});
                                             point['ch_sign03'] = board07.create('point',[1, -2], {name:[], size:1, strokeColor:'#0000ff'});
                                             graph = board07.create('functiongraph', [function(x){ return -12*x**5 + 25*x**3 -15*x}], {strokeColor:'#0000ff',strokeWidth:2});
-
+                                            graphS = board07.create('functiongraph', [function(x){ return (2*x**2 - x - 3)/(x**2 - x - 2)}], {strokeColor:'#00ff00',strokeWidth:2});
+                                            
+                                           
+                                            point['null_sx']= board07.create('point',[3/2,0], {name:[], size:1});
+                                            point['null_sy']= board07.create('point',[0,3/2], {name:[], size:1});    
                                               
                                    </script>
                             </div>
                         </div>
                     </details>
-                </p>    
+            </p>
+
+            <h3 id="graph">
+                Да се анализира и скицира графот на функција
+            </h3>
+            
+            <p id='1'>     
+                <strong>`y= (2x^2 - x - 3)/(x^2 - x - 2)`</strong>
+                <details>
+                    <summary class="mb-3">Решение</summary>
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                            <strong>Чекор 1: </strong>Домен<br>
+                            Функцијата не е дефинирана за вредностите на `x` кога броителот е `0`, односно:<br>
+                            `x_1=-1` и `x_2=2`<br>
+                            `D_f = RR\\ {-1, 2}`
+                        </div>
+                        <div class='col-3'>
+                                                                
+                            <div id="jxgbox10" class="jxgbox" style="width:180px; height:180px"></div>
+                                
+                            <script>
+                        
+                                const board10 = JXG.JSXGraph.initBoard('jxgbox10', {
+                                    boundingbox: [-4, 12, 4, -12],
+                                    showCopyright:false,
+                                    showNavigation: false,
+                                    axis: true,
+                                }); 
+                            
+                                        
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 2: </strong>Симетричност, периодичност<br>
+                                `f(-x)= (2(-x)^2 - (-x) - 3)/((-x)^2 - (-x) - 2)`<br>
+                                `f(-x) = -(2x^2 - x + 3)/(x^2 - x + 2)`<br>
+                                Функцијата не е ниту прна ниту непарна..
+                        </div>
+                        <div class='col-3'>                            
+                            
+                             <div id="jxgbox11" class="jxgbox" style="width:180px; height:180px"></div>
+                            
+                             <script>
+                            
+                                    const board11 = JXG.JSXGraph.initBoard('jxgbox11', {
+                                        boundingbox: [-4, 12, 4, -12],
+                                        showCopyright:false,
+                                        showNavigation: false,
+                                        axis: true,
+                                    });                                     
+                                 
+                                       
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 3: </strong>Пресеци со `x` и `y` оската<br>
+                                Пресек со `x`-оската<br>
+                                `y(x) = 0`<br>
+                                `(2x^2 - x - 3)/(x^2 - x - 2) = 0`<br>
+                                `(2x^2 - x - 3) = 0`<br>
+                                `x_1= 1` и `x_2 = 3/2` Како функцијата не е дефинирана за `x = 1` пресек е само точката `[3/2, 0]`<br>
+                                Пресек со `y`-оската<br>
+                                `y(0) = 3/2`<br>
+                                Ги цртаме нул точките `[3/2, 0]` и `[0, 3/2]`.
+
+                        </div>
+                        <div class='col-3'>
+
+                                <div id="jxgbox12" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                <script>
+                               
+                                       const board12 = JXG.JSXGraph.initBoard('jxgbox12', {
+                                           boundingbox: [-4, 12, 4, -12],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+
+                                        point = [];
+                                        point['x_null']= board12.create('point',[3/2,0], {name:'' ,size:1});  
+                                        point['y_null']= board12.create('point',[0,3/2], {name:'' ,size:1});  
+                                        point_null.setProperty({fixed:true});
+                                          
+                               </script>
+                        </div>
+                    </div>
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 4: </strong>Асимтоти<br>
+                                Ако функцијата не е дефинирана во точката `x`, функцијата има вертикална асимтота ако е:<br>
+                                `lim_(x->a^-) f(x) = +-oo` или `lim_(x->a^+) f(x) = +-oo`<br>
+                                Во нашиот случај функцијата не е дефинирана во точките `x=-1` и `x=2`.<br>
+                                `lim_(x->2^-) f(x) = +oo` или `lim_(x->2^+) f(x) = +oo`<br>
+                                Функцијата има вертикална асимтота во `x=2`, ја цртаме<br>
+                                `lim_(x->-1^-) f(x) = 0/0 = (4x -1)/(2x-1) != +-oo` `lim_(x->-1^+) f(x) =0/0 = (4x -1)/(2x-1) != +-oo`<br>
+                                Функцијата нема вертикална асимтота во `x=-1`<br>
+                                Функцијатa има хоризонтална асимтоата ако:<br>
+                                `lim_(x->+oo)f(x) = L`  или `lim_(x->-oo)f(x)= L`, тогаш правата `y = L` е хоризонтална асимптота.<br>
+                                `lim_(x->+oo) (+oo)/(+oo) = (4x - 1)/(2x- 1) = 4/2 = 2`; `y=2` е хоризонтална асимтота, ја цртаме.<br>
+                                Правата `y = kx + n` е коса асимтота на функцијата ако:<br>
+                                `k = lim_(x->+-oo)f(x)/x = L_1, L_1!=0`<br>
+                                `n = lim_(x->+-oo)(f(x)-kx) = L_2`<br>
+                                `k = lim_(x->+oo)f(x)/x = lim_(x->+oo) (2x^2 - x - 3)/(x^3 - x^2 - 2x) = lim_(x->+oo)(4x-1)/(3x^2 - 2x -2)`<br>
+                                `= lim _(x->+oo) 4/(6x - 2) = 4/oo = 0`<br>
+                                Функцијата нема коси асимтоти.
+                        </div>
+                        <div class='col-3'>
+
+                                <div id="jxgbox13" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                <script>
+                               
+                                       const board13 = JXG.JSXGraph.initBoard('jxgbox13', {
+                                           boundingbox: [-4, 12, 4, -12],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+                               
+                                        point = [];
+                                        point['x_null']= board13.create('point',[3/2,0], {name:'' ,size:1});  
+                                        point['y_null']= board13.create('point',[0,3/2], {name:'' ,size:1});  
+                                        point['asym1']= board13.create('point',[2,20], {name:'as1' ,size:1});     
+                                        point['asym2']= board13.create('point',[2,-20], {name:'as2' ,size:1});  
+                                        v_asymtote = board13.create('line',["as1","as2"], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        h_asymtote = board13.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        point_null.setProperty({fixed:true});   
+                                    
+                                          
+                               </script>
+                        </div>
+                    </div>
+
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 5: </strong>Интервали на монотоност<br>
+                                За да се одредат локалните екстреми и интервали на монотоноста, потребно е да се одреди првиот извод и нулите на првиот извод.<br>
+                                Функцијата има релативни екстреми каде првиот извод го менува знакот.<br>
+                                `f^' = ((2x^2 - x - 3)/(x^2 - x - 2))^' = ((4x-1)(x^2 - x - 2) - (2x^2 - x - 3)(2x -1))/(x^2 - x - 2)^2`<br>
+                                `= ((4x^3 - 4x^2 -8x - x^2 + x + 2) - (4x^3 - 2x^2 -2x^2 + x - 6x + 3))/(x^2 - x - 2)^2`<br>
+                                `= (x^2 - 2x - 1)/(x^2 - x - 2)^2`<br>
+                                Нулите на првиот извод се:<br>
+                                `f^'(x) = 0 <=> x^2 - 2x - 1 = 0 <=> x_1 = (2 + sqrt(8))/2 ~~ 2.41; x_2 = (2 - sqrt(8))/2 ~~ -0.41`<br>
+                                Ги цртаме точките каде се менува наклонот на графот: `[-0,41, f(-0.41)], [2.14, f(2.41)]<=> [-0.41, 1], [2.41, 0.3]`<br>
+                                Точките ги означуваме на графот и креираме табела за знакот на `f^'`
+                        </div>
+                        <div class='col-3'>
+
+                                <div id="jxgbox14" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                <script>
+                               
+                                       const board14 = JXG.JSXGraph.initBoard('jxgbox14', {
+                                           boundingbox: [-3, 6, 3, -4],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+                               
+                                        point = [];
+                                        point['x_null']= board14.create('point',[3/2,0], {name:'' ,size:1});  
+                                        point['y_null']= board14.create('point',[0,3/2], {name:'' ,size:1});  
+                                        point['asym1']= board14.create('point',[2,20], {name:'as1' ,size:1});     
+                                        point['asym2']= board14.create('point',[2,-20], {name:'as2' ,size:1});  
+                                        v_asymtote = board14.create('line',["as1","as2"], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        h_asymtote = board14.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        point['extreme1']= board14.create('point',[-.41,1], {name:'' ,size:1, strokeColor:'#00ff00'});     
+                                        point['extreme2']= board14.create('point',[2.41,0.3], {name:'' ,size:1, strokeColor:'#00ff00'});  
+                                        point_null.setProperty({fixed:true}); 
+                                          
+                               </script>
+                        </div>
+                    </div>
+                    <table class=" table table responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">интервал</th>
+                                <th scope="col">Знак на `f`</th>
+                                <th scope="col">Знак на `f^'`</th>
+                                <th scope="col">Расте/Опаѓа</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">`(-oo, -0.41)`</th>
+                                <td>`(+)`</td>
+                                <td>`(-)`</td>
+                                <td>`darr`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">`(-0.41, 1)`</th>
+                                <td>`(+)`</td>
+                                <td>`(-)`</td>
+                                <td>`darr`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">`(1, 2)`</th>
+                                <td>`(-)`</td>
+                                <td>`(-)`</td>
+                                <td>`darr`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">`(2, 2.41)`</th>
+                                <td>`(+)`</td>
+                                <td>`(-)`</td>
+                                <td>`darr`</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">`(2.41, +oo)`</th>
+                                <td>`(+)`</td>
+                                <td>`(-)`</td>
+                                <td>`darr`</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 6: </strong>Локални екстреми<br>
+                                Се определуваат критичните точки на `f` (оние точки x каде `f'(x) = 0` или `f'(x)` не постои.<br>
+                                Ако `f'` го менува знакот во `x_0` од `(+)` во `(-)` (или ако `f'(x_0) = 0` и `f''(x_0) < 0`), тогаш `f` има локален максимум во `x_0`.<br>
+                                Ако `f'` го менува знакот во `x_0` од `(-)` во `(+)` (или ако `f'(x_0) = 0` и `f''(x_0) > 0`), тогаш `f` има локален минимум во `x_0`.<br>
+                                Бидејки `f^'` не го менува знакот функцијата нема локални екстреми.<br>
+                        </div>
+                        <div class='col-3'>
+
+                                <div id="jxgbox15" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                <script>
+                               
+                                       const board15 = JXG.JSXGraph.initBoard('jxgbox15', {
+                                           boundingbox: [-3, 12, 3, -12],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+                               
+                                        point = [];
+                                        point['x_null']= board15.create('point',[3/2,0], {name:'' ,size:1});  
+                                        point['y_null']= board15.create('point',[0,3/2], {name:'' ,size:1});  
+                                        point['asym1']= board15.create('point',[2,20], {name:'as1' ,size:1});     
+                                        point['asym2']= board15.create('point',[2,-20], {name:'as2' ,size:1});  
+                                        v_asymtote = board15.create('line',["as1","as2"], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        h_asymtote = board15.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        point['extreme1']= board15.create('point',[-.41,1], {name:'' ,size:1, strokeColor:'#00ff00'});     
+                                        point['extreme2']= board15.create('point',[2.41,0.3], {name:'' ,size:1, strokeColor:'#00ff00'});  
+                                        point_null.setProperty({fixed:true}); 
+                                          
+                               </script>
+                        </div>
+                    </div>
+
+                    <div class='row py-3'>
+                        <div class='col-9'>
+                                <strong>Чекор 7: </strong>Конвексност, конкавност и превојни точки<br>
+                                Нулите на вториот извод се:<br>
+                                `f''(x) = -240x^3 + 150x = -x(8x^2 + 5)`<br>
+                                `x_1 = 0`; `x_2 = -sqrt(10)/4` и `x_3 = sqrt(10)/4`<br>
+                                На интервалот `[-sqrt(10)/4, 0]` , вториот извод е помал од нула па графот на функцијата е конвексен (испакнат).<br>
+                                На интервалот `[0, sqrt(10)/4]` , вториот извод е поголеммал од нула па графот на функцијата е конкавна (вдлабната).<br>
+                        </div>
+                        <div class='col-3'>
+
+                                <div id="jxgbox06" class="jxgbox" style="width:180px; height:180px"></div>
+
+                                <script>
+                               
+                                       const board06 = JXG.JSXGraph.initBoard('jxgbox06', {
+                                           boundingbox: [-3, 12, 3, -12],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+                               
+                                        point = [];
+                                        point['null']= board06.create('point',[0,0], {name:[], size:1});  
+                                        point['null'].setProperty({fixed:true}); 
+                                        point['ch_sign00'] = board06.create('point',[-1, 2], {name:[], size:1, strokeColor:'#0000ff'}); 
+                                        point['ch_sign01'] = board06.create('point',[-0.5, 4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                        point['ch_sign02'] = board06.create('point',[0.5, -4.75], {name:[], size:1, strokeColor:'#0000ff'});
+                                        point['ch_sign03'] = board06.create('point',[1, -2], {name:[], size:1, strokeColor:'#0000ff'});
+                                          
+                               </script>
+                        </div>
+                    </div>
+
+                    <div class='row py-3'>
+                        <div class='col-3'>
+                                <strong>Чекор 8: </strong>Скицирање на графикот<br>
+                                Се скицира графикот на функцијата со внесување на сите претходни заклучоци.<br>
+                        </div>
+                        <div class='col-9'>
+
+                                <div id="jxgbox17" class="jxgbox" style="width:500px; height:500px"></div>
+
+                                <script>
+                               
+                                       const board17 = JXG.JSXGraph.initBoard('jxgbox17', {
+                                           boundingbox: [-6, 12, 10, -12],
+                                           showCopyright:false,
+                                           showNavigation: false,
+                                           axis: true,
+                                       }); 
+
+                                        point = [];
+                                        point['x_null']= board17.create('point',[3/2,0], {name:'' ,size:1});  
+                                        point['y_null']= board17.create('point',[0,3/2], {name:'' ,size:1});  
+                                        point['asym1']= board17.create('point',[2,20], {name:'as1' ,size:1});     
+                                        point['asym2']= board17.create('point',[2,-20], {name:'as2' ,size:1});  
+                                        v_asymtote = board17.create('line',["as1","as2"], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        h_asymtote = board17.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
+                                        point['extreme1']= board17.create('point',[-.41,1], {name:'' ,size:1, strokeColor:'#00ff00'});     
+                                        point['extreme2']= board17.create('point',[2.41,0.3], {name:'' ,size:1, strokeColor:'#00ff00'});  
+                                        graphS = board17.create('functiongraph', [function(x){ return (2*x**2 - x - 3)/(x**2 - x - 2)}], {strokeColor:'#00ff00',strokeWidth:2});
+                                        
+                                        point_null.setProperty({fixed:true}); 
+                               
+                                        
+                                        
+                                        
+                                          
+                               </script>
+                        </div>
+                    </div>
+                </details>
+        </p>
             
             
         </main>
@@ -614,8 +955,7 @@
 <!-- Optional JavaScript -->
 <script src="js/docs.min.js"></script>
 
-<!-- jsxgrapf -->
-<script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
 
 
 </body>
