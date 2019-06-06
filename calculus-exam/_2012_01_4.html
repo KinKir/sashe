@@ -22,6 +22,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
         async></script>
 
+    <!-- JSXGraph -->
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -255,7 +259,7 @@
                         </a>
 
                         <ul class="nav bd-sidenav">
-                            <li class="active bd-sidenav-active">
+                            <li>
                                 <a href="_2006_02_2.html">
                                     2006-02-Група II
                                 </a>
@@ -265,7 +269,7 @@
                                     2007-02
                                 </a>
                             </li>
-                            <li>
+                            <li class="active bd-sidenav-active">
                                 <a href="_2012_01_4.html">
                                     2012-01 Група IV
                                 </a>
@@ -307,7 +311,7 @@
             <div class="d-none d-xl-block col-xl-2 bd-toc">
                 <ul class="section-nav">
                     <li class="toc-entry toc-h2">
-                        <a href="#def">2006-02</a>
+                        <a href="#def">08-2012-01</a>
                         <ul>
                             <li class="toc-entry toc-h3">
                                 <a href="#def1">Задача 1</a>
@@ -327,9 +331,6 @@
                             <li class="toc-entry toc-h3">
                                 <a href="#ex">Задача 6</a>
                             </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#ex">Задача 7</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -340,44 +341,36 @@
 
                 <div class='row py-3'>
 
-                    <!-- 16 08 2006, II група, Задача 1:-->
+                    <!-- 01 2012, IV група, Задача 1:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            02-2006 група 2: Задача 1
+                            Задача 1
                         </h5>
                         <p>
-                            <strong>4 </strong>Цената на една карта од универзитетот до центарот на градот е $2, но
-                            може да се купи месечна карта за $25, со која за секое повратно патување се плаќаат
-                            дополнителни $0.2. Колку повратни патувања треба да направи еден студент за да му се исплати
-                            купувањето на месечната карта?
+                            <strong>5 </strong>Кутија со квадратна основа ..
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div class='row py-3'>
-                                <div class='col-12'>
-                                    <p>
-                                        `2 * x > 0.2x +25`<br>
-                                        `2x -0.2x > 25`<br>
-                                        `x(2-0.2)> 25`<br>
-                                        `x > 25/1.8`<br>
-                                        `x > 13.9`<br>
-                                        `x = 14`
-                                    </p>
-                                    <p> Ако студентот оди 14 пати до центар со редовна карта ќе потроши `14 * 2 = $28` а
-                                        со месечна карта `25 + 14*0.2 = 27.8`</p>
+                                <div class='col-8'>
+                                </div>
+                                <div class='col-4'>
                                 </div>
                             </div>
+
                         </details>
                     </div>
 
                     <!-- 16 08 2006, II група, Задача 2:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            02-2006 група 2: Задача 2
+                            Задача 2
                         </h5>
                         <p>
-                            <strong>6 </strong>Скицирај ја кривата `x = 1/cos^2t`, `y = tan^2t` со елиминирање на
-                            параметарот и одреди го правецот кога `t` расте.
+                            <strong>3 </strong>Скицирај график на функција која ги задоволува сите наведени својства:
+                        </p>
+                        <p>
+                            `f(1) = 2`, `f(-1) = -2` .....
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
@@ -386,23 +379,8 @@
                                     <p>
 
                                     </p>
-                                </div>                                
+                                </div>
                                 <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox02" class="jxgbox" style="width:240px; height:240px"></div>
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-                                        const board02 = JXG.JSXGraph.initBoard('jxgbox02', {
-                                            boundingbox: [-2*Math.PI, 10, 2*Math.PI, -10],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                        graph = board02.create('functiongraph', [function (x) { return 1/((Math.cos(x))**2); }, -2*Math.PI, 2*Math.PI], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                        graph = board02.create('functiongraph', [function (x) { return Math.tan(x); }, -2*Math.PI, 2*Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                    </script>
                                 </div>
                             </div>
                         </details>
@@ -410,132 +388,43 @@
 
                     <!-- 16 08 2006, II група, Задача 3:-->
                     <div class='col-12'>
-                            <h5 id=''>
-                                02-2006 група 2: Задача 3
-                            </h5>
-                            <p>
-                                <strong>2 + 2 </strong>Најди `lim_(x-4) 1/abs(x - 4)`, `lim_(x->+oo) sin(1/x)`.
-                            </p>
-                            <details>
-                                <summary class="mb-3">Решение</summary>
-                                <div class='row py-3'>
-                                    <div class='col-12'>
-                                        <p>
-    
-                                        </p>
-                                    </div> 
-                                </div>
-                            </details>
-                    </div>                   
-
-
-                    <!-- 16 08 2006, II група, Задача 5:-->
-                    <div class='col-12'>
                         <h5 id=''>
-                            02-2006 група 2: Задача 5
+                            Задача 3
                         </h5>
                         <p>
-                            <strong>4 </strong>Одреди дали функцијата `f(x) = 3x + cosx` има инверзна функција.
+                            <strong>5 </strong>Да се пресмета `y^'` ако `y = (ln(x^3+x^2) + sqrt(x))^(1/x^2)`
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-12'>
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+
+                    <!-- 16 08 2006, Задача 5:-->
+                    <div class='col-12'>
+                        <h5 id=''>
+                            Задача 4
+                        </h5>
+                        <p>
+                            <strong>12 </strong>Да се анализира и скицира функцијата:
+                        </p>
+                        <p>
+                            `y = (2x^2-x-3)/(x^2-x-2)`
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <div class='row py-3'>
                                 <div class='col-8'>
-                                    <p>
-                                        Теорема: Дадена функција `f` има инверзна функција ако и само ако било која
-                                        хоризонтална права го сече графикот на функцијата најмногу еднаш.<br>
-                                        Конструираме таблица Одредуваме неколку точки на функцијата во таблица и ја
-                                        цртаме. Исто така цртаме
-                                        некоја хоризонтална права и гледаме дали функцијат аго поминува тестот на
-                                        хоризонтална права.
-                                    </p>
-                                    <table class="table table-sm">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">x</th>
-                                                <th scope="col">`3x`</th>
-                                                <th scope="col">`cosx`</th>
-                                                <th scope="col">`f(x)`</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">`-2pi`</th>
-                                                <td>`-18.85`</td>
-                                                <td>`1`</td>
-                                                <td>`17.85`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`-3pi/2`</th>
-                                                <td>`-14.14`</td>
-                                                <td>`0`</td>
-                                                <td>`-14.14`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`-pi`</th>
-                                                <td>`-9.42`</td>
-                                                <td>`-1`</td>
-                                                <td>`-10.42`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`-pi/2`</th>
-                                                <td>`-4.71`</td>
-                                                <td>`0`</td>
-                                                <td>`-4.71`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`0`</th>
-                                                <td>`0`</td>
-                                                <td>`1`</td>
-                                                <td>`1`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`pi/2`</th>
-                                                <td>`4.71`</td>
-                                                <td>`0`</td>
-                                                <td>`4.71`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`pi`</th>
-                                                <td>`9.42`</td>
-                                                <td>`-1`</td>
-                                                <td>`8.42`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`3pi/2`</th>
-                                                <td>`14.14`</td>
-                                                <td>`0`</td>
-                                                <td>`14.14`</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">`2pi`</th>
-                                                <td>`18.85`</td>
-                                                <td>`1`</td>
-                                                <td>`19.85`</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>
-                                        Сега цртаме хоризонтална права и од графикот гледаме дека функцијата го поминува
-                                        тестот па според тоа можеме да кажеме дека функцијата има инверзна функција.
-                                    </p>
                                 </div>
                                 <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox05" class="jxgbox" style="width:240px; height:240px"></div>
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-                                        const board05 = JXG.JSXGraph.initBoard('jxgbox05', {
-                                            boundingbox: [-2 * Math.PI, 10, 2 * Math.PI, -10],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                        graph = board05.create('functiongraph', [function (x) { return 3 * x + Math.cos(x); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                        graph = board05.create('functiongraph', [function (x) { return 2; }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                    </script>
+
                                 </div>
                             </div>
                         </details>
@@ -544,66 +433,55 @@
                     <!-- 16 08 2006, II група, Задача 6:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            02-2006 група 2: Задача 6
+                            Задача 5
                         </h5>
                         <p>
-                            <strong>10 </strong>Да се анализира и скицира функцијата:<br>
-                            `f(x) = lnx/(4x^2)`
-                        </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
-                                    <p>
-                                        <strong>Чекор 1:</strong> Домен на функцијата.<br>
-                                    </p>
-                                    <p>
-                                        Нека `g(x) = lnx`. Домен на функцијата `g(x)` e `D_g= [0, +oo)` и нека `h(x) =
-                                        4x^2`. Доменот на функцијата `h(x)` е `D_(4x^2) = (-oo, +oo)`. Домен на
-                                        функцијата `f(x) = g(x)/h(x) = D_f = D_g nn D_h \ {x in D_g | h(x) = 0}`<br>
-                                        <strong>`D_f = [0, +oo) nn (-oo, 0] uu [0, +oo)= [0, +oo)`</strong><br>
-                                    </p>
+                            <strong>2+3 </strong>Да се пресметаат лимесите:<br>
+                            `lim_(x->0)(4x)/(sin^2(-x)` и `lim_(x-<0)()` </p> <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                    </div>
+                                    <div class='col-4'>
+                                    </div>
                                 </div>
-                                <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox2005" class="jxgbox" style="width:240px; height:240px"></div>
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-                                        const board2005 = JXG.JSXGraph.initBoard('jxgbox2005', {
-                                            boundingbox: [-2, .3, 20, -.2],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                        graph = board2005.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 4); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                    </script>
-                                </div>
-                            </div>
-                        </details>
+                                </details>
                     </div>
 
-                    <!-- 16 08 2006, II група, Задача 7:-->
+                    <!-- 16 08 2006, II група, Задача 6:-->
                     <div class='col-12'>
                         <h5 id=''>
-                            02-2006 група 2: Задача 7
+                            Задача 6
                         </h5>
                         <p>
-                            <strong>4 </strong>Одреди го правоаголникот впишан во кружница со радиус `20` кој има
-                            најголема плоштина.
+                            <strong>4 </strong>Да се докаже дека постои барем еден корен на функцијата `f` во интервалот
+                            `[0, pi]`, каде функцијата е дефинирана со:
                         </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
+                        <p>
+                            `f(x) = {(3-x, 0 <= x <=2),(ln(x^2-3)cosx + 1, 2 <=x <=pi):}` </p> <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        Акo `f` е непрекината на интервалот `[0, pi]` и ако `f(0)` и `f(pi)` се различни
+                                        од нула и имаат спротивен знак, тогаш во интервалот `(a, b)` постои барем еден
+                                        корен на равенката `f(x) = 0`.<br>
+                                        Прво треба да видиме дали функцијата е непрекината на интервалот `[0, pi]`<br>
+                                        Услов 1. Функцијата треба да е дефинирана на интервалот `[0, pi]`.<br>
+                                        Делот `3-x` е дефиниран во областа `0<= x < 2`.<br>
+                                        Делот `ln(x^2 - 3)cosx + 1` е дефиниран во областа `2 <= x <= pi`<br>
+                                        Според тоа функцијата е дефинирана во интервалот `[0, pi]`<br>
+                                        Услов 2. Треба да постои лимес во `x = 2`<br>
+                                        Услов 3. Лимесот во точката `x=2` треба да е еднаков со вредноста на функцијата во `x=2`.<br>
+                                        Услов 4. `f(0)` и `f(pi)` треба да се различни од нула и да имаат различен знак.<br>
+                                        `f(0) = 3 - x = 3`<br>
+                                        `f(pi) = ln(x^2 - 3)cos(pi) + 1 = ln(0.14)cos(pi) + 1 = 6.9 * (-1) + 1 = -5.9`
 
-                                </div>
-                                <div class='col-4'>
+                                    </div>
+                                    <div class='col-4'>
 
+                                    </div>
                                 </div>
-                            </div>
-                        </details>
+                                </details>
                     </div>
 
 

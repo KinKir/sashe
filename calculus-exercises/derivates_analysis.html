@@ -756,11 +756,10 @@
                                 Функцијата има релативни екстреми каде првиот извод го менува знакот.<br>
                                 `f^' = ((2x^2 - x - 3)/(x^2 - x - 2))^' = ((4x-1)(x^2 - x - 2) - (2x^2 - x - 3)(2x -1))/(x^2 - x - 2)^2`<br>
                                 `= ((4x^3 - 4x^2 -8x - x^2 + x + 2) - (4x^3 - 2x^2 -2x^2 + x - 6x + 3))/(x^2 - x - 2)^2`<br>
-                                `= (x^2 - 2x - 1)/(x^2 - x - 2)^2`<br>
+                                `= (-x^2 - 2x - 1)/(x^2 - x - 2)^2`<br>
                                 Нулите на првиот извод се:<br>
-                                `f^'(x) = 0 <=> x^2 - 2x - 1 = 0 <=> x_1 = (2 + sqrt(8))/2 ~~ 2.41; x_2 = (2 - sqrt(8))/2 ~~ -0.41`<br>
-                                Ги цртаме точките каде се менува наклонот на графот: `[-0,41, f(-0.41)], [2.14, f(2.41)]<=> [-0.41, 1], [2.41, 0.3]`<br>
-                                Точките ги означуваме на графот и креираме табела за знакот на `f^'`
+                                `f^'(x) = 0 <=> -x^2 - 2x - 1 = 0 <=> x_(1,2) = -1`<br>
+                                Бидејки функцијата не е дефинирана во точката, истата нема локални екстреми.<br>
                         </div>
                         <div class='col-3'>
 
@@ -781,9 +780,7 @@
                                         point['asym1']= board14.create('point',[2,20], {name:'as1' ,size:1});     
                                         point['asym2']= board14.create('point',[2,-20], {name:'as2' ,size:1});  
                                         v_asymtote = board14.create('line',["as1","as2"], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
-                                        h_asymtote = board14.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2}); 
-                                        point['extreme1']= board14.create('point',[-.41,1], {name:'' ,size:1, strokeColor:'#00ff00'});     
-                                        point['extreme2']= board14.create('point',[2.41,0.3], {name:'' ,size:1, strokeColor:'#00ff00'});  
+                                        h_asymtote = board14.create('functiongraph', [function(x){ return 2}], {strokeColor:'#00ff00',strokeWidth:1, dash:2});
                                         point_null.setProperty({fixed:true}); 
                                           
                                </script>
@@ -800,32 +797,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">`(-oo, -0.41)`</th>
+                                <th scope="row">`(-oo, -1)`</th>
                                 <td>`(+)`</td>
                                 <td>`(-)`</td>
                                 <td>`darr`</td>
                             </tr>
                             <tr>
-                                <th scope="row">`(-0.41, 1)`</th>
+                                <th scope="row">`(-1, 2)`</th>
                                 <td>`(+)`</td>
                                 <td>`(-)`</td>
                                 <td>`darr`</td>
                             </tr>
                             <tr>
-                                <th scope="row">`(1, 2)`</th>
+                                <th scope="row">`(2, +oo)`</th>
                                 <td>`(-)`</td>
-                                <td>`(-)`</td>
-                                <td>`darr`</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">`(2, 2.41)`</th>
-                                <td>`(+)`</td>
-                                <td>`(-)`</td>
-                                <td>`darr`</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">`(2.41, +oo)`</th>
-                                <td>`(+)`</td>
                                 <td>`(-)`</td>
                                 <td>`darr`</td>
                             </tr>

@@ -292,7 +292,7 @@
                         <a href="#ex1">Вежба 1</a>
                     </li>
                     <li class="toc-entry toc-h3">
-                        <a href="#zero/zero">Неопределена вредност `0/0`</a>
+                        <a href="#ex2">Вежба 2</a>
                     </li>
                     <li class="toc-entry toc-h3">
                         <a href="#ex3">Вежба 3</a>
@@ -317,7 +317,7 @@
                         </h3>
 
                         <p>
-                            Да се одреди дали функцијата е за дадена вредност на `a`. Ако е непрекината да се пресмета
+                            Да се одреди дали функцијата е непрекината за дадена вредност на `a`. Ако е непрекината да се пресмета
                             вредноста
                             на функцијата за `a`.
                         </p>
@@ -371,14 +371,14 @@
                                         <script>
 
                                             const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
-                                                boundingbox: [-10, 4, 10, -1],
+                                                boundingbox: [-1, 4, 4, -4],
                                                 showCopyright: false,
                                                 showNavigation: false,
                                                 axis: true,
                                             });
 
                                             graph = board00.create('functiongraph', [function (x) { return 1 / (x - 2); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            point = board00.create('point', [2, 3], { name: 'A', size: 1 });
+                                            point = board00.create('point', [2, 3], { name: 'A', size: 1, strokeColor:'#0000ff' });
 
                                         </script>
                                     </div>
@@ -388,7 +388,7 @@
                         <!-- /Exercise 1 -->
 
                         <!-- Exercise 2 -->
-                        <p id='ex1'>
+                        <p id='ex2'>
                             <strong>Вежба 2.</strong> `a = 1`<br>
                             `f(x) = {(1 +x^2, x <= 1),(4sqrt(x)-2, x> 1):}`
                                 <details>
@@ -401,13 +401,9 @@
                                             </p>
                                             <p>
                                                 Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
-                                                `lim_(x->1^-) 1 + x^2`<br>
-                                                `= lim_(x->1^-) 1 + 1`<br>
-                                                `= 2`<br>
-                                                `lim_(x->1^+) 4sqrt(x)-2`<br>
-                                                `= lim_(x->2^-) 4*1 -2`<br>
-                                                `= 2`
-                                                Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
+                                                `lim_(x->1^-) 1 + x^2 = lim_(x->1^-) 1 + 1 = 2`<br>
+                                                `lim_(x->1^+) 4sqrt(x)-2 = lim_(x->2^-) 4*1 -2 = 2`<br>
+                                                Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимесот `lim_(x->a) f(x)`постои.
                                             </p>
                                             <p>
                                                 Услов 3: `lim_(x->a)f(x) = f(a)`<br>
@@ -460,13 +456,9 @@
                                         </p>
                                         <p>
                                             Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
-                                            `lim_(x->0^-) 2 + x^2`<br>
-                                            `= lim_(x->0^-) 2 + 0^2`<br>
-                                            `= 2`<br>
-                                            `lim_(x->0^+) 2cosx`<br>
-                                            `= lim_(x->0^+) 2*1`<br>
-                                            `= 2`<br>
-                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
+                                            `lim_(x->0^-) 2 + x^2 = lim_(x->0^-) 2 + 0^2 = 2`<br>
+                                            `lim_(x->0^+) 2cosx = lim_(x->0^+) 2*1 = 2`<br>
+                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес `lim_(x->a) f(x)`постои.
                                         </p>
                                         <p>
                                             Услов 3: `lim_(x->a)f(x) = f(a)`<br>
@@ -478,26 +470,19 @@
                                         </p>
                                         <p>
                                             Услов 1: Функцијата да e дефинирана во `f(a)`<br>
-                                            `f(a) = 2cos(pi) = sin(pi) -2 = -2`
-                                        </p>
-                                        <p>
-                                            `a = 0`
+                                            `f(a) = 2cos(pi) = -2`
                                         </p>
                                         <p>
                                             Услов 2: Да постои лимес за точката `a` `lim_(x->a)f(x)`<br>
-                                            `lim_(x->pi^-) 2cosx`<br>
-                                            `= lim_(x->0^-) 2 * -1`<br>
-                                            `= 2`<br>
-                                            `lim_(x->0^+) sinx -2`<br>
-                                            `= lim_(x->0^-) 0 - 2`<br>
-                                            `= -2`
-                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес lim_(x->a) f(x)`постои.
+                                            `lim_(x->pi^-) 2cosx = -2`<br>
+                                            `lim_(x->pi^+) sinx -2 = 0 - 2 = -2`<br>
+                                            Бидејки `lim_(x->a^-)f(x) = lim_(x->a^+)`, лимес `lim_(x->a) f(x)`постои.
                                         </p>
                                         <p>
                                             Услов 3: `lim_(x->a)f(x) = f(a)`<br>
                                             `lim_(x->pi)f(x) = f(0) = -2`
                                         </p>
-                                        <p><strong>Функцијата е непрекината во точката `a = 0`</strong></p>
+                                        <p><strong>Функцијата е непрекината во точката `a = pi`</strong></p>
 
                                     </div>
                                     <div class='col-4'>
@@ -529,7 +514,7 @@
                         <!-- /Exercise 3 -->
 
                         <p>
-                            <strong>Да се одреди вредноста на `c` така да функцијата биде непрекината секаде.</strong>
+                            <strong>Да се одреди вредноста на `c` , ако може, така да функцијата биде непрекината секаде.</strong>
                         </p>
 
                         <!-- Exercise 1 -->
@@ -540,22 +525,21 @@
                                 <div class='row py-3'>
                                     <div class='col-8'>
                                         <p>
-                                            Пресметуваме лев и десен лимес:
-                                            `lim_(x->2^-) cx - 2`<br>
-                                            `= lim_(x->2^-)c*2 - 2`<br>
-                                            `= lim_(x->2^-) 2c - 2`<br>
+                                            Пресметуваме лев и десен лимес за `x=2`:<br>
+                                            `lim_(x->2^-) cx - 2 = lim_(x->2^-)c*2 - 2 = lim_(x->2^-) 2c - 2`<br>
                                             ---------------------------
-                                            `lim_(x->2^+) cx^2 + 2`<br>
-                                            `= lim_(x->2^+)c*2^2 + 2`<br>
-                                            `= lim_(x->2^+) 4c + 2`<br>
+                                            `lim_(x->2^+) cx^2 + 2 = lim_(x->2^+)c*2^2 + 2 = lim_(x->2^+) 4c + 2`<br>
                                         </p>
-                                        <p>За да функцијата биде непрекината <del>насекаде</del> во деменот на
-                                            функцијата (ова е глуп гооглe транслате превод на elsewheare без да се води
-                                            сметка за контекстот на реченицата. Предходно баравме непрекинатост на
-                                            функција во одредена точка а сеgа - elsewhere - на друго место), трeба
-                                            `lim_(x->a)f(x)=f(a)`, односно:
-                                            `2c - 2 = 4c + 2`<br>
-                                            `c = -3/2`
+                                        <p>За да функцијата биде непрекината насекаде трeба:<br>
+                                            Услов 1. Да постои лимесот во точката `x=2`, односно:<br>
+                                            `2c - 2 = 4c + 2` од каде следи:<br>
+                                            `c = -2`<br>
+                                            Со замена добиваме:<br>
+                                            `lim_(x->2^-)f(x) = lim_(x->2^+)f(x) = -6`<br>
+                                            Услов 2. Вредноста на лимесот и функцијата во точката `x=a` да се еднакви:<br>
+                                            `lim_(x->2)f(x) = f(a) = -6`,  од каде следи:<br>
+                                            Функцијате е непрекината насекаде.                                           
+                                            
                                     </div>
                                     <div class='col-4'>
                                         <link rel="stylesheet" type="text/css"
@@ -566,14 +550,16 @@
                                         <script>
 
                                             const board04 = JXG.JSXGraph.initBoard('jxgbox04', {
-                                                boundingbox: [-10, 4, 10, -1],
+                                                boundingbox: [-10, 15, 10, -30],
                                                 showCopyright: false,
                                                 showNavigation: false,
                                                 axis: true,
                                             });
 
-                                            graph = board04.create('functiongraph', [function (x) { return 1 / (x - 2); }, -20, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
-                                            point = board04.create('point', [2, 3], { name: 'A', size: 1 });
+                                            graph01 = board04.create('functiongraph', [function (x) { return -2*x - 2; }, -20, 2], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            graph02 = board04.create('functiongraph', [function (x) { return -2*x**2 + 1; }, 1.9, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
+                                            
+                                            point = board04.create('point', [2, -6], { name: '', size: 1 });
 
                                         </script>
                                     </div>
