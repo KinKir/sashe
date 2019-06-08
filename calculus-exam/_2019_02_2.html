@@ -22,6 +22,10 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
         async></script>
 
+    <!-- JSXGraph -->
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />    
+    <script src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -100,13 +104,61 @@
                 <nav class="collapse bd-links" id="bd-docs-nav">
 
                     <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="../calculus/functions.html">
+                        <a class="bd-toc-link" href="intro.html">
                             Before Calculus
                         </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="functions.html">
+                                    Фунции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_new.html">
+                                    Нови функции од стари
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lines.html">
+                                    Прави
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_families.html">
+                                    Фамилии на функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_inverse.html">
+                                    Инверзни функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_exp.html">
+                                    Експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_log.html">
+                                    Логаритамски функции
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="functions-exam.html">
+                                    Испитни задачи
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="bd-toc-item">
-                        <a class="bd-toc-link" href="../calculus/limes.html">
+                        <a class="bd-toc-link" href="limes.html">
                             Лимеси
                         </a>
                     </div>
@@ -127,11 +179,10 @@
                         <a class="bd-toc-link" href="../calculus/fundamentals_theorem.html">
                             Фундаментална теорема
                         </a>
-                        </ul>
                     </div>
 
                     <div class="bd-toc-item active">
-                        <a class="bd-toc-link" href="limes.html">
+                        <a class="bd-toc-link" href="_2006_02_2.html">
                             Испитни прашања
                         </a>
 
@@ -144,16 +195,6 @@
                             <li>
                                 <a href="_2007_02.html">
                                     2007-02
-                                </a>
-                            </li>
-                            <li>
-                                <a href="_2008_06.html">
-                                    2008-06
-                                </a>
-                            </li>
-                            <li class="active bd-sidenav-active">
-                                <a href="_2009_02.html">
-                                    2009-02
                                 </a>
                             </li>
                             <li>
@@ -183,11 +224,11 @@
                             </li>
                             <li>
                                 <a href="_2019_02_1.html">
-                                    2019-02 Група I
+                                    2019-02 Група I 
                                 </a>
                             </li>
-                            <li>
-                                <a href="_2019_02_1.html">
+                            <li class="active bd-sidenav-active">
+                                <a href="_2019_02_2.html">
                                     2019-02 Група II
                                 </a>
                             </li>
@@ -203,10 +244,10 @@
             <div class="d-none d-xl-block col-xl-2 bd-toc">
                 <ul class="section-nav">
                     <li class="toc-entry toc-h2">
-                        <a href="#def">2006-02</a>
+                        <a href="#def">08-2012-01</a>
                         <ul>
                             <li class="toc-entry toc-h3">
-                                <a href="#ex1">Задача 1</a>
+                                <a href="#def1">Задача 1</a>
                             </li>
                             <li class="toc-entry toc-h3">
                                 <a href="#def2">Задача 2</a>
@@ -223,9 +264,6 @@
                             <li class="toc-entry toc-h3">
                                 <a href="#ex">Задача 6</a>
                             </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#ex">Задача 7</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -234,52 +272,180 @@
             <!-- main -->
             <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-                <div class='row py-3'>  
+                <div class='row py-3'>
 
-
-                    <!-- 16 08 2006, II група, Задача 5:-->
+                    <!-- 08 02 2019, I група, Задача 1:-->
                     <div class='col-12'>
-                        <h5 class='m' id=''>
+                        <h5 class='nc' id=''>
+                            Задача 1
+                        </h5>
+                        <p class='m'>
+                            <strong>4 </strong>Пресметај ги лимесите:
+                        </p>
+                        <p>
+                            [5] а. `lim_(x->-oo)(sqrt(9x^6 + 1) + 3x^2)/(5x^3 + 2x^2 + 10)`
+                        </p>
+                        <details>
+                            <summary class="mb-3">а. Решение</summary> 
+                            Со проста замена се добива неопределениот облик `+oo/-oo`.<br>
+                            Членовите ги делиме со најголемиот степен на `x` во именителот а тоа е `x^3`<br>
+                            `lim_(x->-oo)(sqrt((9x^6)/x^3 + 1/x^3) + (3x^2)/x^3/((5x^3)/x^3 + (2x^2)x^3 + 10/x^3)`
+
+                        </details>                       
+                        <p>
+                            [7] б. `lim_(x->1)(cos(x - 1))^(ctg(x - 1 )^2)`
+                        </p>
+                        <details>
+                            <summary class="mb-3">б. Решение</summary>                            
+                        </details>
+                    </div>
+
+                    <!-- 16 08 2006, II група, Задача 2:-->
+                    <div class='col-12'>
+                        <h5 class='ne' id=''>
+                            Задача 2
+                        </h5>
+                        <p>
+                            Нека `y - 5xy^3 + 8 = 5siny^3 + 2x^2`<br>
+                        </p>
+                        <p>
+                            [3] а. Да се одреди `dy/dx`
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <p>
+                                Потребно е да се диференцираат двете страни.
+                            </p>
+                            <p>
+                                `d/dx[y - 5xy^3 + 8] = d/dx[5siny^3 + 2x^2]`
+                            </p>
+                            <p>
+                                `d/dx[y] - 5(d/dx[x]*y^3 + x*d/dy[y^3]) + d/dx[8] = 5d/dx[siny^3] + d/dx[x^2]` 
+                            </p>
+                            <p>
+                                `1*dy/dx - 5(1*y^3 + x*2y^2dy/dy) + 0 = 5(cosy^3*3y^2 dy/dx) + 2x` 
+                            </p>
+                            <p>
+                                `dy/dx - 5y^3 - 10xy^2dy/dy = (5y^2cosy^3) dy/dx + 2x` 
+                            </p>
+                            <p>
+                                `dy/dx(1 - 10xy^2 -5y^2cosy^3) = 2x +5y^3` 
+                            </p>
+                            <p>
+                                `dy/dx = (2x +5y^3)/(1 - 10xy^2 -5y^2cosy^3)` 
+                            </p>
+                            
+                        </details>
+                        <p>
+                            [2] б. Да се одреди равенката на тангентата низ точката `[2, 0]`
+                        </p>
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <p>
+                                Сега треба да се внесат вредностите `x = 2` и `y = 0` и да се реши наклонот `dy/dx`
+                            </p>
+                            <p>
+                                `dy/dx = (2x +5y^3)/(1 - 10xy^2 -5y^2cosy^3) = (2*2 +5*0^3)/(1 - 10x*0^2 -5*0^2cos0^3) = 4` 
+                            </p>
+                            <p>
+                                Тангентата има нагиб од `4` и минува низ точките `(2, 0)`, така да равенката е:
+                            </p>
+                            <p>
+                                `y - y_0 = m(x -x_0)`
+                            </p>
+                            <p>
+                                `y = 4x - 8`
+                            </p>
+                        </details>
+
+                    </div>
+
+                    <!-- 16 08 2006, II група, Задача 3:-->
+                    <div class='' col-12'>
+                            <h5 id=''>
+                                Задача 3
+                            </h5>
+                            <p>
+                                Нека `f(x) = ln(x-1)/(x-1)`
+                            </p>
+                            <p>
+                                [15] а. Да се испитаат својствата на функцијата `f(x)` и да се скицира нејзиниот график.`
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                            </details>
+                            <p class='ne'>
+                                [3] а. Да се докаже дека функцијата `f(x)` е непрекината на својот домен.`
+                            </p>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                            </details>
+
+                    </div>                   
+
+
+                    <!-- 16 08 2006, Задача 5:-->
+                    <div class='col-12 py-3'>
+                        <h5 id=''>
                             Задача 4
                         </h5>
                         <p>
-                            Да се пресметаат лимесите:
+                            [3] Да се пресмета:
                         </p>
                         <p>
-                            [4] а. `lim_(y->1)(y/(y-1) + 1/lny )`
+                            `int (5)/(x^2 + 15)dx`
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
                             <p>
-                                `= lim_(y->1)(ylny + y - 1)/((y-1)lny)`
+                                Чекор 1. Ја вадиме константата пред знакот за интегрирање
                             </p>
                             <p>
-                                Со замена го добиваме неопределениот облик `0/0`
+                                `5 int 1/(x^2 + 15) dx`
                             </p>
                             <p>
-                                Сега можеме да го примениме Лопиталовото правило.`
-                            </p>                            
+                                Чекор 2. Го заменуваме изразот `u = x^2 + 15`
+                            </p>
+                            <p>
+                                `5 int 1/u du`
+                            </p>
+                            <p>
+                                Чекор 3. Го користиме општиот интеграл `int 1/udu = lnabs(u)`
+                            </p>
+                            <p>
+                                `5 lnabs(u)`
+                            </p>
+                            <p>
+                                Чекор 4. Го заменуваме изразот `u = x^2 + 15`, назад
+                            </p>
+                            <p>
+                                `5 lnabs(x^2 + 15)`
+                            </p>
+                            <p>
+                                Чекор 5. Додаваме константа на решението
+                            </p>
+                            <p>
+                                `5 ln abs(x^2 + 15) + C`
+                            </p>
                         </details>
+                    </div>
+
+                    <!-- 16 08 2006, II група, Задача 6:-->
+                    <div class='col-12'>
+                        <h5 id=''>
+                            Задача 5
+                        </h5>
                         <p>
-                            [4] б. `lim_(x->0)(sqrt(1 + x) - 1)/(root(3)(1 + x) - 1)`, без примена на Лопиталово правило.
+                            [7] Нека `f(x) = {(lnx/x^2, x >= 1),(x -1 , x < 1):}`<br>
+                        </p>
+                        <p>
+                            Дали дадениот интеграл конвергира? Ако конвергира да се пресмета неговата вредност.
+                        </p>
+                        <p>
+                            `int_-1^oo f(x)dx`
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
-                            <p>
-                                Со замена го добиваме неопределениот облик `0/0`.
-                            </p>
-                            <p>
-                                    Броителот и именителот ги множиме со конјугација на изразот во броителот<br>
-                            </p>
-                            <p>
-                                Делиме со најголемиот степен на `x` во именителот:
-                            </p>
-                            <p>
-                                `lim_(x->0)(sqrt(1/x + 1) - 1/x)/(root(3)(1/x + 1) - 1/x)`<br>
-                            </p>
-                            <p>
-                                `lim_(x->1)(sqrt(1/x + 1) - 1)/(root(3)(1/x + 1) - 1)`<br>
-                            </p>                            
                         </details>
                     </div>
 
