@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning JavaScript">
+    <meta name="author" content="Ilija Taseski">
+
+    <title>Calculis</title>
+
+    <!-- next page -->
+    <link rel="next" href="html_technologies_css.html">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
+    <link href="../css/typewritter.css" rel="stylesheet">
+
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href=".../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <!--<link rel="manifest" href="assets/images/favicons/manifest.json">-->
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus/limes_computing.html">Калкулус</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calculus-video/functions.html">Видео предавања</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../calculus-exercises/limes_computing.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="functions.html">
+                            Функции
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="functions.html">
+                                    Дефиниција, домен, ранг
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_new.html">
+                                    Нови функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lines.html">
+                                    Прави
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_families.html">
+                                    Фамилии од функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_inverse.html">
+                                    Инверсни функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_trig.html">
+                                    Тригонометриски функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_exp.html">
+                                    Експоненцијални функции
+                                </a>
+                            </li>
+                            <li>
+                                <a href="functions_log.html">
+                                    Логаритамски функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="limes.html">
+                            Лимеси
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="limes.html">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li class="active bd-sidenav-active">
+                                <a href="limes_computing.html">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_rigorously.html">
+                                    Детална метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_continuity.html">
+                                    Непрекинатост
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes-exam.html">
+                                    Испитни задачи
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Изводи
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_infinity.html">
+                                    Лимеси во бескрајност
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_rigorously.html">
+                                    Детална метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes_continuity.html">
+                                    Непрекинатост
+                                </a>
+                            </li>
+                            <li>
+                                <a href="limes-exam.html">
+                                    Испитни задачи
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Интеграли
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="/docs/4.2/layout/overview/">
+                            Фундаментална теорема
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="/docs/4.2/layout/overview/">
+                                    Интуитивна метода
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/grid/">
+                                    Пресметки на лимеси
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs/4.2/layout/utilities-for-layout/">
+                                    Utilities for layout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex1">Вежба 1</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#zero/zero">Неопределена вредност `0/0`</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex3">Вежба 3</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex5">Вежба 5</a>
+                    </li>
+                    <li class="toc-entry toc-h3">
+                        <a href="#ex7">Вежба 7</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h3 id='limes'>
+                    Лимеси - пресметка
+                </h3>
+
+                <div class="alert alert-success" role="alert">
+                    <p class="mb-0">
+                        `lim_(x->a)k=k,`&nbsp;&nbsp;`lim_(x->a^+)x=a,`&nbsp;&nbsp;`lim_(x->o^-)1/x=-oo,`&nbsp;&nbsp;`lim_(x->o^+)1/x=+oo,`
+                    </p>
+                </div>
+
+                <div id="Translating" class="row">
+                    <div class="col-md-12">
+                        <!-- Exercise 1 -->
+                        <p id='ex1'>
+                            <strong>Вежба 1.</strong> Нека е дадено:<br>
+                            `lim_(x -> a) f(x) = 2; lim_(x -> a) g(x) = -4; lim_(x -> a) h(x) = 0`<br>да се најде
+                            лимесот<br>
+                            a. `lim_(x -> a) [f(x) + 2g(x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> a) [f(x) + 2g(x)] = lim_(x -> a) f(x) + 2lim_(x -> a) g(x) = 2 +
+                                        2*(-4) = -6`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            b. `lim_(x -> a) [h(x) - 3g(x) +1]`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> a) [h(x) - 3g(x) +1] = lim_(x -> a) h(x) - 3lim_(x -> a) g(x) + 1 = 0
+                                        - 3*(-4) + 1 = 13`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            c. `lim_(x -> a) [f(x) * g(x)]`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> a) [f(x) * g(x)] = lim_(x -> a) f(x) * lim_(x -> a) g(x) = 2 * (-4) =
+                                        -8`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            d. `lim_(x -> a) root(3) [6 + f(x)]`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> a) root(3) [6 + f(x)]`<br>
+                                        `= root(3) (lim_(x->a)(6+f(x)))`<br>
+                                        `= root(3) 8 = 2`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            e. `lim_(x -> a) 2/g(x)`<br>
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> a) 2/g(x) = (lim_(x->2) 2)/( lim_(x->2) g(x)) = 2/(-4)= -1/2`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 2 -->
+                        <p id='ex2'>
+                            <strong>Вежба 2.</strong> Со помош на графикот за `f` и `g` најди го лимесот. Ако не постои
+                            објасни зошто.<br>
+                            <img src='_1_2_2.PNG' class='ex2' alt=''><br>
+                            a.`lim_(x -> 2) [f(x) + g(x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Функцијата `f(x)` нема лимес `lim_(x->2) f(x)`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            b.`lim_(x -> 0) [f(x) + g(x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Функцијата `f(x)` нема лимес `lim_(x->0) f(x)`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            c.`lim_(x -> 0^+) [f(x) + g(x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `lim_(x -> 0^+) [f(x) + g(x)] = -2 + 2 = 0`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                            d.`lim_(x -> 0^-) [f(x) + g(x)]`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `lim_(x -> 0^-) [f(x) + g(x)] = 1 + 2 = 3`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <h5 id='polynoms'>
+                            Лимес од полиноми и рационални функции кога `x-> a`
+                        </h5>
+
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Лимес од рационални функции кога `x-> a`</h4>
+                            <p>
+                                Лимес од полином `p(x)` и рационална функција е еднаков на вредноста на полиномот или
+                                рационалната функција за ведноста кон која клони променливата `x`. Пресметката на лимес
+                                на полином ја сведуваме на пресметка на полиномот или рационалната функција за дадената
+                                вредност на `x`.
+                            </p>
+
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <p id='ex3'>
+                            <strong>Вежба 3.</strong>`lim_(x -> 2) x(x-1)(x+1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> 2) x(x-1)(x+1) = lim_(x->2) 2 * lim_(x->2) (2 - 1) * lim_(x->2) (2+1)
+                                        = 2*1*3 = 6`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id='ex4'>
+                            <strong>Вежба 4.</strong>`lim_(x -> 3) x^3 - 3x^2 + 9x`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Според Теоремата 2, <br>
+                                        `lim_(x -> 3) x^3 - 3x^2 + 9x = = lim_(x-> 3) x^3 - 3lim_(x->3) x^2 +9lim_(x->3)
+                                        x`<br>
+                                        `=27 -27 + 27 = 27`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 5 -->
+                        <p id='ex5'>
+                            <strong>Вежба 5.</strong>`lim_(x -> 3) (x^2 - 2x)/(x + 1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `lim_(x -> 3) (x^2 - 2x)/(x + 1) = (lim_(x->3) (x^2-2x)) / (lim_(x->3) (x+1)) =
+                                        (3^2 -2*3)/(3+1) = 3/4`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6-->
+                        <p id='ex6'>
+                            <strong>Вежба 6.</strong>`lim_(x -> 2^+) sqrt(2 - x)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Кога `x` клони кон `2` од десно изразот `2-x е негативен и не е во доменот на
+                                        функцијата, па лимесот не постои.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Неопределена вредност `k/0`</h4>
+                            <p>
+                                За рационални функции каде лимесот на именителот е нула не може да се одреди лимесот.
+                                Постојат два случаи кои треба да се разгледаат, случајот каде лимесот на именителот е
+                                нула и случајот каде лимесот и на именителот и на броителот е нула. Во случајот кога
+                                лимесот на
+                                именителот е нула но на броителот не е нула, може да се докаже дека лимес не постои и
+                                дека ја имаме една од следите ситуации:
+                            </p>
+                            <hr>
+                            <p>
+                                <ul>
+                                    <li>
+                                        Лимесот може да биде `-oo` од една страна и `+oo` од друга страна.
+                                    </li>
+                                    <li>
+                                        Лимесот може да биде `+oo`.
+                                    </li>
+                                    <li>
+                                        Лимесот може да биде `-oo`.
+                                    </li>
+                                </ul>
+                            </p>
+
+                        </div>
+
+                        <!-- Exercise 1-->
+                        <p>
+                            <strong>Вежба 1.</strong>`lim_(x -> 1^+) 3/ (x -1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `k/0`. Кога `x` клони кон
+                                            `1` од десно, изразот `(x – 1)` е со позитивен предзнак [пр.
+                                            1.000001 - 1 > 0], така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 1^+) 3/ (x -1)`<br>
+                                            `= +oo`
+                                        </p>
+                                        <p>
+                                            Лимесот е позитивна бескрајност бидејки количникот на `3` со многу мала
+                                            позитивна
+                                            вредност блиска до `0` дава голем позитивен број.<br>
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk000" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk000 = JXG.JSXGraph.initBoard('jxgboxk000', {
+                                                boundingbox: [-5, 20, 6, -20],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk000.create('functiongraph', [function (x) { return (3 / (x - 1)); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = boardk000.create('point', [1, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk000.create('point', [1, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk000.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1-->
+
+                        <!-- Exercise 2a -->
+                        <p id='ex2a'>
+                            <strong>Вежба 2a.</strong>`lim_(x -> 3^+) x/(x - 3)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Со замена на вредноста за `x` се добива неопределениот облик `k/0`. За да го
+                                        одредиме предзнакот земамае број малку поголем од `3`. Сега предзнакот во
+                                        именителот е `+`, лимесот е :
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 3^+) x/(x - 3) = + oo`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2а -->
+
+                        <!-- Exercise 2b -->
+                        <p id='ex2b'>
+                            <strong>Вежба 2b.</strong>`lim_(x -> 3^-) x/(x - 3)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Со замена на вредноста за `x` се добива неопределениот облик `k/0`. За да го
+                                        одредиме предзнакот земамае број малку помал од `3`. Сега предзнакот во
+                                        именителот е `-`, лимесот е :
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 3^-) x/(x - 3) = - oo`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2б -->
+
+                        <!-- Exercise 2c -->
+                        <p id='ex2c'>
+                            <strong>Вежба 2c.</strong>`lim_(x -> 3) x/(x - 3)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Со замена на вредноста за `x` се добива неопределениот облик `k/0`. Лимес не
+                                        постои.
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2c -->
+
+                        <!-- Exercise 3-->
+                        <p>
+                            <strong>Вежба 3.</strong>`lim_(x -> (pi/2)^+) tanx`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Прво вршиме упростување:
+                                        </p>
+                                        <p>
+                                            `lim_(x -> (pi/2)^+) sinx/cosx`<br>
+                                        </p>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `1/0`. Кога `x` клони кон
+                                            `pi/2` од десно, `sinx` клони кон `+1`, а `cos(x)` клони кон `-0`, така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> (pi/2)^+) sinx/cosx`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk001" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk001 = JXG.JSXGraph.initBoard('jxgboxk001', {
+                                                boundingbox: [-2 * Math.PI, 1.3, 2 * Math.PI, -1.3],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk001.create('functiongraph', [function (x) { return Math.sin(x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            graph = boardk001.create('functiongraph', [function (x) { return Math.cos(x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#00ff00', strokeWidth: 2 });
+
+                                            var p1 = boardk001.create('point', [(Math.PI / 2), 22], { name: 'A', size: 1 });
+                                            var p2 = boardk001.create('point', [(Math.PI / 2), -22], { name: 'B', size: 1 });
+                                            vert_line = boardk001.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3-->
+
+                        <!-- Exercise 4-->
+                        <p>
+                            <strong>Вежба 4.</strong>`lim_(x -> (pi)^-) x^2/sinx`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `pi/0`. Кога `x` клони
+                                            кон
+                                            `pi` од лево, `x` клони кон `pi`, а `sin(x)` клони кон `+0`, така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> (pi)^+) x^2/sinx`<br>
+                                            `= +oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk002" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk002 = JXG.JSXGraph.initBoard('jxgboxk002', {
+                                                boundingbox: [-2 * Math.PI, 1.3, 2 * Math.PI, -1.3],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk002.create('functiongraph', [function (x) { return Math.sin(x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk002.create('point', [(Math.PI), 22], { name: 'A', size: 1 });
+                                            var p2 = boardk002.create('point', [(Math.PI), -22], { name: 'B', size: 1 });
+                                            vert_line = boardk002.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4-->
+
+                        <!-- Exercise 5-->
+                        <p>
+                            <strong>Вежба 5.</strong>`lim_(x -> 5^-) (x + 3)/(x - 5)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `8/0`. Кога `x` клони кон
+                                            `5` од лево, `x - 5` клони кон `-0`, а `x + 3` клони кон `8`, така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 5^-) x^2/sinx`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk005" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk005 = JXG.JSXGraph.initBoard('jxgboxk005', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk005.create('functiongraph', [function (x) { return (x + 3) / (x - 5); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk005.create('point', [5, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk005.create('point', [5, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk005.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5-->
+
+                        <!-- Exercise 6-->
+                        <p>
+                            <strong>Вежба 6.</strong>`lim_(x -> 0^-) (1 - x)/(e^x - 1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `1/0`. Кога `x` клони кон
+                                            `0` од лево, `e^x - 1` клони кон `-0`, така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 0^-) (1 - x)/(e^x - 1)`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk006" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk006 = JXG.JSXGraph.initBoard('jxgboxk006', {
+                                                boundingbox: [-10, 10, 10, -10],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk006.create('functiongraph', [function (x) { return (1 - x) / (Math.exp(x) - 1); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk006.create('point', [0, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk006.create('point', [0, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk006.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6-->
+
+                        <!-- Exercise 7-->
+                        <p>
+                            <strong>Вежба 7.</strong>`lim_(x -> 0^-) cotx`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Прво ќе извршиме презапишување на изразот.
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 0^-) cotx`<br>
+                                            `lim_(x -> 0^-) cosx/sinx`
+                                        </p>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `1/0`. Кога `x` клони кон
+                                            `0` од лево, `cosx` клони кон `+1`, а `sinx` клони кон `-0`, така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 0^-) cotx`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk007" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk007 = JXG.JSXGraph.initBoard('jxgboxk007', {
+                                                boundingbox: [-2 * Math.PI, 1.3, 2 * Math.PI, -1.3],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk007.create('functiongraph', [function (x) { return Math.sin(x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            graph = boardk007.create('functiongraph', [function (x) { return Math.cos(x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#00ff00', strokeWidth: 2 });
+
+                                            var p1 = boardk007.create('point', [(Math.PI / 2), 22], { name: 'A', size: 1 });
+                                            var p2 = boardk007.create('point', [(Math.PI / 2), -22], { name: 'B', size: 1 });
+                                            vert_line = boardk007.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 7-->
+
+                        <!-- Exercise 8-->
+                        <p>
+                            <strong>Вежба 8.</strong>`lim_(x -> (1/2)0^+) (x^2 +1)/(xcos(pix))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Прво ќе извршиме презапишување на изразот.
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 0^-) cotx`<br>
+                                            `lim_(x -> 0^-) cosx/sinx`
+                                        </p>
+                                        <p>
+                                            Со дирекна замена го добиваме неопределениот облик `1/0`. Кога `x` клони кон
+                                            `1/2` од десно, `cos(pix) -> cos(pi/2) ->` клони кон `-0`,така да
+                                        </p>
+                                        <p>
+                                            `lim_(x -> (1/2)0^+) (x^2 +1)/(xcos(pix))`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk008" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk008 = JXG.JSXGraph.initBoard('jxgboxk008', {
+                                                boundingbox: [-Math.PI, 6, Math.PI, -6],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk008.create('functiongraph', [function (x) { return (x ** 2 + 1) / x * Math.cos(Math.PI * x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk008.create('point', [(1 / 2), 22], { name: 'A', size: 1 });
+                                            var p2 = boardk008.create('point', [(1 / 2), -22], { name: 'B', size: 1 });
+                                            vert_line = boardk008.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 8-->
+
+                        <!-- Exercise 9-->
+                        <p>
+                            <strong>Вежба 9.</strong>`lim_(x -> 5) sinx/(5 - x)^4`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Бидејки `pi < 5 < 2pi`, следи дека `sin(5) < 0`. Кога `x` се стреми кон `5`
+                                                изразот `(5 - x)^4` се стреми кон `+0`, па од тука: </p> <p>
+                                                `lim_(x -> 5) sinx/(5 - x)^4`<br>
+                                                `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk009" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk009 = JXG.JSXGraph.initBoard('jxgboxk009', {
+                                                boundingbox: [-2 * Math.PI, 1.5, 3 * Math.PI, -1.5],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk009.create('functiongraph', [function (x) { return Math.sin(x) / (5 - x) ** 4; }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk009.create('point', [5, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk009.create('point', [5, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk009.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 9-->
+
+                        <!-- Exercise 10-->
+                        <p>
+                            <strong>Вежба 10.</strong>`lim_(x -> 0) (x + 5)/(x^4(x - 6))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Саше да објасни зошто
+                                        </p>
+                                        <!--<p>
+                                                Бидејки `pi < 5 < 2pi`, следи дека `sin(5) < 0`. Кога `x` се стреми кон `5`
+                                                    изразот `(5 - x)^4` се стреми кон `+0`, па од тука:
+                                            </p>-->
+                                        <p>
+                                            `lim_(x -> 0) (x + 5)/(x^4(x - 6))`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk010" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk010 = JXG.JSXGraph.initBoard('jxgboxk010', {
+                                                boundingbox: [-Math.PI, 6, Math.PI, -6],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk010.create('functiongraph', [function (x) { return (x ** 2 + 1) / x * Math.cos(Math.PI * x); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk010.create('point', [0, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk010.create('point', [0, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk010.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 10-->
+
+                        <!-- Exercise 11-->
+                        <p>
+                            <strong>Вежба 11.</strong>`lim_(x -> 1) (3x)/(e^x - e)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Саше да објасни зошто
+                                        </p>
+                                        <!--<p>
+                                                Бидејки `pi < 5 < 2pi`, следи дека `sin(5) < 0`. Кога `x` се стреми кон `5`
+                                                    изразот `(5 - x)^4` се стреми кон `+0`, па од тука:
+                                            </p>-->
+                                        <p>
+                                            `lim_(x -> 1) (3x)/(e^x - e)`<br>
+                                            `=` лимесот не постои
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk011" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk011 = JXG.JSXGraph.initBoard('jxgboxk011', {
+                                                boundingbox: [-Math.PI, 6, Math.PI, -6],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk011.create('functiongraph', [function (x) { return 3 * x / (Math.exp(x) - Math.exp(1)); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk011.create('point', [1, 22], { name: 'A', size: 1 });
+                                            var p2 = boardk011.create('point', [1, -22], { name: 'B', size: 1 });
+                                            vert_line = boardk011.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11-->
+
+                        <!-- Exercise 12-->
+                        <p>
+                            <strong>Вежба 12.</strong>`lim_(x -> e^-) x^3/(lnx -1)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Саше да објасни зошто
+                                        </p>
+                                        <!--<p>
+                                                Бидејки `pi < 5 < 2pi`, следи дека `sin(5) < 0`. Кога `x` се стреми кон `5`
+                                                    изразот `(5 - x)^4` се стреми кон `+0`, па од тука:
+                                            </p>-->
+                                        <p>
+                                            `lim_(x -> e^-) x^3/(lnx -1)`<br>
+                                            `= -oo`
+                                        </p>
+                                    </div>
+
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgboxk012" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const boardk012 = JXG.JSXGraph.initBoard('jxgboxk012', {
+                                                boundingbox: [-2 * Math.PI, 1, 2 * Math.PI, -100],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = boardk012.create('functiongraph', [function (x) { return (x ** 3) / (Math.log(x) - 1); }, -2 * Math.PI, 2 * Math.PI], { strokeColor: '#0000ff', strokeWidth: 2 });
+
+                                            var p1 = boardk012.create('point', [(Math.PI), 22], { name: 'A', size: 1 });
+                                            var p2 = boardk012.create('point', [(Math.PI), -22], { name: 'B', size: 1 });
+                                            vert_line = boardk012.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 12-->
+
+                        <!-- Exercise 13-->
+                        <strong>Вежба 13.</strong>`lim_(x -> 0) (1/x - 1/(x^2 + x))`
+                        <details>
+                            <summary>Решение</summary>
+                            <div>
+                                <p>
+                                    Со дирекна замена се добива неопределен облик `+oo - +oo`<br>
+                                    Прво се бара заеднички именител и се упростува изразот.<br>
+                                    `= lim_(x -> 0) (1/x - 1/(x(x + 1)))`<br>
+                                    `= lim_(x -> 0) ((1(x + 1))/(x(x + 1)) + 1/(x(x + 1)))`<br>
+                                    `= lim_(x -> 0) x/(x(x + 1))`<br>
+                                    `= lim_(x -> 0) 1/(x + 1)`<br>
+                                    `= lim_(x -> 0) 1/(0 + 1)`<br>
+                                    `= 1`
+                                </p>
+                                <p>
+                                    `&#x25A0`
+                                </p>
+                            </div>
+                        </details>
+                        <!-- /Exercise 13-->
+
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Неопределена вредност `0/0`</h4>
+                            <p>
+                                Со замена се добива неопределениот облик `0/0`, што значи дека броителот и
+                                именителот имаат заеднички множител `x – a`. Од овде следи дека може да се поделат со `x
+                                – a`. Во овој случај, прво се крати заедничкиот множител `x – a`, а потоа се бара
+                                лимесот на добиената поедноставна функција.
+                            </p>
+                        </div>
+
+                        <!-- Exercise 1 -->
+                        <p id='1'>
+                            <strong>Вежба 1.</strong>`lim_(x -> 1^+) (x^4 - 1)/(x - 1)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        `= lim_(x -> 1^+) ((x-1)(x+1)(x^2+1))/(x - 1)`<br>
+                                        `= lim_(x -> 1^+) (x^3 +x^2+x+1)`<br>
+                                        `= 1^3+1^2+1+1=4`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 2 -->
+                        <p id=''>
+                            <strong>Вежба 2.</strong>`lim_(x -> -2) (x^3 +8)/(x + 2)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Кај броителот применуваме разложување со примена на формулите за скратено
+                                        множење `(x^3+-y^3)=(x+y)(x^2 +-
+                                        xy + y^2)`<br>
+                                        `= lim_(x -> -2) ((x +2)(x^2 + 2x + 4))/(x + 2)`<br>
+                                        ` = lim_(x -> -2) (x^2 + 2x + 4)=4`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3-->
+                        <p>
+                            <strong>Вежба 3.</strong>`lim_(x -> -5) (x^2 + 5x)/(x^2 - 25)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        `= lim_(x -> -5) (x(x + 5))/((x - 5)(x +5))`<br>
+                                        `= lim_(x -> -5) x/(x - 5)`<br>
+                                        `= 1/2
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3-->
+
+                        <!-- Exercise 4 -->
+                        <p id=''>
+                            <strong>Вежба 4.</strong>`lim_(x -> -1) (x^2 + 6x + 5)/(x^2 -3x - 4)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Потребно е разложување на квадратен трином на линеарни множители `ax^2 + bx + c
+                                        = a(x-x_1)(x-x_2)`<br>
+                                        `= lim_(x -> -1) (1(x+1)(x+5))/(1(x-4)(x+1))`<br>
+                                        `= lim_(x -> -1) (x+5)/(x-4)`<br>
+                                        `=-4/5`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id=''>
+                            <strong>Вежба 5.</strong>`lim_(x -> 2) (x^2 -4x + 4)/(x^2 + x - 6)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Потребно е разложување на квадратен трином на линеарни множители `ax^2 + bx + c
+                                        = a(x-x_1)(x-x_2)`<br>
+                                        `= lim_(x -> 2) (1(x-2)(x-2))/(1(x-2)(x+3))`<br>
+                                        `= lim_(x -> 2) (x-2)/(x+4)`<br>
+                                        `= 0/6 = 0`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id='6'>
+                            <strong>Вежба 6.</strong>`lim_(x -> -1) (2x^2 +x - 1)/(x + 1)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Потребно е разложување на квадратен трином на линеарни множители `ax^2 + bx +
+                                        c`<br>
+                                        `2x^2 + x - 1 = (2x - x_1)(x - x_2)<br>
+                                        = a(x-x_1)(x-x_2)`<br>
+                                        `= lim_(x -> -1) (2(x-1/2)(x+1))/(x + 1)`<br>
+                                        `= lim_(x -> -1) 2(x - 1/2)`<br>
+                                        `= -3`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 7 -->
+                        <p id='7'>
+                            <strong>Вежба 7.</strong>`lim_(x -> 1) (3x^2 - x - 2)/(2x^2 + x -3)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p class='m'>
+                                        Саше да ја реши
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 7 -->
+
+                        <!-- Exercise 8 -->
+                        <p id='ex8'>
+                            <strong>Вежба 8.</strong>`lim_(x -> 2) (x^3 + 3x^2 - 12x + 4)/(x^3 - 4x)`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Потребно е разложување со примена на формулите за скратено множење
+                                        `(x^3+-y^3)=(x+y)(x^2 +- xy + y^2)`<br><br>
+                                        `= lim_(x -> 2) (x^3 + 3x^2 - 12x + 4)/(x(x^2 - 2^2)`<br>
+                                        `= lim_(x -> -1) 2(x - 1/2)`<br>
+                                        `= -3
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 8-->
+
+                        <!-- Exercise 9-->
+                        <p>
+                            <strong>Вежба 9.</strong>`lim_(x -> 5) (x^2 - 25)/ (3x^2 - 16x + 5)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        `lim_(x -> 5) ((x - 5)(x + 5))/ (3(x - x_1)(x - x_2))`<br>
+                                        `lim_(x -> 5) ((x - 5)(x + 5))/ (3(x - 5)(x + 1/3))`<br>
+                                        `lim_(x -> 5) (x + 5)/ (3x - 1)`<br>
+                                        `= lim_(x -> 5) 10/14`<br>
+                                        `= 2/7`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 9-->
+
+
+                        <!-- Exercise 10-->
+                        <p>
+                            <strong>Вежба 10.</strong>`lim_(x -> 4) (4 - x)/(2 - sqrt(x))`
+                            <details>5
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        `= lim_(x -> 4) ((2 - sqrt(x))(2 + sqrt(x)))/(2 - sqrt(x))`<br>
+                                        `= lim_(x -> 4) 2 + sqrt(x)`<br>
+                                        `= 4
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+
+                        <!-- /Exercise 10-->
+
+                        <!-- Exercise 11-->
+                        <p>
+                            <strong>Вежба 11.</strong>`lim_(x -> 0) (sqrt(4 + x) - 2)/ x`
+                            <details>
+                                <summary>Решение</summary>
+                                <div>
+                                    <p>
+                                        Прво се бара заеднички именител и се упростува изразот.<br>
+                                        `= lim_(x -> 0) ((sqrt(4 + x) - 2)(sqrt(4 + x) + 2))/(x (sqrt(4 + x) + 2))`<br>
+                                        `= lim_(x -> 0) (4 + x - 4)/(x (sqrt(4 + x) + 2))`<br>
+                                        `= lim_(x -> 0) x/(x (sqrt(4 + x) + 2))`<br>
+                                        `= lim_(x -> 0) 1/(sqrt(4 + x) + 2)`<br>
+                                        `= lim_(x -> 0) 1/(2 + 2)`<br>
+                                        `= 1/4`
+                                    </p>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 11-->
+
+                        <!-- Exercise 12-->
+                        <p>
+                            <strong>Вежба 12.</strong>`lim_(x -> (4/3)) (3x^2 - 4x)/ abs(3x - 4)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Дирекната замена дава неопределен облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Треба да се одреди левиот и десниот лимес за да се одреди дали лимесите се
+                                        еднакви.
+                                        За да го најдеме левиот лимес, ќе ја разгледаме вредноста која е маклу помала од
+                                        `4/3` и ќе ја вметнемево лимесот. За да се упрости апосутната вредност во
+                                        именителот, ознаките за апсолутна вредност `|` се заменуваат со мали загради `(`
+                                        и
+                                        се додава негативен знак, <strong>бидејки замената со вредност помала од `4/3`
+                                            ќе го
+                                            направи бројот во заградата негативен а додадениот негативен знак ќе ја
+                                            направи
+                                            вредноста повторно позитивна.</strong>
+                                    </p>
+                                    <p>
+                                        `lim_(x -> (4/3)^-) (3x^2 - 4x)/ -(3x - 4)`<br>
+                                        `lim_(x -> (4/3)^-) (x(3x - 4))/ -(3x - 4)`<br>
+                                        `lim_(x -> (4/3)^-) -x`<br>
+                                        `= -4/3`
+                                    </p>
+                                    <p>
+                                        Десниот лимес гоодредуваме слично. Сега знакот за аполутна вредност едноставно
+                                        го
+                                        заменуваме со мали загради, негативниот знак не е потребен бидејнки вредноста во
+                                        заградите е позитивна кога `x` го менуваме со вредност малку поголема од
+                                        `4/3`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> (4/3)^-) (3x^2 - 4x)/ (3x - 4)`<br>
+                                        `lim_(x -> (4/3)^-) (x(3x - 4))/ (3x - 4)`<br>
+                                        `lim_(x -> (4/3)^-) x`<br>
+                                        `= 4/3`
+                                    </p>
+                                    <p>
+                                        Бидејки левиот и десниот лимес не се еднакви, лимесот не постои.
+                                    </p>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox20124" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board20124 = JXG.JSXGraph.initBoard('jxgbox20124', {
+                                                boundingbox: [-5, 20, 6, -20],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board20124.create('functiongraph', [function (x) { return (3 * x ** 2 - x) / (3 * x - 4); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board20124.create('point', [(4 / 3), 22], { name: 'A', size: 1 });
+                                            var p2 = board20124.create('point', [(4 / 3), -22], { name: 'B', size: 1 });
+                                            vert_line = board20124.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 12-->
+
+                        <!-- Exercise 13-->
+                        <p>
+                            <strong>Вежба 13.</strong>`lim_(x -> 0^+) (2/x^2 + 2/abs(x))`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-8'>
+                                        <p>
+                                            Дирекната замена дава неопределен облик `0/0`.
+                                        </p>
+                                        <p>
+                                            Бидејки кон `0` се стремиме од десно, `x > 0` така да `x = x`. Од тука
+                                            лимесот е:
+                                        </p>
+                                        <p>
+                                            `lim_(x -> 0^+) (2/x^2 + 2/x)`<br>
+                                            `lim_(x -> 0^+) ((2x + 2)/x^2)<br>
+                                            `= +oo`
+                                        </p>
+                                    </div>
+                                    <div class='col-4'>
+                                        <link rel="stylesheet" type="text/css"
+                                            href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                        <div id="jxgbox" class="jxgbox" style="width:240px; height:240px"></div>
+                                        <script type="text/javascript"
+                                            src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                        <script>
+
+                                            const board = JXG.JSXGraph.initBoard('jxgbox', {
+                                                boundingbox: [-5, 60, 6, -2],
+                                                showCopyright: false,
+                                                showNavigation: false,
+                                                axis: true,
+                                            });
+                                            graph = board.create('functiongraph', [function (x) { return (2 / (x ** 2) + 2 / x); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                            var p1 = board20124.create('point', [(4 / 3), 22], { name: 'A', size: 1 });
+                                            var p2 = board20124.create('point', [(4 / 3), -22], { name: 'B', size: 1 });
+                                            vert_line = board20124.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                        </script>
+                                    </div>
+
+
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 13-->
+
+                        <!-- Exercise 14-->
+                        <p>
+                            <strong>Вежба 14.</strong>`lim_(x ->3) (sqrt(x+3) - sqrt(2x))/(x^2 - 3x)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-12'>
+                                        <p>
+                                            Дирекната замена дава неопределен облик `0/0`.
+                                        </p>
+                                        <p>
+                                            Отпочнуваме со множење на броителот и именителот со заеднички множител:
+                                        </p>
+                                        <p>
+                                            `lim_(x ->3) ((sqrt(x+3) - sqrt(2x))(sqrt(x+3) + sqrt(2x)))/((x^2 -
+                                            3x)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) (x + 3 - 2x )/(x(x - 3)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -(x - 3)/(x(x - 3)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -1/(x(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -1/(3(sqrt(6) + sqrt(6)))`<br>
+                                            `= -1/(6sqrt(6))`
+                                        </p>
+                                    </div>
+                                    <p>
+                                        `&#x25A0`
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 14-->
+
+                        <!-- Exercise 15-->
+                        <strong>Вежба 15.</strong>`lim_(x -> 4^+) (x - 4)/ abs(x - 4)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Дирекната замена дава неопределен облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Бидејки кон `4` се стремиме од десно изразот во именоителот е`abs(x-4) =
+                                        (x-4)`.Т
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 4^+) (x - 4)/(x - 4)`<br>
+                                        `lim_(x -> 4^+) 1`<br>
+                                        `= 1`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgbox0015" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const board0015 = JXG.JSXGraph.initBoard('jxgbox0015', {
+                                            boundingbox: [-5, 20, 6, -20],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = board0015.create('functiongraph', [function (x) { return (x - 4) / Math.abs(x - 4); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = board0015.create('point', [(4 / 3), 22], { name: 'A', size: 1 });
+                                        var p2 = board0015.create('point', [(4 / 3), -22], { name: 'B', size: 1 });
+                                        vert_line = board0015.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 15-->
+
+                        <!-- Exercise 16-->
+                        <strong>Вежба 16.</strong>`lim_(x -> 5^-) (x - 5)/ abs(x - 5)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Дирекната замена дава неопределен облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Бидејки кон `5` се стремиме од лево изразот во именоителот е`abs(x-5) =
+                                        -(x-5)`.Т
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 5^-) (x - 5)/-(x - 5)`<br>
+                                        `lim_(x -> 5^-) -1`<br>
+                                        `= 1`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgbox0016" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const board0016 = JXG.JSXGraph.initBoard('jxgbox0016', {
+                                            boundingbox: [-5, 20, 6, -20],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = board0016.create('functiongraph', [function (x) { return (x - 5) / Math.abs(x - 5); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = board0016.create('point', [(4 / 3), 22], { name: 'A', size: 1 });
+                                        var p2 = board0016.create('point', [(4 / 3), -22], { name: 'B', size: 1 });
+                                        vert_line = board0016.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 16-->
+
+
+                        <!-- Exercise 17-->
+                        <strong>Вежба 17.</strong>`lim_(x -> 3^+) abs(3 - x)/ (x^2 - 2x - 3)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Дирекната замена дава неопределен облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Кога кон `3` се стремиме од десно изразот `abs(3 - x)` станува `-(3 - x), и со
+                                        упростување на именителот добиваме:
+                                    </p>
+                                    <p>
+                                        `= lim_(x -> 3^+) -(3 - x)/ ((x - 3)(x + 1))`<br>
+                                        `= lim_(x -> 3^+) (x - 3)/ ((x - 3)(x + 1))`<br>
+                                        `= lim_(x -> 3^+) 1/ (x + 1)`<br>
+                                        `= lim_(x -> 3^+) 1/ (3 + 1)`<br>
+                                        `= 1/4`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgbox0017" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const board0017 = JXG.JSXGraph.initBoard('jxgbox0017', {
+                                            boundingbox: [-1, 2, 4, -1],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = board0017.create('functiongraph', [function (x) { return Math.abs(3 - x) / (x ** 2 - 2 * x + 3); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = board0017.create('point', [3, 22], { name: 'A', size: 1 });
+                                        var p2 = board0017.create('point', [3, -22], { name: 'B', size: 1 });
+                                        vert_line = board0017.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+
+
+                                <p>
+                                    `&#x25A0`
+                                </p>-->
+                            </div>
+                        </details>
+                        <!-- /Exercise 17-->
+
+                        <!-- Exercise 18-->
+                        <strong>Вежба 18.</strong>`lim_(x -> 2^+) 1/ abs(2 - x)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div>
+                                <p>
+                                    Дирекната замена дава неопределен облик `1/0`.
+                                </p>
+                                <p>
+                                    Ако кон `2`се стремиме од десно, изразот во именителот е `-(2 - x)`. Сега со замена добиваме:
+                                </p>
+                                <p>
+                                    `lim_(x -> (4/3)^-) (3x^2 - 4x)/ -(3x - 4)`<br>
+                                    `lim_(x -> (4/3)^-) (x(3x - 4))/ -(3x - 4)`<br>
+                                    `lim_(x -> (4/3)^-) -x`<br>
+                                    `= -4/3`
+                                </p>
+                                <p>
+                                    Десниот лимес гоодредуваме слично. Сега знакот за аполутна вредност едноставно го
+                                    заменуваме со мали загради, негативниот знак не е потребен бидејнки вредноста во
+                                    заградите е позитивна кога `x` го менуваме со вредност малку поголема од
+                                    `4/3`
+                                </p>
+                                <p>
+                                    `lim_(x -> (4/3)^-) (3x^2 - 4x)/ (3x - 4)`<br>
+                                    `lim_(x -> (4/3)^-) (x(3x - 4))/ (3x - 4)`<br>
+                                    `lim_(x -> (4/3)^-) x`<br>
+                                    `= 4/3`
+                                </p>
+                                <p>
+                                    Бидејки левиот и десниот лимес не се еднакви, лимесот не постои.
+                                </p>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgbox20124" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const board20124 = JXG.JSXGraph.initBoard('jxgbox20124', {
+                                            boundingbox: [-5, 20, 6, -20],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = board20124.create('functiongraph', [function (x) { return (3 * x ** 2 - x) / (3 * x - 4); }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = board20124.create('point', [(4 / 3), 22], { name: 'A', size: 1 });
+                                        var p2 = board20124.create('point', [(4 / 3), -22], { name: 'B', size: 1 });
+                                        vert_line = board20124.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+
+
+                                <p>
+                                    `&#x25A0`
+                                </p>-->
+                            </div>
+                        </details>
+                        <!-- /Exercise 18-->
+
+
+
+                        <!-- Exercise 20-->
+                        <p>
+                            <strong>Вежба 20.</strong>`lim_(x ->0) (1/(xsqrt(1+x)) - 1/x)`
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='row py-3'>
+                                    <div class='col-12'>
+                                        <p>
+                                            Саќе да реши ..Дирекната замена дава ..
+                                        </p>
+                                        <!--<p>
+                                            Дирекната замена дава неопределен облик `0/0`.
+                                        </p>
+                                        <p>
+                                            Отпочнуваме со множење на броителот и именителот со заеднички множител:
+                                        </p>
+                                        <p>
+                                            `lim_(x ->3) ((sqrt(x+3) - sqrt(2x))(sqrt(x+3) + sqrt(2x)))/((x^2 - 3x)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) (x + 3 - 2x )/(x(x - 3)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -(x - 3)/(x(x - 3)(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -1/(x(sqrt(x+3) + sqrt(2x)))`<br>
+                                            `lim_(x ->3) -1/(3(sqrt(6) + sqrt(6)))`<br>                                            
+                                            `= -1/(6sqrt(6))`
+                                        </p>
+                                    </div>-->
+                                    </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 20-->
+
+
+
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Лимеси од тригонометриски функции</h4>
+                            <p>
+                                Треба да се знае дека:
+                            </p>
+                            <hr>
+                            <p class="mb-0">
+                                `lim_(x -> 0)sinx/x = 1` и `lim_(x->0) (cosx -1)/x = 0`
+                            </p>
+
+                        </div>
+
+                        <!-- Exercise 1-->
+                        <strong>Вежба 1.</strong>`lim_(x -> 0) sin(5x)/ x`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        За да го искористиме обликот `sinx/x` треба изразот да го презапишеме како:
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) (5sin(5x))/ (5x)`
+                                    </p>
+                                    <p>
+                                        сега:
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) (5sin(5x))/ (5x)`<br>
+                                        `= 5lim_(x -> 0) sin(5x)/ (5x)`<br>
+                                        `= 5*1`<br>
+                                        `= 5`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig00" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig00 = JXG.JSXGraph.initBoard('jxgboxTrig00', {
+                                            boundingbox: [-5, 10, 6, -10],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig00.create('functiongraph', [function (x) { return Math.sin(5 * x) / x; }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig00.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig00.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig00.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+
+
+                                <p>
+                                    `&#x25A0`
+                                </p>-->
+                            </div>
+                        </details>
+                        <!-- /Exercise 1-->
+
+                        <!-- Exercise 2-->
+                        <strong>Вежба 2.</strong>`lim_(x -> (pi/4)) (2cosx -2)/ sinx`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        `lim_(x -> 0) (2cosx -2)/ sinx`<br>
+                                        `= lim_(x -> 0) 2(cosx - 1)/ sinx`<br>
+                                        `= lim_(x -> 0) 2((cosx - 1)/x)/(sinx/x)`<br>
+                                        `= lim_(x -> 0) 2 * 0/1`<br>
+                                        `= 0`
+
+                                    </p>
+
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig01" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig01 = JXG.JSXGraph.initBoard('jxgboxTrig01', {
+                                            boundingbox: [-12, 2, 22, -2],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig01.create('functiongraph', [function (x) { return (2 * Math.cos(x) - 2) / x; }, -10, 20], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig01.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig01.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig01.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 2-->
+
+                        <!-- Exercise 3-->
+                        <strong>Вежба 3.</strong>`lim_(x -> (pi/4)) (cos2x)/(sinx - cosx)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Со замена го добиваме неопределениот облик `0/(sqrt(2)/2-sqrt(2)/2) = 0/0`.<br>
+                                        Треба да се знае декa `cos2x = cos^2x - sin^2x`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> (pi/4)) (cos2x)/(sinx - cosx)`<br>
+                                        `= lim_(x -> (pi/4)) (cos^2x - sin^2x)/(sinx - cosx)`<br>
+                                        `= lim_(x -> (pi/4)) ((cosx - sinx)(cosx + sinx))/(sinx - cosx)`<br>
+                                        `= lim_(x -> (pi/4)) ((-1)(sinx - cosx)(cosx + sinx))/(sinx - cosx)`<br>
+                                        `= lim_(x -> (pi/4)) -(cosx + sinx)`<br>
+                                        `= lim_(x -> (pi/4)) -(cos(pi/4) + sin (pi/4))`<br>
+                                        `= lim_(x -> (pi/4)) -(sqrt(2)/2 + sqrt(2)/2)`<br>
+                                        `= -sqrt(2)`
+                                    </p>
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig03" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig03 = JXG.JSXGraph.initBoard('jxgboxTrig03', {
+                                            boundingbox: [-2 * Math.PI, 2, 2 * Math.PI, -2],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig03.create('functiongraph', [function (x) { return (Math.cos(2 * x)) / (Math.sin(x) - Math.cos(x)); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig03.create('point', [(Math.PI / 4), 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig03.create('point', [(Math.PI / 4), -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig03.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 3-->
+
+                        <!-- Exercise 4-->
+                        <strong>Вежба 4.</strong>`lim_(x -> 0) (sin5x)/(sin9x)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Со замена се добива неопределениот облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Треба да го презапишеме изразот за да можеме да го искористиме познатиот факт
+                                        дека `lim_(x->0) sinx/x = 1`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) (sin5x)/(sin9x)`<br>
+                                        `= lim_(x -> 0) ((sin5x)/x)/((sin9x)/x)`<br>
+                                        `= lim_(x -> 0) ((sin5x)/x * x/(sin9x))`<br>
+                                        `= lim_(x -> 0) ((5sin5x)/(5x) * (9x)/(9sin9x))`<br>
+                                        `= lim_(x -> 0) ((5sin5x)/(5x) * (9x)/(9sin9x))`<br>
+                                        `= 5/9`
+                                    </p>
+
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig04" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig04 = JXG.JSXGraph.initBoard('jxgboxTrig04', {
+                                            boundingbox: [-Math.PI, 4, Math.PI, -4],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig04.create('functiongraph', [function (x) { return (Math.sin(5 * x)) / (Math.sin(9 * x)); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig04.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig04.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig04.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 4-->
+
+                        <!-- Exercise 5-->
+                        <strong>Вежба 5.</strong>`lim_(x -> 0) (tan7x)/(sin3x)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Со замена се добива неопределениот облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Треба да го презапишеме изразот за да можеме да го искористиме познатиот факт
+                                        дека `lim_(x->0) sinx/x = 1`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) ((sin7x)/(cos7x))/(sin3x)`<br>
+                                        `= lim_(x -> 0) (sin7x)/(cos7x) * 1/(sin3x)`<br>
+                                        `= lim_(x -> 0) (sin7x)/1 * 1/(cos7x) * 1/(sin3x)`<br>
+                                        `= lim_(x -> 0) ((7xsin7x)/(7x) * 1/(cos7x) * (3x)/(3xsin3x))`<br>
+                                        `= lim_(x -> 0) (7x * 1 * 1/(3x))`<br>
+                                        `= lim_(x -> 0) 7/3`<br>
+                                        `= 7/3`
+                                    </p>
+
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig05" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig05 = JXG.JSXGraph.initBoard('jxgboxTrig05', {
+                                            boundingbox: [-Math.PI, 4, Math.PI, -4],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig05.create('functiongraph', [function (x) { return (Math.tan(7 * x)) / (Math.sin(3 * x)); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig05.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig05.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig05.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 5-->
+
+                        <!-- Exercise 6-->
+                        <strong>Вежба 6.</strong>`lim_(x -> 0) (sin^3(2x))/(x^3)`
+                        <details>
+                            <summary class="mb-3">Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Со замена се добива неопределениот облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Треба да го презапишеме изразот за да можеме да го искористиме познатиот факт
+                                        дека `lim_(x->0) sinx/x = 1`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) (sin2x)/x *(sin2x)/x *(sin2x)/x`<br>
+                                        `lim_(x -> 0) 8*((sin2x)/(2x) *(sin2x)/(2x) *(sin2x)/(2x))`<br>
+                                        `= lim_(x -> 0) 8`<br>
+                                        `= 8`
+                                    </p>
+
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig06" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig06 = JXG.JSXGraph.initBoard('jxgboxTrig06', {
+                                            boundingbox: [-Math.PI, 9, Math.PI, -4],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig06.create('functiongraph', [function (x) { return (Math.sin(2 * x)) ** 3 / (x ** 3); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig06.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig06.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig06.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 6-->
+
+                        <!-- Exercise 7-->
+                        <strong>Вежба 7.</strong>`lim_(x -> 0) (sinx)/(x + tanx)`
+                        <details>
+                            <summary>Решение</summary>
+                            <div class='row py-3'>
+                                <div class='col-8'>
+                                    <p>
+                                        Со замена се добива неопределениот облик `0/0`.
+                                    </p>
+                                    <p>
+                                        Треба да го презапишеме изразот за да можеме да го искористиме познатиот факт
+                                        дека `lim_(x->0) sinx/x = 1`
+                                    </p>
+                                    <p>
+                                        `lim_(x -> 0) (sinx)/(x + tanx)`<br>
+                                        `lim_(x -> 0) ((sinx)/x)/((x + (sinx/cosx))/x)`<br>
+                                        `lim_(x -> 0) ((sinx)/x)/((1 + (sinx/x)*1/cosx))`<br>
+                                        `lim_(x -> 0) 1/(1 + 1 * 1)`<br>
+                                        `= 1/2`
+                                    </p>
+
+                                </div>
+                                <div class='col-4'>
+                                    <link rel="stylesheet" type="text/css"
+                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+                                    <div id="jxgboxTrig07" class="jxgbox" style="width:240px; height:240px"></div>
+                                    <script type="text/javascript"
+                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+                                    <script>
+
+                                        const boardTrig07 = JXG.JSXGraph.initBoard('jxgboxTrig07', {
+                                            boundingbox: [-2 * Math.PI, 4, 2 * Math.PI, -4],
+                                            showCopyright: false,
+                                            showNavigation: false,
+                                            axis: true,
+                                        });
+                                        graph = boardTrig07.create('functiongraph', [function (x) { return (Math.sin(x)) / (x + Math.tan(x)); }, -10, 10], { strokeColor: '#0000ff', strokeWidth: 2 });
+                                        var p1 = boardTrig07.create('point', [0, 22], { name: 'A', size: 1 });
+                                        var p2 = boardTrig07.create('point', [0, -22], { name: 'B', size: 1 });
+                                        vert_line = boardTrig07.create('line', ["A", "B"], { strokeColor: '#ff0000', strokeWidth: 1 });
+                                    </script>
+                                </div>
+                            </div>
+                        </details>
+                        <!-- /Exercise 7-->
+
+
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="js/docs.min.js"></script>
+</body>
+
+</html>

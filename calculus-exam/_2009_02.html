@@ -100,9 +100,9 @@
                 <nav class="collapse bd-links" id="bd-docs-nav">
 
                     <div class="bd-toc-item">
-                            <a class="bd-toc-link" href="../calculus/functions.html">
-                                Before Calculus
-                            </a>
+                        <a class="bd-toc-link" href="../calculus/functions.html">
+                            Before Calculus
+                        </a>
                     </div>
 
                     <div class="bd-toc-item">
@@ -122,11 +122,12 @@
                             Интеграли
                         </a>
                     </div>
-    
+
                     <div class="bd-toc-item">
                         <a class="bd-toc-link" href="../calculus/fundamentals_theorem.html">
                             Фундаментална теорема
                         </a>
+                        </ul>
                     </div>
 
                     <div class="bd-toc-item active">
@@ -140,7 +141,7 @@
                                     2006-02-Група II
                                 </a>
                             </li>
-                            <li class="active bd-sidenav-active">
+                            <li>
                                 <a href="_2007_02.html">
                                     2007-02
                                 </a>
@@ -150,7 +151,7 @@
                                     2008-06
                                 </a>
                             </li>
-                            <li>
+                            <li class="active bd-sidenav-active">
                                 <a href="_2009_02.html">
                                     2009-02
                                 </a>
@@ -200,7 +201,7 @@
                         <a href="#def">2006-02</a>
                         <ul>
                             <li class="toc-entry toc-h3">
-                                <a href="#def1">Задача 1</a>
+                                <a href="#ex1">Задача 1</a>
                             </li>
                             <li class="toc-entry toc-h3">
                                 <a href="#def2">Задача 2</a>
@@ -217,6 +218,9 @@
                             <li class="toc-entry toc-h3">
                                 <a href="#ex">Задача 6</a>
                             </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex">Задача 7</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -225,201 +229,52 @@
             <!-- main -->
             <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 
-                <div class='row py-3'>
+                <div class='row py-3'>  
 
-                    <!-- 16 08 2007, Задача 1:-->
+
+                    <!-- 16 08 2006, II група, Задача 5:-->
                     <div class='col-12'>
-                        <h5 id=''>
-                            Задача 1
-                        </h5>
-                        <p>
-                            <strong>4 </strong>За функцијата `f(x) = (sqrt(x) - 2)/(x - 4)` да се
-                            определи функцијата со идентичен график, но без прекин.
-                        </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
-                                    <p>Функцијата `f(x) = (sqrt(x) - 2)/(x - 4)` има прекин точката `x = 4`. Со
-                                        разложување на
-                                        функцијата `f(x)` се добива функија `g(x)` која има ист график но друг домен.
-                                    </p>
-                                    <p>
-                                        `f(x) = (sqrt(x) - 2)/(x - 4) = (sqrt(x) - 2)/((sqrt(x))^2 -2^2`<br>
-                                        `= (sqrt(x) - 4)/((sqrt(x) - 2)(sqrt(x) + 2))`<br>
-                                        `= 1 / (sqrt(x) + 2)`
-                                    </p>
-                                </div>
-                                <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox00" class="jxgbox" style="width:240px; height:240px"></div>
-
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-
-                                        const board00 = JXG.JSXGraph.initBoard('jxgbox00', {
-                                            boundingbox: [-2, .4, 20, -.2],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                    graph = board00.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 2); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                </script>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-
-                <!-- 16 08 2007, Задача 2:-->
-                <div class='col-12'>
-                    <h5 class='m' id=''>
-                        Задача 2
-                    </h5>
-                    <p>
-                        [3] Да се пресмета `lim_(y->3^-)(y+3)/(y^2 - 9)`.
-                    </p>
-                    <details>
-                        <summary class="mb-3">Решение</summary>
-                        <p>
-                            `lim_(y->3^-)(y+3)/(y^2 - 9)`<br>
-                            Со проста замена се добива неопределениот облик `0/0`. 
-                        </p>
-                        <p>
-                            Чекор 1. Го разложуваме именителот. 
-                        </p>
-                        <p>
-                            `lim_(y->3^-)(y+3)/((y-3)(y+3))`<br>
-                            `lim_(y->3^-)1/(y-3) = -oo`<br> 
-                        </p>
-                    </details>
-                    <p>
-                        [5] Да се пресмета `lim_(x->+oo)(sqrt(x^2 + ax) - sqrt(x^2 + bx))`.
-                    </p>
-                    <details>
-                        <summary class="mb-3">Решение</summary>
-                        <p>
-                            Чекор 1. Броителот и именителот ги множиме со конјугација на изразот во броителот<br>
-                            `lim_(x->+oo)(sqrt(x^2 + ax) - sqrt(x^2 + bx))`<br>
-                            `= lim_(x->+oo)(sqrt(x^2 + ax) - sqrt(x^2 + bx)) * (sqrt(x^2 + ax) + sqrt(x^2 + bx))/(sqrt(x^2 + ax) + sqrt(x^2 + bx))`<br>
-                            `= lim_(x->+oo)((x^2 + ax) - (x^2 + bx))/(sqrt(x^2 + ax) + sqrt(x^2 + bx)) = (ax - bx)/(sqrt(x^2 + ax) + sqrt(x^2 + bx))`<br>
-                        </p>
-                        <p>
-                            Делиме со најголемиот степен во именителот `x^2`.<br> 
-                            `= lim_(x->+oo)(a - b)/(sqrt(1 + (a/x)) + sqrt(1 + (b/x))`<br>
-                        </p>
-                        <p>
-                            Сега со замена добиваме:<br>
-                            `= lim_(x->+oo)(a - b)/(sqrt(1 + (a/(oo))) + sqrt(1 + (b/(oo))`<br>
-                            ` = (a-b)/2`<br> 
-                        </p>
-                    </details>
-                    </div>
-
-                    <!-- 16 08 2007, Задача 3:-->
-                    <div class='col-12'>
-                        <h5 id=''>
-                            Задача 3
-                        </h5>
-                        <p>
-                            <strong>2 + 2 </strong>Со помош на `epsilon - delta` дефиницијата за лимес да се деокаже
-                            дека `lim_(x->-3)(x^2 - 9)/(x + 3) = -6`.
-                        </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-12'>
-                                    <p>
-
-                                    </p>
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-
-
-                    <!-- 16 08 2007, Задача 4:-->
-                    <div class='col-12'>
-                        <h5 id=''>
+                        <h5 class='m' id=''>
                             Задача 4
                         </h5>
                         <p>
-                            <strong>4 </strong>Најди `f'(x)` ако `f(x) = cosx^sinx`.
+                            Да се пресметаат лимесите:
                         </p>
-                        <details>
-                            <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-12'>
-                                    <p>
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-
-                    <!-- 16 08 2007, Задача 5:-->
-                    <div class='col-12'>
-                        <h5 id=''>
-                            Задача 5
-                        </h5>
                         <p>
-                            <strong>12 </strong>Да се анализира и скицира графикот на функцијата:<br>
-                            `f(x) = lnx/sqrt(x)`
+                            [4] а. `lim_(y->1)(y/(y-1) + 1/lny )`
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
-                                    <p>
-                                        <strong>Чекор 1:</strong> Домен на функцијата.<br>
-                                    </p>
-                                    <p>
-                                        Нека `g(x) = lnx`. Домен на функцијата `g(x)` e `D_g= [0, +oo)` и нека `h(x) =
-                                        4x^2`. Доменот на функцијата `h(x)` е `D_(4x^2) = (-oo, +oo)`. Домен на
-                                        функцијата `f(x) = g(x)/h(x) = D_f = D_g nn D_h \ {x in D_g | h(x) = 0}`<br>
-                                        <strong>`D_f = [0, +oo) nn (-oo, 0] uu [0, +oo)= [0, +oo)`</strong><br>
-                                    </p>
-                                </div>
-                                <div class='col-4'>
-                                    <link rel="stylesheet" type="text/css"
-                                        href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
-                                    <div id="jxgbox2005" class="jxgbox" style="width:240px; height:240px"></div>
-                                    <script type="text/javascript"
-                                        src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
-                                    <script>
-                                        const board2005 = JXG.JSXGraph.initBoard('jxgbox2005', {
-                                            boundingbox: [-2, .3, 20, -.2],
-                                            showCopyright: false,
-                                            showNavigation: false,
-                                            axis: true,
-                                        });
-                                        graph = board2005.create('functiongraph', [function (x) { return 1 / (Math.sqrt(x) + 4); }, -10, 20], { strokeColor: '#00ff00', strokeWidth: 2 });
-                                    </script>
-                                </div>
-                            </div>
+                            <p>
+                                `= lim_(y->1)(ylny + y - 1)/((y-1)lny)`
+                            </p>
+                            <p>
+                                Со замена го добиваме неопределениот облик `0/0`
+                            </p>
+                            <p>
+                                Сега можеме да го примениме Лопиталовото правило.`
+                            </p>                            
                         </details>
-                    </div>
-
-                    <!-- 16 08 2007, Задача 6:-->
-                    <div class='col-12'>
-                        <h5 id=''>
-                            Задача 6
-                        </h5>
                         <p>
-                            <strong>5 </strong>Во која точка од кривата `1/(1+x^2)` тангентата има најголем коефициент на правец.
+                            [4] б. `lim_(x->0)(sqrt(1 + x) - 1)/(root(3)(1 + x) - 1)`, без примена на Лопиталово правило.
                         </p>
                         <details>
                             <summary class="mb-3">Решение</summary>
-                            <div class='row py-3'>
-                                <div class='col-8'>
-
-                                </div>
-                                <div class='col-4'>
-
-                                </div>
-                            </div>
+                            <p>
+                                Со замена го добиваме неопределениот облик `0/0`.
+                            </p>
+                            <p>
+                                    Броителот и именителот ги множиме со конјугација на изразот во броителот<br>
+                            </p>
+                            <p>
+                                Делиме со најголемиот степен на `x` во именителот:
+                            </p>
+                            <p>
+                                `lim_(x->0)(sqrt(1/x + 1) - 1/x)/(root(3)(1/x + 1) - 1/x)`<br>
+                            </p>
+                            <p>
+                                `lim_(x->1)(sqrt(1/x + 1) - 1)/(root(3)(1/x + 1) - 1)`<br>
+                            </p>                            
                         </details>
                     </div>
 
