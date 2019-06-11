@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Learning JavaScript">
     <meta name="author" content="Ilija Taseski">
-    <meta name="generator" content="PyCharm2018.3">
+    <meta name="generator" content="Notepadqq">
 
     <title>Calculus</title>
 
@@ -179,22 +179,6 @@
                     <li class="toc-entry toc-h2">
                         <a href="#decimal_and_limits">Децимални броеви и лимес</a>
                     </li>
-                    <li class="toc-entry toc-h2">
-                        <a href="#limit">Лимес</a>
-                        <ul class="section-nav">
-                            <li class="toc-entry toc-h2">
-                                <a href="#informal">Интиутивна метода</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#connection">Врска помеѓу двостран и едностран лимес</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#infinite">Бесконечни лимеси</a>
-                            </li>
-                            <li class="toc-entry toc-h3">
-                                <a href="#v_asymtotes">Вертикални асимптоти</a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -214,7 +198,7 @@
 
                         <p>
                             Ознака за изразување на суми со поголем број на собироци во компактен облик (се користи
-                            големата грчка буква `sum` - сигма).
+                            големата грчка буква `sum` - сигма.
                         </p>
 
                         <p class=text-center>
@@ -223,8 +207,7 @@
 
                         <p>
                             <strong>m</strong> и <strong>n</strong> се нарекуваат долна и горна граница на сумирањето, а
-                            буквата <strong>k
-                            </strong> сe нарекува индекс на сумирањето.
+                            буквата <strong>k</strong> сe нарекува индекс на сумирањето.
                         </p>
 
                         <p>
@@ -268,32 +251,29 @@
 
                             <div id="def1" class="alert alert-success" role="alert">
                                 <h4 class="alert-heading">Теорема 1</h4>
-                                <ul>
-                                    <li>
-                                        i. `sum_(k=1)^n ca_k = c sum_(k=1)^n a_k`
-                                    </li>
-                                    <li>
-                                        ii. `sum_(k=1)^n (a_k+b_k) = sum_(k=1)^n a_k + sum_(k=1)^n b_k`
-                                    </li>
-                                    <li>
-                                        ii. `sum_(k=1)^n (a_k-b_k) = sum_(k=1)^n a_k - sum_(k=1)^n b_k`
-                                    </li>
+                                <p>
+                                    i. `sum_(k=1)^n ca_k = c sum_(k=1)^n a_k`
+                                </p>
+                                <p>
+                                    ii. `sum_(k=1)^n (a_k+b_k) = sum_(k=1)^n a_k + sum_(k=1)^n b_k`
+                                </p>
+                                <p>
+                                    iii. `sum_(k=1)^n (a_k-b_k) = sum_(k=1)^n a_k - sum_(k=1)^n b_k`
+                                </p>
                                 </ul>
                             </div>
 
                             <div id="def1" class="alert alert-success" role="alert">
                                 <h4 class="alert-heading">Теорема 2</h4>
-                                <ul>
-                                    <li>
-                                        i. `sum_(k=1)^n k = 1+2+3+ ...+n = (n(n+1))/2`
-                                    </li>
-                                    <li>
-                                        ii. `sum_(k=1)^n k^2 = 1^2+2^2+3^2+ ...+n^2 = (n(n+1)(2n+1))/6`
-                                    </li>
-                                    <li>
-                                        ii. `sum_(k=1)^n k^3 = 1^3+2^3+3^3 + ... + n^3 = [(n(n+1))/2]^2`
-                                    </li>
-                                </ul>
+                                <li>
+                                    i. `sum_(k=1)^n k = 1+2+3+ ...+n = (n(n+1))/2`
+                                </li>
+                                <li>
+                                    ii. `sum_(k=1)^n k^2 = 1^2+2^2+3^2+ ...+n^2 = (n(n+1)(2n+1))/6`
+                                </li>
+                                <li>
+                                    ii. `sum_(k=1)^n k^3 = 1^3+2^3+3^3 + ... + n^3 = [(n(n+1))/2]^2`
+                                </li>
                             </div>
 
                             <p>
@@ -507,7 +487,7 @@
                                     интервалот `[a, b]` е дефинирана со
                                 </p>
                                 <p>
-                                    `A = lim_(n->+oo) sum_(k=1)^n f(x_k^*) Delta_x`
+                                    `A = lim_(n->+oo) sum_(k=1)^n f(x_k^(**)) Delta_x`
                                 </p>
 
                             </div>
@@ -526,6 +506,312 @@
                             <p>
                                 и
                             </p>
+                            <p>
+                                `x_k^(**) = a = (k-1)Delta_x = (k-1)2/n`.
+                            </p>
+                            <p>
+                                Според тоа,
+                            </p>
+                            <p>
+                                `f(x_(k)^(**))Delta_x =(x_k^(**) -1) Delta_x = [(k-1)2/n - 1]2/n = (4/n^2)k - 4/n^2 - 2/n`
+                            </p>
+                            <p>
+                                и
+                            </p>
+                            <p>
+                                `sum_(k=1)^n f(x_(k)^(**))Delta_x = sum_(k=1)^n [(4/n^2)k - 4/n^2 - 2/n] = 4(1/n^2 sum_(k=1)^n k) -4/n(1/n sum_(k=1)^n 1) - 2(1/n sum_(k=1)^n 1)`
+                            </p>
+                            <p>
+                                Затоа:
+                            </p>
+                            <p>
+                                 `A = lim_(n->+oo) sum_(k=1)^n f(x_(k)^(**))Delta_x = lim_(n_>+oo) [4(1/n^2 sum_(k=1)^n k) -4/n(1/n sum_(k=1)^n 1) - 2(1/n sum_(k=1)^n 1)]`
+                            </p>
+                            <p>
+                                 `= 4(1/2) -0*1 - 2*1`
+                            </p>
+                        
+                            <h3>
+                                Риманови суми и определен интеграл
+                            </h3>
+                            <p>
+                                Во дефиницијата за плоштина со знак, претпоставивме дека за произволен позитивен број `n` интервалот `[a, b]` е поделен на `n` подинтервали со еднаква должина, кои ќе бидат основи на правоаголниците со кои се апроксимира.
+                            </p>
+                            <p>
+                                За некои функции може да биде позгодно да се користат правоаголници со различни ширини; сепак, ако решиме да ја апроксимираме плоштината преку правоаголници со различни ширини, тогаш важно е подинтервалите да бидат конструирани така што ширината на секој правоаголник да тежи кон нула кога `n` се зголемува (Слика 1).
+                            </p>
+                            <p>
+                                Затоа, мора да ги исклучиме ситуациите како на Слика 2, во кои што десната половина на интервалот останува неподелена.
+                            </p>
+                            <p>
+                                Ако допуштиме вакво разбивање (Слика 2), грешката од апроксимацијата нема да тежи кон нула кога `n` се зголемува.
+                            </p>
+                            <img src='images/integration_14.png' class="img-fluid img">
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 1</h4>
+                                <p>
+                                    Множеството точки `P = {x_0 , x_1 , ... , x_n }` се нарекува партиција (или разбивање) на интервалот `[a, b]`, ако
+                                </p>
+                                <p>
+                                   `a = x_0 < x_1 < ... < x_(n-1) < x_n = b`.
+                                </p>
+
+                            </div>
+                        
+                            <p>
+                                Нека `P` е произволна партиција на `[a,b]`. Ширината на `k`-тиот подинтервал ќе ја означуваме со `Deltax_k = x_k-x_(k-1)`, за `k = 0,1,2,...,n`.
+                            </p>
+                            <p>
+                                Кога `Deltax_k= Deltax= (b-a)/n` разбивањето се нарекува регуларно.
+                            </p>
+                            <p>
+                                За секое регуларно разбивање `Deltax_k->0`, кога `n->+oo`.
+                            </p>
+                            <p>
+                                Во општ случај, нека `max Deltax_k` ја означува најголемата од должините на подинтервалите. Тој број го нарекуваме норма на партицијата `P`.
+                            </p>
+                            <p>
+                                Ако `max Deltax_k ->0`, кога `n->+oo`, тогаш `Deltax_k ->0`, за секој `k=1,2,3,...,n`.
+                            </p>
+                            <img src='images/integration_15.png' class="img-fluid img">
+                            <p>
+                                Апроксимација на плоштина со произволна партиција, со променлива должина `Deltax_k`.
+                            </p>
+                            <img src='images/integration_16.png' class="img-fluid img">
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 2</h4>
+                                <p>
+                                    Функција `f` се нарекува интеграбилна на затворен интервал `[a, b]`, ако лимесот
+                                </p>
+                                <p>
+                                   `lim_(maxDeltax_k->0) sum_(k=1)^n f(x_k^(**)) Deltax_k`.
+                                </p>
+                                <p>
+                                    постои и не зависи од изборот на партицијата или од изборот на точките `x_k^(**)` во подинтервалите. Во тој случај лимесот се означуваме со
+                                </p>
+                                <p>
+                                   `int_a^b f(x)dx = lim_(maxDeltax_k->0) sum_(k=1)^n f(x_k^(**)) Deltax_k`.
+                                </p>
+                                <p>
+                                    и се нарекува определен интеграл (или Риманов интеграл) на `f` од `a` до `b`.
+                                </p>
+                                <p>
+                                    Броевите `a` и `b` се нарекуваат долна граница на интеграција и горна граница на интеграција, соодветно, а `f (x)` се нарекува интегранд.
+                                </p>                            
+                                
+
+                            </div>
+                        
+                            <p>
+                                Сумата `sum_(k=1)^n f(x_k^(**)) Deltax_k` се нарекува Риманова сума.
+                            </p>
+                        
+                            <p>
+                                <strong>Пример 1: </strong>Со користење на дефиницијата `2`, да се покаже дека ако `f(x) = c`, тогаш
+                            </p>
+                            <p>
+                                `int_a^b f(x) dx = c(b-a)`
+                            </p>
+                            <p>
+                                <strong>Решение: </strong>Бидејќи `f(x) = c` е константна функција, следува дека не е битно кои вредности на `x_k^(**)` сe избрани,
+                            </p>
+                            <p>
+                                `sum_(k=1)^n f(x_k^(**)) Deltax_k = sum_(k=1)^n c Deltax_k = c sum_(k=1)^n Deltax_k = c(b-a)`
+                            </p>
+                            <p>
+                                Бидејќи секоја Риманова сума има вредност `c(b – a)`, следува дека
+                            </p>
+                            <p>
+                                `lim_(maxDeltax_k->0) sum_(k=1)^n f(x_k^(**)) Deltax_k = lim_(maxDeltax_k->0) c(b-a) = c(b-a)`.
+                            </p>
+                        
+                            <p>
+                                <strong>Пример 2: </strong>Нека функцијата `f (x)` е дадена со
+                            </p>
+                            <p>
+                                `f(x) = {(1 ,x in (0, 1]),(0, x=0):}`
+                            </p>
+                            <p>
+                                Да се докаже дека `int_a^b f(x)dx =1`
+                            </p>
+                            <p>
+                                <strong>Решение: </strong>Прво да забележиме дека​ `lim_(x->0^+) f(x) = lim_(x->0^+) 1 = 1 != 0 = f(0)`
+                            </p>
+                            <p>
+                                односно, f не е непрекината на интервалот `[0,1]`.
+                            </p>
+                            <p>
+                                Да разгледаме произволна партиција на `[0,1]` и произволен избор на `x_k^(**)` , соодветни на партицијата. Тогаш `x_1^(**) = 0` или `x_1^(**) !=0`.
+                            </p>
+                            <p>
+                                Ако `x_1^(**) != 0`, тогаш
+                            </p>
+                            <p>
+                                `sum_(k=1)^n f(x_k^(**)) Deltax_k = sum_(k=1)^n Deltax_k = 1`
+                            </p>
+                            <p>
+                                Ако `x_1^(**) = 0`, тогаш `f (x_1^(**) ) = f (0) = 0` и
+                            </p>
+                            <p>
+                                `sum_(k=1)^n f(x_k^(**)) Deltax_k = sum_(k=2)^n Deltax_k = 1-Deltax_1`
+                            </p>
+                            <p>
+                                Во двата случаи лимесот на Римановата сума е 1. Имено, `Deltax_1 ->0` кога `max Deltax_1->0`. Затоа:
+                            </p>
+                            <p>
+                                `int_a^b f(x)dx =1`
+                            </p>
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Теорема 2</h4>
+                                <p>
+                                    Ако функција `f` е непрекината на интервал `[a, b]`, тогаш `f` е интеграбилна на `[a, b]`. Обратното тврдење во општ случај не е важи.
+                                </p>
+
+                            </div>
+                        
+                            <p>
+                                Плоштината со знак помеѓу графикот на интеграбилна функција `f` и интервалот `[a, b]` е
+                            </p>
+                            <p>
+                                `A = int_a^b f(x)dx`
+                            </p>
+                            <p>
+                                <strong>Пример 3: </strong> Да се скицира областа чија што плоштина е претставена со определениот интеграл, и да се пресмета интегралот со помош на соодветна формула од геометрија.
+                            </p>
+                            <div class='row py-3'>
+                                <div class='col-4'>
+                                    a. `int_1^4 2dx`
+                                </div>
+                                <div class='col-4'>
+                                    b. `int_(-1)^2 (x+2)dx`
+                                </div>
+                                <div class='col-4'>
+                                    c. `int_0^1 sqrt(1-x^2)dx`
+                                </div>
+                                
+                            </div>
+                            <img src='images/integration_17.png' class="img-fluid img">
+                        
+                            <p>
+                                <strong>Пример 4: </strong>  Да се пресметаат интегралите
+                            </p>
+                            <div class='row py-3'>
+                                <div class='col-4'>
+                                    `I_1= int_0^2 (x-1)dx`
+                                </div>
+                                <div class='col-4'>
+                                    `I_2 = int_0^1 (x-1)dx`
+                                </div>
+                                
+                            </div>
+                        
+                            <p>
+                                <strong>Решение: </strong>
+                            </p>
+                        
+                            <div class='row py-3'>
+                                <div class='col-6'>
+                                    `I_1= x^2/2 - x |_0^2 = [2^2/2 - 2] - [0^2/2 - 0] = 0`
+                                </div>
+                                <div class='col-6'>
+                                    `I_2= x^2/2 - x |_0^1 = [1^2/2 - 1] - [0^2/2 - 0] = -1/2`
+                                </div>
+                                
+                            </div>
+                        
+                            <h3>
+                                Својства на определен интеграл
+                            </h3>
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Дефиниција 3</h4>
+                                <p>
+                                    i. Ако `a` е во доменот на `f`, дефинираме.
+                                </p>
+                                <p>
+                                    `int_a^a f(x)dx = 0`
+                                </p>
+                                <p>
+                                    ii. Ако `f` е интеграбилна на `[a, b]`, дефинираме
+                                </p>
+                                <p>
+                                    `int_a^b f(x)dx = -int_b^a f(x)dx`
+                                </p>
+
+                            </div>
+                        
+                            <img src='images/integration_18.png' class="img-fluid img">
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Теорема 3</h4>
+                                <p>
+                                    Ако `f` и `g` се интеграбилни на `[a, b]` и ако `c` е константа, тогаш `cf`, `f + g` и `f - g` се интеграбилни на `[a, b]` и
+                                </p>
+                                <p>
+                                    i. `int_a^b cf(x)dx = c int_a^b f(x)dx`
+                                </p>
+                                <p>
+                                    ii. `int_a^b [f(x) + g(x)]dx = int_a^b f(x)dx + int_a^b g(x)dx`
+                                </p>
+                                <p>
+                                    iii. `int_a^b [f(x) - g(x)]dx = int_a^b f(x)dx - int_a^b g(x)dx`
+                                </p>
+                                <p>
+                                    iv. Произволна линеарна комбинација од функциите `f_1 , f_2 , ..., f_n` кои се интеграбилни на `[a, b]` е интеграбилна функција на `[a, b]` и: 
+                                </p>
+                                <p>
+                                    `int_a^b [c_1f_1(x) + c_2f_2(x) + ... + c_nf_n(x)]dx`
+                                </p>
+                                <p>
+                                    `= c_1int_a^b f_1(x)dx + c_2int_a^b f_2(x)dx + ... + c_nint_a^b f_n(x)dx`
+                                </p>
+                                <p>
+                                    каде што `c_1 ,c_2 ,...,c_n` , `n in N`, се константи.
+                                </p>
+                                
+                                
+                            </div>
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Теорема 4</h4>
+                                <p>
+                                    Ако `f` е интеграбилна на затворен интервал кој ги содржи точките `a`, `b`, и `c`, тогаш
+                                </p>
+                                <p>
+                                    `int_a^b f(x)dx = int_a^c f(x)dx​ + int_c^b f(x)dx`
+                                </p>                                
+                                <p>
+                                    без оглед на тоа како се распоредени точките.
+                                </p>
+                                
+                                
+                            </div>
+                        
+                            <img src='images/integration_19.png' class="img-fluid img">
+                        
+                            <div id="def1" class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Теорема 5</h4>
+                                <p>
+                                    i. Ако `f` е интеграбилна на `[a, b]`и `f (x)>=0` за секој  `x in [a, b]` ,тогаш
+                                </p>
+                                <p>                                    
+                                    `int_a^b f(x)dx >= 0`
+                                </p>
+                                <p>
+                                    ii. Ако `f` е интеграбилна на `[a, b]`и `f (x)>=g(x)` за секој  `x in [a, b]` ,тогаш
+                                </p>
+                                <p>                                    
+                                    `int_a^b f(x)dx >= int_a^b g(x)dx`
+                                </p>
+                                
+                                
+                            </div>
+                        
+
+                            
 
 
                     </div>
