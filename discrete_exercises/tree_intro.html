@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Learning Discrete Mayhematics" />
+    <meta name="author" content="Ilija Taseski" />
+    <meta name="generator" content="VS Code 2019" />
+
+    <title>io sashe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+    <link href="../css/docs.css" rel="stylesheet" />
+
+    <!-- MathJax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+        async></script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="manifest" href="../images/favicons/manifest.json" />
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c" />
+    <link rel="icon" href="../images/icon/favicon.ico" />
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#563d7c" />
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Calculus</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete/tree_intro.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tree_intro.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in calculus..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1" />
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic_book.html">
+                            1. Логика и докази
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            9. Релации
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="../discrete_exercises/graph_101.html">
+                            10. Графови
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="tree_intro.html">
+                            11. Дрва
+                        </a>
+
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="tree_intro.html">
+                                    11.1 Вовед
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sets_operations.html">
+                                    11.2 Примена
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    11.3 Функции
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Граф</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex1">Вежба 1</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex2">Вежба 2</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex3">Вежба 3</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex4">Вежба 4</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex5">Вежба 5</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex6">Вежба 6</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex8">Вежба 8</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex9">Вежба 9</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex10">Вежба 10</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex11">Вежба 11</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex12">Вежба 12</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex13">Вежба 13</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex14">Вежба 14</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex15">Вежба 15</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex16">Вежба 16</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex17">Вежба 17</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex18">Вежба 18</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#ex20">Вежба 20</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+
+                <div id="Translating" class="row">
+                    <div class="col-md-12">
+                        <!-- Exercise 1 -->
+                        <p id="ex1">
+                            <strong>Вежба 1.</strong> Кои од следниве графови се дрва? (Задача 2 од книга!)
+                            <div class='mx-auto'>
+                                <img src="images/tree_02.png" class="img-fluid" alt="tree_02" />
+                            </div>
+
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Дрва се графовите под а), b), d) и f). Графот под c) не е дрво бидејќи не е
+                                        сврзан,
+                                        а графот под e) содржи прости циклуси.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 1 -->
+
+                        <!-- Exercise 2 -->
+                        <p id="ex2">
+                            <strong>Вежба 2.</strong> Одговори ги следниве прашања во врска со кореновото дрво
+                            претставено
+                            на цртежот. (Задача 4 од книга)<br>
+                            <div class='mx-auto'>
+                                <img src="images/tree_04.png" class="img-fluid" alt="tree_02" />
+                            </div>
+                            а) Кое теме е корен?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Корен е темето `а`.
+                                    </p>
+                                </div>
+                            </details>
+                            б) Кои темиња се внатрешни?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Внатрешни темиња се: `a`, `b`, `d`, `e`, `g`, `h`, `i` и `o`;
+                                    </p>
+                                </div>
+                            </details>
+                            в) Кои темиња се листови?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Листови се: `c`, `f`, `j`, `k`, `l`, `m`, `n`, `p`, `q`, `r` и `s`;
+                                    </p>
+                                </div>
+                            </details>
+                            г) Кои темиња се деца на j?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Темето j нема деца (тоа е лист);
+                                    </p>
+                                </div>
+                            </details>
+                            д) Кое теме е родител на h?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Родител на темето `h` е темето `d`;
+                                    </p>
+                                </div>
+                            </details>
+                            ѓ) Кои темиња се сестрински на о?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Единствено сестринско теме на темето `o` е `p` ;
+                                    </p>
+                                </div>
+                            </details>
+                            е) Кои темиња се претци на m?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Претци на темето m се темињата `g`, `b` и `a`;
+                                    </p>
+                                </div>
+                            </details>
+                            ж) Кои темиња се потомци на b?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Потомци на темето `b` се темињата `e`, `f`, `g`, `j`, `k`, `l` и `m`.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 2 -->
+
+                        <!-- Exercise 3 -->
+                        <p id="ex3">
+                            <strong>Вежба 3.</strong> Дали кореновото дрво од претходната задача е целосно `m`-арно
+                            дрво, за некој
+                            позитивен цел број `m`? (Задача 6 од книга)<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        За дрвото да е целосно `m`-арно, потребно е секое внатрешно теме да има точно
+                                        `m`
+                                        деца. Тоа не е исполнето, бидејќи, на пример, темињата `g` и `b` имаат различен
+                                        број
+                                        на деца. Значи, ова дрво не може да биде целосно `m`-арно дрво.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 3 -->
+
+                        <!-- Exercise 4 -->
+                        <p id="ex4">
+                            <strong>Вежба 4.</strong> Кое е нивото на секое теме од кореновото дрво од Задача 2? Која е
+                            висината
+                            на дрвото? (Задача 8 од книга)<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Нивото на коренот a е `0`; нивото на темињата `b`, `c` и `d` е `1`; нивото на
+                                        темињата `e`, `f`, `g`,
+                                        `h` и `i` е `2`; нивото на темињата `j, k, l, m, n, o` и `p` е 3; и нивото на
+                                        темињата `q`, `r` и `s` е 4.
+                                        Висината на дрвото е `4`.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 4 -->
+
+                        <!-- Exercise 5 -->
+                        <p id="ex5">
+                            <strong>Вежба 5.</strong> Нацртај го поддрвото на кореновото дрво од Задача 2, со корен:
+                            a) `a`; б) `c`; в) `e`; (Задача 10 од книга)<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div class='mx-auto'>
+                                    <img src="images/tree_05.png" class="img-fluid" alt="tree_05" />
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 5 -->
+
+                        <!-- Exercise 6 -->
+                        <p id="ex6">
+                            <strong>Вежба 6.</strong> Ова е пример 7 во предавањато.
+                        </p>
+                        <!-- /Exercise 6 -->
+
+                        <!-- Exercise 8 -->
+                        <p id="ex8">
+                            <strong>Вежба 8.</strong> Колку ребра има дрво со 10 000 јазли?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>Согласно Теорема 2, дрво со `n = 10 000` темиња има `n – 1 = 10 000 – 1 = 9 999`
+                                        ребра.</p>>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 8 -->
+
+                        <!-- Exercise 9 -->
+                        <p id="ex9">
+                            <strong>Вежба 9.</strong> а) Колку неизоморфни некоренови дрва со три темиња
+                            постојат?;<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>а) 1;</p>
+                                </div>
+                            </details>
+                            б) Колку неизоморфни коренови дрва со три темиња постојат?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>б) 2.</p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 9 -->
+
+                        <!-- Exercise 10 -->
+                        <p id="ex10">
+                            <strong>Вежба 10.</strong> Да се нацртаат сите дрва со 6 темиња такви што ниту еден пар од
+                            тие дрва
+                            нема да бидат изоморфни помеѓу себе, а секое друго дрво со 6 темиња ќе биде
+                            изоморфно со точно едно од нацртаните дрва.<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Едно теме во дрво со шест темиња може да има степен најмногу пет (ако има
+                                    поголем степен заначи дека е поврзано со повеќе од пет темиња што не е можно).
+                                    Ако некое теме има степен пет тогаш сите ребра го поврзуваат тоа теме со едно од
+                                    останатите темиња (првиот граф на цртежот). Ако постои теме со степен четири,
+                                    тогаш тоа е поврзано со четири други темиња, а последното теме е поврзано со едно
+                                    од четирите (вториот граф на цртежот). Ако постојат две темиња со степен три, тогаш
+                                    тие се поврзани со по три темиња и бидејќи има вкупно шест темиња, мора да се
+                                    поврзани меѓу себе (третиот граф). Ако графот има точно едно теме со степен три,
+                                    тогаш тоа е поврзано со три различни темиња, а преостанатите две темиња со
+                                    поврзани со две од нив или меѓу себе (четвртиот и петтиот граф на цртежот). Ако не
+                                    постои теме со степен поголем од два, тогаш ако почнеме од теме со степен еден, и
+                                    се движиме по ребрата, ќе поминуваме низ темињата со степен два и ќе завршиме
+                                    во друго теме со степен еден. На овој начин ќе поминеме низ сите темиња и ребра
+                                    (кога поминуваме низ едно теме кое има степен два поминуваме низ двете ребра
+                                    кои го содржат), па постои единствен ваков граф (шестиот граф).
+                                </div>
+                                <img src="images/tree_10.PNG" class="img-fluid" alt="ex10" />
+                            </details>
+                        </p>
+                        <!-- /Exercise 10 -->
+
+
+                        <!-- Exercise 11 -->
+                        <p id="ex11">
+                            <strong>Вежба 11.</strong> Едно дрво има две темиња со степен четири, едно теме со степен
+                            три, едно
+                            теме со степен два и останатите темиња се со степен еден.<br />
+                            a) Колку темиња има ова дрво?;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Нека дрвото има `n` темиња и нека `k` од нив се со степен `1`. За ова дрво се
+                                    исполнети равенствата `k +1+1+ 2 = n` (има `k` темиња со степен `1`, по едно со
+                                    степен два и три, и две со степен четири, а вкупно има `n` темиња) и `1*k + 2 *1 +
+                                    3*1 + 4 *2 = 2 * (n -1)` (има вкупно `n-1` ребра, што е два пати помалку
+                                    од збирот на степените на темињата). Ако го помножиме првото равенство со два и
+                                    потоа од него го одземеме второто, ќе го добиеме равенството `2k-k+2-2+2-3+4-8=2` ,
+                                    од каде се добива дека `k=7`, т.е дрвото има вкупно `n=k+4=1` темиња;
+                                </div>
+
+                            </details>
+                            б) Нацртај го дрвото од а).
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Постојат повеќе неизоморфни дрва со дадените својства. Ако двете темиња со
+                                    степен четири се поврзани меѓу себе и едното од нив е поврзано со темето со степен
+                                    три, се добиваат првите три дрва од цртежот подолу, а ако темето со степен три не е
+                                    поврзано со нив – се добива четвртиот граф. Ако двете темиња со степен четири се
+                                    поврзани со темето со степен три се добиваат петтото и шестото дрво. Има едно дрво
+                                    во кое темињата со степен четири се поврзани со темето со степен два, кое е
+                                    прикажано на цртежот со седмиот граф. И на крај, постои дрво во кое едното теме
+                                    со степен четири е поврзано со темето со степен три, а другото теме со степен четири
+                                    е поврзано со темето со степен два. Ова е прикажано со осмиот граф.
+                                </div>
+                                <img src="images/tree_11.PNG" class="img-fluid" alt="ex10" />
+                            </details>
+                        </p>
+                        <!-- /Exercise 11 -->
+
+                        <!-- Exercise 12 -->
+                        <p id="ex12">
+                            <strong>Вежба 12.</strong> Колку темиња има целосно 5-арно дрво со 100 внатрешни
+                            темиња?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    <p>
+                                        Согласно Теорема 3, целосно m-арно дрво со `i` внатрешни темиња има `n = mi + 1`
+                                        темиња. Оттука, бројот на темиња во ова дрво е `n = 5 · 100 + 1 = 501`.
+                                    </p>
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 12 -->
+
+                        <!-- Exercise 13 -->
+                        <p id="ex13">
+                            <strong>Вежба 13.</strong> Колку темиња има целосно бинарно дрво со 1000 внатрешни
+                            темиња?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Согласно Теорема 3, целосно `m`-арно дрво со `i` внатрешни темиња има `n = mi + 1`
+                                    темиња. Оттука, бројот на темиња во ова дрво е `n = 2 · 1000 + 1 = 2001`.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 13 -->
+
+                        <!-- Exercise 14 -->
+                        <p id="ex14">
+                            <strong>Вежба 14.</strong> Докажи го:<br />
+                            а) делот (ii) од Теорема 4;
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Според Теорема 3, следува дека `n = mi + 1`. Бидејќи `i + l = n`, добиваме дека `l =
+                                    n – i`, па `l = (mi + 1) – i = (m – 1)i + 1`;
+                                </div>
+                            </details>
+                            б) делот (iii) од Теорема 4.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Имаме дека `n = mi + 1` и `i + l = n`. Оттаму, `i = n – l`. Следува дека `n = m(n –
+                                    l) + 1`. Решавајќи по `n`, добиваме: `n = (ml – 1)/(m – 1)`. Конечно, од `i = n –
+                                    l`, добиваме `i = [(ml– 1)/(m – 1)] – l = (l – 1)/(m – 1)`.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 14 -->
+
+                        <!-- Exercise 15 -->
+                        <p id="ex15">
+                            <strong>Вежба 15.</strong> Колку листови има целосно 3-арно дрво со 100 темиња?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Согласно Теорема 4, целосно `m`-арно дрво со `n` темиња има `l = [(m – l)n + 1]/m`
+                                    листови. Оттука, бројот на листови во ова дрво е `l = [(3 – l)·100 + 1]/3 = 67`.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 15 -->
+
+                        <!-- Exercise 16 -->
+                        <p id="ex16">
+                            <strong>Вежба 16.</strong> Верижно писмо започнува со испраќање на писмото од едно лице до пет
+                            други лица. Секое лице кое ќе го прими писмото или го испраќа до пет други лица кои
+                            дотогаш не го добиле, или пак не го испраќа никому. Да претпоставиме дека точно 10
+                            000 луѓе го испратиле писмото пред да заврши веригата и дека ниедно лице не примило
+                            повеќе од едно писмо. Колку луѓе го примиле писмото и колку луѓе не го испратиле
+                            понатаму?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Верижното писмо може да се претстави преку целосно `5`-арно дрво. Внатрешните
+                                    темиња одговараат на луѓето кои го испратиле писмото, а листовите одговараат на
+                                    луѓето кои не го испратиле писмото. Според тоа, дрвото има `i = 10 000` внатрешни
+                                    темиња, па согласно Теорема 4 тоа има вкупно `n = mi + 1 = 5 · 10 000 + 1 = 50 001` теме
+                                    (ова е вкупниот број на луѓе вклучени во веригата). Писмото го примиле `50 000` луѓе
+                                    (сите освен првиот човек, кој ја започнал веригата), а не го испратиле `l = 50 001 – 10
+                                    000 = 40 001` (ова е бројот на листови во дрвото).
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 16 -->
+
+                        <!-- Exercise 17 -->
+                        <p id="ex17">
+                            <strong>Вежба 17.</strong> Нацртај целосно m-арно дрво со 84 листови и висина 3, каде m е позитивен
+                            цел број, или покажи дека такво дрво не постои.<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <div>
+                                    Такво дрво не постои, бидејќи согласно Теорема 4 и Теорема 5, тоа е невозможно.
+                                </div>
+                            </details>
+                        </p>
+                        <!-- /Exercise 17 -->
+
+                        <!-- Exercise 18 -->
+                        <p id="ex18">
+                            <strong>Вежба 18.</strong> а) Конструирај комплетно бинарно дрво со висина 4;<br />
+                            б) Конструирај комплетно 3-арно дрво со висина 3.
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <img src="images/tree_18.PNG" class="img-fluid" alt="ex10" />
+                            </details>
+                        </p>
+                        <!-- /Exercise 18 -->
+
+                        <!-- Exercise 20 -->
+                        <p id="ex20">
+                            <strong>Вежба 20.</strong> Колку темиња и колку листови има комплетно m-арно дрво со висина h?<br />
+                            <details>
+                                <summary class="mb-3">Решение</summary>
+                                <p>
+                                    Кај комплетно `m`-арно дрво со висина `h`:
+                                </p>
+                                <ul>
+                                    <li>
+                                        на ниво 0 се наоѓа само коренот; 
+                                    </li>
+                                    <li>
+                                        на ниво 1 се неговите m деца; 
+                                    </li>
+                                    <li>
+                                        на ниво 2 се наоѓаат m–те деца на темињата од ниво 1, т.е. вкупно `m^2` темиња;
+                                    </li>
+                                    <li>
+                                        на ниво `h` (`h` е висината на дрвото) има вкупно `m^h` темиња (т.е. `m^h` листови)
+                                    </li>
+                                </ul>
+                                <p>
+                                    Според тоа, вкупниот број на темиња (јазли) во дрвото е:
+                                </p>
+                                <p class='text-center'>
+                                    `1+m+m^2+m^3+ ... +m^h = (m^(h+1)-1)/(m-1)`
+                                </p>
+                            </details>
+                        </p>
+                        <!-- /Exercise 20 -->
+
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

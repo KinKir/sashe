@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c55d0884-765b-4571-b393-8f605e21c9be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculus/fundamentals_theorem.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculus/fundamentals_theorem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discrete/predicates.html" beforeDir="false" afterPath="$PROJECT_DIR$/discrete/predicates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discrete/tree_intro.html" beforeDir="false" afterPath="$PROJECT_DIR$/discrete/tree_intro.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +49,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -61,6 +60,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">

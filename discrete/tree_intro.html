@@ -1,593 +1,705 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Learning Discrete Mathematics">
-        <meta name="author" content="Ilija Taseski">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learning Discrete Mathematics">
+    <meta name="author" content="Ilija Taseski">
 
-        <title>io sashe</title>
+    <title>io sashe</title>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <!-- Documentation extras -->
-        <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
-        <link href="../css/docs.css" rel="stylesheet">
+    <!-- Documentation extras -->
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+    <link href="../css/docs.css" rel="stylesheet">
 
-        <!-- MathJax -->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
-                async></script>
+    <!-- MathJax -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
 
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="manifest" href="../images/favicons/manifest.json">
-        <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
-        <link rel="icon" href="../images/icon/favicon.ico">
-        <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#563d7c">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="../images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="../images/favicons/manifest.json">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="../images/icon/favicon.ico">
+    <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
 
-        <!-- Font Awesome JS -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-   
-    </head>
-    <body>
-        <!-- Header -->
-        <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-            <div class="container">
-                <span class="skiplink-text">Skip to main content</span>
-            </div>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
+            <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
+                focusable="false">
+                <title>Саше учи Discrete Matematics</title>
+                <path fill="currentColor"
+                    d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z" />
+                <path fill="currentColor"
+                    d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z" />
+            </svg>
         </a>
 
-        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-            <a class="navbar-brand mr-0 mr-md-2" href="../index.html" aria-label="Bootstrap">
-                <svg class="d-block" width="36" height="36" viewbox="0 0 612 612" xmlns="http://www.w3.org/2000/svg"
-                        focusable="false">
-                    <title>Саше учи Discrete Matematics</title>
-                    <path fill="currentColor"
-                            d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/>
-                    <path fill="currentColor"
-                            d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/>
-                </svg>
-            </a>
-        
-            <div class="navbar-nav-scroll">
-                <ul class="navbar-nav bd-navbar-nav flex-row">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../discrete_exercises/propositional_logic_university.html">
-                            <span>
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </span>
-                            Вежби
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link active" href="propositional_logic.html">Дискретна математика</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete_exercises/tree_intro.html">
+                        <span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">
+                        <span>
+                            <i class="fas fa-book"></i>
+                        </span>
+                        Вежби
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!--Container -->
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <form class="bd-search d-flex align-items-center">
+                    <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
+                        aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
+                        data-docs-version="4.1">
+                    <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
+                        data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
+                        aria-expanded="false" aria-label="Toggle docs navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
+                            focusable="false">
+                            <title>Menu</title>
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
+                                d="M4 7h22M4 15h22M4 23h22" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Left Sidenav -->
+                <nav class="collapse bd-links" id="bd-docs-nav">
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="propositional_logic.html">
+                            1. Логика и докази
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../discrete_exercises/propositional_logic_book.html">
-                            <span>
-                                <i class="fas fa-book"></i>
-                            </span>
-                            Вежби
+
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            2. Основни структури
                         </a>
+                    </div>
+
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="graphs.html">
+                            10. Графови
+                        </a>
+                    </div>
+
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link" href="tree_intro.html">
+                            11. Дрва
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li class="active bd-sidenav-active">
+                                <a href="propositional_logic.html">
+                                    11.1 Вовед
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic-app.html">
+                                    11.2 Примена
+                                </a>
+                            </li>
+                            <li>
+                                <a href="propositional_logic_equivalences.html">
+                                    11.3 Пребарување
+                                </a>
+                            </li>
+                            <li>
+                                <a href="predicates.html">
+                                    11.4 Под-дрво
+                                </a>
+                            </li>
+                            <li>
+                                <a href="predicates_nested.html">
+                                    11.5 Минимално под-дрво
+                                </a>
+                            </li>
+                            <li>
+                                <a href="predicates_inference.html">
+                                    11.6 Правила за изведување на заклучоци
+                                </a>
+                            </li>
+                            <li>
+                                <a href="proof.html">
+                                    1.7 Докази
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item">
+                        <a class="bd-toc-link" href="sets.html">
+                            Испитни задачи
+                        </a>
+                        </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+
+            <!-- right nav -->
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h2">
+                        <a href="#def">Исказно сметање</a>
+                        <ul>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Propositions">Искази</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#negation">Негација</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#conjunction">Конјункција</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#disjunction">Дисјункција</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#exclusive or">Екслузивно или</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#implication">Импликација</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#CONVERSE, CONTRAPOSITIVE, AND INVERSE">Конверзија, Контрапозитив и
+                                    Инверзија</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#BICONDITIONALS">Еквиваленција</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Truth Tables of Compound Propositions">Табела на вистинитост за сложени
+                                    искази</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Precedence of Logical Operators">Преднот на логичките сврзници</a>
+                            </li>
+                            <li class="toc-entry toc-h3">
+                                <a href="#Logic and Bit Operations">Операции над битови</a>
+                            </li>
+
+                        </ul>
                     </li>
                 </ul>
             </div>
 
-        </header>
-
-        <!--Container -->
-        <div class="container-fluid">
-            <div class="row flex-xl-nowrap">
-                <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                    <form class="bd-search d-flex align-items-center">
-                        <input type="search" class="form-control" id="search-input" placeholder="Search in discrete math..."
-                                aria-label="Search for..." autocomplete="off" data-siteurl="https://getbootstrap.com"
-                                data-docs-version="4.1">
-                        <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button"
-                                data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav"
-                                aria-expanded="false" aria-label="Toggle docs navigation">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30"
-                                    focusable="false">
-                                <title>Menu</title>
-                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"
-                                        d="M4 7h22M4 15h22M4 23h22"/>
-                            </svg>
-                        </button>
-                    </form>
-
-                    <!-- Left Sidenav -->
-                    <nav class="collapse bd-links" id="bd-docs-nav">
-
-                        <div class="bd-toc-item">
-                            <a class="bd-toc-link" href="propositional_logic.html">
-                                1. Логика и докази
-                            </a>   
-                            
-                        </div>
-
-                        <div class="bd-toc-item">
-                            <a class="bd-toc-link" href="sets.html">
-                                2. Основни структури
-                            </a>
-                        </div>
-
-                        <div class="bd-toc-item">
-                            <a class="bd-toc-link" href="graphs.html">
-                                10. Графови
-                            </a>
-                        </div>
-        
-                        <div class="bd-toc-item active">
-                            <a class="bd-toc-link" href="tree_intro.html">
-                                11. Дрва
-                            </a>
-                            <ul class="nav bd-sidenav">
-                                <li class="active bd-sidenav-active">
-                                    <a href="propositional_logic.html">
-                                        11.1 Вовед
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="propositional_logic-app.html">
-                                        11.2 Примена
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="propositional_logic_equivalences.html">
-                                        11.3 Пребарување
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="predicates.html">
-                                        11.4 Под-дрво
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="predicates_nested.html">
-                                        11.5 Минимално под-дрво
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="predicates_inference.html">
-                                        11.6 Правила за изведување на заклучоци
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="proof.html">
-                                        1.7 Докази
-                                    </a>
-                                </li>  
-                            </ul>
-                        </div>
-                        <div class="bd-toc-item">
-                            <a class="bd-toc-link" href="sets.html">
-                                Испитни задачи
-                            </a>
-                            </ul>
-                        </div>
-
-
-                    </nav>
-                </div>
-
-                <!-- right nav -->
-                <div class="d-none d-xl-block col-xl-2 bd-toc">
-                    <ul class="section-nav">
-                        <li class="toc-entry toc-h2">
-                            <a href="#def">Исказно сметање</a>
-                            <ul>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#Propositions">Искази</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#negation">Негација</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#conjunction">Конјункција</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#disjunction">Дисјункција</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#exclusive or">Екслузивно или</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#implication">Импликација</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#CONVERSE, CONTRAPOSITIVE, AND INVERSE">Конверзија, Контрапозитив и Инверзија</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#BICONDITIONALS">Еквиваленција</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#Truth Tables of Compound Propositions">Табела на вистинитост за сложени искази</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#Precedence of Logical Operators">Преднот на логичките сврзници</a>
-                                </li>
-                                <li class="toc-entry toc-h3">
-                                    <a href="#Logic and Bit Operations">Операции над битови</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- main -->
-                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-                    <div class='row'>
-                        <!-- intro -->
-                        <p class='lead'>
-                            Сврзан граф кој не содржи едноставен циклус се нарекува дрво. Дрвата се особено корисни во компјутерската наука, каде се користат во многу алгоритми. На пример, дрвата се користат за за создавање на ефикасен алгоритам за лоцирање на членови во листа.
-                        </p>
-                        <p class='lead'>
-                             Дрвата можат да се употребат при проучиување на игри, на пример на шах и создавање на стратегија за играње и создавање на победнички алгоритам. 
-                        </p>
-                        
-                        <!-- intro -->  
-                        
-                        <h3 id="def">
-                            Вовед
-                        </h3>
-
-                        <p>
-                            Овде ќе се посветиме на посебен тип на граф наречен <strong>дрво </strong> бидејки според ликот овој граф личи на дрво. На пример фамилијарното дрво е граф кој ги претставува генеалошките карти. Кај фамилијарното дрво јазелот се корист за да се претстави член од семејството а ребрата за да се претстават врските родител-дете. Подоле е претставено семејното дрво на машките членови на семејствот математичари Bernoulli од Швајцарија. Неоријентираниот граф кој го претставува семејното дрво е пример за дрво.
-                        </p>
-
-                        <img src='images/tree_00.png' class='img-fluid img mx-auto' alt='tree_00'>
-                        
-                        <div id="def1" class="col-12 alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Дефиниција 1</h4>
-                            <p>
-                                Дрво е сврзан неориентиран граф без едноставни циклуси.
-                            </p>
-                        </div>
-                        
-                        <p>
-                            Бидејки дрвоте не може да има едноставен циклус, не може да содржи повеќекратни ребра или алки. Поради ова секое дрво мора да биде едноставен граф.
-                        </p> 
-                        
-                        <div class='col-12 mx-auto'>
-                            <img src='images/tree_01.png' class='img-fluid' alt='tree_00'>
-                        </div>
-                        
-                        <div class='col-12'>                        
-                            <p>
-                                <strong>Пример 1</strong>
-                            </p>
-                            <p>
-                                Кои графови на сликата се дрва?
-                            </p>
-                            
-                            <p>
-                                <strong>Решение</strong>
-                            </p>
-        
-                            <p>
-                                Графот G1 и G2 се дрва, бидејки и двата се врзани графови без едноставни циклуси. G3 не е дрво бидејки `e, b, a, d, e` е едноставен циклус. И графот G4 не е дрво бидејки не е сврзан.
-                            </p>
-                            
-                            <p>
-                                Секој граф кој не содржи едноставен циклус е дрво. Грфовите кои немаат едноставен циклус и не се врзани се викаат <strong>шума</strong> и го имаат својствотo да секој  нивни сврзан дел е дрво. Сликата доле прикажува шума.
-                            </p>
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_02.png' class='img-fluid' alt='tree_00'>
-                            </div>
-                            <p>
-                                Дрвата, често, се дефинираат како неориентиран граф со особина дека постои единстевен едноставен пат помеѓу секој пар на јазли.
-                            </p>
-                            
-                        </div>
-                        
-                        <div id="def1" class="col-12 alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Теорема 1</h4>
-                            <p>
-                                Неориентиран граф е дрво ако и само ако постои едноставен пат помеѓу секој пар на јазли.
-                            </p>
-                        </div>
-                        
-                        <h5>
-                            Кореново дрво
-                        </h5> 
-                        
-                        <p>
-                            Во многу дрва одреден јазол од дрвото се означува како корен. Кога ќе се одберте корен тогаш може да се додели смер на секое ребро. Бидејки постои единствен пат од коренот до секој јазол (според Теорема 1), секој јазол го насочуваме од коренот. Вака, дрвото заедно со неговиот корен создава ориентиран граф кој се вика кореново дрво.
-                        </p>
-                        
-                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Дефиниција 2</h4>
-                            <p>
-                                Кореново дрво е дрво каде еден јазол е означен како корен и секој јазол е усмерен од коренот.                       
-                            </p>
-
-                        </div>  
-                        
-                        <p>
-                            Кореново дрво може исто така да се дефинира рекурзивно. Секое дрво можеме да го претставиме како кореново дрво одбирајки било кој јазол за корен Треба да се напомене дека различниот избор на јазол за корен ќе создаде рзлично кореново дрво. На пример на долната слика с прикажани дрва формирани со избор јазолот `a` да биде корен и јазолот `c` да биде корен. Стрелките кој го покажуваат смерот на ребрата најчесто се испуштаат бидејки изборот на коренот го одредува смерот на ребрата.
-                        </p>     
-                        
-                        <div class='col-12 mx-auto'>
-                            <img src='images/tree_03.png' class='img-fluid' alt='tree_03'>
-                        </div>
-                        
-                        
-                        <p>
-                            Терминологијата на дрвата им ботанички и генеолошки корења. Да претпоставиме дека `T` е кореново дрво. Ако `v` е јазол во дрвото различен од коренот, родителот (parent) на јазолот `v` е единствен јазол `u` така да постои усмерено ребро од `u` кон `v`. кога `u` е родител на `v`, `v` се нарекува дете (child) од `u`. Јазлите со ист родител се викаат браќа или сестри (called siblings). Претците на јазолот различни од коренот се јазлите на патот од коренот до овој јазол, исклучувајки го самиот јазол а вклучувајки го коренот (односно, неговиот родител, родителот на неговиот родител и така натака се до коренот). Потомци на јазолот `v` се јазлите за кои јазолот `v` е предок. Јазолот кај кореново дрво се вика <strong>лист(leaf)</strong> ако нема деца. Јазлите кои имаат деца се викаат <strong>внатрешни јазли</strong>. Коренот е внатрешен јазол освек ако е единствен јазол кога е лист.
-                        </p>
-                        <p>
-                            Ако `a` е јазол во дрвото, поддрво со јазол `a` како корен е подграф на дрвото кој се состои од сите свои потомци и ребрата придружени кон овие потомци.
-                        </p>
-                        
-                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                            <h4 class="alert-heading">Дефиниција 3</h4>
-                            <p>
-                                Кореново дрво се нарекува `m`-арно ако секој внатрешен јазол нема повеќе од `m` деца. Дрвото се нарекува потполно `m`-арно ако секој внатртешен јазол има точно `m` деца. Ако `m=2` дрвото се нарекува бинарно дрво.   
-                            </p>
-
-                        </div>  
-                        
-                        <div class='col-12'>    
-                            <p>
-                                <strong>Пример 3</strong>
-                            </p>
-                            <p>
-                                Дали кореновите дрва на долната слика се потполни `m`-арни дрва и за кој позитивен цел број?
-                            </p>
-
-                            <p>
-                                <strong>Решение</strong>
-                            </p>
-                            <p>
-                                Графот `T1` е потполно бинарно дрво бидејки секој од внатрешните јазли има две деца. графот `T2` потполно `3`-арно дрво бидејки секој од неговите внатрешни јазли има 3 деца. Кај графот `T3` секој внатрешен јазол има пет деца, па според тоа `T3` е потполно `5`-арно дрво. `T4` не е `m`-рно дрво за било кој цел број `m` бидејки некои од неговите внатрешни јазли имаат две деца а другите имаат три деца.
-                            </p>
-
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_04.png' class='img-fluid' alt='tree_03'>
-                            </div>
-                        </div>
-                        
-                        <div class='col-12'>  
-                            
-                            <h5>
-                                Подредено кореново дрво
-                            </h5>
-                            
-                            <p>
-                                Подредено кореново дрво е кореново дрво каде децата на секој внатрешен јазол се подредени. Подредените коренови дрва се цртаат така да децата на секој внатрешен јазол се прикажуваат подредени од лево на десно.
-                            </p>
-                            
-                            <p>
-                                Кај подреденото бинарно дрво (обично наречено бинарно дрво), ако внатрешен јазол има две деца, првото дете се вика лево дете а второт дете се вика десно дете. Дрвото со корен во левото дете се вика лево поддрво на овој јазол, а дрвото со корен во десното дете се вика десно поддрво за овој јазол.
-                            </p>
-                            
-                            <p>
-                                <strong>Пример 4</strong>
-                            </p>
-                            <p>
-                                Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на јазолот `c`?
-                            </p>
-
-                            <p>
-                                <strong>Решение</strong>
-                            </p>
-                            <p>
-                                Левото дете на `d` е `f` а десното дете е `g`. Левот и десното дрво се прикажани на цртежеот.
-                            </p>
-
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_05.png' class='img-fluid' alt='tree_05'>
-                            </div>
-                        </div>
-                        
-                        <div class='col-12'>  
-                            
-                            <h5>
-                                Особини на дрво
-                            </h5>
-
-                            <p>
-                                Честа е потртебата да се знае бројот на јазли и ребра во дрвото.
-                            </p>
-                            <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <h4 class="alert-heading">Теорема 2</h4>
-                                <p>
-                                   Дрво со `n` јазли има `n-1` ребра.
-                                </p>
-
-                            </div>  
-
-                            <p>
-                                <strong>Доказ</strong>
-                            </p>
-                            <p>
-                                Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на јазолот `c`?
-                            </p>
-
-                            <p>
-                                <strong>Решение</strong>
-                            </p>
-                            <p>
-                                Ќе користиме математичка индукција за да ја докажеме оваа теорема. Треба да се напомене дека за сите дрва спомнати овде ќе одбереме корен и ќе се обраќаме кон коренови дрва.
-                            </p>
-                            <p>
-                                <strong>Почетен чекор: </strong>Кога `n = 1`, дрвото нема ребра. Од тука следи дека теоремата е точна за `n = 1`.
-                            </p>
-                            <p>
-                                ... ... ... ... ... ...
-                            </p>
-                            
-                            <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <h4 class="alert-heading">Теорема 3</h4>
-                                <p>
-                                   Потполно `m`-арно дрво со `i` внатрешни темиња има вкупно `n = mi + 1` јазли.
-                                </p>
-
-                            </div> 
-                            <div id="def4" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <h4 class="alert-heading">Теорема 4</h4>
-                                <p>
-                                   Потполно `m`-арно дрво со:
-                                </p>
-                                <ul>
-                                    <li>
-                                        `n` јазли има `i = (n - 1)/m` внатрешни јазли и `l = [(m - 1)n + 1]/m` лисја,
-                                    </li>
-                                    <li>
-                                        `i` внатрешни темиња има `n = mi + 1` темиња и `l = (m - 1)i + 1` лисја,
-                                    </li>
-                                    <li>
-                                        `l` лисја има `n = (ml- 1)/(m - 1)` темиња и `i = (l- 1)/(m - 1)` внатрешни темиња.
-                                    </li>
-                                </ul>
-
-                            </div> 
-                            
-                            <p>
-                                <strong>Доказ:</strong>
-                            </p>
-                            
-                            <p>
-                                Се користи Теорема 3 и фактот дека `n=l+i`.
-                            </p>
-                            
-                            <p>
-                                <strong>Пример 9</strong>
-                            </p>
-                            <p>
-                                Да претпоставиме дека некој го отпочнал ланецот со писма. Од секого кој примил писмо се бара да го препрати до други четворица. Некои луѓе го прават тоа некои не. Колку луќе го препратиле писмото, вклучувајки го и првиот, ако никој не примил повеќе од едно писмо и ако ланецот завршува откако 100 луѓе го прочитале но не го препратиле? Колку луѓе го препратиле писмото?
-                            </p>
-
-                            <p>
-                                <strong>Решение</strong>
-                            </p>
-                            <p>
-                                Ланецот со писма може да се претстави со `4`-арно дрво. Внатрешните јазли ги претставуваат луѓето кои го препратиле писмото а листовите ги претставуваат луѓето ки не го препратиле писмото. Бидејки `100` луѓе не го препратиле писмото, бројот на листови во ова дрво е `l = 100`. Делот (iii) од теоремата 4 кажува дека бројот на луѓе кои го виделе писмото но не го препратиле е `n = (4 · 100 − 1)/(4 − 1) = 133`. Исто так бројот на внатрешни јазли е `133 − 100 = 33`, па од тука `33` луѓе го препратиле писмото.
-                            </p>
-                    </div>
-                        
-                        <div class='col-12'>  
-                            
-                            <h5>
-                                Балансирани дрва
-                            </h5>
-
-                            <p>
-                                Пожелно е да се користат коренови дрва кои се „балансирани“ така да поддрвата кај секој јазол содржи пат со приближно иста должина. Неколку дефиниции ќе го направат концептот јасен. Нивото на јазолот `v` кој кореново дрво е должината на единствениот пат од коренот до овој јазол. Нивото на коренот по дефиниција е 0. Висината на на кореново дрво е максимумот од нивоата на јазлите. Со други зборови висината на кореново дрво е должината на најдолгиот пат од коренот до некој јазол.
-                            </p>
-
-                            <p>
-                                <strong>Доказ</strong>
-                            </p>
-                            <p>
-                                Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на јазолот `c`?
-                            </p>
-
-                            <p>
-                                <strong>Пример 10</strong>
-                            </p>
-                            <p>
-                               Да се одреди нивото на секој јазол во кореновото дрво прикажано на долната слика. Која е висината на ова дрво?
-                            </p>
-                            
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_06.png' class='img-fluid' alt='tree_06'>
-                            </div>
-                            
-                            <p>
-                                <strong>Решение: </strong>
-                            </p>
-                            <p>
-                                Коренот `a` е на ниво `0`. Јазлите `b, j` , и `k` се на ниво `1`. Јазлите ` c, e, f` , и `l` се на ниво `2`. Јазлите `d, g, i, m`, и `n` се на ниво `3`. И на крај јазолот `h` е на ниво `4`. Бидејки најдолгото ниво е `4`, ова дрво има висина `4`.
-                            </p>
-                            
-                            <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <p>
-                                   Кореново `m`-арно дрво е балансирано ако сите листови се на ниво `h` или `h-1`.
-                                </p>
-                            </div> 
-                            
-                            <p>
-                                <strong>Пример 11</strong>
-                            </p>
-                            <p>
-                                Кое од кореновите дрва на долната слика е балансирано дрво?
-                            </p>
-                            
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_07.png' class='img-fluid' alt='tree_06'>
-                            </div>
-                            
-                            <p>
-                                <strong>Решение: </strong>
-                            </p>
-                            <p>
-                                Дрвото `T1` е балансирано, бидејки сите негови листови се на ниво `3` или `4`. Дрвото `T2` не е балансирано, бидејки има листови на ниво `2`, `3` и `4`. Конечно дрвото `T3` е балансирано бидејки сите негови листови се на ниво `3`.
-                            </p>
-                            
-                            <p>
-                                Често, корисно е да се знае горната граница за бројот на листови во едно `m`-рно дрво. Теоремата 5 ја одредува границата во однос на висината на дрвото.
-                            </p>
-                            
-                            <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <h4 class="alert-heading">Теорема 5</h4>
-                                <p>
-                                    Во едно `m`-арно дрво со висина `h` постојат најмногу `m^h` лисја. 
-                                </p>
-
-                            </div>  
-                            <p>
-                                <strong>Доказ: </strong>Со индукција по висината `h` на дрвото.
-                            </p>
-                            
-                            <div class='col-12 mx-auto'>
-                                <img src='images/tree_08.png' class='img-fluid' alt='tree_06'>
-                            </div>
-                            <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
-                                <h4 class="alert-heading">Последица 1</h4>
-                                <p>
-                                    Ако едно `m`-арно дрво со висина `h` има `l` лисја тогаш, `h ≥ [log_m l]`. Ако едно `m`-арно дрво со `l` лисја е целосно и балансирано тогаш неговата висина е:
-                                </p>
-                                <p class='text-center'>
-                                    h = [log_m l]
-                                </p>
-
-                            </div>  
-                            
-                            
-                    </div>
-                        
-                         
-                        
-                        
-                        
-                        
-                        
-                        
-                    </div>
-                    
-    
-
-                    <p class='text-center'>
-                        ###
+            <!-- main -->
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <div class='row'>
+                    <!-- intro -->
+                    <p class='lead'>
+                        Сврзан граф кој не содржи едноставен циклус се нарекува дрво. Дрвата се особено корисни во
+                        компјутерската наука, каде се користат во многу алгоритми. На пример, дрвата се користат за за
+                        создавање на ефикасен алгоритам за лоцирање на членови во листа.
                     </p>
-                </main>
-            </div>
-        </div>
+                    <p class='lead'>
+                        Дрвата можат да се употребат при проучиување на игри, на пример на шах и создавање на стратегија
+                        за играње и создавање на победнички алгоритам.
+                    </p>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    </body>
+                    <!-- intro -->
+
+                    <h3 id="def">
+                        Вовед
+                    </h3>
+
+                    <p>
+                        Овде ќе се посветиме на посебен тип на граф наречен <strong>дрво </strong> бидејки според ликот
+                        овој граф личи на дрво. На пример фамилијарното дрво е граф кој ги претставува генеалошките
+                        карти. Кај фамилијарното дрво јазелот се корист за да се претстави член од семејството а ребрата
+                        за да се претстават врските родител-дете. Подоле е претставено семејното дрво на машките членови
+                        на семејствот математичари Bernoulli од Швајцарија. Неоријентираниот граф кој го претставува
+                        семејното дрво е пример за дрво.
+                    </p>
+
+                    <img src='images/tree_00.png' class='img-fluid img mx-auto' alt='tree_00'>
+
+                    <div id="def1" class="col-12 alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Дефиниција 1</h4>
+                        <p>
+                            Дрво е сврзан неориентиран граф без едноставни циклуси.
+                        </p>
+                    </div>
+
+                    <p>
+                        Бидејки дрвоте не може да има едноставен циклус, не може да содржи повеќекратни ребра или алки.
+                        Поради ова секое дрво мора да биде едноставен граф.
+                    </p>
+
+                    <div class='col-12 mx-auto'>
+                        <img src='images/tree_01.png' class='img-fluid' alt='tree_00'>
+                    </div>
+
+                    <div class='col-12'>
+                        <p>
+                            <strong>Пример 1</strong>
+                        </p>
+                        <p>
+                            Кои графови на сликата се дрва?
+                        </p>
+
+                        <p>
+                            <strong>Решение</strong>
+                        </p>
+
+                        <p>
+                            Графот G1 и G2 се дрва, бидејки и двата се врзани графови без едноставни циклуси. G3 не е
+                            дрво бидејки `e, b, a, d, e` е едноставен циклус. И графот G4 не е дрво бидејки не е сврзан.
+                        </p>
+
+                        <p>
+                            Секој граф кој не содржи едноставен циклус е дрво. Грфовите кои немаат едноставен циклус и
+                            не се врзани се викаат <strong>шума</strong> и го имаат својствотo да секој нивни сврзан дел
+                            е дрво. Сликата доле прикажува шума.
+                        </p>
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_02.png' class='img-fluid' alt='tree_00'>
+                        </div>
+                        <p>
+                            Дрвата, често, се дефинираат како неориентиран граф со особина дека постои единстевен
+                            едноставен пат помеѓу секој пар на јазли.
+                        </p>
+
+                    </div>
+
+                    <div id="def1" class="col-12 alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Теорема 1</h4>
+                        <p>
+                            Неориентиран граф е дрво ако и само ако постои едноставен пат помеѓу секој пар на јазли.
+                        </p>
+                    </div>
+
+                    <h5>
+                        Кореново дрво
+                    </h5>
+
+                    <p>
+                        Во многу дрва одреден јазол од дрвото се означува како корен. Кога ќе се одберте корен тогаш
+                        може да се додели смер на секое ребро. Бидејки постои единствен пат од коренот до секој јазол
+                        (според Теорема 1), секој јазол го насочуваме од коренот. Вака, дрвото заедно со неговиот корен
+                        создава ориентиран граф кој се вика кореново дрво.
+                    </p>
+
+                    <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Дефиниција 2</h4>
+                        <p>
+                            Кореново дрво е дрво каде еден јазол е означен како корен и секој јазол е усмерен од
+                            коренот.
+                        </p>
+
+                    </div>
+
+                    <p>
+                        Кореново дрво може исто така да се дефинира рекурзивно. Секое дрво можеме да го претставиме како
+                        кореново дрво одбирајки било кој јазол за корен Треба да се напомене дека различниот избор на
+                        јазол за корен ќе создаде рзлично кореново дрво. На пример на долната слика с прикажани дрва
+                        формирани со избор јазолот `a` да биде корен и јазолот `c` да биде корен. Стрелките кој го
+                        покажуваат смерот на ребрата најчесто се испуштаат бидејки изборот на коренот го одредува смерот
+                        на ребрата.
+                    </p>
+
+                    <div class='col-12 mx-auto'>
+                        <img src='images/tree_03.png' class='img-fluid' alt='tree_03'>
+                    </div>
+
+
+                    <p>
+                        Терминологијата на дрвата им ботанички и генеолошки корења. Да претпоставиме дека `T` е кореново
+                        дрво. Ако `v` е јазол во дрвото различен од коренот, родителот (parent) на јазолот `v` е
+                        единствен јазол `u` така да постои усмерено ребро од `u` кон `v`. кога `u` е родител на `v`, `v`
+                        се нарекува дете (child) од `u`. Јазлите со ист родител се викаат браќа или сестри (called
+                        siblings). Претците на јазолот различни од коренот се јазлите на патот од коренот до овој јазол,
+                        исклучувајки го самиот јазол а вклучувајки го коренот (односно, неговиот родител, родителот на
+                        неговиот родител и така натака се до коренот). Потомци на јазолот `v` се јазлите за кои јазолот
+                        `v` е предок. Јазолот кај кореново дрво се вика <strong>лист(leaf)</strong> ако нема деца.
+                        Јазлите кои имаат деца се викаат <strong>внатрешни јазли</strong>. Коренот е внатрешен јазол
+                        освек ако е единствен јазол кога е лист.
+                    </p>
+                    <p>
+                        Ако `a` е јазол во дрвото, поддрво со јазол `a` како корен е подграф на дрвото кој се состои од
+                        сите свои потомци и ребрата придружени кон овие потомци.
+                    </p>
+
+                    <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                        <h4 class="alert-heading">Дефиниција 3</h4>
+                        <p>
+                            Кореново дрво се нарекува `m`-арно ако секој внатрешен јазол нема повеќе од `m` деца. Дрвото
+                            се нарекува потполно `m`-арно ако секој внатртешен јазол има точно `m` деца. Ако `m=2`
+                            дрвото се нарекува бинарно дрво.
+                        </p>
+
+                    </div>
+
+                    <div class='col-12'>
+                        <p>
+                            <strong>Пример 3</strong>
+                        </p>
+                        <p>
+                            Дали кореновите дрва на долната слика се потполни `m`-арни дрва и за кој позитивен цел број?
+                        </p>
+
+                        <p>
+                            <strong>Решение</strong>
+                        </p>
+                        <p>
+                            Графот `T1` е потполно бинарно дрво бидејки секој од внатрешните јазли има две деца. графот
+                            `T2` потполно `3`-арно дрво бидејки секој од неговите внатрешни јазли има 3 деца. Кај графот
+                            `T3` секој внатрешен јазол има пет деца, па според тоа `T3` е потполно `5`-арно дрво. `T4`
+                            не е `m`-рно дрво за било кој цел број `m` бидејки некои од неговите внатрешни јазли имаат
+                            две деца а другите имаат три деца.
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_04.png' class='img-fluid' alt='tree_03'>
+                        </div>
+                    </div>
+
+                    <div class='col-12'>
+
+                        <h5>
+                            Подредено кореново дрво
+                        </h5>
+
+                        <p>
+                            Подредено кореново дрво е кореново дрво каде децата на секој внатрешен јазол се подредени.
+                            Подредените коренови дрва се цртаат така да децата на секој внатрешен јазол се прикажуваат
+                            подредени од лево на десно.
+                        </p>
+
+                        <p>
+                            Кај подреденото бинарно дрво (обично наречено бинарно дрво), ако внатрешен јазол има две
+                            деца, првото дете се вика лево дете а второт дете се вика десно дете. Дрвото со корен во
+                            левото дете се вика лево поддрво на овој јазол, а дрвото со корен во десното дете се вика
+                            десно поддрво за овој јазол.
+                        </p>
+
+                        <p>
+                            <strong>Пример 4</strong>
+                        </p>
+                        <p>
+                            Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на
+                            јазолот `c`?
+                        </p>
+
+                        <p>
+                            <strong>Решение</strong>
+                        </p>
+                        <p>
+                            Левото дете на `d` е `f` а десното дете е `g`. Левот и десното дрво се прикажани на
+                            цртежеот.
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_05.png' class='img-fluid' alt='tree_05'>
+                        </div>
+                    </div>
+
+                    <div class='col-12'>
+
+                        <h5>
+                            Дрво како модел
+                        </h5>
+
+                        <p>
+                            Дрвата се користат како модели во различни области на компјутерската наука, хемија,
+                            геологија, ботаника,
+                            и физиологија.
+                        </p>
+
+                        <p>
+                            <strong>Пример 7</strong> Computer File Systems
+                        </p>
+                        <p>
+                            Фајловите во компјутерската меморија можат да се организираат во директориуми. Директориум
+                            може да содржи и фајлови и подиректориуми. Кореновиот директориум ги содржи сите фајлови.
+                            Поради ова системот на фајлови може да се претстави со кореново дрво каде коренот е
+                            кореновиот директориум, внатрешните јазли ги претставуваат поддиректориумите а листовите ги
+                            претставуваат фајловите или празните поддиректориуми. Ваков систем на фајлови е претставен
+                            на долната слика. Во овој систем фајлот `khr` е во директориумот `rje`. 
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_09.png' class='img-fluid' alt='tree_03'>
+                        </div>
+
+                    </div>
+
+                    <div class='col-12'>
+
+                        <h5>
+                            Особини на дрво
+                        </h5>
+
+                        <p>
+                            Честа е потртебата да се знае бројот на јазли и ребра во дрвото.
+                        </p>
+                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <h4 class="alert-heading">Теорема 2</h4>
+                            <p>
+                                Дрво со `n` јазли има `n-1` ребра.
+                            </p>
+
+                        </div>
+
+                        <p>
+                            <strong>Доказ</strong>
+                        </p>
+                        <p>
+                            Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на
+                            јазолот `c`?
+                        </p>
+
+                        <p>
+                            <strong>Решение</strong>
+                        </p>
+                        <p>
+                            Ќе користиме математичка индукција за да ја докажеме оваа теорема. Треба да се напомене дека
+                            за сите дрва спомнати овде ќе одбереме корен и ќе се обраќаме кон коренови дрва.
+                        </p>
+                        <p>
+                            <strong>Почетен чекор: </strong>Кога `n = 1`, дрвото нема ребра. Од тука следи дека
+                            теоремата е точна за `n = 1`.
+                        </p>
+                        <p>
+                            ... ... ... ... ... ...
+                        </p>
+
+                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <h4 class="alert-heading">Теорема 3</h4>
+                            <p>
+                                Потполно `m`-арно дрво со `i` внатрешни темиња има вкупно `n = mi + 1` јазли.
+                            </p>
+
+                        </div>
+                        <div id="def4" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <h4 class="alert-heading">Теорема 4</h4>
+                            <p>
+                                Потполно `m`-арно дрво со:
+                            </p>
+                            <ul>
+                                <li>
+                                    `n` јазли има `i = (n - 1)/m` внатрешни јазли и `l = [(m - 1)n + 1]/m` лисја,
+                                </li>
+                                <li>
+                                    `i` внатрешни темиња има `n = mi + 1` темиња и `l = (m - 1)i + 1` лисја,
+                                </li>
+                                <li>
+                                    `l` лисја има `n = (ml- 1)/(m - 1)` темиња и `i = (l- 1)/(m - 1)` внатрешни темиња.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <p>
+                            <strong>Доказ:</strong>
+                        </p>
+
+                        <p>
+                            Се користи Теорема 3 и фактот дека `n=l+i`.
+                        </p>
+
+                        <p>
+                            <strong>Пример 9</strong>
+                        </p>
+                        <p>
+                            Да претпоставиме дека некој го отпочнал ланецот со писма. Од секого кој примил писмо се бара
+                            да го препрати до други четворица. Некои луѓе го прават тоа некои не. Колку луќе го
+                            препратиле писмото, вклучувајки го и првиот, ако никој не примил повеќе од едно писмо и ако
+                            ланецот завршува откако 100 луѓе го прочитале но не го препратиле? Колку луѓе го препратиле
+                            писмото?
+                        </p>
+
+                        <p>
+                            <strong>Решение</strong>
+                        </p>
+                        <p>
+                            Ланецот со писма може да се претстави со `4`-арно дрво. Внатрешните јазли ги претставуваат
+                            луѓето кои го препратиле писмото а листовите ги претставуваат луѓето ки не го препратиле
+                            писмото. Бидејки `100` луѓе не го препратиле писмото, бројот на листови во ова дрво е `l =
+                            100`. Делот (iii) од теоремата 4 кажува дека бројот на луѓе кои го виделе писмото но не го
+                            препратиле е `n = (4 · 100 − 1)/(4 − 1) = 133`. Исто так бројот на внатрешни јазли е `133 −
+                            100 = 33`, па од тука `33` луѓе го препратиле писмото.
+                        </p>
+                    </div>
+
+                    <div class='col-12'>
+
+                        <h5>
+                            Балансирани дрва
+                        </h5>
+
+                        <p>
+                            Пожелно е да се користат коренови дрва кои се „балансирани“ така да поддрвата кај секој
+                            јазол содржи пат со приближно иста должина. Неколку дефиниции ќе го направат концептот
+                            јасен. Нивото на јазолот `v` кој кореново дрво е должината на единствениот пат од коренот до
+                            овој јазол. Нивото на коренот по дефиниција е 0. Висината на на кореново дрво е максимумот
+                            од нивоата на јазлите. Со други зборови висината на кореново дрво е должината на најдолгиот
+                            пат од коренот до некој јазол.
+                        </p>
+
+                        <p>
+                            <strong>Доказ</strong>
+                        </p>
+                        <p>
+                            Кои се левите и десните деца на јазолот `d` од бинарното дрво `T`, а кои се поддрвата на
+                            јазолот `c`?
+                        </p>
+
+                        <p>
+                            <strong>Пример 10</strong>
+                        </p>
+                        <p>
+                            Да се одреди нивото на секој јазол во кореновото дрво прикажано на долната слика. Која е
+                            висината на ова дрво?
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_06.png' class='img-fluid' alt='tree_06'>
+                        </div>
+
+                        <p>
+                            <strong>Решение: </strong>
+                        </p>
+                        <p>
+                            Коренот `a` е на ниво `0`. Јазлите `b, j` , и `k` се на ниво `1`. Јазлите ` c, e, f` , и `l`
+                            се на ниво `2`. Јазлите `d, g, i, m`, и `n` се на ниво `3`. И на крај јазолот `h` е на ниво
+                            `4`. Бидејки најдолгото ниво е `4`, ова дрво има висина `4`.
+                        </p>
+
+                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <p>
+                                Кореново `m`-арно дрво е балансирано ако сите листови се на ниво `h` или `h-1`.
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong>Пример 11</strong>
+                        </p>
+                        <p>
+                            Кое од кореновите дрва на долната слика е балансирано дрво?
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_07.png' class='img-fluid' alt='tree_06'>
+                        </div>
+
+                        <p>
+                            <strong>Решение: </strong>
+                        </p>
+                        <p>
+                            Дрвото `T1` е балансирано, бидејки сите негови листови се на ниво `3` или `4`. Дрвото `T2`
+                            не е балансирано, бидејки има листови на ниво `2`, `3` и `4`. Конечно дрвото `T3` е
+                            балансирано бидејки сите негови листови се на ниво `3`.
+                        </p>
+
+                        <p>
+                            Често, корисно е да се знае горната граница за бројот на листови во едно `m`-рно дрво.
+                            Теоремата 5 ја одредува границата во однос на висината на дрвото.
+                        </p>
+
+                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <h4 class="alert-heading">Теорема 5</h4>
+                            <p>
+                                Во едно `m`-арно дрво со висина `h` постојат најмногу `m^h` лисја.
+                            </p>
+
+                        </div>
+                        <p>
+                            <strong>Доказ: </strong>Со индукција по висината `h` на дрвото.
+                        </p>
+
+                        <div class='col-12 mx-auto'>
+                            <img src='images/tree_08.png' class='img-fluid' alt='tree_06'>
+                        </div>
+                        <div id="def3" class="col-12 alert alert-success swatch-purple" role="alert">
+                            <h4 class="alert-heading">Последица 1</h4>
+                            <p>
+                                Ако едно `m`-арно дрво со висина `h` има `l` лисја тогаш, `h ≥ [log_m l]`. Ако едно
+                                `m`-арно дрво со `l` лисја е целосно и балансирано тогаш неговата висина е:
+                            </p>
+                            <p class='text-center'>
+                                h = [log_m l]
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+                <p class='text-center'>
+                    ###
+                </p>
+            </main>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
